@@ -242,7 +242,7 @@ test('deep review HTTP budget is persisted before model calls and enforced acros
   await processSubmission(h.args)
   assert.equal(paid, 1)
   const final = h.writes.at(-1).body
-  assert.ok(final.includes('budget is temporarily exhausted'))
+  assert.ok(final.includes('scan is not finished'))
   assert.equal(reviewMeta({ ...botComment(), body: final }).retryable, true)
   assert.equal(reviewMeta({ ...botComment(), body: final }).requests, 1)
 })
@@ -291,6 +291,6 @@ test('per-project HTTP ceiling reports incomplete review rather than an approval
   }
   await processSubmission(h.args)
   assert.equal(calls, 32)
-  assert.ok(h.writes.at(-1).body.includes('could not be fully checked'))
+  assert.ok(h.writes.at(-1).body.includes('scan is not finished'))
   assert.ok(!h.writes.at(-1).body.includes('Recommended for inclusion'))
 })

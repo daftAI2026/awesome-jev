@@ -13,17 +13,20 @@ export function evidenceIssue(repo, readme) {
   return null
 }
 
-export async function githubEvidence(api, key) {
+export async function githubEvidence(api, key, { allowFullScan = false } = {}) {
   const repo = await api(`/repos/${key}`)
   if (repo.private || repo.fork || repo.archived || repoKey(repo.html_url) !== key) throw new Error('github-ineligible-repository')
   const branch = await api(`/repos/${key}/commits/${encodeURIComponent(repo.default_branch)}`)
   if (!/^[a-f0-9]{40}$/.test(branch.sha)) throw new Error('github-invalid-sha')
-  const readme = await api(`/repos/${key}/readme?ref=${branch.sha}`)
+  const fallback = { repo, sha: branch.sha, readme: { path: '' }, text: '', evidenceUrl: `https://github.com/${key}/tree/${branch.sha}` }
+  let readme
+  try { readme = await api(`/repos/${key}/readme?ref=${branch.sha}`) }
+  catch (error) { if (allowFullScan && error.message === 'github-http-404') return fallback; throw error }
   if (readme.encoding !== 'base64' || typeof readme.content !== 'string' ||
-    readme.content.length > 180000 || readme.size > 128000 || typeof readme.path !== 'string') throw new Error('github-invalid-readme')
+    readme.content.length > 180000 || readme.size > 128000 || typeof readme.path !== 'string') { if (allowFullScan) return fallback; throw new Error('github-invalid-readme') }
   const text = Buffer.from(readme.content, 'base64').toString('utf8')
-  if (Buffer.byteLength(text) > 128000) throw new Error('github-invalid-readme')
-  if (!text.trim()) throw new Error('github-empty-readme')
+  if (Buffer.byteLength(text) > 128000) { if (allowFullScan) return fallback; throw new Error('github-invalid-readme') }
+  if (!text.trim()) { if (allowFullScan) return fallback; throw new Error('github-empty-readme') }
   return { repo, sha: branch.sha, readme, text,
     evidenceUrl: `https://github.com/${key}/blob/${branch.sha}/${readme.path.split('/').map(encodeURIComponent).join('/')}` }
 }

@@ -17,6 +17,7 @@ on:
         type: string
 permissions:
   contents: read
+  actions: read
   issues: write
   pull-requests: write
 # 全局串行保护每日预算和同一机器人评论；不取消正在进行的审查。
@@ -40,8 +41,33 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
+      - name: Find trusted checkpoint
+        id: checkpoint
+        run: node scripts/review-checkpoint.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Restore trusted review state
+        id: restore
+        if: steps.checkpoint.outputs.artifact_id != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ steps.checkpoint.outputs.artifact_id }}
+          run-id: ${{ steps.checkpoint.outputs.run_id }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/jev-review-state
+          merge-multiple: true
       - name: Review submissions and update bot report
+        id: review
         run: node scripts/submission-review.mjs
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          JEV_REVIEW_STATE_DIR: ${{ runner.temp }}/jev-review-state
+      - name: Save checkpoint even after a handled failure
+        if: always() && steps.checkpoint.outcome == 'success' && steps.restore.outcome != 'failure' && steps.review.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: jev-review-checkpoint-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/jev-review-state/*.json
+          if-no-files-found: warn
+          retention-days: 7

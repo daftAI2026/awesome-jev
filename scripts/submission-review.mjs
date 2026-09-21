@@ -5,9 +5,10 @@ import { createHash } from 'node:crypto'
 import { createGitHubClient } from './github-client.mjs'
 import { githubEvidence } from './github-evidence.mjs'
 import { readCatalog, repoKey, validateRows } from './catalog.mjs'
-import { evaluateJev } from './jev-client.mjs'
+import { evaluateJev, inspectJev } from './jev-client.mjs'
 
-import { reviewRepository } from './repository-review.mjs'
+import { createReviewStore } from './review-store.mjs'
+import { reviewRepository, REVIEW_POLICY } from './repository-review.mjs'
 
 export const REPOSITORY = 'daftAI2026/awesome-jev'
 export const MARKER = '<!-- awesome-jev-submission-review:v1 -->'
@@ -138,11 +139,11 @@ export async function submissionInput(api, issue, language = reportLanguage(issu
   return { keys: [...keys], version: pr.head.sha, notes: [...new Set(notes)] }
 }
 
-export async function assessProject(api, review, key, known) {
+export async function assessProject(api, review, key, known, options = {}) {
   if (known.has(key)) return { repo: key, status: 'included' }
   try {
-    const evidence = await githubEvidence(api, key)
-    return await reviewRepository(api, review, key, evidence)
+    const evidence = await githubEvidence(api, key, { allowFullScan: true })
+    return await reviewRepository(api, review, key, evidence, options)
   } catch (error) {
     const reason = safeError(error)
     if (['jev-evidence-too-large', 'github-invalid-readme', 'github-empty-readme', 'github-ineligible-repository', 'submission-project-budget', 'submission-daily-requests'].includes(reason)) {
@@ -154,19 +155,24 @@ export async function assessProject(api, review, key, known) {
 export function renderReport(meta, results, notes = [], pending = false, language = 'en') {
   const zh = language === 'zh'
   const labels = zh
-    ? { included: '已收录', keep: '建议收录', review: '待复核', drop: '暂不建议收录', error: '暂时无法完成审查' }
-    : { included: 'Already listed', keep: 'Recommended for inclusion', review: 'Needs review', drop: 'Not recommended at this time', error: 'Review temporarily unavailable' }
+    ? { included: '已收录', keep: '建议收录', review: '待复核', drop: '暂不建议收录', error: '暂时无法完成审查', pending: '审查进行中' }
+    : { included: 'Already listed', keep: 'Recommended for inclusion', review: 'Needs review', drop: 'Not recommended at this time', error: 'Review temporarily unavailable', pending: 'Review in progress' }
   const explanations = {
     'insufficient-provider-context': zh ? '已检查的材料仍不足以确认 Jev 关联，请补充相关文档或集成位置。' : 'The checked materials do not establish the Jev connection. Please link the relevant documentation or integration.',
     'instruction-like-evidence': zh ? '项目说明需要人工核对。' : 'The project description needs a manual check.',
     'insufficient-usage-evidence': zh ? '补查后证据仍不充分，请指出具体使用示例或实现位置。' : 'The follow-up check was inconclusive. Please point to a concrete usage example or implementation.',
     'incomplete-evidence': zh ? '本轮未能完整检查所需材料，需要进一步复核；不代表项目不合格。' : 'The required evidence could not be fully checked. Further review is needed; this is not a rejection.',
     'submission-daily-requests': zh ? '审查额度暂时用完，将在后续运行中继续。' : 'The review budget is temporarily exhausted. A later run will retry.',
+    'scan-pending': zh ? '尚未检查完，下次自动接着处理。' : 'The scan is not finished. A later run will continue from its checkpoint.',
+    'unconfirmed-request': zh ? '上次请求结果未能确认，已暂停以避免重复扣费，需要维护者确认重试。' : 'The previous request outcome is unknown. Review is paused to avoid duplicate charges; a maintainer can authorize a retry.',
+    'conflicting-evidence': zh ? '项目材料存在相互矛盾的证据，需要进一步核对。' : 'The project materials contain conflicting evidence and need a closer check.',
+    'unrelated-evidence': zh ? '检查的项目材料未显示实质性的 TypeSafe Jev 关联。' : 'The checked project materials do not show substantial TypeSafe Jev relevance.',
   }
   const lines = results.map((r) => {
     const reason = r.status === 'error' ? (zh ? '请稍后重试。' : 'Please try again later.') : explanations[r.reason] ??
       (r.status === 'review' ? (zh ? '自动审查未能确认，请补充使用示例或实现说明。' : 'The automated review was inconclusive. Please add a usage example or implementation details.') : '')
-    return `- [${r.repo}](https://github.com/${r.repo})${zh ? '：' : ': '}**${labels[r.status]}**${zh ? '。' : '. '}${reason}${[r.evidence, ...(r.evidenceLinks ?? []).slice(0, 2)].filter((url) => url && url.length <= 600).map((url, i) => ` [${zh ? '依据' : 'Evidence'}${i || ''}](${url})`).join('')}`.trimEnd()
+    const progress = r.status === 'pending' && r.progress ? (zh ? ` 已检查 ${r.progress.checked}/${r.progress.total} 个文件${r.progress.inventoryComplete ? '。' : '，文件清单仍在建立中。'}` : ` Checked ${r.progress.checked}/${r.progress.total} files${r.progress.inventoryComplete ? '.' : '; inventory is still being built.'}`) : ''
+    return `- [${r.repo}](https://github.com/${r.repo})${zh ? '：' : ': '}**${labels[r.status]}**${zh ? '。' : '. '}${reason}${progress}${[r.evidence, ...(r.evidenceLinks ?? []).slice(0, 2)].filter((url) => url && url.length <= 600).map((url, i) => ` [${zh ? '依据' : 'Evidence'}${i || ''}](${url})`).join('')}`.trimEnd()
   })
   const content = pending ? (zh ? '正在审查，请稍候。' : 'Review in progress.') :
     lines.join('\n') || (zh ? '未发现可审查的新增 GitHub 项目。' : 'No new GitHub projects found to review.')
@@ -174,7 +180,7 @@ export function renderReport(meta, results, notes = [], pending = false, languag
   return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
 }
 
-export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date() }) {
+export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity }) {
   const issue = await api(`/repos/${REPOSITORY}/issues/${number}`)
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
   const language = reportLanguage(issue)
@@ -182,7 +188,7 @@ export async function processSubmission({ api, writeComment, review, number, man
   try { input = await submissionInput(api, issue, language) }
   catch { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [language === 'zh' ? '无法读取收录数据，请检查 JSON 格式和提交路径。' : 'Could not read the submission data. Please check the JSON format and file paths.'] } }
   if (!input.keys.length && !input.notes.length) return 'no-projects'
-  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, 'deep-review-v2'])
+  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
   const comments = await pages(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
@@ -210,8 +216,8 @@ export async function processSubmission({ api, writeComment, review, number, man
   const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true, language))
   const results = []
   const checkpoint = () => {
-    meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, evidence, evidenceLinks }) => ({
-      repo, status, reason, deep, filesRead, evidence: evidence?.length <= 600 ? evidence : undefined,
+    meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, progress, evidence, evidenceLinks }) => ({
+      repo, status, reason, deep, filesRead, progress, evidence: evidence?.length <= 600 ? evidence : undefined,
       evidenceLinks: (evidenceLinks ?? []).filter((url) => url.length <= 600).slice(0, 2),
     }))
   }
@@ -228,14 +234,16 @@ export async function processSubmission({ api, writeComment, review, number, man
       await writeComment(number, comment.id, renderReport(meta, results, notes, true, language))
     }
     const result = unavailable && !known.has(key) ? { repo: key, status: 'error', reason: 'jev-deferred-after-error' } :
-      await assessProject(api, (row, text, options = {}) => review(row, text, { ...options, beforeRequest }), key, known)
+      await assessProject(api, (row, text, options = {}) => review(row, text, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } }), key, known, {
+        store, manual, deadline, inspect: inspect && ((row, segments, options = {}) => inspect(row, segments, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } })),
+      })
     if (result.reason?.startsWith('jev-')) unavailable = true
     results.push(result)
   }
   checkpoint()
-  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: results.some((r) => r.status === 'error' || r.reason === 'submission-daily-requests') }, results, notes, false, language))
+  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: results.some((r) => r.status === 'error' || r.status === 'pending' || r.reason === 'submission-daily-requests') }, results, notes, false, language))
   if (process.env.GITHUB_STEP_SUMMARY) {
-    const audit = results.map((r) => ({ repo: r.repo, status: r.status, reason: r.reason, deep: !!r.deep, filesRead: r.filesRead ?? 0, evidence: [r.evidence, ...(r.evidenceLinks ?? [])].filter(Boolean) }))
+    const audit = results.map((r) => ({ repo: r.repo, status: r.status, reason: r.reason, deep: !!r.deep, progress: r.progress, filesRead: r.filesRead ?? 0, evidence: [r.evidence, ...(r.evidenceLinks ?? [])].filter(Boolean) }))
     appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\n### Evidence audit #${number}\n\n\`\`\`json\n${JSON.stringify(audit, null, 2)}\n\`\`\`\n`)
   }
   return `reviewed-${results.length}`
@@ -263,12 +271,14 @@ async function main() {
   if (process.env.GITHUB_REPOSITORY !== REPOSITORY) throw new Error('submission-wrong-repository')
   const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'))
   const api = createGitHubClient(process.env.GITHUB_TOKEN)
+  const store = createReviewStore(process.env.JEV_REVIEW_STATE_DIR)
+  const deadline = Date.now() + 10 * 60 * 1000
   const targets = await eventTargets(api, process.env.GITHUB_EVENT_NAME, event)
   if (!targets.length) return
   if (!process.env.TYPESAFE_API_KEY?.trim()) throw new Error('jev-missing-key')
   const known = new Set(readCatalog(process.cwd()).rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)))
   for (const target of targets) {
-    const result = await processSubmission({ ...target, api, known, writeComment: commentWriter(process.env.GITHUB_TOKEN),
+    const result = await processSubmission({ ...target, api, known, store, deadline, inspect: (row, segments, options) => inspectJev(process.env.TYPESAFE_API_KEY, row, segments, options), writeComment: commentWriter(process.env.GITHUB_TOKEN),
       review: (row, evidence, options) => evaluateJev(process.env.TYPESAFE_API_KEY, row, evidence, options) })
     const summary = `Submission #${target.number}: ${result}\n`
     process.stdout.write(summary)
