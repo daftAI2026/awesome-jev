@@ -6,7 +6,7 @@ Canonical stores:
 - [`data/youtube.json`](../data/youtube.json) — YouTube videos only
 - [`data/x.json`](../data/x.json) — X posts only (no tags)
 
-The site imports these three files explicitly. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable.
+The site imports these three files explicitly. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
 
 Types live in [`src/lib/types.ts`](../src/lib/types.ts).
 
@@ -107,3 +107,5 @@ Missing numeric fields sort as `0`; missing dates sort last.
 - New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.
 - README categories are computed from titles, tags and owner. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
 - Review SHA, README evidence URL and content hash live in `radar/latest.json`, not in the browser-facing schema. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
+
+YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. The UI compares full instants and displays videos in row-major order. Unknown statistics must not overwrite known values with zero.

@@ -1,4 +1,4 @@
-import type { DirectoryItem, GithubSort, XSort, YoutubeSort } from './types'
+import type { DirectoryItem, GithubSort, XSort, YoutubeSort } from './types.ts'
 
 function numOrZero(v: number | null | undefined): number {
   return typeof v === 'number' && !Number.isNaN(v) ? v : 0
@@ -9,6 +9,36 @@ function dateKey(item: DirectoryItem): string | null {
   const d = item.sourceMeta.date
   if (d == null || String(d).trim() === '') return null
   return String(d).slice(0, 10)
+}
+
+/* -------------------------------------------------------------------------- */
+/* YouTube 兼容 YYYY-MM-DD，并按含时区的完整发布时间比较。                   */
+/* -------------------------------------------------------------------------- */
+function youtubeDateKey(item: DirectoryItem): number | null {
+  const value = item.sourceMeta.date
+  if (value == null || value.trim() === '') return null
+  const text = value.trim()
+  const match = /^(\d{4})-(\d{2})-(\d{2})(?:$|T)/.exec(text)
+  if (!match) return null
+  const year = Number(match[1])
+  const month = Number(match[2])
+  const day = Number(match[3])
+  const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)
+  const daysInMonth = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if (month < 1 || month > 12 || day < 1 || day > daysInMonth[month - 1]) return null
+
+  const timestamp = Date.parse(text)
+  return Number.isFinite(timestamp) ? timestamp : null
+}
+
+function compareYoutubeDateDesc(a: DirectoryItem, b: DirectoryItem): number {
+  const da = youtubeDateKey(a)
+  const db = youtubeDateKey(b)
+  if (da == null && db == null) return a.id.localeCompare(b.id)
+  if (da == null) return 1
+  if (db == null) return -1
+  if (da !== db) return db - da
+  return a.id.localeCompare(b.id)
 }
 
 /** 1-based star rank among GitHub rows. Ties break by title, then id. */
@@ -67,14 +97,7 @@ export function sortYoutubeItems(
       (a, b) => numOrZero(b.sourceMeta.views) - numOrZero(a.sourceMeta.views),
     )
   } else {
-    copy.sort((a, b) => {
-      const da = dateKey(a)
-      const db = dateKey(b)
-      if (da == null && db == null) return 0
-      if (da == null) return 1
-      if (db == null) return -1
-      return db.localeCompare(da)
-    })
+    copy.sort(compareYoutubeDateDesc)
   }
   return copy
 }

@@ -7,6 +7,8 @@ export const zh: Messages = {
     'TypeSafe Jev / System One 的免费 AI 精选目录：GitHub 项目、X 动态与 YouTube 讲解。',
   tagline:
     'TypeSafe Jev / System One 的免费 AI 精选目录\nGitHub 项目、X 动态与 YouTube 讲解。',
+  dataUpdated: '数据更新',
+  dataUpdatedTimezone: '时间为 Asia/Shanghai（UTC+8）',
   searchPlaceholder: '搜索 GitHub…',
   searchLabel: '搜索',
   skipToContent: '跳到主要内容',

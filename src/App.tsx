@@ -30,6 +30,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import { useI18n } from '@/i18n'
+import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
 import { countByType, countGithubProjects } from '@/lib/counts'
 import { searchItems } from '@/lib/search'
 import {
@@ -54,6 +55,8 @@ const items = [
   ...(xData as DirectoryItem[]),
 ]
 const githubProjectCount = countGithubProjects(items)
+const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
+const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
 const githubRanks = githubStarRanks(items)
 const zoneCounts: Record<FilterType, number> = {
   github: countByType(items, 'github'),
@@ -304,6 +307,18 @@ export default function App() {
               </span>
             ))}
         </p>
+        {catalogUpdatedLabel && (
+          <p className="mt-3 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <span>{t('dataUpdated')}</span>
+            <time
+              dateTime={catalogUpdatedAt}
+              title={t('dataUpdatedTimezone')}
+              className="font-mono tabular-nums"
+            >
+              {catalogUpdatedLabel}
+            </time>
+          </p>
+        )}
       </div>
 
       <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-10 lg:px-8 lg:pb-10">
@@ -495,9 +510,16 @@ export default function App() {
                       {t('emptySection')}
                     </p>
                   ) : section.id === 'x' || section.id === 'youtube' ? (
-                    <ul className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+                    <ul
+                      className={section.id === 'youtube'
+                        ? 'grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3'
+                        : 'columns-1 gap-4 sm:columns-2 lg:columns-3'}
+                    >
                       {section.items.map((item) => (
-                        <li key={item.id} className="mb-4 break-inside-avoid">
+                        <li
+                          key={item.id}
+                          className={section.id === 'youtube' ? 'min-w-0' : 'mb-4 break-inside-avoid'}
+                        >
                           <ItemCard item={item} />
                         </li>
                       ))}

@@ -5,6 +5,8 @@ export const en = {
     'A free curated directory of TypeSafe Jev / System One AI projects. GitHub repos, X posts, and YouTube explainers.',
   tagline:
     'A free curated directory of TypeSafe Jev / System One AI projects.\nGitHub repos, X posts, and YouTube explainers.',
+  dataUpdated: 'Data updated',
+  dataUpdatedTimezone: 'Time shown in Asia/Shanghai (UTC+8)',
   searchPlaceholder: 'Search GitHub…',
   searchLabel: 'Search',
   skipToContent: 'Skip to content',
