@@ -1,1 +1,53 @@
-PLACEHOLDER_USE_FILE
+[
+  {
+    "id": "x-2101854707857953047",
+    "type": "x",
+    "title": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "summary": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "tags": ["jev"],
+    "url": "https://x.com/KinGao476942/status/2101854707857953047",
+    "sourceMeta": {"handle": "KinGao476942", "likes": 1, "date": "2026-09-21"},
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1843083681210273792/_w6C8yFQ_400x400.jpg"
+  },
+  {
+    "id": "x-2101854575255003638",
+    "type": "x",
+    "title": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not gen...",
+    "summary": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not generate text. You send it a state and a list of typed questions, it answers in parallel with probabilities in 70-500ms. Code branches on decisions, not chat. .",
+    "tags": ["jev", "typesafe"],
+    "url": "https://x.com/kysstalol/status/2101854575255003638",
+    "sourceMeta": {"handle": "kysstalol", "likes": 0, "date": "2026-09-21"},
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2086077556017795072/N6R4sCwH_400x400.jpg",
+    "mediaUrls": ["https://pbs.twimg.com/news_img/2099954165766320128/GFU4855u?format=jpg&name=orig"]
+  },
+  {
+    "id": "x-2101853087073800282",
+    "type": "x",
+    "title": "I just released mini Jev, demo: Now I’m building the actual model from scratch for local agentic ...",
+    "summary": "I just released mini Jev, demo: Now I’m building the actual model from scratch for local agentic harnesses and enterprises that need private models. Target: 128K context 25 ms decision latency Input: TEXT, AUDIO, VIDEO. IMAGE",
+    "tags": ["jev", "demo"],
+    "url": "https://x.com/JamesB66033924/status/2101853087073800282",
+    "sourceMeta": {"handle": "JamesB66033924", "likes": 0, "date": "2026-09-21"},
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2054629370896019456/VTHuPdfk_400x400.jpg"
+  },
+  {
+    "id": "x-2101852499565293701",
+    "type": "x",
+    "title": "Jev by TypeSafe AI: The Sub-100ms Action Engine and 5 Practical Use Cases",
+    "summary": "Jev by TypeSafe AI: The Sub-100ms Action Engine and 5 Practical Use Cases",
+    "tags": ["jev", "typesafe"],
+    "url": "https://x.com/heylayak/status/2101852499565293701",
+    "sourceMeta": {"handle": "heylayak", "likes": 0, "date": "2026-09-21"},
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1956941314710294528/WOVsxv-0_400x400.jpg"
+  },
+  {
+    "id": "x-2101851831148351683",
+    "type": "x",
+    "title": "Grateful to @typesafeai for the increased rate limits. Today we launch Resume Matching in HiringC...",
+    "summary": "Grateful to @typesafeai for the increased rate limits. Today we launch Resume Matching in HiringCafe’s AI Talent Agent, powered by Jev. Upload your resume and we rank it against every job posting in the US, scraped 6x/day direct from company career pages.",
+    "tags": ["jev", "typesafe"],
+    "url": "https://x.com/h_nilforoshan/status/2101851831148351683",
+    "sourceMeta": {"handle": "h_nilforoshan", "likes": 2, "date": "2026-09-21"},
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1624843052744589312/YKeAr_5R_400x400.jpg"
+  }
+]
