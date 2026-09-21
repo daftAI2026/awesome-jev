@@ -128,3 +128,7 @@ The workflow keeps `contents: read`; `actions: read` is for restoring verified c
 All collector/reviewer scripts and offline tests use `.ts`. Run `npm run typecheck` for strict TypeScript checks and `npm test` for offline regression tests. CI runs both. Node 22 executes erasable TypeScript directly with `--experimental-strip-types`; no emitted JavaScript or new runtime dependency is needed. Runtime execution does not replace static type checking ([Node documentation](https://nodejs.org/api/typescript.html)).
 
 Discovery receipts retain the reviewed commit, model, timestamp, typed scores and evidence hash. Code-match evidence also records pinned file links and per-file hashes. Accepted entries keep their receipt under `sourceMeta.jevEvidence`; unaccepted candidates keep `lastReview` in `radar/state.json`, so the next `radar/latest.json` does not erase the last basis. No secret values or downloaded source text are persisted. Code search is bounded and subject to GitHub indexing and API limits, not exhaustive coverage ([GitHub search API](https://docs.github.com/en/rest/search/search#search-code)).
+
+### Homepage data timestamp
+
+The homepage uses the newest Git commit touching `data/github.json`, `data/youtube.json`, or `data/x.json`, shown on one line in Asia/Shanghai time. Any of the three sources advances it; UI-only commits do not. Production builds first restore shallow Git history using `npm run build:history`; failure stops the build instead of publishing a fabricated time. Dirty local data or unavailable history hides the label.

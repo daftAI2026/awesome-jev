@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:og && tsc -b && vite build",
+    "build": "npm run build:history && npm run generate:og && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
@@ -15,7 +15,8 @@
     "readme:sync": "node --experimental-strip-types scripts/catalog.ts",
     "data:check": "node --experimental-strip-types scripts/catalog.ts --check",
     "radar:scan": "node --experimental-strip-types scripts/radar.ts",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "build:history": "node --experimental-strip-types scripts/prepare-build-history.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
