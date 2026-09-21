@@ -132,3 +132,7 @@ Discovery receipts retain the reviewed commit, model, timestamp, typed scores an
 ### Homepage data timestamp
 
 The homepage uses the newest Git commit touching `data/github.json`, `data/youtube.json`, or `data/x.json`, shown on one line in Asia/Shanghai time. Any of the three sources advances it; UI-only commits do not. Production builds first restore shallow Git history using `npm run build:history`; failure stops the build instead of publishing a fabricated time. Dirty local data or unavailable history hides the label.
+
+### Manual video candidate review
+
+`video-review.yml` is maintainer-triggered only. It runs trusted `main` code with verified public metadata supplied as the `candidates_json` input (data only, never shell interpolation), uses the existing `TYPESAFE_API_KEY`, and uploads decisions as a 14-day Artifact. No video, audio or subtitle is downloaded; title and full public description are evidence, not proof that the video was watched or its claims verified. Missing descriptions stay for review. The existing Jev admission thresholds remain unchanged. This manual batch is separately capped at 50 candidates, 100 actual HTTP attempts and 12 minutes; it is not the scheduled radar and does not share its daily counter. It cannot edit the catalog; only reviewed keep results are subsequently appended by a maintainer without changing existing entries.
