@@ -137,3 +137,33 @@ test('interrupted or failed reports retry after cooldown instead of caching fore
   assert.equal(cacheReason({ ...meta, retryable: true }, meta.fingerprint, false, later), null)
   assert.equal(cacheReason({ ...meta, retryable: true }, meta.fingerprint, false, now), 'cooldown')
 })
+
+test('updating one report counts its current daily total, not historical comment versions', async () => {
+  let previous = botComment({ ...meta, at: '2026-09-22T09:00:00Z', used: 1 })
+  const other = { ...botComment({ ...meta, used: 96 }), id: 9 }
+  for (let i = 0; i < 4; i++) {
+    const h = harness({ previous, recent: [previous, other] })
+    h.args.now = new Date(now.getTime() + i * 20 * 60 * 1000)
+    const result = await processSubmission(h.args)
+    if (i === 3) {
+      assert.equal(result, 'daily-budget-exhausted')
+      assert.equal(h.paid.length, 0)
+    } else {
+      assert.equal(h.paid.length, 1)
+      assert.equal(h.writes[0].id, previous.id)
+      previous = { ...previous, body: h.writes.at(-1).body }
+      assert.equal(reviewMeta(previous).used, i + 2)
+    }
+  }
+  assert.equal(reviewMeta(previous).used + reviewMeta(other).used, 100)
+})
+test('failed formatting CI still permits advisory review without consuming its artifacts', async () => {
+  const event = { ...root, workflow_run: { event: 'pull_request', status: 'completed', conclusion: 'failure', head_sha: 'a'.repeat(40) } }
+  const calls = []
+  const targets = await eventTargets(async (path) => {
+    calls.push(path)
+    return [{ number: 3, head: { sha: 'a'.repeat(40) }, draft: false }]
+  }, 'workflow_run', event)
+  assert.deepEqual(targets, [{ number: 3, manual: false }])
+  assert.ok(calls.every((path) => path.includes('/pulls?')))
+})
