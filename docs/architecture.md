@@ -11,7 +11,7 @@ Searchable directory of curated **GitHub projects** and **X posts** about TypeSa
 | UI | Vite + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
-| Search | Fuse.js over `data/items.json` + `data/x.json` |
+| Search | Fuse.js over `data/github.json` + `data/youtube.json` + `data/x.json` |
 | Deploy | Cloudflare Workers static assets (`wrangler.toml` → `./dist`, SPA `not_found_handling`) |
 
 Design stays monochrome / restrained: no decorative gradients. See [design.md](design.md).
@@ -64,8 +64,14 @@ npm run deploy   # build + wrangler deploy
 
 | Path | Role |
 | --- | --- |
-| `data/items.json` | GitHub + YouTube directory data |
+| `data/github.json` + `data/youtube.json` | Separate GitHub and YouTube stores, type-checked at validation |
 | `data/x.json` | X posts (no tags; links parsed in the card) |
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
 | `src/components/ItemCard.tsx` | GitHub + X card UIs |
 | `src/App.tsx` | Header, search, section boards |
+
+## Scheduled collection
+
+GitHub Actions runs the server-side radar through read-only collection, secret-free validation, and data-only publishing jobs. Jev credentials never reach Vite or the browser. The resulting commit contains directory data and generated README together. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedule.
+
+An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.

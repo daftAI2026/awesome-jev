@@ -4,7 +4,8 @@ Thanks for helping curate **Awesome JEV** — a directory of **GitHub projects a
 
 ## Add items via JSON
 
-- GitHub projects and YouTube explainers: [`data/items.json`](data/items.json)
+- GitHub projects: [`data/github.json`](data/github.json)
+- YouTube explainers: [`data/youtube.json`](data/youtube.json)
 - X posts: [`data/x.json`](data/x.json) — **no `tags` field**; URLs and `@mentions` in the post body are parsed into links on the card
 
 Prefer editing those files (or letting the collector merge into them) over hand-editing the README list alone.
@@ -28,7 +29,7 @@ Prefer editing those files (or letting the collector merge into them) over hand-
 
 Do not invent fake tweet URLs. If you lack a real `url`, skip the item. Never commit `PLACEHOLDER` entries.
 
-To score harvested rows with Jev, copy `.env.example` to `.env.local`, set `TYPESAFE_API_KEY`, and run `npm run score:sources`. Never commit the key or put it in client code. See [`docs/collector.md`](docs/collector.md).
+To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPESAFE_API_KEY`, and run `npm run score:sources`. Never commit the key or put it in client code. See [`docs/collector.md`](docs/collector.md).
 
 ## Theme
 

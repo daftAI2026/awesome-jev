@@ -1,0 +1,537 @@
+[
+  {
+    "id": "yt-QbYBRjOaGOo",
+    "type": "youtube",
+    "title": "wtf is jev?",
+    "summary": "In this video CJ explains what Jev is, how it works and goes through several use cases and demos.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=QbYBRjOaGOo",
+    "sourceMeta": {
+      "handle": "Syntax",
+      "author": "Syntax",
+      "date": "2026-09-17",
+      "views": 87347,
+      "videoId": "QbYBRjOaGOo",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/QbYBRjOaGOo/hqdefault.jpg"
+      ],
+      "jevAbout": 0.59,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.28
+    }
+  },
+  {
+    "id": "yt-qdji39XXgEY",
+    "type": "youtube",
+    "title": "Jev From TypeSafe is a New Class of AI Model that is FAST and CHEAP - But There is a Caveat!",
+    "summary": "Jev is a new class of AI model from TypeSafe. It is FAST and CHEAP, but there is a caveat, it isn't an LLM. It is a model that understands natural language but it replies with structured responses along with a confide...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=qdji39XXgEY",
+    "sourceMeta": {
+      "handle": "Gary Explains",
+      "author": "Gary Explains",
+      "date": "2026-09-18",
+      "views": 610,
+      "videoId": "qdji39XXgEY",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/qdji39XXgEY/hqdefault.jpg"
+      ],
+      "jevAbout": 0.83,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.24
+    }
+  },
+  {
+    "id": "yt-Ipom6c1fcP0",
+    "type": "youtube",
+    "title": "What Is Jev, the New Model From TypeSafe AI? | Tech Brew Ride Home Podcast",
+    "summary": "TypeSafe AI has unveiled Jev, an AI model built to talk to software instead of people — returning typed, structured decisions instead of natural language, according to The Register. The startup, which raised $40 milli...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=Ipom6c1fcP0",
+    "sourceMeta": {
+      "handle": "Tech Brew Ride Home Podcast",
+      "author": "Tech Brew Ride Home Podcast",
+      "date": "2026-09-16",
+      "views": 10495,
+      "videoId": "Ipom6c1fcP0",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/Ipom6c1fcP0/hqdefault.jpg"
+      ],
+      "jevAbout": 0.89,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.2
+    }
+  },
+  {
+    "id": "yt-2Bs0Ink_-Uo",
+    "type": "youtube",
+    "title": "JEV Breakdown: The First AI Model Built For Code",
+    "summary": "TypeSafe just launched Jev, the first \"System One\" AI model: it doesn't write text, it returns typed decisions and calibrated probabilities your code can act on directly, in about 100 milliseconds, for $42 per billion...",
+    "tags": [
+      "jev",
+      "youtube",
+      "explainer"
+    ],
+    "url": "https://www.youtube.com/watch?v=2Bs0Ink_-Uo",
+    "sourceMeta": {
+      "handle": "Rob Shocks",
+      "author": "Rob Shocks",
+      "date": "2026-09-17",
+      "views": 241862,
+      "videoId": "2Bs0Ink_-Uo",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/2Bs0Ink_-Uo/hqdefault.jpg"
+      ],
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.5
+    }
+  },
+  {
+    "id": "yt-qHx9GBEX_E8",
+    "type": "youtube",
+    "title": "Jev AI, System One Is INSANE... 193x Faster Than LLMs?!",
+    "summary": "A new model just dropped and it doesn't chat at all. Jev, from TypeSafe AI, skips text generation entirely — you hand it a question and your options, and it returns a typed decision with a confidence score. TypeSafe's...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=qHx9GBEX_E8",
+    "sourceMeta": {
+      "handle": "Fru Dev",
+      "author": "Fru Dev",
+      "date": "2026-09-17",
+      "views": 771,
+      "videoId": "qHx9GBEX_E8",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/qHx9GBEX_E8/hqdefault.jpg"
+      ],
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.38
+    }
+  },
+  {
+    "id": "yt-xJ1GrKDpgm4",
+    "type": "youtube",
+    "title": "System One模型Jev​ | Diogo Almeida | TypeSafe AI | RLCD | RLHF | 结构化输出 | 不会聊天的模型 | 丹尼尔卡尼曼 | 杰文斯悖论",
+    "summary": "前OpenAI核心研究员Diogo Almeida创立TypeSafe AI，发布首款System One模型Jev。Jev放弃文本生成，直接输出带概率置信度的结构化决策，采用全新训练方法RLCD和并行采样架构。相比传统LLM，速度快20-200倍、成本低40-400倍，输出Token免费，类型错误率降为零。实测中最高测出193.6倍速度优势和444.6倍成本优势。Jev的发布引发开发者社区热议，也引来关于零幻觉定义和RLCD校准...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=xJ1GrKDpgm4",
+    "sourceMeta": {
+      "handle": "Best Partners TV",
+      "author": "Best Partners TV",
+      "date": "2026-09-18",
+      "views": 330,
+      "videoId": "xJ1GrKDpgm4",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/xJ1GrKDpgm4/hqdefault.jpg"
+      ],
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.53
+    }
+  },
+  {
+    "id": "yt-NIlQsncfVYs",
+    "type": "youtube",
+    "title": "System One Jev (Fully Explained): Does this really beat Transformer models? (Astra & Fable?)",
+    "summary": "In this video, I'll be telling you about Jev, a new System One Model from TypeSafe AI that claims to be up to two hundred times faster and four hundred times cheaper than traditional language models, with free output ...",
+    "tags": [
+      "jev",
+      "youtube",
+      "explainer"
+    ],
+    "url": "https://www.youtube.com/watch?v=NIlQsncfVYs",
+    "sourceMeta": {
+      "handle": "AISeeKing",
+      "author": "AISeeKing",
+      "date": "2026-09-16",
+      "views": 17623,
+      "videoId": "NIlQsncfVYs",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/NIlQsncfVYs/hqdefault.jpg"
+      ],
+      "jevAbout": 0.91,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.35
+    }
+  },
+  {
+    "id": "yt-47-u2is2fYA",
+    "type": "youtube",
+    "title": "Jev AI: The New System One Model Explained | 193x Faster?",
+    "summary": "What if an AI model didn't need to write text at all?",
+    "tags": [
+      "jev",
+      "youtube",
+      "explainer"
+    ],
+    "url": "https://www.youtube.com/watch?v=47-u2is2fYA",
+    "sourceMeta": {
+      "handle": "Codex Dairy ",
+      "author": "Codex Dairy ",
+      "date": "2026-09-17",
+      "views": 201,
+      "videoId": "47-u2is2fYA",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/47-u2is2fYA/hqdefault.jpg"
+      ],
+      "jevAbout": 0.62,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.43
+    }
+  },
+  {
+    "id": "yt-RPpQacmBe4A",
+    "type": "youtube",
+    "title": "Jev: The Schema-Safe AI That Could Change Automation Forever!",
+    "summary": "What if an AI model stopped generating text entirely?",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=RPpQacmBe4A",
+    "sourceMeta": {
+      "handle": "RepoChad",
+      "author": "RepoChad",
+      "date": "2026-09-16",
+      "views": 55580,
+      "videoId": "RPpQacmBe4A",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/RPpQacmBe4A/hqdefault.jpg"
+      ],
+      "jevAbout": 0.64,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.54
+    }
+  },
+  {
+    "id": "yt-xBamYoIVzSs",
+    "type": "youtube",
+    "title": "Is Jev What AI Has Been Missing? I Tested It.",
+    "summary": "Jev doesn’t write essays or code. Why everyone is talking about it?!",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=xBamYoIVzSs",
+    "sourceMeta": {
+      "handle": "Turing Post TV",
+      "author": "Turing Post TV",
+      "date": "2026-09-17",
+      "views": 11064,
+      "videoId": "xBamYoIVzSs",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/xBamYoIVzSs/hqdefault.jpg"
+      ],
+      "jevAbout": 0.65,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.49
+    }
+  },
+  {
+    "id": "yt-0T_BUEVXWgM",
+    "type": "youtube",
+    "title": "LLM Devri Bitiyor mu? Jev ve System One Modelleri",
+    "summary": "Son günlerde Jev adında yeni bir yapay zekâ modeli gündemde. Fakat Jev, ChatGPT veya Claude gibi sohbet eden ve metin üreten klasik bir model değil. Kendisine verilen durumu değerlendiriyor, önceden tanımlanmış seçene...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=0T_BUEVXWgM",
+    "sourceMeta": {
+      "handle": "Suat Özkaya",
+      "author": "Suat Özkaya",
+      "date": "2026-09-17",
+      "views": 6050,
+      "videoId": "0T_BUEVXWgM",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/0T_BUEVXWgM/hqdefault.jpg"
+      ],
+      "jevAbout": 0.76,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.36
+    }
+  },
+  {
+    "id": "yt-_IdrETf4o-U",
+    "type": "youtube",
+    "title": "TypeSafe Launches Jev, an AI That Can't Hallucinate",
+    "summary": "TypeSafe AI launched Jev, a \"System One\" model that can't hallucinate and runs 40-200x faster than frontier LLMs. We break down the claims, the RLCD training method, the $0.042-per-million pricing with free output tok...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=_IdrETf4o-U",
+    "sourceMeta": {
+      "handle": "The Runtime Report",
+      "author": "The Runtime Report",
+      "date": "2026-09-16",
+      "views": 1407,
+      "videoId": "_IdrETf4o-U",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/_IdrETf4o-U/hqdefault.jpg"
+      ],
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.47
+    }
+  },
+  {
+    "id": "yt-Nq_lu5QT-fI",
+    "type": "youtube",
+    "title": "Jev: The New AI Model That's Breaking The Internet (Full Tutorial)",
+    "summary": "🎓 Master AI tools and systems: https://www.skool.com/promptwarrior/",
+    "tags": [
+      "jev",
+      "youtube",
+      "explainer"
+    ],
+    "url": "https://www.youtube.com/watch?v=Nq_lu5QT-fI",
+    "sourceMeta": {
+      "handle": "Moritz | AI Systems",
+      "author": "Moritz | AI Systems",
+      "date": "2026-09-17",
+      "views": 9462,
+      "videoId": "Nq_lu5QT-fI",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/Nq_lu5QT-fI/hqdefault.jpg"
+      ],
+      "jevAbout": 0.34,
+      "jevKeep": "drop",
+      "jevKeepConfidence": 0.48
+    }
+  },
+  {
+    "id": "yt-vvJ2HRBmgOY",
+    "type": "youtube",
+    "title": "常識を変えるAI「Jev」凄さを語りたい",
+    "summary": "いやー、普段なるべく「驚き屋さん」にならない様に気をつけているのですが、",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=vvJ2HRBmgOY",
+    "sourceMeta": {
+      "handle": "#usutaku_channel",
+      "author": "#usutaku_channel",
+      "date": "2026-09-18",
+      "views": 2069,
+      "videoId": "vvJ2HRBmgOY",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/vvJ2HRBmgOY/hqdefault.jpg"
+      ],
+      "jevAbout": 0.45,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.27
+    }
+  },
+  {
+    "id": "yt-NUXkJi9enYE",
+    "type": "youtube",
+    "title": "Jev di TypeSafe AI: capiamo insieme la novità",
+    "summary": "TypeSafe AI ha presentato Jev, un nuovo modello della categoria “System One Models”: invece di generare testo token dopo token, è progettato per prendere decisioni strutturate, rapide e accompagnate da probabilità e c...",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=NUXkJi9enYE",
+    "sourceMeta": {
+      "handle": "Alessio Garau",
+      "author": "Alessio Garau",
+      "date": "2026-09-16",
+      "views": 11335,
+      "videoId": "NUXkJi9enYE",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/NUXkJi9enYE/hqdefault.jpg"
+      ],
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.61
+    }
+  },
+  {
+    "id": "yt-FQFKZiDOYAM",
+    "type": "youtube",
+    "title": "爆火的 TypeSafe AI Jev 模型到底怎么玩？海量社区案例带你入门，附两个实战 Demo",
+    "summary": "欢迎关注我的知识星球：https://t.zsxq.com/FF0He",
+    "tags": [
+      "jev",
+      "youtube",
+      "demo"
+    ],
+    "url": "https://www.youtube.com/watch?v=FQFKZiDOYAM",
+    "sourceMeta": {
+      "handle": "NiceKate AI",
+      "author": "NiceKate AI",
+      "date": "2026-09-18",
+      "views": 2398,
+      "videoId": "FQFKZiDOYAM",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/FQFKZiDOYAM/hqdefault.jpg"
+      ],
+      "jevAbout": 0.83,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.27
+    }
+  },
+  {
+    "id": "yt-JQFNpX1w6vY",
+    "type": "youtube",
+    "title": "Jev by TypeSafe AI: Jev vs LLMs - Parallel Sampling, Lower Latency, and Typed Outputs",
+    "summary": "TypeSafe AI Jev: https://typesafe.ai/",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=JQFNpX1w6vY",
+    "sourceMeta": {
+      "handle": "Alex Hitt",
+      "author": "Alex Hitt",
+      "date": "2026-09-17",
+      "views": 1544,
+      "videoId": "JQFNpX1w6vY",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/JQFNpX1w6vY/hqdefault.jpg"
+      ],
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.54
+    }
+  },
+  {
+    "id": "yt-5Lx4DLLYafM",
+    "type": "youtube",
+    "title": "Livestream Coding with the new TypeSafe AI JEV Model | Parallel Constrained Decoding",
+    "summary": "In this livestream we broke down the new TypeSafe AI JEV model. We also looked at some network architectures to pull off such JSON predictor models.",
+    "tags": [
+      "jev",
+      "youtube",
+      "demo"
+    ],
+    "url": "https://www.youtube.com/watch?v=5Lx4DLLYafM",
+    "sourceMeta": {
+      "handle": "Neural Breakdown with AVB",
+      "author": "Neural Breakdown with AVB",
+      "date": "2026-09-17",
+      "views": 6252,
+      "videoId": "5Lx4DLLYafM",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/5Lx4DLLYafM/hqdefault.jpg"
+      ],
+      "jevAbout": 0.75,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.3
+    }
+  },
+  {
+    "id": "yt-HmLK5Vr-mgc",
+    "type": "youtube",
+    "title": "【速報】TypeSafeAI Jev登場 LLMじゃない新しい最先端AI",
+    "summary": "TypeSafe AIが2026年9月15日に発表した新モデル「Jev」を、公式ブログと評価サイトの原文から解説します。ChatGPTやClaudeのように文章を書くのではなく、最初に決めた判定の結果だけを、確かさの数字つきで返すAIです。速さ・値段・答えの形が崩れない仕組みと、発表の弱い所まで、数字はすべて出典つきで並べています。",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=HmLK5Vr-mgc",
+    "sourceMeta": {
+      "handle": "AI Jitan Lab",
+      "author": "AI Jitan Lab",
+      "date": "2026-09-16",
+      "views": 30621,
+      "videoId": "HmLK5Vr-mgc",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/HmLK5Vr-mgc/hqdefault.jpg"
+      ],
+      "jevAbout": 0.88,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.41
+    }
+  },
+  {
+    "id": "yt-zZNm4zP_lEE",
+    "type": "youtube",
+    "title": "Jev Fully Explained: 10 Practical Ways to Use It",
+    "summary": "Build, Learn, Earn with AI: https://www.skool.com/earlyaidopters/about",
+    "tags": [
+      "jev",
+      "youtube",
+      "explainer"
+    ],
+    "url": "https://www.youtube.com/watch?v=zZNm4zP_lEE",
+    "sourceMeta": {
+      "handle": "Mark Kashef",
+      "author": "Mark Kashef",
+      "date": "2026-09-18",
+      "views": 7084,
+      "videoId": "zZNm4zP_lEE",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/zZNm4zP_lEE/hqdefault.jpg"
+      ],
+      "jevAbout": 0.41,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.27
+    }
+  },
+  {
+    "id": "yt-NFKHLhAvj1g",
+    "type": "youtube",
+    "title": "Jev Ultrafast GitHub: How TypeSafe AI Makes Browser Agents Faster",
+    "summary": "jev-ultrafast GitHub by browser-use: https://github.com/browser-use/jev-ultrafast",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=NFKHLhAvj1g",
+    "sourceMeta": {
+      "handle": "Alex Hitt",
+      "author": "Alex Hitt",
+      "date": "2026-09-18",
+      "views": 9,
+      "videoId": "NFKHLhAvj1g",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/NFKHLhAvj1g/hqdefault.jpg"
+      ],
+      "jevAbout": 0.4,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.28
+    }
+  },
+  {
+    "id": "yt-4_SY-aJ4kw0",
+    "type": "youtube",
+    "title": "【Jev総合解説】文章を書かないAI？System Oneの仕組み・料金・使い方を10分で解説",
+    "summary": "文章を書かず、ソフトウェアが使える「判断」を返すAI、Jevとは？",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=4_SY-aJ4kw0",
+    "sourceMeta": {
+      "handle": "あきらパパのAI活用学習部屋",
+      "author": "あきらパパのAI活用学習部屋",
+      "date": "2026-09-17",
+      "views": 5386,
+      "videoId": "4_SY-aJ4kw0",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/4_SY-aJ4kw0/hqdefault.jpg"
+      ],
+      "jevAbout": 0.77,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.15
+    }
+  }
+]

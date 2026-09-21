@@ -6,7 +6,7 @@ Use this file when designing, building, or substantially changing the directory 
 
 ## Product context
 
-Awesome JEV is a searchable directory of curated **GitHub projects**, **X posts**, and **YouTube explainers** about TypeSafe AI’s System One model **Jev** (typed decisions, SDKs, demos, integrations). The README awesome-list and the site read from [`data/items.json`](../data/items.json) (GitHub / YouTube) and [`data/x.json`](../data/x.json) (posts).
+Awesome JEV is a searchable directory of curated **GitHub projects**, **X posts**, and **YouTube explainers** about TypeSafe AI’s System One model **Jev** (typed decisions, SDKs, demos, integrations). The README awesome-list and the site read from [`data/github.json`](../data/github.json) and [`data/youtube.json`](../data/youtube.json) and [`data/x.json`](../data/x.json) (posts).
 
 Make the artifact precise, calm, direct, technically literate, and restrained. Build confidence through clarity and proof. Never manufacture confidence through hype, decoration, novelty, or exaggerated claims.
 
@@ -18,7 +18,7 @@ Start with the reader’s job: find a relevant project or post, scan its summary
 
 When requirements compete, protect them in this order:
 
-1. Preserve supplied facts in `data/items.json` and `data/x.json` (titles, summaries, stars, dates, URLs). Do not invent tweet IDs or PLACEHOLDER rows.
+1. Preserve supplied facts in `data/github.json`, `data/youtube.json`, and `data/x.json` (titles, summaries, stars, dates, URLs). Do not invent tweet IDs or PLACEHOLDER rows.
 2. Preserve the host stack: Vite, React, Tailwind, shadcn base-nova, `src/` conventions, Cloudflare Workers static deploy.
 3. Make the reader’s question and the current result set immediately clear.
 4. Establish the product through Geist typography, the 4px grid, monochrome surfaces, and restraint.
@@ -33,7 +33,7 @@ Edit the files that naturally own the experience (`src/App.tsx`, `src/components
 - Icons: Phosphor only (`@phosphor-icons/react`).
 - Type: Geist already loaded in `src/index.css` via `@fontsource-variable/geist` and `@fontsource/geist-mono`.
 - Counts: live from data (`countGithubProjects`), never hardcode the project badge or OG total.
-- Search: Fuse.js over `data/items.json`.
+- Search: Fuse.js over `data/github.json`.
 - Tokens: existing shadcn semantic CSS variables. Do not introduce a parallel token layer or a third-party brand stylesheet.
 
 Network allowlist for the site itself: GitHub / X outbound links, the Cloudflare deploy, and user-supplied remote thumbnails / mp4s (`sourceMeta.mediaUrls`, `sourceMeta.videoUrls`). Do not add analytics, chart libraries, icon CDNs, or stock assets without authorization.
@@ -47,12 +47,12 @@ Privately establish:
 - Who opens this, to find or decide what?
 - What is the strongest supported inventory (GitHub count, sections, latest posts)?
 - What evidence makes an entry credible (summary, stars, language, date)?
-- What should remain available for audit (full `items.json`, README list) without dominating the first read?
+- What should remain available for audit (full source JSON files, README list) without dominating the first read?
 
 Order by reader need, not source order. Support two reading speeds:
 
 - **Executive path:** title, GitHub count, search, section headings, and card titles communicate the directory quickly.
-- **Audit path:** README sections, `data/items.json`, and collector docs preserve the record.
+- **Audit path:** README sections, `data/github.json`, and collector docs preserve the record.
 
 Write UI chrome in the locale files (`src/i18n/locales/*`). Keep project titles and summaries in their source language; the UI does not translate item copy.
 

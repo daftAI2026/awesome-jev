@@ -2,10 +2,11 @@
 
 Canonical stores:
 
-- [`data/items.json`](../data/items.json) — GitHub projects and YouTube explainers
-- [`data/x.json`](../data/x.json) — X posts (no tags)
+- [`data/github.json`](../data/github.json) — GitHub projects only
+- [`data/youtube.json`](../data/youtube.json) — YouTube videos only
+- [`data/x.json`](../data/x.json) — X posts only (no tags)
 
-The site concatenates both arrays at build time.
+The site imports these three files explicitly. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable.
 
 Types live in [`src/lib/types.ts`](../src/lib/types.ts).
 
@@ -80,7 +81,7 @@ interface SourceMeta {
 
 ### Collector note
 
-When upserting GitHub rows, include `forks` and `openIssues` alongside `stars` whenever the API provides them. Upsert X posts into `data/x.json` (never `items.json`), without `tags`. URLs and `@mentions` in `summary` are parsed into links in the tweet card.
+When upserting GitHub rows, include `forks` and `openIssues` alongside `stars` whenever the API provides them. Upsert X posts into `data/x.json` (never the other source files), without `tags`. URLs and `@mentions` in `summary` are parsed into links in the tweet card.
 
 ## UI sort (client-only)
 
@@ -96,4 +97,13 @@ Missing numeric fields sort as `0`; missing dates sort last.
 
 ## Consumption
 
-`App.tsx` imports `data/items.json` and `data/x.json`, concatenates them, filters by `type` into section boards, applies user sort after search, and passes each item to `ItemCard`.
+`App.tsx` imports `data/github.json`, `data/youtube.json` and `data/x.json`, concatenates them, filters by `type` into section boards, applies user sort after search, and passes each item to `ItemCard`.
+
+## GitHub radar write contract
+
+- Existing records keep their ID, URL, title, summary, tags and Jev scores. Only GitHub display metadata (`stars`, `forks`, `openIssues`, `language`) refreshes.
+- Existing `sourceMeta.repo` aliases from repository renames are tolerated. The normalized GitHub URL, not the display alias, owns deduplication and metadata requests.
+- New records use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
+- New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.
+- README categories are computed from titles, tags and owner. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
+- Review SHA, README evidence URL and content hash live in `radar/latest.json`, not in the browser-facing schema. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.

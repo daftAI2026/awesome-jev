@@ -1,5 +1,354 @@
 [
   {
+    "id": "x-2101869390501433540",
+    "type": "x",
+    "title": "自分の環境でもJev導入してみた",
+    "summary": "自分の環境でもJev導入してみた",
+    "url": "https://x.com/kishi27/status/2101869390501433540",
+    "sourceMeta": {
+      "handle": "@kishi27",
+      "likes": 2,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2006527287660077056/aeY0Auh5_200x200.jpg",
+      "author": "kishi27 ＠ 実践AIエージェント",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101868189810601999",
+    "type": "x",
+    "title": "Jev通用提示词（ChatGPT Codex）",
+    "summary": "Jev通用提示词（ChatGPT Codex）",
+    "url": "https://x.com/LeeJohnson818/status/2101868189810601999",
+    "sourceMeta": {
+      "handle": "@LeeJohnson818",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2083599467299889153/wvYR_8Ox_200x200.jpg",
+      "author": "拾光（Gleaning Light）",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101867852718543062",
+    "type": "x",
+    "title": "@moritzkremb I'm surprised you are only using current state. If your jev prompt includes the previous page and last a...",
+    "summary": "@moritzkremb I'm surprised you are only using current state. If your jev prompt includes the previous page and last action I would expect much higher quality.\n\n{\n  \"previous_page\": {\n    \"url\": \"\",\n    \"title\": \"typesafe jev — Search results\"\n  },\n  \"previous_action\": {",
+    "url": "https://x.com/tombielecki/status/2101867852718543062",
+    "sourceMeta": {
+      "handle": "@tombielecki",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/753767705967079425/oZnW7oYF_200x200.jpg",
+      "author": "Tom Bielecki",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101865313906418069",
+    "type": "x",
+    "title": "JEV如何使用：",
+    "summary": "JEV如何使用：\n1、打开codex，叫它 “安装 npx skills add typesafe-ai/skills –skill typesafe-ai”\n2、在 jev 官网创建一个 APIKEY\n3、配置密钥：export TYPESAFE_API_KEY=\"你的 API Key\"\n4、在codex里直接使用\n5、注意到\n如果你要卸载直接使用`npx skills remove",
+    "url": "https://x.com/by0x_1993/status/2101865313906418069",
+    "sourceMeta": {
+      "handle": "@by0x_1993",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2097299772931776512/EGNnzXYg_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStTPHlbUAINbMU.jpg"
+      ],
+      "author": "xin",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864999472046510",
+    "type": "x",
+    "title": "I've been playing around with TypeSafe AI Jev model and Laravel.",
+    "summary": "I've been playing around with TypeSafe AI Jev model and Laravel.\n\nMade a quick video showing how I connected the model to a Laravel app, sent a question, and handled the response.\n\n\n\n#Laravel #PHP #AI #TypeSafeAI #Jev",
+    "url": "https://x.com/HiClovon/status/2101864999472046510",
+    "sourceMeta": {
+      "handle": "@HiClovon",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1326352806215782401/LDby-dxV_200x200.png",
+      "author": "Clovon",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 1,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864892202709425",
+    "type": "x",
+    "title": "The Jev Trading Ecosystem: What 20+ Repos Actually Reveal (And Why Nobody's Profitable Yet)",
+    "summary": "The Jev Trading Ecosystem: What 20+ Repos Actually Reveal (And Why Nobody's Profitable Yet)",
+    "url": "https://x.com/Thevenicelive/status/2101864892202709425",
+    "sourceMeta": {
+      "handle": "@Thevenicelive",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1922288789755723779/mDMTDI20_200x200.jpg",
+      "author": "Prakash Pawar",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864510793589009",
+    "type": "x",
+    "title": "打开 。",
+    "summary": "打开 。\n输入 TypeSafe Jev API Key。\n点击“保存 Key”。\n点击“启动并配置”。\n等状态显示“Jev 路由已启动”。\n完全退出 Codex Desktop，再重新打开。\n在 Codex 的模型选择器中选择：\nJev Codex Router\n之后你正常使用 Codex 即可：\n你输入问题\n    ↓\nJev 判断任务难度\n    ↓",
+    "url": "https://x.com/TookJun21525/status/2101864510793589009",
+    "sourceMeta": {
+      "handle": "@TookJun21525",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2084622066846990336/5X232Z-D_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStSn8ybsAAXLF-.jpg"
+      ],
+      "author": "daojoy",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864227938185711",
+    "type": "x",
+    "title": "ChatGPTは語り、Jevは意味同士の関係のなかへ対象を置く",
+    "summary": "テキストチャットLLMは「言語で意味を展開する知性」だとしたら、\nJevは「意味を空間的・構造的に位置づける知性」だと感じる。",
+    "url": "https://x.com/cotamaru6/status/2101864227938185711",
+    "sourceMeta": {
+      "handle": "@cotamaru6",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101866544561344512/afO4-efv_200x200.png",
+      "author": "こたまる / AI時代だから人間らしさを哲学する",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101863835300978909",
+    "type": "x",
+    "title": "Codexのモデル選択をJevに切り替えて、TypeSafe経由のルーター運用を始めてみた。",
+    "summary": "Codexのモデル選択をJevに切り替えて、TypeSafe経由のルーター運用を始めてみた。\n\n参考にした投稿：\n\n\n\n\nJevの面白さは、毎回「どのモデルを使うか」を手動で決めなくていいこと。",
+    "url": "https://x.com/TaoRInne/status/2101863835300978909",
+    "sourceMeta": {
+      "handle": "@TaoRInne",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2083357212643409920/z8A92r6J_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStR6kYb0AAS9T4.jpg"
+      ],
+      "author": "輪廻タヲ",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101862636837282191",
+    "type": "x",
+    "title": "Jevに、人間の「直感的な違和感」に似た役割をさせてみた",
+    "summary": "Jev・Exa・TimesFMを連携させてみた実験",
+    "url": "https://x.com/cotamaru6/status/2101862636837282191",
+    "sourceMeta": {
+      "handle": "@cotamaru6",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101866544561344512/afO4-efv_200x200.png",
+      "author": "こたまる / AI時代だから人間らしさを哲学する",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101860029838303522",
+    "type": "x",
+    "title": "Jev 到底能用在哪？5 个能落地的 Agent 场景",
+    "summary": "Jev 不写字，但很适合放进 Agent 的关键链路做“快速判断”。  \n这篇拆了 5 个可落地场景：内容清洗、固定参数选择、意图路由、RAG 精排和工具安全拦截，也介绍了开源的 JevShield。  \n适合正在做 Agent、RAG 或工具调用治理的同学。",
+    "url": "https://x.com/lgyv5/status/2101860029838303522",
+    "sourceMeta": {
+      "handle": "@lgyv5",
+      "likes": 2,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101658222906286080/1ogJ-LIU_200x200.jpg",
+      "author": "云上开荒",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101859628728582570",
+    "type": "x",
+    "title": "Jev每百万输入token只收0.042美元，企业还要付什么钱？",
+    "summary": "Jev每百万输入token只收0.042美元，企业还要付什么钱？",
+    "url": "https://x.com/AI_Tech_Talk/status/2101859628728582570",
+    "sourceMeta": {
+      "handle": "@AI_Tech_Talk",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1904429422461288448/lU-SnX7Z_200x200.jpg",
+      "author": "AI 志异",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101859061147058548",
+    "type": "x",
+    "title": "Jevとは？「文章を生成しないAI」がX運用を変えるかもしれない",
+    "summary": "Jevとは？「文章を生成しないAI」がX運用を変えるかもしれない",
+    "url": "https://x.com/_exosai_/status/2101859061147058548",
+    "sourceMeta": {
+      "handle": "@_exosai_",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2100617669611487232/4SD2Ziz8_200x200.jpg",
+      "author": "Exos AI｜X特化プラットフォーム｜X最新情報発信",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101858218058379645",
+    "type": "x",
+    "title": "Jev 是个什么东西？一个不会说话的 AI，火了🔥",
+    "summary": "Jev 是个什么东西？一个不会说话的 AI，火了🔥",
+    "url": "https://x.com/aoaoao/status/2101858218058379645",
+    "sourceMeta": {
+      "handle": "@aoaoao",
+      "likes": 12,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2049832260967493633/sTVkkEnM_200x200.jpg",
+      "author": "嗷嗷镜",
+      "replies": 9,
+      "retweets": 2,
+      "bookmarks": 10,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101857883180937540",
+    "type": "x",
+    "title": "⭐ TRENDING ON GITHUB: Jev – System-1 Agent Architecture Radar (open-source)",
+    "summary": "⭐ TRENDING ON GITHUB: Jev – System-1 Agent Architecture Radar (open-source)\n\nHigh-value open-source AI release. Source code, architecture & docs:\n\n🔗",
+    "url": "https://x.com/amasen02/status/2101857883180937540",
+    "sourceMeta": {
+      "handle": "@amasen02",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1490035734803144711/XcKqD1u3_200x200.png",
+      "author": "Ama Senevirathne",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101854707857953047",
+    "type": "x",
+    "title": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "summary": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "url": "https://x.com/KinGao476942/status/2101854707857953047",
+    "sourceMeta": {
+      "handle": "@KinGao476942",
+      "likes": 19,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1843083681210273792/_w6C8yFQ_200x200.jpg",
+      "author": "Kin",
+      "replies": 2,
+      "retweets": 1,
+      "bookmarks": 13,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101854575255003638",
+    "type": "x",
+    "title": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not generate text. You send...",
+    "summary": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not generate text. You send it a state and a list of typed questions, it answers in parallel with probabilities in 70-500ms. Code branches on decisions, not chat. .",
+    "url": "https://x.com/kysstalol/status/2101854575255003638",
+    "sourceMeta": {
+      "handle": "@kysstalol",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2086077556017795072/N6R4sCwH_200x200.jpg",
+      "author": "Kyssta",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
     "id": "x-2100936455401214327",
     "type": "x",
     "title": "Starchild just became the first professional-grade app to integrate Jev from @typesafeai",

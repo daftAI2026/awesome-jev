@@ -1,0 +1,128 @@
+name: Jev ecosystem radar
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Validate offline, or scan GitHub with Jev
+        type: choice
+        options: [validate, sync]
+        default: validate
+      publish:
+        description: Commit the validated snapshot to main (sync only)
+        type: boolean
+        default: false
+      limit:
+        description: Maximum Jev reviews in this run
+        type: choice
+        options: ['5', '20', '60']
+        default: '20'
+permissions:
+  contents: read
+concurrency:
+  group: jev-radar-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name != 'schedule' && (github.event_name != 'workflow_dispatch' || inputs.mode == 'validate')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test && npm run data:check && npm run lint && npm run build
+  scan:
+    if: >-
+      github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+      ((github.event_name == 'schedule' && vars.RADAR_ENABLED == 'true') ||
+       (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+      artifact_id: ${{ steps.snapshot.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Collect and review (no dependency installation)
+        run: node scripts/radar.mjs "$RUNNER_TEMP/snapshot"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          RADAR_LIMIT: ${{ inputs.limit || '20' }}
+      - id: snapshot
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: radar-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/snapshot
+          if-no-files-found: error
+          retention-days: 14
+  validate:
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.scan.outputs.source_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.scan.outputs.artifact_id }}
+          path: ${{ runner.temp }}/snapshot
+          merge-multiple: true
+      - run: node scripts/radar.mjs --apply "$RUNNER_TEMP/snapshot"
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test && npm run data:check && npm run lint && npm run build
+  publish:
+    needs: [scan, validate]
+    if: github.event_name == 'schedule' || inputs.publish == true
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.scan.outputs.source_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.scan.outputs.artifact_id }}
+          path: ${{ runner.temp }}/snapshot
+          merge-multiple: true
+      - run: node scripts/radar.mjs --apply "$RUNNER_TEMP/snapshot"
+      - name: Commit data and README together
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/github.json README.md radar/state.json radar/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: sync Jev radar and README'
+            # 主分支已被其他采集器修改时安全失败；不 rebase、不强推覆盖。
+            git -c credential.helper='!gh auth git-credential' push origin HEAD:main
+          fi

@@ -1,20 +1,19 @@
 #!/usr/bin/env node
 /**
- * Build-time OG generator. GitHub count comes from data/items.json
+ * Build-time OG generator. GitHub count comes from every catalog shard
  * (same rule as src/lib/counts.ts) — never hardcode the number.
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { readCatalog } from './catalog.mjs'
 
 interface DirectoryRow {
   type?: string
 }
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const items = JSON.parse(
-  readFileSync(join(root, 'data/items.json'), 'utf8'),
-) as DirectoryRow[]
+const items = readCatalog(root).rows as DirectoryRow[]
 const github = items.reduce((n, it) => n + (it.type === 'github' ? 1 : 0), 0)
 const banner = readFileSync(join(root, 'scripts/awesome-jev-banner.txt'), 'utf8')
   .split(/\n/)

@@ -6,7 +6,8 @@ import {
   MagnifyingGlass,
   SquaresFour,
 } from '@phosphor-icons/react'
-import itemsData from '../data/items.json'
+import githubData from '../data/github.json'
+import youtubeData from '../data/youtube.json'
 import xData from '../data/x.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { GithubList } from '@/components/GithubList'
@@ -47,16 +48,9 @@ import type {
   YoutubeSort,
 } from '@/lib/types'
 
-const partModules = import.meta.glob('../data/part-*.json', {
-  eager: true,
-}) as Record<string, { default: DirectoryItem[] }>
-const partItems = Object.keys(partModules)
-  .sort()
-  .flatMap((key) => partModules[key].default)
-
 const items = [
-  ...(itemsData as DirectoryItem[]),
-  ...partItems,
+  ...(githubData as DirectoryItem[]),
+  ...(youtubeData as DirectoryItem[]),
   ...(xData as DirectoryItem[]),
 ]
 const githubProjectCount = countGithubProjects(items)
