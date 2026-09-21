@@ -14,7 +14,7 @@ const catalog = () => ({ files: new Map([['github.json', []], ['youtube.json', [
 const api = async (path) => path.startsWith('/search/') ? { items: [repo], total_count: 1 } :
   path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
     { encoding: 'base64', size: 100, path: 'README.md', content: Buffer.from('Useful TypeSafe Jev SDK docs at https://docs.typesafe.ai').toString('base64') } : repo
-const options = () => ({ catalog: catalog(), api, review: async () => score, now, queries: ['test query'], metadataLimit: 0 })
+const options = () => ({ catalog: catalog(), api, review: async () => score, now, queries: ['test query'] })
 
 test('only valid, high-confidence keep qualifies; unknowns fail closed', () => {
   assert.equal(reviewDecision(score), 'keep')
@@ -96,7 +96,7 @@ test('metadata failure preserves old record; other candidates can still succeed'
   const old = { id: 'old', type: 'github', title: 'Old', summary: 'Curated', tags: ['sdk'],
     url: 'https://github.com/test/old', sourceMeta: { repo: 'test/old', stars: 9 } }
   const original = { files: new Map([['github.json', [old]]]), rows: [old], social: [] }
-  const result = await runRadar({ ...options(), catalog: original, metadataLimit: 1, api: async (path) => {
+  const result = await runRadar({ ...options(), catalog: original, api: async (path) => {
     if (path === '/repos/test/old') throw new Error('github-http-404')
     return api(path)
   } })
@@ -201,4 +201,36 @@ for (const [evidence, reason] of [
   assert.equal(called, false); assert.equal(result.report.added, 0)
   assert.equal(result.report.receipts[0].reason, reason)
   assert.equal(result.state.candidates['test/jev-sdk'].status, 'review')
+})
+
+// --- 历史游标和候选预算均不得截断旧项目刷新 ---
+test('every existing GitHub repository is refreshed regardless of candidate limit or old cursor', async () => {
+  const rows = Array.from({ length: 501 }, (_, i) => ({ id: `old-${i}`, type: 'github', title: `Old ${i}`,
+    summary: 'Curated', url: `https://github.com/test/old-${i}`,
+    sourceMeta: { repo: `test/old-${i}`, stars: 10, forks: 8, openIssues: 3, language: 'JavaScript', ...score } }))
+  const before = structuredClone(rows)
+  const state = { ...emptyState(), metadataCursor: 300 }
+  const seen = []
+  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows, social: [] },
+    state, queries: [], limit: 1, now,
+    review: async () => { assert.fail('Existing repositories must not call Jev') },
+    api: async (path) => {
+      seen.push(path)
+      if (path === '/repos/test/old-200') throw new Error('github-http-404')
+      return { html_url: `https://github.com/${path.slice('/repos/'.length)}`,
+        stargazers_count: 4, forks_count: 2, open_issues_count: 0, language: 'TypeScript' }
+    },
+  })
+  assert.equal(seen.length, 501)
+  assert.equal(new Set(seen).size, 501)
+  assert.deepEqual(result.report.metadata, { ok: 500, failed: 1 })
+  assert.deepEqual(result.rows[200], before[200])
+  for (const [i, row] of result.rows.entries()) {
+    if (i === 200) continue
+    assert.deepEqual(row, { ...before[i], sourceMeta: { ...before[i].sourceMeta,
+      stars: 4, forks: 2, openIssues: 0, language: 'TypeScript' } })
+  }
+  assert.deepEqual(rows, before)
+  assert.equal(result.state.metadataCursor, 0)
+  assert.equal(result.report.reviewed, 0)
 })

@@ -51,9 +51,8 @@ function evidenceIssue(repo, readme) {
   return null
 }
 
-export async function runRadar({ catalog, state = emptyState(), api, review, now = new Date(), limit = 20, metadataLimit = 150, queries = QUERIES }) {
+export async function runRadar({ catalog, state = emptyState(), api, review, now = new Date(), limit = 20, queries = QUERIES }) {
   if (!Number.isSafeInteger(limit) || limit < 1 || limit > 60) throw new Error('limit must be 1..60')
-  if (!Number.isSafeInteger(metadataLimit) || metadataLimit < 0 || metadataLimit > 500) throw new Error('Invalid metadata limit')
   validateState(state)
   state = structuredClone(state)
   const started = now.toISOString()
@@ -104,12 +103,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.sources.push(source)
   }
 
-  // --- 轮询已有仓库；失败保持旧数据，单个失效仓库不拖垮整轮 ---
+  // --- 全量刷新已有仓库；失败保持旧数据，单个失效仓库不拖垮整轮 ---
   const github = rows.filter((r) => r.type === 'github')
-  const start = github.length ? state.metadataCursor % github.length : 0
-  const refreshCount = Math.min(metadataLimit, github.length)
-  for (let i = 0; i < refreshCount; i++) {
-    const row = github[(start + i) % github.length]
+  for (const row of github) {
     try {
       const meta = await api(`/repos/${repoKey(row.url)}`)
       Object.assign(row, refreshRow(row, meta))
@@ -119,7 +115,8 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       report.receipts.push({ repo: repoKey(row.url), status: 'metadata-error', reason: safeReason(error) })
     }
   }
-  state.metadataCursor = github.length ? (start + refreshCount) % github.length : 0
+  // 兼容旧版持久化状态；全量刷新不再使用轮转游标。
+  state.metadataCursor = 0
 
   const batch = Object.entries(state.candidates)
     .filter(([, entry]) => !entry.retryAt || Date.parse(entry.retryAt) <= now.getTime())
