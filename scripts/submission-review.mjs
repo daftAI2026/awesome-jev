@@ -17,6 +17,18 @@ const safeError = (error) => /^(github|jev|submission)-[a-z0-9-]+$/.test(error?.
 const digest = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
 const validNumber = (value) => Number.isSafeInteger(value) && value > 0
 
+// 只判断申请正文，不把代码、链接、模板标题和复审命令当作自然语言。
+export function reportLanguage(issue) {
+  const text = `${issue.title ?? ''}\n${issue.body ?? ''}`
+    .replace(/<!--[\s\S]*?-->/g, '').replace(/```[\s\S]*?```|~~~[\s\S]*?~~~/g, '')
+    .replace(/`[^`]*`|https?:\/\/\S+/g, '').replace(/^#{1,6}\s+.*$/gm, '')
+    .replace(/\[submission\]/gi, '')
+  const chinese = (text.match(/\p{Script=Han}/gu) ?? []).length
+  const latinWords = (text.match(/[A-Za-z]+/g) ?? []).length
+  const japanese = /[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(text)
+  return !japanese && chinese >= 4 && chinese > latinWords * 2 ? 'zh' : 'en'
+}
+
 export function repositoryLinks(text) {
   return [...new Set((String(text ?? '').match(/https:\/\/github\.com\/[\w.-]+\/[\w.-]+/g) ?? [])
     .map((url) => repoKey(url.replace(/[.,]+$/, ''))).filter((key) => key && key !== REPOSITORY.toLowerCase()))]
@@ -96,7 +108,7 @@ async function jsonAt(api, path, sha, optional = false) {
     throw error
   }
 }
-export async function submissionInput(api, issue) {
+export async function submissionInput(api, issue, language = reportLanguage(issue)) {
   if (!issue.pull_request) return { keys: repositoryLinks(issue.body), version: digest([issue.title, issue.body]), notes: [] }
   const pr = await api(`/repos/${REPOSITORY}/pulls/${issue.number}`)
   if (pr.draft) return { keys: [], version: pr.head.sha, notes: [] }
@@ -116,7 +128,7 @@ export async function submissionInput(api, issue) {
     const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url)))
     validateRows(additions)
     for (const row of additions) keys.add(repoKey(row.url))
-    if (file.filename !== 'data/github.json') notes.push('数据路径已迁移，请将收录条目放入 data/github.json，不要恢复 items/part 分片。')
+    if (file.filename !== 'data/github.json') notes.push(language === 'zh' ? '数据路径已迁移，请将收录条目放入 data/github.json，不要恢复 items/part 分片。' : 'Please add entries to data/github.json; do not restore the old items/part files.')
   }
   return { keys: [...keys], version: pr.head.sha, notes: [...new Set(notes)] }
 }
@@ -132,29 +144,35 @@ export async function assessProject(api, review, key, known) {
     return { ...result, status: reviewDecision(score), score }
   } catch (error) { return { repo: key, status: 'error', reason: safeError(error) } }
 }
-export function renderReport(meta, results, notes = [], pending = false) {
-  const labels = { included: '已收录，无需重复添加', keep: '建议收录（未自动合并）', review: '待复核', drop: '暂不建议收录', error: '审查失败，不代表不合格' }
+export function renderReport(meta, results, notes = [], pending = false, language = 'en') {
+  const zh = language === 'zh'
+  const labels = zh
+    ? { included: '已收录', keep: '建议收录', review: '待复核', drop: '暂不建议收录', error: '暂时无法完成审查' }
+    : { included: 'Already listed', keep: 'Recommended for inclusion', review: 'Needs review', drop: 'Not recommended at this time', error: 'Review temporarily unavailable' }
   const explanations = {
-    'insufficient-provider-context': '缺少清晰的 TypeSafe 与 Jev/System One 关联证据，请补充官方链接或集成说明。',
-    'instruction-like-evidence': '证据含指令式文本，转人工检查，不进行自动准入。',
+    'insufficient-provider-context': zh ? '当前简介和 README 片段中的关联证据不足，请补充 Jev 集成说明。' : 'The description and README excerpt do not establish the Jev integration. Please add integration details.',
+    'instruction-like-evidence': zh ? '项目说明需要人工核对。' : 'The project description needs a manual check.',
   }
   const lines = results.map((r) => {
-    const score = r.score ? `；相关性 **${r.score.jevAbout.toFixed(2)}**，模型判断 **${r.score.jevKeep}**，该判断置信度 **${r.score.jevKeepConfidence.toFixed(2)}**` : ''
-    const reason = explanations[r.reason] ?? (r.reason ? `状态码：\`${r.reason}\`。` :
-      r.status === 'review' ? '未达到自动通过条件，请补充可核对的用例、实现说明或测试证据。' : '')
-    return `- [${r.repo}](https://github.com/${r.repo})：**${labels[r.status]}**${score}${r.stars != null ? `；Star ${r.stars}` : ''}。${reason}${r.evidence ? ` [审查证据](${r.evidence})` : ''}`
+    const reason = r.status === 'error' ? (zh ? '请稍后重试。' : 'Please try again later.') : explanations[r.reason] ??
+      (r.status === 'review' ? (zh ? '自动审查未能确认，请补充使用示例或实现说明。' : 'The automated review was inconclusive. Please add a usage example or implementation details.') : '')
+    return `- [${r.repo}](https://github.com/${r.repo})${zh ? '：' : ': '}**${labels[r.status]}**${zh ? '。' : '. '}${reason}${r.evidence ? ` [${zh ? '依据' : 'Evidence'}](${r.evidence})` : ''}`.trimEnd()
   })
-  return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## Jev 收录审查\n\n审查时间（UTC）：${meta.at}。${pending ? '正在审查，请稍候。' : ''}\n\n${lines.join('\n') || '未发现可审查的新增 GitHub 项目。'}\n\n${notes.map((n) => `- ${n}`).join('\n')}\n\n通过条件：模型判断 keep、相关性 ≥ 0.90、该判断置信度 ≥ 0.90。低置信度不等于项目不合格；这些分数不是质量或安全认证。\n\n仅进行收录相关性审查，未运行外部代码；不自动合并、关闭申请或写入目录。维护者可评论 \`/jev review\` 复审（10 分钟冷却）。\n`
+  const content = pending ? (zh ? '正在审查，请稍候。' : 'Review in progress.') :
+    lines.join('\n') || (zh ? '未发现可审查的新增 GitHub 项目。' : 'No new GitHub projects found to review.')
+  const extra = notes.length ? '\n\n' + notes.map((n) => `- ${n}`).join('\n') : ''
+  return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
 }
 
 export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date() }) {
   const issue = await api(`/repos/${REPOSITORY}/issues/${number}`)
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
+  const language = reportLanguage(issue)
   let input
-  try { input = await submissionInput(api, issue) }
-  catch (error) { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [`无法读取收录数据：${safeError(error)}。请检查 JSON 格式和提交路径。`] } }
+  try { input = await submissionInput(api, issue, language) }
+  catch { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [language === 'zh' ? '无法读取收录数据，请检查 JSON 格式和提交路径。' : 'Could not read the submission data. Please check the JSON format and file paths.'] } }
   if (!input.keys.length && !input.notes.length) return 'no-projects'
-  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key))])
+  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language])
   const comments = await pages(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
@@ -171,9 +189,9 @@ export async function processSubmission({ api, writeComment, review, number, man
   if (used + reserve > DAILY_BUDGET) return 'daily-budget-exhausted'
   const meta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, pending: true }
   const notes = [...input.notes]
-  if (input.keys.length > MAX_PROJECTS) notes.push(`本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。`)
+  if (input.keys.length > MAX_PROJECTS) notes.push(language === 'zh' ? `本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。` : `Reviewed the first ${MAX_PROJECTS} projects. Please submit the remaining ${input.keys.length - MAX_PROJECTS} separately.`)
   // 先保留预算，再调用模型；崩溃或网络失败也不能反复免费重试额度。
-  const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true))
+  const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true, language))
   const results = []
   let unavailable = false
   for (const key of keys) {
@@ -182,7 +200,7 @@ export async function processSubmission({ api, writeComment, review, number, man
     if (result.reason?.startsWith('jev-')) unavailable = true
     results.push(result)
   }
-  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: results.some((r) => r.status === 'error') }, results, notes))
+  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: results.some((r) => r.status === 'error') }, results, notes, false, language))
   return `reviewed-${results.length}`
 }
 

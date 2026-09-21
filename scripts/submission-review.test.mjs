@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { REPOSITORY, MARKER, repositoryLinks, reviewMeta, cacheReason, eventTargets,
+import { REPOSITORY, MARKER, reportLanguage, repositoryLinks, reviewMeta, cacheReason, eventTargets,
   submissionInput, assessProject, renderReport, processSubmission, commentWriter } from './submission-review.mjs'
 
 const now = new Date('2026-09-22T10:00:00Z')
@@ -79,9 +79,11 @@ test('evidence guard defers prompt injection without paying for review', async (
 })
 test('report separates low confidence from failure and does not invent rejection reasons', () => {
   const report = renderReport(meta, [{ repo: 'test/new', status: 'review', score: { ...score, jevKeepConfidence: 0.77 } },
-    { repo: 'test/other', status: 'error', reason: 'jev-http-401' }])
-  assert.ok(report.startsWith(MARKER)); assert.ok(report.includes('0.77'))
-  assert.ok(report.includes('审查失败，不代表不合格')); assert.ok(report.includes('未达到自动通过条件'))
+    { repo: 'test/other', status: 'error', reason: 'jev-http-401' }], [], false, 'zh')
+  assert.ok(report.startsWith(MARKER)); assert.ok(!report.includes('0.77'))
+  assert.ok(report.includes('暂时无法完成审查')); assert.ok(report.includes('自动审查未能确认'))
+  for (const internal of ['/jev review', '冷却', '通过条件', '置信度', 'jev-http-401', 'Star']) assert.ok(!report.includes(internal))
+  assert.deepEqual(reviewMeta({ ...botComment(), body: report }), meta)
 })
 function harness({ previous, recent = [], count = 1, failReview = false } = {}) {
   const writes = [], paid = []
@@ -113,13 +115,14 @@ test('service failure stops further paid calls and reports deferred projects', a
   const h = harness({ count: 3, failReview: true })
   await processSubmission(h.args)
   assert.equal(h.paid.length, 1)
-  assert.ok(h.writes[1].body.includes('jev-deferred-after-error'))
+  assert.equal(h.writes[1].body.match(/Review temporarily unavailable/g).length, 3)
+  assert.ok(!h.writes[1].body.includes('jev-deferred-after-error'))
 })
 test('per-submission cap never silently reviews more than ten projects', async () => {
   const h = harness({ count: 12 })
   await processSubmission(h.args)
   assert.equal(h.paid.length, 10)
-  assert.ok(h.writes[1].body.includes('另外 2 个请拆分申请'))
+  assert.ok(h.writes[1].body.includes('remaining 2 separately'))
 })
 test('comment transport is pinned, rejects redirects and never leaks remote error bodies', async () => {
   const write = commentWriter('fake-test-only', { fetchImpl: async (url, options) => {
@@ -166,4 +169,62 @@ test('failed formatting CI still permits advisory review without consuming its a
   }, 'workflow_run', event)
   assert.deepEqual(targets, [{ number: 3, manual: false }])
   assert.ok(calls.every((path) => path.includes('/pulls?')))
+})
+
+test('pending public report has no misleading empty-result message', () => {
+  const report = renderReport(meta, [], [], true, 'zh')
+  assert.ok(report.includes('正在审查'))
+  assert.ok(!report.includes('未发现'))
+})
+
+
+test('report language defaults to English and follows Chinese prose, not URLs or code', () => {
+  for (const issue of [{}, { title: 'Add Jev integration', body: 'Please include this project.' },
+    { body: 'https://github.com/test/中文项目' }, { body: '```js\n// 这里是中文代码注释\n```\nPlease add this project.' },
+    { body: 'This project supports Chinese (中文) and English.' }, { body: 'これは日本語の説明です。' }]) {
+    assert.equal(reportLanguage(issue), 'en')
+  }
+  assert.equal(reportLanguage({ title: '[Submission] 申请收录', body: '### Project description\n这是支持 Jev 的开源工具，提供自动化调用与示例。' }), 'zh')
+  assert.equal(reportLanguage({ title: '申請收錄', body: '這是支援 Jev 的開源工具。' }), 'zh')
+})
+test('English reports cover all outcomes and hide internal instructions', () => {
+  const results = ['included', 'keep', 'review', 'drop', 'error'].map((status) => ({ repo: `test/${status}`, status }))
+  results.push({ repo: 'test/context', status: 'review', reason: 'insufficient-provider-context', evidence: 'https://github.com/test/context' },
+    { repo: 'test/manual', status: 'review', reason: 'instruction-like-evidence' })
+  const report = renderReport(meta, results)
+  assert.ok(report.includes('Already listed')); assert.ok(report.includes('Recommended for inclusion'))
+  assert.ok(report.includes('Needs review')); assert.ok(report.includes('Not recommended at this time'))
+  assert.ok(report.includes('Review temporarily unavailable')); assert.ok(report.includes('[Evidence]'))
+  assert.ok(!/\p{Script=Han}/u.test(report)); assert.ok(!report.includes('/jev review'))
+  assert.ok(renderReport(meta, [], [], true).includes('Review in progress'))
+})
+test('processing uses submission language for pending, final and error notes', async () => {
+  for (const language of ['en', 'zh']) {
+    const h = harness()
+    const api = h.args.api
+    h.args.api = async (path) => path.endsWith('/issues/3') ? {
+      number: 3, state: 'open', title: language === 'zh' ? '[Submission] 申请收录这个项目' : '[Submission] Add project',
+      body: '', pull_request: {},
+    } : path.endsWith('/pulls/3') ? Promise.reject(new Error('github-http-404')) : api(path)
+    await processSubmission(h.args)
+    assert.equal(h.paid.length, 0)
+    assert.equal(h.writes.length, 2)
+    for (const { body } of h.writes) {
+      assert.ok(body.includes(language === 'zh' ? '请检查 JSON 格式' : 'Please check the JSON format'))
+      assert.equal(/\p{Script=Han}/u.test(body), language === 'zh')
+    }
+  }
+})
+
+test('Chinese submissions use Chinese results and split notices throughout processing', async () => {
+  const h = harness({ count: 12 })
+  const api = h.args.api
+  h.args.api = async (path) => {
+    const result = await api(path)
+    return path.endsWith('/issues/3') ? { ...result, title: '[Submission] 申请收录这些开源项目' } : result
+  }
+  await processSubmission(h.args)
+  assert.ok(h.writes[0].body.includes('正在审查'))
+  assert.ok(h.writes[1].body.includes('建议收录'))
+  assert.ok(h.writes[1].body.includes('另外 2 个请拆分申请'))
 })
