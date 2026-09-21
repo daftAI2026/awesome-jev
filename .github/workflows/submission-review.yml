@@ -1,0 +1,47 @@
+name: Jev submission review
+on:
+  schedule:
+    - cron: '43 * * * *'
+  issues:
+    types: [opened, edited, reopened, labeled]
+  issue_comment:
+    types: [created]
+  workflow_run:
+    workflows: [Jev ecosystem radar]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      number:
+        description: Issue or pull request number to review
+        required: true
+        type: string
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+# 全局串行保护每日预算和同一机器人评论；不取消正在进行的审查。
+concurrency:
+  group: jev-submission-review
+  cancel-in-progress: false
+jobs:
+  review:
+    if: >-
+      github.repository == 'daftAI2026/awesome-jev' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.event == 'pull_request') &&
+      (github.event_name != 'issue_comment' || github.event.comment.body == '/jev review')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # 始终运行可信主分支，绝不 checkout PR head、消费 PR 产物或安装外部依赖。
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Review submissions and update bot report
+        run: node scripts/submission-review.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}

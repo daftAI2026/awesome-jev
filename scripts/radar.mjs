@@ -4,6 +4,7 @@ import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
 import { readCatalog, repoKey, refreshRow, candidateRow, renderReadme, applySnapshot } from './catalog.mjs'
 import { createGitHubClient } from './github-client.mjs'
+import { githubEvidence, evidenceIssue } from './github-evidence.mjs'
 import { evaluateJev, reviewDecision, JEV_MODEL } from './jev-client.mjs'
 
 export const QUERIES = [
@@ -37,19 +38,6 @@ export function validateState(state) {
 }
 
 const safeReason = (error) => /^(github|jev)-[a-z0-9-]+$/.test(error?.message ?? '') ? error.message : 'candidate-invalid-evidence'
-
-function evidenceIssue(repo, readme) {
-  const text = `${repo.name}\n${repo.description ?? ''}\n${readme}`
-  // --- 确定性前置门槛只负责保守分流，不把模型置信度当作安全证明 ---
-  const provider = /typesafe\.ai\b|@typesafe-ai\/|github\.com\/typesafe-ai\/|\bTypeSafe AI\b/i.test(text)
-  const subject = /\bjev\b|system[\s_-]?one/i.test(text)
-  if (!provider || !subject) return 'insufficient-provider-context'
-  if (/\b(?:ignore|disregard|override)\b.{0,60}\b(?:instructions|rules|system prompt)\b/i.test(text) ||
-    /\b(?:always|must)\s+(?:return|respond|output)\s+["'`]*(?:keep|accepted)\b/i.test(text)) {
-    return 'instruction-like-evidence'
-  }
-  return null
-}
 
 export async function runRadar({ catalog, state = emptyState(), api, review, now = new Date(), limit = 20, queries = QUERIES }) {
   if (!Number.isSafeInteger(limit) || limit < 1 || limit > 60) throw new Error('limit must be 1..60')
@@ -127,21 +115,12 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     entry.attempts++
     report.reviewed++
     try {
-      const repo = await api(`/repos/${key}`)
-      if (repo.private || repo.fork || repo.archived || repoKey(repo.html_url) !== key) throw new Error('github-ineligible-repository')
-      const branch = await api(`/repos/${key}/commits/${encodeURIComponent(repo.default_branch)}`)
-      if (!/^[a-f0-9]{40}$/.test(branch.sha)) throw new Error('github-invalid-sha')
-      const readme = await api(`/repos/${key}/readme?ref=${branch.sha}`)
-      if (readme.encoding !== 'base64' || typeof readme.content !== 'string' ||
-        readme.content.length > 180000 || readme.size > 128000 || typeof readme.path !== 'string') throw new Error('github-invalid-readme')
-      const text = Buffer.from(readme.content, 'base64').toString('utf8').slice(0, 12000)
-      if (!text.trim()) throw new Error('github-empty-readme')
+      const { repo, sha, text, evidenceUrl } = await githubEvidence(api, key)
       const candidate = candidateRow(repo)
       const reason = evidenceIssue(repo, text)
       const score = reason ? undefined : await review(candidate, text)
       const decision = reason ? 'review' : reviewDecision(score)
-      const receipt = { repo: key, status: decision, score, reason: reason ?? undefined, sha: branch.sha,
-        evidenceUrl: `https://github.com/${key}/blob/${branch.sha}/${readme.path.split('/').map(encodeURIComponent).join('/')}`,
+      const receipt = { repo: key, status: decision, score, reason: reason ?? undefined, sha, evidenceUrl,
         evidenceSha256: createHash('sha256').update(text).digest('hex') }
       report.receipts.push(receipt)
       if (decision === 'keep') {
