@@ -19,8 +19,8 @@ on:
       limit:
         description: Maximum Jev reviews in this run
         type: choice
-        options: ['5', '20', '60']
-        default: '20'
+        options: ['5', '60', '2000']
+        default: '2000'
 permissions:
   contents: read
 concurrency:
@@ -35,12 +35,16 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm test && npm run data:check && npm run lint && npm run build
+      - run: npm run typecheck && npm test && npm run data:check && npm run lint && npm run build
   scan:
+    permissions:
+      contents: read
+      actions: read
     if: >-
       github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
       ((github.event_name == 'schedule' && vars.RADAR_ENABLED == 'true') ||
@@ -55,17 +59,44 @@ jobs:
         with:
           ref: main
           persist-credentials: false
+          fetch-depth: 0
       - id: source
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
+      - name: Find trusted radar budget
+        id: budget-checkpoint
+        run: node --experimental-strip-types scripts/review-checkpoint.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          JEV_CHECKPOINT_KIND: radar
+      - name: Restore radar budget
+        id: budget-restore
+        if: steps.budget-checkpoint.outputs.artifact_id != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ steps.budget-checkpoint.outputs.artifact_id }}
+          run-id: ${{ steps.budget-checkpoint.outputs.run_id }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/jev-radar-budget
+          merge-multiple: true
       - name: Collect and review (no dependency installation)
-        run: node scripts/radar.mjs "$RUNNER_TEMP/snapshot"
+        id: collect
+        run: node --experimental-strip-types scripts/radar.ts "$RUNNER_TEMP/snapshot"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
-          RADAR_LIMIT: ${{ inputs.limit || '20' }}
+          RADAR_LIMIT: ${{ inputs.limit || '2000' }}
+          JEV_RADAR_BUDGET_DIR: ${{ runner.temp }}/jev-radar-budget
+      - name: Save radar request budget
+        if: always() && steps.budget-checkpoint.outcome == 'success' && steps.budget-restore.outcome != 'failure' && steps.collect.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: jev-radar-budget-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/jev-radar-budget/*.json
+          if-no-files-found: error
+          retention-days: 7
       - id: snapshot
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -82,6 +113,7 @@ jobs:
         with:
           ref: ${{ needs.scan.outputs.source_sha }}
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
@@ -90,9 +122,9 @@ jobs:
           artifact-ids: ${{ needs.scan.outputs.artifact_id }}
           path: ${{ runner.temp }}/snapshot
           merge-multiple: true
-      - run: node scripts/radar.mjs --apply "$RUNNER_TEMP/snapshot"
+      - run: node --experimental-strip-types scripts/radar.ts --apply "$RUNNER_TEMP/snapshot"
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm test && npm run data:check && npm run lint && npm run build
+      - run: npm run typecheck && npm test && npm run data:check && npm run lint && npm run build
   publish:
     needs: [scan, validate]
     if: github.event_name == 'schedule' || inputs.publish == true
@@ -105,6 +137,7 @@ jobs:
         with:
           ref: ${{ needs.scan.outputs.source_sha }}
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
@@ -113,7 +146,7 @@ jobs:
           artifact-ids: ${{ needs.scan.outputs.artifact_id }}
           path: ${{ runner.temp }}/snapshot
           merge-multiple: true
-      - run: node scripts/radar.mjs --apply "$RUNNER_TEMP/snapshot"
+      - run: node --experimental-strip-types scripts/radar.ts --apply "$RUNNER_TEMP/snapshot"
       - name: Commit data and README together
         env:
           GH_TOKEN: ${{ github.token }}

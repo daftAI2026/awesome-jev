@@ -43,7 +43,7 @@ jobs:
           node-version: '22'
       - name: Find trusted checkpoint
         id: checkpoint
-        run: node scripts/review-checkpoint.mjs
+        run: node --experimental-strip-types scripts/review-checkpoint.ts
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Restore trusted review state
@@ -58,7 +58,7 @@ jobs:
           merge-multiple: true
       - name: Review submissions and update bot report
         id: review
-        run: node scripts/submission-review.mjs
+        run: node --experimental-strip-types scripts/submission-review.ts
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}

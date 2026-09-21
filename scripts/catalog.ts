@@ -1,0 +1,256 @@
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { join, resolve } from 'node:path'
+import { pathToFileURL } from 'node:url'
+import { isDeepStrictEqual } from 'node:util'
+import { reviewDecision } from './jev-client.ts'
+import type {
+  Catalog,
+  CatalogSourceMeta,
+  DirectoryItem,
+  ExternalDirectoryItem,
+  GitHubDirectoryItem,
+  GitHubRepository,
+  ScoreInput,
+  SourceType,
+} from './model-types.ts'
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value)
+
+const parseJson = (text: string): unknown => JSON.parse(text) as unknown
+
+const isSourceType = (value: unknown): value is SourceType =>
+  value === 'github' || value === 'x' || value === 'youtube'
+
+function entriesFrom(value: unknown): DirectoryItem[] {
+  validateRows(value)
+  return value
+}
+
+// --- 固定来源边界：禁止旧分片悄悄回流，避免站点漏读新增数据 ---
+export const catalogFiles = (root: string): string[] => {
+  if (readdirSync(join(root, 'data')).some((name) => /^(items|part-\d+)\.json$/.test(name))) {
+    throw new Error('Legacy catalog shards must be migrated')
+  }
+  return ['github.json', 'youtube.json']
+}
+
+export function readCatalog(root: string): Catalog {
+  const files = new Map<string, DirectoryItem[]>()
+  for (const file of catalogFiles(root)) {
+    files.set(file, entriesFrom(parseJson(readFileSync(join(root, 'data', file), 'utf8'))))
+  }
+  const socialRows = entriesFrom(parseJson(readFileSync(join(root, 'data/x.json'), 'utf8')))
+  const all = [...files.entries(), ['x.json', socialRows] as [string, DirectoryItem[]]]
+  for (const [file, entries] of all) {
+    const source = file.slice(0, -5)
+    if (entries.some((row) => row.type !== source)) throw new Error(`Wrong source in ${file}`)
+  }
+  const social = socialRows as ExternalDirectoryItem[]
+  const rows = [...files.values()].flat()
+  validateRows([...rows, ...social])
+  return { files, rows, social }
+}
+
+export function repoKey(url: string): string | null {
+  try {
+    const parsed = new URL(url)
+    if (parsed.origin !== 'https://github.com' || parsed.username || parsed.password || parsed.search || parsed.hash) return null
+    const path = parsed.pathname.replace(/\/$/, '')
+    return /^\/[\w.-]+\/[\w.-]+$/.test(path) ? path.slice(1).toLowerCase() : null
+  } catch {
+    return null
+  }
+}
+
+export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
+  if (!Array.isArray(rows)) throw new Error('Catalog must be an array')
+  const ids = new Set<string>()
+  const repos = new Set<string>()
+  for (const candidate of rows) {
+    if (!isRecord(candidate) || !isSourceType(candidate.type) ||
+      !['id', 'title', 'summary', 'url'].every((key) => typeof candidate[key] === 'string' && candidate[key].trim()) ||
+      !isRecord(candidate.sourceMeta)) {
+      throw new Error('Invalid DirectoryItem')
+    }
+    const id = candidate.id as string
+    const url = candidate.url as string
+    const sourceMeta = candidate.sourceMeta
+    if (ids.has(id)) throw new Error(`Duplicate id: ${id}`)
+    ids.add(id)
+    const parsedUrl = new URL(url)
+    if (parsedUrl.protocol !== 'https:' || parsedUrl.username || parsedUrl.password) throw new Error('Unsafe catalog URL')
+    if (candidate.tags !== undefined && (!Array.isArray(candidate.tags) || candidate.tags.some((tag) => typeof tag !== 'string'))) {
+      throw new Error('Invalid tags')
+    }
+    if (candidate.type === 'github') {
+      const key = repoKey(url)
+      if (!key || typeof sourceMeta.repo !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sourceMeta.repo)) {
+        throw new Error(`Invalid repository: ${id}`)
+      }
+      if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
+      repos.add(key)
+      for (const field of ['stars', 'forks', 'openIssues'] as const) {
+        const value = sourceMeta[field]
+        if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)
+      }
+    }
+  }
+}
+
+export function metadataOf(repo: GitHubRepository): CatalogSourceMeta {
+  const stars = repo.stargazers_count
+  const forks = repo.forks_count
+  const openIssues = repo.open_issues_count
+  if (typeof stars !== 'number' || !Number.isSafeInteger(stars) || stars < 0 ||
+    typeof forks !== 'number' || !Number.isSafeInteger(forks) || forks < 0 ||
+    typeof openIssues !== 'number' || !Number.isSafeInteger(openIssues) || openIssues < 0) {
+    throw new Error('Invalid GitHub metadata')
+  }
+  return {
+    stars,
+    forks,
+    openIssues,
+    language: repo.language ?? null,
+  }
+}
+
+export function refreshRow<T extends DirectoryItem>(row: T, repo: GitHubRepository): T {
+  // --- 只更新显示元数据；不重写人工摘要、标签、稳定 ID 和审查结论 ---
+  if (repoKey(repo.html_url) !== repoKey(row.url)) throw new Error('Repository moved; manual review required')
+  return { ...row, sourceMeta: { ...row.sourceMeta, ...metadataOf(repo) } } as T
+}
+
+export function candidateRow(repo: GitHubRepository, score: ScoreInput = {}): GitHubDirectoryItem {
+  const key = repoKey(repo.html_url)
+  if (!key || key !== repo.full_name.toLowerCase() || repo.private || repo.fork || repo.archived) {
+    throw new Error('Ineligible repository')
+  }
+  const tags = [...new Set(['jev', ...(repo.topics ?? []), repo.language?.toLowerCase()])]
+    .filter((tag): tag is string => typeof tag === 'string' && /^[a-z0-9+# .-]{1,50}$/.test(tag)).slice(0, 8)
+  return {
+    id: `gh-${key.split('/')[0].length}-${key.replace('/', '-')}`,
+    type: 'github',
+    title: repo.name,
+    summary: repo.description?.trim().slice(0, 500) || `${repo.name}: TypeSafe Jev ecosystem repository.`,
+    tags,
+    url: repo.html_url,
+    sourceMeta: {
+      repo: repo.full_name,
+      author: repo.owner.login,
+      ...metadataOf(repo),
+      date: repo.created_at?.slice(0, 10),
+      ...score,
+    },
+  }
+}
+
+const sections: Array<[string, (row: GitHubDirectoryItem) => boolean]> = [
+  ['Official SDKs & skills', (row) => repoKey(row.url)?.split('/')[0] === 'typesafe-ai'],
+  ['Awesome lists', (row) => /awesome/i.test(row.title) || row.tags?.includes('awesome') === true],
+  ['Browser & computer use', (row) => /browser|computer-use|cdp/.test((row.tags ?? []).join(' '))],
+  ['MCP, routers & adapters', (row) => /mcp|router|adapter/.test((row.tags ?? []).join(' '))],
+  ['Research & benchmarks', (row) => /benchmark|research|evaluation|calibration/.test((row.tags ?? []).join(' '))],
+  ['Libraries & SDKs', (row) => /sdk|library|api-client/.test((row.tags ?? []).join(' '))],
+  ['Agents, demos & apps', (row) => /agent|demo|game|app/.test((row.tags ?? []).join(' '))],
+  ['Tools & integrations', () => true],
+]
+
+const escapeMarkdown = (text: string): string => String(text).replace(/[\r\n\t]+/g, ' ')
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/[\\`*_{}[\]()!|]/g, '\\$&')
+
+// --- 语言标签使用行内代码；动态围栏防止远端反引号提前闭合 ---
+const languageCode = (text: string): string => {
+  const value = String(text).replace(/[\r\n\t]+/g, ' ').trim()
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const runs = (value.match(/`+/g) ?? []).map((run) => run.length)
+  const fence = '`'.repeat(1 + Math.max(0, ...runs))
+  const padding = value.startsWith('`') || value.endsWith('`') ? ' ' : ''
+  return `${fence}${padding}${value}${padding}${fence}`
+}
+
+export function replaceRegion(text: string, name: string, content: string): string {
+  const start = `<!-- ${name}:START -->`, end = `<!-- ${name}:END -->`
+  if (text.split(start).length !== 2 || text.split(end).length !== 2 || text.indexOf(end) < text.indexOf(start)) {
+    throw new Error(`Missing or ambiguous README region: ${name}`)
+  }
+  return text.slice(0, text.indexOf(start) + start.length) + '\n' + content + '\n' + text.slice(text.indexOf(end))
+}
+
+export function renderReadme(text: string, rows: DirectoryItem[]): string {
+  validateRows(rows)
+  const projects = rows.filter((row): row is GitHubDirectoryItem => row.type === 'github')
+  const groups = new Map<string, GitHubDirectoryItem[]>(sections.map(([title]) => [title, []]))
+  for (const row of projects) {
+    const section = sections.find(([, matches]) => matches(row))
+    if (section) groups.get(section[0])?.push(row)
+  }
+  const body = [...groups].map(([title, group]) => {
+    const lines = group.sort((a, b) => (b.sourceMeta.stars ?? 0) - (a.sourceMeta.stars ?? 0) ||
+      (a.sourceMeta.repo ?? '').localeCompare(b.sourceMeta.repo ?? '', 'en')).map((row) =>
+      `- [**${escapeMarkdown(row.title)}**](${row.url}) - ${escapeMarkdown(row.summary)}${row.sourceMeta.language ? ` · ${languageCode(row.sourceMeta.language)}` : ''}`)
+    return `## ${title}\n\n${lines.join('\n') || '_No projects yet._'}`
+  }).join('\n\n')
+  return replaceRegion(replaceRegion(text, 'PROJECTS', body), 'PROJECT_COUNT',
+    `![Projects](https://img.shields.io/badge/projects-${projects.length}-10b981?style=classic)`)
+}
+
+export function syncReadme(root: string, { check = false }: { check?: boolean } = {}): number {
+  const { rows } = readCatalog(root)
+  const path = join(root, 'README.md')
+  const before = readFileSync(path, 'utf8')
+  const after = renderReadme(before, rows)
+  if (check && after !== before) throw new Error('README is stale; run npm run readme:sync')
+  if (!check && after !== before) writeFileSync(path, after)
+  return rows.filter((row) => row.type === 'github').length
+}
+
+// --- 发布边界：快照不能删除旧数据、改人工编辑内容或修改非 GitHub 条目 ---
+export function validateSnapshot(root: string, snapshot: string): Catalog {
+  const current = readCatalog(root)
+  const next = readCatalog(snapshot)
+  if (!isDeepStrictEqual([...current.files.keys()], [...next.files.keys()])) throw new Error('Unexpected source files')
+  if (!isDeepStrictEqual(current.social, next.social)) throw new Error('X data changed')
+  const oldById = new Map(current.rows.map((row) => [row.id, row]))
+  for (const [file, rows] of current.files) {
+    const after = next.files.get(file)
+    if (!after || after.length < rows.length) throw new Error('Catalog deletion')
+    for (let i = 0; i < rows.length; i++) {
+      const old = rows[i]
+      const fresh = after[i]
+      if (!old || !fresh) throw new Error('Catalog deletion')
+      if (old.type !== 'github') {
+        if (!isDeepStrictEqual(old, fresh)) throw new Error('Non-GitHub data changed')
+        continue
+      }
+      const editorial: Record<string, unknown> = { ...old.sourceMeta }
+      for (const key of ['stars', 'forks', 'openIssues', 'language'] as const) {
+        if (Object.hasOwn(fresh.sourceMeta, key)) editorial[key] = fresh.sourceMeta[key]
+      }
+      const expected: GitHubDirectoryItem = { ...old, sourceMeta: editorial }
+      if (!isDeepStrictEqual(expected, fresh)) throw new Error('Editorial data changed')
+    }
+    if (file !== 'github.json' && rows.length !== after.length) throw new Error('New rows must go into github.json')
+  }
+  for (const row of next.rows.filter((item) => !oldById.has(item.id))) {
+    if (row.type !== 'github' || reviewDecision(row.sourceMeta) !== 'keep') throw new Error('Unreviewed addition')
+  }
+  const expected = renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), next.rows)
+  if (expected !== readFileSync(join(snapshot, 'README.md'), 'utf8')) throw new Error('Unexpected README changes')
+  return next
+}
+
+export function applySnapshot(root: string, snapshot: string): void {
+  validateSnapshot(root, snapshot)
+  // 所有输入先验证，之后才写入。state/latest 的结构由雷达 CLI 额外校验。
+  for (const file of ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json']) {
+    const content = readFileSync(join(snapshot, file), 'utf8')
+    if (content !== readFileSync(join(root, file), 'utf8')) writeFileSync(join(root, file), content)
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  const count = syncReadme(process.cwd(), { check: process.argv.includes('--check') })
+  process.stdout.write(`Catalog valid: ${count} GitHub projects; README synchronized.\n`)
+}

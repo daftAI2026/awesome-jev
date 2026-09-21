@@ -1,18 +1,23 @@
-import test from 'node:test'
+import test, { type TestContext } from 'node:test'
 import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { candidateRow, readCatalog, refreshRow, renderReadme, validateRows, validateSnapshot, applySnapshot, repoKey } from './catalog.mjs'
-import { writeSnapshot, emptyState } from './radar.mjs'
+import { candidateRow, readCatalog, refreshRow, renderReadme, validateRows, validateSnapshot, applySnapshot, repoKey } from './catalog.ts'
+import { writeSnapshot, emptyState } from './radar.ts'
 
-const row = (name = 'one') => ({ id: `gh-${name}`, type: 'github', title: name, summary: 'Editorial summary',
+type DirectoryRow = ReturnType<typeof readCatalog>['rows'][number]
+type GithubRepo = Parameters<typeof candidateRow>[0]
+type ReviewScore = NonNullable<Parameters<typeof candidateRow>[1]>
+type SnapshotResult = Parameters<typeof writeSnapshot>[2]
+
+const row = (name = 'one'): DirectoryRow => ({ id: `gh-${name}`, type: 'github', title: name, summary: 'Editorial summary',
   tags: ['awesome'], url: `https://github.com/test/${name}`, sourceMeta: { repo: `test/${name}`, author: 'test', stars: 3 } })
 const text = 'Handwritten intro\n<!-- PROJECT_COUNT:START -->\nold\n<!-- PROJECT_COUNT:END -->\nHandwritten guide\n<!-- PROJECTS:START -->\nold\n<!-- PROJECTS:END -->\nHandwritten license\n'
-const keptScore = { jevAbout: 0.99, jevKeep: 'keep', jevKeepConfidence: 0.98 }
-const meta = { full_name: 'test/new', html_url: 'https://github.com/test/new', name: 'new', owner: { login: 'test' },
-  description: 'Real upstream description', stargazers_count: 2, forks_count: 1, open_issues_count: 0, language: 'JavaScript' }
-function fixture(t) {
+const keptScore: ReviewScore = { jevAbout: 0.99, jevKeep: 'keep', jevKeepConfidence: 0.98 }
+const meta: GithubRepo = { full_name: 'test/new', html_url: 'https://github.com/test/new', name: 'new', owner: { login: 'test' },
+  description: 'Real upstream description', stargazers_count: 2, forks_count: 1, open_issues_count: 0, language: 'JavaScript', private: false, fork: false, archived: false }
+function fixture(t: TestContext): string {
   const root = mkdtempSync(join(tmpdir(), 'jev-catalog-'))
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'data')); mkdirSync(join(root, 'radar'))
@@ -26,11 +31,19 @@ function fixture(t) {
   writeFileSync(join(root, 'README.md'), renderReadme(text, readCatalog(root).rows))
   return root
 }
-function snapshot(t) {
+function snapshot(t: TestContext): { root: string; output: string; result: SnapshotResult } {
   const root = fixture(t), output = join(root, 'output'), catalog = readCatalog(root)
   const fresh = candidateRow(meta, keptScore)
-  catalog.files.get('github.json').push(fresh)
-  const result = { ...catalog, rows: [...catalog.files.values()].flat(), state: emptyState(), report: { status: 'complete', receipts: [] } }
+  catalog.files.get('github.json')!.push(fresh)
+  const result: SnapshotResult = {
+    ...catalog,
+    rows: [...catalog.files.values()].flat(),
+    state: emptyState(),
+    report: {
+      at: '2026-09-22T00:00:00.000Z', model: 'jev-latest', status: 'complete', sources: [],
+      metadata: { ok: 0, failed: 0 }, reviewed: 1, added: 1, pending: 0, overflow: 0, evicted: 0, receipts: [],
+    },
+  }
   writeSnapshot(root, output, result)
   return { root, output, result }
 }
@@ -81,20 +94,21 @@ test('reviewed snapshot applies as a unit without touching X', (t) => {
   assert.equal(readCatalog(root).rows.length, 4)
   assert.equal(readFileSync(join(root, 'data/x.json'), 'utf8'), xBefore)
 })
-for (const [name, mutate] of [
-  ['delete old row', (rows) => rows.shift()],
+const snapshotMutations: ReadonlyArray<[string, (rows: DirectoryRow[]) => void]> = [
+  ['delete old row', (rows) => { rows.shift() }],
   ['overwrite editorial summary', (rows) => { rows[0].summary = 'Changed' }],
-  ['low-confidence addition', (rows) => { rows.at(-1).sourceMeta.jevKeepConfidence = 0.2 }],
-  ['missing review', (rows) => { delete rows.at(-1).sourceMeta.jevAbout }],
-]) test(`snapshot rejects ${name}`, (t) => {
+  ['low-confidence addition', (rows) => { rows.at(-1)!.sourceMeta.jevKeepConfidence = 0.2 }],
+  ['missing review', (rows) => { delete rows.at(-1)!.sourceMeta.jevAbout }],
+]
+for (const [name, mutate] of snapshotMutations) test(`snapshot rejects ${name}`, (t) => {
   const { root, output } = snapshot(t)
-  const path = join(output, 'data/github.json'), rows = JSON.parse(readFileSync(path, 'utf8'))
+  const path = join(output, 'data/github.json'), rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]
   mutate(rows); writeFileSync(path, JSON.stringify(rows))
   assert.throws(() => validateSnapshot(root, output))
 })
 test('snapshot rejects changes to YouTube', (t) => {
   const { root, output } = snapshot(t), path = join(output, 'data/youtube.json')
-  const rows = JSON.parse(readFileSync(path, 'utf8')); rows[0].summary = 'Changed social text'
+  const rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]; rows[0].summary = 'Changed social text'
   writeFileSync(path, JSON.stringify(rows))
   assert.throws(() => validateSnapshot(root, output), /Non-GitHub/)
 })

@@ -2,26 +2,44 @@ import { readFileSync, appendFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
-import { createGitHubClient } from './github-client.mjs'
-import { githubEvidence } from './github-evidence.mjs'
-import { readCatalog, repoKey, validateRows } from './catalog.mjs'
-import { evaluateJev, inspectJev } from './jev-client.mjs'
+import { createGitHubClient } from './github-client.ts'
+import { githubEvidence } from './github-evidence.ts'
+import { readCatalog, repoKey, validateRows } from './catalog.ts'
+import { evaluateJev, inspectJev } from './jev-client.ts'
 
-import { createReviewStore } from './review-store.mjs'
-import { reviewRepository, REVIEW_POLICY } from './repository-review.mjs'
+import { createReviewStore } from './review-store.ts'
+import { reviewRepository, REVIEW_POLICY } from './repository-review.ts'
+
+// --- 事件与报告契约：外部 JSON 仍需运行时校验 ---
+type Api = (path: string) => Promise<unknown>
+type Language = 'zh' | 'en'
+interface Issue { number: number; title?: string; body?: string | null; state?: string; updated_at?: string; labels?: { name?: string }[]; pull_request?: unknown; head?: { sha: string }; draft?: boolean }
+interface BotComment { id?: number; body?: string; user?: { login?: string; type?: string } }
+interface Event { repository?: { full_name?: string }; inputs?: { number?: unknown }; action?: string; comment?: BotComment; issue?: Issue; workflow_run?: { event?: string; status?: string; head_sha?: string } }
+type ScanOptions = NonNullable<Parameters<typeof reviewRepository>[4]>
+type Reviewer = Parameters<typeof reviewRepository>[1]
+type ScanResult = Awaited<ReturnType<typeof reviewRepository>>
+export type SubmissionResult = Omit<ScanResult, 'status' | 'evidence'> & { evidence?: string; status: ScanResult['status'] | 'included' | 'error'; filesRead?: number }
+interface ReviewMeta { version: number; fingerprint: string; at: string; day: string; used: number; requests?: number; completed?: SubmissionResult[]; pending?: boolean; retryable?: boolean }
+interface ActiveMeta extends ReviewMeta { requests: number; completed: SubmissionResult[] }
+type WriteComment = (number: number, id: number | undefined, body: string) => Promise<{ id: number }>
+export interface SubmissionOptions { api: Api; writeComment: WriteComment; review: Reviewer; number: number; manual: boolean; known: Set<string>; now?: Date; store?: ScanOptions['store']; inspect?: ScanOptions['inspect']; deadline?: number }
+interface PullRequest { draft?: boolean; head: { sha: string }; base: { sha: string } }
+interface ChangedFile { filename: string; status: string }
 
 export const REPOSITORY = 'daftAI2026/awesome-jev'
 export const MARKER = '<!-- awesome-jev-submission-review:v1 -->'
 export const MAX_PROJECTS = 10
 export const DAILY_BUDGET = 100
+export const DAILY_REQUESTS = 2000
 const COOLDOWN_MS = 10 * 60 * 1000
 const BOT = 'github-actions[bot]'
-const safeError = (error) => /^(github|jev|submission)-[a-z0-9-]+$/.test(error?.message ?? '') ? error.message : 'submission-invalid-data'
-const digest = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
-const validNumber = (value) => Number.isSafeInteger(value) && value > 0
+const safeError = (error: unknown) => error instanceof Error && /^(github|jev|submission)-[a-z0-9-]+$/.test(error.message) ? error.message : 'submission-invalid-data'
+const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
+const validNumber = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value > 0
 
 // 只判断申请正文，不把代码、链接、模板标题和复审命令当作自然语言。
-export function reportLanguage(issue) {
+export function reportLanguage(issue: Pick<Issue, 'title' | 'body'>): Language {
   const text = `${issue.title ?? ''}\n${issue.body ?? ''}`
     .replace(/<!--[\s\S]*?-->/g, '').replace(/```[\s\S]*?```|~~~[\s\S]*?~~~/g, '')
     .replace(/`[^`]*`|https?:\/\/\S+/g, '').replace(/^#{1,6}\s+.*$/gm, '')
@@ -32,14 +50,14 @@ export function reportLanguage(issue) {
   return !japanese && chinese >= 4 && chinese > latinWords * 2 ? 'zh' : 'en'
 }
 
-export function repositoryLinks(text) {
+export function repositoryLinks(text: unknown): string[] {
   return [...new Set((String(text ?? '').match(/https:\/\/github\.com\/[\w.-]+\/[\w.-]+/g) ?? [])
-    .map((url) => repoKey(url.replace(/[.,]+$/, ''))).filter((key) => key && key !== REPOSITORY.toLowerCase()))]
+    .map((url) => repoKey(url.replace(/[.,]+$/, ''))).filter((key): key is string => !!key && key !== REPOSITORY.toLowerCase()))]
 }
-export function isSubmission(issue) {
+export function isSubmission(issue: Pick<Issue, 'title' | 'labels'>) {
   return /^\[submission\]/i.test(issue.title ?? '') || (issue.labels ?? []).some((label) => label.name === 'submission')
 }
-export function reviewMeta(comment) {
+export function reviewMeta(comment: BotComment | undefined): ReviewMeta | null {
   if (comment?.user?.login !== BOT || comment.user.type !== 'Bot' || !comment.body?.startsWith(MARKER)) return null
   const match = comment.body.match(/<!-- jev-meta:([A-Za-z0-9+/=]+) -->/)
   try {
@@ -51,14 +69,14 @@ export function reviewMeta(comment) {
     return data
   } catch { return null }
 }
-export function cacheReason(meta, fingerprint, manual, now) {
+export function cacheReason(meta: ReviewMeta | null, fingerprint: string, manual: boolean, now: Date) {
   if (!meta) return null
   if (!manual && meta.fingerprint === fingerprint && !meta.pending && !meta.retryable) return 'unchanged'
   if (now.getTime() - Date.parse(meta.at) < COOLDOWN_MS) return 'cooldown'
   return null
 }
-async function pages(api, path, maxPages = 20) {
-  const result = []
+async function pages<T>(api: Api, path: string, maxPages = 20): Promise<T[]> {
+  const result: T[] = []
   for (let page = 1; page <= maxPages; page++) {
     const data = await api(`${path}${path.includes('?') ? '&' : '?'}per_page=100&page=${page}`)
     if (!Array.isArray(data)) throw new Error('github-invalid-response')
@@ -68,10 +86,10 @@ async function pages(api, path, maxPages = 20) {
   throw new Error('submission-pagination-limit')
 }
 
-export async function eventTargets(api, eventName, event) {
+export async function eventTargets(api: Api, eventName: string | undefined, event: Event): Promise<{ number: number; manual: boolean }[]> {
   if (event.repository?.full_name !== REPOSITORY) return []
   if (eventName === 'schedule') {
-    const issues = await pages(api, `/repos/${REPOSITORY}/issues?state=open&sort=updated&direction=desc`, 5)
+    const issues = await pages<Issue>(api, `/repos/${REPOSITORY}/issues?state=open&sort=updated&direction=desc`, 5)
     return issues.filter((issue) => issue.pull_request || isSubmission(issue)).map((issue) => ({ number: issue.number, manual: false }))
   }
   if (eventName === 'workflow_dispatch') {
@@ -83,61 +101,61 @@ export async function eventTargets(api, eventName, event) {
     if (event.action !== 'created' || event.comment?.body?.trim() !== '/jev review' || event.comment.user?.type === 'Bot') return []
     const login = event.comment?.user?.login
     if (!/^[\w-]+$/.test(login ?? '')) return []
-    const permission = await api(`/repos/${REPOSITORY}/collaborators/${encodeURIComponent(login)}/permission`)
-    if (!['admin', 'write', 'maintain'].includes(permission.permission)) return []
-    return validNumber(event.issue?.number) ? [{ number: event.issue.number, manual: true }] : []
+    const permission = await api(`/repos/${REPOSITORY}/collaborators/${encodeURIComponent(login!)}/permission`)
+    if (!['admin', 'write', 'maintain'].includes((permission as { permission: string }).permission)) return []
+    return validNumber(event.issue?.number) ? [{ number: event.issue!.number, manual: true }] : []
   }
   if (eventName === 'issues') {
-    return validNumber(event.issue?.number) && isSubmission(event.issue) ? [{ number: event.issue.number, manual: false }] : []
+    return validNumber(event.issue?.number) && isSubmission(event.issue!) ? [{ number: event.issue!.number, manual: false }] : []
   }
   if (eventName === 'workflow_run') {
     const run = event.workflow_run
     // 不消费上游产物或代码；只用已完成 PR 检查的 SHA 找仍然开放的申请。
     if (run?.event !== 'pull_request' || run.status !== 'completed' || !/^[a-f0-9]{40}$/.test(run.head_sha ?? '')) return []
-    const prs = await pages(api, `/repos/${REPOSITORY}/pulls?state=open`, 5)
+    const prs = await pages<Issue>(api, `/repos/${REPOSITORY}/pulls?state=open`, 5)
     return prs.filter((pr) => pr.head?.sha === run.head_sha && !pr.draft)
       .slice(0, 10).map((pr) => ({ number: pr.number, manual: false }))
   }
   return []
 }
-async function jsonAt(api, path, sha, optional = false) {
+async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<{ type?: string; url?: string }[]> {
   try {
-    const data = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`)
+    const data = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`) as { encoding?: string; content?: string }
     if (data.encoding !== 'base64' || typeof data.content !== 'string' || data.content.length > 6000000) throw new Error('submission-data-too-large')
     const rows = JSON.parse(Buffer.from(data.content, 'base64').toString())
     if (!Array.isArray(rows)) throw new Error('submission-invalid-data')
     return rows
   } catch (error) {
-    if (optional && error.message === 'github-http-404') return []
+    if (optional && error instanceof Error && error.message === 'github-http-404') return []
     throw error
   }
 }
-export async function submissionInput(api, issue, language = reportLanguage(issue)) {
+export async function submissionInput(api: Api, issue: Issue, language: Language = reportLanguage(issue)) {
   if (!issue.pull_request) return { keys: repositoryLinks(issue.body), version: digest([issue.title, issue.body]), notes: [] }
-  const pr = await api(`/repos/${REPOSITORY}/pulls/${issue.number}`)
+  const pr = await api(`/repos/${REPOSITORY}/pulls/${issue.number}`) as PullRequest
   if (pr.draft) return { keys: [], version: pr.head.sha, notes: [] }
   if (!/^[a-f0-9]{40}$/.test(pr.head.sha) || !/^[a-f0-9]{40}$/.test(pr.base.sha)) throw new Error('submission-invalid-sha')
-  const files = await pages(api, `/repos/${REPOSITORY}/pulls/${issue.number}/files`, 5)
+  const files = await pages<ChangedFile>(api, `/repos/${REPOSITORY}/pulls/${issue.number}/files`, 5)
   const dataFiles = files.filter((file) => /^data\/(github|items|part-\d+)\.json$/.test(file.filename) && file.status !== 'removed')
   if (!dataFiles.length) return { keys: [], version: pr.head.sha, notes: [] }
   if (dataFiles.length > 5) throw new Error('submission-too-many-data-files')
   const comparison = await api(`/repos/${REPOSITORY}/compare/${pr.base.sha}...${pr.head.sha}`)
-  const base = comparison.merge_base_commit?.sha
+  const base = (comparison as { merge_base_commit?: { sha?: string } }).merge_base_commit?.sha
   if (!/^[a-f0-9]{40}$/.test(base ?? '')) throw new Error('submission-invalid-sha')
-  const keys = new Set(), notes = []
+  const keys = new Set<string>(), notes: string[] = []
   for (const file of dataFiles) {
-    const before = await jsonAt(api, file.filename, base, true)
+    const before = await jsonAt(api, file.filename, base!, true)
     const after = await jsonAt(api, file.filename, pr.head.sha)
-    const old = new Set(before.filter((row) => row.type === 'github').map((row) => repoKey(row.url)))
-    const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url)))
+    const old = new Set(before.filter((row) => row.type === 'github').map((row) => repoKey(row.url ?? '')))
+    const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url ?? '')))
     validateRows(additions)
-    for (const row of additions) keys.add(repoKey(row.url))
+    for (const row of additions) keys.add(repoKey(row.url ?? '')!)
     if (file.filename !== 'data/github.json') notes.push(language === 'zh' ? '数据路径已迁移，请将收录条目放入 data/github.json，不要恢复 items/part 分片。' : 'Please add entries to data/github.json; do not restore the old items/part files.')
   }
   return { keys: [...keys], version: pr.head.sha, notes: [...new Set(notes)] }
 }
 
-export async function assessProject(api, review, key, known, options = {}) {
+export async function assessProject(api: Api, review: Reviewer, key: string, known: Set<string>, options: ScanOptions = {}): Promise<SubmissionResult> {
   if (known.has(key)) return { repo: key, status: 'included' }
   try {
     const evidence = await githubEvidence(api, key, { allowFullScan: true })
@@ -150,12 +168,12 @@ export async function assessProject(api, review, key, known, options = {}) {
     return { repo: key, status: 'error', reason }
   }
 }
-export function renderReport(meta, results, notes = [], pending = false, language = 'en') {
+export function renderReport(meta: ReviewMeta, results: SubmissionResult[], notes: string[] = [], pending = false, language: Language = 'en') {
   const zh = language === 'zh'
   const labels = zh
     ? { included: '已收录', keep: '建议收录', review: '待复核', drop: '暂不建议收录', error: '暂时无法完成审查', pending: '审查进行中' }
     : { included: 'Already listed', keep: 'Recommended for inclusion', review: 'Needs review', drop: 'Not recommended at this time', error: 'Review temporarily unavailable', pending: 'Review in progress' }
-  const explanations = {
+  const explanations: Record<string, string> = {
     'insufficient-provider-context': zh ? '已检查的材料仍不足以确认 Jev 关联，请补充相关文档或集成位置。' : 'The checked materials do not establish the Jev connection. Please link the relevant documentation or integration.',
     'instruction-like-evidence': zh ? '项目说明需要人工核对。' : 'The project description needs a manual check.',
     'insufficient-usage-evidence': zh ? '补查后证据仍不充分，请指出具体使用示例或实现位置。' : 'The follow-up check was inconclusive. Please point to a concrete usage example or implementation.',
@@ -167,7 +185,7 @@ export function renderReport(meta, results, notes = [], pending = false, languag
     'unrelated-evidence': zh ? '检查的项目材料未显示实质性的 TypeSafe Jev 关联。' : 'The checked project materials do not show substantial TypeSafe Jev relevance.',
   }
   const lines = results.map((r) => {
-    const reason = r.status === 'error' ? (zh ? '请稍后重试。' : 'Please try again later.') : explanations[r.reason] ??
+    const reason = r.status === 'error' ? (zh ? '请稍后重试。' : 'Please try again later.') : explanations[r.reason ?? ''] ??
       (r.status === 'review' ? (zh ? '自动审查未能确认，请补充使用示例或实现说明。' : 'The automated review was inconclusive. Please add a usage example or implementation details.') : '')
     const progress = r.status === 'pending' && r.progress ? (zh ? ` 已检查 ${r.progress.checked}/${r.progress.total} 个文件${r.progress.inventoryComplete ? '。' : '，文件清单仍在建立中。'}` : ` Checked ${r.progress.checked}/${r.progress.total} files${r.progress.inventoryComplete ? '.' : '; inventory is still being built.'}`) : ''
     return `- [${r.repo}](https://github.com/${r.repo})${zh ? '：' : ': '}**${labels[r.status]}**${zh ? '。' : '. '}${reason}${progress}${[r.evidence, ...(r.evidenceLinks ?? []).slice(0, 2)].filter((url) => url && url.length <= 600).map((url, i) => ` [${zh ? '依据' : 'Evidence'}${i || ''}](${url})`).join('')}`.trimEnd()
@@ -178,8 +196,8 @@ export function renderReport(meta, results, notes = [], pending = false, languag
   return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
 }
 
-export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity }) {
-  const issue = await api(`/repos/${REPOSITORY}/issues/${number}`)
+export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity }: SubmissionOptions) {
+  const issue = await api(`/repos/${REPOSITORY}/issues/${number}`) as Issue
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
   const language = reportLanguage(issue)
   let input
@@ -187,47 +205,52 @@ export async function processSubmission({ api, writeComment, review, number, man
   catch { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [language === 'zh' ? '无法读取收录数据，请检查 JSON 格式和提交路径。' : 'Could not read the submission data. Please check the JSON format and file paths.'] } }
   if (!input.keys.length && !input.notes.length) return 'no-projects'
   const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
-  const comments = await pages(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
+  const comments = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
   const skip = cacheReason(oldMeta, fingerprint, manual, now)
   if (skip) return skip
   const day = now.toISOString().slice(0, 10)
-  const recent = await pages(api, `/repos/${REPOSITORY}/issues/comments?since=${day}T00:00:00Z`)
+  const recent = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/comments?since=${day}T00:00:00Z`)
   const used = recent.reduce((sum, comment) => {
     const meta = reviewMeta(comment)
     return sum + (meta?.day === day ? meta.used : 0)
+  }, 0)
+  let requests = recent.reduce((sum, comment) => {
+    const meta = reviewMeta(comment)
+    return sum + (meta?.day === day ? meta.requests ?? 0 : 0)
   }, 0)
   const keys = input.keys.slice(0, MAX_PROJECTS)
   const completed = !manual && oldMeta?.fingerprint === fingerprint && Array.isArray(oldMeta.completed) ? oldMeta.completed : []
   const cached = new Map(completed.filter((r) => r && keys.includes(r.repo) && ['included', 'keep', 'review', 'drop'].includes(r.status) && r.reason !== 'submission-daily-requests').map((r) => [r.repo, r]))
   const reserve = keys.filter((key) => !known.has(key) && !cached.has(key)).length
-  if (used + reserve > DAILY_BUDGET) return 'daily-budget-exhausted'
-  const meta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
+  if (used + reserve > DAILY_BUDGET || (reserve && requests >= DAILY_REQUESTS)) return 'daily-budget-exhausted'
+  const meta: ActiveMeta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
   const notes = [...input.notes]
   if (input.keys.length > MAX_PROJECTS) notes.push(language === 'zh' ? `本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。` : `Reviewed the first ${MAX_PROJECTS} projects. Please submit the remaining ${input.keys.length - MAX_PROJECTS} separately.`)
   // 先保留预算，再调用模型；崩溃或网络失败也不能反复免费重试额度。
   const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true, language))
-  const results = []
+  const results: SubmissionResult[] = []
   const checkpoint = () => {
     meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, progress, evidence, evidenceLinks }) => ({
-      repo, status, reason, deep, filesRead, progress, evidence: evidence?.length <= 600 ? evidence : undefined,
+      repo, status, reason, deep, filesRead, progress, evidence: evidence && evidence.length <= 600 ? evidence : undefined,
       evidenceLinks: (evidenceLinks ?? []).filter((url) => url.length <= 600).slice(0, 2),
     }))
   }
   let unavailable = false
   for (const key of keys) {
-    if (cached.has(key)) { results.push(cached.get(key)); continue }
+    if (cached.has(key)) { results.push(cached.get(key)!); continue }
     const beforeRequest = async () => {
       if (Date.now() >= deadline) throw new Error('submission-run-budget')
-      meta.requests++
+      if (requests >= DAILY_REQUESTS) throw new Error('submission-daily-requests')
+      requests++; meta.requests++
       checkpoint()
-      // 每一次 HTTP 尝试先记账；次数仅用于审计，不再作为停审上限。
+      // 每一次 HTTP 尝试先记账；失败请求也记入每日防刷上限，跨申请共享额度。
       await writeComment(number, comment.id, renderReport(meta, results, notes, true, language))
     }
-    const result = unavailable && !known.has(key) ? { repo: key, status: 'error', reason: 'jev-deferred-after-error' } :
-      await assessProject(api, (row, text, options = {}) => review(row, text, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } }), key, known, {
-        store, manual, deadline, inspect: inspect && ((row, segments, options = {}) => inspect(row, segments, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } })),
+    const result: SubmissionResult = unavailable && !known.has(key) ? { repo: key, status: 'error', reason: 'jev-deferred-after-error' } :
+      await assessProject(api, (row, text, options) => review(row, text, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } }), key, known, {
+        store, manual, deadline, inspect: inspect && ((row, segments, options) => inspect(row, segments, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } })),
       })
     if (result.reason?.startsWith('jev-')) unavailable = true
     results.push(result)
@@ -241,7 +264,7 @@ export async function processSubmission({ api, writeComment, review, number, man
   return `reviewed-${results.length}`
 }
 
-export function commentWriter(token, { fetchImpl = fetch } = {}) {
+export function commentWriter(token: string | undefined, { fetchImpl = fetch }: { fetchImpl?: typeof fetch } = {}): WriteComment {
   return async (number, id, body) => {
     if (!validNumber(number) || (id != null && !validNumber(id))) throw new Error('submission-invalid-number')
     const path = id == null ? `issues/${number}/comments` : `issues/comments/${id}`
@@ -261,17 +284,17 @@ export function commentWriter(token, { fetchImpl = fetch } = {}) {
 }
 async function main() {
   if (process.env.GITHUB_REPOSITORY !== REPOSITORY) throw new Error('submission-wrong-repository')
-  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'))
+  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH!, 'utf8'))
   const api = createGitHubClient(process.env.GITHUB_TOKEN)
   const store = createReviewStore(process.env.JEV_REVIEW_STATE_DIR)
   const deadline = Date.now() + 10 * 60 * 1000
   const targets = await eventTargets(api, process.env.GITHUB_EVENT_NAME, event)
   if (!targets.length) return
   if (!process.env.TYPESAFE_API_KEY?.trim()) throw new Error('jev-missing-key')
-  const known = new Set(readCatalog(process.cwd()).rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)))
+  const known = new Set(readCatalog(process.cwd()).rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)!))
   for (const target of targets) {
-    const result = await processSubmission({ ...target, api, known, store, deadline, inspect: (row, segments, options) => inspectJev(process.env.TYPESAFE_API_KEY, row, segments, options), writeComment: commentWriter(process.env.GITHUB_TOKEN),
-      review: (row, evidence, options) => evaluateJev(process.env.TYPESAFE_API_KEY, row, evidence, options) })
+    const result = await processSubmission({ ...target, api, known, store, deadline, inspect: (row, segments, options) => inspectJev(process.env.TYPESAFE_API_KEY!, row, segments, options), writeComment: commentWriter(process.env.GITHUB_TOKEN),
+      review: (row, evidence, options) => evaluateJev(process.env.TYPESAFE_API_KEY!, row, evidence, options) })
     const summary = `Submission #${target.number}: ${result}\n`
     process.stdout.write(summary)
     if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary)

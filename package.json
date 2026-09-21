@@ -11,10 +11,11 @@
     "deploy": "npm run build && wrangler deploy",
     "generate:og": "node --experimental-strip-types scripts/generate-og.ts",
     "score:sources": "node --experimental-strip-types scripts/score-sources.ts",
-    "test": "node --test scripts/*.test.mjs",
-    "readme:sync": "node scripts/catalog.mjs",
-    "data:check": "node scripts/catalog.mjs --check",
-    "radar:scan": "node scripts/radar.mjs"
+    "test": "node --experimental-strip-types --test scripts/*.test.ts",
+    "readme:sync": "node --experimental-strip-types scripts/catalog.ts",
+    "data:check": "node --experimental-strip-types scripts/catalog.ts --check",
+    "radar:scan": "node --experimental-strip-types scripts/radar.ts",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

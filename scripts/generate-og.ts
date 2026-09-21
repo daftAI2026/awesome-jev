@@ -6,7 +6,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { readCatalog } from './catalog.mjs'
+import { readCatalog } from './catalog.ts'
 
 interface DirectoryRow {
   type?: string

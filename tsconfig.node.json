@@ -8,7 +8,6 @@
 
     /* Bundler mode */
     "module": "nodenext",
-    "allowJs": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
@@ -20,5 +19,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts", "scripts/generate-og.ts", "scripts/score-sources.ts"]
+  "include": ["vite.config.ts"]
 }

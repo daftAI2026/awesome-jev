@@ -7,8 +7,8 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { evaluateJev } from './jev-client.mjs'
-import { catalogFiles } from './catalog.mjs'
+import { evaluateJev } from './jev-client.ts'
+import { catalogFiles } from './catalog.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
