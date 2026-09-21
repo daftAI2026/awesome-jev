@@ -229,29 +229,29 @@ test('Chinese submissions use Chinese results and split notices throughout proce
   assert.ok(h.writes[1].body.includes('另外 2 个请拆分申请'))
 })
 
-test('deep review HTTP budget is persisted before model calls and enforced across submissions', async () => {
+test('HTTP attempts are recorded before calls without a daily request ceiling', async () => {
   const h = harness({ count: 3, recent: [botComment({ ...meta, used: 1, requests: 99 })] })
   let paid = 0
   h.args.review = async (_, text, { beforeRequest }) => {
     await beforeRequest()
     const ledger = reviewMeta({ ...botComment(), body: h.writes.at(-1).body })
-    assert.equal(ledger.requests, 1)
+    assert.equal(ledger.requests, paid + 1)
     paid++
     return score
   }
   await processSubmission(h.args)
-  assert.equal(paid, 1)
+  assert.equal(paid, 3)
   const final = h.writes.at(-1).body
-  assert.ok(final.includes('scan is not finished'))
-  assert.equal(reviewMeta({ ...botComment(), body: final }).retryable, true)
-  assert.equal(reviewMeta({ ...botComment(), body: final }).requests, 1)
+  assert.ok(final.includes('Recommended for inclusion'))
+  assert.equal(reviewMeta({ ...botComment(), body: final }).retryable, false)
+  assert.equal(reviewMeta({ ...botComment(), body: final }).requests, 3)
 })
-test('invalid request counters cannot spoof budget and a fully spent day skips model calls', async () => {
+test('invalid counters are rejected but counters above 100 remain valid', async () => {
   assert.equal(reviewMeta(botComment({ ...meta, requests: -1 })), null)
-  assert.equal(reviewMeta(botComment({ ...meta, requests: 101 })), null)
+  assert.equal(reviewMeta(botComment({ ...meta, requests: 101 })).requests, 101)
   const h = harness({ recent: [botComment({ ...meta, requests: 100 })] })
-  assert.equal(await processSubmission(h.args), 'daily-budget-exhausted')
-  assert.equal(h.paid.length, 0); assert.equal(h.writes.length, 0)
+  assert.equal(await processSubmission(h.args), 'reviewed-1')
+  assert.equal(h.paid.length, 1)
 })
 test('failed comment reservation prevents the model request', async () => {
   const h = harness()
@@ -282,15 +282,23 @@ test('automatic resumption reuses completed projects while retrying deferred one
   assert.equal(final.completed.length, 2)
   assert.equal(final.retryable, false)
 })
-test('per-project HTTP ceiling reports incomplete review rather than an approval', async () => {
+test('one project may exceed 100 requests without an artificial request ceiling', async () => {
   const h = harness()
   let calls = 0
   h.args.review = async (_, text, { beforeRequest }) => {
-    for (let i = 0; i < 33; i++) { await beforeRequest(); calls++ }
+    for (let i = 0; i < 101; i++) { await beforeRequest(); calls++ }
     return score
   }
   await processSubmission(h.args)
-  assert.equal(calls, 32)
-  assert.ok(h.writes.at(-1).body.includes('scan is not finished'))
+  assert.equal(calls, 101)
+  assert.equal(reviewMeta({ ...botComment(), body: h.writes.at(-1).body }).requests, 101)
+  assert.ok(h.writes.at(-1).body.includes('Recommended for inclusion'))
+})
+
+test('run deadline stops requests while preserving resumable status', async () => {
+  const h = harness()
+  h.args.deadline = 0
+  await processSubmission(h.args)
+  assert.equal(h.paid.length, 0)
   assert.ok(!h.writes.at(-1).body.includes('Recommended for inclusion'))
 })

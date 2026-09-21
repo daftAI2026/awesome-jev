@@ -14,8 +14,6 @@ export const REPOSITORY = 'daftAI2026/awesome-jev'
 export const MARKER = '<!-- awesome-jev-submission-review:v1 -->'
 export const MAX_PROJECTS = 10
 export const DAILY_BUDGET = 100
-export const DAILY_REQUESTS = 100
-export const PROJECT_REQUESTS = 32
 const COOLDOWN_MS = 10 * 60 * 1000
 const BOT = 'github-actions[bot]'
 const safeError = (error) => /^(github|jev|submission)-[a-z0-9-]+$/.test(error?.message ?? '') ? error.message : 'submission-invalid-data'
@@ -48,7 +46,7 @@ export function reviewMeta(comment) {
     const data = JSON.parse(Buffer.from(match?.[1] ?? '', 'base64').toString())
     if (data.version !== 1 || !/^[a-f0-9]{64}$/.test(data.fingerprint) ||
       !/^\d{4}-\d{2}-\d{2}$/.test(data.day) || !Number.isSafeInteger(data.used) || data.used < 0 || data.used > DAILY_BUDGET ||
-      (data.requests != null && (!Number.isSafeInteger(data.requests) || data.requests < 0 || data.requests > DAILY_REQUESTS)) ||
+      (data.requests != null && (!Number.isSafeInteger(data.requests) || data.requests < 0)) ||
       typeof data.at !== 'string' || !Number.isFinite(Date.parse(data.at))) return null
     return data
   } catch { return null }
@@ -200,15 +198,11 @@ export async function processSubmission({ api, writeComment, review, number, man
     const meta = reviewMeta(comment)
     return sum + (meta?.day === day ? meta.used : 0)
   }, 0)
-  let requests = recent.reduce((sum, comment) => {
-    const data = reviewMeta(comment)
-    return sum + (data?.day === day ? data.requests ?? 0 : 0)
-  }, 0)
   const keys = input.keys.slice(0, MAX_PROJECTS)
   const completed = !manual && oldMeta?.fingerprint === fingerprint && Array.isArray(oldMeta.completed) ? oldMeta.completed : []
   const cached = new Map(completed.filter((r) => r && keys.includes(r.repo) && ['included', 'keep', 'review', 'drop'].includes(r.status) && r.reason !== 'submission-daily-requests').map((r) => [r.repo, r]))
   const reserve = keys.filter((key) => !known.has(key) && !cached.has(key)).length
-  if (used + reserve > DAILY_BUDGET || (reserve && requests >= DAILY_REQUESTS)) return 'daily-budget-exhausted'
+  if (used + reserve > DAILY_BUDGET) return 'daily-budget-exhausted'
   const meta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
   const notes = [...input.notes]
   if (input.keys.length > MAX_PROJECTS) notes.push(language === 'zh' ? `本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。` : `Reviewed the first ${MAX_PROJECTS} projects. Please submit the remaining ${input.keys.length - MAX_PROJECTS} separately.`)
@@ -224,13 +218,11 @@ export async function processSubmission({ api, writeComment, review, number, man
   let unavailable = false
   for (const key of keys) {
     if (cached.has(key)) { results.push(cached.get(key)); continue }
-    let projectRequests = 0
     const beforeRequest = async () => {
-      if (projectRequests >= PROJECT_REQUESTS) throw new Error('submission-project-budget')
-      if (requests >= DAILY_REQUESTS) throw new Error('submission-daily-requests')
-      projectRequests++; requests++; meta.requests++
+      if (Date.now() >= deadline) throw new Error('submission-run-budget')
+      meta.requests++
       checkpoint()
-      // 每一次 HTTP 尝试先持久化额度；中断后也不能重复花费未记账请求。
+      // 每一次 HTTP 尝试先记账；次数仅用于审计，不再作为停审上限。
       await writeComment(number, comment.id, renderReport(meta, results, notes, true, language))
     }
     const result = unavailable && !known.has(key) ? { repo: key, status: 'error', reason: 'jev-deferred-after-error' } :
