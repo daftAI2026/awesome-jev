@@ -18,7 +18,7 @@ on:
 permissions:
   contents: read
   issues: write
-  pull-requests: read
+  pull-requests: write
 # 全局串行保护每日预算和同一机器人评论；不取消正在进行的审查。
 concurrency:
   group: jev-submission-review
