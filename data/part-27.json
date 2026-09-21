@@ -1,1 +1,446 @@
-PLACEHOLDER_WILL_FAIL
+[
+  {
+    "id": "gh-appitstudio-awesome-jev",
+    "type": "github",
+    "title": "awesome-jev",
+    "summary": "Curated Jev resources and runnable examples for typed AI decisions.",
+    "tags": [
+      "jev",
+      "python",
+      "awesome"
+    ],
+    "url": "https://github.com/AppitStudio/awesome-jev",
+    "sourceMeta": {
+      "stars": 65,
+      "forks": 7,
+      "openIssues": 2,
+      "language": "Python",
+      "author": "AppitStudio",
+      "repo": "AppitStudio/awesome-jev",
+      "jevAbout": 0.6,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.8
+    }
+  },
+  {
+    "id": "gh-heyjunpenn-awesome-jev",
+    "type": "github",
+    "title": "awesome-jev",
+    "summary": "A verified, community-maintained catalog of 503 open-source projects built with Jev.",
+    "tags": [
+      "jev",
+      "typescript",
+      "awesome"
+    ],
+    "url": "https://github.com/heyjunpenn/awesome-jev",
+    "sourceMeta": {
+      "stars": 37,
+      "forks": 2,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "heyjunpenn",
+      "repo": "heyjunpenn/awesome-jev",
+      "jevAbout": 0.6,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.8
+    }
+  },
+  {
+    "id": "gh-everyinfra-jev-radar",
+    "type": "github",
+    "title": "jev-radar",
+    "summary": "📡 全网最全 · The world's most comprehensive tracker of the Jev (TypeSafe AI System One) ecosystem — 220+ documented cases · 108 confidence-graded entries · verified & rescanned every 3 hours · API access guide included",
+    "tags": [
+      "jev",
+      "system-one"
+    ],
+    "url": "https://github.com/everyinfra/jev-radar",
+    "sourceMeta": {
+      "stars": 17,
+      "forks": 1,
+      "openIssues": 0,
+      "language": null,
+      "author": "everyinfra",
+      "repo": "everyinfra/jev-radar",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97
+    }
+  },
+  {
+    "id": "gh-jackzeng-jev_apps",
+    "type": "github",
+    "title": "Jev_apps",
+    "summary": "看看 Jev 能做什么：用中英文讲清热门应用、工作原理和各自优缺点。Explore Jev apps with plain-language examples, explanations, and comparisons.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/JackZeng/Jev_apps",
+    "sourceMeta": {
+      "stars": 16,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "JackZeng",
+      "repo": "JackZeng/Jev_apps",
+      "jevAbout": 0.6,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.8
+    }
+  },
+  {
+    "id": "gh-rlaope-jeval",
+    "type": "github",
+    "title": "jeval",
+    "summary": "Measures what your Jev classifier's confidence is really worth, and sets the human hand-off line from what a mistake costs.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/rlaope/jeval",
+    "sourceMeta": {
+      "stars": 9,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "rlaope",
+      "repo": "rlaope/jeval",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-zefan-cai-open-jev",
+    "type": "github",
+    "title": "Open-Jev",
+    "summary": "Open-Jev — Jev / TypeSafe related project",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/Zefan-Cai/Open-Jev",
+    "sourceMeta": {
+      "stars": 7,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "Zefan-Cai",
+      "repo": "Zefan-Cai/Open-Jev",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-jiawei686-jev-ultrafast-mcp",
+    "type": "github",
+    "title": "jev-ultrafast-mcp",
+    "summary": "Hand the browser work off: an MCP server where a decision model drives the page for your agent, so a flow costs one tool call instead of a turn per click. Ref-based element tables, code-checked assertions, zero-model macro replay. Speaks CDP to your Chrome.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/jiawei686/jev-ultrafast-mcp",
+    "sourceMeta": {
+      "stars": 6,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "jiawei686",
+      "repo": "jiawei686/jev-ultrafast-mcp",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-24601-augustus",
+    "type": "github",
+    "title": "Augustus",
+    "summary": "Agent skill: design judgment-assisted systems with TypeSafe Jev (System One). Maps Choice/Score/Noul onto decision theory, reranking, and routing. Composition algebra, question design, validation gates. MIT.",
+    "tags": [
+      "jev",
+      "python",
+      "system-one"
+    ],
+    "url": "https://github.com/24601/Augustus",
+    "sourceMeta": {
+      "stars": 5,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "24601",
+      "repo": "24601/Augustus",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-qs-lll-twitter-jev-guard",
+    "type": "github",
+    "title": "twitter-jev-guard",
+    "summary": "使用 TypeSafe Jev 在 X/Twitter 时间线上识别低质量、垃圾和广告帖子，并在文字区域显示醒目的半透明水印。",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "url": "https://github.com/qs-lll/twitter-jev-guard",
+    "sourceMeta": {
+      "stars": 5,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "JavaScript",
+      "author": "qs-lll",
+      "repo": "qs-lll/twitter-jev-guard",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-backmeupplz-jev_antispam_bot",
+    "type": "github",
+    "title": "jev_antispam_bot",
+    "summary": "Minimal grammY Telegram anti-spam bot powered by TypeSafe Jev",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/backmeupplz/jev_antispam_bot",
+    "sourceMeta": {
+      "stars": 4,
+      "forks": 1,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "backmeupplz",
+      "repo": "backmeupplz/jev_antispam_bot",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-qkal-canny",
+    "type": "github",
+    "title": "Canny",
+    "summary": "Stops AI coding agents from claiming work is done without evidence. Deterministic hooks decide, TypeSafe's Jev advises. Append-only ledger, zero runtime dependencies.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/qkal/Canny",
+    "sourceMeta": {
+      "stars": 4,
+      "forks": 1,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "qkal",
+      "repo": "qkal/Canny",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-xubqpanda-jevrepo",
+    "type": "github",
+    "title": "JevRepo",
+    "summary": "JevRepo — Jev / TypeSafe related project",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/Xubqpanda/JevRepo",
+    "sourceMeta": {
+      "stars": 3,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "Xubqpanda",
+      "repo": "Xubqpanda/JevRepo",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-455-diao-windows-save-token-jev-setup",
+    "type": "github",
+    "title": "windows-save-token-jev-setup",
+    "summary": "Windows Codex Skill：通过 npx 或 Git 安装，安全配置 save-token-jev 的 PreCompact/SessionStart Hooks，并提供信任、原生压缩与旧内容隔离验证。",
+    "tags": [
+      "jev",
+      "powershell"
+    ],
+    "url": "https://github.com/455-dIAO/windows-save-token-jev-setup",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "PowerShell",
+      "author": "455-dIAO",
+      "repo": "455-dIAO/windows-save-token-jev-setup",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-collapseindex-jev-ultralightspeed",
+    "type": "github",
+    "title": "jev-ultralightspeed",
+    "summary": "BRRRRRRRRRRRRRRRRRRRRRR",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/collapseindex/jev-ultralightspeed",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "collapseindex",
+      "repo": "collapseindex/jev-ultralightspeed",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-imrishit98-jev.aitools.fyi",
+    "type": "github",
+    "title": "jev.aitools.fyi",
+    "summary": "Jev is all the rage right now and this directory lists all things Jev! Docs, SDKs, and the full tool map one click away.",
+    "tags": [
+      "jev",
+      "typescript",
+      "sdk"
+    ],
+    "url": "https://github.com/imrishit98/jev.aitools.fyi",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 1,
+      "language": "TypeScript",
+      "author": "imrishit98",
+      "repo": "imrishit98/jev.aitools.fyi",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-liao96312-jev-arena-nanojev",
+    "type": "github",
+    "title": "jev-arena-nanojev",
+    "summary": "完全本地的 NanoJev 网格决策游戏实验场，支持中文 Pygame、多关卡与 GTX 1660S 训练",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/liao96312/jev-arena-nanojev",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "liao96312",
+      "repo": "liao96312/jev-arena-nanojev",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-oxwen11-awesome-jev",
+    "type": "github",
+    "title": "awesome-jev",
+    "summary": "A curated list of what people built with Jev",
+    "tags": [
+      "jev",
+      "awesome"
+    ],
+    "url": "https://github.com/oxwen11/awesome-jev",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 1,
+      "openIssues": 1,
+      "language": null,
+      "author": "oxwen11",
+      "repo": "oxwen11/awesome-jev",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-xubqpanda-jevloop",
+    "type": "github",
+    "title": "JevLoop",
+    "summary": "The agent loop where decisions don't cost a large language model call. Zero deps, runs offline, no API key needed.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/Xubqpanda/JevLoop",
+    "sourceMeta": {
+      "stars": 2,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "Xubqpanda",
+      "repo": "Xubqpanda/JevLoop",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-a-fig-jev-score",
+    "type": "github",
+    "title": "jev-score",
+    "summary": "Local-first document evaluation workspaces powered by Jev",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "url": "https://github.com/a-Fig/jev-score",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "JavaScript",
+      "author": "a-Fig",
+      "repo": "a-Fig/jev-score",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-enesyilmazcode-jevminesweeper",
+    "type": "github",
+    "title": "JevMinesweeper",
+    "summary": "Jev Plays Minesweeper",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/EnesYilmazcode/JevMinesweeper",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "EnesYilmazcode",
+      "repo": "EnesYilmazcode/JevMinesweeper",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  }
+]
