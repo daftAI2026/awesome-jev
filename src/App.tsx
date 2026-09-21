@@ -12,6 +12,7 @@ import xData from '../data/x.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { GithubList } from '@/components/GithubList'
 import { ItemCard } from '@/components/ItemCard'
+import { VideoMasonry } from '@/components/VideoMasonry'
 import { ZoneNav } from '@/components/ZoneNav'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
@@ -509,7 +510,9 @@ export default function App() {
                     <p className="text-sm text-muted-foreground">
                       {t('emptySection')}
                     </p>
-                  ) : section.id === 'x' || section.id === 'youtube' ? (
+                  ) : section.id === 'youtube' ? (
+                    <VideoMasonry items={section.items} />
+                  ) : section.id === 'x' ? (
                     <ul className="columns-1 gap-4 sm:columns-2 lg:columns-3">
                       {section.items.map((item) => (
                         <li key={item.id} className="mb-4 break-inside-avoid">
