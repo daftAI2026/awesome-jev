@@ -114,6 +114,15 @@ const escapeMarkdown = (text) => String(text).replace(/[\r\n\t]+/g, ' ')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/[\\`*_{}[\]()!|]/g, '\\$&')
 
+// --- 语言标签使用行内代码；动态围栏防止远端反引号提前闭合 ---
+const languageCode = (text) => {
+  const value = String(text).replace(/[\r\n\t]+/g, ' ').trim()
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const fence = '`'.repeat(1 + Math.max(0, ...(value.match(/`+/g) ?? []).map((run) => run.length)))
+  const padding = value.startsWith('`') || value.endsWith('`') ? ' ' : ''
+  return `${fence}${padding}${value}${padding}${fence}`
+}
+
 export function replaceRegion(text, name, content) {
   const start = `<!-- ${name}:START -->`, end = `<!-- ${name}:END -->`
   if (text.split(start).length !== 2 || text.split(end).length !== 2 || text.indexOf(end) < text.indexOf(start)) {
@@ -130,7 +139,7 @@ export function renderReadme(text, rows) {
   const body = [...groups].map(([title, group]) => {
     const lines = group.sort((a, b) => (b.sourceMeta.stars ?? 0) - (a.sourceMeta.stars ?? 0) ||
       a.sourceMeta.repo.localeCompare(b.sourceMeta.repo, 'en')).map((r) =>
-      `- [**${escapeMarkdown(r.title)}**](${r.url}) - ${escapeMarkdown(r.summary)}${r.sourceMeta.language ? ` · ${escapeMarkdown(r.sourceMeta.language)}` : ''}`)
+      `- [**${escapeMarkdown(r.title)}**](${r.url}) - ${escapeMarkdown(r.summary)}${r.sourceMeta.language ? ` · ${languageCode(r.sourceMeta.language)}` : ''}`)
     return `## ${title}\n\n${lines.join('\n') || '_No projects yet._'}`
   }).join('\n\n')
   return replaceRegion(replaceRegion(text, 'PROJECTS', body), 'PROJECT_COUNT',

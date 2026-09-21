@@ -118,3 +118,26 @@ test('snapshot rejects changes to X', (t) => {
   writeFileSync(join(output, 'data/x.json'), '[]')
   assert.throws(() => validateSnapshot(root, output), /X data changed/)
 })
+
+test('README preserves inline-code language labels and omits missing languages', () => {
+  for (const language of ['PHP', 'TypeScript', 'C++', 'F#', 'Jupyter Notebook']) {
+    const item = row()
+    item.sourceMeta.language = language
+    const output = renderReadme(text, [item])
+    assert.ok(output.includes(' · `' + language + '`\n'))
+    assert.equal(renderReadme(output, [item]), output)
+  }
+  for (const language of [undefined, null, '']) {
+    const item = row()
+    item.sourceMeta.language = language
+    assert.ok(!renderReadme(text, [item]).includes(' · '))
+  }
+})
+test('language code fences contain remote backticks and escape README markers', () => {
+  const item = row()
+  item.sourceMeta.language = '`PHP`\n<!-- PROJECTS:END -->'
+  const output = renderReadme(text, [item])
+  assert.ok(output.includes(' · `` `PHP` &lt;!-- PROJECTS:END --&gt; ``'))
+  assert.equal(output.split('<!-- PROJECTS:END -->').length, 2)
+  assert.equal(renderReadme(output, [item]), output)
+})
