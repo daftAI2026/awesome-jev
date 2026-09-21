@@ -1,14 +1,14 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 3,
-    "\"typesafe.ai\" in:readme fork:false": 3,
-    "\"Jev\" \"System One\" in:readme fork:false": 3,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 3
+    "topic:jev fork:false": 5,
+    "\"typesafe.ai\" in:readme fork:false": 5,
+    "\"Jev\" \"System One\" in:readme fork:false": 5,
+    "topic:typesafe-ai fork:false": 1,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
+    "\"TypeSafe\" \"Jev\" fork:false": 5
   },
-  "metadataCursor": 150,
+  "metadataCursor": 0,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -23,9 +23,11 @@
       "attempts": 0
     },
     "akras14/jevbro": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "kiwi0719/jev-edge": {
       "status": "pending",
@@ -43,11 +45,6 @@
       "attempts": 0
     },
     "jaredpalmer/kev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "allebee/jevgrep": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -139,11 +136,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "allebee/pytest-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "supercorp-ai/supercov": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -180,24 +172,32 @@
       "attempts": 0
     },
     "akashpriyadarshii/jev-seo": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "akashpriyadarshii/jev-superpowers": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "akashpriyadarshii/jev-curate": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "akashpriyadarshii/jev-git": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "bipinrajc/jev-api-experiments": {
       "status": "pending",
@@ -215,9 +215,11 @@
       "attempts": 0
     },
     "agent-chaperone/agent-chaperone": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "evoke-build/evoke": {
       "status": "pending",
@@ -225,14 +227,18 @@
       "attempts": 0
     },
     "alexei-led/pi-model-router": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "akashpriyadarshii/jev-scout": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "wuxie888/jev-yaba-wechat": {
       "status": "pending",
@@ -396,9 +402,11 @@
       "attempts": 0
     },
     "ajanm007/jevrag": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "instax-dutta/sysone-bench": {
       "status": "pending",
@@ -486,11 +494,6 @@
       "attempts": 0
     },
     "shaharia-lab/jev-cli": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "ak--47/ak-jev": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -677,20 +680,17 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "allenporter/home-assistant-typesafe": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "prakash7474/jev_guard": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
     "allenporter/home-assistant-laya": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "shiqinguo/jev4jobhunter": {
       "status": "pending",
@@ -702,20 +702,17 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "aliaihub/awesome-jev-usecases": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "sungatetop/jev-robot": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
     "alexkarpandrus/tickettrain": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "reticlehq/reticle": {
       "status": "pending",
@@ -862,11 +859,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "adlternative/tally": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "premo-cloud/typesafe-sdk-java": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -958,9 +950,11 @@
       "attempts": 0
     },
     "alibowbow/jev": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "cyrusasco/jevcompact": {
       "status": "pending",
@@ -1033,9 +1027,11 @@
       "attempts": 0
     },
     "antong87/codearia-sieve": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "devapro/omp-auto-typesafe": {
       "status": "pending",
@@ -1138,9 +1134,11 @@
       "attempts": 0
     },
     "amimoacid/langchain-experiments": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "giustino98/system-one-bench": {
       "status": "pending",
@@ -1208,9 +1206,11 @@
       "attempts": 0
     },
     "andrew-monroe/twenty-questions": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "ham-zax/awesome-jev": {
       "status": "pending",
@@ -1273,9 +1273,11 @@
       "attempts": 0
     },
     "alanfong93/local-judge": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "micha0827/snapjudge": {
       "status": "pending",
@@ -1392,15 +1394,12 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "aoprisan/typesafe-ai-rust-sdk": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "ahtcfg24/codex-speculator": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "sarthakagrawal927/meme-lab": {
       "status": "pending",
@@ -1483,9 +1482,11 @@
       "attempts": 0
     },
     "andrueandersoncs/lion": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "fblissjr/typesafe-experiments": {
       "status": "pending",
@@ -1493,9 +1494,11 @@
       "attempts": 0
     },
     "ankitdevcode/rss-feed": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "karanb192/jev-skill-scout": {
       "status": "pending",
@@ -1518,9 +1521,11 @@
       "attempts": 0
     },
     "arize-ai/phoenix": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "k3ntaw/orchestrator": {
       "status": "pending",
@@ -1533,14 +1538,11 @@
       "attempts": 0
     },
     "ahmadnmic/autocorrecter": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "aoprisan/jev-ts-repl": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "michaelwave369/phios": {
       "status": "pending",
@@ -1613,11 +1615,6 @@
       "attempts": 0
     },
     "samula2/jeff": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "arkane-o7/sentinel": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -1808,9 +1805,11 @@
       "attempts": 0
     },
     "abhishekswe/agentctl-fastpath": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "church-of-lane/csharp-jef-sdk": {
       "status": "pending",
@@ -1890,9 +1889,11 @@
       "attempts": 0
     },
     "andremc05/quick508-rater": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "hazlema/jev-connect4": {
       "status": "pending",
@@ -1910,9 +1911,11 @@
       "attempts": 0
     },
     "agrogov/jev-system-one-study": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "jcdavis131/dottie": {
       "status": "pending",
@@ -1999,11 +2002,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "antting/jev-accounts-hub": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "riwriwara/jev-computer": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -2050,9 +2048,11 @@
       "attempts": 0
     },
     "amangale/bidi-rig": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "erboland/jev-fund": {
       "status": "pending",
@@ -2065,9 +2065,11 @@
       "attempts": 0
     },
     "apolenkov/jev-codex-router-lab": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "dfa1/typesafe-java": {
       "status": "pending",
@@ -2080,9 +2082,11 @@
       "attempts": 0
     },
     "ariigrangetto/emailclasjev": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "devnolife/jev-vs-tfidf-benchmark": {
       "status": "pending",
@@ -2227,9 +2231,11 @@
       "attempts": 0
     },
     "agentbuff/awesome-jev": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-22T18:34:33.655Z"
     },
     "abhishekmamdapure/jev-information-extraction": {
       "status": "review",
@@ -2274,9 +2280,11 @@
       "attempts": 0
     },
     "akanthed/jev-migrate": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "g0runmezadam/what-is-jev": {
       "status": "pending",
@@ -2294,11 +2302,6 @@
       "attempts": 0
     },
     "nak1b/jev-experiments": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "arcj137442/jev-2048": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -2334,11 +2337,6 @@
       "attempts": 0
     },
     "panachy/jevvy": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "andrest04/jev-lab": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -2419,9 +2417,11 @@
       "attempts": 0
     },
     "aipersonacademy/jev-resume-disqualifier": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "shuhansun/jev-oas-sentinel": {
       "status": "pending",
@@ -2503,11 +2503,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "anandi1989/awesome-jev-usecases": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "raniellimontagna/jev-guard-mcp": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -2558,17 +2553,7 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "aryanchauhanoffical/no-hallucination": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "koksalkapucuoglu/resume-enhance": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "amazingjoe/pi-saver": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -2584,11 +2569,6 @@
       "attempts": 0
     },
     "devin-axis/jev-dsh-decision": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "alsoleg89/jev-bouncer": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -2754,9 +2734,11 @@
       "attempts": 0
     },
     "arize-ai/openinference": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "reactive-skills/reactive-skills": {
       "status": "pending",
@@ -2914,9 +2896,11 @@
       "attempts": 0
     },
     "aipersonacademy/awesome-jev-use": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "sontakey/awesome-jev": {
       "status": "pending",
@@ -2944,9 +2928,11 @@
       "attempts": 0
     },
     "algovaultlabs/algovault-integrations": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "sxlanes/bleed": {
       "status": "pending",
@@ -3048,11 +3034,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "alexwestco/llm-to-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "kunpengtalk/omnistudio": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3139,9 +3120,11 @@
       "attempts": 0
     },
     "aley3567/awsome-jev-sight": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "sathariels/jevtriage": {
       "status": "pending",
@@ -3194,11 +3177,6 @@
       "attempts": 0
     },
     "madhurjyadc/kibu": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "adityakhalkar/jeveye": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -3264,9 +3242,11 @@
       "attempts": 0
     },
     "api-evangelist/typesafe-ai": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "bhaskarpraveen/jev-healthcare-support-router": {
       "status": "pending",
@@ -3379,9 +3359,11 @@
       "attempts": 0
     },
     "aesaganda/jev-ticket-router": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "kouyamacreate/jevtetris": {
       "status": "pending",
@@ -3424,9 +3406,11 @@
       "attempts": 0
     },
     "aley3567/bright-sight": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "bubbathevtog/pi-jev-anti-slop": {
       "status": "pending",
@@ -3439,11 +3423,6 @@
       "attempts": 0
     },
     "fanly/jev-awesome": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "ajayk/jev-go-sdk": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -3499,9 +3478,11 @@
       "attempts": 0
     },
     "annenpolka/ariadne": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "christiancruzarango/triaje-ambulancias": {
       "status": "pending",
@@ -3616,9 +3597,11 @@
       "attempts": 0
     },
     "aimlessss/rust-jev-typesafe-trade-decision-engine": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-21T18:34:33.655Z",
+      "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "chris-wozniczek/jev-voice-control": {
       "status": "pending",
@@ -3775,17 +3758,7 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "ahtoooxa/jev-cyrillic-audit": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "koz/anti-dead-internet": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "adams100111/typesafe-php": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -3863,6 +3836,2781 @@
     "trycatchkamal/typesafe-jev-traffic-demo": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
+      "attempts": 0
+    },
+    "jackzh26/jev-live": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aowang-ai/jev-trade": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lhviet/jev-bridge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lucasjinreal/crane": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ruban-24/switchboard": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chcknnbn/jev-webui": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "omnijev/playjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cheshiai/cheshi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joaovaleri/jev-shortlist": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "amine-lg/jev-creature-forge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shimo4228/jev-skill-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zlzayn/ai-decision-maker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dreamblooms/dohnuts.cpp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sophiasama/manufacturing-assistant-agent-framework": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ckaraca/awesome-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "deemkeen/jevgeni": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "daniel4x/jevemon": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kiritoking/midscene-jev-runner": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tshmieldev/sharp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "innocentdiaz/s1_ruby": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "smkrv/jev-calibrate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "buddy/minesweeper": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alex314618-create/jevrev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "frostist/jev-interrogator": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jev-ai/jev-agent-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "psyb0t/vibecheck": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "iamvatsalpatel/tiershift": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ailiheizi/codejev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/node-red-contrib-jev-decisions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dashbi1/jev-sim": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "coding-hermes/auger": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hemanth/jev-chess": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "freepik-company/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "daidr/browser-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "saratangajalaoffl/jeeva": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "betterzflyee/dsh-jev-adapter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "eliran-turgeman/reaper": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fabricioctelles/skills": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jlov7/jev-decision-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "olivier-motium/jev-doom": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "grzegorznowak/noul": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nickorsk2017/horse-racing-ai-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wd041216-bit/zero-api-key-web-search": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "draganm/go-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "2nd1st/jevsus": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "patryckalves/jev-no-enem": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hermeticormus/ormus-jev-cua-linux": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "albri/nxk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "valentynkit/awesome-jev-typesafe": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "waxmell114514/awesome-jev-compaction": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alaithuy385-byte/jev-decision-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cookiespiggy/agentic-rl": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "imsukhe/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mdgchamomile/pi-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "himomohi/aside-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jolehuit/jev-downloads-sorter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gokulnair2001/convoy": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fajarhide/askgrep": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "supratikb23/jevcanvas": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mblode/taste-lint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dom-actions/doma": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rodert/jevplayer": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ryanzen9/xflow": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "khmuhtadin/n8n-nodes-jev-classification": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "liuhao-1443/jev-table-tennis": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xinwang-nwpu/jev-mobile": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yzyialy/crush-monitor": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aesgalexis/model-switch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "okura66/kahn1": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "autometrixai/jev-clinic-triage-eval": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "acoyfellow/edit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pulseaiclub/phi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "omaralaaeldein/jev-verifier-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "littlewindy123/jev-bili-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rashedint32/jury.nvim": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joaoh82/coffee-under-fire": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zhuyansen/x-reply-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alpha-harper-franklin/jev-multimodal": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "virtualman333/jev-decision-arena": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wany-i/jev-ads-analysis": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tacticocc/jevbridge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "logicrw/ask-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "glud123/jev-assist": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "novaleolin/jev-evolve": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "omnijev/awesome-jev-gallery": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "formulahendry/jev-acp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ishesatoshi/smalljev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nidhi-singh02/agent-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "miounet11/jevcode": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "valsecchi75/squint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "altryne/jevify": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "muratmirgun/owncode": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "programalyst/realtime-vision-decision-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chy4pro/jev-realtime-sdk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mizchi/jev-test-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jamilxt/typesafe-ai-java": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chy4pro/jev-for-chrome": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chy4pro/jev-in-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chy4pro/jev-dev-kit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sachin-chaurasiya/scam-checker-with-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "oppih/approval-judge-bridge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "levi-qiao/semaloom": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pjdurden/jevkit-js": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/camunda-jev-connector": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/directus-extension-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ryder-mhumble/awsome-jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/temporal-jev-decisions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/django-jev-decisions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/unity-jev-behavior": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/wordpress-jev-rules": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tsnanh/pikachu": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zizhuangcui/codex-jev-imagegen": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dimweaker/jev-libero": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "littlewindy123/jev-weekend-shopping-chrome": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nalukicks-808/jev-field-guide-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nalukicks-808/vault-search-bench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nalukicks-808/jev-field-trial": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zzz1yao/datajev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tosukui/jev-bridge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "afshinm/laya-mps": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "adamjralph/skill-broker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mercatorproj/myjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "123satyajeet123/jev-wide": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "1deat0r/jcua": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zhangxaochen/dsh-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alpha-harper-franklin/jev-drive": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dililianxice/jev-inner-speech-bci": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rupeshpoojary9/poorjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "davafons/focus-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "socai-io/socai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/question-forge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/semantic-watch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/reflex-godot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/agent-capsule": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/decision-solver": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/meaning-diff": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tubone24/jev-practice-speed": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "prasanthj/duckdb-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kabishou-lab/keepdrop": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "edgelabs-ai/jev48": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rinti/wagtail-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wahahjiahao/emojev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alpha-harper-franklin/jev-wam": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alpha-harper-franklin/jev-vla": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gaborishka/jev-wrapped": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yldm-tech/loom": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rileycarney/jevtools": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hikaruegashira/jev-kitchen": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/worldkit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/matchgraph": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/agent-mandates": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gbesse/exceptionos": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ceobe-dev/routerbasedjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pujux/hass-hunch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hinstein/jev-vip": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "celestios/synthetic_colony": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "willgriffin/pi-fusion-matrix": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rahiseko-alt/jev-test1": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "enucatl/docker-browser-use": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aarithooda/personal-information-acquiring-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yym68686/uni-api-web": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sustyuxiao/laya-server": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "barneyjm/decision-circuits": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "stardeckai/lgtm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "arnavm-codes/jevfence": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "b0bleet/syn": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "takuminoguchi2004/jev-noul-vs-choice": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "uzuradev/cookie-clicker-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xuminghai1/tetris-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "quinnjr/opencode-jev-compaction": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gentaron/genesisvault": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jamiejefferson/hatch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "johnkidenda/freightlodge-voice-quote": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "slatinwine/jevy": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cloudbtl/jevrag": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aarongunasingh/ask-twice": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "emirfs/ai-news-hub": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "iapp-technology/openthai-systemone-doom": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "navopw/laya-onnx": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kerpopule/hermes-jev-skills": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mizchi/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vincent-lxc/pulse-on-monad": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "harshsinha-12/library-estimate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "opeoginni/oc-plugins": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bulldozer2003/typesafe-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bring-ai/jev-rl": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wyattjoh/demur": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pragyan330/what-s-up-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "edgefloor/docktape-lead-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nicobailon/pi-mcp-adapter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fly88oj/jebii": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wiredmind2/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "anxiety471/idle-mmo-bot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pdbz199/local-decision-model": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hanshs474/jevx-client": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "razorback16/openjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "morinokami/hunk-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aravdharnikota/apush-debate-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dhdbv-cbs/turtle-soup-bot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "audreyt/paseo-spacedock": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "circuit-overtime/circuit-overtime": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "syy706/x-reply-shield": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shikaizhong-design/jego": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tango-tango/ex_typesafe": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "laween-alsulaivany/shouldicare": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lutr0/chain-analyst": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nmokaria27/job-scraper-bot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wallstreetpete/awesome-open-source-trading": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ahmadswalih/jev-chess-test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aksharahegde/should-we-meet": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kourin1996/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nicobailon/pi-interactive-shell": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "clemensschartmueller/jev-guard": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jagsan-cyber/reflex-gate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "osuki-dev/opencode-osuki-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kunchenguid/compact-adviser": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dholzric/jevmarket": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mjyoke1111/jev-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "balazsorban44/nvim-jev-plugin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "1475505/jev-api-adapter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aakgna/jevcal": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vishalsachdev/harvest-classifier": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bitsocialnet/ai-moderation-challenge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jamesacklin/linear-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "korbeil/opencode-jev-plugin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "andyhorn/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "myon-bioinformatics/mcp-toolcall-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lucasxu666666/x-bookmarks-extension": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ctnicholas/jev-workflow-builder": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shhh-hoo/cuelight": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "csskrtao/jev-to-answer": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "txy02/jev-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "neilmc81/qwen-omarchy-control": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gabepauli/jev-bookmarker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tonours/etabli": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rohitgarud/llm-schema-lite": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "txy02/jev-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "altstack/dj-set-curator": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "adams100111/typesafe-laravel": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shubs5758/jev-guard": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wuyoscar/jev-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "swamp-club/swamp-extensions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "csprague96/email-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mshk/jev-translation-checker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "drewsmash/roboscoutai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "viguru24/youtube": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "facetomyself/typesafe-console-protocol": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hashgraph-online/awesome-codex-plugins": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zephyrdeng/pi-review": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "stephenmcconnachie/starred": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lnyo-cly/ai4j": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bonsai/furui": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jdeun/schemarouter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ktrack723/wargame": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "stratonext/software-factory": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rodolphomarinho-dev/rodolphomarinho-dev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rodolphomarinho-dev/regulatory-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "anupsahoo/multi-agent-ticket-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hulryung-uo/anima3": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "chengyongru/fastjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "007m7/jev-chat": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sapereaude2014/groupconnect": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yinsongxu/llm2jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "asimog/cancerjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "geekfoxcharlie/agentpulse": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "seekerzz/myrsssync": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ffazecaldy/elysiumagent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ffazecaldy/elysiumharness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "karozi/awesome-jev-resources": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "djtang-404/ai-turtle-soup": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "scbrown/camayoc": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "satangel2222/superego": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "musubi-labs/musubi-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jcs130/minecraft-ai-friend": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "soundblaster/swiftdecision": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alperiox/audio-jevlike": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "freepeak/agentloop": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "perrylink/laya-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alexhawat/judge-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "auxon/bsv-os": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yilight0/paperfocus": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bokuweb/grande": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mansicer/jev-plays": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joaovaleri/jevkenpo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "brainwagon/ai-brief": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "goldenloaf24h/browserclaw": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "babybear-labs/system-one": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ai-that-works/ai-that-works": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mikelninh/commons": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nothingmn/vectorize.hindsight.sdk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hawkymisc/typed-decision-bert": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vinodjagwani/jev-claude-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tfolkman/jev-village": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "0x7067/claude-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "roisol144/before-you-send": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tantantan-lab/lifeos": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aftely1337/typesafe-ai-opencode-free": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hiroki-abe-58/sokudan": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alexmy21/ewm-state-machine": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "notxf1le/choosekit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nanako0129/nanako0129": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xinyao27/jevonian": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "meetsoni15/trending-radar": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pygarap/my-awesome-stars": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pedrorau/feedback-radar-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cxyfreedom/website-hot-hub": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sw-ml-study/demo-decision-model": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "prophetlab/jevpokerbench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "u7chan/pi-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jhnwr/scrapy-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mcftira/jev-route": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "youzizzz1028/awesome-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "piratchai/jev-integration-report": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yans75/smartrade": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "l-library/hypr-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "omnifroodle/couchbase_notebooks": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lianjiexu08-ui/goal-guided-brain": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alexander-voronkov/laya-web-poc": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "louloulin/upup": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "abnormalpilot/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cadeos/jev-grounds": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shamala/typesafe-smart-inbox": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "srameshv/tonight-recs-app": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hunkim/solar-mini4-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lw24-1936/study-work": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mahmoudimus/feed": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hardik500/dragon-voice-control": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "blazskufca/typesafe-sdk-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "andreaserradev-gbj/jev-access-day": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "stoopid-computers/jev-bot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "solovieff/tg_accessor": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "realdubb/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "darlinggoose/typesafe-ai-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "husdev/pisocheck": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "codaaiteam/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ktaletsk/jevframe": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "planstack-ai/jev-tetris-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "codaaiteam/jev-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "codaaiteam/jev-typesafe-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dwisiswant0/typesafe-sdk-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "casereed/latch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shitianfang/wakegate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pinecone-io/cultivar": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "appitstudio/testimonial-miner": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wotai-dev/typesafe-jev-tools": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bahramzada/jev-taxi-dispatch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mithrilman/your-signal": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mentioum/judgement": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ant4g0nist/joxide": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "djangobeatty/textured": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "red5d/jev-cvss": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jeiel85/jevscope": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jonesmelton/verdict": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ozers/jevsome-projects": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mzainzulifqar/jev-php-sdk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wang-auspicious/codex-jev-compaction": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "wang-auspicious/pi-jev-compaction": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "qddegtya/qualm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xingwudao/openjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "phuthuycoding/jev-audit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hamakyo/jev-starter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "piyush97/focus-tube": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shivampansuriya/jev-skill-gate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alexshpunt/pi-agent-foreman": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "furedea/reflex-state": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shivprime94/dealscout": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alinademi/jev-decision": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jordandalton/jev-mermaid": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "thecnfor/shizurak": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aoprisan/jev-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "martianingreen/noyoudonot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "metademicteam/jeedle": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mohit-singh-13/testing-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aliakbarialashti/hands-on-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dillettant/jev-test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "eh-tools/dsh-plugin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mjpaulus/agentic-ds": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gopinav/jev-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alpbahadur/jevrouter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "konghayao/laya-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "danieluszta/jev-classification-guide": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ickas/battleship-vs-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "asfarsadewa/werewolf": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "asfarsadewa/orders": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "spate141/jev-wordfeel": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hrstmr/typesafe-ai-sdk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "voidning/probflow": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "samarkundal/expect-semantic": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "patrickogilvie/popcomputer-structured-chat": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nesanselvan/resume-ranker-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shubhangi013/prompt-oscilloscope": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "voidning/design-chat": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mumutw/awesome-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ekkyarmandi/jev-upwork-job-classification": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "codewitheugene/nextstep-hacks-2026": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "appsprout-dev/unsga3": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yshraj/jev-traffic-race": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "atheory-ai/typesafe-sdk-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kuldeepsinh19/jev-decision-gateway": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "shivanathd/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ufec/typesafe-sdk-kotlin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yirbz/tell": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "amr05008/jev-sandbox": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "carlaiau/readwithjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kt3k/jevmaze": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lukascaha/jev-profanity": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vicpon/signals": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "thevibeworks/awesome-typesafe-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "michaelvasandani/j-mail": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kaushikkc/jevscope": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "orcawhisperer/typesafe-sdk-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pspdfkit-labs/docsignals": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yatharth1706/jev-automation": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "taufique-ansari/dunjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "posthog/lmjtfy": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joevidev/ui-generator-instinct-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vishesh-baghel/typesafe": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "gastonmira/typesafe-triage-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ozzy2438/apply-os": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "golgor/pi-extensions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "trufyrelabs/tru-jev-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "robipop22/jev-is-odd": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vinilana/live-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fscm44xyz/jevtrace": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pavy23/jev_typesafeai_test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nitoba/opencode-jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dg-coreylweathers/jev-voice-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "armmosikyan66/zappi-cli": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "homenshum/jev-swap": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ioovooi/pi-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lu-zero/systemone": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ec812/typesafe-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "waxmell114514/jev-fps": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "stumble/jev-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sherajdev/jev-research": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "hatif03/try-typesafe-app": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jabbslad/pi-jev-tools": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dtjohnson83/rag-gate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rawson08/the-llm-dispatcher": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aoprisan/tavern-brawl": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "clankagent/pi-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dakdevs/decide-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "feliperfpereira/jevbrowser": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ode98/guessing-game-v2": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nozo-moto/jev-reverse": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "frankied003/fraud-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lambertsj/beatjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lambertsj/beatjevv": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "omauser119/jaxmodels": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "norbertbodziony/guard-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jomatsu/zod-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joshirod/acervo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "butochnikov/typesafe-sdk-php": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rosemary1812/miniflow": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tatsuo48/jev-poc": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "anmol-srv/jev-video-search": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vankleben/jev-arm-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "badgerbees/jev-oasis": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "0xstoneystark/roomtone": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zyw052/astrbot_plugin_jev_radar": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "buluoray/jevonly": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "anson-gzy/jev-paste": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "unownone/jevsume": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "charliepgarcia/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "colinmcdermott/grok-jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bald0wang/jev-docs-zh": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kitfunso/hippo-memory": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "coderexpert123/jev-browser-wingman": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kyu1204/jgrep": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alseif0x/jev-inbox-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fatsopanda-v3/jev-linkedin-slop": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joe325132514132636-svg/jev-100-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "aabbaass1/jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "havietkok-sys/bizzjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "saeedabdf/jev-screening-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "adamnroman/slop-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tatuck/jev-boe-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nicksonthc/jev-lamplight-house": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "applex250/jev-skill-laya": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tsagaanbayr1/jev-tetris": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "fritzprix/systemone-lite": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "futureppo/typesafe_register": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "uehaj/jev-semgrep": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yamadashy/jev-labeler-action": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ege-bulut/jevcraft": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dbssman/jev-snake": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bariskisir/jevsharp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dihrj/claude-code-jev-compaction": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "riku1128-tong/jev_test_action": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "roguefort-dev/trashcompact": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ieee0824/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "joaovaleri/ruleworld": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "thepfmind/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "waterme7on/jev-paper-trader": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dannote/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "frankie137/jev-web-ui": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "iskandeur/system1-system2": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sk123qaq/hermes-plugin-jev-approval": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "damingerdai/typesafe-jev-app": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "st1ne/jev-gem-scan": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "velesxbt/argus": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tomcat7707/jev-tetris-player": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lucassarcanjo/jev-doc-classification": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "barglabs/jev-judge-calibration": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bonghancho/jev-ai-gateway-sample": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "cankatsarac/jev-arcade": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zhengsjcode/jev-lint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lilittlecat/jev-playlist-classify": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pankona/japanese-jev-lint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "house-of-imaginations/rsdecider-inference": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "tphakala/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "4esv/jev-joust": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "resadan-dev/jev-zork": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vgabriel45/polymarket-btc5m-jev-trading": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "phamhongviet/pi-ext-model-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nsillik/jevvin-off": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "4esv/jev-eval": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "abhisheksharma001/jev-skill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "goodruizhan/pi-jev-control": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "j341nono/jev-prompt-optimization": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "pomodorozhong/exp-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ege-bulut/jev-play-games": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "trifleen/jev-vs-luna-phishing": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sabamen88/poker-theory-knowledge-base": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "codechap/mcp-server-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "alperenerol/jev-1.13-mini-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "lildojd/jevons": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "vbcherepanov/jev-symfony-bundle": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "qingshungli/everything-about-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "sarathchandrabellam/jev-vs-llm-ticket-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "bnistor4/fotocopiatrice": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "neo4j-field/jev-graphrag": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "amithgc/local-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zafer-liu/jev-xiangqi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "kofujimura/jev-obniz-led": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "umgbhalla/jevx": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "imanshu03/jev-browser-use": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "nixz0824/rag-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "amanadhav/traderai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "baltzparra/jev-study": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xienda/dsh-jev-verify": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "yixuexiaoao/astrbot_plugin_typesafe_autoreply": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "mazukriez/jev-ai-model-security-protection-tool": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "parthsidpara/obsidian-auto-tagger-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jimmyliao/jev-storyboard-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "ioluca/fili_jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jaysonsantos/sudoku-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jev-ai/typesafe-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jev-ai/typesafe-ai-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "jev-ai/typesafe-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "rajdhakad9826/jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "dopecape/typesafe-ai-test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "zhangcy122/openjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "xavierforge/jev_experiments": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
+      "attempts": 0
+    },
+    "duckegg0623-create/jev-wechat-live": {
+      "status": "pending",
+      "discoveredAt": "2026-09-21T18:34:33.655Z",
       "attempts": 0
     }
   }
