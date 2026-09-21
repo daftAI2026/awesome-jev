@@ -442,5 +442,982 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.78
     }
+  },
+  {
+    "id": "gh-epergaboni-jevseo",
+    "type": "github",
+    "title": "jevseo",
+    "summary": "Typed SEO, AEO and GEO judgments powered by Jev, a System One decision model. Code owns the rules, the model owns the meaning.",
+    "tags": [
+      "jev",
+      "typescript",
+      "system-one"
+    ],
+    "url": "https://github.com/epergaboni/jevseo",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "epergaboni",
+      "repo": "epergaboni/jevseo",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-ismaelsoilet-jev-harness",
+    "type": "github",
+    "title": "jev-harness",
+    "summary": "jev-harness — Jev / TypeSafe related project",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/ismaelsoilet/jev-harness",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "ismaelsoilet",
+      "repo": "ismaelsoilet/jev-harness",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-rdk16-jevudio",
+    "type": "github",
+    "title": "jevudio",
+    "summary": "Editor de codigo open source.",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "url": "https://github.com/rdk16/jevudio",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Rust",
+      "author": "rdk16",
+      "repo": "rdk16/jevudio",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-rizafahmi-pi-jev-task-router",
+    "type": "github",
+    "title": "pi-jev-task-router",
+    "summary": "Per-prompt model routing for the Pi coding agent: classify each prompt with Jev, pick a model tier, and switch before the turn runs.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/rizafahmi/pi-jev-task-router",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 14,
+      "language": "TypeScript",
+      "author": "rizafahmi",
+      "repo": "rizafahmi/pi-jev-task-router",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-sauhard74-mem-jev",
+    "type": "github",
+    "title": "mem-jev",
+    "summary": "Deterministic procedural memory for agents",
+    "tags": [
+      "jev"
+    ],
+    "url": "https://github.com/Sauhard74/mem-jev",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": null,
+      "author": "Sauhard74",
+      "repo": "Sauhard74/mem-jev",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-smlayero-jev-debtgate",
+    "type": "github",
+    "title": "jev-debtgate",
+    "summary": "Jev-powered technical debt gate for coding agents and CI. Bring your own TypeSafe API key.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/smlayero/jev-debtgate",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "smlayero",
+      "repo": "smlayero/jev-debtgate",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-sseanliu-jev-vision",
+    "type": "github",
+    "title": "Jev-Vision",
+    "summary": "Open-weight step verifier for computer-use agents: calibrated ground/skip/effect/done judgments from screenshots in ~160 ms, plus a benchmark with environment-derived labels",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/sseanliu/Jev-Vision",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "sseanliu",
+      "repo": "sseanliu/Jev-Vision",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-yuankjing-jev-as-policy",
+    "type": "github",
+    "title": "Jev-as-Policy",
+    "summary": "The highly anticipated open-source repository for JEV as Policy enables one-click setup of the simulation environment. Evaluations of Astra + JEV on benchmarks such as RoboTwin will also be released soon.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/YuanKJing/Jev-as-Policy",
+    "sourceMeta": {
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "YuanKJing",
+      "repo": "YuanKJing/Jev-as-Policy",
+      "jevAbout": 0.55,
+      "jevKeep": "review",
+      "jevKeepConfidence": 0.78
+    }
+  },
+  {
+    "id": "gh-1aifanatic-jev-uipath-coded-agent",
+    "type": "github",
+    "title": "jev-uipath-coded-agent",
+    "summary": "FINS demo: a UiPath coded agent for AML alert triage where every decision is made by TypeSafe's Jev model (Noul/Score/Choice) instead of an LLM",
+    "tags": [
+      "jev",
+      "python",
+      "demo"
+    ],
+    "url": "https://github.com/1aifanatic/jev-uipath-coded-agent",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "1aifanatic",
+      "repo": "1aifanatic/jev-uipath-coded-agent",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-andepants-feed-rubric",
+    "type": "github",
+    "title": "feed-rubric",
+    "summary": "Open-source Chrome MV3 extension: user-defined rubric categories, Jev noul scores each feed post, hide matches. BYOK Typesafe.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/andepants/feed-rubric",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 1,
+      "language": "TypeScript",
+      "author": "andepants",
+      "repo": "andepants/feed-rubric",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-az9713-jev-projects",
+    "type": "github",
+    "title": "jev-projects",
+    "summary": "Small demos of Jev (TypeSafe) through the Vercel AI Gateway: wiki race, town of agents, bullet chess, and more",
+    "tags": [
+      "jev",
+      "javascript",
+      "demo"
+    ],
+    "url": "https://github.com/az9713/jev-projects",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "JavaScript",
+      "author": "az9713",
+      "repo": "az9713/jev-projects",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-cedarmuse-creator-jev-decision-maker-at-meteora",
+    "type": "github",
+    "title": "jev-decision-maker-at-meteora",
+    "summary": "Decision Maker at Meteora - a decision agent for Meteora DLMM liquidity on Solana. Named after Jev, TypeSafe AI's System One model (https://console.typesafe.ai/home), which answers its typed Noul and Score questions. Ranks the live pool universe, runs live rug cards, and holds 3-5 pools under explicit hard gates and book rules.",
+    "tags": [
+      "jev",
+      "python",
+      "system-one"
+    ],
+    "url": "https://github.com/cedarmuse-creator/jev-decision-maker-at-meteora",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "cedarmuse-creator",
+      "repo": "cedarmuse-creator/jev-decision-maker-at-meteora",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-co1smos-jev-demo",
+    "type": "github",
+    "title": "jev-demo",
+    "summary": "Historical paper-trading simulator for evaluating TypeSafe AI JEV decisions",
+    "tags": [
+      "jev",
+      "python",
+      "demo"
+    ],
+    "url": "https://github.com/co1smos/jev-demo",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 10,
+      "language": "Python",
+      "author": "co1smos",
+      "repo": "co1smos/jev-demo",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-defensivesniper-jev-subagent-router",
+    "type": "github",
+    "title": "jev-subagent-router",
+    "summary": "Use TypeSafe Jev to select subagent models and reasoning effort in Codex and Claude Code.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/DefensiveSniper/jev-subagent-router",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "DefensiveSniper",
+      "repo": "DefensiveSniper/jev-subagent-router",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-emipasca-jev-ecosystem-sim",
+    "type": "github",
+    "title": "jev-ecosystem-sim",
+    "summary": "A 2D grid-island ecosystem where each animal is a Jev (TypeSafe) agent; the food chain emerges from calibrated typed decisions. Pure-stdlib Python + browser UI.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/emipasca/jev-ecosystem-sim",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "emipasca",
+      "repo": "emipasca/jev-ecosystem-sim",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-fruitymcdoo-jevchat",
+    "type": "github",
+    "title": "JevChat",
+    "summary": "A chat interface built on Jev, TypeSafe's decision-only model: every word is a typed decision",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/fruitymcdoo/JevChat",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "fruitymcdoo",
+      "repo": "fruitymcdoo/JevChat",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-hectorlcastro09-jev-torneo-animales",
+    "type": "github",
+    "title": "jev-torneo-animales",
+    "summary": "Winner-stays-on animal tournament refereed by Jev (TypeSafe System One): a local game to feel how fast typed decisions are. UI in Spanish.",
+    "tags": [
+      "jev",
+      "html",
+      "system-one"
+    ],
+    "url": "https://github.com/hectorlcastro09/jev-torneo-animales",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "HTML",
+      "author": "hectorlcastro09",
+      "repo": "hectorlcastro09/jev-torneo-animales",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-hikaruegashira-pi-prompt-enhancer",
+    "type": "github",
+    "title": "pi-prompt-enhancer",
+    "summary": "pi extension that rates every prompt with TypeSafe's jev decision model and injects the missing pieces as hints.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/HikaruEgashira/pi-prompt-enhancer",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "HikaruEgashira",
+      "repo": "HikaruEgashira/pi-prompt-enhancer",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-hoaphm-jev-decision-maker",
+    "type": "github",
+    "title": "jev-decision-maker",
+    "summary": "omp plugin: JEV (TypeSafe System One) picks the next coding step from agent-supplied candidates",
+    "tags": [
+      "jev",
+      "typescript",
+      "system-one"
+    ],
+    "url": "https://github.com/hoaphm/jev-decision-maker",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "hoaphm",
+      "repo": "hoaphm/jev-decision-maker",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-jijaraba-logipulseai_jev",
+    "type": "github",
+    "title": "LogiPulseAI_JEV",
+    "summary": "Real-time last-mile delivery exception triage: Jev (TypeSafe AI System One) evaluates each event, deterministic guardrails decide. FastAPI + Streamlit.",
+    "tags": [
+      "jev",
+      "python",
+      "system-one"
+    ],
+    "url": "https://github.com/jijaraba/LogiPulseAI_JEV",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "jijaraba",
+      "repo": "jijaraba/LogiPulseAI_JEV",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-keepwonder-jev-hub",
+    "type": "github",
+    "title": "jev-hub",
+    "summary": "Jev / TypeSafe AI 中文跟踪与文档聚合站",
+    "tags": [
+      "jev",
+      "astro"
+    ],
+    "url": "https://github.com/keepwonder/jev-hub",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Astro",
+      "author": "keepwonder",
+      "repo": "keepwonder/jev-hub",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-kurihada-pi-jev-permit",
+    "type": "github",
+    "title": "pi-jev-permit",
+    "summary": "A Jev (TypeSafe System One) permission gate for the Pi coding agent: judges every bash / write / edit call before it runs",
+    "tags": [
+      "jev",
+      "typescript",
+      "system-one"
+    ],
+    "url": "https://github.com/kurihada/pi-jev-permit",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "kurihada",
+      "repo": "kurihada/pi-jev-permit",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-ryuchan00-jev_practice",
+    "type": "github",
+    "title": "jev_practice",
+    "summary": "Jev (TypeSafe System One) と LLM に同じゲームを打たせて、レイテンシ・コスト・判断の質を比べる練習台",
+    "tags": [
+      "jev",
+      "python",
+      "system-one"
+    ],
+    "url": "https://github.com/ryuchan00/jev_practice",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "ryuchan00",
+      "repo": "ryuchan00/jev_practice",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-sharkelot-jev-laya-free",
+    "type": "github",
+    "title": "jev-laya-free",
+    "summary": "Free local Jev-compatible typed decisions backed by rules or Laya, with a TypeSafe SDK-compatible Python surface and deterministic Hermes/Qwen guards.",
+    "tags": [
+      "jev",
+      "python",
+      "sdk"
+    ],
+    "url": "https://github.com/Sharkelot/jev-laya-free",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "Sharkelot",
+      "repo": "Sharkelot/jev-laya-free",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-thewaywithin-jev-bench",
+    "type": "github",
+    "title": "jev-bench",
+    "summary": "Does the cited source actually say it? A 42-claim benchmark: Jev (TypeSafe System One) against GPT-5.4, Claude Sonnet 5 and Gemini 3.1 Pro.",
+    "tags": [
+      "jev",
+      "python",
+      "system-one"
+    ],
+    "url": "https://github.com/TheWayWithin/jev-bench",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Python",
+      "author": "TheWayWithin",
+      "repo": "TheWayWithin/jev-bench",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95
+    }
+  },
+  {
+    "id": "gh-totally-tim-jev-gate",
+    "type": "github",
+    "title": "jev-gate",
+    "summary": "Calibrated PR review gates powered by TypeSafe Jev: a GitHub Action, a local CLI, and an OpenCode plugin",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/totally-tim/jev-gate",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "TypeScript",
+      "author": "totally-tim",
+      "repo": "totally-tim/jev-gate",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-yo4e-jevpip",
+    "type": "github",
+    "title": "JevPip",
+    "summary": "GMOのFX/BTC市場データに対応したローカル市場研究ターミナル。ライブチャート、ペーパートレード、バックテスト、安全監督、TypeSafe Jev連携。安全機構を整えたうえで実売買対応予定。",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "url": "https://github.com/yo4e/JevPip",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 6,
+      "language": "Python",
+      "author": "yo4e",
+      "repo": "yo4e/JevPip",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-zafer-liu-jev-demo-rag",
+    "type": "github",
+    "title": "jev-demo-rag",
+    "summary": "RAG quality gate adapted for TypeSafe Jev - relevance filtering + document injection detection, fan-out in one call",
+    "tags": [
+      "jev",
+      "html",
+      "demo"
+    ],
+    "url": "https://github.com/Zafer-Liu/jev-demo-rag",
+    "sourceMeta": {
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "HTML",
+      "author": "Zafer-Liu",
+      "repo": "Zafer-Liu/jev-demo-rag",
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "x-2101869390501433540",
+    "type": "x",
+    "title": "自分の環境でもJev導入してみた",
+    "summary": "自分の環境でもJev導入してみた",
+    "url": "https://x.com/kishi27/status/2101869390501433540",
+    "sourceMeta": {
+      "handle": "@kishi27",
+      "likes": 2,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2006527287660077056/aeY0Auh5_200x200.jpg",
+      "author": "kishi27 ＠ 実践AIエージェント",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101868189810601999",
+    "type": "x",
+    "title": "Jev通用提示词（ChatGPT Codex）",
+    "summary": "Jev通用提示词（ChatGPT Codex）",
+    "url": "https://x.com/LeeJohnson818/status/2101868189810601999",
+    "sourceMeta": {
+      "handle": "@LeeJohnson818",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2083599467299889153/wvYR_8Ox_200x200.jpg",
+      "author": "拾光（Gleaning Light）",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101867852718543062",
+    "type": "x",
+    "title": "@moritzkremb I'm surprised you are only using current state. If your jev prompt includes the previous page and last a...",
+    "summary": "@moritzkremb I'm surprised you are only using current state. If your jev prompt includes the previous page and last action I would expect much higher quality.\n\n{\n  \"previous_page\": {\n    \"url\": \"\",\n    \"title\": \"typesafe jev — Search results\"\n  },\n  \"previous_action\": {",
+    "url": "https://x.com/tombielecki/status/2101867852718543062",
+    "sourceMeta": {
+      "handle": "@tombielecki",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/753767705967079425/oZnW7oYF_200x200.jpg",
+      "author": "Tom Bielecki",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101865313906418069",
+    "type": "x",
+    "title": "JEV如何使用：",
+    "summary": "JEV如何使用：\n1、打开codex，叫它 “安装 npx skills add typesafe-ai/skills –skill typesafe-ai”\n2、在 jev 官网创建一个 APIKEY\n3、配置密钥：export TYPESAFE_API_KEY=\"你的 API Key\"\n4、在codex里直接使用\n5、注意到\n如果你要卸载直接使用`npx skills remove",
+    "url": "https://x.com/by0x_1993/status/2101865313906418069",
+    "sourceMeta": {
+      "handle": "@by0x_1993",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2097299772931776512/EGNnzXYg_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStTPHlbUAINbMU.jpg"
+      ],
+      "author": "xin",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864999472046510",
+    "type": "x",
+    "title": "I've been playing around with TypeSafe AI Jev model and Laravel.",
+    "summary": "I've been playing around with TypeSafe AI Jev model and Laravel.\n\nMade a quick video showing how I connected the model to a Laravel app, sent a question, and handled the response.\n\n\n\n#Laravel #PHP #AI #TypeSafeAI #Jev",
+    "url": "https://x.com/HiClovon/status/2101864999472046510",
+    "sourceMeta": {
+      "handle": "@HiClovon",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1326352806215782401/LDby-dxV_200x200.png",
+      "author": "Clovon",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 1,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864892202709425",
+    "type": "x",
+    "title": "The Jev Trading Ecosystem: What 20+ Repos Actually Reveal (And Why Nobody's Profitable Yet)",
+    "summary": "The Jev Trading Ecosystem: What 20+ Repos Actually Reveal (And Why Nobody's Profitable Yet)",
+    "url": "https://x.com/Thevenicelive/status/2101864892202709425",
+    "sourceMeta": {
+      "handle": "@Thevenicelive",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1922288789755723779/mDMTDI20_200x200.jpg",
+      "author": "Prakash Pawar",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864510793589009",
+    "type": "x",
+    "title": "打开 。",
+    "summary": "打开 。\n输入 TypeSafe Jev API Key。\n点击“保存 Key”。\n点击“启动并配置”。\n等状态显示“Jev 路由已启动”。\n完全退出 Codex Desktop，再重新打开。\n在 Codex 的模型选择器中选择：\nJev Codex Router\n之后你正常使用 Codex 即可：\n你输入问题\n    ↓\nJev 判断任务难度\n    ↓",
+    "url": "https://x.com/TookJun21525/status/2101864510793589009",
+    "sourceMeta": {
+      "handle": "@TookJun21525",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2084622066846990336/5X232Z-D_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStSn8ybsAAXLF-.jpg"
+      ],
+      "author": "daojoy",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101864227938185711",
+    "type": "x",
+    "title": "ChatGPTは語り、Jevは意味同士の関係のなかへ対象を置く",
+    "summary": "テキストチャットLLMは「言語で意味を展開する知性」だとしたら、\nJevは「意味を空間的・構造的に位置づける知性」だと感じる。",
+    "url": "https://x.com/cotamaru6/status/2101864227938185711",
+    "sourceMeta": {
+      "handle": "@cotamaru6",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101866544561344512/afO4-efv_200x200.png",
+      "author": "こたまる / AI時代だから人間らしさを哲学する",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101863835300978909",
+    "type": "x",
+    "title": "Codexのモデル選択をJevに切り替えて、TypeSafe経由のルーター運用を始めてみた。",
+    "summary": "Codexのモデル選択をJevに切り替えて、TypeSafe経由のルーター運用を始めてみた。\n\n参考にした投稿：\n\n\n\n\nJevの面白さは、毎回「どのモデルを使うか」を手動で決めなくていいこと。",
+    "url": "https://x.com/TaoRInne/status/2101863835300978909",
+    "sourceMeta": {
+      "handle": "@TaoRInne",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2083357212643409920/z8A92r6J_200x200.jpg",
+      "mediaUrls": [
+        "https://pbs.twimg.com/media/HStR6kYb0AAS9T4.jpg"
+      ],
+      "author": "輪廻タヲ",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101862636837282191",
+    "type": "x",
+    "title": "Jevに、人間の「直感的な違和感」に似た役割をさせてみた",
+    "summary": "Jev・Exa・TimesFMを連携させてみた実験",
+    "url": "https://x.com/cotamaru6/status/2101862636837282191",
+    "sourceMeta": {
+      "handle": "@cotamaru6",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101866544561344512/afO4-efv_200x200.png",
+      "author": "こたまる / AI時代だから人間らしさを哲学する",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101860029838303522",
+    "type": "x",
+    "title": "Jev 到底能用在哪？5 个能落地的 Agent 场景",
+    "summary": "Jev 不写字，但很适合放进 Agent 的关键链路做“快速判断”。  \n这篇拆了 5 个可落地场景：内容清洗、固定参数选择、意图路由、RAG 精排和工具安全拦截，也介绍了开源的 JevShield。  \n适合正在做 Agent、RAG 或工具调用治理的同学。",
+    "url": "https://x.com/lgyv5/status/2101860029838303522",
+    "sourceMeta": {
+      "handle": "@lgyv5",
+      "likes": 2,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2101658222906286080/1ogJ-LIU_200x200.jpg",
+      "author": "云上开荒",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101859628728582570",
+    "type": "x",
+    "title": "Jev每百万输入token只收0.042美元，企业还要付什么钱？",
+    "summary": "Jev每百万输入token只收0.042美元，企业还要付什么钱？",
+    "url": "https://x.com/AI_Tech_Talk/status/2101859628728582570",
+    "sourceMeta": {
+      "handle": "@AI_Tech_Talk",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1904429422461288448/lU-SnX7Z_200x200.jpg",
+      "author": "AI 志异",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101859061147058548",
+    "type": "x",
+    "title": "Jevとは？「文章を生成しないAI」がX運用を変えるかもしれない",
+    "summary": "Jevとは？「文章を生成しないAI」がX運用を変えるかもしれない",
+    "url": "https://x.com/_exosai_/status/2101859061147058548",
+    "sourceMeta": {
+      "handle": "@_exosai_",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2100617669611487232/4SD2Ziz8_200x200.jpg",
+      "author": "Exos AI｜X特化プラットフォーム｜X最新情報発信",
+      "replies": 0,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101858218058379645",
+    "type": "x",
+    "title": "Jev 是个什么东西？一个不会说话的 AI，火了🔥",
+    "summary": "Jev 是个什么东西？一个不会说话的 AI，火了🔥",
+    "url": "https://x.com/aoaoao/status/2101858218058379645",
+    "sourceMeta": {
+      "handle": "@aoaoao",
+      "likes": 12,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2049832260967493633/sTVkkEnM_200x200.jpg",
+      "author": "嗷嗷镜",
+      "replies": 9,
+      "retweets": 2,
+      "bookmarks": 10,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101857883180937540",
+    "type": "x",
+    "title": "⭐ TRENDING ON GITHUB: Jev – System-1 Agent Architecture Radar (open-source)",
+    "summary": "⭐ TRENDING ON GITHUB: Jev – System-1 Agent Architecture Radar (open-source)\n\nHigh-value open-source AI release. Source code, architecture & docs:\n\n🔗",
+    "url": "https://x.com/amasen02/status/2101857883180937540",
+    "sourceMeta": {
+      "handle": "@amasen02",
+      "likes": 1,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1490035734803144711/XcKqD1u3_200x200.png",
+      "author": "Ama Senevirathne",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101854707857953047",
+    "type": "x",
+    "title": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "summary": "Jev 爆火：我深扒了 10 个全网最火应用，终于搞懂它为什么不一样",
+    "url": "https://x.com/KinGao476942/status/2101854707857953047",
+    "sourceMeta": {
+      "handle": "@KinGao476942",
+      "likes": 19,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1843083681210273792/_w6C8yFQ_200x200.jpg",
+      "author": "Kin",
+      "replies": 2,
+      "retweets": 1,
+      "bookmarks": 13,
+      "jevAbout": 0.7,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
+  },
+  {
+    "id": "x-2101854575255003638",
+    "type": "x",
+    "title": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not generate text. You send...",
+    "summary": "TypeSafe AI just shipped Jev, from Diogo Almeida — co-inventor of RLHF at OpenAI. It does not generate text. You send it a state and a list of typed questions, it answers in parallel with probabilities in 70-500ms. Code branches on decisions, not chat. .",
+    "url": "https://x.com/kysstalol/status/2101854575255003638",
+    "sourceMeta": {
+      "handle": "@kysstalol",
+      "likes": 0,
+      "date": "2026-09-21",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2086077556017795072/N6R4sCwH_200x200.jpg",
+      "author": "Kyssta",
+      "replies": 1,
+      "retweets": 0,
+      "bookmarks": 0,
+      "jevAbout": 0.85,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.55
+    }
   }
 ]
