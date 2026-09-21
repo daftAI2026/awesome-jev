@@ -10430,5 +10430,123 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.9
     }
+  },
+  {
+    "id": "gh-13-billionsbobby-jevrouter",
+    "type": "github",
+    "title": "JevRouter",
+    "summary": "A lightweight Jev-powered router for models, tools, and subagents",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "url": "https://github.com/BillionsBobby/JevRouter",
+    "sourceMeta": {
+      "repo": "BillionsBobby/JevRouter",
+      "author": "BillionsBobby",
+      "stars": 137,
+      "forks": 11,
+      "openIssues": 6,
+      "language": "TypeScript",
+      "date": "2026-09-18",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94
+    }
+  },
+  {
+    "id": "gh-kylemclaren-jevql",
+    "type": "github",
+    "title": "jevql",
+    "summary": "psql-shaped CLI and Go/TypeScript/Python SDKs that add jev(), jev_prob, jev_choice, and jev_score to queries against vanilla Postgres with no extension: plain SQL runs on the server, surviving rows are judged by Jev in batches, and the client applies the filter, sort, or group.",
+    "tags": [
+      "postgres",
+      "sql",
+      "cli",
+      "sdk"
+    ],
+    "url": "https://github.com/kylemclaren/jevql",
+    "sourceMeta": {
+      "stars": 11,
+      "forks": 0,
+      "openIssues": 2,
+      "language": "Go",
+      "author": "kylemclaren",
+      "repo": "kylemclaren/jevql",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.99
+    }
+  },
+  {
+    "id": "gh-valentynkit-awesome-jev-typesafe",
+    "type": "github",
+    "title": "awesome-jev-typesafe",
+    "summary": "CC0, awesome-lint clean list of Jev projects sorted by what you would install, with a short section on the model's limits up top.",
+    "tags": [
+      "jev",
+      "awesome",
+      "awesome-lists",
+      "typesafe"
+    ],
+    "url": "https://github.com/valentynkit/awesome-jev-typesafe",
+    "sourceMeta": {
+      "stars": 122,
+      "forks": 25,
+      "openIssues": 3,
+      "language": "JavaScript",
+      "author": "valentynkit",
+      "repo": "valentynkit/awesome-jev-typesafe",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97
+    }
+  },
+  {
+    "id": "gh-valentynkit-jev-commit",
+    "type": "github",
+    "title": "jev-commit",
+    "summary": "Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, plus checks for debug leftovers and unmentioned work. Warns on mismatches, blocks only on a detected secret.",
+    "tags": [
+      "jev",
+      "python",
+      "code-review"
+    ],
+    "url": "https://github.com/valentynkit/jev-commit",
+    "sourceMeta": {
+      "stars": 9,
+      "forks": 0,
+      "openIssues": 1,
+      "language": "Python",
+      "author": "valentynkit",
+      "repo": "valentynkit/jev-commit",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.93
+    }
+  },
+  {
+    "id": "gh-valentynkit-jev-nvim",
+    "type": "github",
+    "title": "jev.nvim",
+    "summary": "Neovim plugin that answers a plain-language question about the buffer: Treesitter splits it into functions, Jev scores each one, and the ranked answers land in the quickfix list.",
+    "tags": [
+      "jev",
+      "lua",
+      "developer-tools",
+      "editor"
+    ],
+    "url": "https://github.com/valentynkit/jev.nvim",
+    "sourceMeta": {
+      "stars": 3,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "Lua",
+      "author": "valentynkit",
+      "repo": "valentynkit/jev.nvim",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97
+    }
   }
 ]
