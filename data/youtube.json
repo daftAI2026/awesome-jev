@@ -533,5 +533,656 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.15
     }
+  },
+  {
+    "id": "yt-JV3z5nJ4clQ",
+    "type": "youtube",
+    "title": "【無料で試せる】文章を書かない話題のAIモデル「Jev」を分かりやすく解説！ ～普通のAIの200倍速で答えを返す、判断特化の格安モデルの使い方～",
+    "summary": "Japanese introduction to TypeSafe Jev, its typed decision outputs, usage and example applications.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=JV3z5nJ4clQ",
+    "sourceMeta": {
+      "author": "AI大学【AI&ChatGPT最新情報】",
+      "handle": "AIAIChatGPT-cj4sh",
+      "videoId": "JV3z5nJ4clQ",
+      "date": "2026-09-21",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/JV3z5nJ4clQ/hqdefault.jpg"
+      ],
+      "views": 2594
+    }
+  },
+  {
+    "id": "yt-mVUoXWEHP5M",
+    "type": "youtube",
+    "title": "Jev explained in 5min..",
+    "summary": "Five-minute overview of Jev, System One models and Reinforcement Learning for Calibrated Decisions.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=mVUoXWEHP5M",
+    "sourceMeta": {
+      "author": "Thetips4you",
+      "handle": "Thetips4you",
+      "videoId": "mVUoXWEHP5M",
+      "date": "2026-09-21",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/mVUoXWEHP5M/hqdefault.jpg"
+      ],
+      "views": 258
+    }
+  },
+  {
+    "id": "yt-9oWxrsRo4d8",
+    "type": "youtube",
+    "title": "Meet Jev: The AI Built to Make Decisions",
+    "summary": "Demonstrates Jev on email classification, priority, spam and reply decisions, including batch experiments.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=9oWxrsRo4d8",
+    "sourceMeta": {
+      "author": "vogel",
+      "handle": "vogeldev",
+      "videoId": "9oWxrsRo4d8",
+      "date": "2026-09-15",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/9oWxrsRo4d8/hqdefault.jpg"
+      ],
+      "views": 65109
+    }
+  },
+  {
+    "id": "yt-UhGH8cNG0qs",
+    "type": "youtube",
+    "title": "Steerable Reranking: How JEV Solves RAG",
+    "summary": "Explores using TypeSafe Jev for steerable reranking in retrieval-augmented generation, with a linked Colab example.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=UhGH8cNG0qs",
+    "sourceMeta": {
+      "author": "Prompt Engineering",
+      "handle": "engineerprompt",
+      "videoId": "UhGH8cNG0qs",
+      "date": "2026-09-20",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/UhGH8cNG0qs/hqdefault.jpg"
+      ],
+      "views": 30797
+    }
+  },
+  {
+    "id": "yt-jU6o3nUY17s",
+    "type": "youtube",
+    "title": "An AI That Decides If Your Agent Can Act - TypeSafe AI’s Jev",
+    "summary": "Builds an action gate with Jev to evaluate an AI agent’s proposed tool calls for authorization, risk and policy alignment.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=jU6o3nUY17s",
+    "sourceMeta": {
+      "author": "Raj Kapadia",
+      "handle": "rajkkapadia",
+      "videoId": "jU6o3nUY17s",
+      "date": "2026-09-18",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/jU6o3nUY17s/hqdefault.jpg"
+      ],
+      "views": 152
+    }
+  },
+  {
+    "id": "yt-NGNPRwu4u9A",
+    "type": "youtube",
+    "title": "【解説】文章を生成しない最新AI「Jev」とは？ ClaudeやChatGPTと何が違う？TypeSafe AIの判断専用モデルについて学ぼう",
+    "summary": "Japanese explainer comparing Jev’s typed decisions with generative LLMs, including RLCD and current limitations.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=NGNPRwu4u9A",
+    "sourceMeta": {
+      "author": "TECH PLAY Channel",
+      "handle": "techplay-channel",
+      "videoId": "NGNPRwu4u9A",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/NGNPRwu4u9A/hqdefault.jpg"
+      ],
+      "views": 644
+    }
+  },
+  {
+    "id": "yt-i1PEnvRGCag",
+    "type": "youtube",
+    "title": "Jev: an AI model that doesn't generate text #appdesign #coding #AI",
+    "summary": "Short introduction to Jev’s typed answers and probabilities, distinguishing provider benchmarks from independent results.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=i1PEnvRGCag",
+    "sourceMeta": {
+      "author": "Code with Beto",
+      "handle": "codewithbeto",
+      "videoId": "i1PEnvRGCag",
+      "date": "2026-09-17",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/i1PEnvRGCag/hqdefault.jpg"
+      ],
+      "views": 6874
+    }
+  },
+  {
+    "id": "yt-twR_iMpid7U",
+    "type": "youtube",
+    "title": "BREAKING: OpenAI Alum Launches TypeSafe AI to Transform Development",
+    "summary": "News overview of TypeSafe AI’s launch, founders and approach to machine-native decision models.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=twR_iMpid7U",
+    "sourceMeta": {
+      "author": "AIM Network",
+      "handle": "aimmediahouse",
+      "videoId": "twR_iMpid7U",
+      "date": "2026-09-16",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/twR_iMpid7U/hqdefault.jpg"
+      ],
+      "views": 5799
+    }
+  },
+  {
+    "id": "yt-cJ0EOzey--o",
+    "type": "youtube",
+    "title": "Jev CEO: I made ChatGPT, now I'm building what's next",
+    "summary": "Talk by TypeSafe AI CEO Diogo Almeida on RLHF, human preference and the requirements of autonomous AI systems.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=cJ0EOzey--o",
+    "sourceMeta": {
+      "author": "AI Engineer",
+      "handle": "aiDotEngineer",
+      "videoId": "cJ0EOzey--o",
+      "date": "2026-07-31",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/cJ0EOzey--o/hqdefault.jpg"
+      ],
+      "views": 200814
+    }
+  },
+  {
+    "id": "yt-o-y1HJ6buGQ",
+    "type": "youtube",
+    "title": "Jev: ChatGPT Co-Creator’s Take on What AI Got Wrong",
+    "summary": "Pre-launch AI Council talk by Diogo Almeida on automation and the limits of human-preference optimization; the product is not named in the talk.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=o-y1HJ6buGQ",
+    "sourceMeta": {
+      "author": "AI Council",
+      "handle": "aicouncilconf",
+      "videoId": "o-y1HJ6buGQ",
+      "date": "2026-06-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/o-y1HJ6buGQ/hqdefault.jpg"
+      ],
+      "views": 10012
+    }
+  },
+  {
+    "id": "yt-vUKY1atBSkA",
+    "type": "youtube",
+    "title": "What is Jev?",
+    "summary": "Introduction to TypeSafe Jev’s structured decisions, calibrated probabilities and classification, routing and scoring use cases.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=vUKY1atBSkA",
+    "sourceMeta": {
+      "author": "Standarity",
+      "handle": "Standarity",
+      "videoId": "vUKY1atBSkA",
+      "date": "2026-09-18",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/vUKY1atBSkA/hqdefault.jpg"
+      ],
+      "views": 668
+    }
+  },
+  {
+    "id": "yt-F3YXg7AaKWE",
+    "type": "youtube",
+    "title": "Jev is incredible",
+    "summary": "Discussion of Jev as a fast classifier, its practical benefits and why it does not replace general reasoning models.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=F3YXg7AaKWE",
+    "sourceMeta": {
+      "author": "Theo - t3․gg",
+      "handle": "t3dotgg",
+      "videoId": "F3YXg7AaKWE",
+      "date": "2026-09-20",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/F3YXg7AaKWE/hqdefault.jpg"
+      ],
+      "views": 286436
+    }
+  },
+  {
+    "id": "yt-oExRmSzFesk",
+    "type": "youtube",
+    "title": "What Is Jev? TypeSafe’s System One AI Explained!",
+    "summary": "Animated explainer covering Jev’s question types, uncertainty, official demos and integration with ordinary code and LLMs.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=oExRmSzFesk",
+    "sourceMeta": {
+      "author": "Code Bear",
+      "handle": "thecodebear",
+      "videoId": "oExRmSzFesk",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/oExRmSzFesk/hqdefault.jpg"
+      ],
+      "views": 517
+    }
+  },
+  {
+    "id": "yt-LU6K07U4wOk",
+    "type": "youtube",
+    "title": "Jev de TypeSafe AI: el modelo que NO escribe texto",
+    "summary": "Spanish walkthrough of Jev’s Choice, Score and Noul primitives, agent routing, guardrails and usage boundaries.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=LU6K07U4wOk",
+    "sourceMeta": {
+      "author": "Fazt",
+      "handle": "FaztTech",
+      "videoId": "LU6K07U4wOk",
+      "date": "2026-09-18",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/LU6K07U4wOk/hqdefault.jpg"
+      ],
+      "views": 90462
+    }
+  },
+  {
+    "id": "yt-jLP6HWWNz60",
+    "type": "youtube",
+    "title": "TypeSafe AI Jev: The Fastest and Cheaper AI Model You Ever Seen!",
+    "summary": "Tutorial introducing Jev’s typed decisions for software, including model routing and classification.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=jLP6HWWNz60",
+    "sourceMeta": {
+      "author": "Md Al Mamun",
+      "handle": "mdalmamunit427",
+      "videoId": "jLP6HWWNz60",
+      "date": "2026-09-18",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/jLP6HWWNz60/hqdefault.jpg"
+      ],
+      "views": 829
+    }
+  },
+  {
+    "id": "yt--LKjIGNJT_I",
+    "type": "youtube",
+    "title": "How to Use Jev AI for FREE!",
+    "summary": "Walkthrough of accessing TypeSafe Jev through a third-party gateway and trying examples; the advertised free offer is time-limited.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=-LKjIGNJT_I",
+    "sourceMeta": {
+      "author": "Julian Goldie SEO",
+      "handle": "JulianGoldieSEO",
+      "videoId": "-LKjIGNJT_I",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/-LKjIGNJT_I/hqdefault.jpg"
+      ],
+      "views": 10640
+    }
+  },
+  {
+    "id": "yt-QaMxuV0A-J8",
+    "type": "youtube",
+    "title": "Jev Explained: System One Models Model That Doesn't Generate Text",
+    "summary": "Overview of TypeSafe Jev’s System One model and typed, probabilistic outputs, with links to the official documentation.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=QaMxuV0A-J8",
+    "sourceMeta": {
+      "author": "AI Stack Engineer",
+      "handle": "AIStackEngineer",
+      "videoId": "QaMxuV0A-J8",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/QaMxuV0A-J8/hqdefault.jpg"
+      ],
+      "views": 799
+    }
+  },
+  {
+    "id": "yt-QKafJHkYrRE",
+    "type": "youtube",
+    "title": "Jev by TypeSafe AI: System One Model Explained With Live Demos",
+    "summary": "Live OpenRouter demonstrations of Jev’s structured decisions, including a safety decision for a proposed database action.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=QKafJHkYrRE",
+    "sourceMeta": {
+      "author": "AiNow",
+      "handle": "AIbyTusharM",
+      "videoId": "QKafJHkYrRE",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/QKafJHkYrRE/hqdefault.jpg"
+      ],
+      "views": 344
+    }
+  },
+  {
+    "id": "yt-ii4_Q24h6Dw",
+    "type": "youtube",
+    "title": "Why System One Models Could Change AI Development Forever | Jev | TypeSafe AI",
+    "summary": "Overview of TypeSafe Jev, System One models and RLCD for structured decisions in software applications.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=ii4_Q24h6Dw",
+    "sourceMeta": {
+      "author": "The AI Lab",
+      "handle": "rkviitb",
+      "videoId": "ii4_Q24h6Dw",
+      "date": "2026-09-21",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/ii4_Q24h6Dw/hqdefault.jpg"
+      ],
+      "views": 19
+    }
+  },
+  {
+    "id": "yt-Uj8oEGeJ2gA",
+    "type": "youtube",
+    "title": "TypeSafe AI has introduced Jev, its first System One model designed fo...",
+    "summary": "Anthony Sapountzis introduces Jev and discusses classification, routing, scoring and automation use cases.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=Uj8oEGeJ2gA",
+    "sourceMeta": {
+      "author": "Aerion Technologies",
+      "handle": "AerionAuTech",
+      "videoId": "Uj8oEGeJ2gA",
+      "date": "2026-09-16",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/Uj8oEGeJ2gA/hqdefault.jpg"
+      ],
+      "views": 647
+    }
+  },
+  {
+    "id": "yt-IgV6h9w0iaE",
+    "type": "youtube",
+    "title": "AI Decodes Jev – Breakthrough ‘System One’ AI Model Developed by TypeSafe AI",
+    "summary": "Explainer contrasting TypeSafe Jev’s typed decisions and probabilities with autoregressive text generation.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=IgV6h9w0iaE",
+    "sourceMeta": {
+      "author": "Bellam DeepTech Strategy & Research Institute",
+      "handle": "BellamDeepTech",
+      "videoId": "IgV6h9w0iaE",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/IgV6h9w0iaE/hqdefault.jpg"
+      ],
+      "views": 7
+    }
+  },
+  {
+    "id": "yt-nnu-atGz2YQ",
+    "type": "youtube",
+    "title": "最新AI「Jev」System One Modelを事例で学ぼう（TypesafeAI）",
+    "summary": "Short Japanese preview of a longer Jev explainer, introducing System One models and practical use cases.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=nnu-atGz2YQ",
+    "sourceMeta": {
+      "author": "TECH PLAY Channel",
+      "handle": "techplay-channel",
+      "videoId": "nnu-atGz2YQ",
+      "date": "2026-09-20",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/nnu-atGz2YQ/hqdefault.jpg"
+      ],
+      "views": 920
+    }
+  },
+  {
+    "id": "yt-NnnZh7tAL3I",
+    "type": "youtube",
+    "title": "AI Podcast 39:  System One Model Jev",
+    "summary": "Podcast overview of TypeSafe Jev’s typed decision primitives and classification, scoring and routing applications.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=NnnZh7tAL3I",
+    "sourceMeta": {
+      "author": "Innovator Coffee",
+      "handle": "InnovatorCoffee",
+      "videoId": "NnnZh7tAL3I",
+      "date": "2026-09-19",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/NnnZh7tAL3I/hqdefault.jpg"
+      ],
+      "views": 7
+    }
+  },
+  {
+    "id": "yt-dWg8VmxDCJI",
+    "type": "youtube",
+    "title": "Jev: What is this Viral Decision Model? (Plus Mini Reproduction Experiment)",
+    "summary": "Explores Jev’s decision-model approach and presents a small local reproduction experiment.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=dWg8VmxDCJI",
+    "sourceMeta": {
+      "author": "Tonbi's AI Garage",
+      "handle": "TonbisAIGarage",
+      "videoId": "dWg8VmxDCJI",
+      "date": "2026-09-21",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/dWg8VmxDCJI/hqdefault.jpg"
+      ],
+      "views": 2178
+    }
+  },
+  {
+    "id": "yt-Qz9gVzqcRhU",
+    "type": "youtube",
+    "title": "ChatGPT Co-Inventor Launches Jev, A Frontier Model That Never Generates Text",
+    "summary": "News summary of Jev’s launch, typed decisions, RLCD and reported workflow evaluations.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=Qz9gVzqcRhU",
+    "sourceMeta": {
+      "author": "Daily AI Roundup",
+      "handle": "ai_roundup",
+      "videoId": "Qz9gVzqcRhU",
+      "date": "2026-09-16",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/Qz9gVzqcRhU/hqdefault.jpg"
+      ],
+      "views": 732
+    }
+  },
+  {
+    "id": "yt-tS9BXuLr_DU",
+    "type": "youtube",
+    "title": "ChatGPTを作った研究者が公開した新AI Jev",
+    "summary": "Japanese short discussing Diogo Almeida’s background and the motivation behind TypeSafe Jev.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=tS9BXuLr_DU",
+    "sourceMeta": {
+      "author": "PanMarie Studio | 最新AI情報と、ゲームやアプリ開発ノウハウを。",
+      "handle": "PanMarieStudio",
+      "videoId": "tS9BXuLr_DU",
+      "date": "2026-09-20",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/tS9BXuLr_DU/hqdefault.jpg"
+      ],
+      "views": 481
+    }
+  },
+  {
+    "id": "yt-esCxkCSJQVs",
+    "type": "youtube",
+    "title": "System One & Jev: Frontier decision models from the co-creator of ChatGPT | A NotebookLM Deep Dive",
+    "summary": "NotebookLM-generated podcast discussing TypeSafe’s System One approach and Jev, based on linked official sources.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=esCxkCSJQVs",
+    "sourceMeta": {
+      "author": "NLMDD",
+      "handle": "NLMDeepDives",
+      "videoId": "esCxkCSJQVs",
+      "date": "2026-09-16",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/esCxkCSJQVs/hqdefault.jpg"
+      ],
+      "views": 387
+    }
+  },
+  {
+    "id": "yt-JZknBu3u8C0",
+    "type": "youtube",
+    "title": "Jev AI Is INSANE… 193× Faster Than LLMs?!",
+    "summary": "Overview of Jev’s launch, workflow benchmarks, demos and potential uses, including discussion of its limitations.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=JZknBu3u8C0",
+    "sourceMeta": {
+      "author": "AI WITH Rithesh",
+      "handle": "RitheshSreenivasan",
+      "videoId": "JZknBu3u8C0",
+      "date": "2026-09-15",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/JZknBu3u8C0/hqdefault.jpg"
+      ],
+      "views": 21490
+    }
+  },
+  {
+    "id": "yt-EOzu25Mb0H8",
+    "type": "youtube",
+    "title": "ChatGPT Co-Founder Launches 200x Faster AI: Matches Top Models",
+    "summary": "Introduction to TypeSafe Jev, its decision outputs and reported speed and pricing, with examples of software use cases.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=EOzu25Mb0H8",
+    "sourceMeta": {
+      "author": "AI That Works",
+      "handle": "AIthatworkz",
+      "videoId": "EOzu25Mb0H8",
+      "date": "2026-09-17",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/EOzu25Mb0H8/hqdefault.jpg"
+      ],
+      "views": 6750
+    }
+  },
+  {
+    "id": "yt-X8Outd-khS0",
+    "type": "youtube",
+    "title": "Jev: The Model That Killed Chat GPT's Core Idea? RLCD Explained",
+    "summary": "Fahd Mirza introduces Jev and Reinforcement Learning for Calibrated Decisions, linking to TypeSafe AI.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=X8Outd-khS0",
+    "sourceMeta": {
+      "author": "Fahd Mirza",
+      "handle": "fahdmirza",
+      "videoId": "X8Outd-khS0",
+      "date": "2026-09-15",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/X8Outd-khS0/hqdefault.jpg"
+      ],
+      "views": 14127
+    }
+  },
+  {
+    "id": "yt-oZzWca2d_yk",
+    "type": "youtube",
+    "title": "「Jev」不要？RLCDを解説！ClaudeやChatGPTと何が違うの？",
+    "summary": "Short Japanese preview discussing Jev, RLCD and how decision models differ from generative LLMs.",
+    "tags": [
+      "jev",
+      "youtube"
+    ],
+    "url": "https://www.youtube.com/watch?v=oZzWca2d_yk",
+    "sourceMeta": {
+      "author": "TECH PLAY Channel",
+      "handle": "techplay-channel",
+      "videoId": "oZzWca2d_yk",
+      "date": "2026-09-21",
+      "mediaUrls": [
+        "https://i.ytimg.com/vi/oZzWca2d_yk/hqdefault.jpg"
+      ],
+      "views": 741
+    }
   }
 ]
