@@ -322,7 +322,7 @@ function YoutubeCard({ item }: ItemCardProps) {
             {channel && <span className="text-foreground">{channel}</span>}
             {meta.date && (
               <time className="font-mono tabular-nums" dateTime={meta.date}>
-                {meta.date}
+                {meta.date.slice(0, 10)}
               </time>
             )}
             {views != null && (

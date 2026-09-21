@@ -54,3 +54,8 @@ test('date sorting returns a new array without mutating input order', () => {
   assert.notStrictEqual(sorted, items)
   assert.deepEqual(items, before)
 })
+
+test('YouTube date order never puts September 17 before September 19', () => {
+  const items = [video('seventeen', '2026-09-17'), video('twenty-one', '2026-09-21'), video('nineteen', '2026-09-19')]
+  assert.deepEqual(sortYoutubeItems(items, 'date').map((item) => item.id), ['twenty-one', 'nineteen', 'seventeen'])
+})

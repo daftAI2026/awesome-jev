@@ -510,16 +510,9 @@ export default function App() {
                       {t('emptySection')}
                     </p>
                   ) : section.id === 'x' || section.id === 'youtube' ? (
-                    <ul
-                      className={section.id === 'youtube'
-                        ? 'grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3'
-                        : 'columns-1 gap-4 sm:columns-2 lg:columns-3'}
-                    >
+                    <ul className="columns-1 gap-4 sm:columns-2 lg:columns-3">
                       {section.items.map((item) => (
-                        <li
-                          key={item.id}
-                          className={section.id === 'youtube' ? 'min-w-0' : 'mb-4 break-inside-avoid'}
-                        >
+                        <li key={item.id} className="mb-4 break-inside-avoid">
                           <ItemCard item={item} />
                         </li>
                       ))}

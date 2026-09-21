@@ -108,4 +108,4 @@ Missing numeric fields sort as `0`; missing dates sort last.
 - README categories are computed from titles, tags and owner. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
 - Review SHA, README evidence URL and content hash live in `radar/latest.json`, not in the browser-facing schema. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
 
-YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. The UI compares full instants and displays videos in row-major order. Unknown statistics must not overwrite known values with zero.
+YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. The UI compares full instants and retains the masonry layout. Unknown statistics must not overwrite known values with zero.
