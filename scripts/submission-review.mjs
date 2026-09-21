@@ -182,7 +182,7 @@ export async function processSubmission({ api, writeComment, review, number, man
   try { input = await submissionInput(api, issue, language) }
   catch { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [language === 'zh' ? '无法读取收录数据，请检查 JSON 格式和提交路径。' : 'Could not read the submission data. Please check the JSON format and file paths.'] } }
   if (!input.keys.length && !input.notes.length) return 'no-projects'
-  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, 'deep-review-v1'])
+  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, 'deep-review-v2'])
   const comments = await pages(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
@@ -203,14 +203,14 @@ export async function processSubmission({ api, writeComment, review, number, man
   const cached = new Map(completed.filter((r) => r && keys.includes(r.repo) && ['included', 'keep', 'review', 'drop'].includes(r.status) && r.reason !== 'submission-daily-requests').map((r) => [r.repo, r]))
   const reserve = keys.filter((key) => !known.has(key) && !cached.has(key)).length
   if (used + reserve > DAILY_BUDGET || (reserve && requests >= DAILY_REQUESTS)) return 'daily-budget-exhausted'
-  const meta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, pending: true }
+  const meta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
   const notes = [...input.notes]
   if (input.keys.length > MAX_PROJECTS) notes.push(language === 'zh' ? `本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。` : `Reviewed the first ${MAX_PROJECTS} projects. Please submit the remaining ${input.keys.length - MAX_PROJECTS} separately.`)
   // 先保留预算，再调用模型；崩溃或网络失败也不能反复免费重试额度。
   const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true, language))
   const results = []
   const checkpoint = () => {
-    meta.completed = results.map(({ repo, status, reason, deep, filesRead, evidence, evidenceLinks }) => ({
+    meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, evidence, evidenceLinks }) => ({
       repo, status, reason, deep, filesRead, evidence: evidence?.length <= 600 ? evidence : undefined,
       evidenceLinks: (evidenceLinks ?? []).filter((url) => url.length <= 600).slice(0, 2),
     }))

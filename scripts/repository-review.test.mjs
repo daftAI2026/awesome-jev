@@ -104,3 +104,16 @@ test('HTTP retries reserve budget before every attempt and stop immediately on e
   }), /submission-daily-requests/)
   assert.equal(requests, 2); assert.equal(reserved, 2)
 })
+
+test('mock names and many docs cannot crowd real implementation out of follow-up selection', () => {
+  const tree = [file('tools/fake-jev.mjs'), file('fixtures/fake_jev.py'), file('src/main.ts'), file('src/client.ts'), file('src/provider.ts'), file('package.json'),
+    ...Array.from({ length: 12 }, (_, n) => file(`docs/jev-${n}.md`))]
+  const selected = selectEvidenceFiles(tree, 'README.md').map((f) => f.path)
+  assert.ok(selected.includes('src/main.ts'))
+  assert.ok(selected.includes('src/client.ts'))
+  assert.ok(selected.includes('src/provider.ts'))
+  assert.ok(selected.includes('package.json'))
+  assert.ok(selected.some((p) => p.startsWith('docs/')))
+  assert.ok(!selected.includes('tools/fake-jev.mjs'))
+  assert.equal(selected.length, 8)
+})

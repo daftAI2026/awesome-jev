@@ -15,14 +15,22 @@ const safePath = (path) => typeof path === 'string' && path.length < 400 && ![..
 const urlFor = (key, sha, path) => `https://github.com/${key}/blob/${sha}/${path.split('/').map(encodeURIComponent).join('/')}`
 
 export function selectEvidenceFiles(tree, readmePath) {
-  const priority = (path) => /jev|typesafe|system.?one|integrat/i.test(path) ? 0 :
-    /(?:^|\/)(?:examples?|demos?|docs?)(?:\/|$)/i.test(path) ? 1 :
-      /(?:^|\/)(?:package\.json|pyproject\.toml|Cargo\.toml|go\.mod|composer\.json)$/i.test(path) ? 2 :
-        /(?:^|\/)(?:src|lib|app|plugin|lua)(?:\/|$)|(?:^|\/)(?:main|index|client|api)\./i.test(path) ? 3 : 4
-  return tree.filter((file) => file.type === 'blob' && ['100644', '100755'].includes(file.mode) && safePath(file.path) &&
+  const isFixture = (path) => /(?:^|[/_.-])(?:fake|mock|fixtures?|__tests__)(?:[/_.-]|$)/i.test(path)
+  const group = (path) => /(?:^|\/)(?:package\.json|pyproject\.toml|Cargo\.toml|go\.mod|composer\.json)$/i.test(path) ? 'manifest' :
+    /\.(?:md|rst|txt)$/i.test(path) || /(?:^|\/)(?:examples?|demos?|docs?)(?:\/|$)/i.test(path) ? 'docs' : 'source'
+  const priority = (path) => isFixture(path) ? 9 : /jev|typesafe|system.?one|integrat/i.test(path) ? 0 :
+    /(?:^|\/)(?:main|index|client|api)\./i.test(path) ? 1 : 2
+  const eligible = tree.filter((file) => file.type === 'blob' && ['100644', '100755'].includes(file.mode) && safePath(file.path) &&
     file.path !== readmePath && code.test(file.path) && !blocked.test(file.path))
     .sort((a, b) => priority(a.path) - priority(b.path) || a.path.localeCompare(b.path))
-    .slice(0, MAX_FILES)
+  // 避免文档或 mock 文件挤掉真实实现，先保证不同证据类型都有代表。
+  const selected = []
+  for (const [category, count] of [['source', 3], ['docs', 3], ['manifest', 2]]) {
+    selected.push(...eligible.filter((file) => group(file.path) === category && !isFixture(file.path)).slice(0, count))
+  }
+  for (const file of eligible) if (selected.length < MAX_FILES && !selected.includes(file)) selected.push(file)
+  return selected
+
 }
 export async function repositoryEvidence(api, key, evidence) {
   const commit = await api(`/repos/${key}/git/commits/${evidence.sha}`)
