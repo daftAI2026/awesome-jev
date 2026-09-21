@@ -11,7 +11,7 @@ const item = (name) => ({ id: name, type: 'github', title: name, summary: 'A Jev
 const apiRepo = { full_name: 'test/new', html_url: 'https://github.com/test/new', name: 'new', owner: { login: 'test' },
   description: 'TypeSafe AI Jev SDK', default_branch: 'main', stargazers_count: 3, forks_count: 1, open_issues_count: 0 }
 const score = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence: 0.96 }
-const evidenceApi = async (path) => path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
+const evidenceApi = async (path) => path.includes('/git/commits/') ? { tree: { sha: 'b'.repeat(40) } } : path.includes('/git/trees/') ? { tree: [], truncated: false } : path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
   { encoding: 'base64', path: 'README.md', content: Buffer.from('TypeSafe AI Jev SDK https://typesafe.ai').toString('base64') } : apiRepo
 
 test('only GitHub HTTPS repositories are extracted and deduplicated', () => {
@@ -227,4 +227,70 @@ test('Chinese submissions use Chinese results and split notices throughout proce
   assert.ok(h.writes[0].body.includes('正在审查'))
   assert.ok(h.writes[1].body.includes('建议收录'))
   assert.ok(h.writes[1].body.includes('另外 2 个请拆分申请'))
+})
+
+test('deep review HTTP budget is persisted before model calls and enforced across submissions', async () => {
+  const h = harness({ count: 3, recent: [botComment({ ...meta, used: 1, requests: 99 })] })
+  let paid = 0
+  h.args.review = async (_, text, { beforeRequest }) => {
+    await beforeRequest()
+    const ledger = reviewMeta({ ...botComment(), body: h.writes.at(-1).body })
+    assert.equal(ledger.requests, 1)
+    paid++
+    return score
+  }
+  await processSubmission(h.args)
+  assert.equal(paid, 1)
+  const final = h.writes.at(-1).body
+  assert.ok(final.includes('budget is temporarily exhausted'))
+  assert.equal(reviewMeta({ ...botComment(), body: final }).retryable, true)
+  assert.equal(reviewMeta({ ...botComment(), body: final }).requests, 1)
+})
+test('invalid request counters cannot spoof budget and a fully spent day skips model calls', async () => {
+  assert.equal(reviewMeta(botComment({ ...meta, requests: -1 })), null)
+  assert.equal(reviewMeta(botComment({ ...meta, requests: 101 })), null)
+  const h = harness({ recent: [botComment({ ...meta, requests: 100 })] })
+  assert.equal(await processSubmission(h.args), 'daily-budget-exhausted')
+  assert.equal(h.paid.length, 0); assert.equal(h.writes.length, 0)
+})
+test('failed comment reservation prevents the model request', async () => {
+  const h = harness()
+  let writes = 0, paid = 0
+  h.args.writeComment = async () => { if (++writes === 2) throw new Error('github-comment-http-403'); return { id: 8 } }
+  h.args.review = async (_, text, { beforeRequest }) => { await beforeRequest(); paid++; return score }
+  await processSubmission(h.args)
+  assert.equal(paid, 0)
+})
+
+test('automatic resumption reuses completed projects while retrying deferred ones', async () => {
+  const first = harness({ count: 2 })
+  let calls = 0
+  first.args.review = async (_, text, { beforeRequest }) => {
+    await beforeRequest()
+    if (++calls === 2) throw new Error('jev-http-503')
+    return score
+  }
+  await processSubmission(first.args)
+  const previous = { ...botComment(), body: first.writes.at(-1).body }
+  const resumed = harness({ count: 2, previous, recent: [previous] })
+  resumed.args.manual = false
+  resumed.args.now = new Date(now.getTime() + 20 * 60 * 1000)
+  await processSubmission(resumed.args)
+  assert.equal(resumed.paid.length, 1)
+  assert.equal(resumed.paid[0].sourceMeta.repo, 'test/new1')
+  const final = reviewMeta({ ...botComment(), body: resumed.writes.at(-1).body })
+  assert.equal(final.completed.length, 2)
+  assert.equal(final.retryable, false)
+})
+test('per-project HTTP ceiling reports incomplete review rather than an approval', async () => {
+  const h = harness()
+  let calls = 0
+  h.args.review = async (_, text, { beforeRequest }) => {
+    for (let i = 0; i < 33; i++) { await beforeRequest(); calls++ }
+    return score
+  }
+  await processSubmission(h.args)
+  assert.equal(calls, 32)
+  assert.ok(h.writes.at(-1).body.includes('could not be fully checked'))
+  assert.ok(!h.writes.at(-1).body.includes('Recommended for inclusion'))
 })

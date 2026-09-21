@@ -21,7 +21,8 @@ export async function githubEvidence(api, key) {
   const readme = await api(`/repos/${key}/readme?ref=${branch.sha}`)
   if (readme.encoding !== 'base64' || typeof readme.content !== 'string' ||
     readme.content.length > 180000 || readme.size > 128000 || typeof readme.path !== 'string') throw new Error('github-invalid-readme')
-  const text = Buffer.from(readme.content, 'base64').toString('utf8').slice(0, 12000)
+  const text = Buffer.from(readme.content, 'base64').toString('utf8')
+  if (Buffer.byteLength(text) > 128000) throw new Error('github-invalid-readme')
   if (!text.trim()) throw new Error('github-empty-readme')
   return { repo, sha: branch.sha, readme, text,
     evidenceUrl: `https://github.com/${key}/blob/${branch.sha}/${readme.path.split('/').map(encodeURIComponent).join('/')}` }
