@@ -1,16 +1,16 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 7,
-    "\"typesafe.ai\" in:readme fork:false": 7,
-    "\"Jev\" \"System One\" in:readme fork:false": 7,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 7,
-    "code:\"api.typesafe.ai\" in:file": 3,
-    "code:\"@typesafe-ai/sdk\" in:file": 3,
-    "code:\"TYPESAFE_API_KEY\" in:file": 3,
-    "code:\"jev-latest\" in:file": 3
+    "topic:jev fork:false": 9,
+    "\"typesafe.ai\" in:readme fork:false": 9,
+    "\"Jev\" \"System One\" in:readme fork:false": 9,
+    "topic:typesafe-ai fork:false": 1,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
+    "\"TypeSafe\" \"Jev\" fork:false": 9,
+    "code:\"api.typesafe.ai\" in:file": 5,
+    "code:\"@typesafe-ai/sdk\" in:file": 5,
+    "code:\"TYPESAFE_API_KEY\" in:file": 5,
+    "code:\"jev-latest\" in:file": 5
   },
   "metadataCursor": 0,
   "candidates": {
@@ -34,9 +34,22 @@
       "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "kiwi0719/jev-edge": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kiwi0719/jev-edge",
+        "status": "review",
+        "reason": "instruction-like-evidence",
+        "sha": "6b64ac6307cf02acbe8da4728493c988b1d32891",
+        "evidenceUrl": "https://github.com/kiwi0719/jev-edge/blob/6b64ac6307cf02acbe8da4728493c988b1d32891/README.md",
+        "evidenceSha256": "a5c2c802436cd30c34ac2221c8c9c83a6ca3abef422170f43d7de82a084e317a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "donaldmurillo/system-one-playground": {
       "status": "review",
@@ -57,9 +70,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "kennethashley/fez": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kennethashley/fez",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "4c4aa59ac580edea22b0eeafddc2e1428bd5defc",
+        "evidenceUrl": "https://github.com/kennethashley/fez/blob/4c4aa59ac580edea22b0eeafddc2e1428bd5defc/README.md",
+        "evidenceSha256": "3945f9e8802046e79bea04a0f8d080937cdff408534d850824388e1e1e1b8124",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "typellm/typellm": {
       "status": "pending",
@@ -96,17 +122,7 @@
       "checkedAt": "2026-09-21T18:30:35.157Z",
       "retryAt": "2026-09-22T18:30:35.157Z"
     },
-    "mondaychen/semantic-assert": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "thehan-co/jevriel": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "mrebbert/jev-customerservice-demo": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -202,11 +218,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "makefunstuff/jev-lsp": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "wanlanglin/jev-wikirace": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -228,9 +239,26 @@
       "attempts": 0
     },
     "muratcanberber/jev-thefishgame": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "muratcanberber/jev-thefishgame",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.75
+        },
+        "sha": "37c54e4c3d274f2113cd5e10a4f6c6b77dd8c872",
+        "evidenceUrl": "https://github.com/muratcanberber/jev-thefishgame/blob/37c54e4c3d274f2113cd5e10a4f6c6b77dd8c872/README.md",
+        "evidenceSha256": "4c18442bc30c0f3837d94aac5603cc7d58f16ae0c73f1a3365b376e52ad709ed",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "ernosto0/jevkit": {
       "status": "review",
@@ -272,7 +300,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
-      "retryAt": "2026-09-29T04:56:17.783Z"
+      "codeHints": [
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "tests/test_http_judge.py"
+        }
+      ]
     },
     "revocgg/typesafe-jev-bridge": {
       "status": "pending",
@@ -341,11 +374,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "kennethashley/awesome-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "babanomania/linkedin-bullshit-filter": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -400,14 +428,22 @@
       "attempts": 0
     },
     "nabsku/pi-follow-through": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "olivere/systemone": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nabsku/pi-follow-through",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "61f3ebe1c347f0fd388ed0bd9ccb6afbbba30e16",
+        "evidenceUrl": "https://github.com/nabsku/pi-follow-through/blob/61f3ebe1c347f0fd388ed0bd9ccb6afbbba30e16/README.md",
+        "evidenceSha256": "482ede9ce06147fd03d88ecccdfd5e0664af6bd1d3db76202f6303a0184bbd4d",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "7starsseeker/dsh-fact-check": {
       "status": "review",
@@ -531,9 +567,22 @@
       "attempts": 0
     },
     "memeshee/nansen-league": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "memeshee/nansen-league",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "cee35a4da783aabbbc81a020838c069a516f750b",
+        "evidenceUrl": "https://github.com/memeshee/nansen-league/blob/cee35a4da783aabbbc81a020838c069a516f750b/README.md",
+        "evidenceSha256": "ca5ae445b30730a3d901874d6cfcb3c4ffc27c8b24058dfc83531a923cda881f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "zaious/jev-capability-atlas": {
       "status": "pending",
@@ -576,9 +625,28 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "mattt/anydecisionmodel": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mattt/anydecisionmodel",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.8,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "1760ed011757491c14c932d57808137d19928736",
+        "evidenceUrl": "https://github.com/mattt/anydecisionmodel/blob/1760ed011757491c14c932d57808137d19928736/README.md",
+        "evidenceSha256": "31ab7232c2535407c4245f137e60369e5f82b3dabf51fd6746255fb948c1a0a3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "quaeast/vllm2jev": {
       "status": "pending",
@@ -639,9 +707,28 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "m0rphtail/triagedy": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "m0rphtail/triagedy",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.88,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "5f8f6380c7c8ebfe47d437e38f6d28dcbfb7ada0",
+        "evidenceUrl": "https://github.com/m0rphtail/triagedy/blob/5f8f6380c7c8ebfe47d437e38f6d28dcbfb7ada0/README.md",
+        "evidenceSha256": "34f8edcc72f3f4c5511508cb7d7c26b846078742b88b0a819fabf41896a7c70f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "colbyford/jev-binder-classification": {
       "status": "review",
@@ -660,11 +747,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
-    },
-    "kaos599/jev-writer": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "proshunsuke/jev-tab-order": {
       "status": "pending",
@@ -722,9 +804,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "nyarlathoteppppp/pi-jev-context": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nyarlathoteppppp/pi-jev-context",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "fe5fbfcae04b70b965e582fdd049f79f76c8e7f5",
+        "evidenceUrl": "https://github.com/nyarlathoteppppp/pi-jev-context/blob/fe5fbfcae04b70b965e582fdd049f79f76c8e7f5/README.md",
+        "evidenceSha256": "770d6f719d7f5039b6b3284aa1db3351aa2be79c3a1910258b0f04867baae7b5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "ctaxnagomi/dgui-hypermem": {
       "status": "review",
@@ -749,9 +844,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "nonfake/job-classifier-search": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nonfake/job-classifier-search",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "deeda7a55bcb38d1c53bb6054fd2b27dd603ebb3",
+        "evidenceUrl": "https://github.com/nonfake/job-classifier-search/blob/deeda7a55bcb38d1c53bb6054fd2b27dd603ebb3/README.md",
+        "evidenceSha256": "ae250dff70d5bc9dc1a5aef512e9d46245b99200c67622182ae7ab7ccddca775",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "hexyedev/jevpr": {
       "status": "review",
@@ -793,6 +901,10 @@
         {
           "query": "\"jev-latest\" in:file",
           "path": "crates/jev-cli/src/output/envelope.rs"
+        },
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "fuzz/seeds/request/request-score.json"
         }
       ]
     },
@@ -839,11 +951,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
-    },
-    "nexibeo/jev-browser-control": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "gbesse/jev-exposure-radar": {
       "status": "review",
@@ -1102,9 +1209,26 @@
       "attempts": 0
     },
     "manifoldor/xtags": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "manifoldor/xtags",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.75
+        },
+        "sha": "57a7f9beebd6ac3cd944896bcf5807afa4859014",
+        "evidenceUrl": "https://github.com/manifoldor/xtags/blob/57a7f9beebd6ac3cd944896bcf5807afa4859014/README.md",
+        "evidenceSha256": "5bc9eccf404e889524af549fc92277fedde43fdfef76c92b78ef7900548da776",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "ccai40359-wq/jev-triage": {
       "status": "review",
@@ -1135,17 +1259,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "mheers/typesafeai-systemone-jev-go": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
-      "codeHints": [
-        {
-          "query": "\"api.typesafe.ai\" in:file",
-          "path": "client.go"
-        }
-      ]
-    },
     "sumleo/prompt2jev": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -1175,27 +1288,25 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "kataras/jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "koojy/jev-plugins": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "lukstei/slop-grader": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "koojy/jev-plugins",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "6355f00f1fe7b030f6f614df14c225fa9a84111f",
+        "evidenceUrl": "https://github.com/koojy/jev-plugins/blob/6355f00f1fe7b030f6f614df14c225fa9a84111f/README.md",
+        "evidenceSha256": "8a92d3b6aade0465eb3397422b3eb13861a99b67b3353ff3de8b3f158c639f67",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "perrylink/jevcore": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "mizchi/jev-lint": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -1255,25 +1366,40 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "lafollett-labs/typesafe-jev-dojo": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "myc0576/smartmoney-cub": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "manta-boardgame/jev-chat": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "myc0576/smartmoney-cub",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.84,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.41,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "34b8dd2f47596e768c489029cf1a72c6addf4db9",
+        "evidenceUrl": "https://github.com/myc0576/smartmoney-cub/blob/34b8dd2f47596e768c489029cf1a72c6addf4db9/README.md",
+        "evidenceSha256": "19793fbd9e61ecfbf437be113c77f049258bc4d978ad649fee6cad0c61d28716",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "premo-cloud/typesafe-sdk-java": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "typesafe-sdk-spring-boot-starter/src/main/java/io/github/premocloud/typesafe/spring/TypeSafeProperties.java"
+        }
+      ]
     },
     "jerryxff26-alt/session-top": {
       "status": "review",
@@ -1310,11 +1436,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
-    },
-    "li-evan/awesome-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "gaborishka/jevtown": {
       "status": "review",
@@ -1370,11 +1491,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "nekowasabi/jev-routing": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "ozekimasaki/cutline": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -1416,9 +1532,22 @@
       "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "mikekelly/s1m": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mikekelly/s1m",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "298c086561590ae270969596935fcc4156bfd0f8",
+        "evidenceUrl": "https://github.com/mikekelly/s1m/blob/298c086561590ae270969596935fcc4156bfd0f8/README.md",
+        "evidenceSha256": "1943be7eab7e9ac47391a1e772bdb5f0858907a58db9b2b89443b1cf9e176d4b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "zchee/typesafe-sdk-rust": {
       "status": "pending",
@@ -1454,9 +1583,26 @@
       "attempts": 0
     },
     "nipundavid/ai-experiments": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nipundavid/ai-experiments",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92
+        },
+        "sha": "7f43d794a064fd537b7a11ff50150e16ce5201a0",
+        "evidenceUrl": "https://github.com/nipundavid/ai-experiments/blob/7f43d794a064fd537b7a11ff50150e16ce5201a0/README.md",
+        "evidenceSha256": "999be2b6659b3367c7002c36038a70a9cd4202a39eec7699fe11eeaa7640f74a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "vedang/pi-progress-bar": {
       "status": "pending",
@@ -1496,9 +1642,26 @@
       "attempts": 0
     },
     "knishika62/laya-mlx-demo": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "knishika62/laya-mlx-demo",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.75,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.72
+        },
+        "sha": "426fbd6cbfb9b38ceb25db612a592075ed4a8ba2",
+        "evidenceUrl": "https://github.com/knishika62/laya-mlx-demo/blob/426fbd6cbfb9b38ceb25db612a592075ed4a8ba2/README.md",
+        "evidenceSha256": "5b886f400a296650aa979d067fffc25ebb254c75eeafbe995bec70ad6a4110e0",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "antong87/codearia-sieve": {
       "status": "review",
@@ -1530,19 +1693,50 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "kyzoeth/siftrcode": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "lirantal/discoprint": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kyzoeth/siftrcode",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.54,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "2df373c7fbab95c0d6cbc1ae164fd9e43b2b796b",
+        "evidenceUrl": "https://github.com/kyzoeth/siftrcode/blob/2df373c7fbab95c0d6cbc1ae164fd9e43b2b796b/README.md",
+        "evidenceSha256": "edba711856985c7715511e43af43b1e26b89b2da38befac6f41c20ee8753deb4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "mokuichi147/polynarrator": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mokuichi147/polynarrator",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.64,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.41
+        },
+        "sha": "de66e141e67baa40fd049cb4e739bc0c364d04b6",
+        "evidenceUrl": "https://github.com/mokuichi147/polynarrator/blob/de66e141e67baa40fd049cb4e739bc0c364d04b6/README.md",
+        "evidenceSha256": "4d677f2a34e58740c139e9f82b785afbac290e8bae07de1294e75f1aea5b4fc2",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "bobbywzl/unitos": {
       "status": "review",
@@ -1567,17 +1761,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
-    },
-    "mavericksxx/typesafe-jev-history-globe": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
-      "codeHints": [
-        {
-          "query": "\"api.typesafe.ai\" in:file",
-          "path": "scripts/probe-composite.mjs"
-        }
-      ]
     },
     "debasishhh/jevguard": {
       "status": "review",
@@ -1621,9 +1804,26 @@
       "attempts": 0
     },
     "kidzik/jiffy": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kidzik/jiffy",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.87,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.84
+        },
+        "sha": "814d705b0e7b612148af2a25c653cc9d410c6b50",
+        "evidenceUrl": "https://github.com/kidzik/jiffy/blob/814d705b0e7b612148af2a25c653cc9d410c6b50/README.md",
+        "evidenceSha256": "0dd93cdd0286c56753de4e991413963ea6149f2f9ca17c26d4f7b036a3325caa",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "smanx/llm2jev": {
       "status": "pending",
@@ -1653,24 +1853,44 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "madmax983/thales": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "madmax983/thales",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.76
+        },
+        "sha": "13dd64fa1485cc428c95f997f886552354adad59",
+        "evidenceUrl": "https://github.com/madmax983/thales/blob/13dd64fa1485cc428c95f997f886552354adad59/README.md",
+        "evidenceSha256": "fd3924db0a5aa4af43aa794b19f6a14394f20a6bf2fbaf19346c1361f82b8364",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "lbp97541135/repomesh_go_ver": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "lvzhaobo/bluff-royale": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "navidkashani/jev-guard": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lbp97541135/repomesh_go_ver",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "447b87561e42b1086d29672db282a5ad2ab1ec99",
+        "evidenceUrl": "https://github.com/lbp97541135/repomesh_go_ver/blob/447b87561e42b1086d29672db282a5ad2ab1ec99/README.md",
+        "evidenceSha256": "eaf6265080287ec5bbb13d86a2c2f9babed4fcc7348b36e174bcafd349fdeebc",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "shangshuo/gentlemans-gentleman": {
       "status": "pending",
@@ -1680,7 +1900,13 @@
     "yonatangross/orchestkit": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "plugins/ork/skills/expect/jev-shadow.defaults.yaml"
+        }
+      ]
     },
     "amimoacid/langchain-experiments": {
       "status": "review",
@@ -1716,17 +1942,7 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "neoo-blue/vibecheck": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "utpaljaynadiger/find": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nvkudva/laya-server": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -1737,9 +1953,22 @@
       "attempts": 0
     },
     "linny006/awesome-agent-skills": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "linny006/awesome-agent-skills",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "13cf0fa33d666f01a9c00c8170924545daafee49",
+        "evidenceUrl": "https://github.com/linny006/awesome-agent-skills/blob/13cf0fa33d666f01a9c00c8170924545daafee49/README.md",
+        "evidenceSha256": "1a9ea0eb3f369d5f0653c3e2107ae43240a4f3b4d36bc6dbbfb2d24ff074dca3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "pavellizunov/jev-sentinel": {
       "status": "pending",
@@ -1747,9 +1976,26 @@
       "attempts": 0
     },
     "nomekogenkah/qualitycheck": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nomekogenkah/qualitycheck",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.85,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96
+        },
+        "sha": "25a4e4fc3e85f733cf1efbe4264265f95df4a316",
+        "evidenceUrl": "https://github.com/nomekogenkah/qualitycheck/blob/25a4e4fc3e85f733cf1efbe4264265f95df4a316/README.md",
+        "evidenceSha256": "07ab62d501e024dceedbac8346c791c7f966b4ab0dfe918cdb9b0425a86caf3c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "sapair-og/cognicode": {
       "status": "pending",
@@ -1762,9 +2008,26 @@
       "attempts": 0
     },
     "manish-anchan/noulgate": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "manish-anchan/noulgate",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.77
+        },
+        "sha": "10e291092a1d79478c2ace35e2778cfafe67972e",
+        "evidenceUrl": "https://github.com/manish-anchan/noulgate/blob/10e291092a1d79478c2ace35e2778cfafe67972e/README.md",
+        "evidenceSha256": "bc21adc88e8fa6c3956094d7cef4da38206466ab8f3b8e25481ff8db73ef0ab1",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "jstxn/agentdir": {
       "status": "review",
@@ -1843,11 +2106,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "kz-95/kz-harness": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "ruivalim/exu-base": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -1910,14 +2168,50 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "marcosoliveeira1/laya-api": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "marcosoliveeira1/laya-api",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.86,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.56,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "b3c71fb6b858e5d4d9129efa0d7d9e676c43a79d",
+        "evidenceUrl": "https://github.com/marcosoliveeira1/laya-api/blob/b3c71fb6b858e5d4d9129efa0d7d9e676c43a79d/README.md",
+        "evidenceSha256": "41d298def693342271c6a52b0d9eb02688897f6f7a844fa614ad1232feadc1ec",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "korjavin/idkcraft": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "korjavin/idkcraft",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.89,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.71
+        },
+        "sha": "d63c420ca05ef43b0246e49400e82013700080bd",
+        "evidenceUrl": "https://github.com/korjavin/idkcraft/blob/d63c420ca05ef43b0246e49400e82013700080bd/README.md",
+        "evidenceSha256": "133ac9cdef2b7df7b6fb9df67d71ac511fb460468435532e94507455ee9f016c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "alanfong93/local-judge": {
       "status": "review",
@@ -1925,11 +2219,6 @@
       "attempts": 1,
       "checkedAt": "2026-09-21T18:34:33.655Z",
       "retryAt": "2026-09-28T18:34:33.655Z"
-    },
-    "micha0827/snapjudge": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "sovereign-communication/harness": {
       "status": "pending",
@@ -1942,9 +2231,22 @@
       "attempts": 0
     },
     "manifoldfrs/dotfiles": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "manifoldfrs/dotfiles",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "fb662333364c3fac2bc59e434b04503e650ed833",
+        "evidenceUrl": "https://github.com/manifoldfrs/dotfiles/blob/fb662333364c3fac2bc59e434b04503e650ed833/README.md",
+        "evidenceSha256": "e7f00968b6546d59c470a27adc427fbb9ff02d98a812ee748b1b1157be1c4fc4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "comet-ml/opik": {
       "status": "review",
@@ -1982,11 +2284,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "mgecawicz/jev_bot": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "dhanushnehru/dhanushnehru": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -2012,9 +2309,26 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "lavenir7/jev2048": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lavenir7/jev2048",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.85
+        },
+        "sha": "9e8785ba82e11a8c768a6abbf480e0eeb53fe57d",
+        "evidenceUrl": "https://github.com/lavenir7/jev2048/blob/9e8785ba82e11a8c768a6abbf480e0eeb53fe57d/README.md",
+        "evidenceSha256": "d0dd67505aa19fe52ab13c46b54bcc0ee67cdb29fbdeb5befe420efa56f76bfa",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "thrashr888/clue": {
       "status": "pending",
@@ -2062,9 +2376,11 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "nowork-studio/awesome-ai-startups": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "devvgwardo/ghost-route": {
       "status": "review",
@@ -2121,9 +2437,26 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "letr007/letcode": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "letr007/letcode",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.46,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.41
+        },
+        "sha": "0b9fd29053ee9694fa29fd7e87937c78e304f769",
+        "evidenceUrl": "https://github.com/letr007/letcode/blob/0b9fd29053ee9694fa29fd7e87937c78e304f769/README.md",
+        "evidenceSha256": "dda8327f25dd0e2b7243476f62a2a37a9f657ad3c1a4290b99ede927fe6124a4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "benjamincanac/avelune": {
       "status": "review",
@@ -2195,17 +2528,7 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "luisrapalino/jev-smart-bets": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "zk-hypersolid/doc-drift-check": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "liamcarlin/navi": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -2247,14 +2570,48 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "nomarcus/foodsim": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nomarcus/foodsim",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.61
+        },
+        "sha": "83054cce73d570b1329125718d6aefa286d2e374",
+        "evidenceUrl": "https://github.com/nomarcus/foodsim/blob/83054cce73d570b1329125718d6aefa286d2e374/README.md",
+        "evidenceSha256": "043f3ef20f67d87478530e4116b3b7df4bdd3c4eb21835c3bb0d9b2b0300fbf4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "nikheck/jev-benchmark": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nikheck/jev-benchmark",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.87,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.66
+        },
+        "sha": "4997038a29020e7c4c3a5dfc80465e7db395d813",
+        "evidenceUrl": "https://github.com/nikheck/jev-benchmark/blob/4997038a29020e7c4c3a5dfc80465e7db395d813/README.md",
+        "evidenceSha256": "8c955ceebcfc1c64760c82eddf4546169d39e85f0ba42a7272d1b9dcb5ac9ce0",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "jev-jarvis/jev-jarvis": {
       "status": "error",
@@ -2284,16 +2641,6 @@
       "checkedAt": "2026-09-21T18:34:33.655Z",
       "retryAt": "2026-09-28T18:34:33.655Z"
     },
-    "karanb192/jev-skill-scout": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "ohernandezdev/jevmod": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "wangyu0611/jevymarket-direct": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -2312,9 +2659,28 @@
       ]
     },
     "k3ntaw/orchestrator": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "k3ntaw/orchestrator",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.65,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.21,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "e8c4687d6d62f740847b14be0e32b7ddb15411ab",
+        "evidenceUrl": "https://github.com/k3ntaw/orchestrator/blob/e8c4687d6d62f740847b14be0e32b7ddb15411ab/README.md",
+        "evidenceSha256": "5b50e607760fbb76f173f510f9496dfe29333525201a35b6ffdba68aa1084036",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "edrache/jevworms": {
       "status": "review",
@@ -2346,9 +2712,22 @@
       "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "michaelwave369/phios": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "michaelwave369/phios",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "5c665937109180c8d443138e8c607b9b3c8903be",
+        "evidenceUrl": "https://github.com/michaelwave369/phios/blob/5c665937109180c8d443138e8c607b9b3c8903be/README.md",
+        "evidenceSha256": "de8e8f57bf30648f3a66c4e2460fe1b4304690aa86a925d56adaf9261c41467b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "crackercat/feed": {
       "status": "review",
@@ -2419,9 +2798,26 @@
       "attempts": 0
     },
     "nizki-kasaph/claudecode": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nizki-kasaph/claudecode",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.66
+        },
+        "sha": "a768009f44e2d4c93c9a1f6d941e15745d2b3dbd",
+        "evidenceUrl": "https://github.com/nizki-kasaph/claudecode/blob/a768009f44e2d4c93c9a1f6d941e15745d2b3dbd/README.md",
+        "evidenceSha256": "394dac8d800a0f1a64e814dca73e34b9c2d839d4d681435f35bfd619148d35c4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "samula2/jeff": {
       "status": "pending",
@@ -2452,29 +2848,45 @@
       "attempts": 0
     },
     "nateecho32-stack/mefi-studio": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nash171/dotmaster": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nateecho32-stack/mefi-studio",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "3138002f2de9a408e5500ece1ba4d2ac5c2f919b",
+        "evidenceUrl": "https://github.com/nateecho32-stack/mefi-studio/blob/3138002f2de9a408e5500ece1ba4d2ac5c2f919b/README.md",
+        "evidenceSha256": "a66adee25dc7d0a15de69039473d7238886f0ac2208eafa1afa9bedb3ebedfaa",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "tpaulshippy/syft-listening": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "marcemarin/typesafe-laravel": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "marcemarin/marcemarin": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "marcemarin/marcemarin",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "574a37a3934fdd47215da39c5e1e217305c8b598",
+        "evidenceUrl": "https://github.com/marcemarin/marcemarin/blob/574a37a3934fdd47215da39c5e1e217305c8b598/README.md",
+        "evidenceSha256": "166b719a897b0ef00e5ebc8f4e891a4d965741bd523b944e94a257a60f1b6750",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "gerry9000/awesome-jev": {
       "status": "error",
@@ -2483,40 +2895,82 @@
       "checkedAt": "2026-09-22T04:56:17.783Z",
       "retryAt": "2026-09-23T04:56:17.783Z"
     },
-    "markchu-git/typesafe-mcp": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "kaustav1996/reflex": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "yueyuhoshizora/trackradar": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
     "linny006/agent-eval-harness": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "linny006/agent-eval-harness",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "364335d72ca122aa3f31a4fabfd3b5c8cbb6d45a",
+        "evidenceUrl": "https://github.com/linny006/agent-eval-harness/blob/364335d72ca122aa3f31a4fabfd3b5c8cbb6d45a/README.md",
+        "evidenceSha256": "b687394fede87e4f7af1b886cfc827acec1f8812e2274d1cedb57c0e8a0ee81c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "linny006/llm-eval-tracker": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "linny006/llm-eval-tracker",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "6649ece3edfc1678af33b4dca10ed5ab9c2c4f6a",
+        "evidenceUrl": "https://github.com/linny006/llm-eval-tracker/blob/6649ece3edfc1678af33b4dca10ed5ab9c2c4f6a/README.md",
+        "evidenceSha256": "510b80ece106cf866eb9dfa128f8976ae5da2312aaa160b0e21b3fe4df862c5c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "linny006/llm-agents-radar": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "linny006/llm-agents-radar",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "973828109b4e96fe6ddcdcea6fb00034bdb987d1",
+        "evidenceUrl": "https://github.com/linny006/llm-agents-radar/blob/973828109b4e96fe6ddcdcea6fb00034bdb987d1/README.md",
+        "evidenceSha256": "52e7020e5be902089065cd6a351058c754fefea8a2cec21d2748bf10b0b46f58",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "lvzhaobo/jev-loop": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lvzhaobo/jev-loop",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "280e04672df03f21d54684bbb80c156be1715a29",
+        "evidenceUrl": "https://github.com/lvzhaobo/jev-loop/blob/280e04672df03f21d54684bbb80c156be1715a29/README.md",
+        "evidenceSha256": "09145f842f82c810e860c4c5b51a511c0dd803d0eceea4012c8ebe7aa4a2105b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "fastygo/lex": {
       "status": "review",
@@ -2537,9 +2991,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "lvzhaobo/jev-assayer": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lvzhaobo/jev-assayer",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "900817ed5a9c1bcdcb83ee3fb9598f95b332c64f",
+        "evidenceUrl": "https://github.com/lvzhaobo/jev-assayer/blob/900817ed5a9c1bcdcb83ee3fb9598f95b332c64f/README.md",
+        "evidenceSha256": "564454ccd0f3e1d1ee4e7c72d8f5dcdbf6b399dbb594ed79f524a72d69475d4a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "tylervick/jevplays": {
       "status": "pending",
@@ -2588,9 +3055,9 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "openagentsinc/openagents": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
+      "attempts": 1,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -2604,12 +3071,42 @@
           "query": "\"jev-latest\" in:file",
           "path": "crates/gym/results/external-v1-kev-update-jev.jsonl"
         }
-      ]
+      ],
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "openagentsinc/openagents",
+        "status": "review",
+        "reason": "github-incomplete-integration-evidence",
+        "sha": "86ce07388d66a9e44c813d191f0c3266b738d3e9",
+        "evidenceUrl": "https://github.com/openagentsinc/openagents/blob/86ce07388d66a9e44c813d191f0c3266b738d3e9/README.md",
+        "evidenceSha256": "ea96d643f2f72114bd03d184fc596ff98fbb4d7eb1d8c3b370bd2140c0af61ae",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/openagentsinc/openagents/blob/86ce07388d66a9e44c813d191f0c3266b738d3e9/crates/jev/README.md",
+            "path": "crates/jev/README.md",
+            "sha256": "15e5534c9a9f5bd024a50651ea8afb01062e14ef35c7fec106e9c18b56641047"
+          },
+          {
+            "url": "https://github.com/openagentsinc/openagents/blob/86ce07388d66a9e44c813d191f0c3266b738d3e9/docs/decision-models/jev/knowledge-base.md",
+            "path": "docs/decision-models/jev/knowledge-base.md",
+            "sha256": "98b411d6c747568ca4e1e4132503c06610d02206249f5ef2d5422eee63632d41"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "who/naming-things": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": ".ortusrc"
+        }
+      ]
     },
     "rjvim/ai-skills": {
       "status": "pending",
@@ -2640,19 +3137,58 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "newuser7171/jev-gamepilot": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "newuser7171/jev-gamepilot",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "7c2320e7c47abd33c2ebfcc4bec041e62b6f48d0",
+        "evidenceUrl": "https://github.com/newuser7171/jev-gamepilot/blob/7c2320e7c47abd33c2ebfcc4bec041e62b6f48d0/README.md",
+        "evidenceSha256": "9b0932f3c356aad77e107aa91a1b69eb03ef4bcba55c21b07d7d1c5623eebfe6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "minholi/chatwoot-mcp": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "minholi/chatwoot-mcp",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "a3d708c671ec1cddbf0bc22b97f3ef8d7b8c7387",
+        "evidenceUrl": "https://github.com/minholi/chatwoot-mcp/blob/a3d708c671ec1cddbf0bc22b97f3ef8d7b8c7387/README.md",
+        "evidenceSha256": "a4fbebe92400096b8d9b3e02dae4fccb552e7b4063a0959e32fc2959dfe26768",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "nandhakishorm/laya": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nandhakishorm/laya",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "573e5b62696ba441230cd6be71d593331b5d23af",
+        "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/573e5b62696ba441230cd6be71d593331b5d23af/README.md",
+        "evidenceSha256": "c9ab5604180d03a89514786b7f60fcd805909cf932a22672c511898a782ad682",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "xxvw/jgrep": {
       "status": "pending",
@@ -2726,9 +3262,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "kaustav1996/kaustav1996": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kaustav1996/kaustav1996",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "e3d0a96dcde08e0bc20b848e382380c709e0ae29",
+        "evidenceUrl": "https://github.com/kaustav1996/kaustav1996/blob/e3d0a96dcde08e0bc20b848e382380c709e0ae29/README.md",
+        "evidenceSha256": "26f57064b9b9791fab4ae73bc8eb0520a749a06b147ec15cbe5a833ffffa31da",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "hongsw/clawfit": {
       "status": "error",
@@ -2738,9 +3287,26 @@
       "retryAt": "2026-09-23T04:56:17.783Z"
     },
     "liyucheng1997/332_lab-jev-chat": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "liyucheng1997/332_lab-jev-chat",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.79
+        },
+        "sha": "37628e384ca07fcffa21e7fcd922575ba1b29f7b",
+        "evidenceUrl": "https://github.com/liyucheng1997/332_lab-jev-chat/blob/37628e384ca07fcffa21e7fcd922575ba1b29f7b/README.md",
+        "evidenceSha256": "356f9bbe4c2433e5fa8e3287a5545ace7a46a438883f27b2b1111c789a081ca7",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "gabatawr/arch": {
       "status": "error",
@@ -2768,9 +3334,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "mishrasanjeev/agentic-org": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mishrasanjeev/agentic-org",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "e5d409c7ccb7ae5a6aa43a97ae3a82a0664cd711",
+        "evidenceUrl": "https://github.com/mishrasanjeev/agentic-org/blob/e5d409c7ccb7ae5a6aa43a97ae3a82a0664cd711/README.md",
+        "evidenceSha256": "42d8965c3d5064b6459333126be8ece04e8f4d7f5f29ad59db33d38ee20bc6ee",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "prakash5284/jev-vs-llm-resume-jd-eval": {
       "status": "pending",
@@ -2813,20 +3392,56 @@
       "retryAt": "2026-09-28T18:30:35.157Z"
     },
     "lyjw131/lyjwpage": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lyjw131/lyjwpage",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.82,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.28
+        },
+        "sha": "215fce3cf53f90f685d62f95bc62bdabf5ddaeed",
+        "evidenceUrl": "https://github.com/lyjw131/lyjwpage/blob/215fce3cf53f90f685d62f95bc62bdabf5ddaeed/README.md",
+        "evidenceSha256": "52f5140044f4d46306fa8ac75a7ad0cfe9e530f4b432259a30db216ad173c045",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "mik-pe/knut": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
+      "attempts": 1,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "src/main.rs"
         }
-      ]
+      ],
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mik-pe/knut",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "41fa4aec96a4ac679a81d83f6726b86f4b208940",
+        "evidenceUrl": "https://github.com/mik-pe/knut/blob/41fa4aec96a4ac679a81d83f6726b86f4b208940/README.md",
+        "evidenceSha256": "2cc9709b721a6a59072771509a0e51457271100d042f6fdb1b0d22ebd2c5e3ae",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/mik-pe/knut/blob/41fa4aec96a4ac679a81d83f6726b86f4b208940/src/main.rs",
+            "path": "src/main.rs",
+            "sha256": "6d91e5231fb61819ad9e4051425e8c2fb9ce8b709d173e076499e7521586cffe"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "andremc05/quick508-rater": {
       "status": "review",
@@ -2889,9 +3504,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "malevrigns/agent-jev": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "malevrigns/agent-jev",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "6d7cdd85396b51fe749da5310693c57e8ac6e3be",
+        "evidenceUrl": "https://github.com/malevrigns/agent-jev/blob/6d7cdd85396b51fe749da5310693c57e8ac6e3be/README.md",
+        "evidenceSha256": "d7495e4133fd57adbfb1418d56f1360a6e27f5424ec4c27f6caf6526b2887c9e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "datamonsterr/jev_auto_select_skills": {
       "status": "review",
@@ -2958,9 +3586,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "lucasnscr/healthcare-agent": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lucasnscr/healthcare-agent",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "62ba8eba13c812969d1e6d4b045bf2c406666bdf",
+        "evidenceUrl": "https://github.com/lucasnscr/healthcare-agent/blob/62ba8eba13c812969d1e6d4b045bf2c406666bdf/README.md",
+        "evidenceSha256": "3a35928429c9ec8c0e8e783837c895beafdd960dadaa98983cd3a31f732dc044",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "barneyjm/circuit": {
       "status": "review",
@@ -3054,7 +3695,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
-      "retryAt": "2026-09-29T04:56:17.783Z"
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "internal/jev/client.go"
+        }
+      ]
     },
     "autonull/senars12": {
       "status": "review",
@@ -3080,20 +3726,56 @@
       "attempts": 0
     },
     "nemanjamanic/heart-disease-prediction": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nemanjamanic/heart-disease-prediction",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.46
+        },
+        "sha": "c4aa68b9dc0f7aab9da46cb47e6363d4af37d56f",
+        "evidenceUrl": "https://github.com/nemanjamanic/heart-disease-prediction/blob/c4aa68b9dc0f7aab9da46cb47e6363d4af37d56f/README.md",
+        "evidenceSha256": "ddf10f46c0722191d59ebcf5923bb62cf482d27cdf0e56b0ab89005e3d6a3e21",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "nik1tsyganov/conclave": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
+      "attempts": 1,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
           "path": ".clonk/model-independent-battery.patch"
         }
-      ]
+      ],
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nik1tsyganov/conclave",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "1eafba12b566c809bb5ebb0acf7a8f81c2b6a903",
+        "evidenceUrl": "https://github.com/nik1tsyganov/conclave/blob/1eafba12b566c809bb5ebb0acf7a8f81c2b6a903/README.md",
+        "evidenceSha256": "5d138113b56a3e4e8910a52eac138a4fdcc26ed5f777bab17091a2a5f1806437",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/nik1tsyganov/conclave/blob/1eafba12b566c809bb5ebb0acf7a8f81c2b6a903/.clonk/model-independent-battery.patch",
+            "path": ".clonk/model-independent-battery.patch",
+            "sha256": "58eb13c7db775255f06368026ea50cc90713e77a312e16d561a6b4de59036cae"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "i-madhav/jevxlaya-mlx": {
       "status": "review",
@@ -3118,9 +3800,22 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "monotykamary/pi-fabric": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "monotykamary/pi-fabric",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "69d0700c590d642a735a7ec40b1f3e82f58acdae",
+        "evidenceUrl": "https://github.com/monotykamary/pi-fabric/blob/69d0700c590d642a735a7ec40b1f3e82f58acdae/README.md",
+        "evidenceSha256": "fc9f887a5487c21b2bb4c44b037a9c1efe591412874b99777a9eec511a4f9eca",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "rakshabharvada/cantrefuse.deck": {
       "status": "pending",
@@ -3194,16 +3889,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "laguagu/jev-skills": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "kaitoy/jev-rca": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "deepanwadhwa/opendecision": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3225,11 +3910,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
-    },
-    "kylemclaren/jevsearch": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "wuhao19831214/classroom-signal-console": {
       "status": "pending",
@@ -3301,11 +3981,6 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "kuzanj/awesome-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "0xzee/jev-stock-decision-maker": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3314,9 +3989,22 @@
       "retryAt": "2026-09-28T18:30:35.157Z"
     },
     "lucasmartins-ai/lcc": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "lucasmartins-ai/lcc",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "b37cb818ea0ae3317308d9be01138794816d8093",
+        "evidenceUrl": "https://github.com/lucasmartins-ai/lcc/blob/b37cb818ea0ae3317308d9be01138794816d8093/README.md",
+        "evidenceSha256": "90738c27bea0b08bd27613f10f09176b6932c3dd0c12cbb957ec6fcebc82ffc9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "yzfly/edgejev": {
       "status": "pending",
@@ -3334,14 +4022,33 @@
       "attempts": 0
     },
     "nozomi-koborinai/jev-spec": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nozomi-koborinai/jev-spec",
+        "status": "review",
+        "reason": "instruction-like-evidence",
+        "sha": "b33961d2cbfee3a93444bd4ed3258a62884d484e",
+        "evidenceUrl": "https://github.com/nozomi-koborinai/jev-spec/blob/b33961d2cbfee3a93444bd4ed3258a62884d484e/README.md",
+        "evidenceSha256": "6ecf21c3f252cf5fd64067a2afd6800091777990a536474d71af018e72f7b149",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "tryagi/typesafeai": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "docs/index.md"
+        }
+      ]
     },
     "stifler7/jev-llm-playground": {
       "status": "pending",
@@ -3387,15 +4094,34 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "luantak/is-malicious": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
+      "attempts": 1,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "src/cli.ts"
         }
-      ]
+      ],
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "luantak/is-malicious",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "faf6ba61d7e1764440e615e84e7d67ca9e8e4a3e",
+        "evidenceUrl": "https://github.com/luantak/is-malicious/blob/faf6ba61d7e1764440e615e84e7d67ca9e8e4a3e/README.md",
+        "evidenceSha256": "75757fd8e926bc60f6ff9e3be658f0b685f7ed467a52e08bdd72c8fc3c425cea",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/luantak/is-malicious/blob/faf6ba61d7e1764440e615e84e7d67ca9e8e4a3e/src/cli.ts",
+            "path": "src/cli.ts",
+            "sha256": "0c1c8d6c33e1671b6b3f1850d1ab0242535f730d55c14f79ec07e214ba4b3e4a"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "ashishakkumar/jev-checkpoint": {
       "status": "review",
@@ -3440,9 +4166,9 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "openbyteinc/quantdinger": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
+      "attempts": 1,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -3452,18 +4178,9 @@
           "query": "\"api.typesafe.ai\" in:file",
           "path": "backend_api_python/app/routes/settings.py"
         }
-      ]
-    },
-    "majiayu000/awesome-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
-      "codeHints": [
-        {
-          "query": "\"api.typesafe.ai\" in:file",
-          "path": "examples/README.md"
-        }
-      ]
+      ],
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -3478,11 +4195,6 @@
       "attempts": 0
     },
     "sudeshkar/jev-corrective-rag": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nak1b/jev-experiments": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -3546,16 +4258,6 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "matu79go/jev-hanko": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "kraayenjon/awesome-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "panachy/jevvy": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3564,7 +4266,13 @@
     "seb4ez/jevguard": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "examples/01_sre_incident_triage.py"
+        }
+      ]
     },
     "seb4ez/jevguard-mcp": {
       "status": "pending",
@@ -3591,11 +4299,6 @@
           "path": "README.md"
         }
       ]
-    },
-    "marcosmartinez/jev-acento": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "shinpr/jev-reranker": {
       "status": "pending",
@@ -3647,9 +4350,22 @@
       "attempts": 0
     },
     "khaledsalshibani/jev-ci-classifier": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "khaledsalshibani/jev-ci-classifier",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "92c40586422e01d1cabceca7dc557b4087eac81b",
+        "evidenceUrl": "https://github.com/khaledsalshibani/jev-ci-classifier/blob/92c40586422e01d1cabceca7dc557b4087eac81b/README.md",
+        "evidenceSha256": "bc5ee80c78ce826edacb7b2b84d43587c4bc9ca5f463ce3cf130e8071807120c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "charlyhno-eng/jev-codex-pilot": {
       "status": "review",
@@ -3669,11 +4385,6 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "omkarghugarkar007/actiongate-jev": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "sah1l/jev-battleship": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3684,20 +4395,27 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "mintannn/jev-asks-until-sure": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "minilv/jev-auto-router": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "kisshan13/typesafe-ai-go": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "minilv/jev-auto-router",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.89
+        },
+        "sha": "9a75f14fda63b554b05abb9b696d62eec3b795ff",
+        "evidenceUrl": "https://github.com/minilv/jev-auto-router/blob/9a75f14fda63b554b05abb9b696d62eec3b795ff/README.md",
+        "evidenceSha256": "b29c9d5ae0e98fbcf3fcb2c1f481770491b6c0d2dc2768b65594c08113d46b6f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "dusbin/jev-skill": {
       "status": "review",
@@ -3793,17 +4511,34 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
-      "retryAt": "2026-09-29T04:56:17.783Z"
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "SECURITY.md"
+        }
+      ]
     },
     "milo318/mailordinal": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "karanb192/jev-architect": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "milo318/mailordinal",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.73
+        },
+        "sha": "19ea819d757bab85f982cd8f3c2853e42da6cd06",
+        "evidenceUrl": "https://github.com/milo318/mailordinal/blob/19ea819d757bab85f982cd8f3c2853e42da6cd06/README.md",
+        "evidenceSha256": "8c783211ca128e9bcd8c31a2eb57750a2443167437f42ab60c74b1da1b9c56fa",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "ravenrepo/jevengineeringgate": {
       "status": "pending",
@@ -3844,16 +4579,24 @@
       "attempts": 0
     },
     "koksalkapucuoglu/resume-enhance": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "koksalkapucuoglu/resume-enhance",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "b702f5dad21a27ed21a73cf8437fb3be9474672d",
+        "evidenceUrl": "https://github.com/koksalkapucuoglu/resume-enhance/blob/b702f5dad21a27ed21a73cf8437fb3be9474672d/README.md",
+        "evidenceSha256": "049bb2b6cefdc26881e8569eaa2a066f2f672fa7ef56e47937aa8b17be7b5e86",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "sunwood-ai-labs/jevdash": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "ogamircs/jev-demo": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -3876,16 +4619,6 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "jyatesdotdev/jev-logtriage": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "minorun365/jev-cloud-quiz": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "orvn/typesafe-tidbits": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -3896,20 +4629,32 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "maddygoround/typesafeai-cli": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "vihaanagarwal/jev-diff": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
     "mokimeow/jev-fabric": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mokimeow/jev-fabric",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.87,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92
+        },
+        "sha": "95b9a4f3db8972d897a443c084c321a6b79beb1d",
+        "evidenceUrl": "https://github.com/mokimeow/jev-fabric/blob/95b9a4f3db8972d897a443c084c321a6b79beb1d/README.md",
+        "evidenceSha256": "b26cadfbb337047fa6967d6d34ad9d3f1642793018b0119528d72ab2c9aa2545",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "rikkooo/jev-trade": {
       "status": "pending",
@@ -3917,24 +4662,39 @@
       "attempts": 0
     },
     "numerous-com/dgp": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nibir1/typesafe-go": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "numerous-com/dgp",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "a9cb3c4bca14689ec524d2203084df058f0f3a88",
+        "evidenceUrl": "https://github.com/numerous-com/dgp/blob/a9cb3c4bca14689ec524d2203084df058f0f3a88/README.md",
+        "evidenceSha256": "9a40f63f24a30f6fa7d9c2e6687fd846579b2e3f4834c78c3bb35ea2ef1280f5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "thevilledev/typesafe-scheduler-diagnostics": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nsstudent/jevswiftsdk": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "pkg/diagnosis/client_live_test.go"
+        }
+      ]
     },
     "thalesaugusto0/typesafe-router-pipeline": {
       "status": "pending",
@@ -3942,19 +4702,26 @@
       "attempts": 0
     },
     "krzyzanowskim/typesafe": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "manish007700/tab-bouncer": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "manish007700/tidy": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "krzyzanowskim/typesafe",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.84
+        },
+        "sha": "419521307c944f32ca3b0d830b8f8b5b6ccbf273",
+        "evidenceUrl": "https://github.com/krzyzanowskim/typesafe/blob/419521307c944f32ca3b0d830b8f8b5b6ccbf273/README.md",
+        "evidenceSha256": "fe37bfd5b4857d434b530ad5f8f471db86f1954940610d8e81f72073cc9e8c36",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "riz007/yolo-shell": {
       "status": "pending",
@@ -3964,7 +4731,13 @@
     "philipbrembeck/pi-advisor": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "test/jev-key-store.test.ts"
+        }
+      ]
     },
     "ufec/jev-block-android-ad": {
       "status": "pending",
@@ -3972,11 +4745,6 @@
       "attempts": 0
     },
     "savka777/jev-use": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "laurentkempe/typesafejevplayground": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -4052,30 +4820,32 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "ninjasweb/jev-blog-filter": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nevzataksoy/jev-trader-bybit": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "wbuecksler/jev-voice-browser-chrome-extension": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "morohn/meridian-demo": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "mori-ikuri/jev-divination-lab": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "mori-ikuri/jev-divination-lab",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86
+        },
+        "sha": "d16c9bc6d809e1bf1759da50511e0ddfa5a34494",
+        "evidenceUrl": "https://github.com/mori-ikuri/jev-divination-lab/blob/d16c9bc6d809e1bf1759da50511e0ddfa5a34494/README.md",
+        "evidenceSha256": "2856445e21fc15ec12c9aad035007a7172ced499bb259121d65a60e665ad3fb9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "x96x64/ctxjev": {
       "status": "pending",
@@ -4083,16 +4853,13 @@
       "attempts": 0
     },
     "omrigotlieb/awesome-jev": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "perrydunnit/strudel-jev-jam": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "mrjev/awesome-jev": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -4103,9 +4870,26 @@
       "attempts": 0
     },
     "kirylka/flue-guard": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kirylka/flue-guard",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.59,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.55
+        },
+        "sha": "019b15bc17c27075d6f166e6a6429c85f5d12995",
+        "evidenceUrl": "https://github.com/kirylka/flue-guard/blob/019b15bc17c27075d6f166e6a6429c85f5d12995/README.md",
+        "evidenceSha256": "aa4002145d8cbf336c9787bcb692e656edc3d0dd92328733bc3200bff7441ebf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "boozedog/pi-codemode": {
       "status": "review",
@@ -4180,11 +4964,6 @@
       "checkedAt": "2026-09-22T04:56:17.783Z",
       "retryAt": "2026-09-23T04:56:17.783Z"
     },
-    "microchipgnu/jev-hooks": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "stakwork/aws-advisor": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -4244,26 +5023,12 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "moritalous/jev-persona-panel": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "moritzkremb/jev-voice-browser": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
-      "codeHints": [
-        {
-          "query": "\"@typesafe-ai/sdk\" in:file",
-          "path": "README.md"
-        }
-      ]
-    },
     "ljnchn/rps-game-jev": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "xinian5216/chat-signal-analyzer": {
       "status": "pending",
@@ -4271,9 +5036,26 @@
       "attempts": 0
     },
     "monotykamary/is-jrecord": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "monotykamary/is-jrecord",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.27
+        },
+        "sha": "e421eb72340511d2d0937c551bf1c5813bcc5815",
+        "evidenceUrl": "https://github.com/monotykamary/is-jrecord/blob/e421eb72340511d2d0937c551bf1c5813bcc5815/README.md",
+        "evidenceSha256": "939a40d4e9f921bbb5b7522306429b6642f09d2ed2dfae0aed57ee1d36c37185",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "f/jev-leftpad": {
       "status": "review",
@@ -4354,14 +5136,28 @@
       "attempts": 0
     },
     "kunpengtalk/omnistudio": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nhchoi98/demo_trend_searcher": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "kunpengtalk/omnistudio",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.83,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.7,
+          "needsReview": true,
+          "conflictingEvidence": true
+        },
+        "sha": "24199d4af4bf5b3ca6d4923e3034e558d90ba870",
+        "evidenceUrl": "https://github.com/kunpengtalk/omnistudio/blob/24199d4af4bf5b3ca6d4923e3034e558d90ba870/README.md",
+        "evidenceSha256": "ae72a38161078a84cb3ad6124dddcc5c5f2cf21432bad57afbdb69bf746036bf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "h1bomb/bluff": {
       "status": "review",
@@ -4466,11 +5262,6 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "keiffff/jev-kit": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "rhelmer/filelathe": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -4483,9 +5274,22 @@
       ]
     },
     "leoprn/public-banking-orchestrator": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "leoprn/public-banking-orchestrator",
+        "status": "review",
+        "reason": "instruction-like-evidence",
+        "sha": "0b2436263eb34a02dc3b7f449178174684fb4749",
+        "evidenceUrl": "https://github.com/leoprn/public-banking-orchestrator/blob/0b2436263eb34a02dc3b7f449178174684fb4749/README.md",
+        "evidenceSha256": "90985dd372a4fb1e37ddc1fe924daa4abe169456b4dbe162ead159c4e2d044c2",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "aley3567/awsome-jev-sight": {
       "status": "review",
@@ -4537,25 +5341,34 @@
         }
       ]
     },
-    "kcc989/keeled": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "laihenyi/pi-jev-browser": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "virtualmachinist/omapi-overlay": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
     "madhurjyadc/kibu": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "madhurjyadc/kibu",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "b0d55425c76a3ebe2415c418661cad480edb4691",
+        "evidenceUrl": "https://github.com/madhurjyadc/kibu/blob/b0d55425c76a3ebe2415c418661cad480edb4691/README.md",
+        "evidenceSha256": "4b049b63fbafa290d4aaa301cd2c50902c742f1f16016406e952fe1d25163508",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "stefh/typesafe-ai.sdk": {
       "status": "pending",
@@ -4563,9 +5376,11 @@
       "attempts": 0
     },
     "mabodx/awesome-jev": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "santiago-j-s/jev-proxy": {
       "status": "pending",
@@ -4610,9 +5425,28 @@
       "attempts": 0
     },
     "nextechnologies-my/mortar": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nextechnologies-my/mortar",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.69,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.51,
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "746ee4f89a9c7882854a4a5fd158a7943d2f35b1",
+        "evidenceUrl": "https://github.com/nextechnologies-my/mortar/blob/746ee4f89a9c7882854a4a5fd158a7943d2f35b1/docs/README.md",
+        "evidenceSha256": "b6232828e6e394b5403203fbc41915f618a5dadee057713b97e37ff17cbab35b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "taveren7/jev-outlook-organizer": {
       "status": "pending",
@@ -4624,17 +5458,7 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "moruku36/messenger-human-firewall": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "tomdachs/jev-replay-lab": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "leddoengano/jev-eyes": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -4657,7 +5481,13 @@
     "rhighs/jev-code": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "src/lang/core.ts"
+        }
+      ]
     },
     "vrash/jeval": {
       "status": "pending",
@@ -4685,11 +5515,6 @@
       "attempts": 1,
       "checkedAt": "2026-09-21T18:34:33.655Z",
       "retryAt": "2026-09-28T18:34:33.655Z"
-    },
-    "kouyamacreate/jevtetris": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "gauravahuja7/careerradar": {
       "status": "review",
@@ -4729,17 +5554,6 @@
       "attempts": 1,
       "checkedAt": "2026-09-21T18:34:33.655Z",
       "retryAt": "2026-09-28T18:34:33.655Z"
-    },
-    "lalitsonawane/jev-one-system": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0,
-      "codeHints": [
-        {
-          "query": "\"@typesafe-ai/sdk\" in:file",
-          "path": "src/lib/typesafe.ts"
-        }
-      ]
     },
     "ormus-solutions/aurum-gate": {
       "status": "pending",
@@ -4835,9 +5649,26 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "newbie1668/jev-hs-assistant": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "newbie1668/jev-hs-assistant",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86
+        },
+        "sha": "83992990c69b6dd1dcc6bcfb183e8a5a253b95a8",
+        "evidenceUrl": "https://github.com/newbie1668/jev-hs-assistant/blob/83992990c69b6dd1dcc6bcfb183e8a5a253b95a8/README.md",
+        "evidenceSha256": "436134abcf5fd1b9a362c59dc3579b284de731d405df543df3d655fc89771f2b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "annenpolka/ariadne": {
       "status": "review",
@@ -4845,21 +5676,6 @@
       "attempts": 1,
       "checkedAt": "2026-09-21T18:34:33.655Z",
       "retryAt": "2026-09-28T18:34:33.655Z"
-    },
-    "norisuke0131/todoapp": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "mura012/jev-test": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "maher-reven/calibrant": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
     },
     "rorshopping/jev-browser-local": {
       "status": "pending",
@@ -4890,19 +5706,47 @@
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
     "makia9879/pi-jev-router": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "makia9879/pi-jev-router",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "2f6aed131dc8d0e37e15c6dd5b0b8f3d12f59ca1",
+        "evidenceUrl": "https://github.com/makia9879/pi-jev-router/blob/2f6aed131dc8d0e37e15c6dd5b0b8f3d12f59ca1/README.md",
+        "evidenceSha256": "b43a146ade74a38b7eafd5a0452302194c7650f49b7353e550efe5bac34160fe",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "notzsph/zjev": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "notzsph/zjev",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "1c93101c290df6ec97b64f8560a8485d214b66b5",
+        "evidenceUrl": "https://github.com/notzsph/zjev/blob/1c93101c290df6ec97b64f8560a8485d214b66b5/README.md",
+        "evidenceSha256": "f265875773ccba23f7a7e4176366ffb508e800e62bde2f004a5f2e250b0a831b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "makiisthenes/jevaiexperimentation": {
-      "status": "pending",
+      "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "retryAt": "2026-09-23T11:39:00.649Z"
     },
     "sathwikkuncham/laya-snake-arena": {
       "status": "pending",
@@ -4937,9 +5781,22 @@
       "retryAt": "2026-09-28T18:30:35.157Z"
     },
     "obrais-cloud/typesafe-mcp": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "obrais-cloud/typesafe-mcp",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "058e48033dda1e31a736aabd4de52ba7daba39c3",
+        "evidenceUrl": "https://github.com/obrais-cloud/typesafe-mcp/blob/058e48033dda1e31a736aabd4de52ba7daba39c3/README.md",
+        "evidenceSha256": "3fa22e6c50329edb8c87ce2647682d3d48c3faef79dbd9a0acd48b3209d68b97",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "tomrichner/can-jev-bayes": {
       "status": "pending",
@@ -4954,14 +5811,40 @@
       "retryAt": "2026-09-28T18:34:33.655Z"
     },
     "obrais-cloud/typesafe-translate": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "obrais-cloud/typesafe-translate",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "91b6111862f706648b5ae5b02ea9be47cd10b42c",
+        "evidenceUrl": "https://github.com/obrais-cloud/typesafe-translate/blob/91b6111862f706648b5ae5b02ea9be47cd10b42c/README.md",
+        "evidenceSha256": "001320ef16ae5b5b4c3aaefc97d7ef3c1b3cbce9ca213f99bb7f7a57bb5fb63c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "obrais-cloud/ticket-rerank": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "obrais-cloud/ticket-rerank",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "fe7ea816162ea15ee99a8d5401f834aaa46078a9",
+        "evidenceUrl": "https://github.com/obrais-cloud/ticket-rerank/blob/fe7ea816162ea15ee99a8d5401f834aaa46078a9/README.md",
+        "evidenceSha256": "5d55b39222c3f30b46dfaf9630afefe5a98c379fb0a6f6ece788dfdab3aed3a4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "hemanth/hfjev": {
       "status": "review",
@@ -4979,7 +5862,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
       },
-      "retryAt": "2026-09-29T04:56:17.783Z"
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "js/src/utils.js"
+        }
+      ]
     },
     "ryanng1403/jev-cli": {
       "status": "pending",
@@ -5014,27 +5902,40 @@
       },
       "retryAt": "2026-09-29T04:56:17.783Z"
     },
-    "kevhill/jev-hierarchy": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "pedro-pscunha/guideme-rust": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "guideme/src/scalars.rs"
+        }
+      ]
     },
     "nathan1313/issue-triage-bot": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "nathan1313/issue-triage-bot",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.73,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.29
+        },
+        "sha": "1626c8405ccd6c2da129a3f6050a62a6e91f552c",
+        "evidenceUrl": "https://github.com/nathan1313/issue-triage-bot/blob/1626c8405ccd6c2da129a3f6050a62a6e91f552c/README.md",
+        "evidenceSha256": "74a3aab8c721237417ad9623e441b96e45983dcf114a37d143c6a29ca4580b71",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "xopher00/jevdevice": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "olti1947/jev-java": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -5045,16 +5946,24 @@
       "attempts": 0
     },
     "jyje/pilot-typesafeai-jev": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "jyje/pilot-typesafeai-jev",
+        "status": "review",
+        "reason": "instruction-like-evidence",
+        "sha": "4d815a77f09d1db1f961854c6dd29eb94105a85c",
+        "evidenceUrl": "https://github.com/jyje/pilot-typesafeai-jev/blob/4d815a77f09d1db1f961854c6dd29eb94105a85c/README.md",
+        "evidenceSha256": "9544ca52a7cc31e539cbfb041adf19b6c486a64044e9473e781b27c8d218e97d",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "unnati-23/jev-typesafe-guide": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "luizribeiro/jevrs": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
@@ -5086,11 +5995,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 0
     },
-    "onlyjq04/jev-agent-hooks": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
     "original0211/jev-perp-paper-trader": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
@@ -5107,14 +6011,26 @@
       "attempts": 0
     },
     "koz/anti-dead-internet": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "nothingmn/jev.sdk": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "koz/anti-dead-internet",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.89,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.87
+        },
+        "sha": "edd38a5ac70f722d0c39eed308cf9f20a5682795",
+        "evidenceUrl": "https://github.com/koz/anti-dead-internet/blob/edd38a5ac70f722d0c39eed308cf9f20a5682795/README.md",
+        "evidenceSha256": "99cb9d95d8ec3836e9a66a4063ecf31d95838e91537d4646d24d4af01904ddb4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "jackkfan0305/ticket-triage": {
       "status": "review",
@@ -5190,19 +6106,22 @@
       "attempts": 0
     },
     "ksyung1228/jev-decision-tool": {
-      "status": "pending",
+      "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "kenhuangus/jev-usecases": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
-    },
-    "lucianoon/backoffice-agents": {
-      "status": "pending",
-      "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 0
+      "attempts": 1,
+      "checkedAt": "2026-09-22T11:39:00.649Z",
+      "lastReview": {
+        "repo": "ksyung1228/jev-decision-tool",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "9b5c5af6a2170b3a23651cf3b57a65b775cf3254",
+        "evidenceUrl": "https://github.com/ksyung1228/jev-decision-tool/blob/9b5c5af6a2170b3a23651cf3b57a65b775cf3254/README.md",
+        "evidenceSha256": "1ec9abd8cefc35b9f7f590426b306899f4c4ca35d5b2218a3720caf87d6c1592",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-22T11:39:00.649Z"
+      },
+      "retryAt": "2026-09-29T11:39:00.649Z"
     },
     "trycatchkamal/typesafe-jev-traffic-demo": {
       "status": "pending",
@@ -5477,7 +6396,13 @@
     "himomohi/aside-jev": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "tests/test_native_host.py"
+        }
+      ]
     },
     "jolehuit/jev-downloads-sorter": {
       "status": "pending",
@@ -5502,7 +6427,13 @@
     "mblode/taste-lint": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "src/__tests__/lint.test.ts"
+        }
+      ]
     },
     "dom-actions/doma": {
       "status": "pending",
@@ -5582,7 +6513,13 @@
     "joaoh82/coffee-under-fire": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "tests/production.test.ts"
+        }
+      ]
     },
     "zhuyansen/x-reply-filter": {
       "status": "pending",
@@ -6149,7 +7086,13 @@
     "mizchi/jev-playground": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "packages/jev-model-router/test.ts"
+        }
+      ]
     },
     "vincent-lxc/pulse-on-monad": {
       "status": "pending",
@@ -6185,7 +7128,13 @@
     "wyattjoh/demur": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "extensions/demur/training-store.test.ts"
+        }
+      ]
     },
     "pragyan330/what-s-up-jev": {
       "status": "pending",
@@ -6309,7 +7258,13 @@
     "ahmadswalih/jev-chess-test": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "README.md"
+        }
+      ]
     },
     "aksharahegde/should-we-meet": {
       "status": "pending",
@@ -6371,7 +7326,13 @@
     "balazsorban44/nvim-jev-plugin": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "README.md"
+        }
+      ]
     },
     "1475505/jev-api-adapter": {
       "status": "pending",
@@ -6421,7 +7382,13 @@
     "ctnicholas/jev-workflow-builder": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "package.json"
+        }
+      ]
     },
     "shhh-hoo/cuelight": {
       "status": "pending",
@@ -6431,7 +7398,13 @@
     "csskrtao/jev-to-answer": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "src/jev.js"
+        }
+      ]
     },
     "txy02/jev-agent": {
       "status": "pending",
@@ -6481,7 +7454,13 @@
     "wuyoscar/jev-skill": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "tests/test_setup.py"
+        }
+      ]
     },
     "swamp-club/swamp-extensions": {
       "status": "pending",
@@ -7249,7 +8228,13 @@
     "shubhangi013/prompt-oscilloscope": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "src/analysis/jev-client.ts"
+        }
+      ]
     },
     "voidning/design-chat": {
       "status": "pending",
@@ -7274,7 +8259,13 @@
     "appsprout-dev/unsga3": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "tools/typesafe-pareto/test_score_pareto.py"
+        }
+      ]
     },
     "yshraj/jev-traffic-race": {
       "status": "pending",
@@ -7379,7 +8370,13 @@
     "vishesh-baghel/typesafe": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "downweight/extension/src/popup.tsx"
+        }
+      ]
     },
     "gastonmira/typesafe-triage-demo": {
       "status": "pending",
@@ -7851,7 +8848,13 @@
     "pankona/japanese-jev-lint": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "README.md"
+        }
+      ]
     },
     "house-of-imaginations/rsdecider-inference": {
       "status": "pending",
@@ -7993,7 +8996,13 @@
     "kofujimura/jev-obniz-led": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "src/jev.ts"
+        }
+      ]
     },
     "umgbhalla/jevx": {
       "status": "pending",
@@ -8043,7 +9052,13 @@
     "jimmyliao/jev-storyboard-lab": {
       "status": "pending",
       "discoveredAt": "2026-09-21T18:34:33.655Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "tests/test_jev_client.py"
+        }
+      ]
     },
     "ioluca/fili_jev": {
       "status": "pending",
@@ -8600,6 +9615,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "examples/javascript/package.json"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "crates/llama-cpp-system-one/src/main.rs"
         }
       ]
     },
@@ -8696,7 +9715,13 @@
     "postman-devrel/jevpong": {
       "status": "pending",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "lib/agent/redact.ts"
+        }
+      ]
     },
     "biztactix/n8n-nodes-typesafe": {
       "status": "pending",
@@ -8897,7 +9922,13 @@
     "bvicsay/adaptmypage": {
       "status": "pending",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "packages/adaptmypage/src/server/jev.ts"
+        }
+      ]
     },
     "nikkoxgonzales/jev-certify": {
       "status": "pending",
@@ -9368,6 +10399,10 @@
         {
           "query": "\"jev-latest\" in:file",
           "path": "fixtures/recordings/47822d5097245e8241026932824bea76a5c04ba19f9a06380c6dc6241695d978.json"
+        },
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "fixtures/recordings/b6ed0a241627df131770d10ccee4247420343f03b01453b26bbc9db53cc06611.json"
         }
       ]
     },
@@ -9551,7 +10586,13 @@
     "stainlu/awesome-jev": {
       "status": "pending",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 0
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "scripts/discover.py"
+        }
+      ]
     },
     "kydlikebtc/awesome-jev": {
       "status": "pending",
@@ -10141,6 +11182,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "frontend/src/views/admin/RiskControlView.vue"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ]
     },
@@ -10757,6 +11802,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "packages/presidio-extras/README.md"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "packages/training/experiments/artifacts/release-gate/sdk-0.3.0.json"
         }
       ]
     },
@@ -10768,6 +11817,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "src/worker/evaluate.ts"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "CONTRIBUTING.md"
         }
       ]
     },
@@ -10794,6 +11847,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "frontend/src/views/admin/RiskControlView.vue"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ]
     },
@@ -11126,6 +12183,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "apps/finance/tax-classifier/providers.toml"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "apps/data/pii-scanner/providers.toml"
         }
       ]
     },
@@ -11148,6 +12209,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "scripts/jev_execution_shadow.py"
+        },
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "experiments/2026-09-20-jev-execution-shadow/records/1-20260919-open-plus-100-r1-request.json"
         }
       ]
     },
@@ -11238,6 +12303,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "backend/internal/service/content_moderation_engines.go"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ]
     },
@@ -11249,6 +12318,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "backend/internal/service/content_moderation_engines.go"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ]
     },
@@ -11260,6 +12333,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "backend/internal/service/content_moderation_engines.go"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ]
     },
@@ -11414,6 +12491,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "native/semantic-provider.cjs"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "native/semantic-cli.cjs"
         }
       ]
     },
@@ -11485,6 +12566,14 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "agent-assist/server/jev.ts"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "jev-instant-search/bench/eval.ts"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "jev-voice-turn/README.md"
         }
       ]
     },
@@ -11574,6 +12663,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "src/docs.ts"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "eval/single.py"
         }
       ]
     },
@@ -11699,6 +12792,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "src/api.ts"
+        },
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "src/examples/pull-request.ts"
         }
       ]
     },
@@ -11710,6 +12807,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "recipes/agent-comm-harness/tool-exec-gate.ts"
+        },
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "recipes/high-freq-reflex/order-allow-deny.ts"
         }
       ]
     },
@@ -11993,6 +13094,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "pnpm-workspace.yaml"
+        },
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "packages/server/src/judgments/landingChecklist.ts"
         }
       ]
     },
@@ -12289,6 +13394,10 @@
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "README.md"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "src/beadsort/doctor.py"
         }
       ]
     },
@@ -12421,6 +13530,10 @@
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "examples/demo-bot/main.ts"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "test/comparison/timeline.test.ts"
         }
       ]
     },
@@ -12575,6 +13688,10 @@
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "docs/NEXT-AI-HANDOFF.md"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "docs/gates/PLAYGROUND-GITHUB-PAGES.md"
         }
       ]
     },
@@ -12855,6 +13972,10 @@
         {
           "query": "\"jev-latest\" in:file",
           "path": "papers/completion/lean_refactor_arena/evidence/canaries/constrained-beam-20260917T170656Z.json"
+        },
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "papers/completion/lean_refactor_arena/evidence/canaries/track1-mistral-20260917T051220Z.json"
         }
       ]
     },
@@ -12879,6 +14000,1546 @@
           "path": "docs/implementation/evidence/2026-09-21/i19-chain-jev/request-3.json"
         }
       ]
+    },
+    "chorylee7/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "steven-shoemaker/hunch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dtduc-git/jevassert": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "robokrunch/jev-physical-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dtduc-git/jev-packs": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dtduc-git/jev-table": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "bramtechs/focus": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "pomykalakyle/jev-youtube-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "glowbom/glowbom-oss": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jamubc/opencode-langsearch": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "eugeniughelbur/jev-engineering": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "lazniak/jevskill": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tickerdev/jevfanity": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "selcukusta/jev-mailroom": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dev-willbird1936/pi-compact-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "decrux9812/openjev-lm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "bodila51/jev-chooses-a-llm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "sugarforever/tryjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gbesse/intentbus": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "seanockert/movie-finder": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gbesse/autonomy-meter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gbesse/decisionpacks": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ibrahemid/git-jev-stage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ibrahemid/jevprune": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "benjiscollector/rocky": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "webneat/llama-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "philippdubach/pi-jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "4rays/profanity-checker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "angrysky56/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "studies/continuity/runs/2026-09-20T03-06-22.922Z-development-506e7462/source-snapshot.json"
+        }
+      ]
+    },
+    "chenmingtang830/jevgraph": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "stephotee/survey-qc-with-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "brightshore/jev-net": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ganeshvg18/upgrade-radar": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "octanevz/jev-playground-openrouter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "nasrallah-al/jev-cli": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "anasbekheit/typesafe-jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ddlaws0n/jevportfolio": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "virolea/jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "steelwalrus/jev-needs-review": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "fatwang2/jev-review-action": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "russleyshaw/typesafe-jev-gate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "todmy/jevqa": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "victor-casado/if-ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "leepokai/jev-adrank": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "zebedelu/chess-vs-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "vbs2004/jev-plays-super-mario-bros": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jammaru/jev-affected": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "adkid-zephyr/work-with-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "alurith/jeff": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "codeia-academy/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mkruglikov/droidjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kolawong/fast-compaction-dsh": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "louisultra/jev-deep-dive": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "fredrsat/stil-lint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "arronhc/windows2text": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "alsoleg89/decide": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "litshing/jevcore": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "fly2abhishek/jev-field-tests": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "emreozyoruk/hush": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "n4ze3m/hmm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "bornakapusta/slop-guard": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "n0nuser/battlesnake-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mattioofr/mcp-server-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "prantikmedhi/anchorlint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "coderinpajamas/jev-mlx": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dingw530/playwright-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "trustifai/typed_evals": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ghubnab99/jev-enterprise-decision-fabric": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "julardepick/jev-examiner": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "timsamart/jev-graph-walk": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "48nauts-operator/skill-dash": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "suidouble/let-jev-speak": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ethanalgox/localjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kaijia323/dsh-plugin-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "glamboyosa/docket": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "brickfrog/moongate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gopalanj/jevons": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "q93304989-bit/jev-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "distil-labs/invoice-processing-pipeline": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "justinfrevert/jev-agent-safety": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "apolinario/decision-index": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cedrecs/jev-yarn": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "theneao/ai-finance-daily": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kenz1117/dsh-engram": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "lph12168x/free-llm-daily": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "lsasw/my-awesome-stars": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "penouc/x-lens": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "peakevergreen/jevidence": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tidusvn05/hungjury": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "zzyong24/moonlit-topic-engine": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "whyashthakker/beam-cli": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "joelharlander/mmmgc_modelrouter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ferraroroberto/local-llm-hub": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gaurav047/job-applications-tracker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gliangquan/awesome-ai-radar": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "harukishimo/hori_checker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mrmimee/hermes-plugin-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "suyash-lyzr/jev-typesafe": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "zjason-jx/law-query-assistant": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "swang666/polymarket-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "insession-space/claude-ship": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tjkimcloud/jev-site-auditor": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "shunmoridev/jev-jp-accounting-bench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dakires/tft-openoverlay": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "michaeljabbour/amplifier-bundle-fast-decisions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "grizzlypeaksoftware/jev-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "nikhil1raghav/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "trancong12102/agentskills": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "esturban/esturban": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "sting8k/qwen-jev-like": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "david-buck/localjev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "draiagent/ai-to-agent-jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mrkhachaturov/ipranges": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yoichiojima-2/deslop": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "enesyilmazcode/flyjevpong": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "poiuyjie/jev_project_context": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "u007/ocode": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "smarty-kiki/chrome_jev_agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "llm/jev.js"
+        }
+      ]
+    },
+    "aviletek/jev-flow-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "silkyland/use-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dannyliv/scam-signal-lens": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cskwork/pi-jev-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "sperictao/dsh-auto-review-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "brainstormity/jev-moderation-bot": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jaymandava/jay-pi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "caras-new-voices/jev-test-1": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cipherting/sael": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "henryklunaris/hey-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kirin765/jev-email-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "proxy303-wq/parallax": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "omribenami/jev-operated-drone": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mant1ssa-smf3kt/chat_jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "faulker/lmr-rs": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "marszhongx/pi-jev-score": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "neesenk/model-proxy": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kinfey/jevonnx": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jpowersdev/neuralint": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "arcj137442/jev-life": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "adibirzu/llm-router-axi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "midorisawa/shirakawa": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "pythagoras-yamamoto/openqda": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dmitrysobolev/jev-spring-boot-bookstore": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "pablotz/jobhunt": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yasuhito/jev-computer-use": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "azterizm/jev-vs-sovereign-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kyledickey/jev-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "brainstormity/jev-x-sentiment-analysis": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jxxfdgd/jev-ai-slop-detector": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "faulker/myphin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ziqi-jin/agent-to-trust": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "luw2007/omp-jev-extensions": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "catpotd/agy-jevgate": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "skcache/jevtrafficsim": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "thanakijwanavit/cursor-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "quoctuancqt/cc-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "juanjosell/web-actimax": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "alvations/elipokemon": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jxwayne890/jev-control-plane": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "steamdollar/codex-config": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "johncari/rossrecall": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "nadeemcite/nadeemcite": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "someshsampat2/jev-android-super": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ria-ahyoung/medium-trends-daily": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "chellappanrajan/typesafe-ai-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "davidkotler/jev-browser-tests": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kairugakuo2/jev-arena": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "nokia-applied-research/anyjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "revsmoke/leisurelarry": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "anakinrm/jev-confidence-kit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ysfwrld/insuranceaudittask": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "revazi/pi-tmux-orchestrator": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "202wh/loving-artist-practice": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kevinarce/exonotes": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "scripts/032_question_gate_obsnotes.py"
+        }
+      ]
+    },
+    "daryl9441/laya-learning-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "darjss/catan-game": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yuanzheyanggg/dreamdm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kevinbadi/jev-voice": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "lim6112j/jev-example": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "frontierlabai/jevhub": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "wellkilo/codex-jev-preflight": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "songokou1983/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kennykang7012/typesafe-chicken-egg": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "peach-zhang/typesafe-go": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "john222333/martin-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kitepon/dotagents": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yongqixue99-hue/ai-style-score": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "stephonomon/scribe-verify": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "rdtiv/chatprob": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "junma11/medjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "coderhh/jev-snake": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dested/alt-tv-rewind": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mwatkins03-netizen/ai-grading-dilemmas-": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "calebl/ynab-mcp-server": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tamnd/hn-daily-index": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "hgqimo/jevranker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "haowenyang188-arch/dsh-jev-judge": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "colindargent/tri-emails-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "zhangzhangco/dsh-tier-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gunzero5158/zenith-quant": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tomfrazier/slopmop": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "admiller007/twitter-bookmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gmaxxxie/jev-cli": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jamesward/zio-evals": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "blisspixel/fragr": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "docs/plans/decision-brain.md"
+        }
+      ]
+    },
+    "sheshisheri-hi/jev-vs-llm-stock-policy": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "babanomania/bro-source": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "marceloatoledo/jev-mcp-rest": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dhirajpatra/agent-harness-with-jev-llm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "icecodenew/anti-fwd-spam": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "amali-s/story-arc": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "olie0512/goal-run": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "umputun/tg-spam": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "agostynah/lulu-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "aryamangoenka/traceassert": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mmedasani1315/jev-websiteclassifer": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "bjaysingh/claudewhisperer": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jackma5477001/dsh-jev-auto": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "herakles-dev/typesafe-claude-kit": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "danielyedaniel/jevme": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "matt-riley/lore": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kane201x/ai": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jbsx/indecision": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ishiyamaism/ai-decision-bench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "p3lera/jev-computer-use": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "rakshita-devurkar/syncroute": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kuitai77/coin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "hexuria/allowly": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mandarkashikar/linkedin-slop-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "doublerobust/rjif": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "benwyrosdick/laya-api": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "chepyle/jev-test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "libingzheren/jev-mem": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "atharvadomale/daily-huggingface-ai-papers": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "pgarvie/laya": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ckirchhoff2021/knowledge-base": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "scd13150/st-mind-compass": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "agentiloop/agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "hedronite/hedrondb": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "zazencodes/zazencodes-season-3": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "sac-y/jev-cu": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cognitive-fab/polyx": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "bokuweb/omg": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "coderayzhang/ai-daily-digest": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "renanlalier/jev-benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "grayslawson/ha-switchboard": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dimitrichakma/habit-tracker": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "wylu1037/pi-jev-checkpoints": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "siliconlabai/openjev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "fable22/research-library": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "mcmcmcmmmc/laya-codex-router": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "abinashray008/fraud-classifier": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cabra-lat/fps-basegame": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "hokauz/inference-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "july24/pier": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "7155/course-learning": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "garygentry/jev-poc": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dhruvmehra/jevbench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "kitecosmic/synsema": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "cfcosta/vs1": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yzfly/awesome-dsh-skills": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "dpvinh30092005/jev-1000-com-tam": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yongkyu4803/gqai-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "juanlentino/signal-and-noise-tools": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "a3s-lab/apofasi": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "yanjieze/paper-list": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ynnyh/model-preflight": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "decapodlabs/decapod": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "markylaredo/openjev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "clydechen0228/laya": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jimbobbennett/typesafe-guardrails": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "utensil/awesome-stars": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jijaraba/jijaraba": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ziyu/realtime-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "alitrack/jev-clone": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jfrader/jev-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "klren0312/jev-trade": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "codenamev/ruby-laya": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "adocbl/jev-resume-polisher": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "devjonasmax/cheater-or-not": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "leandrosantosp/email-classifier": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "itsbrex/my-awesome-stars": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tizerluo/deweb-mcp-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "onepayzk-glitch/dsh-typesafe-ask": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "svg153/awesome-stars": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "condorcommodore/jev-git-graph": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "xiaoguangzi/aichat": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "harperreed/harperreed": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "undefined-ui/second-brain-os": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "futurepresentlabs/pcbbench": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "tomtyiu/jev-decision-plugin": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "frubot/kataru": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "void2610/gmail-triage": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jumboly/cogp-jev-lens": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "gordonjun2/crypto-trading-analysis": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "baize7815/jev-mcp-open-source": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "simonw/simonw": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "jimuelle07/helm": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0,
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "skills/helm/tests/test_keystore.py"
+        }
+      ]
+    },
+    "soumya-prog-tech/laptop-voice-control": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "neerajmohanty/rfxcheck": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "ianluo/skills": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "agricidaniel/jev-seo": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
+    },
+    "aditisonawane96/jev-model-test": {
+      "status": "pending",
+      "discoveredAt": "2026-09-22T11:39:00.649Z",
+      "attempts": 0
     }
   }
 }
