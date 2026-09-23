@@ -4,11 +4,14 @@
  * Reads TYPESAFE_API_KEY from the environment or `.env.local`.
  * Never import this from the Vite app.
  */
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { setTimeout as sleep } from 'node:timers/promises'
 import { classifyProjects, evaluateJev, isProjectCategory } from './jev-client.ts'
-import { catalogFiles } from './catalog.ts'
+import { catalogFiles, repoKey } from './catalog.ts'
+import { createGitHubClient } from './github-client.ts'
+import { githubEvidence } from './github-evidence.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -25,23 +28,75 @@ interface DirectoryRow {
   sourceMeta?: Record<string, unknown>
 }
 
-async function classifyGithub(key: string, limit: number, force: boolean, dryRun: boolean): Promise<void> {
+async function classifyGithub(key: string, limit: number, force: boolean, dryRun: boolean, withReadme: boolean, onlyOther: boolean): Promise<void> {
   const path = join(root, 'data/github.json')
   const rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]
-  const pending = rows.filter((row) => force || !isProjectCategory(row.category)).slice(0, limit)
+  const pending = rows.filter((row) => onlyOther
+    ? row.category === 'other' && (force || !row.sourceMeta?.categoryEvidenceSha)
+    : force || !isProjectCategory(row.category)).slice(0, limit)
   const counts: Record<string, number> = {}
+  const api = withReadme ? createGitHubClient(process.env.GITHUB_TOKEN) : null
+  let unavailable = 0
+  let consecutiveForbidden = 0
   for (let start = 0; start < pending.length; start += 8) {
     const batch = pending.slice(start, start + 8)
-    const categories = await classifyProjects(key, batch)
+    let categories: string[]
+    const evidenceByIndex: Array<{ sha: string; url: string } | undefined> = new Array(batch.length)
+    if (withReadme && api) {
+      categories = new Array<string>(batch.length)
+      await mapPool(batch, 1, async (row, index) => {
+        try {
+          const repo = repoKey(row.url)
+          if (!repo) throw new Error('github-invalid-path')
+          let evidence: Awaited<ReturnType<typeof githubEvidence>> | undefined
+          for (let attempt = 0; attempt < 3; attempt++) {
+            try { evidence = await githubEvidence(api, repo); break }
+            catch (error) {
+              if (!(error instanceof Error) || error.message !== 'github-network-or-timeout' || attempt === 2) throw error
+              await sleep(1000 * 2 ** attempt)
+            }
+          }
+          if (!evidence) throw new Error('github-network-or-timeout')
+          categories[index] = (await evaluateJev(key, row, evidence.text)).category ?? 'other'
+          evidenceByIndex[index] = { sha: evidence.sha, url: evidence.evidenceUrl }
+          consecutiveForbidden = 0
+        } catch (error) {
+          if (!(error instanceof Error)) throw error
+          if (error.message === 'jev-http-403') {
+            consecutiveForbidden++
+            if (consecutiveForbidden >= 3) throw error
+            unavailable++
+            categories[index] = row.category ?? 'other'
+            return
+          }
+          if (!['github-http-404', 'github-invalid-readme', 'github-empty-readme', 'github-ineligible-repository', 'github-invalid-sha', 'github-network-or-timeout'].includes(error.message)) {
+            throw error
+          }
+          unavailable++
+          categories[index] = (await classifyProjects(key, [row]))[0]
+          consecutiveForbidden = 0
+        }
+      })
+    } else {
+      categories = await classifyProjects(key, batch)
+    }
     for (let i = 0; i < batch.length; i++) {
       const category = categories[i]
       counts[category] = (counts[category] ?? 0) + 1
-      if (!dryRun) batch[i].category = category
+      if (!dryRun) {
+        batch[i].category = category
+        const evidence = evidenceByIndex[i]
+        if (evidence) batch[i].sourceMeta = { ...batch[i].sourceMeta, categoryEvidenceSha: evidence.sha, categoryEvidenceUrl: evidence.url }
+      }
     }
-    if (!dryRun) writeFileSync(path, `${JSON.stringify(rows, null, 2)}\n`)
+    if (!dryRun) {
+      const temporary = `${path}.${process.pid}.tmp`
+      writeFileSync(temporary, `${JSON.stringify(rows, null, 2)}\n`)
+      renameSync(temporary, path)
+    }
     process.stdout.write(`Classified ${Math.min(start + batch.length, pending.length)}/${pending.length}\r`)
   }
-  process.stdout.write('\n' + JSON.stringify({ classified: pending.length, dryRun, categories: counts }, null, 2) + '\n')
+  process.stdout.write('\n' + JSON.stringify({ classified: pending.length, unavailable, dryRun, categories: counts }, null, 2) + '\n')
 }
 
 interface ScoreResult {
@@ -179,7 +234,7 @@ async function main(): Promise<void> {
   }
   const key = apiKey()
   if (process.argv.includes('--classify')) {
-    await classifyGithub(key, limit, force, dryRun)
+    await classifyGithub(key, limit, force, dryRun, process.argv.includes('--with-readme'), process.argv.includes('--only-other'))
     return
   }
   const opts = { limit, force, dryRun, concurrency }

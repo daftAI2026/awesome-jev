@@ -96,7 +96,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.26
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-anil-matcha-awesome-jev-by-typesafe",
@@ -146,7 +146,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.68
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-thruwire-foreman",
@@ -413,9 +413,11 @@
       "repo": "realZachi/pg-jev",
       "jevAbout": 0.64,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.71
+      "jevKeepConfidence": 0.71,
+      "categoryEvidenceSha": "afd11fa856d7a2b831a1bfd8ee7f869ce8efcd62",
+      "categoryEvidenceUrl": "https://github.com/realzachi/pg-jev/blob/afd11fa856d7a2b831a1bfd8ee7f869ce8efcd62/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-yibie-awesome-jev",
@@ -484,9 +486,11 @@
       "repo": "kitze/unclutter",
       "jevAbout": 0.11,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.42
+      "jevKeepConfidence": 0.42,
+      "categoryEvidenceSha": "9ef9beccc1e57b4e3115ae68644b8fc9c19c29f6",
+      "categoryEvidenceUrl": "https://github.com/kitze/unclutter/blob/9ef9beccc1e57b4e3115ae68644b8fc9c19c29f6/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-pithings-advocaat",
@@ -555,7 +559,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.76
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-dbreunig-building-with-jev-skill",
@@ -647,7 +651,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.7
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-anotiawang-awesome-jev",
@@ -714,9 +718,11 @@
       "repo": "realZachi/typesafe-adblock",
       "jevAbout": 0.31,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.59
+      "jevKeepConfidence": 0.59,
+      "categoryEvidenceSha": "7e067d243d87b7fe4d511653c0ddcd77b9beee18",
+      "categoryEvidenceUrl": "https://github.com/realzachi/typesafe-adblock/blob/7e067d243d87b7fe4d511653c0ddcd77b9beee18/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-dicklesworthstone-skillranker",
@@ -987,9 +993,11 @@
       "openIssues": 4,
       "language": "Python",
       "author": "utk2103",
-      "repo": "utk2103/jev-studio"
+      "repo": "utk2103/jev-studio",
+      "categoryEvidenceSha": "7e98b5c9d8f29049036455cea1f7f55aca4941e0",
+      "categoryEvidenceUrl": "https://github.com/utk2103/jev-studio/blob/7e98b5c9d8f29049036455cea1f7f55aca4941e0/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-joshuasp-open-jev",
@@ -1103,7 +1111,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.43
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-ghalebdweikat-winnow",
@@ -1195,9 +1203,11 @@
       "repo": "Mapika/decider",
       "jevAbout": 0.12,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.47
+      "jevKeepConfidence": 0.47,
+      "categoryEvidenceSha": "572d752fcf5933ad61de87474a8b2f386189bcc6",
+      "categoryEvidenceUrl": "https://github.com/mapika/decider/blob/572d752fcf5933ad61de87474a8b2f386189bcc6/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-jon-devlapaz-jev-me",
@@ -1218,9 +1228,11 @@
       "repo": "jon-devlapaz/jev-me",
       "jevAbout": 0.11,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.47
+      "jevKeepConfidence": 0.47,
+      "categoryEvidenceSha": "8de692783f49edb4ee791f57045ed89ccf000dee",
+      "categoryEvidenceUrl": "https://github.com/jon-devlapaz/jev-me/blob/8de692783f49edb4ee791f57045ed89ccf000dee/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-kieranklaassen-ruby-llm-typesafe",
@@ -1432,9 +1444,11 @@
       "repo": "opaielsheikh/ai-elo-ranker",
       "jevAbout": 0.15,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.26
+      "jevKeepConfidence": 0.26,
+      "categoryEvidenceSha": "6cd4a63ccb352439771559856da376943645151a",
+      "categoryEvidenceUrl": "https://github.com/opaielsheikh/ai-elo-ranker/blob/6cd4a63ccb352439771559856da376943645151a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-typesafe-ai-daggerverse",
@@ -1455,9 +1469,11 @@
       "repo": "typesafe-ai/daggerverse",
       "jevAbout": 0.42,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.14
+      "jevKeepConfidence": 0.14,
+      "categoryEvidenceSha": "b0e9d0ca81328d3c91a08ab8c7a0e8963c2fa7ae",
+      "categoryEvidenceUrl": "https://github.com/typesafe-ai/daggerverse/blob/b0e9d0ca81328d3c91a08ab8c7a0e8963c2fa7ae/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-abdelstark-jev-benchmarks",
@@ -1533,9 +1549,11 @@
       "repo": "genai-craft/openvons",
       "jevAbout": 0.27,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.19
+      "jevKeepConfidence": 0.19,
+      "categoryEvidenceSha": "c2683c4539a78b530b7c36a1536f91fcd8fbc70c",
+      "categoryEvidenceUrl": "https://github.com/genai-craft/openvons/blob/c2683c4539a78b530b7c36a1536f91fcd8fbc70c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-bunsdev-typesafe-ai-playground",
@@ -1558,7 +1576,7 @@
       "jevKeep": "drop",
       "jevKeepConfidence": 0.24
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-huntedman-jevlint",
@@ -1841,9 +1859,11 @@
       "repo": "kikoncuo/jevfire",
       "jevAbout": 0.3,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.04
+      "jevKeepConfidence": 0.04,
+      "categoryEvidenceSha": "5df83b558bf635e006d31f8f2fc2798d0e3ff051",
+      "categoryEvidenceUrl": "https://github.com/kikoncuo/jevfire/blob/5df83b558bf635e006d31f8f2fc2798d0e3ff051/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-zhihz-openjev",
@@ -1887,9 +1907,11 @@
       "repo": "Kevthetech143/super-jev",
       "jevAbout": 0.71,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.41
+      "jevKeepConfidence": 0.41,
+      "categoryEvidenceSha": "ef71b634a3d02845e7da7ef167741b81565fdd1e",
+      "categoryEvidenceUrl": "https://github.com/kevthetech143/super-jev/blob/ef71b634a3d02845e7da7ef167741b81565fdd1e/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-mithalouni-system-one-open",
@@ -1910,9 +1932,11 @@
       "repo": "mithalouni/system-one-open",
       "jevAbout": 0.83,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.81
+      "jevKeepConfidence": 0.81,
+      "categoryEvidenceSha": "77f1f7cccf8aa752e0ed7edcc8d2094bac707bdc",
+      "categoryEvidenceUrl": "https://github.com/mithalouni/system-one-open/blob/77f1f7cccf8aa752e0ed7edcc8d2094bac707bdc/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-y0usaf-typesafe-cli",
@@ -2077,9 +2101,11 @@
       "repo": "mateonunez/jod",
       "jevAbout": 0.44,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.69
+      "jevKeepConfidence": 0.69,
+      "categoryEvidenceSha": "416b3b026b6a6094cde6658a94230e2607482b77",
+      "categoryEvidenceUrl": "https://github.com/mateonunez/jod/blob/416b3b026b6a6094cde6658a94230e2607482b77/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-theooliveira-pi-jev",
@@ -2175,9 +2201,11 @@
       "repo": "andrelandgraf/typesafe-on-neon",
       "jevAbout": 0.67,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.29
+      "jevKeepConfidence": 0.29,
+      "categoryEvidenceSha": "b4fb82b129caa46480de6a66387ea2ff053c6511",
+      "categoryEvidenceUrl": "https://github.com/andrelandgraf/safer-with-jev/blob/b4fb82b129caa46480de6a66387ea2ff053c6511/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-typesafe-ai-overwatch",
@@ -2465,9 +2493,11 @@
       "repo": "romaluev/jev-ego",
       "jevAbout": 0.41,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.57
+      "jevKeepConfidence": 0.57,
+      "categoryEvidenceSha": "12eaafe795db56da821d9268ee7b9ae9ea24b23b",
+      "categoryEvidenceUrl": "https://github.com/romaluev/jev-ego/blob/12eaafe795db56da821d9268ee7b9ae9ea24b23b/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-foadsf-jev-for-engineers",
@@ -2566,9 +2596,11 @@
       "repo": "caiovicentino/jev-shield",
       "jevAbout": 0.73,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.66
+      "jevKeepConfidence": 0.66,
+      "categoryEvidenceSha": "ea13a3be94c6af4ace7912de5909678e5e24941f",
+      "categoryEvidenceUrl": "https://github.com/caiovicentino/jev-shield/blob/ea13a3be94c6af4ace7912de5909678e5e24941f/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-samtay32-jev-system-architect",
@@ -2637,9 +2669,11 @@
       "repo": "sosopop/jev_stock",
       "jevAbout": 0.16,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.21
+      "jevKeepConfidence": 0.21,
+      "categoryEvidenceSha": "81fa919795084ba942632d35c9986a1ece7162f9",
+      "categoryEvidenceUrl": "https://github.com/sosopop/jev_stock/blob/81fa919795084ba942632d35c9986a1ece7162f9/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-bewinxed-jevgpt",
@@ -2781,9 +2815,11 @@
       "repo": "hellogumbo/should-ai-kill-us-all",
       "jevAbout": 0.68,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.49
+      "jevKeepConfidence": 0.49,
+      "categoryEvidenceSha": "6b6b55cbe05ec24c844db3a691e3521f65eae258",
+      "categoryEvidenceUrl": "https://github.com/hellogumbo/should-ai-kill-us-all/blob/6b6b55cbe05ec24c844db3a691e3521f65eae258/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-justinhe16-trade-jev",
@@ -2985,9 +3021,11 @@
       "repo": "i2cjak/RISC-jeV",
       "jevAbout": 0.12,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.66
+      "jevKeepConfidence": 0.66,
+      "categoryEvidenceSha": "121b81db3310f9e00b498a8efc88f2918b536696",
+      "categoryEvidenceUrl": "https://github.com/i2cjak/risc-jev/blob/121b81db3310f9e00b498a8efc88f2918b536696/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-eriestra-almond-fastloop",
@@ -3077,9 +3115,11 @@
       "repo": "WebGrga/btc-jev-signal",
       "jevAbout": 0.42,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.43
+      "jevKeepConfidence": 0.43,
+      "categoryEvidenceSha": "b0107b10e3f38f56f8eab349082be855b26bb6a0",
+      "categoryEvidenceUrl": "https://github.com/webgrga/btc-jev-signal/blob/b0107b10e3f38f56f8eab349082be855b26bb6a0/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-bunsdev-clarity-judge",
@@ -3267,9 +3307,11 @@
       "repo": "tontoko/jev-browser",
       "jevAbout": 0.46,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.69
+      "jevKeepConfidence": 0.69,
+      "categoryEvidenceSha": "d1f613af53a18661e4a2c898ca992c3a3db6c92e",
+      "categoryEvidenceUrl": "https://github.com/tontoko/jev-browser/blob/d1f613af53a18661e4a2c898ca992c3a3db6c92e/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-jtsang4-jev-cli",
@@ -3316,9 +3358,11 @@
       "repo": "lukaske/jev-doom-agent",
       "jevAbout": 0.12,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.06
+      "jevKeepConfidence": 0.06,
+      "categoryEvidenceSha": "318c32a24851444c1170bf083671c38723f3a35a",
+      "categoryEvidenceUrl": "https://github.com/lukaske/jev-doom-agent/blob/318c32a24851444c1170bf083671c38723f3a35a/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-nainish-rai-jev-frontend-qa",
@@ -3340,9 +3384,11 @@
       "repo": "Nainish-Rai/jev-frontend-qa",
       "jevAbout": 0.57,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.28
+      "jevKeepConfidence": 0.28,
+      "categoryEvidenceSha": "2a57d0a23471ca627a2840eff04102ddc844dd57",
+      "categoryEvidenceUrl": "https://github.com/nainish-rai/jev-frontend-qa/blob/2a57d0a23471ca627a2840eff04102ddc844dd57/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-gaurav-gosain-jev-go",
@@ -3455,9 +3501,11 @@
       "openIssues": 0,
       "language": "JavaScript",
       "author": "nexibeo",
-      "repo": "nexibeo/jev-organize"
+      "repo": "nexibeo/jev-organize",
+      "categoryEvidenceSha": "1693ad1939341747da4f15fd605b513eb0177c57",
+      "categoryEvidenceUrl": "https://github.com/nexibeo/jev-organize/blob/1693ad1939341747da4f15fd605b513eb0177c57/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-little-planet-labs-jev-playground",
@@ -3501,9 +3549,11 @@
       "repo": "DanielKillenberger/jev-predict-skill",
       "jevAbout": 0.72,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.36
+      "jevKeepConfidence": 0.36,
+      "categoryEvidenceSha": "c80051db825de4a0af6efb03803e682daa466996",
+      "categoryEvidenceUrl": "https://github.com/danielkillenberger/jev-predict-skill/blob/c80051db825de4a0af6efb03803e682daa466996/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-anessbelbati-jev-rerank-bench",
@@ -3737,9 +3787,11 @@
       "repo": "lhemerly/mcts-agent",
       "jevAbout": 0.49,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.33
+      "jevKeepConfidence": 0.33,
+      "categoryEvidenceSha": "1f19217252ed6a4df9e278d06e654b48b1db8fed",
+      "categoryEvidenceUrl": "https://github.com/lhemerly/mcts-agent/blob/1f19217252ed6a4df9e278d06e654b48b1db8fed/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-siddicky-omp-typesafe",
@@ -3829,9 +3881,11 @@
       "repo": "komikat/psearch",
       "jevAbout": 0.1,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.57
+      "jevKeepConfidence": 0.57,
+      "categoryEvidenceSha": "abe58aa9c621122a4437280d7cd1887790adf06c",
+      "categoryEvidenceUrl": "https://github.com/komikat/psearch/blob/abe58aa9c621122a4437280d7cd1887790adf06c/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-adtyavrdhn-pydantic-jev-examples",
@@ -4357,9 +4411,11 @@
       "openIssues": 0,
       "language": "JavaScript",
       "author": "SwiftFaze",
-      "repo": "SwiftFaze/Jev-Studio"
+      "repo": "SwiftFaze/Jev-Studio",
+      "categoryEvidenceSha": "23d88170de00afff3205b637c787bc0790bf98d4",
+      "categoryEvidenceUrl": "https://github.com/swiftfaze/jev-studio/blob/23d88170de00afff3205b637c787bc0790bf98d4/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-soundblaster-jev4mellea",
@@ -4426,9 +4482,11 @@
       "repo": "Dujaydis/JevSysUno",
       "jevAbout": 0.4,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.45
+      "jevKeepConfidence": 0.45,
+      "categoryEvidenceSha": "e11cb1e6e212fa9ddd53e4086d6d100110653072",
+      "categoryEvidenceUrl": "https://github.com/dujaydis/jevsysuno/blob/e11cb1e6e212fa9ddd53e4086d6d100110653072/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-coriew-jevtest",
@@ -4472,9 +4530,11 @@
       "repo": "GhrezaKh74/JevTicktRouter",
       "jevAbout": 0.5,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.3
+      "jevKeepConfidence": 0.3,
+      "categoryEvidenceSha": "eeb248624ec00d8052b56cebefc95c10eff9254f",
+      "categoryEvidenceUrl": "https://github.com/ghrezakh74/jevticktrouter/blob/eeb248624ec00d8052b56cebefc95c10eff9254f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-shifros-search-function-test",
@@ -4730,9 +4790,11 @@
       "repo": "MarissaFamularo/citation-verifier",
       "jevAbout": 0.1,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.33
+      "jevKeepConfidence": 0.33,
+      "categoryEvidenceSha": "f9058642274033e62855d3066988418fefa2e272",
+      "categoryEvidenceUrl": "https://github.com/marissafamularo/citation-verifier/blob/f9058642274033e62855d3066988418fefa2e272/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-rchovatiya88-cyber-breach-jev",
@@ -4894,9 +4956,11 @@
       "repo": "agent-labs-dev/fastbrowse",
       "jevAbout": 0.22,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.2
+      "jevKeepConfidence": 0.2,
+      "categoryEvidenceSha": "a088eb8b6d83a9643531acd8f5c0c1b0b276953e",
+      "categoryEvidenceUrl": "https://github.com/agent-labs-dev/fastbrowse/blob/a088eb8b6d83a9643531acd8f5c0c1b0b276953e/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-lamplighterpaul-forma-system1-experiment",
@@ -4942,9 +5006,11 @@
       "repo": "marcus/frost",
       "jevAbout": 0.24,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.34
+      "jevKeepConfidence": 0.34,
+      "categoryEvidenceSha": "bdbe452f7d16c559289f48c062f6f548db4d6940",
+      "categoryEvidenceUrl": "https://github.com/marcus/frost/blob/bdbe452f7d16c559289f48c062f6f548db4d6940/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-yutkat-github-star-organizer-jev",
@@ -4964,9 +5030,11 @@
       "repo": "yutkat/github-star-organizer-jev",
       "jevAbout": 0.13,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.41
+      "jevKeepConfidence": 0.41,
+      "categoryEvidenceSha": "9db460d348bd59f6509caa1f460de4a440e16a8f",
+      "categoryEvidenceUrl": "https://github.com/yutkat/github-star-organizer-jev/blob/9db460d348bd59f6509caa1f460de4a440e16a8f/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-zavocc-ground-zero",
@@ -4986,9 +5054,11 @@
       "repo": "zavocc/ground-zero",
       "jevAbout": 0.34,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.17
+      "jevKeepConfidence": 0.17,
+      "categoryEvidenceSha": "cccd02c4a0083ca912d158c08f93bdc291469a9b",
+      "categoryEvidenceUrl": "https://github.com/zavocc/ground-zero/blob/cccd02c4a0083ca912d158c08f93bdc291469a9b/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-ndolinschi-harnessjudge",
@@ -5166,9 +5236,11 @@
       "repo": "haibt163/jev",
       "jevAbout": 0.37,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.46
+      "jevKeepConfidence": 0.46,
+      "categoryEvidenceSha": "9eb3f01137bb1beb75fd1577479f02a70ea4ca3e",
+      "categoryEvidenceUrl": "https://github.com/haibt163/jev/blob/9eb3f01137bb1beb75fd1577479f02a70ea4ca3e/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-anilsenay-jev",
@@ -5214,7 +5286,9 @@
       "repo": "cardotrejos/jev-ad-preflight",
       "jevAbout": 0.69,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.53
+      "jevKeepConfidence": 0.53,
+      "categoryEvidenceSha": "a9070deff5d49a70a1eb7f87e451ed3ea3360d78",
+      "categoryEvidenceUrl": "https://github.com/cardotrejos/jev-ad-preflight/blob/a9070deff5d49a70a1eb7f87e451ed3ea3360d78/README.md"
     },
     "category": "other"
   },
@@ -5442,7 +5516,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.09
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-webgrga-jev-board-lab",
@@ -5463,9 +5537,11 @@
       "repo": "WebGrga/jev-board-lab",
       "jevAbout": 0.52,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.47
+      "jevKeepConfidence": 0.47,
+      "categoryEvidenceSha": "4b973ea46c6808ec4d46b5ee80a7cb6e7414872d",
+      "categoryEvidenceUrl": "https://github.com/webgrga/jev-board-lab/blob/4b973ea46c6808ec4d46b5ee80a7cb6e7414872d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-kesavanking-jev-browser",
@@ -5581,9 +5657,11 @@
       "repo": "heiwa4126/jev-bun1",
       "jevAbout": 0.87,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.34
+      "jevKeepConfidence": 0.34,
+      "categoryEvidenceSha": "e1b4a91a865af9ed9f386a4386f5f74c97a6f5cf",
+      "categoryEvidenceUrl": "https://github.com/heiwa4126/jev-bun1/blob/e1b4a91a865af9ed9f386a4386f5f74c97a6f5cf/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-barba-tech-co-jev-claude-skill",
@@ -5601,9 +5679,11 @@
       "openIssues": 0,
       "language": "Python",
       "author": "Barba-Tech-CO",
-      "repo": "Barba-Tech-CO/jev-claude-skill"
+      "repo": "Barba-Tech-CO/jev-claude-skill",
+      "categoryEvidenceSha": "749b52b0e898250a5cc3a2aaea423df11a98a979",
+      "categoryEvidenceUrl": "https://github.com/barba-tech-co/jev-claude-skill/blob/749b52b0e898250a5cc3a2aaea423df11a98a979/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-lhotwll217-jev-cli",
@@ -5743,9 +5823,11 @@
       "repo": "Bud-ro/jev-demos",
       "jevAbout": 0.92,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.51
+      "jevKeepConfidence": 0.51,
+      "categoryEvidenceSha": "37470f96bc4cb91c5f10703caa7460bf0c20f23a",
+      "categoryEvidenceUrl": "https://github.com/bud-ro/jev-demos/blob/37470f96bc4cb91c5f10703caa7460bf0c20f23a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-n-yokomachi-jev-dev",
@@ -5812,9 +5894,11 @@
       "openIssues": 0,
       "language": "Python",
       "author": "RefoundAI",
-      "repo": "RefoundAI/jev-editor-skill"
+      "repo": "RefoundAI/jev-editor-skill",
+      "categoryEvidenceSha": "68847ac2b2df032ccdd3a7e785a6b9be9e459688",
+      "categoryEvidenceUrl": "https://github.com/refoundai/jev-editor-skill/blob/68847ac2b2df032ccdd3a7e785a6b9be9e459688/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-samuelsacco-jev-exploration",
@@ -6187,9 +6271,11 @@
       "repo": "wustep/jev-playground",
       "jevAbout": 0.69,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.58
+      "jevKeepConfidence": 0.58,
+      "categoryEvidenceSha": "55420fc32463e8b7c96753962c5b053bf6263d6a",
+      "categoryEvidenceUrl": "https://github.com/wustep/jev-playground/blob/55420fc32463e8b7c96753962c5b053bf6263d6a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-thumay9700-jev-plays",
@@ -6209,7 +6295,7 @@
       "author": "thumay9700",
       "repo": "thumay9700/jev-plays"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-zbloss-jev-plays-pokemon",
@@ -6231,9 +6317,11 @@
       "repo": "zbloss/jev-plays-pokemon",
       "jevAbout": 0.25,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.85
+      "jevKeepConfidence": 0.85,
+      "categoryEvidenceSha": "6b3dbd45a32ca6e18b94908bfb438818ed4f29de",
+      "categoryEvidenceUrl": "https://github.com/zbloss/jev-plays-pokemon/blob/6b3dbd45a32ca6e18b94908bfb438818ed4f29de/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-krw82-jev-playwright-mcp",
@@ -6278,9 +6366,11 @@
       "repo": "Pinutss/jev-plugins",
       "jevAbout": 0.2,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.15
+      "jevKeepConfidence": 0.15,
+      "categoryEvidenceSha": "91415c0905280f481621b2257207b1fdc637a23a",
+      "categoryEvidenceUrl": "https://github.com/pinutss/jev-plugins/blob/91415c0905280f481621b2257207b1fdc637a23a/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-hacksing-jev-report",
@@ -6327,9 +6417,11 @@
       "repo": "hev/jev-rerank",
       "jevAbout": 0.83,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.9
+      "jevKeepConfidence": 0.9,
+      "categoryEvidenceSha": "1eb47266270b32b2a3667f9fb89646378ca9c9d6",
+      "categoryEvidenceUrl": "https://github.com/hev/reranker/blob/1eb47266270b32b2a3667f9fb89646378ca9c9d6/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-jgridifier-jev-research-eval",
@@ -6441,9 +6533,11 @@
       "repo": "Amrit-Nigam/jev-royal",
       "jevAbout": 0.51,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.35
+      "jevKeepConfidence": 0.35,
+      "categoryEvidenceSha": "7ae317d2e1097247a1ba7650ebca5059f2dd36bc",
+      "categoryEvidenceUrl": "https://github.com/amrit-nigam/jev-royal/blob/7ae317d2e1097247a1ba7650ebca5059f2dd36bc/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-teyhouse-jev-secret-detection",
@@ -6509,7 +6603,9 @@
       "repo": "cardotrejos/jev-should-i-apply",
       "jevAbout": 0.75,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.52
+      "jevKeepConfidence": 0.52,
+      "categoryEvidenceSha": "a5a870c9ef2ac1aa6b19fc736473ffeb1a4ee133",
+      "categoryEvidenceUrl": "https://github.com/cardotrejos/jev-should-i-apply/blob/a5a870c9ef2ac1aa6b19fc736473ffeb1a4ee133/README.md"
     },
     "category": "other"
   },
@@ -6671,7 +6767,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.83
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-cardotrejos-jev-user-jury",
@@ -6691,7 +6787,9 @@
       "repo": "cardotrejos/jev-user-jury",
       "jevAbout": 0.71,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.51
+      "jevKeepConfidence": 0.51,
+      "categoryEvidenceSha": "90643d10c1b899ca4d71c0c992026cfbb474099d",
+      "categoryEvidenceUrl": "https://github.com/cardotrejos/jev-user-jury/blob/90643d10c1b899ca4d71c0c992026cfbb474099d/README.md"
     },
     "category": "other"
   },
@@ -6761,9 +6859,11 @@
       "repo": "raihankhan-rk/jevarena",
       "jevAbout": 0.75,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.8
+      "jevKeepConfidence": 0.8,
+      "categoryEvidenceSha": "c22adde05edfc3ee16911d38b12b337c5f9727a1",
+      "categoryEvidenceUrl": "https://github.com/raihankhan-rk/jevarena/blob/c22adde05edfc3ee16911d38b12b337c5f9727a1/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-0xarx-jevegis",
@@ -6811,9 +6911,11 @@
       "repo": "hatt-io/jevkeep",
       "jevAbout": 0.58,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.9
+      "jevKeepConfidence": 0.9,
+      "categoryEvidenceSha": "d16a387e66e1a8840dcbe2d2e7a5858d92636d20",
+      "categoryEvidenceUrl": "https://github.com/hatt-io/jevkeep/blob/d16a387e66e1a8840dcbe2d2e7a5858d92636d20/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-knowlet-jevlens",
@@ -6833,9 +6935,11 @@
       "repo": "knowlet/jevlens",
       "jevAbout": 0.37,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.43
+      "jevKeepConfidence": 0.43,
+      "categoryEvidenceSha": "1e058c4e4b65bbf0ba26f3aad347ff92614742b8",
+      "categoryEvidenceUrl": "https://github.com/knowlet/jevlens/blob/1e058c4e4b65bbf0ba26f3aad347ff92614742b8/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-ndolinschi-jevplay",
@@ -6970,9 +7074,11 @@
       "repo": "ndolinschi/lanebreak",
       "jevAbout": 0.34,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.43
+      "jevKeepConfidence": 0.43,
+      "categoryEvidenceSha": "acf11293f36597c8fb706ae492a9468455b69928",
+      "categoryEvidenceUrl": "https://github.com/ndolinschi/lanebreak/blob/acf11293f36597c8fb706ae492a9468455b69928/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-0x963d-last-exit",
@@ -7042,9 +7148,11 @@
       "repo": "ndolinschi/mcpmatch",
       "jevAbout": 0.32,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.32
+      "jevKeepConfidence": 0.32,
+      "categoryEvidenceSha": "97ad8f75747edc5c40c33a1bd5b86672184fa1e7",
+      "categoryEvidenceUrl": "https://github.com/ndolinschi/mcpmatch/blob/97ad8f75747edc5c40c33a1bd5b86672184fa1e7/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-jxucoder-mimicry",
@@ -7201,9 +7309,11 @@
       "repo": "DECRUX9812/openjev",
       "jevAbout": 0.57,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.19
+      "jevKeepConfidence": 0.19,
+      "categoryEvidenceSha": "7bcf388dc4789b55ce22b37a6b5ace003913d9bb",
+      "categoryEvidenceUrl": "https://github.com/decrux9812/openjev/blob/7bcf388dc4789b55ce22b37a6b5ace003913d9bb/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-completedottech-paper-package",
@@ -7339,9 +7449,11 @@
       "repo": "Z761293629/pi-jev-helm",
       "jevAbout": 0.44,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.54
+      "jevKeepConfidence": 0.54,
+      "categoryEvidenceSha": "39faeca69bde4650abfc6d4d9051b2d75fd99b83",
+      "categoryEvidenceUrl": "https://github.com/z761293629/pi-jev-helm/blob/39faeca69bde4650abfc6d4d9051b2d75fd99b83/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-gloridifice-pi-jev-router",
@@ -7386,9 +7498,11 @@
       "repo": "twilwa/pi-typesafe",
       "jevAbout": 0.82,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.8
+      "jevKeepConfidence": 0.8,
+      "categoryEvidenceSha": "3942156e3d864d4d8448132e15982a50a1a57aeb",
+      "categoryEvidenceUrl": "https://github.com/twilwa/pi-typesafe/blob/3942156e3d864d4d8448132e15982a50a1a57aeb/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-legacybridge-tech-pi-typesafe-jev",
@@ -7409,9 +7523,11 @@
       "repo": "legacybridge-tech/pi-typesafe-jev",
       "jevAbout": 0.89,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.89
+      "jevKeepConfidence": 0.89,
+      "categoryEvidenceSha": "17e66fcd6ecfbb4c3083f748af510bf59cda985f",
+      "categoryEvidenceUrl": "https://github.com/legacybridge-tech/pi-typesafe-jev/blob/17e66fcd6ecfbb4c3083f748af510bf59cda985f/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-hemanth-pkg-gate",
@@ -7572,9 +7688,11 @@
       "repo": "juancamiloqhz/roverlab",
       "jevAbout": 0.24,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.05
+      "jevKeepConfidence": 0.05,
+      "categoryEvidenceSha": "af71a464b695046490642daeee07f8569e474cec",
+      "categoryEvidenceUrl": "https://github.com/juancamiloqhz/roverlab/blob/af71a464b695046490642daeee07f8569e474cec/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-abdelstark-s1-rs",
@@ -7744,9 +7862,11 @@
       "repo": "tylergibbs1/sift",
       "jevAbout": 0.08,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.55
+      "jevKeepConfidence": 0.55,
+      "categoryEvidenceSha": "dbfc57371583829be238833332d12537d2f8e68b",
+      "categoryEvidenceUrl": "https://github.com/tylergibbs1/sift/blob/dbfc57371583829be238833332d12537d2f8e68b/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-ivorpad-skillranker",
@@ -7766,9 +7886,11 @@
       "openIssues": 0,
       "language": null,
       "author": "ivorpad",
-      "repo": "ivorpad/skillranker"
+      "repo": "ivorpad/skillranker",
+      "categoryEvidenceSha": "08cdcc25cd8203333203b803454f89f2b508a841",
+      "categoryEvidenceUrl": "https://github.com/ivorpad/skillranker/blob/08cdcc25cd8203333203b803454f89f2b508a841/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-neddes-sloppy-jevs-extension",
@@ -7789,9 +7911,11 @@
       "repo": "neddes/sloppy-jevs-extension",
       "jevAbout": 0.16,
       "jevKeep": "drop",
-      "jevKeepConfidence": 0.05
+      "jevKeepConfidence": 0.05,
+      "categoryEvidenceSha": "96c96efcc4d7d28890ad106646aa2453518a7ab5",
+      "categoryEvidenceUrl": "https://github.com/neddes/sloppy-jevs-extension/blob/96c96efcc4d7d28890ad106646aa2453518a7ab5/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-siroccomask-snake-jev",
@@ -7904,9 +8028,11 @@
       "repo": "aniruddh-krovvidi/switchboard",
       "jevAbout": 0.65,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.82
+      "jevKeepConfidence": 0.82,
+      "categoryEvidenceSha": "6d5098fe51a058279afd1c064bed6017c070353f",
+      "categoryEvidenceUrl": "https://github.com/aniruddh-krovvidi/switchboard/blob/6d5098fe51a058279afd1c064bed6017c070353f/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-codeitlikemiley-system-one-adapter-rust",
@@ -7953,9 +8079,11 @@
       "repo": "akash-kamat/system-one-gemma",
       "jevAbout": 0.57,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.88
+      "jevKeepConfidence": 0.88,
+      "categoryEvidenceSha": "cc75aa8042dec965003210fdba033fee8759735e",
+      "categoryEvidenceUrl": "https://github.com/akash-kamat/system-one-gemma/blob/cc75aa8042dec965003210fdba033fee8759735e/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-thegali-terrarium",
@@ -7976,9 +8104,11 @@
       "repo": "TheGali/terrarium",
       "jevAbout": 0.42,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.17
+      "jevKeepConfidence": 0.17,
+      "categoryEvidenceSha": "f33ed7e22bb98285ba9c4a17a8c3c1bec76667de",
+      "categoryEvidenceUrl": "https://github.com/thegali/terrarium/blob/f33ed7e22bb98285ba9c4a17a8c3c1bec76667de/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-vehas-thaiexam-jev-charts",
@@ -8021,9 +8151,11 @@
       "repo": "karimatayuta/tiny-jev",
       "jevAbout": 0.34,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.36
+      "jevKeepConfidence": 0.36,
+      "categoryEvidenceSha": "f723dde141a84aed04ab66b5166e78a74d2a2a15",
+      "categoryEvidenceUrl": "https://github.com/karimatayuta/tiny-jev/blob/f723dde141a84aed04ab66b5166e78a74d2a2a15/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-tinyhumansai-tinyjevclient",
@@ -8066,9 +8198,11 @@
       "repo": "Spykoninho/trading-bot-jev",
       "jevAbout": 0.53,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.4
+      "jevKeepConfidence": 0.4,
+      "categoryEvidenceSha": "8d36bd257eec204fe6749b277a49e903b368b594",
+      "categoryEvidenceUrl": "https://github.com/spykoninho/trading-bot-jev/blob/8d36bd257eec204fe6749b277a49e903b368b594/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-brandonbryant12-transcript-scorecard",
@@ -8914,9 +9048,11 @@
       "repo": "Zahrannnn/zcode-jev",
       "jevAbout": 0.27,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.42
+      "jevKeepConfidence": 0.42,
+      "categoryEvidenceSha": "f3d6d787fc2bdb608b673e7d0dba3916b38f582f",
+      "categoryEvidenceUrl": "https://github.com/zahrannnn/zcode-jev/blob/f3d6d787fc2bdb608b673e7d0dba3916b38f582f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-ethanthatonekid-zocomputer-jev",
@@ -8934,9 +9070,11 @@
       "openIssues": 1,
       "language": null,
       "author": "EthanThatOneKid",
-      "repo": "EthanThatOneKid/zocomputer-jev"
+      "repo": "EthanThatOneKid/zocomputer-jev",
+      "categoryEvidenceSha": "391464aa765c16af41a3e83d811773811b283d6c",
+      "categoryEvidenceUrl": "https://github.com/ethanthatonekid/zocomputer-jev/blob/391464aa765c16af41a3e83d811773811b283d6c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-appitstudio-awesome-jev",
@@ -9074,9 +9212,11 @@
       "repo": "Zefan-Cai/Open-Jev",
       "jevAbout": 0.55,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.78
+      "jevKeepConfidence": 0.78,
+      "categoryEvidenceSha": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16",
+      "categoryEvidenceUrl": "https://github.com/zefan-cai/open-jev/blob/3308a15ccd7eea1df7a37d6ddc39b023b801ba16/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-jiawei686-jev-ultrafast-mcp",
@@ -9099,7 +9239,7 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.78
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-24601-augustus",
@@ -9144,9 +9284,11 @@
       "repo": "qs-lll/twitter-jev-guard",
       "jevAbout": 0.85,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.93
+      "jevKeepConfidence": 0.93,
+      "categoryEvidenceSha": "56f2ac110e9fe9f8b5c377e530084af73f1c411c",
+      "categoryEvidenceUrl": "https://github.com/qs-lll/twitter-jev-guard/blob/56f2ac110e9fe9f8b5c377e530084af73f1c411c/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-backmeupplz-jev_antispam_bot",
@@ -9190,9 +9332,11 @@
       "repo": "qkal/Canny",
       "jevAbout": 0.85,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.93
+      "jevKeepConfidence": 0.93,
+      "categoryEvidenceSha": "f2c5e53779445d60dc4a09d2dbced2308fccb820",
+      "categoryEvidenceUrl": "https://github.com/qkal/canny/blob/f2c5e53779445d60dc4a09d2dbced2308fccb820/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-xubqpanda-jevrepo",
@@ -9236,9 +9380,11 @@
       "repo": "455-dIAO/windows-save-token-jev-setup",
       "jevAbout": 0.55,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.78
+      "jevKeepConfidence": 0.78,
+      "categoryEvidenceSha": "38f56449b87fb7ad42d2ee6e71fbedc287b2fcab",
+      "categoryEvidenceUrl": "https://github.com/455-diao/windows-save-token-jev-setup/blob/38f56449b87fb7ad42d2ee6e71fbedc287b2fcab/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-collapseindex-jev-ultralightspeed",
@@ -9259,9 +9405,11 @@
       "repo": "collapseindex/jev-ultralightspeed",
       "jevAbout": 0.55,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.78
+      "jevKeepConfidence": 0.78,
+      "categoryEvidenceSha": "f57948757d6f3a77b3997a2e2a4ddc5dff0bdbb2",
+      "categoryEvidenceUrl": "https://github.com/collapseindex/jev-ultralightspeed/blob/f57948757d6f3a77b3997a2e2a4ddc5dff0bdbb2/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-imrishit98-jev.aitools.fyi",
@@ -9422,9 +9570,11 @@
       "repo": "epergaboni/jevseo",
       "jevAbout": 0.9,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.95
+      "jevKeepConfidence": 0.95,
+      "categoryEvidenceSha": "2ed1fbbaf90f86715dd489e5fe39416fa4879f17",
+      "categoryEvidenceUrl": "https://github.com/epergaboni/jevseo/blob/2ed1fbbaf90f86715dd489e5fe39416fa4879f17/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-ismaelsoilet-jev-harness",
@@ -9445,9 +9595,11 @@
       "repo": "ismaelsoilet/jev-harness",
       "jevAbout": 0.55,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.78
+      "jevKeepConfidence": 0.78,
+      "categoryEvidenceSha": "160e28f1d03bd85d188afaea458bf26983f9dfa2",
+      "categoryEvidenceUrl": "https://github.com/ismaelsoilet/jev-harness/blob/160e28f1d03bd85d188afaea458bf26983f9dfa2/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-rdk16-jevudio",
@@ -9582,9 +9734,11 @@
       "repo": "YuanKJing/Jev-as-Policy",
       "jevAbout": 0.55,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.78
+      "jevKeepConfidence": 0.78,
+      "categoryEvidenceSha": "cac97e79845bf56a5b2ef0e6d4928238bf5caee7",
+      "categoryEvidenceUrl": "https://github.com/yuankjing/jev-as-policy/blob/cac97e79845bf56a5b2ef0e6d4928238bf5caee7/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-1aifanatic-jev-uipath-coded-agent",
@@ -9629,9 +9783,11 @@
       "repo": "andepants/feed-rubric",
       "jevAbout": 0.85,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.93
+      "jevKeepConfidence": 0.93,
+      "categoryEvidenceSha": "16ae6c565d62591a03487ad8d75a972ffd0c668b",
+      "categoryEvidenceUrl": "https://github.com/andepants/feed-rubric/blob/16ae6c565d62591a03487ad8d75a972ffd0c668b/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-az9713-jev-projects",
@@ -9653,9 +9809,11 @@
       "repo": "az9713/jev-projects",
       "jevAbout": 0.85,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.93
+      "jevKeepConfidence": 0.93,
+      "categoryEvidenceSha": "e1d3db51bca8ae70124f9417036b51ac5feae129",
+      "categoryEvidenceUrl": "https://github.com/az9713/jev-projects/blob/e1d3db51bca8ae70124f9417036b51ac5feae129/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-cedarmuse-creator-jev-decision-maker-at-meteora",
@@ -9841,9 +9999,11 @@
       "repo": "hoaphm/jev-decision-maker",
       "jevAbout": 0.9,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.95
+      "jevKeepConfidence": 0.95,
+      "categoryEvidenceSha": "58465ea8b073a2a62bd5c62682c2e1a348ad4ad7",
+      "categoryEvidenceUrl": "https://github.com/hoaphm/jev-decision-maker/blob/58465ea8b073a2a62bd5c62682c2e1a348ad4ad7/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-jijaraba-logipulseai_jev",
@@ -9865,9 +10025,11 @@
       "repo": "jijaraba/LogiPulseAI_JEV",
       "jevAbout": 0.9,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.95
+      "jevKeepConfidence": 0.95,
+      "categoryEvidenceSha": "0ca0826a1c014a6395031c06fdc4a8bc35e03b57",
+      "categoryEvidenceUrl": "https://github.com/jijaraba/logipulseai_jev/blob/0ca0826a1c014a6395031c06fdc4a8bc35e03b57/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-keepwonder-jev-hub",
@@ -9912,9 +10074,11 @@
       "repo": "kurihada/pi-jev-permit",
       "jevAbout": 0.9,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.95
+      "jevKeepConfidence": 0.95,
+      "categoryEvidenceSha": "3a4ba4168b75a656a1655687da4e7dec109dffef",
+      "categoryEvidenceUrl": "https://github.com/kurihada/pi-jev-permit/blob/3a4ba4168b75a656a1655687da4e7dec109dffef/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-ryuchan00-jev_practice",
@@ -10054,9 +10218,11 @@
       "repo": "Zafer-Liu/jev-demo-rag",
       "jevAbout": 0.85,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.93
+      "jevKeepConfidence": 0.93,
+      "categoryEvidenceSha": "9b989b594dd352f885052b1b9de49e71f4e75714",
+      "categoryEvidenceUrl": "https://github.com/zafer-liu/jev-demo-rag/blob/9b989b594dd352f885052b1b9de49e71f4e75714/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-4-0x1f-pi-jev-multi-provider",
@@ -10150,9 +10316,11 @@
       "date": "2026-09-21",
       "jevAbout": 0.94,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.98
+      "jevKeepConfidence": 0.98,
+      "categoryEvidenceSha": "0c2f04580011d013b301c879a0a7719631384f9d",
+      "categoryEvidenceUrl": "https://github.com/0xjba/bennyfit/blob/0c2f04580011d013b301c879a0a7719631384f9d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-99hansling-awesome-jev",
@@ -10393,9 +10561,11 @@
       "date": "2026-09-21",
       "jevAbout": 0.93,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.98
+      "jevKeepConfidence": 0.98,
+      "categoryEvidenceSha": "792f1720dbc4aec6642d9a51dd932209aa0b05cc",
+      "categoryEvidenceUrl": "https://github.com/adlternative/tally/blob/792f1720dbc4aec6642d9a51dd932209aa0b05cc/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-ahtoooxa-jev-cyrillic-audit",
@@ -10499,9 +10669,11 @@
       "date": "2026-09-19",
       "jevAbout": 0.93,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.97
+      "jevKeepConfidence": 0.97,
+      "categoryEvidenceSha": "8e6f6405fcb0c1b429f60852f6db537f269f94da",
+      "categoryEvidenceUrl": "https://github.com/alexwestco/llm-to-jev/blob/8e6f6405fcb0c1b429f60852f6db537f269f94da/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-8-aliaihub-awesome-jev-usecases",
@@ -10615,9 +10787,11 @@
       "date": "2026-09-20",
       "jevAbout": 0.93,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.92
+      "jevKeepConfidence": 0.92,
+      "categoryEvidenceSha": "cfca6cc78b47e0a3f128a5a566712c0b89ec378f",
+      "categoryEvidenceUrl": "https://github.com/allenporter/home-assistant-typesafe/blob/cfca6cc78b47e0a3f128a5a566712c0b89ec378f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-9-alsoleg89-jev-bouncer",
@@ -10645,9 +10819,11 @@
       "date": "2026-09-19",
       "jevAbout": 0.94,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.97
+      "jevKeepConfidence": 0.97,
+      "categoryEvidenceSha": "d0776268eb985c6d603a1c0b0e7cfaa7a493d526",
+      "categoryEvidenceUrl": "https://github.com/alsoleg89/jev-bouncer/blob/d0776268eb985c6d603a1c0b0e7cfaa7a493d526/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-amazingjoe-pi-saver",
@@ -10734,9 +10910,11 @@
       "date": "2026-09-21",
       "jevAbout": 0.97,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.99
+      "jevKeepConfidence": 0.99,
+      "categoryEvidenceSha": "eb022bb5cc5bbade34f0ade61c25c98131156461",
+      "categoryEvidenceUrl": "https://github.com/andrest04/jev-lab/blob/eb022bb5cc5bbade34f0ade61c25c98131156461/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-7-antting-jev-accounts-hub",
@@ -10758,9 +10936,11 @@
       "date": "2026-09-21",
       "jevAbout": 0.97,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.95
+      "jevKeepConfidence": 0.95,
+      "categoryEvidenceSha": "41b32ca8078ea5d7a3c1be2f915ebbcfe7d02546",
+      "categoryEvidenceUrl": "https://github.com/antting/jev-accounts-hub/blob/41b32ca8078ea5d7a3c1be2f915ebbcfe7d02546/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-8-aoprisan-jev-ts-repl",
@@ -10782,9 +10962,11 @@
       "date": "2026-09-18",
       "jevAbout": 0.96,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.98
+      "jevKeepConfidence": 0.98,
+      "categoryEvidenceSha": "224b4cd11b779807ed4ca446fb730b90dd59f6c9",
+      "categoryEvidenceUrl": "https://github.com/aoprisan/jev-ts-repl/blob/224b4cd11b779807ed4ca446fb730b90dd59f6c9/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-8-aoprisan-typesafe-ai-rust-sdk",
@@ -10859,9 +11041,11 @@
       "date": "2026-09-20",
       "jevAbout": 0.92,
       "jevKeep": "keep",
-      "jevKeepConfidence": 0.97
+      "jevKeepConfidence": 0.97,
+      "categoryEvidenceSha": "ceacd5a20430691d02e656f161fdc2632a713026",
+      "categoryEvidenceUrl": "https://github.com/arkane-o7/sentinel/blob/ceacd5a20430691d02e656f161fdc2632a713026/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-19-aryanchauhanoffical-no-hallucination",
@@ -11051,9 +11235,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "33c6c12f702092c9ff7889a3ed261af9fb4344b4",
+      "categoryEvidenceUrl": "https://github.com/ashadeepa/typesafe-showcase/blob/33c6c12f702092c9ff7889a3ed261af9fb4344b4/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-13-atharvamhaske-typesafe-sdk-go",
@@ -11134,9 +11320,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "c10f5c8fab7596d0df7d77a2fc9de18b53b0e416",
+      "categoryEvidenceUrl": "https://github.com/avirooppaul/jev-playground/blob/c10f5c8fab7596d0df7d77a2fc9de18b53b0e416/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-14-beingcognitive-jev-go",
@@ -11461,9 +11649,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "5c474a91376a70931255f810892bb14d0868b37d",
+      "categoryEvidenceUrl": "https://github.com/bubbathevtog/pi-jev-anti-slop/blob/5c474a91376a70931255f810892bb14d0868b37d/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-7-buberlo-dsh-jev",
@@ -11701,9 +11891,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "097936be9b46154a59fca7a7f1852685c68f8dc0",
+      "categoryEvidenceUrl": "https://github.com/chanrute/jev-ui/blob/097936be9b46154a59fca7a7f1852685c68f8dc0/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-7-chaslui-vai2jev",
@@ -11828,9 +12020,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "656199c3f298fa2ed7764612558f866bb5804c84",
+      "categoryEvidenceUrl": "https://github.com/chenneyzhuang/laya-browser-agent/blob/656199c3f298fa2ed7764612558f866bb5804c84/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-chenreuven-jev-slide",
@@ -11867,9 +12061,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "5731227393cdf7a9ecb6d3fb5c33b4fee88c8a81",
+      "categoryEvidenceUrl": "https://github.com/chenreuven/jev-slide/blob/5731227393cdf7a9ecb6d3fb5c33b4fee88c8a81/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-chenrui333-jev-docs",
@@ -11951,9 +12147,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "d962bceb408de9504a3dfb7a534a7cbaac736abd",
+      "categoryEvidenceUrl": "https://github.com/chewcw/project-scale-jev-demonstration/blob/d962bceb408de9504a3dfb7a534a7cbaac736abd/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-15-chris-wozniczek-jev-voice-control",
@@ -12072,9 +12270,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "4bf77b82cdf0707f55442ef9053b1c52a4b944aa",
+      "categoryEvidenceUrl": "https://github.com/christiancruzarango/triaje-ambulancias/blob/4bf77b82cdf0707f55442ef9053b1c52a4b944aa/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-chronona-jev-llm-benchmark",
@@ -12195,9 +12395,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "2f7f49e1dd496085e7f844e52872d175ce9eaf0c",
+      "categoryEvidenceUrl": "https://github.com/clouatre-labs/decisions-judge-mcp/blob/2f7f49e1dd496085e7f844e52872d175ce9eaf0c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-9-codercise-jev-in-practice",
@@ -12234,9 +12436,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "02be666a30ad39d4e9000199f7e8e2c612abfb4f",
+      "categoryEvidenceUrl": "https://github.com/codercise/jev-in-practice/blob/02be666a30ad39d4e9000199f7e8e2c612abfb4f/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-12-codewitheren-jev-openrouter-demo",
@@ -12275,7 +12479,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-15-completedottech-jev-factorio-agent",
@@ -12458,9 +12662,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "e9d4bb38dbba7c7dba0cd4d0504ada741c87d1d7",
+      "categoryEvidenceUrl": "https://github.com/ctmx/openrouter-jev-mcp/blob/e9d4bb38dbba7c7dba0cd4d0504ada741c87d1d7/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-9-curajorge-judgment-map",
@@ -12497,9 +12703,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "df3f212cbb39f7dbdac17029009963d740138731",
+      "categoryEvidenceUrl": "https://github.com/curajorge/judgment-map/blob/df3f212cbb39f7dbdac17029009963d740138731/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-cyrusasco-jevcompact",
@@ -12614,9 +12822,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "6d32079a15ae22c224b8f1d6d153a184d8b7ecc0",
+      "categoryEvidenceUrl": "https://github.com/danijel-enoch/banger-tweet/blob/6d32079a15ae22c224b8f1d6d153a184d8b7ecc0/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-daud4653-jev-model-router",
@@ -12770,9 +12980,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "4ee0d71e09a6c7ca4c9a6e565383899d2e026877",
+      "categoryEvidenceUrl": "https://github.com/dealerdefi/jevmind/blob/4ee0d71e09a6c7ca4c9a6e565383899d2e026877/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-dearest-plotveil",
@@ -12815,9 +13027,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "9df38df19beaffc0a5db21eca2a70f665222b71f",
+      "categoryEvidenceUrl": "https://github.com/dearest/plotveil/blob/9df38df19beaffc0a5db21eca2a70f665222b71f/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-delineas-jev-review",
@@ -13151,9 +13365,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "377f4ad523f194007b1e4670fd8d25a0ad515f21",
+      "categoryEvidenceUrl": "https://github.com/doronp/jevc/blob/377f4ad523f194007b1e4670fd8d25a0ad515f21/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-8-dowlucas-browser-jev",
@@ -13413,9 +13629,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "1248dc6dc50580ee31b404de0cdff884e45e7df0",
+      "categoryEvidenceUrl": "https://github.com/emerson-buoy/jev-ticket-classifier/blob/1248dc6dc50580ee31b404de0cdff884e45e7df0/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-13-emilianoveron-jev-cms",
@@ -13703,9 +13921,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "42984d88e20aeb4b17af645c893c22fd71414f05",
+      "categoryEvidenceUrl": "https://github.com/etweisberg/jev-ui/blob/42984d88e20aeb4b17af645c893c22fd71414f05/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-9-evgen-rus-jev_voice_browser",
@@ -13742,9 +13962,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "8081418dc1a12b08c9ac306b5c06707df8ae2e02",
+      "categoryEvidenceUrl": "https://github.com/evgen-rus/jev_voice_browser/blob/8081418dc1a12b08c9ac306b5c06707df8ae2e02/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-11-evoke-build-evoke",
@@ -13787,9 +14009,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "c3c3da923e63a6398f33082f738ef01f38ea67f5",
+      "categoryEvidenceUrl": "https://github.com/evoke-build/evoke/blob/c3c3da923e63a6398f33082f738ef01f38ea67f5/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-5-fanly-jev-awesome",
@@ -13954,9 +14178,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "c3eff3de60f237d49b4341cb0c7f3a679f6280d0",
+      "categoryEvidenceUrl": "https://github.com/ferxalbs/aether-hold/blob/c3eff3de60f237d49b4341cb0c7f3a679f6280d0/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-ferxalbs-needle-lens",
@@ -13993,9 +14219,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "66bdf02e285baea3173356c56d2f1286917fa6b9",
+      "categoryEvidenceUrl": "https://github.com/ferxalbs/needle-lens/blob/66bdf02e285baea3173356c56d2f1286917fa6b9/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-fiale-plus-jev-cli",
@@ -14113,9 +14341,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "d08a86bf9c3bc92c01822019167566f9e706b568",
+      "categoryEvidenceUrl": "https://github.com/florianriquelme/jev-kit/blob/d08a86bf9c3bc92c01822019167566f9e706b568/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-15-fstandhartinger-jevbench",
@@ -14236,9 +14466,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "1cfd26120fb9d082d4e605bbc6a5fa55916da54c",
+      "categoryEvidenceUrl": "https://github.com/gavansmyth-arch/jev-chrome-extension/blob/1cfd26120fb9d082d4e605bbc6a5fa55916da54c/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-9-gazer2020-jev-btzsc",
@@ -14275,9 +14507,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "5ef3118277654987bc739d9812ec90da367dff2a",
+      "categoryEvidenceUrl": "https://github.com/gazer2020/jev-btzsc/blob/5ef3118277654987bc739d9812ec90da367dff2a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-6-gbesse-jev-banc-francais",
@@ -14538,9 +14772,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "3c2285aa1ec92cd282fa564de3c88fbedc39247e",
+      "categoryEvidenceUrl": "https://github.com/gbesse/jev-datagouv-join/blob/3c2285aa1ec92cd282fa564de3c88fbedc39247e/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-6-gbesse-jev-duelarena",
@@ -14933,9 +15169,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "b1750ecdc202e2a105653173f44778dfe5f8ad62",
+      "categoryEvidenceUrl": "https://github.com/gbesse/jev-marianne/blob/b1750ecdc202e2a105653173f44778dfe5f8ad62/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-6-gbesse-jev-meetingpulse",
@@ -15109,9 +15347,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "6f6dfa5bd3b16d70b6b8c45d7073e13af5a29574",
+      "categoryEvidenceUrl": "https://github.com/gbesse/jev-regwatch/blob/6f6dfa5bd3b16d70b6b8c45d7073e13af5a29574/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-6-gbesse-jev-rerank-server",
@@ -15331,9 +15571,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "811bd35d1c60aa9f6d9d44812734c69c81ca0a3f",
+      "categoryEvidenceUrl": "https://github.com/gbesse/jev-timemachine/blob/811bd35d1c60aa9f6d9d44812734c69c81ca0a3f/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-6-gbesse-jev-trace",
@@ -15421,9 +15663,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "4a698d010f2688bb4dd22be4f477ca0f30739a60",
+      "categoryEvidenceUrl": "https://github.com/generallymatthew/factlabel/blob/4a698d010f2688bb4dd22be4f477ca0f30739a60/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-16-gexiuzhen-sketch-jev-chinese-console",
@@ -15577,9 +15821,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "0e7bb990211df139da13dc67aa2a7aceca311af7",
+      "categoryEvidenceUrl": "https://github.com/gpt-agi/openjev/blob/0e7bb990211df139da13dc67aa2a7aceca311af7/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-10-gradient30-typesafe-handbook",
@@ -15658,9 +15904,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "e0a97166bd1e7775ea113f8707e2a2dfc763790d",
+      "categoryEvidenceUrl": "https://github.com/gregjonesio/jev-nfl/blob/e0a97166bd1e7775ea113f8707e2a2dfc763790d/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-10-gudcks0305-jev-java",
@@ -15786,9 +16034,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "3bccd6e9287b81af4ebe69873b9fff04393e549b",
+      "categoryEvidenceUrl": "https://github.com/gvkhosla/typesafe-pi/blob/3bccd6e9287b81af4ebe69873b9fff04393e549b/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-21-gyozameronpanofficial-human-exe-jev",
@@ -16146,9 +16396,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "5d04bcca0c58bd10e7dac2d3d369d8f760bea6cf",
+      "categoryEvidenceUrl": "https://github.com/iapp-technology/openthai-systemone/blob/5d04bcca0c58bd10e7dac2d3d369d8f760bea6cf/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-igrosny-choola",
@@ -16364,9 +16616,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "0aba8d2daf13b6f3ddcf499020f5ca49d44c8b85",
+      "categoryEvidenceUrl": "https://github.com/integralmarketingmx/jev-latam-lead-triage/blob/0aba8d2daf13b6f3ddcf499020f5ca49d44c8b85/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-intikhab49-open-jev-typed-decision-engine",
@@ -16454,9 +16708,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "4f7b641558e62b2fce3413230b7471b595db7b1a",
+      "categoryEvidenceUrl": "https://github.com/inverx/jevre/blob/4f7b641558e62b2fce3413230b7471b595db7b1a/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-isavita-grid-duel-lab",
@@ -16493,9 +16749,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "584eacf261d7e1c0ee51be008b98be72151e0e1c",
+      "categoryEvidenceUrl": "https://github.com/isavita/grid-duel-lab/blob/584eacf261d7e1c0ee51be008b98be72151e0e1c/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-ishantanu-jevtraces",
@@ -16749,9 +17007,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "04db3ca1297df304f14f34c6d7c01b2842e7ee0c",
+      "categoryEvidenceUrl": "https://github.com/jacintofleta/geojev/blob/04db3ca1297df304f14f34c6d7c01b2842e7ee0c/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-jackbarunz-jev-tool-router",
@@ -16929,9 +17189,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "557598fced1dada75dfbf36ed144dce309ac6ceb",
+      "categoryEvidenceUrl": "https://github.com/jaredpalmer/kev/blob/557598fced1dada75dfbf36ed144dce309ac6ceb/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-5-jbt95-jev-toolkit",
@@ -17109,9 +17371,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27",
+      "categoryEvidenceUrl": "https://github.com/jiawei686/jev-screen-mcp/blob/e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-9-jiaweixie-jev-enhanced-plugin",
@@ -17367,7 +17631,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-13-jorgediamanto-jev-playground",
@@ -17443,9 +17707,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "dd435bb332d96ae3dbd0204afdb7472f14bb5373",
+      "categoryEvidenceUrl": "https://github.com/jsun969/github-categorizing-jev/blob/dd435bb332d96ae3dbd0204afdb7472f14bb5373/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-jtnkminimal-awesome-jev",
@@ -17521,9 +17787,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
+      },
+      "categoryEvidenceSha": "e55e8a3eecc73cf9ae53ad3fc37d988fc9ff6212",
+      "categoryEvidenceUrl": "https://github.com/juanegido/promesometro/blob/e55e8a3eecc73cf9ae53ad3fc37d988fc9ff6212/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-jyatesdotdev-jev-logtriage",
@@ -17609,9 +17877,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "82cd45f2c69d2fa66ca84eaa3e7f6b254bd22213",
+      "categoryEvidenceUrl": "https://github.com/kaitoy/jev-rca/blob/82cd45f2c69d2fa66ca84eaa3e7f6b254bd22213/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-7-kaos599-jev-writer",
@@ -17654,9 +17924,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "e813eddcab17dd5cf4e163d740b8a493dc297f07",
+      "categoryEvidenceUrl": "https://github.com/kaos599/jev-writer/blob/e813eddcab17dd5cf4e163d740b8a493dc297f07/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-karanb192-jev-architect",
@@ -17865,9 +18137,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "ffee1fa7c2baa17635ae8e0e9d2164f2919e5f62",
+      "categoryEvidenceUrl": "https://github.com/kcc989/keeled/blob/ffee1fa7c2baa17635ae8e0e9d2164f2919e5f62/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-keiffff-jev-kit",
@@ -17904,9 +18178,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "291ba7a5693e1b8866df27af0100078ff769bf2b",
+      "categoryEvidenceUrl": "https://github.com/keiffff/jev-kit/blob/291ba7a5693e1b8866df27af0100078ff769bf2b/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-10-kenhuangus-jev-usecases",
@@ -17943,9 +18219,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "d4b289586b6b21e07bf17f195acf06de920bb2a6",
+      "categoryEvidenceUrl": "https://github.com/kenhuangus/jev-usecases/blob/d4b289586b6b21e07bf17f195acf06de920bb2a6/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-13-kennethashley-awesome-jev",
@@ -18024,9 +18302,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "96426338bd1fe26e3f9a206b4796eb7466d29ce7",
+      "categoryEvidenceUrl": "https://github.com/kevhill/jev-hierarchy/blob/96426338bd1fe26e3f9a206b4796eb7466d29ce7/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-9-kisshan13-typesafe-ai-go",
@@ -18108,9 +18388,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "b14b347e193f705d277017e98386b4f2511c82fd",
+      "categoryEvidenceUrl": "https://github.com/kouyamacreate/jevtetris/blob/b14b347e193f705d277017e98386b4f2511c82fd/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-kraayenjon-awesome-jev",
@@ -18277,9 +18559,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "e56bca7088e47b75bdc5b60d4ddbd3140971da39",
+      "categoryEvidenceUrl": "https://github.com/kz-95/kz-harness/blob/e56bca7088e47b75bdc5b60d4ddbd3140971da39/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-14-lafollett-labs-typesafe-jev-dojo",
@@ -18322,9 +18606,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "bc741d885fa17dfd0080e4359e68b3751fa0d344",
+      "categoryEvidenceUrl": "https://github.com/lafollett-labs/typesafe-jev-dojo/blob/bc741d885fa17dfd0080e4359e68b3751fa0d344/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-7-laguagu-jev-skills",
@@ -18457,9 +18743,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "98ed1a274fc0136028aa2760940b9609bd6f826c",
+      "categoryEvidenceUrl": "https://github.com/lalitsonawane/jev-one-system/blob/98ed1a274fc0136028aa2760940b9609bd6f826c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-12-laurentkempe-typesafejevplayground",
@@ -18870,9 +19158,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "922c9eeb512a156974f48b7a5917859f0ff1c7ed",
+      "categoryEvidenceUrl": "https://github.com/lvzhaobo/bluff-royale/blob/922c9eeb512a156974f48b7a5917859f0ff1c7ed/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-maddygoround-typesafeai-cli",
@@ -18912,9 +19202,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "34be2419528e893ae1ab63d392d74eb15f051a7b",
+      "categoryEvidenceUrl": "https://github.com/maddygoround/typesafeai-cli/blob/34be2419528e893ae1ab63d392d74eb15f051a7b/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-11-maher-reven-calibrant",
@@ -19403,9 +19695,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "0d33747a804b40b437c73181ea5b7fc193b7664d",
+      "categoryEvidenceUrl": "https://github.com/mavericksxx/typesafe-jev-history-globe/blob/0d33747a804b40b437c73181ea5b7fc193b7664d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-mgecawicz-jev_bot",
@@ -19543,9 +19837,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "80012ca2abe8d000798e2dc7d717171058f1e6db",
+      "categoryEvidenceUrl": "https://github.com/micha0827/snapjudge/blob/80012ca2abe8d000798e2dc7d717171058f1e6db/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-12-microchipgnu-jev-hooks",
@@ -19675,9 +19971,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "a710210670c87824cc00b81833d5914864ae0e0c",
+      "categoryEvidenceUrl": "https://github.com/mintannn/jev-asks-until-sure/blob/a710210670c87824cc00b81833d5914864ae0e0c/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-6-mizchi-jev-lint",
@@ -19805,9 +20103,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "601c98d407f20a6ecbf2577a09337bea8daab775",
+      "categoryEvidenceUrl": "https://github.com/moritalous/jev-persona-panel/blob/601c98d407f20a6ecbf2577a09337bea8daab775/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-moritzkremb-jev-voice-browser",
@@ -19889,9 +20189,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "2a0ce3e245d6ad7dd030f4ad5bed26ccac599c21",
+      "categoryEvidenceUrl": "https://github.com/morohn/meridian-demo/blob/2a0ce3e245d6ad7dd030f4ad5bed26ccac599c21/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-moruku36-messenger-human-firewall",
@@ -19928,9 +20230,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "e5a5ec3cf6ca57dea5ca8df03644e5c24dbee081",
+      "categoryEvidenceUrl": "https://github.com/moruku36/messenger-human-firewall/blob/e5a5ec3cf6ca57dea5ca8df03644e5c24dbee081/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-mrebbert-jev-customerservice-demo",
@@ -19971,9 +20275,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "52efae2905e0ab1332fb9cde656021c6dfaabede",
+      "categoryEvidenceUrl": "https://github.com/mrebbert/jev-customerservice-demo/blob/52efae2905e0ab1332fb9cde656021c6dfaabede/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-5-mrjev-awesome-jev",
@@ -20054,9 +20360,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "060c884680cd77d6264a030e99124ceec732b559",
+      "categoryEvidenceUrl": "https://github.com/mura012/jev-test/blob/060c884680cd77d6264a030e99124ceec732b559/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-5-nak1b-jev-experiments",
@@ -20136,9 +20444,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "4b3514fef3bd89dbf309e00538c33ce4f80372cc",
+      "categoryEvidenceUrl": "https://github.com/nash171/dotmaster/blob/4b3514fef3bd89dbf309e00538c33ce4f80372cc/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-navidkashani-jev-guard",
@@ -20384,9 +20694,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "85418f7d7100e2cf6cb4982a3b8e0b36ab9d03dd",
+      "categoryEvidenceUrl": "https://github.com/nhchoi98/demo_trend_searcher/blob/85418f7d7100e2cf6cb4982a3b8e0b36ab9d03dd/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-6-nibir1-typesafe-go",
@@ -20474,9 +20786,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "e688e870e4a2eebb3b01d557f00d8ad1cdc10203",
+      "categoryEvidenceUrl": "https://github.com/ninjasweb/jev-blog-filter/blob/e688e870e4a2eebb3b01d557f00d8ad1cdc10203/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-norisuke0131-todoapp",
@@ -20636,9 +20950,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T11:39:00.649Z"
-      }
+      },
+      "categoryEvidenceSha": "0a2928f7ab415e8dd14bde483dc793e566c9f8fb",
+      "categoryEvidenceUrl": "https://github.com/nvkudva/laya-server/blob/0a2928f7ab415e8dd14bde483dc793e566c9f8fb/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-8-ogamircs-jev-demo",
@@ -20930,9 +21246,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d9df4e9aa3baa26f6d4298dc05928550301aa44c",
+      "categoryEvidenceUrl": "https://github.com/pablozr/jevguard/blob/d9df4e9aa3baa26f6d4298dc05928550301aa44c/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-8-pambrose-jev4k",
@@ -21059,9 +21377,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "6645aec794015ff64b73eb70f8b7679c1d6cd4fb",
+      "categoryEvidenceUrl": "https://github.com/pavellizunov/jev-sentinel/blob/6645aec794015ff64b73eb70f8b7679c1d6cd4fb/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-12-pavlealeksic-jev-hermes",
@@ -21098,9 +21418,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "ff858e9573228433adfe45409e31ca8ab308f14c",
+      "categoryEvidenceUrl": "https://github.com/pavlealeksic/jev-hermes/blob/ff858e9573228433adfe45409e31ca8ab308f14c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-11-pb-crackers-jev-cognigy-qa-suite",
@@ -21137,9 +21459,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d0ad60e8f4e52a9c95fd86b52e3185cb559172c9",
+      "categoryEvidenceUrl": "https://github.com/pb-crackers/jev-cognigy-qa-suite/blob/d0ad60e8f4e52a9c95fd86b52e3185cb559172c9/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-13-pedro-pscunha-guideme-rust",
@@ -21283,9 +21607,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "512aa7c7b535537d0585f2ab9e419b3544d24cac",
+      "categoryEvidenceUrl": "https://github.com/perrylink/jevcore/blob/512aa7c7b535537d0585f2ab9e419b3544d24cac/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-11-peterfriese-jev-foundation-models",
@@ -21492,9 +21818,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "c1bdc3b2724dc8c813f5cae285696bbf8969c4a2",
+      "categoryEvidenceUrl": "https://github.com/promiseeuler/jevswitch/blob/c1bdc3b2724dc8c813f5cae285696bbf8969c4a2/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-16-promptgtm-shared-clay-jev-people-ranker",
@@ -21580,9 +21908,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "a558159e39fa4316c7b7326caf38aa2329141946",
+      "categoryEvidenceUrl": "https://github.com/proshunsuke/jev-tab-order/blob/a558159e39fa4316c7b7326caf38aa2329141946/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-4-qew7-jev-feels",
@@ -21625,9 +21955,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "76fa9af29e397fa0afe8cefca1795c27574383be",
+      "categoryEvidenceUrl": "https://github.com/qew7/jev-feels/blob/76fa9af29e397fa0afe8cefca1795c27574383be/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-7-quaeast-vllm2jev",
@@ -21706,9 +22038,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f48b209473d2ea6f8f93c073dc58dd955ad7bad9",
+      "categoryEvidenceUrl": "https://github.com/rakshabharvada/cantrefuse.deck/blob/f48b209473d2ea6f8f93c073dc58dd955ad7bad9/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-ray-hughes-jevalyn",
@@ -21930,9 +22264,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b89733caa537335d376e3a2dd7572cf58f78111a",
+      "categoryEvidenceUrl": "https://github.com/replynodes/jev-web-analyzer/blob/b89733caa537335d376e3a2dd7572cf58f78111a/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-7-revocgg-typesafe-jev-bridge",
@@ -22014,9 +22350,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "6e92381df8b6172f3bacc532e6649d82da158ecc",
+      "categoryEvidenceUrl": "https://github.com/rezastd/living-npc-world/blob/6e92381df8b6172f3bacc532e6649d82da158ecc/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-5-rhc98-awesome-jev",
@@ -22102,9 +22440,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1178d2e73d9bcc77082939c8eead6778062d299d",
+      "categoryEvidenceUrl": "https://github.com/rhelmer/filelathe/blob/1178d2e73d9bcc77082939c8eead6778062d299d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-6-rhighs-jev-code",
@@ -22196,9 +22536,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "9b4abd1ee7d633377b5cfb780ead9dc514082350",
+      "categoryEvidenceUrl": "https://github.com/rishhavv/tabjev/blob/9b4abd1ee7d633377b5cfb780ead9dc514082350/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-riwriwara-jev-computer",
@@ -22235,9 +22577,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1e98d8fe3c414beb125fc2d1f74585e463990897",
+      "categoryEvidenceUrl": "https://github.com/riwriwara/jev-computer/blob/1e98d8fe3c414beb125fc2d1f74585e463990897/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-10-robertjndw-gosys1",
@@ -22438,9 +22782,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "349f70af7f8669ff3dc97fb4099304249326c229",
+      "categoryEvidenceUrl": "https://github.com/rorshopping/jev-browser-local/blob/349f70af7f8669ff3dc97fb4099304249326c229/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-13-royalpinto007-jev-msw",
@@ -22528,9 +22874,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3bf03607dd6a6995d41972cc3610c036668878e0",
+      "categoryEvidenceUrl": "https://github.com/rtorcato/jev-stocks/blob/3bf03607dd6a6995d41972cc3610c036668878e0/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-rudy2steiner-awesome-jev-hub",
@@ -22696,9 +23044,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "df77b46137d76f043c112b0dfbba2b2328d36532",
+      "categoryEvidenceUrl": "https://github.com/sah1l/jev-battleship/blob/df77b46137d76f043c112b0dfbba2b2328d36532/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-14-samyakjain0606-jev-is-here",
@@ -23039,9 +23389,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4f4016c4122e7f8466e648d08d6969ad6558a59c",
+      "categoryEvidenceUrl": "https://github.com/selmar/typesafe-jev-calibrate-for-code-review/blob/4f4016c4122e7f8466e648d08d6969ad6558a59c/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-12-shaharia-lab-jev-cli",
@@ -23134,9 +23486,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4bdda04bc674e2f4ca1cbef89e4d9edd08a37d8a",
+      "categoryEvidenceUrl": "https://github.com/shailesh-svg/jev-poc-lead-gen/blob/4bdda04bc674e2f4ca1cbef89e4d9edd08a37d8a/Readme.MD"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-shaunie2fly-jev-8-ball-oracle",
@@ -23212,9 +23566,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "8b35c4399a42f207996d45a8d65b61faf0fb0b5e",
+      "categoryEvidenceUrl": "https://github.com/shauryajain07/ghost-user/blob/8b35c4399a42f207996d45a8d65b61faf0fb0b5e/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-shikakufy-ipa-jev-quiz",
@@ -23488,9 +23844,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1ba0aa9646a559e6086d1488dedf9bd0a1f1c96e",
+      "categoryEvidenceUrl": "https://github.com/simota/tenbin/blob/1ba0aa9646a559e6086d1488dedf9bd0a1f1c96e/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-7-sinfiny-sunvai",
@@ -23566,9 +23924,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "a86651be5359d2e3866c0e67402de7232448aadf",
+      "categoryEvidenceUrl": "https://github.com/sionex-code/bx/blob/a86651be5359d2e3866c0e67402de7232448aadf/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-9-slatejack-jev-desktop",
@@ -23644,9 +24004,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "15e2e8cf56f4fc54c295078d94d7f1ed5fbd9c6d",
+      "categoryEvidenceUrl": "https://github.com/smanx/llm2jev/blob/15e2e8cf56f4fc54c295078d94d7f1ed5fbd9c6d/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-8-socai-io-jev-social",
@@ -23689,9 +24051,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "46c0db23864b550dee8600b48a47d214eeaa251d",
+      "categoryEvidenceUrl": "https://github.com/socai-io/jev-social/blob/46c0db23864b550dee8600b48a47d214eeaa251d/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-sontakey-awesome-jev",
@@ -23813,9 +24177,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "85b2882cbf527e6915f43638efb933db52d0f836",
+      "categoryEvidenceUrl": "https://github.com/stefw/lkclean/blob/85b2882cbf527e6915f43638efb933db52d0f836/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-stifler7-jev-llm-playground",
@@ -23908,9 +24274,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f3b6bc763b742b9f489bf0fa0c9514e334996283",
+      "categoryEvidenceUrl": "https://github.com/sumleo/prompt2jev/blob/f3b6bc763b742b9f489bf0fa0c9514e334996283/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-9-supprocom-typesafeai-sdk",
@@ -23992,9 +24360,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3d997fc76593036655c28d4964de43b55f81fe2c",
+      "categoryEvidenceUrl": "https://github.com/sutro-sh/jev-align/blob/3d997fc76593036655c28d4964de43b55f81fe2c/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-17-takafumikobayashi-jev-snap-lab",
@@ -24158,9 +24528,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "5896e01c466297371c8079648a43c6ac079da41f",
+      "categoryEvidenceUrl": "https://github.com/thehan-co/jevriel/blob/5896e01c466297371c8079648a43c6ac079da41f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-thrashr888-clue",
@@ -24447,9 +24819,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "8e18ad9551c4943443edfac740991297dc998438",
+      "categoryEvidenceUrl": "https://github.com/trivektor/english-2-sql/blob/8e18ad9551c4943443edfac740991297dc998438/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-6-tryagi-typesafeai",
@@ -24537,9 +24911,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "02c4af8d2c110f3cda43d446b28bfdc917ce580b",
+      "categoryEvidenceUrl": "https://github.com/trycatchkamal/typesafe-jev-traffic-demo/blob/02c4af8d2c110f3cda43d446b28bfdc917ce580b/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-turenlabs-jast",
@@ -24983,9 +25359,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "27ea469d15b5b26b922d9faacfdcffc13bf024bb",
+      "categoryEvidenceUrl": "https://github.com/vercel-labs/jev-ai-sdk-form-router/blob/27ea469d15b5b26b922d9faacfdcffc13bf024bb/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-13-vihaanagarwal-jev-diff",
@@ -25231,9 +25609,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f5ad23290e842fbe829c20212d4873a17bfb0364",
+      "categoryEvidenceUrl": "https://github.com/wangyu0611/jevymarket-direct/blob/f5ad23290e842fbe829c20212d4873a17bfb0364/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-wanlanglin-jev-skills",
@@ -25276,9 +25656,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "023187df53dcd1ceb56f0d560ba9973c43e4c99d",
+      "categoryEvidenceUrl": "https://github.com/wanlanglin/jev-skills/blob/023187df53dcd1ceb56f0d560ba9973c43e4c99d/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-13-waxmell114514-jev-trade",
@@ -25315,9 +25697,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "daec9777deb407eca10f45c8e62e596ad1ef3c71",
+      "categoryEvidenceUrl": "https://github.com/waxmell114514/jev-trade/blob/daec9777deb407eca10f45c8e62e596ad1ef3c71/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-10-wbuecksler-jev-voice-browser-chrome-extension",
@@ -25432,9 +25816,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "04bd0504d2d20f403454a1e87ca0a66e75d7d91a",
+      "categoryEvidenceUrl": "https://github.com/wisalkhanmv/jevllm/blob/04bd0504d2d20f403454a1e87ca0a66e75d7d91a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-7-wizicer-jev_info_site",
@@ -25513,9 +25899,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b0b37f03fcae0c3b0b4116a9a9c3385588372d5c",
+      "categoryEvidenceUrl": "https://github.com/wjw66/deepseek-harness-jev-pre-compaction/blob/b0b37f03fcae0c3b0b4116a9a9c3385588372d5c/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-wobsoriano-oxlint-plugin-jev",
@@ -25780,9 +26168,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "bcf4a831bc15ff32c2a2f46253f639530acc9aea",
+      "categoryEvidenceUrl": "https://github.com/xmoyas/web_attack_detection_jev/blob/bcf4a831bc15ff32c2a2f46253f639530acc9aea/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-yasdelayu-jev-crypto-scout",
@@ -25954,9 +26344,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "dce469472e0e6eea396256e9bf866082dcb9490b",
+      "categoryEvidenceUrl": "https://github.com/yzfly/edgejev/blob/dce469472e0e6eea396256e9bf866082dcb9490b/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-6-zaious-jev-capability-atlas",
@@ -26462,9 +26854,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4f288e0d5f83a525984d26ec83256b90bb29ba3e",
+      "categoryEvidenceUrl": "https://github.com/aarongunasingh/ask-twice/blob/4f288e0d5f83a525984d26ec83256b90bb29ba3e/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-17-abhisheksharma001-jev-skill",
@@ -26501,9 +26895,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "ed4e6578134e765cbf77a4d5a582cc8138d4aa36",
+      "categoryEvidenceUrl": "https://github.com/abhisheksharma001/jev-skill/blob/ed4e6578134e765cbf77a4d5a582cc8138d4aa36/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-13-abnormalpilot-jev-playground",
@@ -26540,9 +26936,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "cbbbb003eadf0127a9e3f954eb23de0afaaf77dd",
+      "categoryEvidenceUrl": "https://github.com/abnormalpilot/jev-playground/blob/cbbbb003eadf0127a9e3f954eb23de0afaaf77dd/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-adamnroman-slop-filter",
@@ -26585,9 +26983,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "fee8cb073092efc610fd4c91613f2b046bcee63d",
+      "categoryEvidenceUrl": "https://github.com/adamnroman/slop-filter/blob/fee8cb073092efc610fd4c91613f2b046bcee63d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-adams100111-typesafe-laravel",
@@ -26669,9 +27069,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1fd4220aa475a70be773112459216a8cde9bdbb6",
+      "categoryEvidenceUrl": "https://github.com/ahmadswalih/jev-chess-test/blob/1fd4220aa475a70be773112459216a8cde9bdbb6/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-aksharahegde-should-we-meet",
@@ -26714,9 +27116,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4407c2de1346955c06e1a822bc69794241fda225",
+      "categoryEvidenceUrl": "https://github.com/aksharahegde/should-we-meet/blob/4407c2de1346955c06e1a822bc69794241fda225/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-16-alaithuy385-byte-jev-decision-skill",
@@ -26802,9 +27206,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "931499f03743508660030488bbb837d70b800868",
+      "categoryEvidenceUrl": "https://github.com/alex314618-create/jevrev/blob/931499f03743508660030488bbb837d70b800868/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-16-aliakbarialashti-hands-on-jev",
@@ -26880,9 +27286,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b75e184ec739fc7efd6bd6cad4b701f3479a77af",
+      "categoryEvidenceUrl": "https://github.com/alinademi/jev-decision/blob/b75e184ec739fc7efd6bd6cad4b701f3479a77af/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-alpbahadur-jevrouter",
@@ -26919,9 +27327,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "828b88005258df1f2e5e3a0e140b52cc9f1f623f",
+      "categoryEvidenceUrl": "https://github.com/alpbahadur/jevrouter/blob/828b88005258df1f2e5e3a0e140b52cc9f1f623f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-21-alpha-harper-franklin-jev-drive",
@@ -27002,9 +27412,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4c2b3d77e8a155402bb1ac6e75db16d1bba391ff",
+      "categoryEvidenceUrl": "https://github.com/alseif0x/jev-inbox-triage/blob/4c2b3d77e8a155402bb1ac6e75db16d1bba391ff/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-altryne-jevify",
@@ -27219,9 +27631,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "0bb23b5b11ec42240929757522a5cc6c72264cc4",
+      "categoryEvidenceUrl": "https://github.com/andyhorn/jev/blob/0bb23b5b11ec42240929757522a5cc6c72264cc4/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-9-anmol-srv-jev-video-search",
@@ -27345,9 +27759,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "9e582641bea1e8af8c781d417e6eced3d56fba45",
+      "categoryEvidenceUrl": "https://github.com/aoprisan/jev-demo/blob/9e582641bea1e8af8c781d417e6eced3d56fba45/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-8-aoprisan-tavern-brawl",
@@ -27384,9 +27800,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "bd57247fd5e9f3015a03c31874f1077110aa349f",
+      "categoryEvidenceUrl": "https://github.com/aoprisan/tavern-brawl/blob/bd57247fd5e9f3015a03c31874f1077110aa349f/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-appitstudio-testimonial-miner",
@@ -27467,9 +27885,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b05c23457c839814fec02697ae0fe98c0433dee2",
+      "categoryEvidenceUrl": "https://github.com/aravdharnikota/apush-debate-jev/blob/b05c23457c839814fec02697ae0fe98c0433dee2/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-10-atheory-ai-typesafe-sdk-go",
@@ -27545,9 +27965,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "5567f287d52142a2b501137abe6575d7f90236d6",
+      "categoryEvidenceUrl": "https://github.com/audreyt/paseo-spacedock/blob/5567f287d52142a2b501137abe6575d7f90236d6/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-10-bahramzada-jev-taxi-dispatch",
@@ -27928,9 +28350,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "97467433fef86f66485e32b486e71a4bbec95536",
+      "categoryEvidenceUrl": "https://github.com/buluoray/jevonly/blob/97467433fef86f66485e32b486e71a4bbec95536/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-11-butochnikov-typesafe-sdk-php",
@@ -28012,9 +28436,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d6245f3166b37f52d14c1718032846c8d98f69b2",
+      "categoryEvidenceUrl": "https://github.com/cadeos/jev-grounds/blob/d6245f3166b37f52d14c1718032846c8d98f69b2/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-11-cankatsarac-jev-arcade",
@@ -28643,9 +29069,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "c8b163d2711c2cf8d39eb0f137ae4dde9fc26940",
+      "categoryEvidenceUrl": "https://github.com/dakdevs/decide-mcp/blob/c8b163d2711c2cf8d39eb0f137ae4dde9fc26940/readme.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-11-damingerdai-typesafe-jev-app",
@@ -28682,9 +29110,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "11b63bb54b5064d2d5c308cdd91c0c3eebcd6f9e",
+      "categoryEvidenceUrl": "https://github.com/damingerdai/typesafe-jev-app/blob/11b63bb54b5064d2d5c308cdd91c0c3eebcd6f9e/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-8-daniel4x-jevemon",
@@ -29141,9 +29571,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "5127e6c586f9bc25257c3ef8161171b3474c8c15",
+      "categoryEvidenceUrl": "https://github.com/dihrj/claude-code-jev-compaction/blob/5127e6c586f9bc25257c3ef8161171b3474c8c15/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-10-dillettant-jev-test",
@@ -29225,9 +29657,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3bdad985b225aeccc39fbe5863c6eea2e81c515a",
+      "categoryEvidenceUrl": "https://github.com/dimweaker/jev-libero/blob/3bdad985b225aeccc39fbe5863c6eea2e81c515a/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-12-djangobeatty-textured",
@@ -29395,9 +29829,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "cba0e2da4bb35acc49ba1054198fc35d81c96fb6",
+      "categoryEvidenceUrl": "https://github.com/ege-bulut/jev-play-games/blob/cba0e2da4bb35acc49ba1054198fc35d81c96fb6/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-ekkyarmandi-jev-upwork-job-classification",
@@ -29557,9 +29993,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "9cead5236754b22873faf316f3880a66b5f24e14",
+      "categoryEvidenceUrl": "https://github.com/feliperfpereira/jevbrowser/blob/9cead5236754b22873faf316f3880a66b5f24e14/README.md"
     },
-    "category": "other"
+    "category": "browser"
   },
   {
     "id": "gh-7-fly88oj-jebii",
@@ -29724,9 +30162,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "aa33b971eaa11dc27c98821856fc4e331cc9b75a",
+      "categoryEvidenceUrl": "https://github.com/frankied003/fraud-jev/blob/aa33b971eaa11dc27c98821856fc4e331cc9b75a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-15-freepik-company-jev-mcp",
@@ -29993,9 +30433,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "cb5dd1edd6bf677c2dfacc6a13d578ca42d95930",
+      "categoryEvidenceUrl": "https://github.com/gokulnair2001/convoy/blob/cb5dd1edd6bf677c2dfacc6a13d578ca42d95930/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-11-goodruizhan-pi-jev-control",
@@ -30161,9 +30603,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "2d89226c5680bd91a54589c4a6967e2847df24ee",
+      "categoryEvidenceUrl": "https://github.com/hatif03/try-typesafe-app/blob/2d89226c5680bd91a54589c4a6967e2847df24ee/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-13-havietkok-sys-bizzjev",
@@ -30594,9 +31038,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1aa5bb5fbfa30135fa79488a230264ef79b5731e",
+      "categoryEvidenceUrl": "https://github.com/ioovooi/pi-jev/blob/1aa5bb5fbfa30135fa79488a230264ef79b5731e/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-j341nono-jev-prompt-optimization",
@@ -30761,9 +31207,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3e2b42786fdc197c6fdcacb9c1dd94b9df9f0645",
+      "categoryEvidenceUrl": "https://github.com/jhnwr/scrapy-jev/blob/3e2b42786fdc197c6fdcacb9c1dd94b9df9f0645/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-10-joaovaleri-jev-shortlist",
@@ -30923,9 +31371,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "38d97c0482af87ce13641c46507f980709d2b425",
+      "categoryEvidenceUrl": "https://github.com/joevidev/ui-generator-instinct-jev/blob/38d97c0482af87ce13641c46507f980709d2b425/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-7-jomatsu-zod-jev",
@@ -30962,9 +31412,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "700bd256fe94541a2d21044027cc2dbf5036b396",
+      "categoryEvidenceUrl": "https://github.com/jomatsu/zod-jev/blob/700bd256fe94541a2d21044027cc2dbf5036b396/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-11-jonesmelton-verdict",
@@ -31048,9 +31500,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "5ec41cace4306ffb8a4cbaced3edca63b05cca74",
+      "categoryEvidenceUrl": "https://github.com/jordandalton/jev-mermaid/blob/5ec41cace4306ffb8a4cbaced3edca63b05cca74/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-9-kaushikkc-jevscope",
@@ -31087,9 +31541,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "87a4c37e466906659fc19874a7d229b810d2ff0e",
+      "categoryEvidenceUrl": "https://github.com/kaushikkc/jevscope/blob/87a4c37e466906659fc19874a7d229b810d2ff0e/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-kerpopule-hermes-jev-skills",
@@ -31169,9 +31625,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "bf5bf031885a03c24d38d243eb47a04d91b06679",
+      "categoryEvidenceUrl": "https://github.com/khmuhtadin/n8n-nodes-jev-classification/blob/bf5bf031885a03c24d38d243eb47a04d91b06679/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-10-kofujimura-jev-obniz-led",
@@ -31214,9 +31672,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "e38a60122fe9f25d21dbac2000a7a9f3fa0dacb3",
+      "categoryEvidenceUrl": "https://github.com/kofujimura/jev-obniz-led/blob/e38a60122fe9f25d21dbac2000a7a9f3fa0dacb3/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-konghayao-laya-jev",
@@ -31264,9 +31724,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4e940441bab039104adcb778ab7a88181283a8f9",
+      "categoryEvidenceUrl": "https://github.com/konghayao/laya-jev/blob/4e940441bab039104adcb778ab7a88181283a8f9/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-7-korbeil-opencode-jev-plugin",
@@ -31303,9 +31765,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f8883f69c7d696b839172a44dedd5ae7ddcb0e0d",
+      "categoryEvidenceUrl": "https://github.com/korbeil/opencode-jev-plugin/blob/f8883f69c7d696b839172a44dedd5ae7ddcb0e0d/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-4-kt3k-jevmaze",
@@ -31342,9 +31806,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "c63fe8f4259fd36e28c38d6547bc918e39cf650f",
+      "categoryEvidenceUrl": "https://github.com/kt3k/jevmaze/blob/c63fe8f4259fd36e28c38d6547bc918e39cf650f/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-8-ktaletsk-jevframe",
@@ -31555,9 +32021,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "2a0c9b186aa44920116e6c1f83b8ef754136263a",
+      "categoryEvidenceUrl": "https://github.com/laween-alsulaivany/shouldicare/blob/2a0c9b186aa44920116e6c1f83b8ef754136263a/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-6-lhviet-jev-bridge",
@@ -31768,9 +32236,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "35e4cd51e428a4d977101c795137c4c6f701f89a",
+      "categoryEvidenceUrl": "https://github.com/mansicer/jev-plays/blob/35e4cd51e428a4d977101c795137c4c6f701f89a/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-14-martianingreen-noyoudonot",
@@ -31846,9 +32316,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "a93bdcd100b31e7372bd52b9f7fcc6af62e764e9",
+      "categoryEvidenceUrl": "https://github.com/mcftira/jev-route/blob/a93bdcd100b31e7372bd52b9f7fcc6af62e764e9/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-mentioum-judgement",
@@ -31928,9 +32400,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "cadf3b0ea2d538795ce4a8d95d550baa432e352b",
+      "categoryEvidenceUrl": "https://github.com/metademicteam/jeedle/blob/cadf3b0ea2d538795ce4a8d95d550baa432e352b/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-miounet11-jevcode",
@@ -32366,9 +32840,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "8062e71178b8a963c51af8c648ff0d91ad01439b",
+      "categoryEvidenceUrl": "https://github.com/neo4j-field/jev-graphrag/blob/8062e71178b8a963c51af8c648ff0d91ad01439b/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-11-nesanselvan-resume-ranker-jev",
@@ -32405,9 +32881,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "4b741ca0b78099827446969fe74cc1c859ae8017",
+      "categoryEvidenceUrl": "https://github.com/nesanselvan/resume-ranker-jev/blob/4b741ca0b78099827446969fe74cc1c859ae8017/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-6-nitoba-opencode-jev-router",
@@ -32444,9 +32922,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "8a55093bdb6640c0eb0cf3ad069cdeeadee3ab26",
+      "categoryEvidenceUrl": "https://github.com/nitoba/opencode-jev-router/blob/8a55093bdb6640c0eb0cf3ad069cdeeadee3ab26/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-15-norbertbodziony-guard-jev",
@@ -32483,9 +32963,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "86e7dba193fc94d458f36e225379c12596ddef0c",
+      "categoryEvidenceUrl": "https://github.com/norbertbodziony/guard-jev/blob/86e7dba193fc94d458f36e225379c12596ddef0c/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-nozo-moto-jev-reverse",
@@ -32522,9 +33004,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "23cf39f843d392a22b210d7c990ab4fc03563a78",
+      "categoryEvidenceUrl": "https://github.com/nozo-moto/jev-reverse/blob/23cf39f843d392a22b210d7c990ab4fc03563a78/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-5-ode98-guessing-game-v2",
@@ -32606,9 +33090,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d3e744d5bd7b9dfd4961ddafb630160574318b9a",
+      "categoryEvidenceUrl": "https://github.com/okura66/kahn1/blob/d3e744d5bd7b9dfd4961ddafb630160574318b9a/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-14-olivier-motium-jev-doom",
@@ -32649,9 +33135,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "13589d2b97d18940423933262834aa3e376ffcdc",
+      "categoryEvidenceUrl": "https://github.com/olivier-motium/jev-doom/blob/13589d2b97d18940423933262834aa3e376ffcdc/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-14-omaralaaeldein-jev-verifier-skill",
@@ -32994,9 +33482,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "60ae4cac8c51211cf79898be4e99d68148333ec7",
+      "categoryEvidenceUrl": "https://github.com/pedrorau/feedback-radar-jev/blob/60ae4cac8c51211cf79898be4e99d68148333ec7/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-12-phamhongviet-pi-ext-model-router",
@@ -33082,9 +33572,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b307424cdbab0284adbd8e5b712fae53aa97a7c8",
+      "categoryEvidenceUrl": "https://github.com/piratchai/jev-integration-report/blob/b307424cdbab0284adbd8e5b712fae53aa97a7c8/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-8-piyush97-focus-tube",
@@ -33289,9 +33781,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "423d6a5fc2ef34180b6ec8493290294b509950a0",
+      "categoryEvidenceUrl": "https://github.com/pragyan330/what-s-up-jev/blob/423d6a5fc2ef34180b6ec8493290294b509950a0/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-prasanthj-duckdb-jev",
@@ -33412,9 +33906,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d9049a97b690dde5ca96a52887fce40f525d0c1f",
+      "categoryEvidenceUrl": "https://github.com/pujux/hass-hunch/blob/d9049a97b690dde5ca96a52887fce40f525d0c1f/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-qddegtya-qualm",
@@ -33463,9 +33959,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "e1aacf6844f312ba95eb6a1bd26fad15575a7173",
+      "categoryEvidenceUrl": "https://github.com/qddegtya/qualm/blob/e1aacf6844f312ba95eb6a1bd26fad15575a7173/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-11-qingshungli-everything-about-jev",
@@ -33553,9 +34051,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "9181265438237451d727acc529340096b80e5127",
+      "categoryEvidenceUrl": "https://github.com/quinnjr/opencode-jev-compaction/blob/9181265438237451d727acc529340096b80e5127/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-13-rajdhakad9826-jev-router",
@@ -33715,9 +34215,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3e296f085ce88e5da3850288646b3429eb476774",
+      "categoryEvidenceUrl": "https://github.com/razorback16/openjev/blob/3e296f085ce88e5da3850288646b3429eb476774/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-realdubb-jev-playground",
@@ -33757,9 +34259,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "367b3dc83612bba8112c2f8ceb77211e1731c415",
+      "categoryEvidenceUrl": "https://github.com/realdubb/jev-playground/blob/367b3dc83612bba8112c2f8ceb77211e1731c415/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-11-resadan-dev-jev-zork",
@@ -33885,9 +34389,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "40d4f23680b857fac8c3986979a06efd2205ae7e",
+      "categoryEvidenceUrl": "https://github.com/rinti/wagtail-jev/blob/40d4f23680b857fac8c3986979a06efd2205ae7e/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-13-roguefort-dev-trashcompact",
@@ -33924,9 +34430,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "bc663cd91fea7fb3719514bbc70ca14b799ec56d",
+      "categoryEvidenceUrl": "https://github.com/roguefort-dev/trashcompact/blob/bc663cd91fea7fb3719514bbc70ca14b799ec56d/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-ruban-24-switchboard",
@@ -34014,9 +34522,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "ae350e6a85f26154e59a32f24e377dcf2b252169",
+      "categoryEvidenceUrl": "https://github.com/sachin-chaurasiya/scam-checker-with-jev/blob/ae350e6a85f26154e59a32f24e377dcf2b252169/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-samarkundal-expect-semantic",
@@ -34053,9 +34563,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "5134a0e50e0425a46f992f5348c5296d4a9c6042",
+      "categoryEvidenceUrl": "https://github.com/samarkundal/expect-semantic/blob/5134a0e50e0425a46f992f5348c5296d4a9c6042/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-9-sherajdev-jev-research",
@@ -34131,9 +34643,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "e15d73c64a56ecbf1b3a398be39b45796c3f2261",
+      "categoryEvidenceUrl": "https://github.com/shhh-hoo/cuelight/blob/e15d73c64a56ecbf1b3a398be39b45796c3f2261/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-shitianfang-wakegate",
@@ -34299,9 +34813,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "854e17e224339a3c844ba978d47ce4aaebdbf0c1",
+      "categoryEvidenceUrl": "https://github.com/shubhangi013/prompt-oscilloscope/blob/854e17e224339a3c844ba978d47ce4aaebdbf0c1/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-10-slatinwine-jevy",
@@ -34582,9 +35098,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "903f23ffecdfa5e51fa638ec931528a4d9e0ad12",
+      "categoryEvidenceUrl": "https://github.com/syy706/x-reply-shield/blob/903f23ffecdfa5e51fa638ec931528a4d9e0ad12/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-9-tacticocc-jevbridge",
@@ -34627,9 +35145,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d4e8f7d483b8a5649218970eedbaf4f4a1e1e832",
+      "categoryEvidenceUrl": "https://github.com/tacticocc/jevbridge/blob/d4e8f7d483b8a5649218970eedbaf4f4a1e1e832/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-17-takuminoguchi2004-jev-noul-vs-choice",
@@ -34666,9 +35186,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "8b6926097970f23ccd2fae8efd3a1ddb5b650632",
+      "categoryEvidenceUrl": "https://github.com/takuminoguchi2004/jev-noul-vs-choice/blob/8b6926097970f23ccd2fae8efd3a1ddb5b650632/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-11-tango-tango-ex_typesafe",
@@ -34783,9 +35305,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "24d4a96e0f5c1012676a365adf92ce9ab23b8021",
+      "categoryEvidenceUrl": "https://github.com/tatuck/jev-boe-demo/blob/24d4a96e0f5c1012676a365adf92ce9ab23b8021/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-15-taufique-ansari-dunjev",
@@ -34822,9 +35346,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "3e91a62d05a5f775664014bfd247d94399a0a507",
+      "categoryEvidenceUrl": "https://github.com/taufique-ansari/dunjev/blob/3e91a62d05a5f775664014bfd247d94399a0a507/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-thepfmind-jev-mcp",
@@ -35031,9 +35557,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "442c54caf51de763f966dd9cf59865e28167b34e",
+      "categoryEvidenceUrl": "https://github.com/tubone24/jev-practice-speed/blob/442c54caf51de763f966dd9cf59865e28167b34e/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-5-txy02-jev-agent",
@@ -35109,9 +35637,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "d8fe665402e15927839c3fdb417986b480e307d4",
+      "categoryEvidenceUrl": "https://github.com/txy02/jev-harness/blob/d8fe665402e15927839c3fdb417986b480e307d4/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-5-uehaj-jev-semgrep",
@@ -35349,9 +35879,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1f2d8bfc6653823c4afac53ec34f50098c3406c9",
+      "categoryEvidenceUrl": "https://github.com/vicpon/signals/blob/1f2d8bfc6653823c4afac53ec34f50098c3406c9/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-8-vinilana-live-jev",
@@ -35427,9 +35959,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "cfc9358deee60ac06f88cb5c1d49b10ca4477584",
+      "categoryEvidenceUrl": "https://github.com/vinodjagwani/jev-claude-demo/blob/cfc9358deee60ac06f88cb5c1d49b10ca4477584/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-14-vishesh-baghel-typesafe",
@@ -35472,9 +36006,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "27b0866be59ad0097069ed50150c2c370559c38e",
+      "categoryEvidenceUrl": "https://github.com/vishesh-baghel/typesafe/blob/27b0866be59ad0097069ed50150c2c370559c38e/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-15-wang-auspicious-codex-jev-compaction",
@@ -35517,9 +36053,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "26fa09f83113a777b0d0db25d847f1c2a25d3388",
+      "categoryEvidenceUrl": "https://github.com/wang-auspicious/codex-jev-compaction/blob/26fa09f83113a777b0d0db25d847f1c2a25d3388/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-15-wang-auspicious-pi-jev-compaction",
@@ -35964,9 +36502,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "7d419dece2e5c658e9d56b2893060b2b39adc2ca",
+      "categoryEvidenceUrl": "https://github.com/yirbz/tell/blob/7d419dece2e5c658e9d56b2893060b2b39adc2ca/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-9-yldm-tech-loom",
@@ -36220,9 +36760,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "564fc8fba776ba4619f31d2d13a69fc87d25ed8a",
+      "categoryEvidenceUrl": "https://github.com/zyw052/astrbot_plugin_jev_radar/blob/564fc8fba776ba4619f31d2d13a69fc87d25ed8a/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-5-0m4r0-jev-discord-bot",
@@ -36259,9 +36801,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "1649a147ef049f8e77a5c2a918e8175745b93a0d",
+      "categoryEvidenceUrl": "https://github.com/0m4r0/jev-discord-bot/blob/1649a147ef049f8e77a5c2a918e8175745b93a0d/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-6-0x7067-jev-browse",
@@ -36388,9 +36932,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "bb85921111b1f01b472d1fc210997da86815ccfa",
+      "categoryEvidenceUrl": "https://github.com/aadhil-kh/jevx/blob/bb85921111b1f01b472d1fc210997da86815ccfa/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-11-aayanrehman-trustlens",
@@ -36427,9 +36973,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "b3cec84d5e1fede1ee8acfbb5327b52ec6f97073",
+      "categoryEvidenceUrl": "https://github.com/aayanrehman/trustlens/blob/b3cec84d5e1fede1ee8acfbb5327b52ec6f97073/README.md"
     },
-    "category": "other"
+    "category": "applications"
   },
   {
     "id": "gh-11-abhishek085-open-spark-jev",
@@ -36472,9 +37020,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "30ac6d89b7fa36c644cf86aac68f35c1d276a919",
+      "categoryEvidenceUrl": "https://github.com/abhishek085/open-spark-jev/blob/30ac6d89b7fa36c644cf86aac68f35c1d276a919/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-20-abhishekmishragithub-semantic-microscope",
@@ -36514,9 +37064,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "ac6f4932096148d4cde92a7195c5292690f9ec7f",
+      "categoryEvidenceUrl": "https://github.com/abhishekmishragithub/semantic-microscope/blob/ac6f4932096148d4cde92a7195c5292690f9ec7f/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-aboisvert-jevvy",
@@ -36558,9 +37110,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "440d909b7d50a2e08db794f2ee71c54c9d5311a6",
+      "categoryEvidenceUrl": "https://github.com/aboisvert/jevvy/blob/440d909b7d50a2e08db794f2ee71c54c9d5311a6/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-31-actions-marketplace-validations-sathariels_jevtriage",
@@ -36597,9 +37151,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "fe35077d9aa88ba0c58b3e17120891cd59291fd7",
+      "categoryEvidenceUrl": "https://github.com/actions-marketplace-validations/sathariels_jevtriage/blob/fe35077d9aa88ba0c58b3e17120891cd59291fd7/README.md"
     },
-    "category": "other"
+    "category": "developer"
   },
   {
     "id": "gh-15-adammichaelwood-jev-music-theory-1",
@@ -36642,9 +37198,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "7c5b4b8b7e40309f87388c3c5c4d3ed6a3872928",
+      "categoryEvidenceUrl": "https://github.com/adammichaelwood/jev-music-theory-1/blob/7c5b4b8b7e40309f87388c3c5c4d3ed6a3872928/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-12-addition2000-book-of-answers",
@@ -36947,9 +37505,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f1ac4bbee437125c5f8ebd04c1cc061cf4c28225",
+      "categoryEvidenceUrl": "https://github.com/akeel-majeed/jevaluate/blob/f1ac4bbee437125c5f8ebd04c1cc061cf4c28225/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-9-altanapps-security-sandbox-jev",
@@ -36986,9 +37546,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "f55b250c2e85ec8d0590cd991e90618ce805a122",
+      "categoryEvidenceUrl": "https://github.com/altanapps/security-sandbox-jev/blob/f55b250c2e85ec8d0590cd991e90618ce805a122/README.md"
     },
-    "category": "other"
+    "category": "research"
   },
   {
     "id": "gh-14-amberwhitehead-jevscript",
@@ -37031,9 +37593,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "a01032218d8d57f84c5f310f585cd2da17671c9a",
+      "categoryEvidenceUrl": "https://github.com/amberwhitehead/jevscript/blob/a01032218d8d57f84c5f310f585cd2da17671c9a/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-13-andrewdeng318-paperclip-plugin-jev",
@@ -37432,9 +37996,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
+      },
+      "categoryEvidenceSha": "a8e4590c9aa6d0a2d6c338545efccec1eaf3cda9",
+      "categoryEvidenceUrl": "https://github.com/automaticdai/jev-semantic-cost-map/blob/a8e4590c9aa6d0a2d6c338545efccec1eaf3cda9/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-13-autonomous-ai-openharness",
@@ -37621,9 +38187,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T21:18:58.791Z"
-      }
+      },
+      "categoryEvidenceSha": "08c7da4da94463c955defb936d58c1a39c482878",
+      "categoryEvidenceUrl": "https://github.com/binbandit/jev-demo/blob/08c7da4da94463c955defb936d58c1a39c482878/README.md"
     },
-    "category": "other"
+    "category": "resources"
   },
   {
     "id": "gh-9-biztactix-n8n-nodes-typesafe",
@@ -37660,9 +38228,11 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-22T21:18:58.791Z"
-      }
+      },
+      "categoryEvidenceSha": "175e4c9d645713b63d3db45a5308a3e8bb0d57de",
+      "categoryEvidenceUrl": "https://github.com/biztactix/n8n-nodes-typesafe/blob/175e4c9d645713b63d3db45a5308a3e8bb0d57de/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-bodila51-jev-hft-model-router",
@@ -38201,9 +38771,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-23T04:45:04.889Z"
-      }
+      },
+      "categoryEvidenceSha": "8735ea80efad6ec1dab26f74f1a7851007758915",
+      "categoryEvidenceUrl": "https://github.com/codealive-ai/mastra-jev-moderation/blob/8735ea80efad6ec1dab26f74f1a7851007758915/README.md"
     },
-    "category": "other"
+    "category": "agents"
   },
   {
     "id": "gh-8-codesoda-systemone",
@@ -38246,9 +38818,11 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-23T04:45:04.889Z"
-      }
+      },
+      "categoryEvidenceSha": "d17b49690577e1afece97eafbf2990610587238e",
+      "categoryEvidenceUrl": "https://github.com/codesoda/systemone/blob/d17b49690577e1afece97eafbf2990610587238e/README.md"
     },
-    "category": "other"
+    "category": "sdk"
   },
   {
     "id": "gh-5-comoc-jev-minesweeper",

@@ -22,7 +22,6 @@ export const JEV_API = 'https://api.typesafe.ai/v1/systemone'
 export const JEV_MODEL = 'jev-latest'
 export const MIN_ABOUT = 0.9
 export const MIN_KEEP_CONFIDENCE = 0.9
-export const MIN_CATEGORY_CONFIDENCE = 0.65
 export const EVIDENCE_CHARS = 12000
 export const MAX_EVIDENCE_PARTS = 12
 
@@ -61,7 +60,7 @@ export function parseScore(data: unknown): JevScore {
     jevAbout: about.noul,
     jevKeep: choice as ReviewKeep,
     jevKeepConfidence: keep.confidence,
-    ...(category ? { category: (category.confidence as number) < MIN_CATEGORY_CONFIDENCE ? 'other' as const : category.choice as ProjectCategory } : {}),
+    ...(category ? { category: category.choice as ProjectCategory } : {}),
   }
 }
 
@@ -252,7 +251,7 @@ export async function classifyProjects(
       if (!isRecord(answer) || answer.type !== 'choice' || !isProjectCategory(answer.choice) || !probability(answer.confidence)) {
         throw new Error('jev-invalid-response')
       }
-      return answer.confidence < MIN_CATEGORY_CONFIDENCE ? 'other' : answer.choice
+      return answer.choice
     })
   }
   throw new Error('jev-unavailable')

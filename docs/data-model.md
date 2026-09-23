@@ -68,6 +68,7 @@ interface SourceMeta {
 - Prefer populating from the public GitHub repo API: `stargazers_count` → `stars`, `forks_count` → `forks`, `open_issues_count` → `openIssues`
 - Collectors may emit `null` when unknown
 - Optional `date` (YYYY-MM-DD) supports the section “Date” sort
+- Manual README-backed category refinement stores `sourceMeta.categoryEvidenceSha` and `categoryEvidenceUrl` to identify the exact README version used; a GitHub metadata refresh preserves these fields.
 
 ### X / YouTube / media
 

@@ -32,7 +32,7 @@ test('only valid, high-confidence keep qualifies; unknowns fail closed', () => {
 })
 test('parse Jev typed answers; malformed/missing/out-of-range answers are errors', () => {
   assert.deepEqual(parseScore(response), { ...score, category: 'sdk' })
-  assert.equal(parseScore({ answers: { ...response.answers, category: { type: 'choice', choice: 'sdk', confidence: 0.4 } } }).category, 'other')
+  assert.equal(parseScore({ answers: { ...response.answers, category: { type: 'choice', choice: 'sdk', confidence: 0.4 } } }).category, 'sdk')
   for (const bad of [{}, { answers: {} }, { answers: { ...response.answers, keep: { choice: 'keep' } } },
     { answers: { ...response.answers, keep: { type: 'choice', choice: ['keep'], confidence: 0.99 } } },
     { answers: { ...response.answers, about: { type: 'noul', noul: 1.1 } } }]) assert.throws(() => parseScore(bad))
@@ -43,17 +43,18 @@ test('review scope includes curated lists, not only direct API integration', () 
   assert.equal(reviewBody({ type: 'youtube', title: 'Video' }).questions.category, undefined)
 })
 test('batch categories use typed Jev choices and fail closed on invalid output', async () => {
-  const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Unknown', summary: '' }]
+  const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Doom demo', summary: 'Playable game', tags: ['game'] }, { title: 'Unknown', summary: '' }]
   const fetchImpl: FetchImpl = async (_url, init) => {
     const body = JSON.parse(String(init?.body))
-    assert.equal(body.state.projects.length, 2)
+    assert.equal(body.state.projects.length, 3)
     assert.equal(body.questions.category_0.type, 'choice')
     return Response.json({ answers: {
       category_0: { type: 'choice', choice: 'sdk', confidence: 0.99 },
       category_1: { type: 'choice', choice: 'applications', confidence: 0.4 },
+      category_2: { type: 'choice', choice: 'other', confidence: 0.99 },
     } })
   }
-  assert.deepEqual(await classifyProjects('test-only', rows, { fetchImpl }), ['sdk', 'other'])
+  assert.deepEqual(await classifyProjects('test-only', rows, { fetchImpl }), ['sdk', 'applications', 'other'])
   await assert.rejects(() => classifyProjects('test-only', rows, { fetchImpl: async () => Response.json({ answers: {} }) }), /jev-invalid-response/)
   await assert.rejects(() => classifyProjects('test-only', Array(9).fill(rows[0]), { fetchImpl }), /jev-invalid-batch/)
 })
@@ -179,7 +180,7 @@ test('manual scorer enforces one global paid-review limit across all sources', a
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'scripts')); mkdirSync(join(root, 'data'))
   writeFileSync(join(root, 'package.json'), '{"type":"module"}')
-  for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
+  for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
   for (const file of ['github.json', 'youtube.json', 'x.json']) {
     writeFileSync(join(root, 'data', file), JSON.stringify([1, 2].map((n) => ({ id: `${file}-${n}`, type: 'github',
       title: 'Test', summary: 'Test', url: 'https://github.com/test/test', sourceMeta: {} }))))
