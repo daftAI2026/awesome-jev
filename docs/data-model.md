@@ -15,7 +15,7 @@ Types live in [`src/lib/types.ts`](../src/lib/types.ts).
 
 ## `NewsItem`
 
-Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, optional summary, source name, optional publication time, required discovery time, original HTTPS URL, and AIHOT item HTTPS URL. Media URLs and article body are intentionally absent because the public AIHOT API does not contract them. The data file preserves insertion order; the UI sorts a copy by publication time, falling back to discovery time. The site does not expose this store as an API or bulk export.
+Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, optional original title and summary, source name, publication/discovery times, category, AIHOT score and selected/recommendation state, original HTTPS URL, and AIHOT item HTTPS URL. Media URLs and article body are intentionally absent because the public AIHOT API does not contract them. The data file preserves insertion order; the UI sorts a copy by publication time, falling back to discovery time. The site does not expose this store as an API or bulk export.
 
 ## `DirectoryItem`
 

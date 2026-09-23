@@ -9,11 +9,16 @@ function remote(id: string, original = `https://example.com/${id}`, title = id) 
   return {
     id,
     title,
+    originalTitle: `Original ${id}`,
     summary: `Summary for ${id}`,
     source: { name: 'Example News' },
     links: { aihot: `https://aihot.news/items/${id}`, original },
     publishedAt: '2026-09-23T10:00:00.000Z',
     discoveredAt: '2026-09-23T10:10:00.000Z',
+    category: 'ai-products',
+    score: 68,
+    selected: true,
+    reason: `Reason for ${id}`,
   }
 }
 
@@ -45,11 +50,14 @@ test('merge appends new IDs, updates known IDs, and ignores duplicate original U
   assert.deepEqual({ added: result.added, updated: result.updated }, { added: 1, updated: 1 })
   assert.deepEqual(result.items.map((item) => item.id), ['news0001', 'news0003'])
   assert.equal(result.items[0].title, 'Edited title')
+  assert.equal(result.items[0].score, 68)
   assert.deepEqual(mergeNews(result.items, result.items), { items: result.items, added: 0, updated: 0 })
 })
 
 test('rejects unsafe URLs, duplicate records, and incomplete pagination', async () => {
   assert.throws(() => parseNewsItem(remote('news0001', 'javascript:alert(1)')))
+  assert.throws(() => parseNewsItem({ ...remote('news0001'), score: 101 }), /score/)
+  assert.throws(() => parseNewsItem({ ...remote('news0001'), selected: 'true' }), /selection/)
   assert.throws(() => parseNewsItem({ ...remote('news0001'), links: { original: 'https://example.com', aihot: 'https://evil.example/items/news0001' } }))
   const item = parseNewsItem(remote('news0001'))
   assert.throws(() => validateNews([item, item]), /Duplicate/)

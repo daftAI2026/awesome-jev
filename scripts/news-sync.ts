@@ -44,16 +44,29 @@ export function parseNewsItem(value: unknown): NewsItem {
   if (aihot.origin !== 'https://aihot.news' || aihot.pathname !== `/items/${id}` || aihot.search || aihot.hash) {
     throw new Error('Unexpected AIHOT item URL')
   }
+  if (typeof value.selected !== 'boolean') throw new Error('Invalid news selection state')
   return {
     id,
     title: requireText(value.title, 'news title', 500),
+    originalTitle: value.originalTitle == null ? null : requireText(value.originalTitle, 'original title', 2000),
     summary: value.summary == null ? null : requireText(value.summary, 'news summary', 2000),
     sourceName: requireText(value.source.name, 'news source', 200),
     publishedAt: value.publishedAt == null ? null : requireDate(value.publishedAt, 'publication date'),
     discoveredAt: requireDate(value.discoveredAt, 'discovery date'),
+    category: value.category == null ? null : requireText(value.category, 'news category', 80),
+    score: value.score == null ? null : requireScore(value.score),
+    selected: value.selected,
+    reason: value.reason == null ? null : requireText(value.reason, 'recommendation reason', 2000),
     originalUrl: requireUrl(value.links.original, 'original URL'),
     aihotUrl,
   }
+}
+
+function requireScore(value: unknown): number {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 100) {
+    throw new Error('Invalid news score')
+  }
+  return value
 }
 
 export function validateNews(value: unknown): NewsItem[] {
