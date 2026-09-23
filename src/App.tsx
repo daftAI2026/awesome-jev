@@ -157,9 +157,9 @@ export default function App() {
         variant={filter === id ? 'secondary' : 'ghost'}
         aria-pressed={filter === id}
         onClick={() => selectFilter(id)}
-        className={`min-h-8 w-full justify-between gap-4 rounded-lg px-3 py-1.5 font-normal whitespace-nowrap ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
+        className={`min-h-8 w-full rounded-lg px-3 py-1.5 font-normal whitespace-nowrap ${id === 'saved' ? 'justify-start gap-2' : 'justify-between gap-4'} ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
       >
-        <span className="min-w-0 flex-1 text-left leading-snug">{t(FILTER_LABEL[id])}</span>
+        <span className={`min-w-0 text-left leading-snug ${id === 'saved' ? '' : 'flex-1'}`}>{t(FILTER_LABEL[id])}</span>
         {count != null && (id === 'saved'
           ? <Badge variant="outline" className="min-w-5 rounded-sm px-1.5 font-normal tabular-nums text-muted-foreground">{count}</Badge>
           : <span className="shrink-0 tabular-nums text-xs text-muted-foreground">{count}</span>)}
@@ -167,7 +167,7 @@ export default function App() {
     )
   }
   const categoryNav = (
-    <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
+    <nav aria-label={t('categoryLabel')} className="flex w-max min-w-52 flex-col gap-2">
       {filterButton('top100')}
       {filterButton('news')}
       {filterButton('saved')}
