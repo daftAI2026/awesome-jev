@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
-import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour } from '@phosphor-icons/react'
+import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour, X } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { useI18n } from '@/i18n'
 import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
 import { CATEGORIES, CATEGORY_LABEL, type Category } from '@/lib/categories'
@@ -241,9 +241,16 @@ export default function App() {
                   <List className="size-4" weight="fill" aria-hidden />
                   {t(FILTER_LABEL[filter])}
                 </SheetTrigger>
-                <SheetContent side="left" className="w-72 p-0">
-                  <SheetHeader className="sr-only"><SheetTitle>{t('categoryLabel')}</SheetTitle></SheetHeader>
-                  <div className="min-h-0 overflow-y-auto px-4 pb-4">{categoryNav}</div>
+                <SheetContent side="left" showCloseButton={false}
+                  className="gap-0 p-0 shadow-none data-[side=left]:w-72 data-[side=left]:sm:max-w-72">
+                  <SheetHeader className="flex-row items-center justify-between border-b border-border py-3 pr-4 pl-7">
+                    <SheetTitle>{t('categoryLabel')}</SheetTitle>
+                    <SheetClose render={<Button variant="ghost" size="icon-sm" className="size-10" />}
+                      aria-label={t('closeCategories')}>
+                      <X className="size-4" aria-hidden />
+                    </SheetClose>
+                  </SheetHeader>
+                  <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pt-3 pb-4">{categoryNav}</div>
                 </SheetContent>
               </Sheet>
               {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[sort]} onValueChange={(values) => {

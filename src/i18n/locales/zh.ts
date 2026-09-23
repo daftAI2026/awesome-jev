@@ -71,6 +71,7 @@ export const zh: Messages = {
   categoryAlternatives: '开源替代方案',
   categoryOther: '其他',
   openCategories: '打开项目分类',
+  closeCategories: '关闭项目分类',
   zoneLabel: '来源',
   zoneGithub: 'GitHub',
   zoneX: 'X',

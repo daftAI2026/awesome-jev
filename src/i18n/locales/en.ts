@@ -69,6 +69,7 @@ export const en = {
   categoryAlternatives: 'Open-source alternatives',
   categoryOther: 'Other',
   openCategories: 'Open category filter',
+  closeCategories: 'Close categories',
   zoneLabel: 'Source',
   zoneGithub: 'GitHub',
   zoneX: 'X',
