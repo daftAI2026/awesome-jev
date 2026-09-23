@@ -7,7 +7,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { evaluateJev } from './jev-client.ts'
+import { classifyProjects, evaluateJev, isProjectCategory } from './jev-client.ts'
 import { catalogFiles } from './catalog.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -20,7 +20,28 @@ interface DirectoryRow {
   title: string
   summary: string
   url: string
+  tags?: string[]
+  category?: string
   sourceMeta?: Record<string, unknown>
+}
+
+async function classifyGithub(key: string, limit: number, force: boolean, dryRun: boolean): Promise<void> {
+  const path = join(root, 'data/github.json')
+  const rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]
+  const pending = rows.filter((row) => force || !isProjectCategory(row.category)).slice(0, limit)
+  const counts: Record<string, number> = {}
+  for (let start = 0; start < pending.length; start += 8) {
+    const batch = pending.slice(start, start + 8)
+    const categories = await classifyProjects(key, batch)
+    for (let i = 0; i < batch.length; i++) {
+      const category = categories[i]
+      counts[category] = (counts[category] ?? 0) + 1
+      if (!dryRun) batch[i].category = category
+    }
+    if (!dryRun) writeFileSync(path, `${JSON.stringify(rows, null, 2)}\n`)
+    process.stdout.write(`Classified ${Math.min(start + batch.length, pending.length)}/${pending.length}\r`)
+  }
+  process.stdout.write('\n' + JSON.stringify({ classified: pending.length, dryRun, categories: counts }, null, 2) + '\n')
 }
 
 interface ScoreResult {
@@ -141,7 +162,6 @@ async function scoreFile(
 }
 
 async function main(): Promise<void> {
-  const key = apiKey()
   const limit = Number(arg('limit', '100000'))
   const force = process.argv.includes('--force')
   const dryRun = process.argv.includes('--dry-run')
@@ -149,6 +169,18 @@ async function main(): Promise<void> {
   const only = arg('only', 'all') ?? 'all'
   if (!Number.isSafeInteger(limit) || limit < 1 || !Number.isSafeInteger(concurrency) || concurrency > 16) {
     throw new Error('limit must be a positive integer; concurrency must be 1..16')
+  }
+  if (process.argv.includes('--check-categories')) {
+    const rows = JSON.parse(readFileSync(join(root, 'data/github.json'), 'utf8')) as DirectoryRow[]
+    const missing = rows.filter((row) => !isProjectCategory(row.category))
+    if (missing.length) throw new Error(`${missing.length} GitHub projects lack a valid category`)
+    process.stdout.write(`${rows.length} GitHub project categories valid\n`)
+    return
+  }
+  const key = apiKey()
+  if (process.argv.includes('--classify')) {
+    await classifyGithub(key, limit, force, dryRun)
+    return
   }
   const opts = { limit, force, dryRun, concurrency }
   const itemFiles = catalogFiles(root).map((file: string) => `data/${file}`)

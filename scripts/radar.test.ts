@@ -1,13 +1,13 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { evaluateJev, parseScore, reviewDecision, reviewBody } from './jev-client.ts'
+import { classifyProjects, evaluateJev, parseScore, reviewDecision, reviewBody } from './jev-client.ts'
 import { createGitHubClient } from './github-client.ts'
 import { emptyState, runRadar, validateState } from './radar.ts'
 import type { ReviewApi, ReviewRepository, ReviewRow, ReviewScore } from './review-types.ts'
 
 const now = new Date('2026-09-22T00:00:00Z')
 const score: ReviewScore = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence: 0.99 }
-const response = { answers: { about: { type: 'noul', noul: 0.95 }, keep: { type: 'choice', choice: 'keep', confidence: 0.99 } } }
+const response = { answers: { about: { type: 'noul', noul: 0.95 }, keep: { type: 'choice', choice: 'keep', confidence: 0.99 }, category: { type: 'choice', choice: 'sdk', confidence: 0.99 } } }
 const repo: ReviewRepository = { html_url: 'https://github.com/test/jev-sdk', full_name: 'test/jev-sdk', name: 'jev-sdk',
   default_branch: 'main', owner: { login: 'test' }, description: 'TypeSafe Jev SDK', topics: ['jev', 'sdk'],
   stargazers_count: 3, forks_count: 1, open_issues_count: 0, language: 'TypeScript', created_at: now.toISOString(), private: false, fork: false, archived: false }
@@ -31,13 +31,30 @@ test('only valid, high-confidence keep qualifies; unknowns fail closed', () => {
   assert.equal(reviewDecision({ ...score, jevKeep: 'drop' }), 'drop')
 })
 test('parse Jev typed answers; malformed/missing/out-of-range answers are errors', () => {
-  assert.deepEqual(parseScore(response), score)
+  assert.deepEqual(parseScore(response), { ...score, category: 'sdk' })
   for (const bad of [{}, { answers: {} }, { answers: { ...response.answers, keep: { choice: 'keep' } } },
     { answers: { ...response.answers, keep: { type: 'choice', choice: ['keep'], confidence: 0.99 } } },
     { answers: { ...response.answers, about: { type: 'noul', noul: 1.1 } } }]) assert.throws(() => parseScore(bad))
 })
 test('review scope includes curated lists, not only direct API integration', () => {
   assert.match(reviewBody({ type: 'github', title: 'awesome', summary: 'curated', url: repo.html_url, sourceMeta: { repo: repo.full_name } }).questions.keep.instructions, /curated awesome lists/)
+  assert.ok(reviewBody({ type: 'github', title: 'SDK', tags: ['sdk'] }).questions.category)
+  assert.equal(reviewBody({ type: 'youtube', title: 'Video' }).questions.category, undefined)
+})
+test('batch categories use typed Jev choices and fail closed on invalid output', async () => {
+  const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Unknown', summary: '' }]
+  const fetchImpl: FetchImpl = async (_url, init) => {
+    const body = JSON.parse(String(init?.body))
+    assert.equal(body.state.projects.length, 2)
+    assert.equal(body.questions.category_0.type, 'choice')
+    return Response.json({ answers: {
+      category_0: { type: 'choice', choice: 'sdk', confidence: 0.99 },
+      category_1: { type: 'choice', choice: 'applications', confidence: 0.4 },
+    } })
+  }
+  assert.deepEqual(await classifyProjects('test-only', rows, { fetchImpl }), ['sdk', 'other'])
+  await assert.rejects(() => classifyProjects('test-only', rows, { fetchImpl: async () => Response.json({ answers: {} }) }), /jev-invalid-response/)
+  await assert.rejects(() => classifyProjects('test-only', Array(9).fill(rows[0]), { fetchImpl }), /jev-invalid-batch/)
 })
 test('missing key never calls network; HTTP errors never echo response bodies', async () => {
   await assert.rejects(() => evaluateJev('', {}, '', { fetchImpl: () => { throw new Error('should not call') } }), /missing-key/)
@@ -53,7 +70,7 @@ test('rate limits back off and retry without logging credentials', async () => {
     return ++calls < 3 ? new Response('', { status: 429 }) : Response.json(response)
   }
   const result = await evaluateJev('test-only', {}, '', { fetchImpl, wait: async (ms: number) => { waits.push(ms) } })
-  assert.deepEqual(result, score); assert.deepEqual(waits, [1000, 2000])
+  assert.deepEqual(result, { ...score, category: 'sdk' }); assert.deepEqual(waits, [1000, 2000])
 })
 test('timeouts and invalid JSON produce safe errors', async () => {
   await assert.rejects(() => evaluateJev('test-only', {}, '', { fetchImpl: async () => { throw new Error('token in raw error') } }), /jev-network-or-timeout/)
@@ -71,11 +88,15 @@ test('GitHub client bounds retries and rejects alternate origins', async () => {
 })
 test('accepted candidate is appended once with audit evidence and existing data intact', async () => {
   const original = catalog(), before = structuredClone(original)
-  const result = await runRadar({ ...options(), catalog: original })
+  const result = await runRadar({ ...options(), catalog: original, review: async () => ({ ...score, category: 'sdk' }) })
   assert.deepEqual(original, before)
   assert.equal(result.report.added, 1); assert.equal(result.files.get('github.json')!.length, 1)
   assert.deepEqual(result.files.get('youtube.json'), [])
   assert.equal(result.rows[0].sourceMeta.jevKeep, 'keep')
+  const added = result.rows[0]
+  if (added.type !== 'github') throw new Error('Expected a GitHub project')
+  assert.equal(added.category, 'sdk')
+  assert.equal(result.rows[0].sourceMeta.category, undefined)
   assert.equal(result.report.receipts[0].sha, 'a'.repeat(40))
   assert.deepEqual(result.state.candidates, {})
   const repeat = await runRadar({ ...options(), catalog: { ...original, ...result } })

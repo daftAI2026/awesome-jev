@@ -2,7 +2,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { isDeepStrictEqual } from 'node:util'
-import { reviewDecision } from './jev-client.ts'
+import { isProjectCategory, reviewDecision } from './jev-client.ts'
 import type {
   Catalog,
   CatalogSourceMeta,
@@ -84,6 +84,7 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
       throw new Error('Invalid tags')
     }
     if (candidate.type === 'github') {
+      if (candidate.category !== undefined && !isProjectCategory(candidate.category)) throw new Error(`Invalid category: ${id}`)
       const key = repoKey(url)
       if (!key || typeof sourceMeta.repo !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sourceMeta.repo)) {
         throw new Error(`Invalid repository: ${id}`)
@@ -134,6 +135,7 @@ export function candidateRow(repo: GitHubRepository, score: ScoreInput = {}): Gi
     title: repo.name,
     summary: repo.description?.trim().slice(0, 500) || `${repo.name}: TypeSafe Jev ecosystem repository.`,
     tags,
+    category: score.category ?? 'other',
     url: repo.html_url,
     sourceMeta: {
       repo: repo.full_name,
@@ -145,15 +147,15 @@ export function candidateRow(repo: GitHubRepository, score: ScoreInput = {}): Gi
   }
 }
 
-const sections: Array<[string, (row: GitHubDirectoryItem) => boolean]> = [
-  ['Official SDKs & skills', (row) => repoKey(row.url)?.split('/')[0] === 'typesafe-ai'],
-  ['Awesome lists', (row) => /awesome/i.test(row.title) || row.tags?.includes('awesome') === true],
-  ['Browser & computer use', (row) => /browser|computer-use|cdp/.test((row.tags ?? []).join(' '))],
-  ['MCP, routers & adapters', (row) => /mcp|router|adapter/.test((row.tags ?? []).join(' '))],
-  ['Research & benchmarks', (row) => /benchmark|research|evaluation|calibration/.test((row.tags ?? []).join(' '))],
-  ['Libraries & SDKs', (row) => /sdk|library|api-client/.test((row.tags ?? []).join(' '))],
-  ['Agents, demos & apps', (row) => /agent|demo|game|app/.test((row.tags ?? []).join(' '))],
-  ['Tools & integrations', () => true],
+const sections: Array<[string, GitHubDirectoryItem['category']]> = [
+  ['Agents & automation', 'agents'],
+  ['Browser & computer use', 'browser'],
+  ['SDKs & integrations', 'sdk'],
+  ['Developer tools', 'developer'],
+  ['Research & evaluation', 'research'],
+  ['Learning & resources', 'resources'],
+  ['Apps & demos', 'applications'],
+  ['Other', 'other'],
 ]
 
 const escapeMarkdown = (text: string): string => String(text).replace(/[\r\n\t]+/g, ' ')
@@ -183,7 +185,7 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
   const projects = rows.filter((row): row is GitHubDirectoryItem => row.type === 'github')
   const groups = new Map<string, GitHubDirectoryItem[]>(sections.map(([title]) => [title, []]))
   for (const row of projects) {
-    const section = sections.find(([, matches]) => matches(row))
+    const section = sections.find(([, category]) => category === (row.category ?? 'other'))
     if (section) groups.get(section[0])?.push(row)
   }
   const body = [...groups].map(([title, group]) => {
@@ -198,6 +200,9 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
 
 export function syncReadme(root: string, { check = false }: { check?: boolean } = {}): number {
   const { rows } = readCatalog(root)
+  if (check && rows.some((row) => row.type === 'github' && !isProjectCategory(row.category))) {
+    throw new Error('GitHub project category missing; run npm run categories:classify')
+  }
   const path = join(root, 'README.md')
   const before = readFileSync(path, 'utf8')
   const after = renderReadme(before, rows)

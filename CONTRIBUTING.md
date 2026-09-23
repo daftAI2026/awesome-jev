@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping curate **Awesome JEV** — a directory of **GitHub projects and X posts** about **TypeSafe AI’s System One model [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** (typed decisions, SDKs, demos, integrations).
+Thanks for helping curate **Awesome JEV** — a GitHub-first directory of **Jev ecosystem projects** about **TypeSafe AI’s System One model [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** (typed decisions, SDKs, demos, integrations).
 
 ## Add items via JSON
 
@@ -19,6 +19,7 @@ Prefer editing those files (or letting the collector merge into them) over hand-
 | `title` | `string` | Repo name or short post title |
 | `summary` | `string` | One–two sentence description (X: post body, with real URLs) |
 | `tags` | `string[]` | GitHub / YouTube only. Omit on X posts. |
+| `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `applications`, or `other`. One primary use case. |
 | `url` | `string` | Canonical link (repo or original tweet) |
 | `sourceMeta` | `object` | See [`docs/data-model.md`](docs/data-model.md) |
 
@@ -28,6 +29,8 @@ Prefer editing those files (or letting the collector merge into them) over hand-
 - **X:** `handle`, `date`, `likes`, `replies`, `retweets`, `bookmarks`, optional `author`, optional `mediaUrls` / `videoUrls` / `avatarUrl`. No view counts.
 
 Do not invent fake tweet URLs. If you lack a real `url`, skip the item. Never commit `PLACEHOLDER` entries.
+
+New radar-admitted GitHub projects receive a Jev category in the same review call. For manual JSON additions, choose one primary category from the project evidence and run `npm run categories:check`; use `other` only when the purpose is unclear.
 
 To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPESAFE_API_KEY`, and run `npm run score:sources`. Never commit the key or put it in client code. See [`docs/collector.md`](docs/collector.md).
 
@@ -42,7 +45,8 @@ To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPE
 - One project (or one coherent batch of related links) per PR when possible.
 - Include a short summary and useful tags.
 - Prefer **real, maintained** open-source projects (or high-signal X posts via the collector).
-- Keep the README awesome-list section in sync when adding notable GitHub projects.
+- Run `npm run readme:sync` after adding GitHub projects; README categories follow the stored category.
+- Run `npm run categories:check` and `npm run data:check`.
 - Run `npm run build` locally if you touch TypeScript / UI.
 
 ## Not allowed

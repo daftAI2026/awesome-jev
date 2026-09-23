@@ -2,11 +2,13 @@
 export type SourceType = 'github' | 'x' | 'youtube'
 
 export type ReviewKeep = 'keep' | 'review' | 'drop'
+export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'other'
 
 export interface ScoreInput {
   jevAbout?: number
   jevKeep?: ReviewKeep
   jevKeepConfidence?: number
+  category?: ProjectCategory
   needsReview?: boolean
   conflictingEvidence?: boolean
 }
@@ -29,6 +31,7 @@ export interface GitHubDirectoryItem {
   title: string
   summary: string
   tags?: string[]
+  category?: ProjectCategory
   url: string
   sourceMeta: CatalogSourceMeta
 }
@@ -100,6 +103,7 @@ export interface JevRow {
   sourceMeta?: CatalogSourceMeta
   name?: string
   description?: string | null
+  tags?: string[]
 }
 
 export interface JevScore extends ScoreInput {
@@ -124,10 +128,12 @@ export interface ReviewBody {
     repo: string | null
     handle: string | null
     readme: string
+    tags?: string[]
   }
   questions: {
     about: ReviewQuestion
     keep: ReviewQuestion
+    category?: ReviewQuestion
   }
 }
 

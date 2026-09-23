@@ -113,11 +113,12 @@ test('snapshot rejects changes to YouTube', (t) => {
   assert.throws(() => validateSnapshot(root, output), /Non-GitHub/)
 })
 
-test('a community repository cannot claim the official section through an upstream topic', () => {
-  const spoof = { ...row('spoof'), tags: ['official'], sourceMeta: { ...row('spoof').sourceMeta, author: 'typesafe-ai' } }
+test('README grouping follows the reviewed category, not self-assigned topics', () => {
+  const spoof = { ...row('spoof'), tags: ['sdk'], category: 'other' as const }
   const output = renderReadme(text, [spoof])
-  const official = output.split('## Official SDKs & skills')[1].split('## Awesome lists')[0]
-  assert.doesNotMatch(official, /spoof/)
+  const sdk = output.split('## SDKs & integrations')[1].split('## Developer tools')[0]
+  assert.doesNotMatch(sdk, /spoof/)
+  assert.match(output.split('## Other')[1], /spoof/)
 })
 
 test('source mixing and reintroduced legacy shards are rejected', (t) => {

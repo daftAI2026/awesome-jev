@@ -6,7 +6,7 @@ Canonical stores:
 - [`data/youtube.json`](../data/youtube.json) — YouTube videos only
 - [`data/x.json`](../data/x.json) — X posts only (no tags)
 
-The site imports these three files explicitly. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
+The site currently imports only `data/github.json` for its GitHub-first navigation. X and YouTube data remain in their separate files for future placement. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
 
 Types live in [`src/lib/types.ts`](../src/lib/types.ts).
 
@@ -19,6 +19,7 @@ interface DirectoryItem {
   title: string
   summary: string
   tags?: string[]
+  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'other' // GitHub only
   url: string
   sourceMeta: SourceMeta
 }
@@ -31,6 +32,7 @@ interface DirectoryItem {
 | `title` | Display title (repo name / short headline) — **not** translated by the UI |
 | `summary` | Description; for X this is the post text — **not** translated by the UI |
 | `tags` | GitHub / YouTube only. X posts omit tags. |
+| `category` | One primary GitHub use-case category. `other` means evidence is insufficient, not a negative review. |
 | `url` | Outbound link (repo page or original tweet) |
 | `sourceMeta` | Type-specific metadata |
 
@@ -89,23 +91,22 @@ Persisted in `localStorage`:
 
 | Section | Key | Default | Options |
 | --- | --- | --- | --- |
+| Category | `awesome-jev-category` | `all` | `all` or one project category |
 | GitHub | `awesome-jev-github-sort` | `stars` | `stars` \| `date` \| `name` |
-| X | `awesome-jev-x-sort` | `date` (newest first) | `date` \| `likes` |
-| YouTube | `awesome-jev-youtube-sort` | `date` (newest first) | `date` \| `views` |
 
 Missing numeric fields sort as `0`; missing dates sort last.
 
 ## Consumption
 
-`App.tsx` imports `data/github.json`, `data/youtube.json` and `data/x.json`, concatenates them, filters by `type` into section boards, applies user sort after search, and passes each item to `ItemCard`.
+`App.tsx` imports `data/github.json`, searches it, filters by the single reviewed category, applies the user sort and renders GitHub cards or rows. X and YouTube data are retained but not bundled into the current page.
 
 ## GitHub radar write contract
 
 - Existing records keep their ID, URL, title, summary, tags and Jev scores. Only GitHub display metadata (`stars`, `forks`, `openIssues`, `language`) refreshes.
 - Existing `sourceMeta.repo` aliases from repository renames are tolerated. The normalized GitHub URL, not the display alias, owns deduplication and metadata requests.
-- New records use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
+- New records receive a Jev `category` choice in the same admission request, and use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
 - New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.
-- README categories are computed from titles, tags and owner. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
+- README categories use the same stored `category` values as the website. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
 - Review SHA, README evidence URL and content hash live in `radar/latest.json`, not in the browser-facing schema. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
 
-YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. The UI compares full instants and retains a masonry layout, assigning successive videos left-to-right across responsive columns while preserving DOM order. Unknown statistics must not overwrite known values with zero.
+YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. Video and X display components remain in the codebase but are currently hidden. Unknown statistics must not overwrite known values with zero.

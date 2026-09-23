@@ -22,9 +22,7 @@ function canHydrate(): boolean {
     const defaults = {
       'awesome-jev-github-sort': 'stars',
       'awesome-jev-github-view': 'cards',
-      'awesome-jev-x-sort': 'date',
-      'awesome-jev-youtube-sort': 'date',
-      'awesome-jev-zone': 'github',
+      'awesome-jev-category': 'all',
     }
     return Object.entries(defaults).every(([key, value]) => {
       const stored = localStorage.getItem(key)

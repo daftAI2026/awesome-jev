@@ -200,7 +200,10 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       report.receipts.push(receipt)
       if (decision === 'keep') {
         if (rows.some((r) => r.id === candidate.id)) throw new Error('github-id-collision')
-        Object.assign(candidate.sourceMeta, score, { jevEvidence: receipt })
+        if (!score) throw new Error('jev-invalid-response')
+        const { category, ...reviewScore } = score
+        candidate.category = category ?? 'other'
+        Object.assign(candidate.sourceMeta, reviewScore, { jevEvidence: receipt })
         files.get('github.json')!.push(candidate)
         rows.push(candidate)
         known.add(key)

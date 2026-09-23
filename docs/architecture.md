@@ -2,7 +2,7 @@
 
 ## Theme
 
-Searchable directory of curated **GitHub projects**, **X posts**, and **YouTube videos** about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
+Searchable directory of curated **GitHub projects** (with retained X and YouTube data for a later placement) about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
 
 ## Stack
 
@@ -11,7 +11,7 @@ Searchable directory of curated **GitHub projects**, **X posts**, and **YouTube 
 | UI | Vite + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
-| Search | Fuse.js over `data/github.json` + `data/youtube.json` + `data/x.json` |
+| Search | Fuse.js over `data/github.json` |
 | Deploy | Cloudflare Workers static assets (`wrangler.toml` → `./dist`, SPA `not_found_handling`) |
 
 Design stays monochrome / restrained: no decorative gradients. See [design.md](design.md).
@@ -24,22 +24,22 @@ Sticky header (full viewport, no divider)
 Hero
   └── Full-width ASCII wordmark + tagline under it
 Body
-  ├── Aside (lg+): source nav — GitHub / X / YouTube
+  ├── Aside (lg+): primary project-use categories
   └── Main
-        ├── Search (GitHub only; full-width underline, / to focus)
-        ├── Rank tabs (Stars / Date / Name, or Date / Likes / Views)
-        ├── GitHub view toggle (cards / list)
-        ├── Section boards
+        ├── GitHub search (full-width underline, / to focus)
+        ├── Sort controls (Stars / Date / Name)
+        ├── View toggle (cards / list)
+        ├── Filtered GitHub projects
         └── Footer notice
 Mobile
-  └── Source nav in a left Sheet (not a floating chip)
+  └── Category nav in a left Sheet (not a floating chip)
 ```
 
-- **Search** is a full-width underline field on the GitHub board only. Fuse.js (`src/lib/search.ts`) does not filter X or YouTube.
+- **Search** is a full-width underline field over GitHub projects. Category filtering narrows the search results without changing the stored order.
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
-- **Source filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left.
-- **Section boards** are type-scoped lists (`github` / `x` / `youtube`). YouTube only appears when the directory has videos. Empty sections show “No items yet.”
-- Cards link out (`target="_blank"`) to the original GitHub repo or X post — this site does not host media.
+- **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left.
+- **Filtered GitHub projects** are type-scoped lists (`github` / `x` / `youtube`). YouTube only appears when the directory has videos. Empty sections show “No items yet.”
+- Cards link out (`target="_blank"`) to the original GitHub repository — this site does not host media.
 
 ## Workers auto-deploy
 
@@ -67,8 +67,8 @@ npm run deploy   # build + wrangler deploy
 | `data/github.json` + `data/youtube.json` | Separate GitHub and YouTube stores, type-checked at validation |
 | `data/x.json` | X posts (no tags; links parsed in the card) |
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
-| `src/components/ItemCard.tsx` | GitHub + X card UIs |
-| `src/App.tsx` | Header, search, section boards |
+| `src/components/ItemCard.tsx` | GitHub cards; X card code retained for future placement |
+| `src/App.tsx` | Header, GitHub search and category navigation |
 
 ## Search discoverability
 
