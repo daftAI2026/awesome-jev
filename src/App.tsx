@@ -157,7 +157,7 @@ export default function App() {
         variant={filter === id ? 'secondary' : 'ghost'}
         aria-pressed={filter === id}
         onClick={() => selectFilter(id)}
-        className={`h-auto min-h-8 w-full justify-between gap-4 rounded-lg px-3 py-1.5 font-normal whitespace-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
+        className={`min-h-8 w-full justify-between gap-4 rounded-lg px-3 py-1.5 font-normal whitespace-nowrap ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
       >
         <span className="min-w-0 flex-1 text-left leading-snug">{t(FILTER_LABEL[id])}</span>
         {count != null && (id === 'saved'
@@ -208,7 +208,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-8 lg:py-10">
+      <div className="mx-auto w-full max-w-[75rem] px-4 py-8 sm:px-8 lg:py-10">
         <AsciiWordmark />
         <p className="mt-8 text-center text-xl leading-snug tracking-tight text-muted-foreground sm:text-2xl">
           {t('tagline').split('\n').map((line) => <span key={line} className="block">{line}</span>)}
@@ -221,8 +221,8 @@ export default function App() {
         )}
       </div>
 
-      <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:grid-cols-[13rem_minmax(0,1fr)] lg:px-8 lg:pb-10">
-        <aside className="hidden lg:block"><div className="sticky top-16 max-h-[calc(100dvh-5rem)] overflow-y-auto">{categoryNav}</div></aside>
+      <div className="mx-auto grid w-full max-w-[75rem] flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:px-8 lg:pb-10 xl:grid-cols-[16rem_minmax(0,1fr)]">
+        <aside className="hidden xl:block"><div className="sticky top-16 max-h-[calc(100dvh-5rem)] overflow-y-auto">{categoryNav}</div></aside>
         <div className="min-w-0">
           <div className="mb-6">
             <div className="relative">
@@ -237,7 +237,7 @@ export default function App() {
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <Sheet open={categoryOpen} onOpenChange={setCategoryOpen}>
-                <SheetTrigger render={<Button variant="outline" size="sm" className="lg:hidden" aria-label={t('openCategories')} />}>
+                <SheetTrigger render={<Button variant="outline" size="sm" className="xl:hidden" aria-label={t('openCategories')} />}>
                   <List className="size-4" weight="fill" aria-hidden />
                   {t(FILTER_LABEL[filter])}
                 </SheetTrigger>
@@ -287,7 +287,7 @@ export default function App() {
           </main>
         </div>
       </div>
-      <footer className="mx-auto w-full max-w-6xl px-4 pt-8 pb-20 sm:px-8">
+      <footer className="mx-auto w-full max-w-[75rem] px-4 pt-8 pb-20 sm:px-8">
         <Separator className="mb-8" />
         <Alert><Info weight="fill" aria-hidden /><AlertTitle>{t('footerTitle')}</AlertTitle><AlertDescription>{t('footerDescription')}</AlertDescription></Alert>
       </footer>
