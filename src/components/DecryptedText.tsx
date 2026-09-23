@@ -1,7 +1,7 @@
 /*
  * React Bits DecryptedText, adapted from commit bb9bebe4ed4ddeecfb4304079be6470ef8573273
  * https://github.com/DavidHDev/react-bits/blob/bb9bebe4ed4ddeecfb4304079be6470ef8573273/src/ts-tailwind/TextAnimations/DecryptedText/DecryptedText.tsx
- * Local adaptation: onComplete callback for the site title replay controller.
+ * Upstream component source with only a local lint directive below.
  *
  * MIT + Commons Clause License Condition v1.0
  *
@@ -61,7 +61,6 @@ interface DecryptedTextProps extends HTMLMotionProps<'span'> {
   parentClassName?: string;
   animateOn?: 'view' | 'hover' | 'inViewHover' | 'click';
   clickMode?: 'once' | 'toggle';
-  onComplete?: () => void;
 }
 
 type Direction = 'forward' | 'reverse';
@@ -79,7 +78,6 @@ export default function DecryptedText({
   encryptedClassName = '',
   animateOn = 'hover',
   clickMode = 'once',
-  onComplete,
   ...props
 }: DecryptedTextProps) {
   const [displayText, setDisplayText] = useState<string>(text);
@@ -93,15 +91,6 @@ export default function DecryptedText({
   const orderRef = useRef<number[]>([]);
   const pointerRef = useRef<number>(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const completionSentRef = useRef(false);
-
-  useEffect(() => {
-    if (sequential && direction === 'forward' && isAnimating && text.length > 0 &&
-      revealedIndices.size === text.length && !completionSentRef.current) {
-      completionSentRef.current = true;
-      onComplete?.();
-    }
-  }, [direction, isAnimating, onComplete, revealedIndices, sequential, text.length]);
 
   const availableChars = useMemo<string[]>(() => {
     return useOriginalCharsOnly
