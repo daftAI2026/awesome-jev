@@ -6,6 +6,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 180ms;
+    animation-timing-function: ease-in-out;
+  }
+}
+
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: "Geist Variable", "Geist Sans", ui-sans-serif, system-ui, sans-serif;

@@ -6,7 +6,7 @@ import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { ThemeMenu } from '@/components/ThemeMenu'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -138,7 +138,7 @@ export default function App() {
               aria-label={t('openGithub')} className="size-9 text-muted-foreground">
               <GithubLogo className="size-4" weight="fill" aria-hidden />
             </Button>
-            <ThemeToggle />
+            <ThemeMenu />
             <LanguageMenu />
           </div>
         </div>

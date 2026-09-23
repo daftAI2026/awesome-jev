@@ -10,7 +10,7 @@ The opening viewport should reveal identity, searchable inventory, active contro
 
 ## Page composition
 
-- The full-width sticky header contains the site title and three equal-size icon controls: source-repository link, theme toggle, and language menu. Theme follows the system until the reader chooses light or dark; both choices persist across reloads. The language menu lists English and 简体中文 with the current choice marked, and preserves the selection across reloads. The header has no routine bottom divider.
+- The full-width sticky header contains the site title and three equal-size icon controls: source-repository link, theme menu, and language menu. Both menus mark the current choice. Theme offers System, Light, and Dark; System follows operating-system changes, and selecting it clears any saved override. An effective color change uses a brief native crossfade where supported, but skips motion when the reader requests reduced motion. The language menu lists English and 简体中文, and both explicit theme and language choices persist across reloads. The header has no routine bottom divider.
 - The centered content frame contains a full-width ASCII wordmark, two-line tagline, and data-update time when build history supplies one. Never manufacture a timestamp.
 - On desktop, GitHub use categories occupy a left rail beside the main results. On smaller screens the same navigation opens a left Sheet. Counts come from the data.
 - Main controls are an underline search field, Stars / Date / Name sort, and cards / list view. Search is GitHub-only; query and category filter the results, sort orders them, and view changes their presentation. Preserve the query when no items match.

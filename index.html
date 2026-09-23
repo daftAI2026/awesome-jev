@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <script>
-      try {
-        const theme = localStorage.getItem('awesome-jev-theme')
-        if (theme === 'dark' || theme === 'light') document.documentElement.classList.add(theme)
-      } catch { /* keep system preference */ }
+      (() => {
+        let theme = null
+        try {
+          theme = localStorage.getItem('awesome-jev-theme')
+        } catch { /* keep system preference */ }
+        if (theme === 'light') document.documentElement.classList.add('light')
+        else if (theme === 'dark' || matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark')
+      })()
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://awesomejev.cc/" />
