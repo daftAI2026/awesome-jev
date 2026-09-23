@@ -38751,5 +38751,137 @@
         "checkedAt": "2026-09-23T21:30:17.226Z"
       }
     }
+  },
+  {
+    "id": "gh-8-ikermoel-open-alternative-jev",
+    "type": "github",
+    "title": "open-alternative-jev",
+    "summary": "Open-source alternative to TypeSafe's Jev: a System One style model layer that gives typed, calibrated decisions from any open-weights LLM in one forward pass (HF + vLLM), with honest benchmarks",
+    "tags": [
+      "calibration",
+      "classification",
+      "jev",
+      "jev-alternative",
+      "llm",
+      "logprobs",
+      "open-jev",
+      "open-source-jev"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/ikermoel/open-alternative-jev",
+    "sourceMeta": {
+      "repo": "ikermoel/open-alternative-jev",
+      "author": "ikermoel",
+      "stars": 51,
+      "forks": 11,
+      "language": "Python",
+      "date": "2026-09-18",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "ikermoel/open-alternative-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "4a85df1831b537343c9e133b5150fa3a3b1ce98e",
+        "evidenceUrl": "https://github.com/ikermoel/open-alternative-jev/blob/4a85df1831b537343c9e133b5150fa3a3b1ce98e/README.md",
+        "evidenceSha256": "ccea9cbd0db9a225012d61c910405ceb63342d4758278b61f290548d2f2fc6eb",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-23T23:56:45.683Z"
+      }
+    }
+  },
+  {
+    "id": "gh-18-embodied-ai-system-qwen3.5-oneforward",
+    "type": "github",
+    "title": "Qwen3.5-OneForward",
+    "summary": "Jev-style typed decisions from Qwen3.5-2B logits — one forward pass, zero decoding, zero fine-tuning.",
+    "tags": [
+      "fastapi",
+      "jev",
+      "logits",
+      "qwen",
+      "qwen3-5",
+      "self-hosted",
+      "system-one",
+      "transformers"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/Embodied-AI-System/Qwen3.5-OneForward",
+    "sourceMeta": {
+      "repo": "Embodied-AI-System/Qwen3.5-OneForward",
+      "author": "Embodied-AI-System",
+      "stars": 4,
+      "forks": 1,
+      "language": "Python",
+      "date": "2026-09-20",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "embodied-ai-system/qwen3.5-oneforward",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "8546801ec213d81c9a2063fbabe1b71acecfbea5",
+        "evidenceUrl": "https://github.com/embodied-ai-system/qwen3.5-oneforward/blob/8546801ec213d81c9a2063fbabe1b71acecfbea5/README.md",
+        "evidenceSha256": "9924db2710f9894c8ad4e6aa7f0b007641588d3eeb9d108d3dbaa21bcfdec744",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-23T23:56:45.683Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-ardada2468-typedecide",
+    "type": "github",
+    "title": "typedecide",
+    "summary": "Open-source implementation of the typed-decision pattern popularised by TypeSafe's Jev: read a decision out of a small language model's logits, in the browser. Library, benchmarks and paper. Not affiliated with TypeSafe.",
+    "tags": [
+      "browser-ml",
+      "constrained-decoding",
+      "fine-tuning",
+      "jev",
+      "llm-evaluation",
+      "llm-inference",
+      "logit-readout",
+      "lora"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/ardada2468/typedecide",
+    "sourceMeta": {
+      "repo": "ardada2468/typedecide",
+      "author": "ardada2468",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "date": "2026-09-21",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "ardada2468/typedecide",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "alternatives"
+        },
+        "sha": "b08a0ae353719ab07386f600f9c0bc12b0abb7f9",
+        "evidenceUrl": "https://github.com/ardada2468/typedecide/blob/b08a0ae353719ab07386f600f9c0bc12b0abb7f9/README.md",
+        "evidenceSha256": "7932fe01b2d1d5736b33bce7b2ea0eac8c42fbdf04cfa19e4cef15192cfbaee0",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-23T23:56:45.683Z"
+      }
+    }
   }
 ]
