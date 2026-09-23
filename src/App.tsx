@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
+import { GithubProjectDialog } from '@/components/GithubProjectDialog'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -66,7 +67,10 @@ export default function App() {
   const [view, setView] = useState<GithubView>(readStoredView)
   const [category, setCategory] = useState<CategoryFilter>(readStoredCategory)
   const [categoryOpen, setCategoryOpen] = useState(false)
+  const [detailItem, setDetailItem] = useState<DirectoryItem | null>(null)
+  const [detailOpen, setDetailOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
+  const detailTriggerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => { try { localStorage.setItem(GITHUB_SORT_KEY, sort) } catch { /* ignore */ } }, [sort])
   useEffect(() => { try { localStorage.setItem(GITHUB_VIEW_KEY, view) } catch { /* ignore */ } }, [view])
@@ -86,6 +90,13 @@ export default function App() {
   const selectCategory = useCallback((next: CategoryFilter) => {
     setCategory(next)
     setCategoryOpen(false)
+  }, [])
+  const openProjectPreview = useCallback((item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    detailTriggerRef.current = event.currentTarget
+    setDetailItem(item)
+    setDetailOpen(true)
   }, [])
   const categoryNav = (
     <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
@@ -111,6 +122,7 @@ export default function App() {
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
   const hasQuery = query.trim().length > 0
   const resultLabel = t(matched.length === 1 ? 'resultCount' : 'resultCountPlural', { count: matched.length })
+  const detailCategory = detailItem ? items.find((item) => item.id === detailItem.id)?.category : undefined
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -192,9 +204,9 @@ export default function App() {
             {sorted.length === 0 ? (
               <p className="py-10 text-sm text-muted-foreground">{t(hasQuery ? 'emptySearch' : 'emptySection')}</p>
             ) : view === 'list' ? (
-              <GithubList items={sorted} ranks={githubRanks} />
+              <GithubList items={sorted} ranks={githubRanks} onPreview={openProjectPreview} />
             ) : (
-              <CardMasonry items={sorted} ranks={githubRanks} />
+              <CardMasonry items={sorted} ranks={githubRanks} onPreview={openProjectPreview} />
             )}
           </main>
         </div>
@@ -203,6 +215,14 @@ export default function App() {
         <Separator className="mb-8" />
         <Alert><Info weight="fill" aria-hidden /><AlertTitle>{t('footerTitle')}</AlertTitle><AlertDescription>{t('footerDescription')}</AlertDescription></Alert>
       </footer>
+      <GithubProjectDialog
+        item={detailItem}
+        categoryLabel={detailCategory ? t(CATEGORY_LABEL[detailCategory]) : undefined}
+        rank={detailItem ? githubRanks.get(detailItem.id) : undefined}
+        open={detailOpen}
+        onOpenChange={setDetailOpen}
+        triggerRef={detailTriggerRef}
+      />
     </div>
   )
 }

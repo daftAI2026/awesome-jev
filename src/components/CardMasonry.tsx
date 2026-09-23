@@ -1,10 +1,14 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, type MouseEvent } from 'react'
 import type { DirectoryItem } from '@/lib/types'
 import { masonryPositions, MASONRY_ROW_HEIGHT } from '@/lib/masonry'
 import { ItemCard } from '@/components/ItemCard'
 import { useI18n } from '@/i18n'
 
-export function CardMasonry({ items, ranks }: { items: DirectoryItem[]; ranks?: Map<string, number> }) {
+export function CardMasonry({ items, ranks, onPreview }: {
+  items: DirectoryItem[]
+  ranks?: Map<string, number>
+  onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
+}) {
   const { locale } = useI18n()
   const listRef = useRef<HTMLUListElement>(null)
 
@@ -67,7 +71,7 @@ export function CardMasonry({ items, ranks }: { items: DirectoryItem[]; ranks?: 
     >
       {items.map((item) => (
         <li key={item.id} className="min-w-0">
-          <ItemCard item={item} rank={ranks?.get(item.id)} />
+          <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview} />
         </li>
       ))}
     </ul>

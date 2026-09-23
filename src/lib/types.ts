@@ -30,6 +30,8 @@ export interface SourceMeta {
   jevKeep?: 'keep' | 'review' | 'drop' | null
   /** Collector: confidence of `jevKeep` (Choice confidence, 0–1). */
   jevKeepConfidence?: number | null
+  /** Collector: pinned source used during repository review. */
+  jevEvidence?: { evidenceUrl: string } | null
 }
 
 export interface DirectoryItem {

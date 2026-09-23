@@ -47,6 +47,7 @@ interface SourceMeta {
   language?: string | null
   author?: string | null       // GitHub owner, or X display name
   repo?: string | null
+  jevEvidence?: { evidenceUrl: string } | null // pinned source for reviewed entries
 
   // X
   handle?: string | null
@@ -69,6 +70,7 @@ interface SourceMeta {
 - Collectors may emit `null` when unknown
 - Optional `date` (YYYY-MM-DD) supports the section “Date” sort
 - Manual README-backed category refinement stores `sourceMeta.categoryEvidenceSha` and `categoryEvidenceUrl` to identify the exact README version used; a GitHub metadata refresh preserves these fields.
+- Some reviewed rows also retain `sourceMeta.jevEvidence`; the project preview links to its pinned `evidenceUrl` when present, without presenting the model's raw confidence as a user-facing verdict.
 
 ### X / YouTube / media
 
@@ -108,6 +110,6 @@ Missing numeric fields sort as `0`; missing dates sort last.
 - New records receive a Jev `category` choice in the same admission request, and use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
 - New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.
 - README categories use the same stored `category` values as the website. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
-- Review SHA, README evidence URL and content hash live in `radar/latest.json`, not in the browser-facing schema. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
+- `radar/latest.json` holds the audit report; some accepted rows additionally retain pinned review evidence in `sourceMeta.jevEvidence`. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
 
 YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. Video and X display components remain in the codebase but are currently hidden. Unknown statistics must not overwrite known values with zero.

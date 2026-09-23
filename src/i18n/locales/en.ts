@@ -59,6 +59,14 @@ export const en = {
   viewList: 'List',
   githubColRank: '#',
   githubColProject: 'Project',
+  projectClose: 'Close project preview',
+  projectStars: 'Stars',
+  projectForks: 'Forks',
+  projectIssues: 'Open issues',
+  projectTags: 'Topics',
+  projectReviewSource: 'Review source',
+  projectViewEvidence: 'View cited source',
+  projectOpenGithub: 'Open on GitHub',
 } as const
 
 export type MessageKey = keyof typeof en

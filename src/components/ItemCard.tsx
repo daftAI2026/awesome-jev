@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 import {
   Bookmark,
   Bug,
@@ -27,6 +27,7 @@ import {
 interface ItemCardProps {
   item: DirectoryItem
   rank?: number
+  onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
 }
 
 function formatCount(n: number): string {
@@ -61,7 +62,7 @@ function TweetStat({
   )
 }
 
-function GithubCard({ item, rank }: ItemCardProps) {
+function GithubCard({ item, rank, onPreview }: ItemCardProps) {
   const { t } = useI18n()
   const meta = item.sourceMeta
   const metaBits: string[] = []
@@ -77,6 +78,8 @@ function GithubCard({ item, rank }: ItemCardProps) {
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-haspopup={onPreview ? 'dialog' : undefined}
+      onClick={onPreview ? (event) => onPreview(item, event) : undefined}
       className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       <Card size="sm" className="transition-colors hover:bg-muted/60">
@@ -344,12 +347,12 @@ function YoutubeCard({ item }: ItemCardProps) {
   )
 }
 
-export function ItemCard({ item, rank }: ItemCardProps) {
+export function ItemCard({ item, rank, onPreview }: ItemCardProps) {
   if (item.type === 'x') {
     return <XCard item={item} />
   }
   if (item.type === 'youtube') {
     return <YoutubeCard item={item} />
   }
-  return <GithubCard item={item} rank={rank} />
+  return <GithubCard item={item} rank={rank} onPreview={onPreview} />
 }

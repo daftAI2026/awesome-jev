@@ -1,4 +1,5 @@
 import { Star } from '@phosphor-icons/react'
+import type { MouseEvent } from 'react'
 import type { DirectoryItem } from '@/lib/types'
 import { useI18n } from '@/i18n'
 
@@ -9,9 +10,11 @@ function formatCount(n: number): string {
 export function GithubList({
   items,
   ranks,
+  onPreview,
 }: {
   items: DirectoryItem[]
   ranks: Map<string, number>
+  onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
 }) {
   const { t } = useI18n()
 
@@ -33,6 +36,8 @@ export function GithubList({
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-haspopup={onPreview ? 'dialog' : undefined}
+                onClick={onPreview ? (event) => onPreview(item, event) : undefined}
                 className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 py-3 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <span className="font-mono text-sm tabular-nums text-muted-foreground">
