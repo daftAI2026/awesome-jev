@@ -1,11 +1,14 @@
 import { readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { setTimeout as sleep } from 'node:timers/promises'
 import type { NewsItem } from '../src/lib/news.ts'
 
 const API = 'https://aihot.news/api/v1/items'
 const PAGE_SIZE = 100
-const MAX_PAGES = 100
+const MAX_PAGES = 15
+const MIN_REQUEST_INTERVAL_MS = 60_000
+const MAX_RETRY_WAIT_MS = 10 * 60_000
 const DATA_FILE = 'data/news.json'
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -114,11 +117,23 @@ export function mergeNews(existing: NewsItem[], incoming: NewsItem[]): { items: 
   return { items, added, updated }
 }
 
-export async function collectNews(fetchImpl: typeof fetch = fetch): Promise<NewsItem[]> {
+function retryDelay(response: Response): number {
+  const header = response.headers.get('Retry-After')
+  if (!header) return MIN_REQUEST_INTERVAL_MS
+  const seconds = Number(header)
+  const milliseconds = Number.isFinite(seconds) ? seconds * 1000 : Date.parse(header) - Date.now()
+  return Math.max(MIN_REQUEST_INTERVAL_MS, Number.isFinite(milliseconds) ? milliseconds : MIN_REQUEST_INTERVAL_MS)
+}
+
+export async function collectNews(
+  fetchImpl: typeof fetch = fetch,
+  wait: (milliseconds: number) => Promise<unknown> = sleep,
+): Promise<NewsItem[]> {
   const collected: NewsItem[] = []
   const seenCursors = new Set<string>()
   let cursor: string | null = null
   for (let page = 0; page < MAX_PAGES; page++) {
+    if (page > 0) await wait(MIN_REQUEST_INTERVAL_MS)
     const url = new URL(API)
     url.searchParams.set('mode', 'all')
     url.searchParams.set('window', '7d')
@@ -126,10 +141,17 @@ export async function collectNews(fetchImpl: typeof fetch = fetch): Promise<News
     url.searchParams.set('q', 'Jev')
     url.searchParams.set('limit', String(PAGE_SIZE))
     if (cursor) url.searchParams.set('cursor', cursor)
-    const response = await fetchImpl(url, {
-      headers: { 'User-Agent': 'awesome-jev/1.0 (https://github.com/daftAI2026/awesome-jev)' },
-      signal: AbortSignal.timeout(20_000),
-    })
+    let response: Response
+    for (let attempt = 0; ; attempt++) {
+      response = await fetchImpl(url, {
+        headers: { 'User-Agent': 'awesome-jev/1.0 (https://github.com/daftAI2026/awesome-jev)' },
+        signal: AbortSignal.timeout(20_000),
+      })
+      if (![429, 500, 502, 503, 504].includes(response.status) || attempt > 0) break
+      const delay = response.status === 429 ? retryDelay(response) : MIN_REQUEST_INTERVAL_MS
+      if (delay > MAX_RETRY_WAIT_MS) throw new Error(`AIHOT API returned ${response.status}; retry deferred to next run`)
+      await wait(delay)
+    }
     if (!response.ok) throw new Error(`AIHOT API returned ${response.status}`)
     const body: unknown = await response.json()
     if (!isRecord(body) || body.schemaVersion !== 1 || !Array.isArray(body.items) || !isRecord(body.page) ||
@@ -144,10 +166,14 @@ export async function collectNews(fetchImpl: typeof fetch = fetch): Promise<News
   throw new Error('AIHOT page limit reached; refusing partial sync')
 }
 
-export async function syncNews(root = process.cwd(), fetchImpl: typeof fetch = fetch): Promise<{ added: number; updated: number }> {
+export async function syncNews(
+  root = process.cwd(),
+  fetchImpl: typeof fetch = fetch,
+  wait: (milliseconds: number) => Promise<unknown> = sleep,
+): Promise<{ added: number; updated: number }> {
   const path = resolve(root, DATA_FILE)
   const existing = validateNews(JSON.parse(readFileSync(path, 'utf8')) as unknown)
-  const incoming = await collectNews(fetchImpl)
+  const incoming = await collectNews(fetchImpl, wait)
   const result = mergeNews(existing, incoming)
   validateNews(result.items)
   if (result.added || result.updated) {

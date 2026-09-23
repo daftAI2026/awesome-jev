@@ -1,7 +1,7 @@
 name: Jev news sync
 on:
   schedule:
-    - cron: '43 */6 * * *'
+    - cron: '43 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,7 +17,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:

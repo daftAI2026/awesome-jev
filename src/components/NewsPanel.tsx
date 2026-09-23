@@ -64,14 +64,14 @@ function NewsCard({ item, onPreview }: {
               {item.selected && <span>{t('newsSelected')}</span>}
               {item.score != null && <span className="ml-auto shrink-0 tabular-nums">{t('newsScore', { score: item.score })}</span>}
             </div>
-            <CardTitle className="text-base leading-snug group-hover:underline group-hover:underline-offset-2 sm:text-lg">
+            <CardTitle className="text-lg leading-snug group-hover:underline group-hover:underline-offset-2">
               {item.title}
             </CardTitle>
           </CardHeader>
           {(item.summary || originalExcerpt) && (
             <CardContent className="space-y-3 p-0">
-              {item.summary && <p className="line-clamp-5 whitespace-pre-line text-sm leading-relaxed text-foreground/80">{item.summary}</p>}
-              {originalExcerpt && <p className="line-clamp-2 border-l-2 border-border pl-3 text-xs leading-relaxed text-muted-foreground">{originalExcerpt}</p>}
+              {item.summary && <p className="line-clamp-5 max-w-prose whitespace-pre-line text-base leading-relaxed text-foreground">{item.summary}</p>}
+              {originalExcerpt && <p className="line-clamp-2 max-w-prose border-l-2 border-border pl-3 text-sm leading-relaxed text-muted-foreground">{originalExcerpt}</p>}
             </CardContent>
           )}
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
