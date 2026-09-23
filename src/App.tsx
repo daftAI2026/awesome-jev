@@ -5,6 +5,7 @@ import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
+import { LanguageMenu } from '@/components/LanguageMenu'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
@@ -62,7 +63,7 @@ function readStoredCategory(): CategoryFilter {
 }
 
 export default function App() {
-  const { locale, setLocale, t } = useI18n()
+  const { t } = useI18n()
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<GithubSort>(readStoredSort)
   const [view, setView] = useState<GithubView>(readStoredView)
@@ -134,15 +135,11 @@ export default function App() {
           <div className="flex shrink-0 items-center gap-2">
             <Button variant="ghost" size="icon-sm" nativeButton={false}
               render={<a href="https://github.com/daftAI2026/awesome-jev" target="_blank" rel="noopener noreferrer" />}
-              aria-label={t('openGithub')} className="text-muted-foreground">
+              aria-label={t('openGithub')} className="size-9 text-muted-foreground">
               <GithubLogo className="size-4" weight="fill" aria-hidden />
             </Button>
             <ThemeToggle />
-            <Button variant="outline" size="sm" className="h-9 min-w-12"
-              aria-label={t(locale === 'zh' ? 'switchToEnglish' : 'switchToChinese')}
-              onClick={() => setLocale(locale === 'zh' ? 'en' : 'zh')}>
-              {locale === 'zh' ? 'EN' : '中文'}
-            </Button>
+            <LanguageMenu />
           </div>
         </div>
       </header>
