@@ -243,8 +243,11 @@ export default function App() {
                 </SheetTrigger>
                 <SheetContent side="left" showCloseButton={false}
                   className="gap-0 p-0 shadow-none data-[side=left]:w-72 data-[side=left]:sm:max-w-72">
-                  <SheetHeader className="flex-row items-center justify-between border-b border-border py-3 pr-4 pl-7">
-                    <SheetTitle>{t('categoryLabel')}</SheetTitle>
+                  <SheetHeader className="h-14 flex-row items-center justify-between px-4 py-0">
+                    <SheetTitle className="sr-only">{t('categoryLabel')}</SheetTitle>
+                    <div className="min-w-0 text-base font-medium tracking-tight text-foreground sm:text-lg">
+                      <DecryptedBrand onClick={returnHome} />
+                    </div>
                     <SheetClose render={<Button variant="ghost" size="icon-sm" className="size-10" />}
                       aria-label={t('closeCategories')}>
                       <X className="size-4" aria-hidden />
