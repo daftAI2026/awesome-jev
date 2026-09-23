@@ -1618,5 +1618,20 @@
     "reason": null,
     "originalUrl": "https://x.com/lifesinger/status/2102764610109813192",
     "aihotUrl": "https://aihot.news/items/cmue7lu9z0q15rogh48n8uirl"
+  },
+  {
+    "id": "cmue8ofzm0r6uroghhbx42nhf",
+    "title": "玉伯谈 Jev 模型：系统一模型才刚开始",
+    "originalTitle": "这是我见过的关于 Jev 最浅入深出的一篇文章。印象深刻点： 1、模型应该给代码用还是给人用 2、为什么在 OpenAI 做不出来 3、什么是杰文斯悖论 4、不看公开榜单、去看内部工作流 5、用户的…",
+    "summary": "玉伯称这是他见过关于 Jev 最浅入深出的一篇文章，印象最深的点包括：模型该给代码用还是给人用、为什么在 OpenAI 做不出来、什么是杰文斯悖论、不看公开榜单而看内部工作流、用户数据没用、老看 PMF 容易扼杀创新。他还提到借助 Jev 这类模型 SaaS 有大机会，并把 Jev 定义为\"系统一模型\"，认为系统一模型才刚刚开始，同时表示不看好 neo lab。",
+    "sourceName": "X：Frank Wang 玉伯 (@lifesinger)",
+    "publishedAt": "2026-09-23T14:49:06.000Z",
+    "discoveredAt": "2026-09-23T15:09:39.569Z",
+    "category": null,
+    "score": 30,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/lifesinger/status/2102772248985870349",
+    "aihotUrl": "https://aihot.news/items/cmue8ofzm0r6uroghhbx42nhf"
   }
 ]
