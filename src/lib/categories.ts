@@ -1,4 +1,4 @@
-export const CATEGORIES = ['agents', 'browser', 'sdk', 'developer', 'research', 'resources', 'applications', 'alternatives', 'other'] as const
+export const CATEGORIES = ['agents', 'applications', 'browser', 'developer', 'resources', 'alternatives', 'research', 'sdk', 'other'] as const
 export type Category = (typeof CATEGORIES)[number]
 
 export const CATEGORY_LABEL = {
