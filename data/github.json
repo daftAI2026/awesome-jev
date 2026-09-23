@@ -38868,5 +38868,48 @@
       }
     },
     "category": "applications"
+  },
+  {
+    "id": "gh-9-jerryjliu-docjev",
+    "type": "github",
+    "title": "docjev",
+    "summary": "Classifies and splits PDFs, DOCX, and PPTX with TypeSafe Jev. Provides a Python library, CLI, and local app with LiteParse extraction and optional LlamaParse OCR.",
+    "tags": [
+      "jev",
+      "document-classification",
+      "document-splitting",
+      "ocr",
+      "python"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/jerryjliu/docjev",
+    "sourceMeta": {
+      "repo": "jerryjliu/docjev",
+      "author": "jerryjliu",
+      "stars": 354,
+      "forks": 25,
+      "openIssues": 1,
+      "language": "Python",
+      "date": "2026-09-19",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "jerryjliu/docjev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "7e6b48d3f7eec8db7b582e7276f2778c0d12ca3d",
+        "evidenceUrl": "https://github.com/jerryjliu/docjev/blob/7e6b48d3f7eec8db7b582e7276f2778c0d12ca3d/README.md",
+        "evidenceSha256": "75ebeffecef5eccf0cbe8be2ea96f2a71109b0deab262f603f7d3f97d5620621",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-09-23T12:26:03.070Z"
+      }
+    }
   }
 ]
