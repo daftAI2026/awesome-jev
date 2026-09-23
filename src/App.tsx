@@ -39,6 +39,7 @@ const FILTER_LABEL = {
 const GITHUB_SORT_KEY = 'awesome-jev-github-sort'
 const GITHUB_VIEW_KEY = 'awesome-jev-github-view'
 const CATEGORY_KEY = 'awesome-jev-category'
+const TOP_PROJECT_LIMIT = 100
 
 function readStoredSort(): GithubSort {
   try {
@@ -135,20 +136,26 @@ export default function App() {
   }, [filter, savedProjectIds, detailOpen, toggleProjectSavedRaw])
   const toggleNewsSaved = useCallback((item: NewsItem) => toggleSaved('news', item.id), [toggleSaved])
   const requestSavedNews = useCallback(() => setSavedNewsRequested(true), [])
-  const filterButton = (id: DirectoryFilter) => (
-    <Button
-      key={id}
-      type="button"
-      variant={filter === id ? 'secondary' : 'ghost'}
-      aria-pressed={filter === id}
-      onClick={() => selectFilter(id)}
-      className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
-    >
-      <span className="truncate">{t(FILTER_LABEL[id])}</span>
-      {id !== 'top100' && (id !== 'news' || newsItems !== null) &&
-        <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : id === 'news' ? newsItems?.length : id === 'saved' ? savedEntries.length : categoryCounts[id]}</span>}
-    </Button>
-  )
+  const filterButton = (id: DirectoryFilter) => {
+    const count = id === 'all' ? items.length
+      : id === 'top100' ? Math.min(TOP_PROJECT_LIMIT, githubRanks.size)
+      : id === 'news' ? newsItems?.length
+      : id === 'saved' ? savedEntries.length
+      : categoryCounts[id]
+    return (
+      <Button
+        key={id}
+        type="button"
+        variant={filter === id ? 'secondary' : 'ghost'}
+        aria-pressed={filter === id}
+        onClick={() => selectFilter(id)}
+        className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
+      >
+        <span className="truncate">{t(FILTER_LABEL[id])}</span>
+        {count != null && <span className="tabular-nums text-xs text-muted-foreground">{count}</span>}
+      </Button>
+    )
+  }
   const categoryNav = (
     <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
       {filterButton('top100')}
@@ -163,7 +170,7 @@ export default function App() {
     if (filter === 'news' || filter === 'saved') return []
     const searched = searchItems(items, query, 'github', []) as GithubItem[]
     if (filter === 'all') return searched
-    if (filter === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= 100)
+    if (filter === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= TOP_PROJECT_LIMIT)
     return searched.filter((item) => (item.category ?? 'other') === filter)
   }, [query, filter])
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
