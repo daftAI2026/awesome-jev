@@ -1648,5 +1648,20 @@
     "reason": null,
     "originalUrl": "https://www.nobodywho.ai/posts/jev-in-25-lines",
     "aihotUrl": "https://aihot.news/items/cmuduxq5808mnroghv31b4dqf"
+  },
+  {
+    "id": "cmuec3fqj0v44roghe38ned3r",
+    "title": "Kev-4B 上线硅基流动",
+    "originalTitle": "Not every model call needs an answer. Sometimes， it just needs a decision. 👏 Welcome Kev-4B to Sili…",
+    "summary": "不是每次模型调用都需要一个答案。有时，它只需要一个决策。👏 欢迎 Kev-4B 加入硅基流动。Kev-4B 是 Jev 的开源社区版，基于 Qwen3.5-4B 构建，用于结构化决策。路由。排序。审批。升级--无需再生成一段回复。无需部署或适配。一个硅基流动 API key，Kev 即可接入你的工作流。特别感谢 @jaredpalmer 开源 Kev。❤️ 在硅基流动上试用 Kev-4B。⚡️",
+    "sourceName": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+    "publishedAt": "2026-09-23T16:16:00.000Z",
+    "discoveredAt": "2026-09-23T16:45:19.707Z",
+    "category": null,
+    "score": 36,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/SiliconFlowAI/status/2102794117977903544",
+    "aihotUrl": "https://aihot.news/items/cmuec3fqj0v44roghe38ned3r"
   }
 ]
