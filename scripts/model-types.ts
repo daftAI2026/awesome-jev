@@ -2,7 +2,7 @@
 export type SourceType = 'github' | 'x' | 'youtube'
 
 export type ReviewKeep = 'keep' | 'review' | 'drop'
-export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'other'
+export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other'
 
 export interface ScoreInput {
   jevAbout?: number
@@ -68,6 +68,7 @@ export interface GitHubRepository {
   private?: boolean
   fork?: boolean
   archived?: boolean
+  license?: { spdx_id?: string | null } | null
   stargazers_count?: number
   forks_count?: number
   open_issues_count?: number

@@ -26,7 +26,7 @@ interface DirectoryItem {
   title: string
   summary: string
   tags?: string[]
-  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'other' // GitHub only
+  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other' // GitHub only
   url: string
   sourceMeta: SourceMeta
 }
@@ -39,7 +39,7 @@ interface DirectoryItem {
 | `title` | Display title (repo name / short headline) — **not** translated by the UI |
 | `summary` | Description; for X this is the post text — **not** translated by the UI |
 | `tags` | GitHub / YouTube only. X posts omit tags. |
-| `category` | One primary GitHub use-case category. `other` means evidence is insufficient, not a negative review. |
+| `category` | One primary GitHub use-case category. `alternatives` means an independent open-source typed-decision implementation, not necessarily a drop-in Jev replacement; `other` means evidence is insufficient, not a negative review. |
 | `url` | Outbound link (repo page or original tweet) |
 | `sourceMeta` | Type-specific metadata |
 

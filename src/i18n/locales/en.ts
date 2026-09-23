@@ -66,6 +66,7 @@ export const en = {
   categoryResearch: 'Research & evaluation',
   categoryResources: 'Learning & resources',
   categoryApplications: 'Apps & demos',
+  categoryAlternatives: 'Open-source alternatives',
   categoryOther: 'Other',
   openCategories: 'Open category filter',
   zoneLabel: 'Source',

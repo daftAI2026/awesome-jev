@@ -6,7 +6,7 @@ Collect TypeSafe AI **Jev / System One** ecosystem resources: official and commu
 
 The website reads exactly `data/github.json`, `data/youtube.json`, and `data/x.json`. Each file contains only its matching source type. All collectors must deduplicate across the complete catalog, preserve stable IDs and every existing field, and never replace a file with a partial subset. Old `items.json` and `part-*.json` files are rejected by validation; do not recreate them.
 
-The GitHub radar only discovers **public, non-fork, non-archived GitHub repositories**. It does not collect X or YouTube and cannot change their files. New GitHub entries append to `data/github.json`. Other collectors must update the matching source file and regenerate README before committing:
+The GitHub radar only discovers **public, non-fork, non-archived GitHub repositories**. It does not collect X or YouTube and cannot change their files. New GitHub entries append to `data/github.json`. A second, separate Action discovers independent open-source typed-decision implementations under `alternatives`; it shares the catalog and reviewer but not the core radar queue. Other collectors must update the matching source file and regenerate README before committing:
 
 ```bash
 npm run readme:sync
@@ -61,6 +61,16 @@ Radar permits **2,000 actual Jev HTTP attempts per UTC day**, including retries;
 - Snapshots are retained as Actions artifacts for **14 days**. `radar/state.json` stores cursors and pending/rejected candidates; `radar/latest.json` stores the latest run's outcomes. These files are not imported into the website.
 - A missing key fails the scan before discovery or file changes. Mid-run Jev errors cannot admit candidates; metadata updates and queued outcomes can still publish with `status=partial`.
 - Roll back an unwanted published update by reverting that bot commit, not resetting branch history. Disable `RADAR_ENABLED` before investigating repeated bad additions.
+
+## Independent open-source alternatives
+
+Workflow: **Open-source alternatives radar**, `.github/workflows/alternatives.yml`. It uses the existing `TYPESAFE_API_KEY` secret and GitHub's built-in `GITHUB_TOKEN`; no second key is required. Its schedule is `41 3,9,15,21 * * *` UTC (planned Beijing times 05:41, 11:41, 17:41, 23:41, subject to GitHub delays), staggered from the core radar, and is gated by repository variable `ALTERNATIVES_ENABLED=true`. A manual `mode=validate` makes no paid calls; `mode=sync` creates a preview unless `publish=true` is selected. Keep the variable disabled until a preview snapshot is reviewed.
+
+The Action searches GitHub topics `system-one` + `decision-model` and `typed-decisions`, using persisted page cursors. This discovers projects such as [AnyJev](https://github.com/nokia-applied-research/AnyJev) and [laya-mlx](https://github.com/mizorewww/laya-mlx) without requiring `jev` in their names. Topic matches are only leads, not approvals. For each new public, non-fork, non-archived repository it fetches metadata and a complete README pinned to a commit, requires a declared open-source license and typed/probabilistic decision context, then asks Jev whether the repository itself implements a useful independent alternative. The same conservative 0.9/0.9 admission thresholds apply, **and** Jev must choose `alternatives`. A positive decision does not certify API compatibility, benchmark claims, license compliance or runtime behavior. Missing/ambiguous evidence stays in review rather than appearing publicly.
+
+Its state and receipts live in `radar/alternatives-state.json` and `radar/alternatives-latest.json`; it never writes the core `radar/state.json` or `radar/latest.json`. It does **not** refresh all catalog metadata; the core radar owns that work. It writes append-only additions to `data/github.json` and regenerates README in the same validated commit. Known catalog URLs are skipped, even when previously listed in another category; reclassifying an existing entry is an explicit curator edit. A concurrent commit from another collector causes a safe non-fast-forward failure, not a forced merge. The Action has its own 2,000-HTTP-attempt-per-UTC-day budget artifact, independent of the core radar and submission bot budgets; this is a local safety cap, not a TypeSafe billing allowance.
+
+To enable after inspecting a preview: open **Actions → Open-source alternatives radar → Run workflow**, select `mode=sync`, leave `publish=false`, and inspect the `alternatives-<run-id>-<attempt>` artifact plus run summary. Then repeat with `publish=true` for a fresh reviewed snapshot, verify the resulting commit/deployment, and set repository Actions variable `ALTERNATIVES_ENABLED=true`. Set the variable to `false` to pause scheduled collection. The local equivalent is `node --experimental-strip-types scripts/alternatives-radar.ts /absolute/path/to/snapshot`; it requires exported `GITHUB_TOKEN` and `TYPESAFE_API_KEY` and never loads `.env.local` automatically.
 
 ## Local commands
 

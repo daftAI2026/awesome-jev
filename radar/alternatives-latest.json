@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-24T00:00:00.000Z",
+  "model": "jev-latest",
+  "status": "partial",
+  "sources": [],
+  "metadata": {
+    "ok": 0,
+    "failed": 0
+  },
+  "reviewed": 0,
+  "added": 0,
+  "pending": 0,
+  "overflow": 0,
+  "evicted": 0,
+  "receipts": []
+}

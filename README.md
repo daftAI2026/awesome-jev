@@ -7,7 +7,7 @@
 
 # Awesome JEV
 
-A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** / **System One** ecosystem projects — official SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, and community awesome-lists. The site currently focuses on GitHub projects grouped by primary use; X posts and YouTube videos remain in separate data files but are hidden from navigation.
+A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** / **System One** ecosystem projects — official SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, and community awesome-lists. Independent open-source typed-decision alternatives are listed separately and are not presented as official or drop-in compatible. The site currently focuses on GitHub projects grouped by primary use; X posts and YouTube videos remain in separate data files but are hidden from navigation.
 
 **Site:** [awesomejev.cc](https://awesomejev.cc) · **Data:** [`data/github.json`](data/github.json) + [`data/youtube.json`](data/youtube.json) · **Posts:** [`data/x.json`](data/x.json)
 
@@ -22,6 +22,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [Research & evaluation](#research--evaluation)
 - [Learning & resources](#learning--resources)
 - [Apps & demos](#apps--demos)
+- [Open-source alternatives](#open-source-alternatives)
 - [Other](#other)
 - [Site](#site)
 - [Automated updates](#automated-updates)
@@ -1162,6 +1163,10 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-crypto-scout**](https://github.com/yasdelayu/jev-crypto-scout) - Crypto screening: quant signals in code \(CoinGecko\), news judgment via Jev \(TypeSafe System One\) — sentiment/catalyst/confirmed, not a trading bot · `Python`
 - [**tell**](https://github.com/yirbz/tell) - tell: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**JevPip**](https://github.com/yo4e/JevPip) - GMOのFX/BTC市場データに対応したローカル市場研究ターミナル。ライブチャート、ペーパートレード、バックテスト、安全監督、TypeSafe Jev連携。安全機構を整えたうえで実売買対応予定。 · `Python`
+
+## Open-source alternatives
+
+_No projects yet._
 
 ## Other
 

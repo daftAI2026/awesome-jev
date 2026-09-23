@@ -5,7 +5,7 @@ import { createGitHubClient } from './github-client.ts'
 import type { ReviewApi } from './review-types.ts'
 
 const REPO = 'daftAI2026/awesome-jev'
-type CheckpointKind = 'review' | 'radar'
+type CheckpointKind = 'review' | 'radar' | 'alternatives'
 const events = new Set(['workflow_dispatch', 'schedule', 'issues', 'issue_comment', 'workflow_run'])
 const MAX_ARTIFACT_BYTES = 128 * 1024 * 1024
 
@@ -60,9 +60,9 @@ function artifact(value: unknown): Artifact | null {
 const safeInteger = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value)
 
 export async function latestCheckpoint(api: ReviewApi, currentRun: number, kind: CheckpointKind = 'review'): Promise<ReviewCheckpoint | null> {
-  const file = kind === 'radar' ? 'radar.yml' : 'submission-review.yml'
+  const file = kind === 'radar' ? 'radar.yml' : kind === 'alternatives' ? 'alternatives.yml' : 'submission-review.yml'
   const workflowPath = `.github/workflows/${file}`
-  const prefix = kind === 'radar' ? 'jev-radar-budget' : 'jev-review-checkpoint'
+  const prefix = kind === 'radar' ? 'jev-radar-budget' : kind === 'alternatives' ? 'jev-alternatives-budget' : 'jev-review-checkpoint'
   const workflow = record(await api(`/repos/${REPO}/actions/workflows/${file}`))
   const workflowId = workflow?.id
   if (!safeInteger(workflowId)) throw new Error('submission-invalid-workflow')
@@ -97,7 +97,7 @@ async function main(): Promise<void> {
   const output = process.env.GITHUB_OUTPUT
   if (!safeInteger(runId) || !output) throw new Error('submission-invalid-run')
   const kind = process.env.JEV_CHECKPOINT_KIND ?? 'review'
-  if (kind !== 'review' && kind !== 'radar') throw new Error('submission-invalid-checkpoint-kind')
+  if (kind !== 'review' && kind !== 'radar' && kind !== 'alternatives') throw new Error('submission-invalid-checkpoint-kind')
   const checkpoint = await latestCheckpoint(createGitHubClient(process.env.GITHUB_TOKEN), runId, kind)
   if (checkpoint) appendFileSync(output, `run_id=${checkpoint.runId}\nartifact_id=${checkpoint.artifactId}\n`)
 }

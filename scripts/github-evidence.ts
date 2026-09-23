@@ -25,6 +25,16 @@ export function evidenceIssue(repo: Pick<GitHubRepository, 'name' | 'description
   return null
 }
 
+export function alternativeEvidenceIssue(repo: Pick<GitHubRepository, 'name' | 'description'>, readme: string): string | null {
+  const text = `${repo.name}\n${repo.description ?? ''}\n${readme}`
+  const decisionModel = /typed[\s-]?decisions?|system[\s_-]?one/i.test(text)
+  const probabilistic = /probabilit(?:y|ies)|calibrat(?:e|ed|ion)|decision heads?/i.test(text)
+  if (!decisionModel || !probabilistic) return 'insufficient-alternative-context'
+  if (/\b(?:ignore|disregard|override)\b.{0,60}\b(?:instructions|rules|system prompt)\b/i.test(text) ||
+    /\b(?:always|must)\s+(?:return|respond|output)\s+.{0,60}\b(?:keep|approve|accept)\b/i.test(text)) return 'suspicious-review-instructions'
+  return null
+}
+
 interface CommitResponse { sha?: unknown }
 
 function commitSha(value: unknown): string {

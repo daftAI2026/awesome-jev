@@ -68,6 +68,7 @@ export const zh: Messages = {
   categoryResearch: '研究与评测',
   categoryResources: '教程与资源',
   categoryApplications: '应用与演示',
+  categoryAlternatives: '开源替代方案',
   categoryOther: '其他',
   openCategories: '打开项目分类',
   zoneLabel: '来源',

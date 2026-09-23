@@ -19,7 +19,7 @@ Prefer editing those files (or letting the collector merge into them) over hand-
 | `title` | `string` | Repo name or short post title |
 | `summary` | `string` | One–two sentence description (X: post body, with real URLs) |
 | `tags` | `string[]` | GitHub / YouTube only. Omit on X posts. |
-| `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `applications`, or `other`. One primary use case. |
+| `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `applications`, `alternatives`, or `other`. One primary use case. |
 | `url` | `string` | Canonical link (repo or original tweet) |
 | `sourceMeta` | `object` | See [`docs/data-model.md`](docs/data-model.md) |
 
@@ -36,7 +36,7 @@ To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPE
 
 ## Theme
 
-**In scope:** TypeSafe AI, System One models, **Jev**, official/community SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, awesome-lists, and high-signal discussion with outbound links (e.g. typesafe.ai, GitHub, docs).
+**In scope:** TypeSafe AI, System One models, **Jev**, official/community SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, awesome-lists, and high-signal discussion with outbound links (e.g. typesafe.ai, GitHub, docs). The separate `alternatives` category is for independent, licensed open-source typed-decision implementations; it does not imply TypeSafe affiliation or Jev API compatibility.
 
 **Out of scope:** Unrelated projects or anything that does not clearly connect to TypeSafe / System One / Jev.
 

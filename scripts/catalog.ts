@@ -122,18 +122,18 @@ export function refreshRow<T extends DirectoryItem>(row: T, repo: GitHubReposito
   return { ...row, sourceMeta: { ...row.sourceMeta, ...metadataOf(repo) } } as T
 }
 
-export function candidateRow(repo: GitHubRepository, score: ScoreInput = {}): GitHubDirectoryItem {
+export function candidateRow(repo: GitHubRepository, score: ScoreInput = {}, { alternative = false }: { alternative?: boolean } = {}): GitHubDirectoryItem {
   const key = repoKey(repo.html_url)
   if (!key || key !== repo.full_name.toLowerCase() || repo.private || repo.fork || repo.archived) {
     throw new Error('Ineligible repository')
   }
-  const tags = [...new Set(['jev', ...(repo.topics ?? []), repo.language?.toLowerCase()])]
+  const tags = [...new Set([...(alternative ? [] : ['jev']), ...(repo.topics ?? []), repo.language?.toLowerCase()])]
     .filter((tag): tag is string => typeof tag === 'string' && /^[a-z0-9+# .-]{1,50}$/.test(tag)).slice(0, 8)
   return {
     id: `gh-${key.split('/')[0].length}-${key.replace('/', '-')}`,
     type: 'github',
     title: repo.name,
-    summary: repo.description?.trim().slice(0, 500) || `${repo.name}: TypeSafe Jev ecosystem repository.`,
+    summary: repo.description?.trim().slice(0, 500) || `${repo.name}: ${alternative ? 'independent typed-decision implementation' : 'TypeSafe Jev ecosystem repository'}.`,
     tags,
     category: score.category ?? 'other',
     url: repo.html_url,
@@ -155,6 +155,7 @@ const sections: Array<[string, GitHubDirectoryItem['category']]> = [
   ['Research & evaluation', 'research'],
   ['Learning & resources', 'resources'],
   ['Apps & demos', 'applications'],
+  ['Open-source alternatives', 'alternatives'],
   ['Other', 'other'],
 ]
 
@@ -246,10 +247,10 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
   return next
 }
 
-export function applySnapshot(root: string, snapshot: string): void {
+export function applySnapshot(root: string, snapshot: string, files = ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json']): void {
   validateSnapshot(root, snapshot)
   // 所有输入先验证，之后才写入。state/latest 的结构由雷达 CLI 额外校验。
-  for (const file of ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json']) {
+  for (const file of files) {
     const content = readFileSync(join(snapshot, file), 'utf8')
     if (content !== readFileSync(join(root, file), 'utf8')) writeFileSync(join(root, file), content)
   }
