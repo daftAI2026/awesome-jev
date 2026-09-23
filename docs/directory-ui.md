@@ -14,8 +14,18 @@ The opening viewport should reveal identity, searchable inventory, active contro
 - The centered content frame contains a full-width ASCII wordmark, two-line tagline, and data-update time when build history supplies one. Never manufacture a timestamp. The wordmark fits by CSS container width from first paint rather than resizing after hydration.
 - On desktop, GitHub use categories occupy a left rail beside the main results. On smaller screens the same navigation opens a left Sheet. All projects and Top 100 by stars are separate shortcuts above the category list; Top 100 uses the global star rank, not the current search or sort order. Counts come from the data.
 - Main controls are an underline search field, Stars / Date / Name sort, and cards / list view. Search is GitHub-only; query and the selected shortcut or category filter the results, sort orders them, and view changes their presentation. The Stars button has no ambiguous inventory count. Preserve the query when no items match.
-- The cards view uses the ordered masonry component, with a single-column fallback on narrow screens. Once desktop card heights and positions are measured, offscreen card content can be skipped without losing its measured space; the full directory remains in the DOM. The list view is a ranked table-like list of rank, project, and stars, not an activity dashboard.
+- The cards view places each consecutive group of cards left-to-right on one reading row, even when card heights differ. It keeps cards at natural height rather than stretching them; preserving strict rank/date order takes priority over filling every short-card gap. Narrow screens use a single column. Once desktop card heights and positions are measured, offscreen card content can be skipped without losing its measured space; the full directory remains in the DOM. The list view is a ranked table-like list of rank, project, and stars, not an activity dashboard.
 - The footer ends the directory with a brief source note. Keep the opening and closing of the page connected even when the filtered result set is short.
+
+## Card ordering algorithm
+
+`CardMasonry` receives items **after** search, filter, and sort. It must not change that sequence. On a desktop-sized grid, the column count comes from the CSS breakpoint (two or three), not from card content. The layout measures each card's natural height, converts it to a four-pixel grid-row span with a 16-pixel gap, and processes consecutive groups of `columns` cards:
+
+1. Place the group's cards in columns 1, 2, 3 from left to right at the **same** grid row. Thus ranks 1–3 occupy the first reading row and ranks 4–6 the second, regardless of description length.
+2. Advance the next group's starting row by the **largest** span in the current group. Never fill the shortest column with a later item; doing so makes visual ranks appear as 5, 6, 4.
+3. Keep each card at natural height. The unused space below a shorter card is intentional: variable card heights cannot simultaneously have zero gaps and strict row-by-row reading order.
+
+On narrow screens, cards use one-column document flow. The desktop layout records each measured height as an intrinsic-size fallback before enabling offscreen `content-visibility`, so skipped cards keep their space during scrolling and theme changes. Source order, keyboard order, and visual reading order therefore agree.
 
 ## Project evidence
 
