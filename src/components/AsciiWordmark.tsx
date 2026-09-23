@@ -24,9 +24,20 @@ export function AsciiWordmark() {
     }
 
     fit()
-    const ro = new ResizeObserver(fit)
+    let frame = 0
+    let previousWidth = wrap.clientWidth
+    const ro = new ResizeObserver(([entry]) => {
+      const width = entry.contentRect.width
+      if (width === previousWidth) return
+      previousWidth = width
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(fit)
+    })
     ro.observe(wrap)
-    return () => ro.disconnect()
+    return () => {
+      ro.disconnect()
+      cancelAnimationFrame(frame)
+    }
   }, [])
 
   return (

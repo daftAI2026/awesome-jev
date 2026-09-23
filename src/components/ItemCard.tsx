@@ -77,9 +77,9 @@ function GithubCard({ item, rank }: ItemCardProps) {
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
-      <Card size="sm" className="h-full transition-colors hover:bg-muted/60">
+      <Card size="sm" className="transition-colors hover:bg-muted/60">
         <CardHeader>
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight group-hover:underline group-hover:underline-offset-2">
             <GithubLogo
@@ -105,7 +105,7 @@ function GithubCard({ item, rank }: ItemCardProps) {
           ) : null}
         </CardHeader>
         {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
-          <CardContent className="mt-auto space-y-2">
+          <CardContent className="space-y-2">
             {metaBits.length > 0 && (
               <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
                 {metaBits.join(' · ')}

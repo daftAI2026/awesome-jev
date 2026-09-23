@@ -2,8 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
+import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
-import { ItemCard } from '@/components/ItemCard'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -194,9 +194,7 @@ export default function App() {
             ) : view === 'list' ? (
               <GithubList items={sorted} ranks={githubRanks} />
             ) : (
-              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {sorted.map((item) => <li key={item.id} className="min-w-0"><ItemCard item={item} rank={githubRanks.get(item.id)} /></li>)}
-              </ul>
+              <CardMasonry items={sorted} ranks={githubRanks} />
             )}
           </main>
         </div>
