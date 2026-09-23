@@ -18,7 +18,7 @@ export interface RadarReviewOptions {
   attempts?: number
 }
 
-export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; codeHints?: CodeHint[]; lastReview?: Receipt }
+export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt }
 export interface RadarState { version: number; pages: Record<string, number>; metadataCursor: number; candidates: Record<string, Candidate> }
 interface Source { query: string; fetched: number; total: number; status: string }
 export interface Receipt { repo: string | null; status: string; reason?: string; score?: JevScore; sha?: string; evidenceUrl?: string; evidenceSha256?: string; evidenceLinks?: EvidenceLink[]; model?: string; checkedAt?: string }
@@ -58,6 +58,7 @@ export function validateState(state: RadarState) {
       (entry.checkedAt != null && !isTimestamp(entry.checkedAt)) ||
       (entry.retryAt != null && !isTimestamp(entry.retryAt)) ||
       !Number.isSafeInteger(entry.attempts) || entry.attempts < 0 ||
+      (entry.stars != null && (!Number.isSafeInteger(entry.stars) || entry.stars < 0)) ||
       (entry.codeHints != null && (!Array.isArray(entry.codeHints) || entry.codeHints.length > 3 || entry.codeHints.some((hint) => !hint || typeof hint.path !== 'string' || hint.path.length > 4096 || typeof hint.query !== 'string' || hint.query.length > 500)))) throw new Error('Invalid candidate state')
   }
 }
@@ -104,6 +105,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
               report.evicted++
             }
             state.candidates[key] = { status: 'pending', discoveredAt: started, attempts: 0 }
+          }
+          if (Number.isSafeInteger(repo.stargazers_count) && (repo.stargazers_count ?? -1) >= 0) {
+            state.candidates[key].stars = repo.stargazers_count
           }
         }
         const lastPage = Math.max(1, Math.min(10, Math.ceil(data.total_count / 100)))
@@ -167,7 +171,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
 
   const batch = Object.entries(state.candidates)
     .filter(([, entry]) => !entry.retryAt || Date.parse(entry.retryAt) <= now.getTime())
-    .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) || a.localeCompare(b))
+    .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) ||
+      Number(Boolean(y.codeHints?.length)) - Number(Boolean(x.codeHints?.length)) ||
+      (y.stars ?? 0) - (x.stars ?? 0) || a.localeCompare(b))
     .slice(0, limit)
   for (const [key, entry] of batch) {
     if (deadlineReached(deadline)) break

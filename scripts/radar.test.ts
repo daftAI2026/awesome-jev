@@ -206,6 +206,32 @@ test('older unreviewed candidates do not starve behind alphabetically earlier ne
   assert.deepEqual(visited, ['/repos/z/old'])
 })
 
+test('same-age core candidates prioritize direct code evidence, then stars', async () => {
+  const state = emptyState()
+  const discoveredAt = now.toISOString()
+  state.candidates['a/low'] = { status: 'pending', discoveredAt, attempts: 0, stars: 1 }
+  state.candidates['z/high'] = { status: 'pending', discoveredAt, attempts: 0, stars: 100 }
+  state.candidates['m/code'] = { status: 'pending', discoveredAt, attempts: 0, stars: 0,
+    codeHints: [{ path: 'src/client.ts', query: 'sdk' }] }
+  const visited: string[] = []
+  await runRadar({ ...options(), state, queries: [], limit: 3, api: async (path: string) => {
+    visited.push(path); throw new Error('github-http-404')
+  } })
+  assert.deepEqual(visited, ['/repos/m/code', '/repos/z/high', '/repos/a/low'])
+})
+
+test('repository search retains star priority across queue checkpoints', async () => {
+  const high = { ...repo, html_url: 'https://github.com/test/high', full_name: 'test/high', name: 'high', stargazers_count: 100 }
+  const low = { ...repo, html_url: 'https://github.com/test/low', full_name: 'test/low', name: 'low', stargazers_count: 1 }
+  const result = await runRadar({ ...options(), api: async (path: string) => path.startsWith('/search/')
+    ? { items: [low, high], total_count: 2 }
+    : (() => { throw new Error('github-http-404') })(), limit: 1 })
+  assert.equal(result.state.candidates['test/low'].stars, 1)
+  assert.equal(result.state.candidates['test/high'].stars, 100)
+  assert.equal(result.state.candidates['test/high'].attempts, 1)
+  assert.equal(result.state.candidates['test/low'].attempts, 0)
+})
+
 test('terminal rejection cache cannot permanently block new discovery at queue capacity', async () => {
   const state = emptyState()
   for (let i = 0; i < 2000; i++) state.candidates[`old/rejected-${i}`] = {
@@ -222,6 +248,8 @@ test('terminal rejection cache cannot permanently block new discovery at queue c
 test('persisted timestamps must be ISO strings, not Date.parse-coercible numbers', () => {
   const state = emptyState()
   state.candidates['test/bad'] = { status: 'pending', discoveredAt: 0 as unknown as string, attempts: 0 }
+  assert.throws(() => validateState(state), /candidate state/)
+  state.candidates['test/bad'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0, stars: -1 }
   assert.throws(() => validateState(state), /candidate state/)
 })
 
