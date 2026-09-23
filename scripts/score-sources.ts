@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { setTimeout as sleep } from 'node:timers/promises'
 import { classifyProjects, evaluateJev, isProjectCategory } from './jev-client.ts'
-import { catalogFiles, repoKey } from './catalog.ts'
+import { candidateRow, catalogFiles, repoKey } from './catalog.ts'
 import { createGitHubClient } from './github-client.ts'
 import { githubEvidence } from './github-evidence.ts'
 
@@ -57,7 +57,9 @@ async function classifyGithub(key: string, limit: number, force: boolean, dryRun
             }
           }
           if (!evidence) throw new Error('github-network-or-timeout')
-          categories[index] = (await evaluateJev(key, row, evidence.text)).category ?? 'other'
+          const currentTags = candidateRow(evidence.repo).tags ?? []
+          const reviewRow = { ...row, tags: [...new Set([...currentTags, ...(row.tags ?? [])])].slice(0, 8) }
+          categories[index] = (await evaluateJev(key, reviewRow, evidence.text)).category ?? 'other'
           evidenceByIndex[index] = { sha: evidence.sha, url: evidence.evidenceUrl }
           consecutiveForbidden = 0
         } catch (error) {
