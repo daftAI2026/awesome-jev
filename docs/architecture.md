@@ -20,7 +20,7 @@ Visual tokens and restraint are defined in [design.md](design.md); current page 
 
 ```
 Sticky header (full viewport, no divider)
-  └── Title + GitHub + language
+  └── Title + GitHub + theme + language
 Hero
   └── Full-width ASCII wordmark + tagline under it
 Body

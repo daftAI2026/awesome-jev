@@ -10,7 +10,7 @@ The opening viewport should reveal identity, searchable inventory, active contro
 
 ## Page composition
 
-- The full-width sticky header contains the site title, source-repository link, and language controls. It has no routine bottom divider.
+- The full-width sticky header contains the site title, source-repository link, one theme button, and one language-switch button. Theme follows the system until the reader chooses light or dark; both choices persist across reloads. The language button names the other language and preserves the current locale across reloads. The header has no routine bottom divider.
 - The centered content frame contains a full-width ASCII wordmark, two-line tagline, and data-update time when build history supplies one. Never manufacture a timestamp.
 - On desktop, GitHub use categories occupy a left rail beside the main results. On smaller screens the same navigation opens a left Sheet. Counts come from the data.
 - Main controls are an underline search field, Stars / Date / Name sort, and cards / list view. Search is GitHub-only; query and category filter the results, sort orders them, and view changes their presentation. Preserve the query when no items match.

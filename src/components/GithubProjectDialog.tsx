@@ -32,7 +32,7 @@ export function GithubProjectDialog({
           />
           <Dialog.Popup
             finalFocus={triggerRef}
-            className="fixed top-1/2 left-1/2 z-50 flex max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl border border-border bg-background text-foreground shadow-sm outline-none"
+            className="fixed top-1/2 left-1/2 z-50 flex max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl border border-border bg-background text-foreground outline-none"
           >
             <div className="flex shrink-0 items-start justify-between gap-4 p-4 sm:p-6">
               <div className="min-w-0 space-y-2">
@@ -52,7 +52,7 @@ export function GithubProjectDialog({
             </div>
 
             <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-6 sm:px-6">
-              <Dialog.Description className="text-base leading-relaxed text-foreground">
+              <Dialog.Description className="break-words text-base leading-relaxed text-foreground">
                 {item.summary}
               </Dialog.Description>
 
@@ -100,7 +100,7 @@ export function GithubProjectDialog({
                 <section className="mt-6" aria-label={t('projectTags')}>
                   <h3 className="text-sm font-medium">{t('projectTags')}</h3>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {item.tags?.map((tag) => <Badge key={tag} variant="outline" className="font-normal text-muted-foreground">{tag}</Badge>)}
+                    {item.tags?.map((tag) => <Badge key={tag} variant="outline" className="h-auto min-h-5 max-w-full break-all py-1 font-normal whitespace-normal text-muted-foreground">{tag}</Badge>)}
                   </div>
                 </section>
               )}

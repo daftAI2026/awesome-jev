@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      try {
+        const theme = localStorage.getItem('awesome-jev-theme')
+        if (theme === 'dark' || theme === 'light') document.documentElement.classList.add(theme)
+      } catch { /* keep system preference */ }
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://awesomejev.cc/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -5,6 +5,7 @@ import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -130,16 +131,18 @@ export default function App() {
       <header className="sticky top-0 z-50 bg-background">
         <div className="flex h-14 w-full items-center justify-between gap-3 px-4">
           <h1 className="truncate text-lg font-medium tracking-tight text-foreground">Awesome JEV</h1>
-          <div className="flex shrink-0 items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2">
             <Button variant="ghost" size="icon-sm" nativeButton={false}
               render={<a href="https://github.com/daftAI2026/awesome-jev" target="_blank" rel="noopener noreferrer" />}
               aria-label={t('openGithub')} className="text-muted-foreground">
               <GithubLogo className="size-4" weight="fill" aria-hidden />
             </Button>
-            <div className="flex shrink-0 items-center gap-2" role="group" aria-label={t('languageToggle')}>
-              <Button variant={locale === 'zh' ? 'secondary' : 'outline'} size="sm" onClick={() => setLocale('zh')} aria-pressed={locale === 'zh'}>中文</Button>
-              <Button variant={locale === 'en' ? 'secondary' : 'outline'} size="sm" onClick={() => setLocale('en')} aria-pressed={locale === 'en'}>EN</Button>
-            </div>
+            <ThemeToggle />
+            <Button variant="outline" size="sm" className="h-9 min-w-12"
+              aria-label={t(locale === 'zh' ? 'switchToEnglish' : 'switchToChinese')}
+              onClick={() => setLocale(locale === 'zh' ? 'en' : 'zh')}>
+              {locale === 'zh' ? 'EN' : '中文'}
+            </Button>
           </div>
         </div>
       </header>
