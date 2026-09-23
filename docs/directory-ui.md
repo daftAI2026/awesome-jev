@@ -4,7 +4,7 @@ This document owns the directory's product-specific composition and behavior. Ap
 
 ## Reader and data
 
-The current page helps readers find curated TypeSafe Jev / System One GitHub projects, judge their recorded summary and metadata, and inspect the original repository. It reads [`data/github.json`](../data/github.json). X and YouTube records remain in their own source files but are not currently rendered on the homepage; do not imply that their boards are visible. Keep UI chrome localized in `src/i18n/locales/*` and retain source titles and summaries in their original language.
+The current page helps readers find curated TypeSafe Jev / System One GitHub projects, judge their recorded summary and metadata, and inspect the original repository. It reads [`data/github.json`](../data/github.json). A distinct Jev news view reads [`data/news.json`](../data/news.json); X and YouTube records remain stored but hidden. Keep UI chrome localized in `src/i18n/locales/*` and retain source titles and summaries in their original language.
 
 The opening viewport should reveal identity, searchable inventory, active controls, and the start of results. Keep the result set dominant rather than placing a marketing masthead ahead of the reader's task.
 
@@ -12,10 +12,12 @@ The opening viewport should reveal identity, searchable inventory, active contro
 
 - The full-width sticky header contains the site title and three equal-size icon controls: source-repository link, theme menu, and language menu. Both menus mark the current choice. Theme offers System, Light, and Dark; System follows operating-system changes, and selecting it clears any saved override. An effective color change uses a brief native crossfade where supported, but skips motion when the reader requests reduced motion. The language menu lists English and 简体中文, and both explicit theme and language choices persist across reloads. The header has no routine bottom divider.
 - The centered content frame contains a full-width ASCII wordmark, two-line tagline, and data-update time when build history supplies one. Never manufacture a timestamp. The wordmark fits by CSS container width from first paint rather than resizing after hydration.
-- On desktop, GitHub use categories occupy a left rail beside the main results. On smaller screens the same navigation opens a left Sheet. All projects and Top 100 by stars are separate shortcuts above the category list; Top 100 uses the global star rank, not the current search or sort order. Counts come from the data.
+- On desktop, GitHub use categories occupy a left rail beside the main results. On smaller screens the same navigation opens a left Sheet. All projects, Top 100 by stars, and Jev news are separate shortcuts above the category list; Top 100 uses the global star rank, not the current search or sort order. Counts come from their respective data stores.
 - Main controls are an underline search field, Stars / Date / Name sort, and cards / list view. Search is GitHub-only; query and the selected shortcut or category filter the results, sort orders them, and view changes their presentation. The Stars button has no ambiguous inventory count. Preserve the query when no items match.
 - The cards view places each consecutive group of cards left-to-right on one reading row, even when card heights differ. It keeps cards at natural height rather than stretching them; preserving strict rank/date order takes priority over filling every short-card gap. Narrow screens use a single column. Once desktop card heights and positions are measured, offscreen card content can be skipped without losing its measured space; the full directory remains in the DOM. The list view is a ranked table-like list of rank, project, and stars, not an activity dashboard.
 - The footer ends the directory with a brief source note. Keep the opening and closing of the page connected even when the filtered result set is short.
+
+The news shortcut swaps the main result area, not the header or design system. It has local text search, source attribution, newest-first order, and an incremental “show more” control rather than rendering an unbounded archive at once. News cards link to AIHOT's item page. They do not claim to display the article body or media, because the official API does not expose those fields; see [news.md](news.md) for the source and usage boundary.
 
 ## Card ordering algorithm
 

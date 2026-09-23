@@ -2,7 +2,7 @@
 
 ## Theme
 
-Searchable directory of curated **GitHub projects** (with retained X and YouTube data for a later placement) about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
+Searchable directory of curated **GitHub projects** with a separate, source-attributed Jev news view (and retained X and YouTube data for a later placement) about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
 
 ## Stack
 
@@ -24,12 +24,12 @@ Sticky header (full viewport, no divider)
 Hero
   └── Full-width ASCII wordmark + tagline under it
 Body
-  ├── Aside (lg+): primary project-use categories
+  ├── Aside (lg+): project-use categories + separate Jev news entry
   └── Main
         ├── GitHub search (full-width underline, / to focus)
         ├── Sort controls (Stars / Date / Name)
         ├── View toggle (cards / list)
-        ├── Filtered GitHub projects
+        ├── Filtered GitHub projects or Jev news cards
         └── Footer notice
 Mobile
   └── Category nav in a left Sheet (not a floating chip)
@@ -38,7 +38,7 @@ Mobile
 - **Search** is a full-width underline field over GitHub projects. Category filtering narrows the search results without changing the stored order.
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
 - **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left.
-- **Filtered GitHub projects** are the current homepage result set; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
+- **Filtered GitHub projects** remain the primary result set. Jev news has its own static store and card view; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
 - An ordinary card or list-row click opens one shared project preview. The original GitHub URL remains the anchor fallback for modified clicks or disabled JavaScript.
 
 ## Workers auto-deploy
@@ -66,9 +66,10 @@ npm run deploy   # build + wrangler deploy
 | --- | --- |
 | `data/github.json` + `data/youtube.json` | Separate GitHub and YouTube stores, type-checked at validation |
 | `data/x.json` | X posts (no tags; links parsed in the card) |
+| `data/news.json` | Separate AIHOT-sourced Jev news snapshot, maintained by the opt-in scheduled Action |
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
 | `src/components/ItemCard.tsx` | GitHub cards; X card code retained for future placement |
-| `src/App.tsx` | Header, GitHub search and category navigation |
+| `src/App.tsx` | Header, GitHub search and category/news navigation |
 
 ## Search discoverability
 
@@ -79,5 +80,7 @@ Search Console's 2026-09-20 export is only one day of evidence, not a basis for 
 ## Scheduled collection
 
 GitHub Actions runs the server-side radar through read-only collection, secret-free validation, and data-only publishing jobs. Jev credentials never reach Vite or the browser. The resulting commit contains directory data and generated README together. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedule.
+
+The independent [news integration](news.md) uses AIHOT's public API in a separate six-hour Action and commits only `data/news.json` when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 
 An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.

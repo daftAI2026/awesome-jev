@@ -5,10 +5,17 @@ Canonical stores:
 - [`data/github.json`](../data/github.json) — GitHub projects only
 - [`data/youtube.json`](../data/youtube.json) — YouTube videos only
 - [`data/x.json`](../data/x.json) — X posts only (no tags)
+- [`data/news.json`](../data/news.json) — separate AIHOT Jev news records, not `DirectoryItem`s or GitHub radar inputs
 
-The site currently imports only `data/github.json` for its GitHub-first navigation. X and YouTube data remain in their separate files for future placement. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
+The GitHub-first navigation imports `data/github.json` immediately and loads `data/news.json` only when the news section is selected. X and YouTube data remain in their separate files for future placement. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
+
+The news view imports `data/news.json` independently. Its records are not `DirectoryItem`s and cannot be edited by GitHub, X, or YouTube collectors. The AIHOT collector owns its incremental upserts and URL deduplication; see [news.md](news.md).
 
 Types live in [`src/lib/types.ts`](../src/lib/types.ts).
+
+## `NewsItem`
+
+Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, optional summary, source name, optional publication time, required discovery time, original HTTPS URL, and AIHOT item HTTPS URL. Media URLs and article body are intentionally absent because the public AIHOT API does not contract them. The data file preserves insertion order; the UI sorts a copy by publication time, falling back to discovery time. The site does not expose this store as an API or bulk export.
 
 ## `DirectoryItem`
 

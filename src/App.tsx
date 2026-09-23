@@ -6,6 +6,7 @@ import { CardMasonry } from '@/components/CardMasonry'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
+import { NewsPanel } from '@/components/NewsPanel'
 import { ThemeMenu } from '@/components/ThemeMenu'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
@@ -18,19 +19,20 @@ import { useI18n } from '@/i18n'
 import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
 import { searchItems } from '@/lib/search'
 import { githubStarRanks, sortGithubItems } from '@/lib/sort'
+import type { NewsItem } from '@/lib/news'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 
 const CATEGORIES = ['agents', 'browser', 'sdk', 'developer', 'research', 'resources', 'applications', 'other'] as const
 type Category = (typeof CATEGORIES)[number]
-type CategoryFilter = 'all' | 'top100' | Category
+type DirectoryFilter = 'all' | 'top100' | 'news' | Category
 type GithubItem = DirectoryItem & { category?: Category }
 const items = githubData as GithubItem[]
 const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
 const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
 const githubRanks = githubStarRanks(items)
 const categoryCounts = Object.fromEntries(CATEGORIES.map((category) => [category, items.filter((item) => item.category === category).length])) as Record<Category, number>
-const CATEGORY_LABEL = {
-  all: 'categoryAll', top100: 'categoryTop100', agents: 'categoryAgents', browser: 'categoryBrowser', sdk: 'categorySdk',
+const FILTER_LABEL = {
+  all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', agents: 'categoryAgents', browser: 'categoryBrowser', sdk: 'categorySdk',
   developer: 'categoryDeveloper', research: 'categoryResearch', resources: 'categoryResources',
   applications: 'categoryApplications', other: 'categoryOther',
 } as const
@@ -54,10 +56,10 @@ function readStoredView(): GithubView {
   return 'cards'
 }
 
-function readStoredCategory(): CategoryFilter {
+function readStoredFilter(): DirectoryFilter {
   try {
     const value = localStorage.getItem(CATEGORY_KEY)
-    if (value === 'all' || value === 'top100' || CATEGORIES.some((category) => category === value)) return value as CategoryFilter
+    if (value === 'all' || value === 'top100' || value === 'news' || CATEGORIES.some((category) => category === value)) return value as DirectoryFilter
   } catch { /* ignore */ }
   return 'all'
 }
@@ -67,7 +69,9 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<GithubSort>(readStoredSort)
   const [view, setView] = useState<GithubView>(readStoredView)
-  const [category, setCategory] = useState<CategoryFilter>(readStoredCategory)
+  const [filter, setFilter] = useState<DirectoryFilter>(readStoredFilter)
+  const [newsItems, setNewsItems] = useState<NewsItem[] | null>(null)
+  const [newsLoadFailed, setNewsLoadFailed] = useState(false)
   const [categoryOpen, setCategoryOpen] = useState(false)
   const [detailItem, setDetailItem] = useState<DirectoryItem | null>(null)
   const [detailOpen, setDetailOpen] = useState(false)
@@ -76,7 +80,17 @@ export default function App() {
 
   useEffect(() => { try { localStorage.setItem(GITHUB_SORT_KEY, sort) } catch { /* ignore */ } }, [sort])
   useEffect(() => { try { localStorage.setItem(GITHUB_VIEW_KEY, view) } catch { /* ignore */ } }, [view])
-  useEffect(() => { try { localStorage.setItem(CATEGORY_KEY, category) } catch { /* ignore */ } }, [category])
+  useEffect(() => { try { localStorage.setItem(CATEGORY_KEY, filter) } catch { /* ignore */ } }, [filter])
+  useEffect(() => {
+    if (filter !== 'news' || newsItems !== null || newsLoadFailed) return
+    let active = true
+    import('../data/news.json').then(({ default: rows }) => {
+      if (active) setNewsItems(rows as NewsItem[])
+    }).catch(() => {
+      if (active) setNewsLoadFailed(true)
+    })
+    return () => { active = false }
+  }, [filter, newsItems, newsLoadFailed])
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return
@@ -89,10 +103,11 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  const selectCategory = useCallback((next: CategoryFilter) => {
-    setCategory(next)
+  const selectFilter = useCallback((next: DirectoryFilter) => {
+    if ((filter === 'news') !== (next === 'news')) setQuery('')
+    setFilter(next)
     setCategoryOpen(false)
-  }, [])
+  }, [filter])
   const openProjectPreview = useCallback((item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
@@ -100,33 +115,36 @@ export default function App() {
     setDetailItem(item)
     setDetailOpen(true)
   }, [])
-  const filterButton = (id: CategoryFilter) => (
+  const filterButton = (id: DirectoryFilter) => (
     <Button
       key={id}
       type="button"
-      variant={category === id ? 'secondary' : 'ghost'}
-      aria-pressed={category === id}
-      onClick={() => selectCategory(id)}
-      className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${category === id ? 'text-foreground' : 'text-muted-foreground'}`}
+      variant={filter === id ? 'secondary' : 'ghost'}
+      aria-pressed={filter === id}
+      onClick={() => selectFilter(id)}
+      className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
     >
-      <span className="truncate">{t(CATEGORY_LABEL[id])}</span>
-      {id !== 'top100' && <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : categoryCounts[id]}</span>}
+      <span className="truncate">{t(FILTER_LABEL[id])}</span>
+      {id !== 'top100' && (id !== 'news' || newsItems !== null) &&
+        <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : id === 'news' ? newsItems?.length : categoryCounts[id]}</span>}
     </Button>
   )
   const categoryNav = (
     <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
       {filterButton('all')}
       {filterButton('top100')}
+      {filterButton('news')}
       <Separator className="my-1" />
       {CATEGORIES.map(filterButton)}
     </nav>
   )
   const matched = useMemo(() => {
+    if (filter === 'news') return []
     const searched = searchItems(items, query, 'github', []) as GithubItem[]
-    if (category === 'all') return searched
-    if (category === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= 100)
-    return searched.filter((item) => (item.category ?? 'other') === category)
-  }, [query, category])
+    if (filter === 'all') return searched
+    if (filter === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= 100)
+    return searched.filter((item) => (item.category ?? 'other') === filter)
+  }, [query, filter])
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
   const hasQuery = query.trim().length > 0
   const resultLabel = t(matched.length === 1 ? 'resultCount' : 'resultCountPlural', { count: matched.length })
@@ -169,9 +187,9 @@ export default function App() {
           <div className="mb-6">
             <div className="relative">
               <MagnifyingGlass className="pointer-events-none absolute top-1/2 left-0 size-4 -translate-y-1/2 text-muted-foreground" weight="regular" aria-hidden />
-              <label htmlFor="directory-search" className="sr-only">{t('searchLabel')}</label>
+              <label htmlFor="directory-search" className="sr-only">{t(filter === 'news' ? 'searchNewsPlaceholder' : 'searchLabel')}</label>
               <Input ref={searchRef} id="directory-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)}
-                placeholder={t('searchPlaceholder')} autoComplete="off"
+                placeholder={t(filter === 'news' ? 'searchNewsPlaceholder' : 'searchPlaceholder')} autoComplete="off"
                 className="h-12 rounded-none border-0 border-b border-border bg-transparent px-8 py-3 text-base shadow-none appearance-none focus-visible:border-foreground focus-visible:ring-0 md:text-sm dark:bg-transparent [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden" />
               <kbd className="pointer-events-none absolute inset-y-0 right-0 hidden items-center sm:flex" title={t('searchHint')}>
                 <Badge variant="outline" className="rounded-lg font-mono font-normal text-muted-foreground">/</Badge>
@@ -181,33 +199,37 @@ export default function App() {
               <Sheet open={categoryOpen} onOpenChange={setCategoryOpen}>
                 <SheetTrigger render={<Button variant="outline" size="sm" className="lg:hidden" aria-label={t('openCategories')} />}>
                   <List className="size-4" weight="fill" aria-hidden />
-                  {t(CATEGORY_LABEL[category])}
+                  {t(FILTER_LABEL[filter])}
                 </SheetTrigger>
                 <SheetContent side="left" className="w-72 p-0">
                   <SheetHeader className="sr-only"><SheetTitle>{t('categoryLabel')}</SheetTitle></SheetHeader>
                   <div className="px-4 pb-4">{categoryNav}</div>
                 </SheetContent>
               </Sheet>
-              <ToggleGroup value={[sort]} onValueChange={(values) => {
+              {filter !== 'news' && <ToggleGroup value={[sort]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'stars' || next === 'date' || next === 'name') setSort(next)
               }} variant="outline" size="sm" aria-label={t('rankLabel')} className="rounded-lg">
                 <ToggleGroupItem value="stars">{t('sortStars')}</ToggleGroupItem>
                 <ToggleGroupItem value="date">{t('sortDate')}</ToggleGroupItem>
                 <ToggleGroupItem value="name">{t('sortName')}</ToggleGroupItem>
-              </ToggleGroup>
-              <ToggleGroup value={[view]} onValueChange={(values) => {
+              </ToggleGroup>}
+              {filter !== 'news' && <ToggleGroup value={[view]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'cards' || next === 'list') setView(next)
               }} variant="outline" size="sm" aria-label={t('viewLabel')} className="ml-auto rounded-lg">
                 <ToggleGroupItem value="cards" aria-label={t('viewCards')}><SquaresFour className="size-3.5" weight="fill" /></ToggleGroupItem>
                 <ToggleGroupItem value="list" aria-label={t('viewList')}><List className="size-3.5" weight="fill" /></ToggleGroupItem>
-              </ToggleGroup>
+              </ToggleGroup>}
             </div>
           </div>
-          {hasQuery && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
+          {hasQuery && filter !== 'news' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
           <main id="main" tabIndex={-1}>
-            {sorted.length === 0 ? (
+            {filter === 'news' ? (
+              newsLoadFailed ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoadFailed')}</p>
+                : newsItems === null ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
+                  : <NewsPanel key={query} items={newsItems} query={query} />
+            ) : sorted.length === 0 ? (
               <p className="py-10 text-sm text-muted-foreground">{t(hasQuery ? 'emptySearch' : 'emptySection')}</p>
             ) : view === 'list' ? (
               <GithubList items={sorted} ranks={githubRanks} onPreview={openProjectPreview} />
@@ -223,7 +245,7 @@ export default function App() {
       </footer>
       <GithubProjectDialog
         item={detailItem}
-        categoryLabel={detailCategory ? t(CATEGORY_LABEL[detailCategory]) : undefined}
+        categoryLabel={detailCategory ? t(FILTER_LABEL[detailCategory]) : undefined}
         open={detailOpen}
         onOpenChange={setDetailOpen}
         triggerRef={detailTriggerRef}

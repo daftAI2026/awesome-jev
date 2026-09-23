@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "cmue78fh50prkrogh123f0smh",
+    "title": "用 Pi 和 Jev 构建自定义 harness",
+    "summary": "学习用 Pi 和 Jev 构建自定义 harness。\n\n附带一个交互式 playground 来测试该 harness。\n\nhttps://x.com/omarsar0/status/2102762406204076532?s=20",
+    "sourceName": "X：DAIR.AI (@dair_ai)",
+    "publishedAt": "2026-09-23T14:11:43.000Z",
+    "discoveredAt": "2026-09-23T14:29:13.753Z",
+    "originalUrl": "https://x.com/dair_ai/status/2102762841698898127",
+    "aihotUrl": "https://aihot.news/items/cmue78fh50prkrogh123f0smh"
+  },
+  {
+    "id": "cmue6k79h0oruroghf3cfe87j",
+    "title": "如何用 Pi SDK 和 Jev 构建自定义 Agent harness",
+    "summary": "作者发布交互式教程，演示用 Pi SDK（TypeScript Agent 工具包）和 TypeSafe AI 的小模型 Jev 构建自定义 Agent harness。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-23T14:09:59.000Z",
+    "discoveredAt": "2026-09-23T14:10:23.969Z",
+    "originalUrl": "https://x.com/omarsar0/status/2102762406204076532",
+    "aihotUrl": "https://aihot.news/items/cmue6k79h0oruroghf3cfe87j"
+  },
+  {
+    "id": "cmue2hf6w0k6lrogh323szven",
+    "title": "JEV-as-a-Judge：置信时接受，不确定时升级",
+    "summary": "JEV-as-a-Judge 用仅做决策的评审模型做低成本初筛，在普通偏好与证据支撑的事实性任务上，与最强对比的 SOTA LLM 评审差距在 3 个百分点以内，费用仅为其 0.36%。当判断需要检查推导过程或抵御精心编写的错误答案时，差距会扩大，且 JEV 与对比模型的差距集中在低置信度决策上。一个冻结的级联流程接受高置信度判定、升级不确定判定，以更低成本保留了对比模型 99% 的准确率。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-22T00:00:00.000Z",
+    "discoveredAt": "2026-09-23T12:16:16.101Z",
+    "originalUrl": "https://arxiv.org/abs/2609.26550",
+    "aihotUrl": "https://aihot.news/items/cmue2hf6w0k6lrogh323szven"
+  },
+  {
+    "id": "cmudxd6qk0b8crogh5aduuxxe",
+    "title": "用25行Python代码实现Jev：一个本地运行的分类概率模型",
+    "summary": "有人用25行Python代码复现了Jev：加载Qwen3-0.6B-GGUF模型，对提示词中的选项标签取logits并归一化为概率，示例中\"Phishing\"概率达0.885。作者称Jev本质是接收带选项的提示词并输出概率的分类器，速度快、本地运行、数据不外传。该文为戏仿博客，作者同时给出OpenJev等更完整的开源实现链接。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-23T09:18:26.848Z",
+    "discoveredAt": "2026-09-23T09:53:01.758Z",
+    "originalUrl": "https://www.nobodywho.ai/posts/jev-in-25-lines",
+    "aihotUrl": "https://aihot.news/items/cmudxd6qk0b8crogh5aduuxxe"
+  },
+  {
+    "id": "cmuds094r05cdroghwwmmc65a",
+    "title": "Nokia 开源 AnyJev：无需训练将开放 LLM 变成校准决策模型",
+    "summary": "Nokia 应用研究团队开源 AnyJev，一个 Python 库，无需训练即可把开放 LLM 变成可输出概率的决策模型，接口借鉴 TypeSafe AI 于 2026 年 9 月发布的 Jev。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-09-23T07:09:38.000Z",
+    "discoveredAt": "2026-09-23T07:22:59.592Z",
+    "originalUrl": "https://www.marktechpost.com/2026/09/23/nokia-open-sources-anyjev-a-training-free-layer-that-turns-any-open-llm-into-a-calibrated-decision-model",
+    "aihotUrl": "https://aihot.news/items/cmuds094r05cdroghwwmmc65a"
+  },
+  {
+    "id": "cmudqgjcd0ogtrogg2y2d6c5p",
+    "title": "豆包工作 /plan 与 /goal 功能获好评",
+    "summary": "用户用豆包工作的 /plan、/goal 及任务队列功能完成 40 份关于 Jev 的研究文件，并整理成五主题知识库和研究观察站。该用户称这些功能非常好用，并为字节团队点赞。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-09-23T06:32:37.000Z",
+    "discoveredAt": "2026-09-23T06:39:39.049Z",
+    "originalUrl": "https://x.com/dongxi_nlp/status/2102647304264298856",
+    "aihotUrl": "https://aihot.news/items/cmudqgjcd0ogtrogg2y2d6c5p"
+  },
+  {
+    "id": "cmudnnjbe0hporogggdm18xlz",
+    "title": "Jev 实现动态 UI 文本框",
+    "summary": "应用的动态 UI 是著名的坟场，至少对 PM 来说是这样，甚至对整个产品和公司也是如此。如果真有这么简单呢？Jev 正在做这件事。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-23T05:18:17.000Z",
+    "discoveredAt": "2026-09-23T05:21:06.555Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102628596879880649",
+    "aihotUrl": "https://aihot.news/items/cmudnnjbe0hporogggdm18xlz"
+  },
+  {
+    "id": "cmudmkxva0gi5rogg2wox5yov",
+    "title": "PostHog 玩梗 jev 引共鸣",
+    "summary": "posthog 拿 jev 玩梗，感觉就像当年《南方公园》里出现 ChatGPT 那会儿 🥹",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-23T04:32:12.000Z",
+    "discoveredAt": "2026-09-23T04:51:06.189Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102616999318958145",
+    "aihotUrl": "https://aihot.news/items/cmudmkxva0gi5rogg2wox5yov"
+  },
+  {
+    "id": "cmudm693b0g1xrogg6sqibgzb",
+    "title": "用豆包工作研究 Jev：从模型判断到软件决策",
+    "summary": "作者用豆包工作的计划模式、目标模式和任务队列完成对 Jev 的研究，产出五主题知识库、24 项声明核查记录和可点回证据的研究观察站。Jev 由 TypeSafe 发布，厂商报告 193.6 倍速度和 444.6 倍成本优势；独立早期测试中 24 份挪威语文档中位延迟 0.32 秒，加入限定词后 ECE 从 0.040 升至 0.116。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-09-23T04:27:14.000Z",
+    "discoveredAt": "2026-09-23T04:39:39.971Z",
+    "originalUrl": "https://x.com/dongxi_nlp/status/2102615749663531012",
+    "aihotUrl": "https://aihot.news/items/cmudm693b0g1xrogg6sqibgzb"
+  },
+  {
+    "id": "cmud7kt5r05bqrorax1pr87nc",
+    "title": "JEV 分类器意外发现家庭 WiFi 后门",
+    "summary": "用户用 @typesafeai 的 JEV 驱动分类器分析 Wireshark 抓取的网络数据包，意外发现家庭 WiFi 网络中的后门威胁，经前沿 AI 模型验证后重置设备并加固网络。该网络数据包分析工具即将开源。主推文以\"做得智能又便宜、铺得到处都是\"概括 JEV 的路线，并称之为\"jevon's paradox\"。",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-22T21:42:06.000Z",
+    "discoveredAt": "2026-09-22T21:51:06.320Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102513797441462513",
+    "aihotUrl": "https://aihot.news/items/cmud7kt5r05bqrorax1pr87nc"
+  },
+  {
+    "id": "cmud7kt5r05bprorasrihdvn3",
+    "title": "Metaview 全线接入 typesafe 的 jev，搜索提速约 10 倍",
+    "summary": "MetaviewAI 上周末将 typesafeai 的 jev 接入其所有 agent，候选人搜索从数分钟缩短到数秒，准确率不变、约快 10 倍，且每次搜索成本明显更低。jev 让团队把智能当作软件来构建：将每个 agent 拆成最小语义单元、逐个查询、自设阈值，并通过新增问题而非修改系统提示词来修 bug。",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-22T21:50:04.000Z",
+    "discoveredAt": "2026-09-22T21:51:06.320Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102515801421185267",
+    "aihotUrl": "https://aihot.news/items/cmud7kt5r05bprorasrihdvn3"
+  },
+  {
+    "id": "cmud4mk4803m4roa91kt0er0t",
+    "title": "OpenClaw 核心支持决策模型",
+    "summary": "一切都在往 Jev 的方向发展！\n\n上周 @jlehman_ 为 OpenClaw 核心和插件推送了决策模型支持\n\n了解我们如何思考使用它们，以及你如何用这个强大的新工具让 OpenClaw 变得更好！\n\nhttps://openclaw.ai/blog/decision-models-in-openclaw",
+    "sourceName": "X：OpenClaw (@openclaw)",
+    "publishedAt": "2026-09-22T20:00:23.000Z",
+    "discoveredAt": "2026-09-22T20:28:28.566Z",
+    "originalUrl": "https://x.com/openclaw/status/2102488199486656862",
+    "aihotUrl": "https://aihot.news/items/cmud4mk4803m4roa91kt0er0t"
+  },
+  {
+    "id": "cmud4d3n405lwrov66q7uhqmh",
+    "title": "Paradigm Frontiers 活动预告：CompleteSkeptic 任嘉宾",
+    "summary": "Paradigm Frontiers 活动宣布 @CompleteSkeptic 将作为特别嘉宾出席，活动时间为 10 月 12-14 日，地点在旧金山 Fort Mason，申请本周截止。主推文称近期进展超出预期，并预告几周后 Paradigm Frontiers 将有新内容发布。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-22T20:03:32.000Z",
+    "discoveredAt": "2026-09-22T20:21:06.671Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102488989983015332",
+    "aihotUrl": "https://aihot.news/items/cmud4d3n405lwrov66q7uhqmh"
+  },
+  {
+    "id": "cmud3aitp04aprov6dvqb2dyg",
+    "title": "Pydantic AI 智能体现已运行于 Jev",
+    "summary": "@pydantic 从一开始就是类型安全的！现在由 Jev 驱动你的 Pydantic AI 智能体调用，返回速度比以往更快 ⚡️⚡️\n\nPydantic AI 智能体现已运行于 Jev，这是来自 @typesafeai 的分类器。\n\nJev 不生成文本，它回答带类型的问题。所以你已写好的 output_type 就是问题，答案会以你的模型形式返回，每个字段一个置信度。\n\nhttps://pydantic.io/8iAZ9",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-22T19:42:14.000Z",
+    "discoveredAt": "2026-09-22T19:51:06.871Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102483632585920833",
+    "aihotUrl": "https://aihot.news/items/cmud3aitp04aprov6dvqb2dyg"
+  },
+  {
+    "id": "cmud3aitp04aorov6u4cc6gkk",
+    "title": "JEV 驱动分类器意外发现家庭 WiFi 后门",
+    "summary": "开发者用 JEV 驱动的分类器分析 Wireshark 抓取的家庭 WiFi 网络数据包，意外发现严重威胁，经前沿 AI 模型验证后确认，最终重置设备并加固网络。该网络数据包分析工具即将开源。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-22T19:44:08.000Z",
+    "discoveredAt": "2026-09-22T19:51:06.871Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102484110363275374",
+    "aihotUrl": "https://aihot.news/items/cmud3aitp04aorov6u4cc6gkk"
+  },
+  {
+    "id": "cmucyoyj20537ronirfgez60t",
+    "title": "Jev 专题：AI That Works 第75期",
+    "summary": "关于 Jev 的一切：🦄 AI That Works #75 https://x.com/i/broadcasts/1qJVmyramPAGB",
+    "sourceName": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+    "publishedAt": "2026-09-22T17:18:24.000Z",
+    "discoveredAt": "2026-09-22T17:42:23.237Z",
+    "originalUrl": "https://x.com/dexhorthy/status/2102447433603313813",
+    "aihotUrl": "https://aihot.news/items/cmucyoyj20537ronirfgez60t"
+  },
+  {
+    "id": "cmucxyky704ftronibjzp4dos",
+    "title": "OpenRouter 实测 Jev 1.13 与 Claude Opus 5 在 Banking77 分类任务上的准确率、延迟与成本",
+    "summary": "OpenRouter 用 Banking77 测试集的 3，080 条客服语料对比 Jev 1.13 与 Claude Opus 5 的意图分类表现。Jev 准确率 81.0% 比 Opus 的 84.4% 低 3.3 个百分点，但中位延迟 175 ms 约为 Opus（2，266 ms）的 1/13，每千次请求成本 $0.11 对 $2.42（启用提示词缓存）。",
+    "sourceName": "OpenRouter：Announcements（RSS）",
+    "publishedAt": "2026-09-22T00:00:00.000Z",
+    "discoveredAt": "2026-09-22T17:21:52.130Z",
+    "originalUrl": "https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification",
+    "aihotUrl": "https://aihot.news/items/cmucxyky704ftronibjzp4dos"
+  },
+  {
+    "id": "cmucxdnhr0saxroedzl8k4p57",
+    "title": "Simon Willison 发布 llm-typesafe 0.1a0，为 LLM 插件接入 TypeSafe AI 的 Jev 模型",
+    "summary": "Simon Willison 发布 LLM 插件 llm-typesafe 0.1a0，为 TypeSafe AI 的新模型 Jev 提供支持，可通过 `llm install llm-typesafe` 安装并设置 API key。该插件支持 yes/no、choice 和 score 三类提问，例如 noul 问题返回 `{\"type\"： \"noul\"， \"noul\"： 0.99}`。",
+    "sourceName": "Simon Willison 博客",
+    "publishedAt": "2026-09-22T15:54:16.000Z",
+    "discoveredAt": "2026-09-22T17:05:36.995Z",
+    "originalUrl": "https://simonwillison.net/2026/Sep/22/llm-typesafe",
+    "aihotUrl": "https://aihot.news/items/cmucxdnhr0saxroedzl8k4p57"
+  },
+  {
+    "id": "cmucwvmws0ronroedd6u1rmzw",
+    "title": "分析认为 OpenAI 具备快速跟进 TypeSafe 的 Jev 并将分类能力内嵌进模型的优势",
+    "summary": "作者分析 TypeSafe 的 Jev 本质上是基于常规 LLM 的 logprobs 做通用分类，OpenAI 多年来已在工具调用中用单个 token 充当微型分类器，具备快速复制 Jev 并把分类能力折叠进自家模型和智能体的条件。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-22T16:37:52.173Z",
+    "discoveredAt": "2026-09-22T16:51:36.027Z",
+    "originalUrl": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch",
+    "aihotUrl": "https://aihot.news/items/cmucwvmws0ronroedd6u1rmzw"
+  },
+  {
+    "id": "cmucu8im70omcroedhbgu1l65",
+    "title": "OpenRouter 用 Jev 自动分类 LLM 请求",
+    "summary": "提示：使用 @typesafeai 的 Jev，通过 Classifiers 自动分类你的 LLM 请求：https://openrouter.ai/workspaces/default/classifiers\n\n随后你可以在 Explore 中分析结果：https://openrouter.ai/activity/explore",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-22T15:22:45.000Z",
+    "discoveredAt": "2026-09-22T15:37:37.187Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2102418328979435759",
+    "aihotUrl": "https://aihot.news/items/cmucu8im70omcroedhbgu1l65"
+  },
+  {
+    "id": "cmucmqmro0fn6roeds7hlnajz",
+    "title": "OpenRouter：Jev 上线带动新用户",
+    "summary": "问：哪些模型受 Jev 到来的影响最大？\n\n答：许多实验室的 flash 版本模型。\n\n另外：OpenRouter 上近一半的 Jev 用户在前一周还没用过任何模型。这次发布激起了足够的兴趣，把他们从场边拉了进来。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-22T12:00:34.000Z",
+    "discoveredAt": "2026-09-22T12:07:39.346Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2102367448586744127",
+    "aihotUrl": "https://aihot.news/items/cmucmqmro0fn6roeds7hlnajz"
+  },
+  {
+    "id": "cmucjlc6c08mlroed188c42wi",
+    "title": "在人类璀璨的艺术中遨游，如此美妙，谢谢 Jev",
+    "summary": "在人类璀璨的艺术中遨游，如此美妙，谢谢 Jev\n\n【引用 @ZHO_ZHO_ZHO】：Jev 正在疯狂工作（视频未加速",
+    "sourceName": "X：ZHO (@ZHO_ZHO_ZHO)",
+    "publishedAt": "2026-09-22T10:39:23.000Z",
+    "discoveredAt": "2026-09-22T10:39:39.404Z",
+    "originalUrl": "https://x.com/ZHO_ZHO_ZHO/status/2102347016840028273",
+    "aihotUrl": "https://aihot.news/items/cmucjlc6c08mlroed188c42wi"
+  },
+  {
+    "id": "cmucci2d6038iroij2viijgon",
+    "title": "Jev 搭配 Exa 联网搜索效果惊人",
+    "summary": "这是真的吗？还是夸张了？（抱歉）\n\n【引用 @TheIshanGoswami】：Jev 搭配 Exa 简直离谱。\n\n&gt； Jev 不用联网搜索时会自信地给出错误输出\n&gt； Jev 用上联网搜索后准确率真的高很多\n\n免费试用 Jev（搭配 Exa 联网搜索）👇",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-22T07:08:53.000Z",
+    "discoveredAt": "2026-09-22T07:21:06.415Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102294042185023816",
+    "aihotUrl": "https://aihot.news/items/cmucci2d6038iroij2viijgon"
+  },
+  {
+    "id": "cmucbfeut0kharots3wf2bnef",
+    "title": "Jev 因需求激增暂停新用户注册",
+    "summary": "AI 产品 Jev 因需求激增已暂停新用户注册，现有用户服务不受影响。官方称此举是为保障现有用户的服务质量，同时让团队得以休息，并将尽快恢复开放注册。",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-22T06:24:42.000Z",
+    "discoveredAt": "2026-09-22T06:51:06.494Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102282924699840980",
+    "aihotUrl": "https://aihot.news/items/cmucbfeut0kharots3wf2bnef"
+  },
+  {
+    "id": "cmucacvms0jherotsh8pnnrjn",
+    "title": "Jev 因需求激增暂停注册",
+    "summary": "我们看到了极其巨大的需求涌入，不得不暂时暂停 Jev 的注册。我们需要确保现有注册用户的服务质量，他们的服务将继续正常运行。我们正在努力尽快让所有人都能开放使用 Jev。谢谢。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-22T06:19:04.000Z",
+    "discoveredAt": "2026-09-22T06:21:06.753Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102281508950307159",
+    "aihotUrl": "https://aihot.news/items/cmucacvms0jherotsh8pnnrjn"
+  },
+  {
+    "id": "cmuc5srxo0abfrots6ur78l90",
+    "title": "Jev-Mem：用 System-One 控制平面打造高效 AI 智能体记忆架构",
+    "summary": "Jev-Mem 是一种受 System-One/System-Two 认知启发的新型智能体记忆架构，通过专用 System-One 控制平面在构建阶段管理记忆类型与关系组织，并在检索时动态完成查询路由、检索预算分配、图遍历、候选打分与自适应停止，System-Two 仅用于复杂推理与答案合成。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-21T00:00:00.000Z",
+    "discoveredAt": "2026-09-22T04:13:32.891Z",
+    "originalUrl": "https://arxiv.org/abs/2609.23986",
+    "aihotUrl": "https://aihot.news/items/cmuc5srxo0abfrots6ur78l90"
+  },
+  {
+    "id": "cmuc0pmoe04g1rots1wchwbmo",
+    "title": "TypeSafe Jev 接入 MotherDuck，文本分类快 50 倍",
+    "summary": "TypeSafe 新模型 Jev 以 SQL 函数 prompt_jev（） 接入 MotherDuck，文本分类速度提升约 50 倍、成本降至约 1%。10 万行数据仅需 40 秒、花费 $0.50，达到前沿 LLM 准确率，而 LLM 方案耗时 32 分钟、花费 $37。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-22T01:21:27.000Z",
+    "discoveredAt": "2026-09-22T01:51:06.952Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102206611024716181",
+    "aihotUrl": "https://aihot.news/items/cmuc0pmoe04g1rots1wchwbmo"
+  },
+  {
+    "id": "cmuby5qr404jsro9irkni3knk",
+    "title": "BestBlogs 早报：Jev 决策模型与 Warp 软件工厂",
+    "summary": "TypeSafe AI CEO 在 Latent.Space 访谈中介绍 Jev--面向软件控制流的 System One 模型，采用 RLCD（强化学习校准决策）训练，追求概率与实际信息相称，相关方法尚未公开发表。",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-09-22T00:24:14.000Z",
+    "discoveredAt": "2026-09-22T00:39:39.922Z",
+    "originalUrl": "https://x.com/hongming731/status/2102192210318164301",
+    "aihotUrl": "https://aihot.news/items/cmuby5qr404jsro9irkni3knk"
+  },
+  {
+    "id": "cmuby5qr404jrro9iyb3bpyrm",
+    "title": "BestBlogs 早报：Jev 模型与 AI 软件工厂实践",
+    "summary": "BestBlogs 09-22 早报收录 10 篇内容，涵盖 Jev System One 决策模型、Warp 的 AI 软件工厂流程、UiPath 关于工作流程才是核心资产的判断，以及生产级智能体控制平面与 Loop engineering 方法论。",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-09-22T00:24:31.000Z",
+    "discoveredAt": "2026-09-22T00:39:39.922Z",
+    "originalUrl": "https://x.com/hongming731/status/2102192282367914319",
+    "aihotUrl": "https://aihot.news/items/cmuby5qr404jrro9iyb3bpyrm"
+  },
+  {
+    "id": "cmubwxqlr02y6rokikumgdixn",
+    "title": "Simon Willison 评 TypeSafe AI 新形态决策模型 Jev",
+    "summary": "TypeSafe AI 上周发布 Jev，作者称其为 System One 或决策模型：接受文本输入但输出浮点置信分数而非文本，仅按输入计费 $0.042/百万 tokens，低于 GPT-5 Nano 的 $0.05。",
+    "sourceName": "Simon Willison 博客",
+    "publishedAt": "2026-09-21T23:09:20.000Z",
+    "discoveredAt": "2026-09-22T00:05:28.983Z",
+    "originalUrl": "https://simonwillison.net/2026/Sep/21/jev",
+    "aihotUrl": "https://aihot.news/items/cmubwxqlr02y6rokikumgdixn"
+  },
+  {
+    "id": "cmubwfaok05ipro99dtdxzy3w",
+    "title": "AI 实验室调侃机器之神与婴儿",
+    "summary": "大型 AI 实验室：机器之神随时降临，别把孩子带到那个世界去！\n\nTypeSafe：\n\n【引用 @craigweiss】：给我儿子取名 Jev",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-21T23:29:54.000Z",
+    "discoveredAt": "2026-09-21T23:51:06.739Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102178536970985861",
+    "aihotUrl": "https://aihot.news/items/cmubwfaok05ipro99dtdxzy3w"
+  },
+  {
+    "id": "cmubulddp03l2ro99gf6r3q7d",
+    "title": "Latent Space 访谈 TypeSafe CEO Diogo Almeida：Jev 是面向生产环境的 System One 模型而非万能 God 模型",
+    "summary": "Latent Space 发布对 TypeSafe AI CEO Diogo Almeida 的约两小时访谈，围绕其新模型 Jev 展开。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-09-21T22:13:49.000Z",
+    "discoveredAt": "2026-09-21T22:59:51.968Z",
+    "originalUrl": "https://www.latent.space/p/jev",
+    "aihotUrl": "https://aihot.news/items/cmubulddp03l2ro99gf6r3q7d"
+  },
+  {
+    "id": "cmubua4mj0396ro993w3kiy40",
+    "title": "TypeSafe CEO 谈 System One Model 与可靠 AI",
+    "summary": "TypeSafe CEO Jev 在播客中提出 System One Model，主张 AI 应做软件内的可靠决策而非聊天优先。他称 TypeSafe 拒绝公开 benchmark 和 API 层拒答，认为数据与任务选择比堆算力更重要，System One Model 或重塑编程智能体。即便有 10 亿美元，他也不会从头预训练模型。",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-21T22:43:12.000Z",
+    "discoveredAt": "2026-09-21T22:51:06.550Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2102166782664749173",
+    "aihotUrl": "https://aihot.news/items/cmubua4mj0396ro993w3kiy40"
+  },
+  {
+    "id": "cmubqsb9b03varoci9d10ccq1",
+    "title": "HF 热门榜首开源多语言决策模型",
+    "summary": "HF 上排名第一的热门模型是一个开源多语言 system 1 决策模型，就在 Jev 开始走红几天之后。开源 AI 社区太棒了！",
+    "sourceName": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+    "publishedAt": "2026-09-21T20:58:32.000Z",
+    "discoveredAt": "2026-09-21T21:13:13.250Z",
+    "originalUrl": "https://x.com/ClementDelangue/status/2102140443194503358",
+    "aihotUrl": "https://aihot.news/items/cmubqsb9b03varoci9d10ccq1"
+  },
+  {
+    "id": "cmubqno3i03r2rocij41qzmor",
+    "title": "Jev 正在疯狂工作（视频未加速",
+    "summary": "Jev 正在疯狂工作（视频未加速",
+    "sourceName": "X：ZHO (@ZHO_ZHO_ZHO)",
+    "publishedAt": "2026-09-21T20:55:09.000Z",
+    "discoveredAt": "2026-09-21T21:09:39.073Z",
+    "originalUrl": "https://x.com/ZHO_ZHO_ZHO/status/2102139594561191962",
+    "aihotUrl": "https://aihot.news/items/cmubqno3i03r2rocij41qzmor"
+  },
+  {
+    "id": "cmubofwji04dwro4vba5ofu04",
+    "title": "OpenRouter 社区 System One 用例评选",
+    "summary": "1/ 上周，Jev - @typesafeai 的 System One 模型在 OpenRouter 上线。关注度极高。\n\n我们邀请社区寻找最具创新性的方式，将快速且低成本的决策应用到他们的项目中。\n\n当然，我们得让 Jev 来选出 5 位获奖者。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-21T20:00:08.000Z",
+    "discoveredAt": "2026-09-21T20:07:37.691Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2102125748723339774",
+    "aihotUrl": "https://aihot.news/items/cmubofwji04dwro4vba5ofu04"
+  },
+  {
+    "id": "cmubnunov03ssro4v6cz4e6d0",
+    "title": "Jev 现已上线",
+    "summary": "Jev 现已上线：https://console.typesafe.ai",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-21T19:44:54.000Z",
+    "discoveredAt": "2026-09-21T19:51:06.901Z",
+    "originalUrl": "https://x.com/typesafeai/status/2102121915733405896",
+    "aihotUrl": "https://aihot.news/items/cmubnunov03ssro4v6cz4e6d0"
+  },
+  {
+    "id": "cmubnjftn03jgro4vin9hpioh",
+    "title": "Elvis Saravia 推荐 typesafe 编码智能体笔记",
+    "summary": "Elvis Saravia 推荐一份关于 typesafe 与编码智能体结合的笔记文档，认为其中给出了在 agent harness 中放置 Jev 的实用思路。他提到文档涵盖审批门、MCP/工具调用路由、模型路由、动态子智能体模式和结构化技能等此前分享过的想法。他建议把文档喂给自己的智能体来探索。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-21T19:13:05.000Z",
+    "discoveredAt": "2026-09-21T19:42:23.299Z",
+    "originalUrl": "https://x.com/omarsar0/status/2102113906529538496",
+    "aihotUrl": "https://aihot.news/items/cmubnjftn03jgro4vin9hpioh"
+  },
+  {
+    "id": "cmubl85hs032bro0lxhod57si",
+    "title": "OpenRouter：决策模型市场潜力巨大",
+    "summary": "像 Jev 这样的决策模型，其可触达市场可能非常庞大\n\n图表来自 https://openrouter.ai/rankings#task-spend",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-21T18:33:21.000Z",
+    "discoveredAt": "2026-09-21T18:37:37.800Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2102103905815396635",
+    "aihotUrl": "https://aihot.news/items/cmubl85hs032bro0lxhod57si"
+  },
+  {
+    "id": "cmubja6lg1295rolnxm9jpm9k",
+    "title": "Hugging Face CEO：LLM API 并非 90% 场景最佳方案",
+    "summary": "Hugging Face CEO Clément Delangue 认为，对现实世界 90% 的用例而言，LLM API 远非最佳 AI 方案--它们过于重型、慢、贵且难以控制。他引用 @willdepue 关于零样本分类器 Jev 的讨论，称随着 AI 成熟和广泛采用，未来几年将逐渐认识到这一点。",
+    "sourceName": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+    "publishedAt": "2026-09-21T17:19:23.000Z",
+    "discoveredAt": "2026-09-21T17:43:13.045Z",
+    "originalUrl": "https://x.com/ClementDelangue/status/2102085295650828487",
+    "aihotUrl": "https://aihot.news/items/cmubja6lg1295rolnxm9jpm9k"
+  },
+  {
+    "id": "cmubi8bwb1141roln8scp6ida",
+    "title": "LangSmith 上线 Jev-as-a-Judge 评估功能",
+    "summary": "LangSmith 现已支持将 Jev 用作评估裁判（Jev-as-a-Judge），可对智能体 trace 进行结构化反馈评估，覆盖生产运行、数据集与回归测试场景。官方称该方式更快、更便宜。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-09-21T16:57:21.000Z",
+    "discoveredAt": "2026-09-21T17:13:48.200Z",
+    "originalUrl": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals",
+    "aihotUrl": "https://aihot.news/items/cmubi8bwb1141roln8scp6ida"
+  },
+  {
+    "id": "cmubhvftd10qjrolnr7q9k3lt",
+    "title": "Tomer Tunguz 谈 AI 优化 if-then 判断：专用决策器把分类成本降近百倍",
+    "summary": "Tomer Tunguz 撰文提出最新一波 AI 正在接管软件中的 if-then 判断原语，Jev 与 SemIf 这类专用决策器以数百毫秒返回结果，成本比传统生成式调用低约 76x 到 209x。作者在自己的 Agent 中替换了约四分之一的调用，在 98 条人工核验的生产邮件线程上，Jev 达到 80%、本地 SemIf 达到 82% 的分类准确率，高于生产模型的 47%。",
+    "sourceName": "Tomer Tunguz 博客（VC 分析）",
+    "publishedAt": "2026-09-21T00:00:00.000Z",
+    "discoveredAt": "2026-09-21T17:03:46.088Z",
+    "originalUrl": "https://tomtunguz.com/ai-comes-for-the-if-statement",
+    "aihotUrl": "https://aihot.news/items/cmubhvftd10qjrolnr7q9k3lt"
+  },
+  {
+    "id": "cmubh50s40zy2rolngstxafql",
+    "title": "HuggingFace 上 300 万个专用模型",
+    "summary": "我喜欢 Jev 的一点是：多年来，大型通用模型几乎吸走了 AI 领域所有的氧气。\n\n但在更加专业化和定制化的模型上存在巨大机会，这些模型为特定任务和语言而构建，因此成本低几个数量级、速度更快、优化更好。@huggingface 上公开可用的这类模型有 300 万个。\n\n让我们构建一个更加多元的 AI 生态！",
+    "sourceName": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+    "publishedAt": "2026-09-21T16:26:14.000Z",
+    "discoveredAt": "2026-09-21T16:43:13.201Z",
+    "originalUrl": "https://x.com/ClementDelangue/status/2102071917926613310",
+    "aihotUrl": "https://aihot.news/items/cmubh50s40zy2rolngstxafql"
+  },
+  {
+    "id": "cmubg1erd0ymbrolni8v6mpwi",
+    "title": "用 Jev 整理 2.3K 篇 AI 论文，成本仅 0.14 美元",
+    "summary": "用 Jev 重新整理约 2.3K 篇 AI 研究论文，总成本 $0.14、耗时约 83 秒。Jev 与旧标签（由 DeepSeek V4 Flash 生成）一致率 75%，并找出约 579 处高置信度主题变更；人工抽检 30 处分歧后全部采纳，变更已在生产环境验证。作者认为通过组合 System One 与 System Two 模型可显著改进流水线。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-21T16:03:38.000Z",
+    "discoveredAt": "2026-09-21T16:12:24.367Z",
+    "originalUrl": "https://x.com/omarsar0/status/2102066232383979749",
+    "aihotUrl": "https://aihot.news/items/cmubg1erd0ymbrolni8v6mpwi"
+  },
+  {
+    "id": "cmub8u57l0qphroln9gas77lx",
+    "title": "jev-leftpad：用 LLM 调用替代 padStart（） 的 npm 包",
+    "summary": "npm 包 jev-leftpad 把 JavaScript 的字符串补位交给大模型完成：调用 leftPad（value， targetLength） 时通过 TypeSafe 的 @typesafe-ai/sdk 请求 jev-latest，由模型在 space_0 到 space_10 中选一个选项，因此最多只能补 10 个空格。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-21T12:14:52.115Z",
+    "discoveredAt": "2026-09-21T12:50:49.281Z",
+    "originalUrl": "https://github.com/f/jev-leftpad",
+    "aihotUrl": "https://aihot.news/items/cmub8u57l0qphroln9gas77lx"
+  },
+  {
+    "id": "cmub5mte50jusrolngdryrri1",
+    "title": "Jev × Tripo × Astra 联动演示：Tripo P2.0 生成 3D 资产与 VRM 模型",
+    "summary": "Jev × Tripo × Astra 联动 Demo 展示了用 Tripo P2.0 生成 3D 资产与 VRM 模型、由 Jev 驱动语音激活战斗与逻辑的流畅工作流。Jev 负责地图无限扩展、商人文本谈判判定、战斗自由行动判定及语音动作特效分类，Tripo SmartMesh P2.0 生成随机出现的 NPC/敌人/资产与部分魔法特效资产。10 分钟试玩版链接在推文回复中。",
+    "sourceName": "Tripo（官方 X）",
+    "publishedAt": "2026-09-21T10:53:35.000Z",
+    "discoveredAt": "2026-09-21T11:21:06.938Z",
+    "originalUrl": "https://x.com/tripoai/status/2101988205642092805",
+    "aihotUrl": "https://aihot.news/items/cmub5mte50jusrolngdryrri1"
+  },
+  {
+    "id": "cmub4jrmf0igcroln00yszy63",
+    "title": "Kev：基于 Qwen3.5 的开源小型决策模型家族发布",
+    "summary": "Kev 发布了一组基于 Qwen3.5 的小型决策模型，包含 0.8B、4B 和 9B 三个规格，采用 rank-16 LoRA 加 pointer head 架构，支持在同一请求中处理 yes/no、多选和打分问题并返回概率。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-21T10:38:36.945Z",
+    "discoveredAt": "2026-09-21T10:50:46.966Z",
+    "originalUrl": "https://github.com/jaredpalmer/kev/tree/main",
+    "aihotUrl": "https://aihot.news/items/cmub4jrmf0igcroln00yszy63"
+  },
+  {
+    "id": "cmuayck790bkjrolnwtlbuehx",
+    "title": "Jev 迷宫寻路实测：纯随机数发生器反超",
+    "summary": "作者用 Rust + xoshiro256++ 搭了个与 Jev API 格式相同的纯随机数 server，与 Jev 做迷宫寻路对抗测试，结果纯随机无并发顺序请求 892 步通关、耗时不到 300ms，而 Jev 跑了 2306 步，其中 2295 步困在 （7，4） 拐角的 3 个格子里原地打转直至超时。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-21T07:49:04.000Z",
+    "discoveredAt": "2026-09-21T07:57:12.392Z",
+    "originalUrl": "https://x.com/karminski3/status/2101941770003361893",
+    "aihotUrl": "https://aihot.news/items/cmuayck790bkjrolnwtlbuehx"
+  },
+  {
+    "id": "cmuaw7dxb096qroln5haa1pri",
+    "title": "号称史上最快量子Jev：单次推理0.12ms，将开源",
+    "summary": "作者宣布将发布号称史上最快的\"量子Jev\"，单次推理仅需0.12ms，性能达Jev的400x，且不花钱、能解决Jev解决不了的问题。细节稍后公布并以MIT协议开源。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-21T06:37:36.000Z",
+    "discoveredAt": "2026-09-21T06:57:09.191Z",
+    "originalUrl": "https://x.com/karminski3/status/2101923782407639249",
+    "aihotUrl": "https://aihot.news/items/cmuaw7dxb096qroln5haa1pri"
+  },
+  {
+    "id": "cmuaopakd0r90ro5t6y64dgck",
+    "title": "Jev 新模型明日发布",
+    "summary": "Jev 明天发布\n\n【引用 @CompleteSkeptic】：在联合发明 ChatGPT 之后，我一直在问自己：为什么超人类水平的聊天模型没有带来 AGI？\n\n过去两年我一直在 stealth 模式下构建一种新的模型训练方式（RLCD），以及一种新型前沿 AI 模型，今天正式发布：Jev\n\n• 快 20-200 倍 • 便宜 40-400 倍（输出 token 免费）• 为决策优化的前沿可组合智能\n\n据我所知，这是通往 AI 驱动的经济革命的最短路径",
+    "sourceName": "X：swyx (@swyx)",
+    "publishedAt": "2026-09-21T03:16:49.000Z",
+    "discoveredAt": "2026-09-21T03:27:09.939Z",
+    "originalUrl": "https://x.com/swyx/status/2101873256097804529",
+    "aihotUrl": "https://aihot.news/items/cmuaopakd0r90ro5t6y64dgck"
+  },
+  {
+    "id": "cmuaogvp40qy0ro5tdi4aulmb",
+    "title": "用 Jev 概率 API 拼出的聊天机器人 jevchat：把杰夫变成（很烂的）聊天模型",
+    "summary": "jevchat 把 Jev 的概率打分接口当作语言模型使用：每一步让 Jev 在给定问题和已生成回复的情况下，为字母表或 token 列表中每个候选符号返回概率，再由采样器归一化后抽取下一个符号，抽到 STOP 即结束。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-21T03:17:09.766Z",
+    "discoveredAt": "2026-09-21T03:20:38.711Z",
+    "originalUrl": "https://github.com/kyle-pena-nlp/jevchat",
+    "aihotUrl": "https://aihot.news/items/cmuaogvp40qy0ro5tdi4aulmb"
+  },
+  {
+    "id": "cmuakeye30mgsro5tmkdupgr9",
+    "title": "laya-mlx 移植版：比 Jev 快 50 倍，本地跑贪吃蛇",
+    "summary": "开发者将开源文本概率分类系统 Laya 移植到 MLX 并做性能优化，推出 laya-mlx，号称比 Jev 快 50 倍，设备内存占用最高 1G。该模型在本地 M3 Max 上以每秒 60 次决策的速度玩贪吃蛇，代码已开源至 GitHub。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-21T01:01:24.000Z",
+    "discoveredAt": "2026-09-21T01:27:09.606Z",
+    "originalUrl": "https://x.com/karminski3/status/2101839176224391358",
+    "aihotUrl": "https://aihot.news/items/cmuakeye30mgsro5tmkdupgr9"
+  },
+  {
+    "id": "cmudpvn230nxmroggdp0jx9uj",
+    "title": "TypeSafe 决策模型 Jev 通过 OpenRouter Decisions API 开放调用",
+    "summary": "TypeSafe 的决策模型 Jev 已可通过 OpenRouter Decisions API 调用，模型 ID 为 typesafe/jev-1.13，于 2026 年 9 月 15 日发布早期访问。",
+    "sourceName": "OpenRouter：Announcements（RSS）",
+    "publishedAt": "2026-09-21T00:00:00.000Z",
+    "discoveredAt": "2026-09-21T00:00:00.000Z",
+    "originalUrl": "https://openrouter.ai/blog/insights/what-is-jev",
+    "aihotUrl": "https://aihot.news/items/cmudpvn230nxmroggdp0jx9uj"
+  },
+  {
+    "id": "cmudpvn230nxlroggwv3fzq9g",
+    "title": "Jev 与 LLM-as-a-Judge 对比：TypeSafe 决策模型在封闭评分标准下准确率持平、成本降至 1/5",
+    "summary": "TypeSafe 决策模型 Jev 在封闭评分标准且证据随请求提供时，准确率与 LLM-as-a-Judge 持平，概率校准更好，成本仅为后者的 1/5、延迟为 1/10。",
+    "sourceName": "OpenRouter：Announcements（RSS）",
+    "publishedAt": "2026-09-21T00:00:00.000Z",
+    "discoveredAt": "2026-09-21T00:00:00.000Z",
+    "originalUrl": "https://openrouter.ai/blog/tutorials/jev-vs-llm-as-a-judge",
+    "aihotUrl": "https://aihot.news/items/cmudpvn230nxlroggwv3fzq9g"
+  },
+  {
+    "id": "cmuadroll0fjaro5tmgw8wlz5",
+    "title": "Jev 面向所有人开放，无需等待名单",
+    "summary": "哎呀。以前\"快\"可是件坏事 💅\n\nJev 现已面向所有人开放，无需等待名单。\n在这里开始使用：https://console.typesafe.ai",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-20T22:12:34.000Z",
+    "discoveredAt": "2026-09-20T22:21:06.261Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2101796685903188086",
+    "aihotUrl": "https://aihot.news/items/cmuadroll0fjaro5tmgw8wlz5"
+  },
+  {
+    "id": "cmuacp46v0b19ro5tzymtz1qh",
+    "title": "Jev 现已向所有人开放",
+    "summary": "Jev 现已向所有人开放。无需等待名单。在此开始使用：https://console.typesafe.ai",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-20T21:30:43.000Z",
+    "discoveredAt": "2026-09-20T21:51:06.686Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101786156572823624",
+    "aihotUrl": "https://aihot.news/items/cmuacp46v0b19ro5tzymtz1qh"
+  },
+  {
+    "id": "cmuabls030a3kro5tfk5zp2zx",
+    "title": "Laya（OS Jev）在 Mac M4 CoreML 离线环境下每秒 45 次决策",
+    "summary": "Laya（OS Jev）可在 Mac M4 上通过 CoreML 离线运行，达到每秒 45 次决策。用户可用 uv 安装 laya-coreml【demo】，并下载 aac6fef/laya-multilingual-coreml-ane 模型到本地，再运行 laya-coreml-snake 演示。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-20T21:13:48.675Z",
+    "discoveredAt": "2026-09-20T21:20:32.470Z",
+    "originalUrl": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
+    "aihotUrl": "https://aihot.news/items/cmuabls030a3kro5tfk5zp2zx"
+  },
+  {
+    "id": "cmuabbcbm09p2ro5tz9lc6eb9",
+    "title": "Jev 新手入门指南：用 System One 模型做结构化判断",
+    "summary": "DAIR.AI 发布 Jev 新手指南，Jev 是 TypeSafe 推出的通用 System One 模型，专为快速、聚焦的判断设计，而非长推理或开放式写作。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-20T20:44:02.000Z",
+    "discoveredAt": "2026-09-20T21:12:23.908Z",
+    "originalUrl": "https://x.com/omarsar0/status/2101774405521301681",
+    "aihotUrl": "https://aihot.news/items/cmuabbcbm09p2ro5tz9lc6eb9"
+  },
+  {
+    "id": "cmuabbcbm09p1ro5t86snho11",
+    "title": "Jev 入门指南与 Playground 发布",
+    "summary": "🔥 推出 Jev Primer 与 Playground\n\n想了解 Jev 如何运作，不用再找了。\n\n这是你入门所需的唯一交互式指南。\n\n不再困惑 Jev 能做什么、不能做什么。我们还打造了专属 Jev Playground，让你现在就能试用各种用例。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-20T20:48:43.000Z",
+    "discoveredAt": "2026-09-20T21:12:23.908Z",
+    "originalUrl": "https://x.com/omarsar0/status/2101775584661573692",
+    "aihotUrl": "https://aihot.news/items/cmuabbcbm09p1ro5t86snho11"
+  },
+  {
+    "id": "cmuaauef109a3ro5t3ydte2t9",
+    "title": "DAIR.AI 发布 Jev 入门介绍与 Playground",
+    "summary": "Jev 的初学者入门介绍。另外我们还搭建了一个 Jev Playground，供你测试多个用例。",
+    "sourceName": "X：DAIR.AI (@dair_ai)",
+    "publishedAt": "2026-09-20T20:48:09.000Z",
+    "discoveredAt": "2026-09-20T20:59:13.916Z",
+    "originalUrl": "https://x.com/dair_ai/status/2101775443300872536",
+    "aihotUrl": "https://aihot.news/items/cmuaauef109a3ro5t3ydte2t9"
+  },
+  {
+    "id": "cmuaa8qv708pjro5tzeampqnv",
+    "title": "HumanLayer 的 Jev 代码搜索 harness 调优",
+    "summary": "别管我，我就在这儿对 jev harness 做爬山调优，用于代码搜索，你们继续。",
+    "sourceName": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+    "publishedAt": "2026-09-20T20:30:05.000Z",
+    "discoveredAt": "2026-09-20T20:42:23.605Z",
+    "originalUrl": "https://x.com/dexhorthy/status/2101770896679772531",
+    "aihotUrl": "https://aihot.news/items/cmuaa8qv708pjro5tzeampqnv"
+  },
+  {
+    "id": "cmua31w3p0cnyrowjwsjxg7jc",
+    "title": "网友玩梗：人人都在喊jev jev jev",
+    "summary": "所有人：jev jev jev\n\n我奶奶：",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-20T17:07:12.000Z",
+    "discoveredAt": "2026-09-20T17:21:06.436Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2101719837592743944",
+    "aihotUrl": "https://aihot.news/items/cmua31w3p0cnyrowjwsjxg7jc"
+  },
+  {
+    "id": "cmu9zixvm08yvrowjdrrd6n41",
+    "title": "Jev 用例合集自动更新",
+    "summary": "🔥 Awesome Jev Collection 🔥\n\n在我的新 Jev 合集里找灵感吧。\n\n（记得收藏）\n\n它会自动更新从 X 上抓取的最新热门 Jev 用例和演示。\n\n由 Jev 自己完成策展。\n\n意外的是，我发现 Jev 在策展方面也很擅长。\n\n链接在此：https://academy.dair.ai/resources/jev-field-notes",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-20T15:35:28.000Z",
+    "discoveredAt": "2026-09-20T15:42:23.891Z",
+    "originalUrl": "https://x.com/omarsar0/status/2101696753749655863",
+    "aihotUrl": "https://aihot.news/items/cmu9zixvm08yvrowjdrrd6n41"
+  },
+  {
+    "id": "cmu9f2efx069lrolzybn0m03d",
+    "title": "Jev 值得关注内容持续追踪",
+    "summary": "Jev 值得关注内容持续追踪\n\n1/n",
+    "sourceName": "X：ZHO (@ZHO_ZHO_ZHO)",
+    "publishedAt": "2026-09-20T05:57:31.000Z",
+    "discoveredAt": "2026-09-20T06:09:39.323Z",
+    "originalUrl": "https://x.com/ZHO_ZHO_ZHO/status/2101551309522645430",
+    "aihotUrl": "https://aihot.news/items/cmu9f2efx069lrolzybn0m03d"
+  },
+  {
+    "id": "cmu9cxa0m07t2ro8ibzuykdvm",
+    "title": "LLM 已知答案概率为何还要先说话",
+    "summary": "既然 LLM 本来就知道答案概率，那为什么逼它先说话？有意思\n\nJEV",
+    "sourceName": "X：ZHO (@ZHO_ZHO_ZHO)",
+    "publishedAt": "2026-09-20T04:49:21.000Z",
+    "discoveredAt": "2026-09-20T05:09:39.722Z",
+    "originalUrl": "https://x.com/ZHO_ZHO_ZHO/status/2101534153942720714",
+    "aihotUrl": "https://aihot.news/items/cmu9cxa0m07t2ro8ibzuykdvm"
+  },
+  {
+    "id": "cmu98mxc603f7rob4q2u3brpg",
+    "title": "快速通道申请通过了，可以玩起来了 😁",
+    "summary": "快速通道申请通过了，可以玩起来了 😁\n\n【引用 @hongming731】：最近几天 Jev 模型很火，BestBlogs 整理了一期专题，可以组队一起学习一下 😆\n\nhttps://www.bestblogs.dev/explore/topics/typesafe-jev-release",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-09-20T02:44:29.000Z",
+    "discoveredAt": "2026-09-20T03:09:39.839Z",
+    "originalUrl": "https://x.com/hongming731/status/2101502731500536199",
+    "aihotUrl": "https://aihot.news/items/cmu98mxc603f7rob4q2u3brpg"
+  },
+  {
+    "id": "cmu96whtr037lrodq991cv6o7",
+    "title": "Jev 在 Vercel AI Gateway 限时免费",
+    "summary": "免费\n\n【引用 @vercel_dev】：Jev by @typesafeai 在 Vercel AI Gateway 上免费至 9 月 25 日。\n\n免费使用 Gateway 上采用速度最快的模型。\n\nhttps://vercel.com/ai-gateway/models/jev https://x.com/vercel/status/2101077346203971900?s=20",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-20T01:54:18.000Z",
+    "discoveredAt": "2026-09-20T02:21:06.074Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101490102866493522",
+    "aihotUrl": "https://aihot.news/items/cmu96whtr037lrodq991cv6o7"
+  },
+  {
+    "id": "cmu96hspn02mprodqgl2whwsb",
+    "title": "BestBlogs 整理 Jev 模型专题",
+    "summary": "最近几天 Jev 模型很火，BestBlogs 整理了一期专题，可以组队一起学习一下 😆\n\nhttps://www.bestblogs.dev/explore/topics/typesafe-jev-release",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-09-20T01:53:30.000Z",
+    "discoveredAt": "2026-09-20T02:09:39.967Z",
+    "originalUrl": "https://x.com/hongming731/status/2101489900164116821",
+    "aihotUrl": "https://aihot.news/items/cmu96hspn02mprodqgl2whwsb"
+  },
+  {
+    "id": "cmu94g43i04horoxs7jt5q1g9",
+    "title": "jg CLI 开启 alpha 测试",
+    "summary": "谁想 alpha 测试我的新 jg CLI（没错，就是 jevgrep）",
+    "sourceName": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+    "publishedAt": "2026-09-20T01:04:45.000Z",
+    "discoveredAt": "2026-09-20T01:12:23.380Z",
+    "originalUrl": "https://x.com/dexhorthy/status/2101477631904661619",
+    "aihotUrl": "https://aihot.news/items/cmu94g43i04horoxs7jt5q1g9"
+  },
+  {
+    "id": "cmu90gznv03kvrojr9nvhjxs3",
+    "title": "Jev 模型每百万输入 token 仅 $0.042",
+    "summary": "一旦用了 Jev，就再也回不去了\n\n【引用 @notkevinzhang】：四个词，十八个字母，每百万输入 token 仅 $0.042",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-19T22:58:27.000Z",
+    "discoveredAt": "2026-09-19T23:21:06.443Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101445845212365129",
+    "aihotUrl": "https://aihot.news/items/cmu90gznv03kvrojr9nvhjxs3"
+  },
+  {
+    "id": "cmu905sdn0359rojrkmu8x5iy",
+    "title": "Elvis Saravia 用 Jev 为智能体框架 /goal 功能构建自定义验证器",
+    "summary": "Elvis Saravia 用 Jev 为智能体框架的 /goal 功能构建自定义验证器，每轮对话后检查目标是否真正完成，使持续验证成本低到可规模化。此前这类验证由另一个昂贵的推理模型承担，现在可更频繁运行以让智能体保持正轨。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-19T22:48:23.000Z",
+    "discoveredAt": "2026-09-19T23:12:23.128Z",
+    "originalUrl": "https://x.com/omarsar0/status/2101443311454036477",
+    "aihotUrl": "https://aihot.news/items/cmu905sdn0359rojrkmu8x5iy"
+  },
+  {
+    "id": "cmu9051jc034erojrxrdjbqhq",
+    "title": "Jev 能否成为更好的智能体评测器？",
+    "summary": "LangChain 测试了 Jev 与 LLM 评委在准确率、可重复性、延迟和成本四个维度的表现，以验证 System One 模型能否为智能体评测提供新思路。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-09-19T23:09:51.000Z",
+    "discoveredAt": "2026-09-19T23:11:49.463Z",
+    "originalUrl": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+    "aihotUrl": "https://aihot.news/items/cmu9051jc034erojrxrdjbqhq"
+  },
+  {
+    "id": "cmu8z37tg030profp4w9mu61q",
+    "title": "JevBench 发布：面向类型化决策的新基准",
+    "summary": "新基准 JevBench 发布，专为输出受限软件决策而非开放式文本的模型设计，紧随 TypeSafe 9 月 15 日发布 Jev--输入应用状态与固定选项，返回带概率的类型化答案。该基准综合智能、校准、速度与成本，用几何平均防止单一维度优势掩盖短板。GPT-5.6 Luna 在难题准确率上明显高于 Jev 1.13.0，但 Jev 因延迟、校准和成本更优而在综合分上领先。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-09-19T22:19:01.000Z",
+    "discoveredAt": "2026-09-19T22:42:23.119Z",
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2101435924790026437",
+    "aihotUrl": "https://aihot.news/items/cmu8z37tg030profp4w9mu61q"
+  },
+  {
+    "id": "cmu8wegm903qtrorrmxzjqphh",
+    "title": "Jev 做高频交易？欠拟合与泛化误区解析",
+    "summary": "Jev 对 K 线本身是欠拟合的，只有当它做到 100% 负相关时才能反着买，而 100% 负相关属于超强泛化、不可能实现，即使每次交易都亏钱也不能算 100% 负相关。此外 70ms 的延迟别说高频交易，连抢火车票都抢不到。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-19T21:14:46.000Z",
+    "discoveredAt": "2026-09-19T21:27:09.259Z",
+    "originalUrl": "https://x.com/karminski3/status/2101419754888245626",
+    "aihotUrl": "https://aihot.news/items/cmu8wegm903qtrorrmxzjqphh"
+  },
+  {
+    "id": "cmu8vpc8102yvrorr22uz7leh",
+    "title": "OpenRouter 评测 Jev 决策模型速度",
+    "summary": "1/ Jev，由 @typesafeai 推出的决策模型，引发了大量项目和讨论。我们用 Ori Eval 在 OpenRouter 上针对热门 LLM 的评判能力进行了测试。\n\nJev 比第二快的模型还快 5 倍以上，甚至它最慢的请求也超过了其他所有模型的中位数。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-19T20:47:48.000Z",
+    "discoveredAt": "2026-09-19T21:07:37.436Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2101412965765529853",
+    "aihotUrl": "https://aihot.news/items/cmu8vpc8102yvrorr22uz7leh"
+  },
+  {
+    "id": "cmu8qtry803iyro5k56jm4vuc",
+    "title": "markjaquith 最短\"什么是 Jev\"解释",
+    "summary": "好吧这个挺不错的 xD\n\n【引用 @markjaquith】：这是我最新最短的\"什么是 Jev\"解释",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-19T18:22:52.000Z",
+    "discoveredAt": "2026-09-19T18:51:06.382Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2101376493704315048",
+    "aihotUrl": "https://aihot.news/items/cmu8qtry803iyro5k56jm4vuc"
+  },
+  {
+    "id": "cmu8qsosl03gmro5ke16mf479",
+    "title": "TypeSafe AI 发布 System One 模型 Jev，返回带概率的类型化决策而非文本",
+    "summary": "TypeSafe AI 发布 Jev，一个基于 Transformer 但不生成文本的 System One 模型，通过 POST https://api.typesafe.ai/v1/systemone 接收状态和类型化问题，返回带概率和置信度的类型化决策，提供 Choice、Score、Noul 三种问题类型。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-09-19T18:41:33.000Z",
+    "discoveredAt": "2026-09-19T18:50:16.197Z",
+    "originalUrl": "https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev",
+    "aihotUrl": "https://aihot.news/items/cmu8qsosl03gmro5ke16mf479"
+  },
+  {
+    "id": "cmu8pr71y08n5ro3kdwcaszld",
+    "title": "对 jev 命名感到厌倦",
+    "summary": "还有人厌倦了 jev 这件事吗？我们的品牌是桀骜不驯、疯狂的，不是\"jev\"（可能是因为我正处于风暴中心）\n\n它有趣是因为给模型起名 jev 本身就很疯狂\n\n（另外说这个可能也很疯狂，但我们还没有营销人员）",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-19T17:58:58.000Z",
+    "discoveredAt": "2026-09-19T18:21:06.195Z",
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2101370481328984475",
+    "aihotUrl": "https://aihot.news/items/cmu8pr71y08n5ro3kdwcaszld"
+  },
+  {
+    "id": "cmu8m89ek1qa5rogr16zrfu1z",
+    "title": "Jev 如何进化智能体 harness 体验",
+    "summary": "Elvis Saravia 将 Jev 集成进自建 harness，认为它不只是更快更便宜，而是能解锁此前受成本、延迟或缺少合适原语限制的智能体体验。Jev 可用于分类、控制流、确定性工作流和大规模标注，并通过智能决策、结构化智能与按需上下文管理提升可靠性。他还看好 Jev 在动态 UI、LLM 评审、验证器与合成高质量数据上的潜力，完整指南即将发布。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-19T16:37:19.000Z",
+    "discoveredAt": "2026-09-19T16:42:23.774Z",
+    "originalUrl": "https://x.com/omarsar0/status/2101349932569370826",
+    "aihotUrl": "https://aihot.news/items/cmu8m89ek1qa5rogr16zrfu1z"
+  },
+  {
+    "id": "cmu8m4ukd1q7crogrmvhr7o5a",
+    "title": "JEV 相关推文",
+    "summary": "JEV\n\n---\n\n**说明**：主推文内容仅为 \"JEV\" 三个字母，没有更多上下文信息。根据防幻觉规则，无法确定 JEV 具体指代什么（可能是模型名、项目代号或其他），因此标题和正文均保留原文，不做扩写。如需更准确的翻译，请提供更完整的推文内容。",
+    "sourceName": "X：ZHO (@ZHO_ZHO_ZHO)",
+    "publishedAt": "2026-09-18T19:33:49.000Z",
+    "discoveredAt": "2026-09-19T16:39:39.222Z",
+    "originalUrl": "https://x.com/ZHO_ZHO_ZHO/status/2101031959648784402",
+    "aihotUrl": "https://aihot.news/items/cmu8m4ukd1q7crogrmvhr7o5a"
+  },
+  {
+    "id": "cmu8llu6p1prhrogrd6nmgfhg",
+    "title": "Nathan Lambert 撰文解释为何仍未接受真正的递归自我改进（RSI）",
+    "summary": "Nathan Lambert 撰文阐述他仍不支持真正的递归自我改进（RSI），坚持自己的\"有损自我改进\"基线判断。",
+    "sourceName": "Nathan Lambert：Interconnects（RSS）",
+    "publishedAt": "2026-09-19T15:42:20.000Z",
+    "discoveredAt": "2026-09-19T16:24:57.882Z",
+    "originalUrl": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
+    "aihotUrl": "https://aihot.news/items/cmu8llu6p1prhrogrd6nmgfhg"
+  },
+  {
+    "id": "cmu8ezrfp1iy7rogrtexqdmy0",
+    "title": "Convai 发布开源决策模型 Laya，对标 TypeSafe AI 的 Jev",
+    "summary": "作者 nandakishor_ml 发布开源非自回归决策模型家族 Laya，基于双向编码器，单 GPU 推理 32.8 ms（批量 7.2 ms/问题），自称比 TypeSafe AI 的 Jev 快 7.8 倍，权重以 Apache 2.0 开源。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-19T13:15:27.181Z",
+    "discoveredAt": "2026-09-19T13:19:50.423Z",
+    "originalUrl": "https://laya.convaiinnovations.com/",
+    "aihotUrl": "https://aihot.news/items/cmu8ezrfp1iy7rogrtexqdmy0"
+  },
+  {
+    "id": "cmu7yk01w0v90rogr5tnx4kdv",
+    "title": "Encoder 卷土重来：Jev 要做面向 Agent 的泛化决策模型",
+    "summary": "Jev 试图补上 BERT 未走完的路线，保留 GPT 的任务泛化能力，同时重获 encoder 与 classifier 式的决策效率，成为面向 service 和 Agent 的泛化 decision model。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-09-19T05:34:36.000Z",
+    "discoveredAt": "2026-09-19T05:39:39.497Z",
+    "originalUrl": "https://x.com/dongxi_nlp/status/2101183155294117913",
+    "aihotUrl": "https://aihot.news/items/cmu7yk01w0v90rogr5tnx4kdv"
+  },
+  {
+    "id": "cmu7ttko80qj0rogr59tgipl1",
+    "title": "新模型能力再进化",
+    "summary": "它正在彻底改变新模型能做到的事",
+    "sourceName": "X：Eric Zakariasson (@ericzakariasson)",
+    "publishedAt": "2026-09-19T03:00:11.000Z",
+    "discoveredAt": "2026-09-19T03:27:09.920Z",
+    "originalUrl": "https://x.com/ericzakariasson/status/2101144294304457030",
+    "aihotUrl": "https://aihot.news/items/cmu7ttko80qj0rogr59tgipl1"
+  },
+  {
+    "id": "cmu7n6b3i0joyrogruwd550j0",
+    "title": "Jev 上线 Venice API 测试版",
+    "summary": "是 Jev，不是 Jev\n\nJev（@typesafeai 出品）现已上线 Venice API，处于测试阶段。\n\n它只回答，不写作。把你的应用状态和带类型的问题发给它，就能拿回一个代码可以分支处理的带类型答案：一个概率、一个选定选项，或按你的评分标准给出的分数。无需从聊天模型里费劲套出 JSON。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-18T23:52:22.000Z",
+    "discoveredAt": "2026-09-19T00:21:06.037Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101097027174309926",
+    "aihotUrl": "https://aihot.news/items/cmu7n6b3i0joyrogruwd550j0"
+  },
+  {
+    "id": "cmucqgii60jz4roedj9fsw3qh",
+    "title": "OpenRouter 实测 Jev 决策模型对比 LLM，何时该用决策模型替代生成文本",
+    "summary": "OpenRouter 发布教程，实测 TypeSafe 的决策模型 Jev 1.13 与 GPT Luna、Claude Opus 在工单分诊和提示词注入筛查上的表现：Jev 每 1000 张工单成本 $0.0248、中位延迟 194ms，准确率与 LLM 相当。",
+    "sourceName": "OpenRouter：Announcements（RSS）",
+    "publishedAt": "2026-09-19T00:00:00.000Z",
+    "discoveredAt": "2026-09-19T00:00:00.000Z",
+    "originalUrl": "https://openrouter.ai/blog/tutorials/jev-vs-llm-when-to-use-each",
+    "aihotUrl": "https://aihot.news/items/cmucqgii60jz4roedj9fsw3qh"
+  },
+  {
+    "id": "cmu7m3qj30ifyrogrviibayb9",
+    "title": "Jev 模型征集社区问题反馈",
+    "summary": "告诉我们 Jev 哪里不好！\n\nJev 并不完美。我们认为它还是太慢、太贵、太笨。我们还有更多招数让它变得更好。但我们需要社区的帮助--请在 Discord 的 model-jaggedness 频道里发布你看到的问题。\n\n也请看看我们已知的 jaggedness 问题：https://docs.typesafe.ai/model-jaggedness/jev-1.13",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-18T23:39:03.000Z",
+    "discoveredAt": "2026-09-18T23:51:06.878Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101093678311997520",
+    "aihotUrl": "https://aihot.news/items/cmu7m3qj30ifyrogrviibayb9"
+  },
+  {
+    "id": "cmu7hc2e80aavrogr7vbwhcjm",
+    "title": "OpenRouter 介绍决策模型 Jev",
+    "summary": "什么是决策模型？\n\nJev 由 @typesafeai 打造，回答是/否和多项选择题，并给出置信度分数。软件开发的大部分工作是一连串决策，而 Jev 比 LLM 便宜 10 倍、快 10 倍。\n\n让我们通过实际例子来理解：",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-18T21:31:56.000Z",
+    "discoveredAt": "2026-09-18T21:37:37.280Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2101061688338575739",
+    "aihotUrl": "https://aihot.news/items/cmu7hc2e80aavrogr7vbwhcjm"
+  },
+  {
+    "id": "cmu7cgiic05l3rogr4nao81h1",
+    "title": "TechCrunch 报道新型 AI 模型 Jev",
+    "summary": "感谢 @TechCrunch！！！\n\n【引用 @TechCrunch】：Jev，一种新型 AI 模型，正在向开发者展示一条更便宜、更快速的软件智能路径。https://spr.ly/6018BGXyam",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-18T19:05:24.000Z",
+    "discoveredAt": "2026-09-18T19:21:06.954Z",
+    "originalUrl": "https://x.com/typesafeai/status/2101024808565870752",
+    "aihotUrl": "https://aihot.news/items/cmu7cgiic05l3rogr4nao81h1"
+  },
+  {
+    "id": "cmu7bcjae04b6rogrg6t1tzlo",
+    "title": "OpenAI前研究员创办的TypeSafe发布非LLM新模型Jev，输出校准概率而非文本",
+    "summary": "OpenAI前研究员、RLHF共同发明人Almeida创办的TypeSafe AI发布基于transformer的新模型Jev，它不输出文本而是产生概率形式的校准决策。",
+    "sourceName": "TechCrunch：AI（RSS）",
+    "publishedAt": "2026-09-18T18:49:30.000Z",
+    "discoveredAt": "2026-09-18T18:50:03.009Z",
+    "originalUrl": "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers",
+    "aihotUrl": "https://aihot.news/items/cmu7bcjae04b6rogrg6t1tzlo"
+  },
+  {
+    "id": "cmu6wbl1k0dv5rowkxxtep0kt",
+    "title": "OpenJev 推出纯浏览器本地决策实验，对比直读概率与逐 token 生成 JSON",
+    "summary": "OpenJev 是一个纯浏览器、无后端的本地实验站点，用户可在自己的 GPU 上加载模型，对比两种决策方式：直接读取选项 logits 并归一化，或让模型逐 token 写出 JSON 概率分布，并用 performance.now（） 实测各阶段耗时。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-18T11:15:43.772Z",
+    "discoveredAt": "2026-09-18T11:49:22.861Z",
+    "originalUrl": "https://openjev.com/",
+    "aihotUrl": "https://aihot.news/items/cmu6wbl1k0dv5rowkxxtep0kt"
+  },
+  {
+    "id": "cmu6r8orx089wrowkv9edk3lm",
+    "title": "Grok 回复区需要 System 1 反射",
+    "summary": "@elonmusk X 的回复区需要的是 System 1 反射，而不是 System 2 哲学：\n\n评论：\"你想看看我的福吗？\" Grok（3500ms）：这是中国网络俚语，不是字面意义上问\"fortune\"或\"blessing\"………. Jev（70ms）：{\"ban\"： true}（成本：$0.00004）",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-18T09:05:36.000Z",
+    "discoveredAt": "2026-09-18T09:27:09.477Z",
+    "originalUrl": "https://x.com/karminski3/status/2100873867321647496",
+    "aihotUrl": "https://aihot.news/items/cmu6r8orx089wrowkv9edk3lm"
+  },
+  {
+    "id": "cmu6i1jgg0pgprofjxol77gj0",
+    "title": "LangChain 用 Jev 增强 harness 做 agent 路由",
+    "summary": "LangChain 已利用 Jev 增强其 harness，速度非常快。Jev 适合在既定 harness 中承担分析分类工作，例如 agent 路由、模型路由等\"螺丝钉\"任务。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-09-18T05:04:07.000Z",
+    "discoveredAt": "2026-09-18T05:09:39.007Z",
+    "originalUrl": "https://x.com/dongxi_nlp/status/2100813094951748074",
+    "aihotUrl": "https://aihot.news/items/cmu6i1jgg0pgprofjxol77gj0"
+  },
+  {
+    "id": "cmu69j7ws0g1rrofjkzsmf8f6",
+    "title": "用 Jev 构建 Harness：TypeSafe AI 的 System One 模型如何接入 LangChain",
+    "summary": "TypeSafe AI 的 System One 模型 Jev 主打快速、结构化的决策，可嵌入 AI 智能体的 agent loop 中。LangChain 发布教程，介绍 Jev 的定位以及如何将其与 LangChain 配合使用。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-09-18T01:00:32.000Z",
+    "discoveredAt": "2026-09-18T01:11:28.334Z",
+    "originalUrl": "https://www.langchain.com/blog/building-a-harness-with-jev",
+    "aihotUrl": "https://aihot.news/items/cmu69j7ws0g1rrofjkzsmf8f6"
+  },
+  {
+    "id": "cmu68boti0eqarofjjh2ddaf0",
+    "title": "Jev 模型上线 OpenRouter 测试版",
+    "summary": "由 @typesafeai 开发的 Jev 现已上线 OpenRouter，处于 beta 阶段。\n\nJev 是一个 System One 模型。它不生成文本，而是接收你的应用状态加上一个带类型的问题，返回一个带类型、附带概率的决策。无需 JSON 提示词、解析层，也没有需要校验的东西。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-18T00:32:23.000Z",
+    "discoveredAt": "2026-09-18T00:37:37.333Z",
+    "originalUrl": "https://x.com/OpenRouter/status/2100744709589316009",
+    "aihotUrl": "https://aihot.news/items/cmu68boti0eqarofjjh2ddaf0"
+  },
+  {
+    "id": "cmu67pecj0e0wrofj97vtuwzu",
+    "title": "TypeSafe AI 发布只做高频决策的大模型 Jev，作者实测其分类判断性价比",
+    "summary": "TypeSafe AI 推出专注高频决策的大模型 Jev，不做对话和文字生成，只输出判断，速度比传统大模型快20~200倍，成本0.042美元/百万Token且输出Token免费。作者实测预筛任务中Jev准确性第二且更便宜，在并行判断任务上达到最高准确率和最快速度；模型采用RLCD训练方法优化决策校准，可在官网 https://typesafe.ai/ 申请资格，Vercel 已首发接入。",
+    "sourceName": "公众号：数字生命卡兹克",
+    "publishedAt": "2026-09-18T00:08:00.000Z",
+    "discoveredAt": "2026-09-18T00:20:18.275Z",
+    "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686475&idx=1&sn=1d9d43036b6d72fd83b9d5658b351215",
+    "aihotUrl": "https://aihot.news/items/cmu67pecj0e0wrofj97vtuwzu"
+  },
+  {
+    "id": "cmu65t3i50bzbrofj6yb2pxmh",
+    "title": "Jev 模型：放弃自回归，靠 RLCD 做决策",
+    "summary": "Jev 模型放弃传统自回归架构，无法直接输出普通文本，只能按预定义 Schema 做结构化决策输出，例如垃圾短信二分类会返回带概率的 JSON（isSpam true 0.982 / false 0.018）。其真正护城河是 RLCD（校准强化学习），使输出很难出现概率失真，但代价是模型表现刻板、只适合干活。目前仅支持文本输入，复杂场景需把内容转成文本并定义可选动作，模型再自主决策。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-17T23:11:24.000Z",
+    "discoveredAt": "2026-09-17T23:27:09.810Z",
+    "originalUrl": "https://x.com/karminski3/status/2100724328975462779",
+    "aihotUrl": "https://aihot.news/items/cmu65t3i50bzbrofj6yb2pxmh"
+  },
+  {
+    "id": "cmu64qi370ap7rofjzzjjsv18",
+    "title": "Jev 模型介绍：放弃自回归、只做结构化决策输出",
+    "summary": "Jev 模型放弃传统自回归架构，无法直接输出普通文本，只能做决策并输出结构化 JSON，输入时需定义 Schema 并编译为决策槽位，因此输出不会出错。它目前仅支持文本输入，二分类场景可输出如 isSpam 为 true、概率 0.982 的 JSON；复杂场景下定义好可用动作后模型即可自主决策，如玩杀戮尖塔或看盘。",
+    "sourceName": "X：karminski (@karminski3)",
+    "publishedAt": "2026-09-17T22:46:02.000Z",
+    "discoveredAt": "2026-09-17T22:57:09.263Z",
+    "originalUrl": "https://x.com/karminski3/status/2100717944565354595",
+    "aihotUrl": "https://aihot.news/items/cmu64qi370ap7rofjzzjjsv18"
+  },
+  {
+    "id": "cmu60zs02039brofjvtyo7zqm",
+    "title": "Jev 模型四大智能体应用场景盘点",
+    "summary": "Elvis Saravia 列出 Jev 的四个应用方向：LLM-as-a-Judge 评估、agent harness 路由、通过 SOTA 分类能力实现更智能的子智能体创建以扩展编排、以及增强动态 harness 生成。前三个在成本和效率上 ROI 极高，他正将 Jev 用作元 harness 的智能路由器，第四个尚在测试但潜力巨大。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-17T21:09:18.000Z",
+    "discoveredAt": "2026-09-17T21:12:23.612Z",
+    "originalUrl": "https://x.com/omarsar0/status/2100693601021997193",
+    "aihotUrl": "https://aihot.news/items/cmu60zs02039brofjvtyo7zqm"
+  },
+  {
+    "id": "cmu5thpzp0jj9roqokbyyuq8p",
+    "title": "Jev 或成构建可靠 AI 系统的重要原语",
+    "summary": "好观点！测试之后，Jev 感觉像是构建可靠 AI 系统的一个重要原语。我认为还有更多原语等待被发现，它们能让基于 LLM 的智能体变得更好、更快。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-17T17:30:04.000Z",
+    "discoveredAt": "2026-09-17T17:42:23.680Z",
+    "originalUrl": "https://x.com/omarsar0/status/2100638430229357046",
+    "aihotUrl": "https://aihot.news/items/cmu5thpzp0jj9roqokbyyuq8p"
+  },
+  {
+    "id": "cmu5ce77103yero7nv5wgcznx",
+    "title": "TypeSafe 开源浏览器智能体 Jev Ultrafast，7.1 秒完成 Google Flights 搜索",
+    "summary": "TypeSafe 发布开源浏览器智能体 Jev Ultrafast，采用动态、带索引的动作空间，每次决策只发一次网络请求，小 LLM 仅在 TYPE_TEXT 操作时生成文本。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-09-17T03:12:05.000Z",
+    "discoveredAt": "2026-09-17T09:43:45.730Z",
+    "originalUrl": "https://github.com/browser-use/jev-ultrafast",
+    "aihotUrl": "https://aihot.news/items/cmu5ce77103yero7nv5wgcznx"
+  },
+  {
+    "id": "cmu594p4q041cro8tndx9rocs",
+    "title": "Dex Horthy：jev 是重读 12 factor agents 的最佳契机",
+    "summary": "HumanLayer 的 Dex Horthy 认为 jev 是重读 12 factor agents 的绝佳契机，因为工具调用本身可拆解为分类+动作。若把 AI 程序设计成在分类、数据结构化、确定性代码与小型智能体式追加对话循环之间切换的流水线，jev 就是极佳的构建模块。引用推文称 jev 让 AI 被组合进系统与产品，而非让 AI 本身成为产品，像是一个此前缺失的原语。",
+    "sourceName": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+    "publishedAt": "2026-09-17T08:05:41.000Z",
+    "discoveredAt": "2026-09-17T08:12:23.466Z",
+    "originalUrl": "https://x.com/dexhorthy/status/2100496400547041778",
+    "aihotUrl": "https://aihot.news/items/cmu594p4q041cro8tndx9rocs"
+  },
+  {
+    "id": "cmu57f4kd045rro4o0qrtb1kp",
+    "title": "OpenAI 前 RLHF 研究者 Diogo Almeida 创办 TypeSafe AI，发布不生成文本的结构化决策模型 Jev",
+    "summary": "TypeSafe AI 于 9 月 16 日发布 System One 模型 Jev，不生成文本，仅输出 Choice、Score、Noul 三类结构化决策，输入词元定价每百万 0.042 美元，输出词元免费。",
+    "sourceName": "IT之家（RSS）",
+    "publishedAt": "2026-09-17T06:49:46.000Z",
+    "discoveredAt": "2026-09-17T07:24:31.874Z",
+    "originalUrl": "https://www.ithome.com/1/003/584.htm",
+    "aihotUrl": "https://aihot.news/items/cmu57f4kd045rro4o0qrtb1kp"
+  },
+  {
+    "id": "cmu56w5ko03gsro4o97xywpzl",
+    "title": "Jev 不是聊天机器人：接收文本状态输出结构化打分",
+    "summary": "Jev 不是 chatbot，不能对话，它接收 state（主要是 text data）后打分并输出结构化结果。其定位是固定 workflow 中的\"螺丝钉\"，适合做日志分析和输出检测。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-09-17T06:40:46.000Z",
+    "discoveredAt": "2026-09-17T07:09:45.013Z",
+    "originalUrl": "https://x.com/dongxi_nlp/status/2100475029460799584",
+    "aihotUrl": "https://aihot.news/items/cmu56w5ko03gsro4o97xywpzl"
+  },
+  {
+    "id": "cmu52xi6h095yroqbbz8beyhj",
+    "title": "开源项目 jevlike 通过逆向工程复现 Jev 类一次通过选项打分模型",
+    "summary": "GitHub 项目 jevlike 发布一个独立起步模型，输入一段文本和 N 个文本选项，单次前向即返回每个选项的概率，输入输出形状与 TypeSafe 未公开设计的商用模型 Jev 相同。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-17T05:13:17.073Z",
+    "discoveredAt": "2026-09-17T05:18:51.289Z",
+    "originalUrl": "https://github.com/vinnylarouge/jevlike",
+    "aihotUrl": "https://aihot.news/items/cmu52xi6h095yroqbbz8beyhj"
+  },
+  {
+    "id": "cmu48z4fr0ecnro4w8yflkec6",
+    "title": "前 OpenAI 研究员打造 Jev：不做文本生成、只做选项判断的 AI 模型",
+    "summary": "初创公司 TypeSafe AI 推出模型 Jev，不生成文本，而是在软件内部输出窄域判断与概率，由开发者预设问题与候选答案、模型为选项打分。TypeSafe 称其响应时间为 70 至 500 毫秒，定价为每百万输入 token 0.042 美元、输出不收费，开发者需通过 waitlist 申请接入。公司宣称 Jev 不会产生幻觉，但该保证仅限输出结构，选项内的事实性错误仍可能出现。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-09-16T15:19:19.000Z",
+    "discoveredAt": "2026-09-16T15:20:18.190Z",
+    "originalUrl": "https://the-decoder.com/former-openai-researcher-builds-an-ai-model-that-judges-options-instead-of-writing-text",
+    "aihotUrl": "https://aihot.news/items/cmu48z4fr0ecnro4w8yflkec6"
+  },
+  {
+    "id": "cmue7msqq0q1kroghdvw8fr7b",
+    "title": "用 Jev 和 Pi 构建自定义 harness 的思路",
+    "summary": "刚刚发布了一些关于使用 Jev 和 Pi 构建自定义 harness 的思路。\n\n这是系列的第一篇。\n\n其中一些思路包括 gates、routing 和 verifiers。\n\n但在后续文章中，我计划更深入地探讨更新的思路，并对成本和效率进行基准测试。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-23T14:14:56.000Z",
+    "discoveredAt": "2026-09-23T14:40:23.397Z",
+    "originalUrl": "https://x.com/omarsar0/status/2102763652101161232",
+    "aihotUrl": "https://aihot.news/items/cmue7msqq0q1kroghdvw8fr7b"
+  },
+  {
+    "id": "cmue7lu9z0q15rogh48n8uirl",
+    "title": "InstructGPT 前成员 Diogo Almeida 谈离开 OpenAI 与不聊天模型 Jev 的由来",
+    "summary": "TypeSafe 联合创始人兼 CEO Diogo Almeida 在 Latent Space 访谈中讲述其离开 OpenAI 的经历，他参与过 InstructGPT 和 RLHF 早期工作，但认为优化方向过度面向人而公司难以转向为代码服务的智能，遂创业开发非聊天的大 型可编程模型 Jev（System One）。",
+    "sourceName": "X：Frank Wang 玉伯 (@lifesinger)",
+    "publishedAt": "2026-09-23T14:18:45.000Z",
+    "discoveredAt": "2026-09-23T14:39:39.454Z",
+    "originalUrl": "https://x.com/lifesinger/status/2102764610109813192",
+    "aihotUrl": "https://aihot.news/items/cmue7lu9z0q15rogh48n8uirl"
+  }
+]
