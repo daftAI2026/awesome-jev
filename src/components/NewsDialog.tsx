@@ -2,7 +2,7 @@ import { Dialog } from '@base-ui/react/dialog'
 import { ArrowSquareOut, X } from '@phosphor-icons/react'
 import type { RefObject } from 'react'
 import { useI18n } from '@/i18n'
-import type { NewsItem } from '@/lib/news'
+import { newsTime, type NewsItem } from '@/lib/news'
 import { Button } from '@/components/ui/button'
 import { SaveButton } from '@/components/SaveButton'
 
@@ -17,7 +17,7 @@ interface NewsDialogProps {
 
 export function NewsDialog({ item, open, onOpenChange, triggerRef, saved, onToggleSaved }: NewsDialogProps) {
   const { locale, t } = useI18n()
-  const date = item?.publishedAt ?? item?.discoveredAt
+  const date = item ? new Date(newsTime(item)).toISOString() : null
   const formattedDate = date && new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
     timeZone: 'Asia/Shanghai', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',
   }).format(new Date(date))

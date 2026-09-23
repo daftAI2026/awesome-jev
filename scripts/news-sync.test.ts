@@ -4,6 +4,7 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'nod
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { collectNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
+import { newsTime, sortNews } from '../src/lib/news.ts'
 
 function remote(id: string, original = `https://example.com/${id}`, title = id) {
   return {
@@ -42,16 +43,32 @@ test('window pagination keeps opaque cursor within one run', async () => {
   assert.deepEqual(waits, [60_000])
 })
 
-test('merge appends new IDs, updates known IDs, and ignores duplicate original URLs', () => {
+test('timeline ordering uses discovery time unless publication is over 72 hours older', () => {
+  const fresh = parseNewsItem({ ...remote('news0001'), publishedAt: '2026-09-23T09:00:00.000Z' })
+  const later = parseNewsItem({ ...remote('news0002'), discoveredAt: '2026-09-23T10:11:00.000Z' })
+  const backfilled = parseNewsItem({
+    ...remote('news0003'),
+    publishedAt: '2026-09-19T10:00:00.000Z',
+    discoveredAt: '2026-09-23T10:12:00.000Z',
+  })
+  const sameTime = parseNewsItem(remote('news0004'))
+  assert.equal(newsTime(fresh), Date.parse(fresh.discoveredAt))
+  assert.equal(newsTime(backfilled), Date.parse(backfilled.publishedAt!))
+  assert.deepEqual(sortNews([backfilled, fresh, later, sameTime]).map((item) => item.id),
+    ['news0002', 'news0004', 'news0001', 'news0003'])
+})
+
+test('merge keys by AIHOT ID, retaining distinct reports of the same original URL', () => {
   const first = parseNewsItem(remote('news0001'))
   const result = mergeNews([first], [
-    parseNewsItem(remote('news0001', first.originalUrl, 'Edited title')),
+    parseNewsItem(remote('news0001', 'https://example.com/corrected', 'Edited title')),
     parseNewsItem(remote('news0002', first.originalUrl)),
     parseNewsItem(remote('news0003')),
   ])
-  assert.deepEqual({ added: result.added, updated: result.updated }, { added: 1, updated: 1 })
-  assert.deepEqual(result.items.map((item) => item.id), ['news0001', 'news0003'])
+  assert.deepEqual({ added: result.added, updated: result.updated }, { added: 2, updated: 1 })
+  assert.deepEqual(result.items.map((item) => item.id), ['news0001', 'news0002', 'news0003'])
   assert.equal(result.items[0].title, 'Edited title')
+  assert.equal(result.items[0].originalUrl, 'https://example.com/corrected')
   assert.equal(result.items[0].score, 68)
   assert.deepEqual(mergeNews(result.items, result.items), { items: result.items, added: 0, updated: 0 })
 })
@@ -63,6 +80,7 @@ test('rejects unsafe URLs, duplicate records, and incomplete pagination', async 
   assert.throws(() => parseNewsItem({ ...remote('news0001'), links: { original: 'https://example.com', aihot: 'https://evil.example/items/news0001' } }))
   const item = parseNewsItem(remote('news0001'))
   assert.throws(() => validateNews([item, item]), /Duplicate/)
+  assert.equal(validateNews([item, parseNewsItem(remote('news0002', item.originalUrl))]).length, 2)
   const repeated = (async () => page([remote('news0001')], true, 'same-cursor')) as typeof fetch
   await assert.rejects(collectNews(repeated, async () => {}), /Repeated AIHOT cursor/)
 })

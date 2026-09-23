@@ -32,12 +32,6 @@ function requireUrl(value: unknown, label: string): string {
   return url.href
 }
 
-function originalKey(url: string): string {
-  const parsed = new URL(url)
-  parsed.hash = ''
-  return parsed.href.replace(/\/$/, '')
-}
-
 export function parseNewsItem(value: unknown): NewsItem {
   if (!isRecord(value) || !isRecord(value.source) || !isRecord(value.links)) throw new Error('Invalid AIHOT item')
   const id = requireText(value.id, 'news id', 64)
@@ -75,7 +69,6 @@ function requireScore(value: unknown): number {
 export function validateNews(value: unknown): NewsItem[] {
   if (!Array.isArray(value)) throw new Error('News store must be an array')
   const ids = new Set<string>()
-  const originals = new Set<string>()
   return value.map((candidate) => {
     if (!isRecord(candidate)) throw new Error('Invalid stored news item')
     const item = parseNewsItem({
@@ -83,10 +76,8 @@ export function validateNews(value: unknown): NewsItem[] {
       source: { name: candidate.sourceName },
       links: { original: candidate.originalUrl, aihot: candidate.aihotUrl },
     })
-    const original = originalKey(item.originalUrl)
-    if (ids.has(item.id) || originals.has(original)) throw new Error('Duplicate stored news item')
+    if (ids.has(item.id)) throw new Error('Duplicate stored news item')
     ids.add(item.id)
-    originals.add(original)
     return item
   })
 }
@@ -94,22 +85,17 @@ export function validateNews(value: unknown): NewsItem[] {
 export function mergeNews(existing: NewsItem[], incoming: NewsItem[]): { items: NewsItem[]; added: number; updated: number } {
   const items = [...existing]
   const byId = new Map(items.map((item, index) => [item.id, index]))
-  const originals = new Set(items.map((item) => originalKey(item.originalUrl)))
   let added = 0
   let updated = 0
   for (const item of incoming) {
     const index = byId.get(item.id)
     if (index !== undefined) {
-      if (originalKey(items[index].originalUrl) !== originalKey(item.originalUrl)) {
-        throw new Error(`News identity changed: ${item.id}`)
-      }
       if (JSON.stringify(items[index]) !== JSON.stringify(item)) {
         items[index] = item
         updated++
       }
-    } else if (!originals.has(originalKey(item.originalUrl))) {
+    } else {
       byId.set(item.id, items.length)
-      originals.add(originalKey(item.originalUrl))
       items.push(item)
       added++
     }
@@ -174,6 +160,7 @@ export async function syncNews(
   const path = resolve(root, DATA_FILE)
   const existing = validateNews(JSON.parse(readFileSync(path, 'utf8')) as unknown)
   const incoming = await collectNews(fetchImpl, wait)
+  validateNews(incoming)
   const result = mergeNews(existing, incoming)
   validateNews(result.items)
   if (result.added || result.updated) {

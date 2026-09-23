@@ -39,7 +39,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
   onToggleSaved: (item: NewsItem) => void
 }) {
   const { locale, t } = useI18n()
-  const date = item.publishedAt ?? item.discoveredAt
+  const date = new Date(newsTime(item)).toISOString()
   const originalTitle = item.originalTitle && !/^https?:\/\//i.test(item.originalTitle) &&
     item.originalTitle !== item.title ? item.originalTitle : null
   const categoryLabel = item.category && item.category in NEWS_CATEGORY_LABEL

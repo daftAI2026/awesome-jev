@@ -14,10 +14,14 @@ export interface NewsItem {
   aihotUrl: string
 }
 
+const BACKFILL_THRESHOLD_MS = 72 * 60 * 60 * 1000
+
 export function newsTime(item: NewsItem): number {
-  return Date.parse(item.publishedAt ?? item.discoveredAt)
+  const discovered = Date.parse(item.discoveredAt)
+  const published = item.publishedAt ? Date.parse(item.publishedAt) : discovered
+  return discovered - published > BACKFILL_THRESHOLD_MS ? published : discovered
 }
 
 export function sortNews(items: NewsItem[]): NewsItem[] {
-  return [...items].sort((a, b) => newsTime(b) - newsTime(a) || a.id.localeCompare(b.id))
+  return [...items].sort((a, b) => newsTime(b) - newsTime(a) || b.id.localeCompare(a.id))
 }
