@@ -37,7 +37,7 @@ Mobile
 
 - **Search** is a full-width underline field over GitHub projects. Category filtering narrows the search results without changing the stored order.
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
-- **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left.
+- **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left. The Saved shortcut follows Jev news and reads browser-local bookmarks without a server account.
 - **Filtered GitHub projects** remain the primary result set. Jev news has its own static store and card view; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
 - An ordinary card or list-row click opens one shared project preview. The original GitHub URL remains the anchor fallback for modified clicks or disabled JavaScript.
 
@@ -69,7 +69,8 @@ npm run deploy   # build + wrangler deploy
 | `data/news.json` | Separate AIHOT-sourced Jev news snapshot, maintained by the opt-in scheduled Action |
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
 | `src/components/ItemCard.tsx` | GitHub cards; X card code retained for future placement |
-| `src/App.tsx` | Header, GitHub search and category/news navigation |
+| `src/components/SavedPanel.tsx` + `src/hooks/useSaved.ts` | Source-grouped local bookmarks and storage lifecycle |
+| `src/App.tsx` | Header, GitHub search and category/news/saved navigation |
 
 ## Search discoverability
 
@@ -81,6 +82,6 @@ Search Console's 2026-09-20 export is only one day of evidence, not a basis for 
 
 GitHub Actions runs the server-side radar through read-only collection, secret-free validation, and data-only publishing jobs. Jev credentials never reach Vite or the browser. The resulting commit contains directory data and generated README together. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedule.
 
-The independent [news integration](news.md) uses AIHOT's public API in a separate six-hour Action and commits only `data/news.json` when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
+The independent [news integration](news.md) uses AIHOT's public API in a separate hourly Action and commits only `data/news.json` when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 
 An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.

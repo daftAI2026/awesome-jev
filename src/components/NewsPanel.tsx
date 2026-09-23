@@ -1,5 +1,4 @@
 import { useMemo, useRef, useState, type MouseEvent } from 'react'
-import { ArrowUpRight } from '@phosphor-icons/react'
 import { useI18n, type Locale } from '@/i18n'
 import { newsTime, sortNews, type NewsItem } from '@/lib/news'
 import { NewsDialog } from '@/components/NewsDialog'
@@ -41,7 +40,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
 }) {
   const { locale, t } = useI18n()
   const date = item.publishedAt ?? item.discoveredAt
-  const originalExcerpt = item.originalTitle && !/^https?:\/\//i.test(item.originalTitle) &&
+  const originalTitle = item.originalTitle && !/^https?:\/\//i.test(item.originalTitle) &&
     item.originalTitle !== item.title ? item.originalTitle : null
   const categoryLabel = item.category && item.category in NEWS_CATEGORY_LABEL
     ? t(NEWS_CATEGORY_LABEL[item.category as keyof typeof NEWS_CATEGORY_LABEL]) : item.category
@@ -67,16 +66,22 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
               {item.title}
             </CardTitle>
           </CardHeader>
-          {(item.summary || originalExcerpt) && (
-            <CardContent className="space-y-3 p-0">
-              {item.summary && <p className="line-clamp-5 max-w-prose whitespace-pre-line text-base leading-relaxed text-foreground">{item.summary}</p>}
-              {originalExcerpt && <p className="line-clamp-2 max-w-prose border-l-2 border-border pl-3 text-sm leading-relaxed text-muted-foreground">{originalExcerpt}</p>}
+          {(item.summary || originalTitle || item.reason) && (
+            <CardContent className="space-y-4 p-0">
+              {item.summary && <p className="max-w-prose whitespace-pre-line break-words text-base leading-relaxed text-foreground">{item.summary}</p>}
+              {originalTitle && <div className="max-w-prose border-l-2 border-border pl-3">
+                <p className="text-xs font-medium text-muted-foreground">{t('newsOriginalTitle')}</p>
+                <p className="mt-2 whitespace-pre-line break-words text-sm leading-relaxed text-muted-foreground">{originalTitle}</p>
+              </div>}
+              {item.reason && <div className="max-w-prose">
+                <p className="text-xs font-medium text-muted-foreground">{t('newsReason')}</p>
+                <p className="mt-2 whitespace-pre-line break-words text-sm leading-relaxed text-muted-foreground">{item.reason}</p>
+              </div>}
             </CardContent>
           )}
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            {item.category && <Badge variant="outline" className="font-normal text-muted-foreground">{categoryLabel}</Badge>}
-            <span className="ml-auto inline-flex items-center gap-1">{t('newsDetails')}<ArrowUpRight className="size-3.5" aria-hidden /></span>
-          </div>
+          {item.category && <div className="flex items-center text-xs text-muted-foreground">
+            <Badge variant="outline" className="font-normal text-muted-foreground">{categoryLabel}</Badge>
+          </div>}
         </Card>
       </a>
       <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
