@@ -137,8 +137,8 @@ export default function App() {
   const toggleNewsSaved = useCallback((item: NewsItem) => toggleSaved('news', item.id), [toggleSaved])
   const requestSavedNews = useCallback(() => setSavedNewsRequested(true), [])
   const filterButton = (id: DirectoryFilter) => {
-    const count = id === 'all' ? items.length
-      : id === 'top100' ? Math.min(TOP_PROJECT_LIMIT, githubRanks.size)
+    const count = id === 'top100' ? undefined
+      : id === 'all' ? items.length
       : id === 'news' ? newsItems?.length
       : id === 'saved' ? savedEntries.length
       : categoryCounts[id]

@@ -21,7 +21,7 @@ export const en = {
   sectionYoutube: 'YouTube',
   categoryLabel: 'Categories',
   categoryAll: 'All projects',
-  categoryTop100: 'Most starred',
+  categoryTop100: 'Top 100 by stars',
   categoryNews: 'Jev news',
   categorySaved: 'Saved',
   savedTitle: 'Saved in this browser',
