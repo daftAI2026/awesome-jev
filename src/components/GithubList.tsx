@@ -22,7 +22,7 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
       <a href={item.url} target="_blank" rel="noopener noreferrer"
         aria-haspopup={onPreview ? 'dialog' : undefined}
         onClick={onPreview ? (event) => onPreview(item, event) : undefined}
-        className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 py-3 pr-14 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 py-3 pr-10 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
         <span className="font-mono text-sm tabular-nums text-muted-foreground">{rank ?? '—'}</span>
         <span className="min-w-0">
           <span className="block truncate text-sm font-medium text-foreground">{item.title}</span>
@@ -33,8 +33,8 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
           {stars != null ? formatCount(stars) : '—'}
         </span>
       </a>
-      {onToggleSaved && <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
-        className="absolute top-1/2 right-1 z-10 -translate-y-1/2" />}
+      {onToggleSaved && <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
+        className="absolute top-1/2 right-0 z-10 -translate-y-1/2" />}
     </li>
   )
 })
@@ -56,7 +56,7 @@ export function GithubList({
 
   return (
     <div>
-      <div className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 pb-2 pr-14 text-xs text-muted-foreground">
+      <div className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 pb-2 pr-10 text-xs text-muted-foreground">
         <span>{t('githubColRank')}</span>
         <span>{t('githubColProject')}</span>
         <span className="text-right">{t('sortStars')}</span>

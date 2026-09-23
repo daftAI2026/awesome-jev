@@ -55,7 +55,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
         onClick={(event) => onPreview(item, event)}
         className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
         <Card className="gap-4 p-4 transition-colors hover:bg-muted/60 sm:p-5">
-          <CardHeader className="gap-4 p-0 pr-12">
+          <CardHeader className="gap-4 p-0 pr-8">
             <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
               <span className="min-w-0 font-medium text-foreground">{item.sourceName}</span>
               <time dateTime={date} className="font-mono tabular-nums sm:hidden">{formatTime(new Date(date), locale)}</time>
@@ -84,8 +84,8 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
           </div>}
         </Card>
       </a>
-      <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
-        className="absolute top-4 right-4 z-10 sm:top-5 sm:right-5" />
+      <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
+        className="absolute top-2 right-2 z-10 sm:top-3 sm:right-3" />
     </li>
   )
 }

@@ -1,10 +1,12 @@
 import { Bookmark } from '@phosphor-icons/react'
+import { cn } from 'cn'
 import { useI18n } from '@/i18n'
 import { Button } from '@/components/ui/button'
 
-export function SaveButton({ saved, onToggle, className = '' }: {
+export function SaveButton({ saved, onToggle, compact = false, className }: {
   saved: boolean
   onToggle: () => void
+  compact?: boolean
   className?: string
 }) {
   const { t } = useI18n()
@@ -12,7 +14,8 @@ export function SaveButton({ saved, onToggle, className = '' }: {
   return (
     <Button type="button" variant="ghost" size="icon-sm" aria-label={label} title={label}
       aria-pressed={saved} onClick={onToggle}
-      className={`size-10 text-muted-foreground hover:text-foreground ${className}`}>
+      className={cn('relative text-muted-foreground hover:text-foreground',
+        compact ? "size-8 before:absolute before:-inset-1 before:content-['']" : 'size-10', className)}>
       <Bookmark className="size-4" weight={saved ? 'fill' : 'regular'} aria-hidden />
     </Button>
   )

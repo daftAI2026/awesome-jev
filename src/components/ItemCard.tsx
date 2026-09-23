@@ -86,7 +86,7 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
         className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <Card size="sm" className="transition-colors hover:bg-muted/60">
-          <CardHeader className={onToggleSaved ? 'pr-14' : undefined}>
+          <CardHeader className={onToggleSaved ? 'pr-12' : undefined}>
             <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight group-hover:underline group-hover:underline-offset-2">
               <GithubLogo
                 className="mt-1 size-3.5 shrink-0 text-muted-foreground"
@@ -143,8 +143,8 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
           )}
         </Card>
       </a>
-      {onToggleSaved && <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
-        className="absolute top-2 right-2 z-10" />}
+      {onToggleSaved && <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
+        className="absolute top-1 right-1 z-10" />}
     </div>
   )
 }
