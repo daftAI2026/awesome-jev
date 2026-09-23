@@ -79,7 +79,7 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
   return (
     <div className="group relative">
       <Card size="sm" className="transition-colors group-hover:bg-muted/60">
-        <CardHeader>
+        <CardHeader className="gap-y-2">
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
             {rank != null ? (
               <Badge
