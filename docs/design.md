@@ -164,8 +164,6 @@ Prefer text labels to icon-only chrome unless an established Phosphor icon makes
 
 Search, zone toggles, and sort are the working tools. They belong in the first viewport. Native controls, visible labels, visible focus, keyboard and screen-reader access. Preserve the query when results are empty; do not silently clear it.
 
-GitHub cards and list rows open one shared project preview dialog on an ordinary click. Keep the source URL as the link fallback and preserve modified-click behavior. The dialog shows only recorded facts: project name, repo, summary, category, language, counts, tags, and an optional pinned review-source link. Give the outbound GitHub action a clear label. A dim monochrome backdrop separates the modal from the board; clicking it, pressing Escape, or using the close button dismisses the dialog and returns focus to the original row. Keep the surface restrained: one boundary and only enough shadow to distinguish the active layer. Do not fetch or render an arbitrary third-party README inside the dialog.
-
 Motion: default to stillness. Add motion only when it explains a state change. Respect `prefers-reduced-motion`. No auto-scrolling marquees, simulated typing, or decorative pulse.
 
 #### Media

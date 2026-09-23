@@ -218,7 +218,6 @@ export default function App() {
       <GithubProjectDialog
         item={detailItem}
         categoryLabel={detailCategory ? t(CATEGORY_LABEL[detailCategory]) : undefined}
-        rank={detailItem ? githubRanks.get(detailItem.id) : undefined}
         open={detailOpen}
         onOpenChange={setDetailOpen}
         triggerRef={detailTriggerRef}
