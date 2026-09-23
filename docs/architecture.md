@@ -14,7 +14,7 @@ Searchable directory of curated **GitHub projects** (with retained X and YouTube
 | Search | Fuse.js over `data/github.json` |
 | Deploy | Cloudflare Workers static assets (`wrangler.toml` → `./dist`, SPA `not_found_handling`) |
 
-Design stays monochrome / restrained: no decorative gradients. See [design.md](design.md).
+Visual tokens and restraint are defined in [design.md](design.md); current page behavior is specified in [directory-ui.md](directory-ui.md).
 
 ## Information architecture
 
@@ -38,8 +38,8 @@ Mobile
 - **Search** is a full-width underline field over GitHub projects. Category filtering narrows the search results without changing the stored order.
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
 - **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left.
-- **Filtered GitHub projects** are type-scoped lists (`github` / `x` / `youtube`). YouTube only appears when the directory has videos. Empty sections show “No items yet.”
-- Cards link out (`target="_blank"`) to the original GitHub repository — this site does not host media.
+- **Filtered GitHub projects** are the current homepage result set; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
+- An ordinary card or list-row click opens one shared project preview. The original GitHub URL remains the anchor fallback for modified clicks or disabled JavaScript.
 
 ## Workers auto-deploy
 
