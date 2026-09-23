@@ -87,24 +87,33 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
       >
         <Card size="sm" className="transition-colors hover:bg-muted/60">
           <CardHeader className={onToggleSaved ? 'pr-12' : undefined}>
-            <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight group-hover:underline group-hover:underline-offset-2">
+            <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
               <GithubLogo
                 className="mt-1 size-3.5 shrink-0 text-muted-foreground"
                 weight="fill"
                 aria-hidden
               />
-              <span className="min-w-0">{item.title}</span>
+              <span className="min-w-0">
+                <span className="group-hover:underline group-hover:underline-offset-2">{item.title}</span>
+                {rank != null && (
+                  <Badge
+                    variant="outline"
+                    className="ml-2 align-middle rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
+                    aria-label={t('githubStarRank', { rank })}
+                  >
+                    {rank}
+                  </Badge>
+                )}
+              </span>
             </CardTitle>
             <CardDescription className="text-sm leading-relaxed">
               {item.summary}
             </CardDescription>
           </CardHeader>
-          {(rank != null || metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
+          {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
             <CardContent className="space-y-2">
-              {(rank != null || metaBits.length > 0) && (
+              {metaBits.length > 0 && (
                 <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
-                  {rank != null && <span aria-label={t('githubStarRank', { rank })}>#{rank}</span>}
-                  {rank != null && metaBits.length > 0 ? ' · ' : null}
                   {metaBits.join(' · ')}
                 </p>
               )}
