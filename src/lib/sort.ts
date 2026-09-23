@@ -47,7 +47,7 @@ export function githubStarRanks(items: DirectoryItem[]): Map<string, number> {
   github.sort((a, b) => {
     const stars = numOrZero(b.sourceMeta.stars) - numOrZero(a.sourceMeta.stars)
     if (stars !== 0) return stars
-    const name = a.title.localeCompare(b.title, undefined, {
+    const name = a.title.localeCompare(b.title, 'en', {
       sensitivity: 'base',
     })
     if (name !== 0) return name
@@ -71,7 +71,7 @@ export function sortGithubItems(
     )
   } else if (sort === 'name') {
     copy.sort((a, b) =>
-      a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }),
+      a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }),
     )
   } else {
     // date — newest first; missing last

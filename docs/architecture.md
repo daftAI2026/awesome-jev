@@ -2,7 +2,7 @@
 
 ## Theme
 
-Searchable directory of curated **GitHub projects** and **X posts** about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
+Searchable directory of curated **GitHub projects**, **X posts**, and **YouTube videos** about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
 
 ## Stack
 
@@ -69,6 +69,12 @@ npm run deploy   # build + wrangler deploy
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
 | `src/components/ItemCard.tsx` | GitHub + X card UIs |
 | `src/App.tsx` | Header, search, section boards |
+
+## Search discoverability
+
+The Vite build renders the existing React homepage into `dist/index.html` after bundling. Google and other crawlers receive the real directory HTML immediately instead of an empty `#root`; React hydrates the same markup for visitors. The server snapshot starts in English, then the browser restores a saved or preferred Chinese locale after hydration. Locale-dependent number formatting and title ordering use explicit locales so the first browser render agrees with the static HTML. This does **not** manufacture separate pages for each listing: the site's only canonical URL and sitemap entry remain the homepage.
+
+Search Console's 2026-09-20 export is only one day of evidence, not a basis for keyword stuffing or mass-generated thin pages. Verify the rendered homepage with URL Inspection and measure multi-week query trends before changing titles or information architecture.
 
 ## Scheduled collection
 

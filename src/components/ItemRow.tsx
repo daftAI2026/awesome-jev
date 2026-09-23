@@ -13,13 +13,13 @@ export function ItemRow({ item }: ItemRowProps) {
     if (meta.repo) metaBits.push(meta.repo)
     if (meta.language) metaBits.push(meta.language)
     if (meta.stars != null) {
-      metaBits.push(`${meta.stars.toLocaleString()} stars`)
+      metaBits.push(`${meta.stars.toLocaleString('en-US')} stars`)
     }
   } else {
     if (meta.handle) metaBits.push(meta.handle)
     if (meta.date) metaBits.push(meta.date)
     if (meta.likes != null) {
-      metaBits.push(`${meta.likes.toLocaleString()} likes`)
+      metaBits.push(`${meta.likes.toLocaleString('en-US')} likes`)
     }
   }
 

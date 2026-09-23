@@ -30,7 +30,7 @@ interface ItemCardProps {
 }
 
 function formatCount(n: number): string {
-  return n.toLocaleString()
+  return n.toLocaleString('en-US')
 }
 
 function formatCompact(n: number): string {
@@ -53,7 +53,7 @@ function TweetStat({
   return (
     <span
       className="inline-flex min-w-0 items-center gap-1 tabular-nums"
-      aria-label={n > 0 ? `${label}: ${n.toLocaleString()}` : label}
+      aria-label={n > 0 ? `${label}: ${n.toLocaleString('en-US')}` : label}
     >
       {icon}
       {n > 0 ? <span aria-hidden>{formatCompact(n)}</span> : null}
@@ -327,7 +327,7 @@ function YoutubeCard({ item }: ItemCardProps) {
             )}
             {views != null && (
               <span className="font-mono tabular-nums">
-                {views.toLocaleString()}
+                {views.toLocaleString('en-US')}
               </span>
             )}
           </div>

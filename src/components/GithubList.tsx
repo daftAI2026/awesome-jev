@@ -3,7 +3,7 @@ import type { DirectoryItem } from '@/lib/types'
 import { useI18n } from '@/i18n'
 
 function formatCount(n: number): string {
-  return n.toLocaleString()
+  return n.toLocaleString('en-US')
 }
 
 export function GithubList({
