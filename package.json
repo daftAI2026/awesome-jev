@@ -17,6 +17,7 @@
     "readme:sync": "node --experimental-strip-types scripts/catalog.ts",
     "data:check": "node --experimental-strip-types scripts/catalog.ts --check",
     "radar:scan": "node --experimental-strip-types scripts/radar.ts",
+    "alternatives:audit": "node --experimental-strip-types scripts/alternative-audit.ts",
     "news:check": "node --experimental-strip-types scripts/news-sync.ts --check",
     "news:sync": "node --experimental-strip-types scripts/news-sync.ts",
     "typecheck": "tsc -b",

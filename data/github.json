@@ -27,27 +27,29 @@
   {
     "id": "gh-theoleecj-openjev",
     "type": "github",
-    "title": "openjev",
-    "summary": "Can we run something like Jev on a 3090 at home? Open / local System One–style experiments.",
+    "title": "SemIf-OpenJev",
+    "summary": "Semantic ifs from open models, on a 3090 at home. Independent; not affiliated with Jev or TypeSafe.",
     "tags": [
       "jev",
       "demo",
       "open-source",
       "local"
     ],
-    "url": "https://github.com/TheoLeeCJ/openjev",
+    "url": "https://github.com/TheoLeeCJ/SemIf-OpenJev",
     "sourceMeta": {
-      "stars": 1215,
-      "forks": 81,
-      "openIssues": 5,
+      "stars": 4074,
+      "forks": 272,
+      "openIssues": 26,
       "language": "Python",
       "author": "TheoLeeCJ",
-      "repo": "TheoLeeCJ/openjev",
+      "repo": "TheoLeeCJ/SemIf-OpenJev",
       "jevAbout": 0.53,
       "jevKeep": "review",
-      "jevKeepConfidence": 0.65
+      "jevKeepConfidence": 0.65,
+      "categoryEvidenceSha": "23cf1f39fc9534fe81437200959b6dfc7106e45a",
+      "categoryEvidenceUrl": "https://github.com/TheoLeeCJ/SemIf-OpenJev/blob/23cf1f39fc9534fe81437200959b6dfc7106e45a/README.md"
     },
-    "category": "research"
+    "category": "alternatives"
   },
   {
     "id": "gh-vinnylarouge-jevlike",
@@ -1204,10 +1206,10 @@
       "jevAbout": 0.12,
       "jevKeep": "drop",
       "jevKeepConfidence": 0.47,
-      "categoryEvidenceSha": "572d752fcf5933ad61de87474a8b2f386189bcc6",
-      "categoryEvidenceUrl": "https://github.com/mapika/decider/blob/572d752fcf5933ad61de87474a8b2f386189bcc6/README.md"
+      "categoryEvidenceSha": "1d10721303752285dd87a2cb5afd5902fea78063",
+      "categoryEvidenceUrl": "https://github.com/mapika/decider/blob/1d10721303752285dd87a2cb5afd5902fea78063/README.md"
     },
-    "category": "research"
+    "category": "alternatives"
   },
   {
     "id": "gh-jon-devlapaz-jev-me",
@@ -9216,7 +9218,7 @@
       "categoryEvidenceSha": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16",
       "categoryEvidenceUrl": "https://github.com/zefan-cai/open-jev/blob/3308a15ccd7eea1df7a37d6ddc39b023b801ba16/README.md"
     },
-    "category": "agents"
+    "category": "alternatives"
   },
   {
     "id": "gh-jiawei686-jev-ultrafast-mcp",
@@ -10107,21 +10109,21 @@
   {
     "id": "gh-sharkelot-jev-laya-free",
     "type": "github",
-    "title": "jev-laya-free",
-    "summary": "Free local Jev-compatible typed decisions backed by rules or Laya, with a TypeSafe SDK-compatible Python surface and deterministic Hermes/Qwen guards.",
+    "title": "classify-goblin",
+    "summary": "Local typed decisions with rules, Laya, DistilBERT, and Qwen backends, plus deterministic Hermes and artifact guards.",
     "tags": [
       "jev",
       "python",
       "sdk"
     ],
-    "url": "https://github.com/Sharkelot/jev-laya-free",
+    "url": "https://github.com/Sharkelot/classify-goblin",
     "sourceMeta": {
       "stars": 0,
       "forks": 0,
       "openIssues": 0,
       "language": "Python",
       "author": "Sharkelot",
-      "repo": "Sharkelot/jev-laya-free",
+      "repo": "Sharkelot/classify-goblin",
       "jevAbout": 0.85,
       "jevKeep": "keep",
       "jevKeepConfidence": 0.93
@@ -17193,7 +17195,7 @@
       "categoryEvidenceSha": "557598fced1dada75dfbf36ed144dce309ac6ceb",
       "categoryEvidenceUrl": "https://github.com/jaredpalmer/kev/blob/557598fced1dada75dfbf36ed144dce309ac6ceb/README.md"
     },
-    "category": "agents"
+    "category": "alternatives"
   },
   {
     "id": "gh-5-jbt95-jev-toolkit",
@@ -19841,7 +19843,7 @@
       "categoryEvidenceSha": "80012ca2abe8d000798e2dc7d717171058f1e6db",
       "categoryEvidenceUrl": "https://github.com/micha0827/snapjudge/blob/80012ca2abe8d000798e2dc7d717171058f1e6db/README.md"
     },
-    "category": "research"
+    "category": "alternatives"
   },
   {
     "id": "gh-12-microchipgnu-jev-hooks",
@@ -34219,7 +34221,7 @@
       "categoryEvidenceSha": "3e296f085ce88e5da3850288646b3429eb476774",
       "categoryEvidenceUrl": "https://github.com/razorback16/openjev/blob/3e296f085ce88e5da3850288646b3429eb476774/README.md"
     },
-    "category": "agents"
+    "category": "alternatives"
   },
   {
     "id": "gh-8-realdubb-jev-playground",
@@ -37024,7 +37026,7 @@
       "categoryEvidenceSha": "30ac6d89b7fa36c644cf86aac68f35c1d276a919",
       "categoryEvidenceUrl": "https://github.com/abhishek085/open-spark-jev/blob/30ac6d89b7fa36c644cf86aac68f35c1d276a919/README.md"
     },
-    "category": "agents"
+    "category": "alternatives"
   },
   {
     "id": "gh-20-abhishekmishragithub-semantic-microscope",

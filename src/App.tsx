@@ -3,6 +3,7 @@ import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour } from '@phosphor-
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
+import { DecryptedBrand } from '@/components/DecryptedBrand'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
@@ -113,6 +114,13 @@ export default function App() {
     setFilter(next)
     setCategoryOpen(false)
   }, [filter])
+  const returnHome = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    setQuery('')
+    selectFilter('all')
+    window.scrollTo(0, 0)
+  }, [selectFilter])
   const openProjectPreview = useCallback((item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
@@ -149,12 +157,12 @@ export default function App() {
         variant={filter === id ? 'secondary' : 'ghost'}
         aria-pressed={filter === id}
         onClick={() => selectFilter(id)}
-        className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
+        className={`h-auto min-h-8 w-full justify-between gap-4 rounded-lg px-3 py-1.5 font-normal whitespace-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
       >
-        <span className="truncate">{t(FILTER_LABEL[id])}</span>
+        <span className="min-w-0 flex-1 text-left leading-snug">{t(FILTER_LABEL[id])}</span>
         {count != null && (id === 'saved'
           ? <Badge variant="outline" className="min-w-5 rounded-sm px-1.5 font-normal tabular-nums text-muted-foreground">{count}</Badge>
-          : <span className="tabular-nums text-xs text-muted-foreground">{count}</span>)}
+          : <span className="shrink-0 tabular-nums text-xs text-muted-foreground">{count}</span>)}
       </Button>
     )
   }
@@ -185,7 +193,9 @@ export default function App() {
       <a href="#main" className="skip-link sr-only">{t('skipToContent')}</a>
       <header className="sticky top-0 z-50 bg-background">
         <div className="flex h-14 w-full items-center justify-between gap-3 px-4">
-          <h1 className="truncate text-lg font-medium tracking-tight text-foreground">Awesome JEV</h1>
+          <h1 className="min-w-0 truncate text-lg font-medium tracking-tight text-foreground">
+            <DecryptedBrand onClick={returnHome} />
+          </h1>
           <div className="flex shrink-0 items-center gap-2">
             <Button variant="ghost" size="icon-sm" nativeButton={false}
               render={<a href="https://github.com/daftAI2026/awesome-jev" target="_blank" rel="noopener noreferrer" />}
@@ -211,8 +221,8 @@ export default function App() {
         )}
       </div>
 
-      <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-10 lg:px-8 lg:pb-10">
-        <aside className="hidden lg:block"><div className="sticky top-16">{categoryNav}</div></aside>
+      <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:grid-cols-[13rem_minmax(0,1fr)] lg:px-8 lg:pb-10">
+        <aside className="hidden lg:block"><div className="sticky top-16 max-h-[calc(100dvh-5rem)] overflow-y-auto">{categoryNav}</div></aside>
         <div className="min-w-0">
           <div className="mb-6">
             <div className="relative">
@@ -233,7 +243,7 @@ export default function App() {
                 </SheetTrigger>
                 <SheetContent side="left" className="w-72 p-0">
                   <SheetHeader className="sr-only"><SheetTitle>{t('categoryLabel')}</SheetTitle></SheetHeader>
-                  <div className="px-4 pb-4">{categoryNav}</div>
+                  <div className="min-h-0 overflow-y-auto px-4 pb-4">{categoryNav}</div>
                 </SheetContent>
               </Sheet>
               {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[sort]} onValueChange={(values) => {
