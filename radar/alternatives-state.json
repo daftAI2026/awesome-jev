@@ -36,13 +36,6 @@
       "discoveredAt": "2026-09-23T18:17:17.528Z",
       "attempts": 0
     },
-    "nokia-applied-research/anyjev": {
-      "status": "error",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T18:17:17.528Z",
-      "retryAt": "2026-09-24T18:17:17.528Z"
-    },
     "manavarya09/verdict": {
       "status": "pending",
       "discoveredAt": "2026-09-23T18:17:17.528Z",

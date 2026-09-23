@@ -39594,5 +39594,32 @@
         "checkedAt": "2026-09-23T18:17:17.528Z"
       }
     }
+  },
+  {
+    "id": "gh-22-nokia-applied-research-anyjev",
+    "type": "github",
+    "title": "AnyJev",
+    "summary": "Independent open-source Jev-style decision model that turns open LLMs into typed Choice, Noul, and Score judgments with probabilities.",
+    "tags": [
+      "calibration",
+      "decision-model",
+      "jev",
+      "jev-model",
+      "llm",
+      "system-one",
+      "transformers",
+      "vllm"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/nokia-applied-research/AnyJev",
+    "sourceMeta": {
+      "repo": "nokia-applied-research/AnyJev",
+      "author": "nokia-applied-research",
+      "stars": 346,
+      "forks": 55,
+      "openIssues": 2,
+      "language": "Python",
+      "date": "2026-09-21"
+    }
   }
 ]
