@@ -9,7 +9,7 @@
 @media (prefers-reduced-motion: no-preference) {
   ::view-transition-old(root),
   ::view-transition-new(root) {
-    animation-duration: 180ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-in-out;
   }
 }
