@@ -31,6 +31,8 @@ export function CardMasonry({ items, ranks, onPreview }: {
         const position = positions[index]
         const area = `${position.row} / ${position.column} / span ${position.span} / span 1`
         if (cell.style.gridArea !== area) cell.style.gridArea = area
+        const intrinsicSize = `auto ${heights[index]}px`
+        if (cell.style.containIntrinsicSize !== intrinsicSize) cell.style.containIntrinsicSize = intrinsicSize
       })
       // --- 首屏保留普通网格；定位全部完成后才启用短行，避免水合前卡片堆叠 ---
       list.style.gridAutoRows = `${MASONRY_ROW_HEIGHT}px`
@@ -67,7 +69,7 @@ export function CardMasonry({ items, ranks, onPreview }: {
   return (
     <ul
       ref={listRef}
-      className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:items-start sm:data-[masonry-ready=true]:gap-y-0 sm:[--masonry-columns:2] lg:grid-cols-3 lg:[--masonry-columns:3]"
+      className="card-masonry flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:items-start sm:data-[masonry-ready=true]:gap-y-0 sm:[--masonry-columns:2] lg:grid-cols-3 lg:[--masonry-columns:3]"
     >
       {items.map((item) => (
         <li key={item.id} className="min-w-0">

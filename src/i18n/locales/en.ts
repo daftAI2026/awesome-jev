@@ -21,6 +21,7 @@ export const en = {
   sectionYoutube: 'YouTube',
   categoryLabel: 'Categories',
   categoryAll: 'All projects',
+  categoryTop100: 'Top 100 by stars',
   categoryAgents: 'Agents & automation',
   categoryBrowser: 'Browser & computer use',
   categorySdk: 'SDKs & integrations',

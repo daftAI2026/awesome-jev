@@ -13,7 +13,7 @@ interface HeaderChoiceMenuProps {
 
 export function HeaderChoiceMenu({ label, icon, value, options, onValueChange }: HeaderChoiceMenuProps) {
   return (
-    <Menu.Root>
+    <Menu.Root modal={false}>
       <Menu.Trigger
         render={<Button type="button" variant="ghost" size="icon-sm" className="size-9 text-muted-foreground" />}
         aria-label={label}

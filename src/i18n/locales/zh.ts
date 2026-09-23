@@ -23,6 +23,7 @@ export const zh: Messages = {
   sectionYoutube: 'YouTube',
   categoryLabel: '项目分类',
   categoryAll: '全部项目',
+  categoryTop100: '星标前 100',
   categoryAgents: '智能体与自动化',
   categoryBrowser: '浏览器与电脑操作',
   categorySdk: 'SDK 与集成',

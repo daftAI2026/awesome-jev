@@ -22,7 +22,7 @@ import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 
 const CATEGORIES = ['agents', 'browser', 'sdk', 'developer', 'research', 'resources', 'applications', 'other'] as const
 type Category = (typeof CATEGORIES)[number]
-type CategoryFilter = 'all' | Category
+type CategoryFilter = 'all' | 'top100' | Category
 type GithubItem = DirectoryItem & { category?: Category }
 const items = githubData as GithubItem[]
 const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
@@ -30,7 +30,7 @@ const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
 const githubRanks = githubStarRanks(items)
 const categoryCounts = Object.fromEntries(CATEGORIES.map((category) => [category, items.filter((item) => item.category === category).length])) as Record<Category, number>
 const CATEGORY_LABEL = {
-  all: 'categoryAll', agents: 'categoryAgents', browser: 'categoryBrowser', sdk: 'categorySdk',
+  all: 'categoryAll', top100: 'categoryTop100', agents: 'categoryAgents', browser: 'categoryBrowser', sdk: 'categorySdk',
   developer: 'categoryDeveloper', research: 'categoryResearch', resources: 'categoryResources',
   applications: 'categoryApplications', other: 'categoryOther',
 } as const
@@ -57,7 +57,7 @@ function readStoredView(): GithubView {
 function readStoredCategory(): CategoryFilter {
   try {
     const value = localStorage.getItem(CATEGORY_KEY)
-    if (value === 'all' || CATEGORIES.some((category) => category === value)) return value as CategoryFilter
+    if (value === 'all' || value === 'top100' || CATEGORIES.some((category) => category === value)) return value as CategoryFilter
   } catch { /* ignore */ }
   return 'all'
 }
@@ -100,26 +100,32 @@ export default function App() {
     setDetailItem(item)
     setDetailOpen(true)
   }, [])
+  const filterButton = (id: CategoryFilter) => (
+    <Button
+      key={id}
+      type="button"
+      variant={category === id ? 'secondary' : 'ghost'}
+      aria-pressed={category === id}
+      onClick={() => selectCategory(id)}
+      className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${category === id ? 'text-foreground' : 'text-muted-foreground'}`}
+    >
+      <span className="truncate">{t(CATEGORY_LABEL[id])}</span>
+      {id !== 'top100' && <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : categoryCounts[id]}</span>}
+    </Button>
+  )
   const categoryNav = (
     <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
-      {(['all', ...CATEGORIES] as CategoryFilter[]).map((id) => (
-        <Button
-          key={id}
-          type="button"
-          variant={category === id ? 'secondary' : 'ghost'}
-          aria-pressed={category === id}
-          onClick={() => selectCategory(id)}
-          className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${category === id ? 'text-foreground' : 'text-muted-foreground'}`}
-        >
-          <span className="truncate">{t(CATEGORY_LABEL[id])}</span>
-          <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : categoryCounts[id]}</span>
-        </Button>
-      ))}
+      {filterButton('all')}
+      {filterButton('top100')}
+      <Separator className="my-1" />
+      {CATEGORIES.map(filterButton)}
     </nav>
   )
   const matched = useMemo(() => {
     const searched = searchItems(items, query, 'github', []) as GithubItem[]
-    return category === 'all' ? searched : searched.filter((item) => (item.category ?? 'other') === category)
+    if (category === 'all') return searched
+    if (category === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= 100)
+    return searched.filter((item) => (item.category ?? 'other') === category)
   }, [query, category])
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
   const hasQuery = query.trim().length > 0
@@ -186,7 +192,7 @@ export default function App() {
                 const next = values[0]
                 if (next === 'stars' || next === 'date' || next === 'name') setSort(next)
               }} variant="outline" size="sm" aria-label={t('rankLabel')} className="rounded-lg">
-                <ToggleGroupItem value="stars">{t('sortStars')}<span className="ml-1 tabular-nums text-muted-foreground">({items.length})</span></ToggleGroupItem>
+                <ToggleGroupItem value="stars">{t('sortStars')}</ToggleGroupItem>
                 <ToggleGroupItem value="date">{t('sortDate')}</ToggleGroupItem>
                 <ToggleGroupItem value="name">{t('sortName')}</ToggleGroupItem>
               </ToggleGroup>

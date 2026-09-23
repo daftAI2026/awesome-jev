@@ -6,7 +6,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.ascii-wordmark {
+  container-type: inline-size;
+}
+
+.ascii-wordmark pre {
+  font-size: min(1rem, 1.25cqw);
+}
+
+@media (min-width: 40rem) {
+  .card-masonry[data-masonry-ready="true"] > li {
+    content-visibility: auto;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  ::view-transition-group(root),
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation-duration: 100ms;
