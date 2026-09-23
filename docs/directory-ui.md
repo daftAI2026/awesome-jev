@@ -25,13 +25,9 @@ The Saved view separates projects from news, then offers only populated categori
 
 ## Card ordering algorithm
 
-`CardMasonry` receives items **after** search, filter, and sort. It must not change that sequence. On a desktop-sized grid, the column count comes from the CSS breakpoint (two or three), not from card content. The layout measures each card's natural height, converts it to a four-pixel grid-row span with a 16-pixel gap, and processes consecutive groups of `columns` cards:
+`CardMasonry` receives items **after** search, filter, and sort. It must not change that sequence. On a desktop-sized grid, the column count comes from the CSS breakpoint (two or three), not from card content. The layout measures each card's natural height and converts it to a four-pixel grid-row span including a 16-pixel gap. Cards are assigned round-robin to columns 1, 2, 3, then each new card starts immediately after the previous card **in its own column**. This preserves the first row's left-to-right sequence and keeps each column in source order without leaving row-wide holes.
 
-1. Place the group's cards in columns 1, 2, 3 from left to right at the **same** grid row. Thus ranks 1–3 occupy the first reading row and ranks 4–6 the second, regardless of description length.
-2. Advance the next group's starting row by the **largest** span in the current group. Never fill the shortest column with a later item; doing so makes visual ranks appear as 5, 6, 4.
-3. Keep each card at natural height. The unused space below a shorter card is intentional: variable card heights cannot simultaneously have zero gaps and strict row-by-row reading order.
-
-On narrow screens, cards use one-column document flow. The desktop layout records each measured height as an intrinsic-size fallback before enabling offscreen `content-visibility`, so skipped cards keep their space during scrolling and theme changes. Source order, keyboard order, and visual reading order therefore agree.
+True masonry cannot also guarantee strict row-by-row visual rank order when card heights differ: a later card in a shorter column can start above an earlier card in a taller column. Source and keyboard order remain unchanged; rank labels make the intended ordering explicit. On narrow screens, cards use one-column document flow. The desktop layout records each measured height as an intrinsic-size fallback before enabling offscreen `content-visibility`, so skipped cards keep their space during scrolling and theme changes.
 
 ## Project evidence
 

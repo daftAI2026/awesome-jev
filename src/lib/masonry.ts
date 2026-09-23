@@ -8,12 +8,12 @@ export function masonryPositions(heights: number[], columns: number) {
     return Math.max(1, Math.ceil((height + MASONRY_GAP) / MASONRY_ROW_HEIGHT))
   })
   const positions: { column: number; row: number; span: number }[] = []
-  let row = 1
-  // --- 逐行放置：保留横向阅读顺序，不让后续条目钻入短列 ---
-  for (let start = 0; start < spans.length; start += columns) {
-    const band = spans.slice(start, start + columns)
-    band.forEach((span, index) => positions.push({ column: index + 1, row, span }))
-    row += Math.max(...band)
-  }
+  const nextRows = Array<number>(columns).fill(1)
+  // --- 横向轮流分列，纵向紧贴本列上一张卡片 ---
+  spans.forEach((span, index) => {
+    const columnIndex = index % columns
+    positions.push({ column: columnIndex + 1, row: nextRows[columnIndex], span })
+    nextRows[columnIndex] += span
+  })
   return positions
 }
