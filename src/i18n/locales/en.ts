@@ -105,7 +105,6 @@ export const en = {
   projectClose: 'Close project preview',
   projectStars: 'Stars',
   projectForks: 'Forks',
-  projectIssues: 'Open issues',
   projectTags: 'Topics',
   projectReviewSource: 'Review source',
   projectViewEvidence: 'View cited source',

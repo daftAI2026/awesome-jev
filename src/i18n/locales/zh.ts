@@ -107,7 +107,6 @@ export const zh: Messages = {
   projectClose: '关闭项目预览',
   projectStars: '星标',
   projectForks: '派生',
-  projectIssues: '开放议题',
   projectTags: '主题',
   projectReviewSource: '审查来源',
   projectViewEvidence: '查看引用来源',

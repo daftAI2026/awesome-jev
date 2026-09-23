@@ -20,7 +20,6 @@ export interface CatalogSourceMeta extends ScoreInput {
   handle?: string
   stars?: number
   forks?: number
-  openIssues?: number
   language?: string | null
   date?: string
 }
@@ -71,7 +70,6 @@ export interface GitHubRepository {
   license?: { spdx_id?: string | null } | null
   stargazers_count?: number
   forks_count?: number
-  open_issues_count?: number
 }
 
 export interface GitHubReadme {

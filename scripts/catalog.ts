@@ -91,7 +91,8 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
       }
       if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
       repos.add(key)
-      for (const field of ['stars', 'forks', 'openIssues'] as const) {
+      if (Object.hasOwn(sourceMeta, 'openIssues')) throw new Error('Legacy openIssues field')
+      for (const field of ['stars', 'forks'] as const) {
         const value = sourceMeta[field]
         if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)
       }
@@ -102,22 +103,19 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
 export function metadataOf(repo: GitHubRepository): CatalogSourceMeta {
   const stars = repo.stargazers_count
   const forks = repo.forks_count
-  const openIssues = repo.open_issues_count
   if (typeof stars !== 'number' || !Number.isSafeInteger(stars) || stars < 0 ||
-    typeof forks !== 'number' || !Number.isSafeInteger(forks) || forks < 0 ||
-    typeof openIssues !== 'number' || !Number.isSafeInteger(openIssues) || openIssues < 0) {
+    typeof forks !== 'number' || !Number.isSafeInteger(forks) || forks < 0) {
     throw new Error('Invalid GitHub metadata')
   }
   return {
     stars,
     forks,
-    openIssues,
     language: repo.language ?? null,
   }
 }
 
 export function refreshRow<T extends DirectoryItem>(row: T, repo: GitHubRepository): T {
-  // --- 只更新显示元数据；不重写人工摘要、标签、稳定 ID 和审查结论 ---
+  // --- 只更新显示元数据；不重写人工摘要、标签与审查结论 ---
   if (repoKey(repo.html_url) !== repoKey(row.url)) throw new Error('Repository moved; manual review required')
   return { ...row, sourceMeta: { ...row.sourceMeta, ...metadataOf(repo) } } as T
 }
@@ -231,7 +229,7 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
         continue
       }
       const editorial: Record<string, unknown> = { ...old.sourceMeta }
-      for (const key of ['stars', 'forks', 'openIssues', 'language'] as const) {
+      for (const key of ['stars', 'forks', 'language'] as const) {
         if (Object.hasOwn(fresh.sourceMeta, key)) editorial[key] = fresh.sourceMeta[key]
       }
       const expected: GitHubDirectoryItem = { ...old, sourceMeta: editorial }

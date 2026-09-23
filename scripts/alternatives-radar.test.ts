@@ -14,14 +14,14 @@ const alternatives: GitHubRepository[] = [
     html_url: 'https://github.com/mizorewww/laya-mlx', full_name: 'mizorewww/laya-mlx', name: 'laya-mlx',
     owner: { login: 'mizorewww' }, description: 'An independent typed-decision model with calibrated probabilities.',
     default_branch: 'main', topics: ['system-one', 'decision-model'], language: 'Python',
-    created_at: '2026-09-20T00:00:00Z', stargazers_count: 5869, forks_count: 400, open_issues_count: 12,
+    created_at: '2026-09-20T00:00:00Z', stargazers_count: 5869, forks_count: 400,
     license: { spdx_id: 'MIT' }, private: false, fork: false, archived: false,
   },
   {
     html_url: 'https://github.com/nokia-applied-research/AnyJev', full_name: 'nokia-applied-research/AnyJev', name: 'AnyJev',
     owner: { login: 'nokia-applied-research' }, description: 'An independent System One typed-decision model with probabilities.',
     default_branch: 'main', topics: ['system-one', 'decision-model'], language: 'Python',
-    created_at: '2026-09-21T00:00:00Z', stargazers_count: 342, forks_count: 30, open_issues_count: 2,
+    created_at: '2026-09-21T00:00:00Z', stargazers_count: 342, forks_count: 30,
     license: { spdx_id: 'Apache-2.0' }, private: false, fork: false, archived: false,
   },
 ]

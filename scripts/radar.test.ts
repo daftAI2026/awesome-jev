@@ -10,7 +10,7 @@ const score: ReviewScore = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence:
 const response = { answers: { about: { type: 'noul', noul: 0.95 }, keep: { type: 'choice', choice: 'keep', confidence: 0.99 }, category: { type: 'choice', choice: 'sdk', confidence: 0.99 } } }
 const repo: ReviewRepository = { html_url: 'https://github.com/test/jev-sdk', full_name: 'test/jev-sdk', name: 'jev-sdk',
   default_branch: 'main', owner: { login: 'test' }, description: 'TypeSafe Jev SDK', topics: ['jev', 'sdk'],
-  stargazers_count: 3, forks_count: 1, open_issues_count: 0, language: 'TypeScript', created_at: now.toISOString(), private: false, fork: false, archived: false }
+  stargazers_count: 3, forks_count: 1, language: 'TypeScript', created_at: now.toISOString(), private: false, fork: false, archived: false }
 type RadarOptions = Parameters<typeof runRadar>[0]
 type RadarReview = RadarOptions['review']
 type EvaluateOptions = NonNullable<Parameters<typeof evaluateJev>[3]>
@@ -271,7 +271,7 @@ for (const [evidence, reason] of [
 test('every existing GitHub repository is refreshed regardless of candidate limit or old cursor', async () => {
   const rows: ReviewRow[] = Array.from({ length: 501 }, (_, i) => ({ id: `old-${i}`, type: 'github', title: `Old ${i}`,
     summary: 'Curated', url: `https://github.com/test/old-${i}`,
-    sourceMeta: { repo: `test/old-${i}`, stars: 10, forks: 8, openIssues: 3, language: 'JavaScript', ...score } }))
+    sourceMeta: { repo: `test/old-${i}`, stars: 10, forks: 8, language: 'JavaScript', ...score } }))
   const before = structuredClone(rows)
   const state = { ...emptyState(), metadataCursor: 300 }
   const seen: string[] = []
@@ -282,7 +282,7 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
       seen.push(path)
       if (path === '/repos/test/old-200') throw new Error('github-http-404')
       return { html_url: `https://github.com/${path.slice('/repos/'.length)}`,
-        stargazers_count: 4, forks_count: 2, open_issues_count: 0, language: 'TypeScript' }
+        stargazers_count: 4, forks_count: 2, language: 'TypeScript' }
     },
   })
   assert.equal(seen.length, 501)
@@ -292,7 +292,7 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
   for (const [i, row] of result.rows.entries()) {
     if (i === 200) continue
     assert.deepEqual(row, { ...before[i], sourceMeta: { ...before[i].sourceMeta,
-      stars: 4, forks: 2, openIssues: 0, language: 'TypeScript' } })
+      stars: 4, forks: 2, language: 'TypeScript' } })
   }
   assert.deepEqual(rows, before)
   assert.equal(result.state.metadataCursor, 0)

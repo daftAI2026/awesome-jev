@@ -23,7 +23,7 @@ const parsedMeta = (comment: Comment): Meta => {
 const root: Event = { repository: { full_name: REPOSITORY } }
 const item = (name: string): ReviewRow => ({ id: name, type: 'github', title: name, summary: 'A Jev resource', url: `https://github.com/test/${name}`, sourceMeta: { repo: `test/${name}` } })
 const apiRepo: GitHubRepository = { full_name: 'test/new', html_url: 'https://github.com/test/new', name: 'new', owner: { login: 'test' },
-  description: 'TypeSafe AI Jev SDK', default_branch: 'main', stargazers_count: 3, forks_count: 1, open_issues_count: 0, private: false, fork: false, archived: false }
+  description: 'TypeSafe AI Jev SDK', default_branch: 'main', stargazers_count: 3, forks_count: 1, private: false, fork: false, archived: false }
 const score: JevScore = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence: 0.96 }
 const evidenceApi: Api = async (path: string) => path.includes('/git/commits/') ? { tree: { sha: 'b'.repeat(40) } } : path.includes('/git/trees/') ? { tree: [], truncated: false } : path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
   { encoding: 'base64', path: 'README.md', content: Buffer.from('TypeSafe AI Jev SDK https://typesafe.ai').toString('base64') } : apiRepo

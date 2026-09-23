@@ -1,7 +1,6 @@
 import { memo, type MouseEvent, type ReactNode } from 'react'
 import {
   Bookmark,
-  Bug,
   ChatCircle,
   GitFork,
   GithubLogo,
@@ -73,13 +72,12 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
   if (meta.repo) metaBits.push(meta.repo)
   if (meta.language) metaBits.push(meta.language)
 
-  const hasMetrics =
-    meta.stars != null || meta.forks != null || meta.openIssues != null
+  const hasMetrics = meta.stars != null || meta.forks != null
 
   return (
     <div className="group relative">
       <Card size="sm" className="transition-colors group-hover:bg-muted/60">
-        <CardHeader className="gap-y-2">
+        <CardHeader className="gap-y-3">
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
             {rank != null ? (
               <Badge
@@ -116,14 +114,14 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
           </CardDescription>
         </CardHeader>
         {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
-          <CardContent className="space-y-2">
+          <CardContent className="space-y-3">
             {metaBits.length > 0 && (
               <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
                 {metaBits.join(' · ')}
               </p>
             )}
             {hasMetrics && (
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tabular-nums text-muted-foreground">
+              <div className="flex flex-nowrap items-center gap-3 whitespace-nowrap text-xs tabular-nums text-muted-foreground">
                 {meta.stars != null && (
                   <span className="inline-flex items-center gap-1">
                     <Star className="size-3 shrink-0" weight="fill" aria-hidden />
@@ -134,12 +132,6 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
                   <span className="inline-flex items-center gap-1">
                     <GitFork className="size-3 shrink-0" weight="fill" aria-hidden />
                     {formatCount(meta.forks)}
-                  </span>
-                )}
-                {meta.openIssues != null && (
-                  <span className="inline-flex items-center gap-1">
-                    <Bug className="size-3 shrink-0" weight="fill" aria-hidden />
-                    {formatCount(meta.openIssues)}
                   </span>
                 )}
               </div>

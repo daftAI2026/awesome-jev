@@ -40,7 +40,7 @@ test('budget exhaustion leaves the current radar candidate pending without count
   state.candidates['example/app'] = { status: 'pending', discoveredAt: '2026-09-22T00:00:00.000Z', attempts: 0 }
   const repository = {
     full_name: 'example/app', html_url: 'https://github.com/example/app', name: 'app', owner: { login: 'example' },
-    default_branch: 'main', stargazers_count: 1, forks_count: 0, open_issues_count: 0,
+    default_branch: 'main', stargazers_count: 1, forks_count: 0,
   }
   const result = await runRadar({
     catalog: { files: new Map([['github.json', []], ['youtube.json', []]]), rows: [], social: [] },
@@ -70,7 +70,7 @@ test('default radar limit is queue-sized and processes more than sixty candidate
       const key = path.slice('/repos/'.length).split('/commits/')[0]?.split('/readme?')[0] ?? 'example/unknown'
       if (path.includes('/commits/')) return { sha: 'a'.repeat(40) }
       if (path.includes('/readme?')) return { encoding: 'base64', size: 17, path: 'README.md', content: Buffer.from('TypeSafe AI Jev').toString('base64') }
-      return { full_name: key, html_url: `https://github.com/${key}`, name: key.split('/')[1], owner: { login: key.split('/')[0] }, default_branch: 'main', stargazers_count: 1, forks_count: 0, open_issues_count: 0 }
+      return { full_name: key, html_url: `https://github.com/${key}`, name: key.split('/')[1], owner: { login: key.split('/')[0] }, default_branch: 'main', stargazers_count: 1, forks_count: 0 }
     },
     review: async () => ({ jevAbout: 0.99, jevKeep: 'keep', jevKeepConfidence: 0.99 }),
     now: new Date('2026-09-22T00:00:00.000Z'),

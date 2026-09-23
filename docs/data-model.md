@@ -50,7 +50,6 @@ interface SourceMeta {
   // GitHub
   stars?: number | null
   forks?: number | null
-  openIssues?: number | null
   language?: string | null
   author?: string | null       // GitHub owner, or X display name
   repo?: string | null
@@ -72,8 +71,8 @@ interface SourceMeta {
 ### GitHub fields
 
 - `repo` — `owner/name`
-- `stars`, `forks`, `openIssues`, `language`, `author` — display meta on restrained cards (Phosphor Star / GitFork / Bug)
-- Prefer populating from the public GitHub repo API: `stargazers_count` → `stars`, `forks_count` → `forks`, `open_issues_count` → `openIssues`
+- `stars`, `forks`, `language`, `author` — display metadata on restrained cards; open-issue counts are not stored or displayed
+- Prefer populating from the public GitHub repo API: `stargazers_count` → `stars`, `forks_count` → `forks`
 - Collectors may emit `null` when unknown
 - Optional `date` (YYYY-MM-DD) supports the section “Date” sort
 - Manual README-backed category refinement stores `sourceMeta.categoryEvidenceSha` and `categoryEvidenceUrl` to identify the exact README version used; a GitHub metadata refresh preserves these fields.
@@ -93,7 +92,7 @@ interface SourceMeta {
 
 ### Collector note
 
-When upserting GitHub rows, include `forks` and `openIssues` alongside `stars` whenever the API provides them. Upsert X posts into `data/x.json` (never the other source files), without `tags`. URLs and `@mentions` in `summary` are parsed into links in the tweet card.
+When upserting GitHub rows, include `forks` alongside `stars` whenever the API provides it, but do not persist `open_issues_count`. Upsert X posts into `data/x.json` (never the other source files), without `tags`. URLs and `@mentions` in `summary` are parsed into links in the tweet card.
 
 ## UI sort (client-only)
 
@@ -112,7 +111,7 @@ Missing numeric fields sort as `0`; missing dates sort last.
 
 ## GitHub radar write contract
 
-- Existing records keep their ID, URL, title, summary, tags and Jev scores. Only GitHub display metadata (`stars`, `forks`, `openIssues`, `language`) refreshes.
+- Existing records keep their ID, URL, title, summary, tags and Jev scores. Only GitHub display metadata (`stars`, `forks`, `language`) refreshes.
 - Existing `sourceMeta.repo` aliases from repository renames are tolerated. The normalized GitHub URL, not the display alias, owns deduplication and metadata requests.
 - New records receive a Jev `category` choice in the same admission request, and use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
 - New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.

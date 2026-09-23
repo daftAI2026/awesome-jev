@@ -4,7 +4,6 @@ export type ItemType = 'github' | 'x' | 'youtube'
 export interface SourceMeta {
   stars?: number | null
   forks?: number | null
-  openIssues?: number | null
   language?: string | null
   author?: string | null
   handle?: string | null

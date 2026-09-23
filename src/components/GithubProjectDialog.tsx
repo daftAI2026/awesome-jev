@@ -69,7 +69,7 @@ export function GithubProjectDialog({
                 </div>
               )}
 
-              {(meta?.stars != null || meta?.forks != null || meta?.openIssues != null) && (
+              {(meta?.stars != null || meta?.forks != null) && (
                 <dl className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                   {meta.stars != null && (
                     <div className="flex items-baseline gap-2">
@@ -81,12 +81,6 @@ export function GithubProjectDialog({
                     <div className="flex items-baseline gap-2">
                       <dt className="text-muted-foreground">{t('projectForks')}</dt>
                       <dd className="font-medium tabular-nums">{meta.forks.toLocaleString('en-US')}</dd>
-                    </div>
-                  )}
-                  {meta.openIssues != null && (
-                    <div className="flex items-baseline gap-2">
-                      <dt className="text-muted-foreground">{t('projectIssues')}</dt>
-                      <dd className="font-medium tabular-nums">{meta.openIssues.toLocaleString('en-US')}</dd>
                     </div>
                   )}
                 </dl>

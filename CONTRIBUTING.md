@@ -25,7 +25,7 @@ Prefer editing those files (or letting the collector merge into them) over hand-
 
 ### `sourceMeta` (common)
 
-- **GitHub:** `stars`, `forks`, `openIssues`, `language`, `author`, `repo`, optional `avatarUrl`
+- **GitHub:** `stars`, `forks`, `language`, `author`, `repo`, optional `avatarUrl`
 - **X:** `handle`, `date`, `likes`, `replies`, `retweets`, `bookmarks`, optional `author`, optional `mediaUrls` / `videoUrls` / `avatarUrl`. No view counts.
 
 Do not invent fake tweet URLs. If you lack a real `url`, skip the item. Never commit `PLACEHOLDER` entries.

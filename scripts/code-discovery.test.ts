@@ -35,7 +35,7 @@ test('radar reviews unnamed integration evidence and persists its admission basi
       if (path.includes('/commits/')) return { sha }
       if (path.includes('/readme?')) return { path: 'README.md', encoding: 'base64', content: Buffer.from('A general purpose application.').toString('base64') }
       if (path.includes('/contents/')) return { type: 'file', size: bytes.length, encoding: 'base64', content: bytes.toString('base64'), sha: createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex') }
-      return { full_name: key, html_url: `https://github.com/${key}`, name: 'application', owner: { login: 'example' }, default_branch: 'main', stargazers_count: 1, forks_count: 0, open_issues_count: 0 }
+      return { full_name: key, html_url: `https://github.com/${key}`, name: 'application', owner: { login: 'example' }, default_branch: 'main', stargazers_count: 1, forks_count: 0 }
     },
     review: async (_, text) => { assert.ok(text.includes('api.typesafe.ai')); return { jevAbout: 0.99, jevKeep: 'keep', jevKeepConfidence: 0.99 } },
   })

@@ -14,7 +14,7 @@ import type {
 
 const sha = 'a'.repeat(40), treeSha = 'b'.repeat(40), blobSha = 'c'.repeat(40)
 const repo: ReviewRepository = { html_url: 'https://github.com/test/jev', full_name: 'test/jev', name: 'jev', owner: { login: 'test' },
-  default_branch: 'main', description: 'Jev project', stargazers_count: 3, forks_count: 0, open_issues_count: 0, private: false, fork: false, archived: false }
+  default_branch: 'main', description: 'Jev project', stargazers_count: 3, forks_count: 0, private: false, fork: false, archived: false }
 const keep: ReviewScore = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence: 0.95 }
 const uncertain: ReviewScore = { ...keep, jevKeepConfidence: 0.7 }
 const drop: ReviewScore = { ...keep, jevKeep: 'drop' }

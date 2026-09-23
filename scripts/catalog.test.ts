@@ -16,7 +16,7 @@ const row = (name = 'one'): DirectoryRow => ({ id: `gh-${name}`, type: 'github',
 const text = 'Handwritten intro\n<!-- PROJECT_COUNT:START -->\nold\n<!-- PROJECT_COUNT:END -->\nHandwritten guide\n<!-- PROJECTS:START -->\nold\n<!-- PROJECTS:END -->\nHandwritten license\n'
 const keptScore: ReviewScore = { jevAbout: 0.99, jevKeep: 'keep', jevKeepConfidence: 0.98 }
 const meta: GithubRepo = { full_name: 'test/new', html_url: 'https://github.com/test/new', name: 'new', owner: { login: 'test' },
-  description: 'Real upstream description', stargazers_count: 2, forks_count: 1, open_issues_count: 0, language: 'JavaScript', private: false, fork: false, archived: false }
+  description: 'Real upstream description', stargazers_count: 2, forks_count: 1, language: 'JavaScript', private: false, fork: false, archived: false }
 function fixture(t: TestContext): string {
   const root = mkdtempSync(join(tmpdir(), 'jev-catalog-'))
   t.after(() => rmSync(root, { recursive: true, force: true }))
@@ -60,6 +60,12 @@ test('metadata refresh preserves editorial content, stable ID and review scores'
   assert.deepEqual(after.tags, before.tags); assert.equal(after.sourceMeta.jevAbout, 0.99)
   assert.equal(after.sourceMeta.custom, 'preserve'); assert.equal(after.sourceMeta.stars, 2)
   assert.throws(() => refreshRow(before, { ...meta, html_url: 'https://github.com/test/moved' }))
+})
+test('GitHub issue counts are ignored rather than stored', () => {
+  const response = { ...meta, open_issues_count: 17 }
+  assert.equal(Object.hasOwn(candidateRow(response, keptScore).sourceMeta, 'openIssues'), false)
+  assert.equal(Object.hasOwn(refreshRow(row('new'), response).sourceMeta, 'openIssues'), false)
+  assert.throws(() => validateRows([{ ...row(), sourceMeta: { ...row().sourceMeta, openIssues: 17 } }]), /Legacy openIssues/)
 })
 test('README is deterministic, escaped, count-correct, and preserves handwritten regions', () => {
   const rows = [row(), { ...row('two'), title: '<script> [bad]', summary: 'line\n<!-- PROJECTS:END -->' }]
