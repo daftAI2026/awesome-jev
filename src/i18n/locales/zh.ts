@@ -4,9 +4,9 @@ export const zh: Messages = {
   githubCount: '已收录 {count} 个 GitHub 项目',
   documentTitle: 'Awesome JEV · TypeSafe Jev 免费 AI 目录',
   documentDescription:
-    'TypeSafe Jev / System One 的免费 AI 精选目录：按用途分类的 GitHub 开源项目。',
+    'TypeSafe Jev 的免费 AI 精选目录：按用途分类的 GitHub 开源项目。',
   tagline:
-    'TypeSafe Jev / System One 的免费 AI 精选目录\n按用途分类的 GitHub 开源项目。',
+    'TypeSafe Jev 的免费 AI 精选目录\n按用途分类的 GitHub 开源项目。',
   dataUpdated: '数据更新',
   dataUpdatedTimezone: '时间为 Asia/Shanghai（UTC+8）',
   searchPlaceholder: '搜索 GitHub…',
