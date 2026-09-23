@@ -1,0 +1,15 @@
+# Awesome JEV
+
+> A free, community-curated directory of GitHub projects related to TypeSafe AI's Jev / System One models.
+
+The website is a single searchable page. Project cards provide summaries and link to third-party repositories; they are not separate pages on awesomejev.cc. The Jev news section shows source-attributed summaries and links to the source, not full articles. Project metadata and the directory change over time.
+
+## Directory
+
+- [Browse Awesome JEV](https://awesomejev.cc/): Current project directory and Jev news.
+- [GitHub project catalog](https://raw.githubusercontent.com/daftAI2026/awesome-jev/main/README.md): Markdown list of projects grouped by primary use.
+
+## About the project
+
+- [Contributing guide](https://raw.githubusercontent.com/daftAI2026/awesome-jev/main/CONTRIBUTING.md): Scope and submission guidelines.
+- [Source repository](https://github.com/daftAI2026/awesome-jev): Source code and structured directory data.

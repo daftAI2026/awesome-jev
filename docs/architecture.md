@@ -76,6 +76,8 @@ npm run deploy   # build + wrangler deploy
 
 The Vite build renders the existing React homepage into `dist/index.html` after bundling. Google and other crawlers receive the real directory HTML immediately instead of an empty `#root`; React hydrates the same markup for visitors. The server snapshot starts in English, then the browser restores a saved or preferred Chinese locale after hydration. Locale-dependent number formatting and title ordering use explicit locales so the first browser render agrees with the static HTML. This does **not** manufacture separate pages for each listing: the site's only canonical URL and sitemap entry remain the homepage.
 
+`public/robots.txt` permits crawling and points to `public/sitemap.xml`, which lists only that canonical homepage. Do not add card modal states or outbound repositories as local sitemap URLs. `public/llms.txt` is a short, optional agent-facing guide to the live directory and Markdown catalog; it is not an indexing directive, a substitute for the sitemap, or a claim that individual project pages exist. Keep it factual and small rather than duplicating the catalog into `llms-full.txt`.
+
 Search Console's 2026-09-20 export is only one day of evidence, not a basis for keyword stuffing or mass-generated thin pages. Verify the rendered homepage with URL Inspection and measure multi-week query trends before changing titles or information architecture.
 
 ## Scheduled collection
