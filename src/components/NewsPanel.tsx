@@ -3,6 +3,8 @@ import { ArrowUpRight } from '@phosphor-icons/react'
 import { useI18n, type Locale } from '@/i18n'
 import { newsTime, sortNews, type NewsItem } from '@/lib/news'
 import { NewsDialog } from '@/components/NewsDialog'
+import { SaveButton } from '@/components/SaveButton'
+import { NEWS_CATEGORY_LABEL } from '@/lib/categories'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -31,24 +33,21 @@ function formatTime(date: Date, locale: Locale): string {
   }).format(date)
 }
 
-function NewsCard({ item, onPreview }: {
+function NewsCard({ item, onPreview, saved, onToggleSaved }: {
   item: NewsItem
   onPreview: (item: NewsItem, event: MouseEvent<HTMLAnchorElement>) => void
+  saved: boolean
+  onToggleSaved: (item: NewsItem) => void
 }) {
   const { locale, t } = useI18n()
   const date = item.publishedAt ?? item.discoveredAt
   const originalExcerpt = item.originalTitle && !/^https?:\/\//i.test(item.originalTitle) &&
     item.originalTitle !== item.title ? item.originalTitle : null
-  const categoryLabels: Record<string, string> = {
-    'ai-models': t('newsCategoryModels'),
-    'ai-products': t('newsCategoryProducts'),
-    industry: t('newsCategoryIndustry'),
-    paper: t('newsCategoryPaper'),
-    tip: t('newsCategoryTutorial'),
-  }
+  const categoryLabel = item.category && item.category in NEWS_CATEGORY_LABEL
+    ? t(NEWS_CATEGORY_LABEL[item.category as keyof typeof NEWS_CATEGORY_LABEL]) : item.category
 
   return (
-    <li className="min-w-0 sm:grid sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:gap-3">
+    <li className="relative min-w-0 sm:grid sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:gap-3">
       <time dateTime={date} className="hidden pt-5 text-right font-mono text-xs tabular-nums text-muted-foreground sm:block">
         {formatTime(new Date(date), locale)}
       </time>
@@ -57,7 +56,7 @@ function NewsCard({ item, onPreview }: {
         onClick={(event) => onPreview(item, event)}
         className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
         <Card className="gap-4 p-4 transition-colors hover:bg-muted/60 sm:p-5">
-          <CardHeader className="gap-4 p-0">
+          <CardHeader className="gap-4 p-0 pr-12">
             <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
               <span className="min-w-0 font-medium text-foreground">{item.sourceName}</span>
               <time dateTime={date} className="font-mono tabular-nums sm:hidden">{formatTime(new Date(date), locale)}</time>
@@ -75,16 +74,24 @@ function NewsCard({ item, onPreview }: {
             </CardContent>
           )}
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            {item.category && <Badge variant="outline" className="font-normal text-muted-foreground">{categoryLabels[item.category] ?? item.category}</Badge>}
+            {item.category && <Badge variant="outline" className="font-normal text-muted-foreground">{categoryLabel}</Badge>}
             <span className="ml-auto inline-flex items-center gap-1">{t('newsDetails')}<ArrowUpRight className="size-3.5" aria-hidden /></span>
           </div>
         </Card>
       </a>
+      <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
+        className="absolute top-4 right-4 z-10 sm:top-5 sm:right-5" />
     </li>
   )
 }
 
-export function NewsPanel({ items, query }: { items: NewsItem[]; query: string }) {
+export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = false }: {
+  items: NewsItem[]
+  query: string
+  savedIds: ReadonlySet<string>
+  onToggleSaved: (item: NewsItem) => void
+  savedView?: boolean
+}) {
   const { locale, t } = useI18n()
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const [detailItem, setDetailItem] = useState<NewsItem | null>(null)
@@ -118,6 +125,17 @@ export function NewsPanel({ items, query }: { items: NewsItem[]; query: string }
     setDetailItem(item)
     setDetailOpen(true)
   }
+  const toggleItemSaved = (item: NewsItem) => {
+    if (savedView && savedIds.has(item.id)) {
+      if (detailOpen) {
+        detailTriggerRef.current = document.getElementById('main')
+        setDetailOpen(false)
+      } else {
+        requestAnimationFrame(() => document.getElementById('main')?.focus())
+      }
+    }
+    onToggleSaved(item)
+  }
 
   return (
     <section aria-label={t('newsLabel')}>
@@ -140,7 +158,8 @@ export function NewsPanel({ items, query }: { items: NewsItem[]; query: string }
               <li key={group.key}>
                 <h2 className="mb-4 text-base font-medium text-foreground">{group.label}</h2>
                 <ol className="space-y-3">{group.items.map((item) =>
-                  <NewsCard key={item.id} item={item} onPreview={openPreview} />)}</ol>
+                  <NewsCard key={item.id} item={item} onPreview={openPreview}
+                    saved={savedIds.has(item.id)} onToggleSaved={toggleItemSaved} />)}</ol>
               </li>
             ))}
           </ol>
@@ -151,7 +170,9 @@ export function NewsPanel({ items, query }: { items: NewsItem[]; query: string }
           )}
         </>
       )}
-      <NewsDialog item={detailItem} open={detailOpen} onOpenChange={setDetailOpen} triggerRef={detailTriggerRef} />
+      <NewsDialog item={detailItem} open={detailOpen} onOpenChange={setDetailOpen} triggerRef={detailTriggerRef}
+        saved={detailItem ? savedIds.has(detailItem.id) : false}
+        onToggleSaved={detailItem ? () => toggleItemSaved(detailItem) : undefined} />
     </section>
   )
 }

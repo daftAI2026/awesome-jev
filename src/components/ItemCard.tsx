@@ -1,4 +1,4 @@
-import type { MouseEvent, ReactNode } from 'react'
+import { memo, type MouseEvent, type ReactNode } from 'react'
 import {
   Bookmark,
   Bug,
@@ -13,11 +13,11 @@ import {
 import { cn } from 'cn'
 import type { DirectoryItem } from '@/lib/types'
 import { TweetBody } from '@/components/TweetBody'
+import { SaveButton } from '@/components/SaveButton'
 import { useI18n } from '@/i18n'
 import { Badge } from '@/components/ui/badge'
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -28,6 +28,8 @@ interface ItemCardProps {
   item: DirectoryItem
   rank?: number
   onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
+  saved?: boolean
+  onToggleSaved?: (item: DirectoryItem) => void
 }
 
 function formatCount(n: number): string {
@@ -62,7 +64,7 @@ function TweetStat({
   )
 }
 
-function GithubCard({ item, rank, onPreview }: ItemCardProps) {
+function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: ItemCardProps) {
   const { t } = useI18n()
   const meta = item.sourceMeta
   const metaBits: string[] = []
@@ -74,81 +76,76 @@ function GithubCard({ item, rank, onPreview }: ItemCardProps) {
     meta.stars != null || meta.forks != null || meta.openIssues != null
 
   return (
-    <a
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-haspopup={onPreview ? 'dialog' : undefined}
-      onClick={onPreview ? (event) => onPreview(item, event) : undefined}
-      className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-    >
-      <Card size="sm" className="transition-colors hover:bg-muted/60">
-        <CardHeader>
-          <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight group-hover:underline group-hover:underline-offset-2">
-            <GithubLogo
-              className="mt-1 size-3.5 shrink-0 text-muted-foreground"
-              weight="fill"
-              aria-hidden
-            />
-            <span className="min-w-0">{item.title}</span>
-          </CardTitle>
-          <CardDescription className="text-sm leading-relaxed">
-            {item.summary}
-          </CardDescription>
-          {rank != null ? (
-            <CardAction>
-              <Badge
-                variant="outline"
-                className="rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
-                aria-label={t('githubStarRank', { rank })}
-              >
-                {rank}
-              </Badge>
-            </CardAction>
-          ) : null}
-        </CardHeader>
-        {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
-          <CardContent className="space-y-2">
-            {metaBits.length > 0 && (
-              <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
-                {metaBits.join(' · ')}
-              </p>
-            )}
-            {hasMetrics && (
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tabular-nums text-muted-foreground">
-                {meta.stars != null && (
-                  <span className="inline-flex items-center gap-1">
-                    <Star className="size-3 shrink-0" weight="fill" aria-hidden />
-                    {formatCount(meta.stars)}
-                  </span>
-                )}
-                {meta.forks != null && (
-                  <span className="inline-flex items-center gap-1">
-                    <GitFork className="size-3 shrink-0" weight="fill" aria-hidden />
-                    {formatCount(meta.forks)}
-                  </span>
-                )}
-                {meta.openIssues != null && (
-                  <span className="inline-flex items-center gap-1">
-                    <Bug className="size-3 shrink-0" weight="fill" aria-hidden />
-                    {formatCount(meta.openIssues)}
-                  </span>
-                )}
-              </div>
-            )}
-            {(item.tags ?? []).length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {(item.tags ?? []).map((tag) => (
-                  <Badge key={tag} variant="outline" className="font-normal">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            )}
-          </CardContent>
-        )}
-      </Card>
-    </a>
+    <div className="relative">
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-haspopup={onPreview ? 'dialog' : undefined}
+        onClick={onPreview ? (event) => onPreview(item, event) : undefined}
+        className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      >
+        <Card size="sm" className="transition-colors hover:bg-muted/60">
+          <CardHeader className={onToggleSaved ? 'pr-14' : undefined}>
+            <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight group-hover:underline group-hover:underline-offset-2">
+              <GithubLogo
+                className="mt-1 size-3.5 shrink-0 text-muted-foreground"
+                weight="fill"
+                aria-hidden
+              />
+              <span className="min-w-0">{item.title}</span>
+            </CardTitle>
+            <CardDescription className="text-sm leading-relaxed">
+              {item.summary}
+            </CardDescription>
+          </CardHeader>
+          {(rank != null || metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
+            <CardContent className="space-y-2">
+              {(rank != null || metaBits.length > 0) && (
+                <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
+                  {rank != null && <span aria-label={t('githubStarRank', { rank })}>#{rank}</span>}
+                  {rank != null && metaBits.length > 0 ? ' · ' : null}
+                  {metaBits.join(' · ')}
+                </p>
+              )}
+              {hasMetrics && (
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tabular-nums text-muted-foreground">
+                  {meta.stars != null && (
+                    <span className="inline-flex items-center gap-1">
+                      <Star className="size-3 shrink-0" weight="fill" aria-hidden />
+                      {formatCount(meta.stars)}
+                    </span>
+                  )}
+                  {meta.forks != null && (
+                    <span className="inline-flex items-center gap-1">
+                      <GitFork className="size-3 shrink-0" weight="fill" aria-hidden />
+                      {formatCount(meta.forks)}
+                    </span>
+                  )}
+                  {meta.openIssues != null && (
+                    <span className="inline-flex items-center gap-1">
+                      <Bug className="size-3 shrink-0" weight="fill" aria-hidden />
+                      {formatCount(meta.openIssues)}
+                    </span>
+                  )}
+                </div>
+              )}
+              {(item.tags ?? []).length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {(item.tags ?? []).map((tag) => (
+                    <Badge key={tag} variant="outline" className="font-normal">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          )}
+        </Card>
+      </a>
+      {onToggleSaved && <SaveButton saved={saved} onToggle={() => onToggleSaved(item)}
+        className="absolute top-2 right-2 z-10" />}
+    </div>
   )
 }
 
@@ -347,12 +344,12 @@ function YoutubeCard({ item }: ItemCardProps) {
   )
 }
 
-export function ItemCard({ item, rank, onPreview }: ItemCardProps) {
+export const ItemCard = memo(function ItemCard({ item, rank, onPreview, saved, onToggleSaved }: ItemCardProps) {
   if (item.type === 'x') {
     return <XCard item={item} />
   }
   if (item.type === 'youtube') {
     return <YoutubeCard item={item} />
   }
-  return <GithubCard item={item} rank={rank} onPreview={onPreview} />
-}
+  return <GithubCard item={item} rank={rank} onPreview={onPreview} saved={saved} onToggleSaved={onToggleSaved} />
+})

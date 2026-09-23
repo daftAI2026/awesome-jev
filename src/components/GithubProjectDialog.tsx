@@ -5,6 +5,7 @@ import type { DirectoryItem } from '@/lib/types'
 import { useI18n } from '@/i18n'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { SaveButton } from '@/components/SaveButton'
 
 interface GithubProjectDialogProps {
   item: DirectoryItem | null
@@ -12,10 +13,12 @@ interface GithubProjectDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
   triggerRef: RefObject<HTMLElement | null>
+  saved: boolean
+  onToggleSaved?: () => void
 }
 
 export function GithubProjectDialog({
-  item, categoryLabel, open, onOpenChange, triggerRef,
+  item, categoryLabel, open, onOpenChange, triggerRef, saved, onToggleSaved,
 }: GithubProjectDialogProps) {
   const { t } = useI18n()
   const meta = item?.sourceMeta
@@ -43,12 +46,15 @@ export function GithubProjectDialog({
                   <p className="break-all font-mono text-xs text-muted-foreground">{meta.repo}</p>
                 ) : null}
               </div>
-              <Dialog.Close
-                render={<Button variant="ghost" size="icon-sm" className="size-10 shrink-0" />}
-                aria-label={t('projectClose')}
-              >
-                <X className="size-4" aria-hidden />
-              </Dialog.Close>
+              <div className="flex shrink-0 items-center gap-1">
+                {onToggleSaved && <SaveButton saved={saved} onToggle={onToggleSaved} />}
+                <Dialog.Close
+                  render={<Button variant="ghost" size="icon-sm" className="size-10" />}
+                  aria-label={t('projectClose')}
+                >
+                  <X className="size-4" aria-hidden />
+                </Dialog.Close>
+              </div>
             </div>
 
             <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-6 sm:px-6">

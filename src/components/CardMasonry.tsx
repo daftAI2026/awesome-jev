@@ -4,10 +4,12 @@ import { masonryPositions, MASONRY_ROW_HEIGHT } from '@/lib/masonry'
 import { ItemCard } from '@/components/ItemCard'
 import { useI18n } from '@/i18n'
 
-export function CardMasonry({ items, ranks, onPreview }: {
+export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }: {
   items: DirectoryItem[]
   ranks?: Map<string, number>
   onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
+  savedIds?: ReadonlySet<string>
+  onToggleSaved?: (item: DirectoryItem) => void
 }) {
   const { locale } = useI18n()
   const listRef = useRef<HTMLUListElement>(null)
@@ -73,7 +75,8 @@ export function CardMasonry({ items, ranks, onPreview }: {
     >
       {items.map((item) => (
         <li key={item.id} className="min-w-0">
-          <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview} />
+          <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview}
+            saved={savedIds?.has(item.id)} onToggleSaved={onToggleSaved} />
         </li>
       ))}
     </ul>

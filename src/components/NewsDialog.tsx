@@ -4,15 +4,18 @@ import type { RefObject } from 'react'
 import { useI18n } from '@/i18n'
 import type { NewsItem } from '@/lib/news'
 import { Button } from '@/components/ui/button'
+import { SaveButton } from '@/components/SaveButton'
 
 interface NewsDialogProps {
   item: NewsItem | null
   open: boolean
   onOpenChange: (open: boolean) => void
   triggerRef: RefObject<HTMLElement | null>
+  saved: boolean
+  onToggleSaved?: () => void
 }
 
-export function NewsDialog({ item, open, onOpenChange, triggerRef }: NewsDialogProps) {
+export function NewsDialog({ item, open, onOpenChange, triggerRef, saved, onToggleSaved }: NewsDialogProps) {
   const { locale, t } = useI18n()
   const date = item?.publishedAt ?? item?.discoveredAt
   const formattedDate = date && new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
@@ -37,10 +40,13 @@ export function NewsDialog({ item, open, onOpenChange, triggerRef }: NewsDialogP
                   {item.score != null && <><span aria-hidden>·</span><span className="tabular-nums">{t('newsScore', { score: item.score })}</span></>}
                 </p>
               </div>
-              <Dialog.Close render={<Button variant="ghost" size="icon-sm" className="size-10 shrink-0" />}
-                aria-label={t('newsClose')}>
-                <X className="size-4" aria-hidden />
-              </Dialog.Close>
+              <div className="flex shrink-0 items-center gap-1">
+                {onToggleSaved && <SaveButton saved={saved} onToggle={onToggleSaved} />}
+                <Dialog.Close render={<Button variant="ghost" size="icon-sm" className="size-10" />}
+                  aria-label={t('newsClose')}>
+                  <X className="size-4" aria-hidden />
+                </Dialog.Close>
+              </div>
             </div>
 
             <div className="min-h-0 space-y-6 overflow-y-auto overscroll-contain px-4 pb-6 sm:px-6">

@@ -8,6 +8,8 @@ The scheduled collector uses [AIHOT REST API v1](https://aihot.news/agent), spec
 
 News cards therefore display only API-contracted text and metadata. A plain click opens our own summary preview, which distinguishes the AIHOT reading page from the third-party original link; modified clicks retain the AIHOT anchor fallback. AIHOT's reading page may show an image preview or direct the reader to the original post for video playback. We do not scrape AIHOT HTML, hotlink/copy third-party media, or label an API summary as the full article. No TanStack data-fetching dependency is needed: the page lazy-loads a build-time JSON chunk only after selecting News, then reveals cards in batches of 60. GitHub's initial bundle does not eagerly include the news archive.
 
+The local Saved view may bookmark a news ID, but does not cache or republish its title, summary, or source material separately. It lazily loads the same `data/news.json` chunk when saved news is opened and shows only current catalog data. The save control is separate from the AIHOT reading link and the on-site summary preview.
+
 ## Incremental update and history limit
 
 `mode=all` only exposes a rolling seven-day window; there is no official public endpoint for every historical item. The selected snapshot has older **selected** items, not the entire historical public pool. The first API run can therefore seed only the current window. Later six-hour runs start a fresh query and follow the API's opaque `nextCursor` only **within that run**. A rolling-window cursor is not persisted across days. The AIHOT website search can show older results, but its HTML is neither this collector's stable contract nor a workaround for the source's body/media authorization boundary.

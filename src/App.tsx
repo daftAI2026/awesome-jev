@@ -7,6 +7,7 @@ import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
 import { NewsPanel } from '@/components/NewsPanel'
+import { SavedPanel } from '@/components/SavedPanel'
 import { ThemeMenu } from '@/components/ThemeMenu'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
@@ -17,14 +18,14 @@ import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { useI18n } from '@/i18n'
 import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
+import { CATEGORIES, CATEGORY_LABEL, type Category } from '@/lib/categories'
+import { useSaved } from '@/hooks/useSaved'
 import { searchItems } from '@/lib/search'
 import { githubStarRanks, sortGithubItems } from '@/lib/sort'
 import type { NewsItem } from '@/lib/news'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 
-const CATEGORIES = ['agents', 'browser', 'sdk', 'developer', 'research', 'resources', 'applications', 'other'] as const
-type Category = (typeof CATEGORIES)[number]
-type DirectoryFilter = 'all' | 'top100' | 'news' | Category
+type DirectoryFilter = 'all' | 'top100' | 'news' | 'saved' | Category
 type GithubItem = DirectoryItem & { category?: Category }
 const items = githubData as GithubItem[]
 const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
@@ -32,9 +33,8 @@ const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
 const githubRanks = githubStarRanks(items)
 const categoryCounts = Object.fromEntries(CATEGORIES.map((category) => [category, items.filter((item) => item.category === category).length])) as Record<Category, number>
 const FILTER_LABEL = {
-  all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', agents: 'categoryAgents', browser: 'categoryBrowser', sdk: 'categorySdk',
-  developer: 'categoryDeveloper', research: 'categoryResearch', resources: 'categoryResources',
-  applications: 'categoryApplications', other: 'categoryOther',
+  all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', saved: 'categorySaved',
+  ...CATEGORY_LABEL,
 } as const
 const GITHUB_SORT_KEY = 'awesome-jev-github-sort'
 const GITHUB_VIEW_KEY = 'awesome-jev-github-view'
@@ -59,7 +59,7 @@ function readStoredView(): GithubView {
 function readStoredFilter(): DirectoryFilter {
   try {
     const value = localStorage.getItem(CATEGORY_KEY)
-    if (value === 'all' || value === 'top100' || value === 'news' || CATEGORIES.some((category) => category === value)) return value as DirectoryFilter
+    if (value === 'all' || value === 'top100' || value === 'news' || value === 'saved' || CATEGORIES.some((category) => category === value)) return value as DirectoryFilter
   } catch { /* ignore */ }
   return 'all'
 }
@@ -72,9 +72,11 @@ export default function App() {
   const [filter, setFilter] = useState<DirectoryFilter>(readStoredFilter)
   const [newsItems, setNewsItems] = useState<NewsItem[] | null>(null)
   const [newsLoadFailed, setNewsLoadFailed] = useState(false)
+  const [savedNewsRequested, setSavedNewsRequested] = useState(false)
   const [categoryOpen, setCategoryOpen] = useState(false)
   const [detailItem, setDetailItem] = useState<DirectoryItem | null>(null)
   const [detailOpen, setDetailOpen] = useState(false)
+  const { entries: savedEntries, toggle: toggleSaved, saveError } = useSaved()
   const searchRef = useRef<HTMLInputElement>(null)
   const detailTriggerRef = useRef<HTMLElement | null>(null)
 
@@ -82,7 +84,8 @@ export default function App() {
   useEffect(() => { try { localStorage.setItem(GITHUB_VIEW_KEY, view) } catch { /* ignore */ } }, [view])
   useEffect(() => { try { localStorage.setItem(CATEGORY_KEY, filter) } catch { /* ignore */ } }, [filter])
   useEffect(() => {
-    if (filter !== 'news' || newsItems !== null || newsLoadFailed) return
+    if (filter !== 'news' && (filter !== 'saved' || !savedNewsRequested || !savedEntries.some((entry) => entry.kind === 'news'))) return
+    if (newsItems !== null || newsLoadFailed) return
     let active = true
     import('../data/news.json').then(({ default: rows }) => {
       if (active) setNewsItems(rows as NewsItem[])
@@ -90,7 +93,7 @@ export default function App() {
       if (active) setNewsLoadFailed(true)
     })
     return () => { active = false }
-  }, [filter, newsItems, newsLoadFailed])
+  }, [filter, newsItems, newsLoadFailed, savedEntries, savedNewsRequested])
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return
@@ -104,7 +107,8 @@ export default function App() {
   }, [])
 
   const selectFilter = useCallback((next: DirectoryFilter) => {
-    if ((filter === 'news') !== (next === 'news')) setQuery('')
+    const mode = (value: DirectoryFilter) => value === 'news' || value === 'saved' ? value : 'github'
+    if (mode(filter) !== mode(next)) setQuery('')
     setFilter(next)
     setCategoryOpen(false)
   }, [filter])
@@ -115,6 +119,22 @@ export default function App() {
     setDetailItem(item)
     setDetailOpen(true)
   }, [])
+  const savedProjectIds = useMemo(() => new Set(savedEntries.filter((entry) => entry.kind === 'github').map((entry) => entry.id)), [savedEntries])
+  const savedNewsIds = useMemo(() => new Set(savedEntries.filter((entry) => entry.kind === 'news').map((entry) => entry.id)), [savedEntries])
+  const toggleProjectSavedRaw = useCallback((item: DirectoryItem) => toggleSaved('github', item.id), [toggleSaved])
+  const toggleProjectSaved = useCallback((item: DirectoryItem) => {
+    if (filter === 'saved' && savedProjectIds.has(item.id)) {
+      if (detailOpen) {
+        detailTriggerRef.current = document.getElementById('main')
+        setDetailOpen(false)
+      } else {
+        requestAnimationFrame(() => document.getElementById('main')?.focus())
+      }
+    }
+    toggleProjectSavedRaw(item)
+  }, [filter, savedProjectIds, detailOpen, toggleProjectSavedRaw])
+  const toggleNewsSaved = useCallback((item: NewsItem) => toggleSaved('news', item.id), [toggleSaved])
+  const requestSavedNews = useCallback(() => setSavedNewsRequested(true), [])
   const filterButton = (id: DirectoryFilter) => (
     <Button
       key={id}
@@ -126,7 +146,7 @@ export default function App() {
     >
       <span className="truncate">{t(FILTER_LABEL[id])}</span>
       {id !== 'top100' && (id !== 'news' || newsItems !== null) &&
-        <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : id === 'news' ? newsItems?.length : categoryCounts[id]}</span>}
+        <span className="tabular-nums text-xs text-muted-foreground">{id === 'all' ? items.length : id === 'news' ? newsItems?.length : id === 'saved' ? savedEntries.length : categoryCounts[id]}</span>}
     </Button>
   )
   const categoryNav = (
@@ -134,12 +154,13 @@ export default function App() {
       {filterButton('all')}
       {filterButton('top100')}
       {filterButton('news')}
+      {filterButton('saved')}
       <Separator className="my-1" />
       {CATEGORIES.map(filterButton)}
     </nav>
   )
   const matched = useMemo(() => {
-    if (filter === 'news') return []
+    if (filter === 'news' || filter === 'saved') return []
     const searched = searchItems(items, query, 'github', []) as GithubItem[]
     if (filter === 'all') return searched
     if (filter === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= 100)
@@ -187,9 +208,9 @@ export default function App() {
           <div className="mb-6">
             <div className="relative">
               <MagnifyingGlass className="pointer-events-none absolute top-1/2 left-0 size-4 -translate-y-1/2 text-muted-foreground" weight="regular" aria-hidden />
-              <label htmlFor="directory-search" className="sr-only">{t(filter === 'news' ? 'searchNewsPlaceholder' : 'searchLabel')}</label>
+              <label htmlFor="directory-search" className="sr-only">{t(filter === 'news' ? 'searchNewsPlaceholder' : filter === 'saved' ? 'searchSavedPlaceholder' : 'searchLabel')}</label>
               <Input ref={searchRef} id="directory-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)}
-                placeholder={t(filter === 'news' ? 'searchNewsPlaceholder' : 'searchPlaceholder')} autoComplete="off"
+                placeholder={t(filter === 'news' ? 'searchNewsPlaceholder' : filter === 'saved' ? 'searchSavedPlaceholder' : 'searchPlaceholder')} autoComplete="off"
                 className="h-12 rounded-none border-0 border-b border-border bg-transparent px-8 py-3 text-base shadow-none appearance-none focus-visible:border-foreground focus-visible:ring-0 md:text-sm dark:bg-transparent [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden" />
               <kbd className="pointer-events-none absolute inset-y-0 right-0 hidden items-center sm:flex" title={t('searchHint')}>
                 <Badge variant="outline" className="rounded-lg font-mono font-normal text-muted-foreground">/</Badge>
@@ -206,7 +227,7 @@ export default function App() {
                   <div className="px-4 pb-4">{categoryNav}</div>
                 </SheetContent>
               </Sheet>
-              {filter !== 'news' && <ToggleGroup value={[sort]} onValueChange={(values) => {
+              {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[sort]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'stars' || next === 'date' || next === 'name') setSort(next)
               }} variant="outline" size="sm" aria-label={t('rankLabel')} className="rounded-lg">
@@ -214,7 +235,7 @@ export default function App() {
                 <ToggleGroupItem value="date">{t('sortDate')}</ToggleGroupItem>
                 <ToggleGroupItem value="name">{t('sortName')}</ToggleGroupItem>
               </ToggleGroup>}
-              {filter !== 'news' && <ToggleGroup value={[view]} onValueChange={(values) => {
+              {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[view]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'cards' || next === 'list') setView(next)
               }} variant="outline" size="sm" aria-label={t('viewLabel')} className="ml-auto rounded-lg">
@@ -223,18 +244,26 @@ export default function App() {
               </ToggleGroup>}
             </div>
           </div>
-          {hasQuery && filter !== 'news' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
+          {hasQuery && filter !== 'news' && filter !== 'saved' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
+          {saveError && <p role="alert" className="mb-6 text-sm text-destructive">{t('savedStorageError')}</p>}
           <main id="main" tabIndex={-1}>
             {filter === 'news' ? (
               newsLoadFailed ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoadFailed')}</p>
                 : newsItems === null ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
-                  : <NewsPanel key={query} items={newsItems} query={query} />
+                  : <NewsPanel key={query} items={newsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved} />
+            ) : filter === 'saved' ? (
+              <SavedPanel entries={savedEntries} projects={items} news={newsItems} newsLoadFailed={newsLoadFailed}
+                query={query} ranks={githubRanks} onProjectPreview={openProjectPreview}
+                onToggleProject={toggleProjectSaved} onToggleNews={toggleNewsSaved} onRemoveMissing={toggleSaved}
+                onNewsSelect={requestSavedNews} />
             ) : sorted.length === 0 ? (
               <p className="py-10 text-sm text-muted-foreground">{t(hasQuery ? 'emptySearch' : 'emptySection')}</p>
             ) : view === 'list' ? (
-              <GithubList items={sorted} ranks={githubRanks} onPreview={openProjectPreview} />
+              <GithubList items={sorted} ranks={githubRanks} onPreview={openProjectPreview}
+                savedIds={savedProjectIds} onToggleSaved={toggleProjectSavedRaw} />
             ) : (
-              <CardMasonry items={sorted} ranks={githubRanks} onPreview={openProjectPreview} />
+              <CardMasonry items={sorted} ranks={githubRanks} onPreview={openProjectPreview}
+                savedIds={savedProjectIds} onToggleSaved={toggleProjectSavedRaw} />
             )}
           </main>
         </div>
@@ -249,6 +278,8 @@ export default function App() {
         open={detailOpen}
         onOpenChange={setDetailOpen}
         triggerRef={detailTriggerRef}
+        saved={detailItem ? savedProjectIds.has(detailItem.id) : false}
+        onToggleSaved={detailItem ? () => toggleProjectSaved(detailItem) : undefined}
       />
     </div>
   )
