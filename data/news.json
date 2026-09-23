@@ -1633,5 +1633,20 @@
     "reason": null,
     "originalUrl": "https://x.com/lifesinger/status/2102772248985870349",
     "aihotUrl": "https://aihot.news/items/cmue8ofzm0r6uroghhbx42nhf"
+  },
+  {
+    "id": "cmuduxq5808mnroghv31b4dqf",
+    "title": "用 25 行 Python 实现 Jev：一个本地运行的分类概率模型",
+    "originalTitle": "Jev in 25 Lines of Python",
+    "summary": "有人用 25 行 Python 代码复现了 Jev：加载 Qwen3-0.6B-GGUF 模型，对邮件分类任务输出 Legitimate、Spam、Phishing 三个选项的概率，示例中 Phishing 概率为 0.885。作者称这是恶搞博文，强调它不调用 API、不训练模型，只是本地快速分类，并推荐了 OpenJev 等更完整的开源实现。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-09-23T07:26:23.000Z",
+    "discoveredAt": "2026-09-23T08:45:00.181Z",
+    "category": null,
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.nobodywho.ai/posts/jev-in-25-lines",
+    "aihotUrl": "https://aihot.news/items/cmuduxq5808mnroghv31b4dqf"
   }
 ]
