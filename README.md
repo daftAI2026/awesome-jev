@@ -1,6 +1,6 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 <!-- PROJECT_COUNT:START -->
-![Projects](https://img.shields.io/badge/projects-1129-10b981?style=classic)
+![Projects](https://img.shields.io/badge/projects-1134-10b981?style=classic)
 <!-- PROJECT_COUNT:END -->
 [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev)
 [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc)
@@ -39,15 +39,15 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**typesafe-mario**](https://github.com/fhshaik/typesafe-mario) - A TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state. · `Python`
 - [**jev-router**](https://github.com/gargpratyush/jev-router) - Route to the cheapest model in Claude Code for your task using jev-router. · `JavaScript`
 - [**jev-codex-router**](https://github.com/0xNatoshi/jev-codex-router) - Per-turn model &amp; reasoning routing for Codex, driven by Jev \(TypeSafe System One\): picks the model, thinking depth and speed mode for every turn. · `JavaScript`
+- [**JevRev**](https://github.com/Alex314618-create/JevRev) - Think 100. Run 5. Ship 1. · `TypeScript`
 - [**JevRouter**](https://github.com/BillionsBobby/JevRouter) - A lightweight Jev-powered router for models, tools, and subagents · `TypeScript`
 - [**Jevmind**](https://github.com/dealerdefi/Jevmind) - Jevmind: TypeSafe Jev ecosystem repository. · `Python`
-- [**JevRev**](https://github.com/Alex314618-create/JevRev) - Think 100. Run 5. Ship 1. · `TypeScript`
-- [**pi-jev**](https://github.com/y0usaf/pi-jev) - TypeSafe Jev as a decision layer for the Pi coding agent: a measured tool-call gate plus jev\_ask for typed, calibrated answers · `TypeScript`
 - [**jev-dsh-decision**](https://github.com/Devin-AXIS/jev-dsh-decision) - Jev DSH 决策引擎｜面向 Agent Harness 的结构化决策插件。原生支持 DeepSeek Harness，通过 iPolloWork 支持 OpenCode、Codex Harness。 · `JavaScript`
+- [**pi-jev**](https://github.com/y0usaf/pi-jev) - TypeSafe Jev as a decision layer for the Pi coding agent: a measured tool-call gate plus jev\_ask for typed, calibrated answers · `TypeScript`
 - [**pi-warden**](https://github.com/DevMortimer/pi-warden) - Guardrails for Pi built on pi-typesafe that steer the agent instead of interrupting you: Jev judges irreversible and off-task tool calls, detects stuck loops, checks unverified done claims, flags slop · `TypeScript`
+- [**neo4jev**](https://github.com/jexp/neo4jev) - Typesafe.ai System One Model Jev navigating a Neo4j graph by using a classifier over neighbouring relationships · `Jupyter Notebook`
 - [**skillranker**](https://github.com/Dicklesworthstone/skillranker) - Rust CLI powered by Jev from TypeSafe.ai that ranks agent skills for the next step using live session context. Includes Claude Code hooks, structured JSON, abstention, and local feedback. Requires a TypeSafe API key. · `Rust`
 - [**stanley-code**](https://github.com/devagrawal09/stanley-code) - Bounded TypeSafe Jev workflows for coding agents. · `TypeScript`
-- [**neo4jev**](https://github.com/jexp/neo4jev) - Typesafe.ai System One Model Jev navigating a Neo4j graph by using a classifier over neighbouring relationships · `Jupyter Notebook`
 - [**winnow**](https://github.com/GhalebDweikat/winnow) - A calibrated context sieve for Claude Code: every tool result is judged by a System One model before it enters context. · `Python`
 - [**jev-libero**](https://github.com/Dimweaker/jev-libero) - Fine-grained robot control with Jev, physics previews, and configurable LIBERO tasks. · `Python`
 - [**jev-social**](https://github.com/socai-io/jev-social) - Jev-powered Instagram, TikTok, and LinkedIn research: typed routing, real browser evidence, streamed post cards, video capture, and cited socai reports. · `JavaScript`
@@ -58,8 +58,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jevify**](https://github.com/altryne/jevify) - An agent skill to discover TypeSafe Jev opportunities, design typed questions, and learn from recent community experiments. · `Python`
 - [**jev-use**](https://github.com/shitianfang/jev-use) - Claude Code / Codex / pi plugin that hands agent steps needing no text output to Jev \(TypeSafe's judgment model\) — measured p50 ~230 ms and ~$0.02 per 1,000 judgments, with typed escalation back to the LLM · `JavaScript`
 - [**pi-jev-auto-mode**](https://github.com/jomatsu/pi-jev-auto-mode) - Jev \(TypeSafe System One\) backed auto mode for the Pi coding agent: semantically auto-approves bash, write, and edit tool calls and fails closed when a decision cannot be made. · `TypeScript`
-- [**jevwire**](https://github.com/Brainwires/jevwire) - Jev decision layer for agents: MCP server, embeddable DecisionModel library, and an escalate-only Claude Code plugin \(TypeSafe AI's Jev\) · `TypeScript`
 - [**dsh-jev**](https://github.com/buberlo/dsh-jev) - Jev-powered decision layer for DeepSeek Harness · `TypeScript`
+- [**jevwire**](https://github.com/Brainwires/jevwire) - Jev decision layer for agents: MCP server, embeddable DecisionModel library, and an escalate-only Claude Code plugin \(TypeSafe AI's Jev\) · `TypeScript`
 - [**jev-agent-skill-router**](https://github.com/GodsBoy/jev-agent-skill-router) - Typed, confidence-aware agent skill routing with TypeSafe Jev. · `Python`
 - [**JevLoop**](https://github.com/zjunlp/JevLoop) - The agent loop where decisions don't cost a large language model call. Zero deps, runs offline, no API key needed. · `TypeScript`
 - [**jevvy**](https://github.com/PanAchy/jevvy) - Jev-powered plugins for coding agents · `TypeScript`
@@ -84,6 +84,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-tool-router**](https://github.com/jackbarunz/jev-tool-router) - Jev-powered MCP tool routing for Codex · `JavaScript`
 - [**jev-architect**](https://github.com/karanb192/jev-architect) - Find, design, and evaluate TypeSafe Jev decision loops. · `HTML`
 - [**mcts-agent**](https://github.com/lhemerly/mcts-agent) - Discriminative Monte Carlo Tree Search using TypeSafe Jev System One Primitives and Gemini · `Python`
+- [**switchboard**](https://github.com/ruban-24/switchboard) - An open-source, model-agnostic decision router for Claude Code and Codex. · `TypeScript`
 - [**a0-typesafe-ai**](https://github.com/3clyp50/a0-typesafe-ai) - TypeSafe AI Jev judgments for Agent Zero, with typed tools and probability cards. · `Python`
 - [**bicameral**](https://github.com/AbdelStark/bicameral) - Hybrid coding harness: System 2 writes, System 1 \(Jev\) runs reflexes. · `TypeScript`
 - [**jev-usecases**](https://github.com/kenhuangus/jev-usecases) - Production TypeSafe Jev \(System One\) use-case harnesses with confidence-gated decision logic · `Python`
@@ -96,7 +97,6 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**typesafe-on-neon**](https://github.com/andrelandgraf/safer-with-jev) - Neon Function proxy for the Neon AI Gateway with TypeSafe Jev routing. · `TypeScript`
 - [**jev-mobile**](https://github.com/Friedjof/jev-mobile) - Fast structured Android control loops with TypeSafe Jev and Mobile MCP · `Python`
 - [**docsignals**](https://github.com/PSPDFKit-labs/docsignals) - Ask typed questions of your documents. Get structured signals for agentic workflows, with the page each answer came from. · `TypeScript`
-- [**switchboard**](https://github.com/ruban-24/switchboard) - An open-source, model-agnostic decision router for Claude Code and Codex. · `TypeScript`
 - [**paseo-spacedock**](https://github.com/audreyt/paseo-spacedock) - paseo-spacedock: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**typesafe-mod**](https://github.com/BeLazy167/typesafe-mod) - Claude Code mod that routes decisions to TypeSafe's Jev model: ranks installed skills per prompt, and answers the agent's own this-or-that questions when confident. · `TypeScript`
 - [**mastra-jev-moderation**](https://github.com/CodeAlive-AI/mastra-jev-moderation) - Input moderation for Mastra agents on TypeSafe Jev — one file · `TypeScript`
@@ -108,6 +108,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-mermaid**](https://github.com/JordanDalton/jev-mermaid) - jev-mermaid: TypeSafe Jev ecosystem repository. · `JavaScript`
 - [**todo-jev**](https://github.com/maker-KK/todo-jev) - ⚡ Ultra-fast, low-cost intelligent task classifier and 3-tier routing engine powered by TypeSafe Jev \(System One\) · `Python`
 - [**limpet**](https://github.com/noplan-inc/limpet) - A Stop hook that stops your coding agent from stopping too early. Plain-language rules, judged by jev. · `Python`
+- [**jev-compaction**](https://github.com/picaye/jev-compaction) - Context compaction for Hermes sessions: every tool call scored by TypeSafe Jev; stale calls dropped, kept context stays verbatim. · `JavaScript`
+- [**jev-state**](https://github.com/priyankark/jev-state) - Build and regression-test conversational state machines powered by Jev. Inspect decisions, capture failing conversations as tests, and export runnable TypeScript for your app. · `TypeScript`
 - [**pi-fast-jev-compaction**](https://github.com/QuentinDanblon/pi-fast-jev-compaction) - Verbatim context pruning for the pi coding agent, scored by TypeSafe Jev: stale tool calls and results are dropped or truncated, everything kept stays verbatim. · `TypeScript`
 - [**jev-flash-router**](https://github.com/Ravinder82/jev-flash-router) - open-sourced jev-flash-router: an MCP server for TypeSafe's new Jev model.  AI coding agents waste hundreds of reasoning tokens just deciding which file to edit, which route to pick, or whether a diff breaks tests.  Jev evaluates state and outputs calibrated probabilities.  Works · `TypeScript`
 - [**pi-jev-task-router**](https://github.com/rizafahmi/pi-jev-task-router) - Per-prompt model routing for the Pi coding agent: classify each prompt with Jev, pick a model tier, and switch before the turn runs. · `TypeScript`
@@ -125,7 +127,6 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-route**](https://github.com/mcftira/jev-route) - jev-route: TypeSafe Jev ecosystem repository. · `Python`
 - [**toolgate**](https://github.com/ndolinschi/toolgate) - Agent tool/MCP call gate — allow / ask\_human / deny via TypeSafe Jev · `TypeScript`
 - [**actiongate-jev**](https://github.com/omkarghugarkar007/actiongate-jev) - Open-source Jev tool-calling authorization gateway for AI agents: deterministic policy, exact-action single-use permits, MCP and HTTP enforcement. · `TypeScript`
-- [**jev-compaction**](https://github.com/picaye/jev-compaction) - Context compaction for Hermes sessions: every tool call scored by TypeSafe Jev; stale calls dropped, kept context stays verbatim. · `JavaScript`
 - [**jevarena**](https://github.com/raihankhan-rk/jevarena) - JevArena — two Jev agents duel in click-only browser games \(Browser Use + TypeSafe Jev\) · `TypeScript`
 - [**jev-builder-loop**](https://github.com/rainbowpuffpuff/jev-builder-loop) - Grok skill: Jev as a judgment sensor in a builder-agent loop \(priors × probabilities → next act\) · `Python`
 - [**ailerix**](https://github.com/tylerjharden/ailerix) - Type-safe model router. Jev \(System One\) banks each request to a typed catalog route. · `TypeScript`
@@ -260,6 +261,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**playjev**](https://github.com/filedcom/playjev) - Fast, typed browser automation powered by Jev and Playwright · `TypeScript`
 - [**jev-browser**](https://github.com/tontoko/jev-browser) - One grounded Jev/Playwright core: typed SDK, persistent CLI, and MCP server with native browser operations and deterministic assertions. · `JavaScript`
 - [**JevOnly**](https://github.com/buluoray/JevOnly) - Pure Jev that can "type" and drive towards task completion. · `Python`
+- [**ego-jev**](https://github.com/jiangkoumo/ego-jev) - Drive the ego lite browser with Jev \(TypeSafe System One\): one indexed element table in, one operation + target out, single process. ~2x faster than a per-step LLM loop in our measurements. · `JavaScript`
 - [**otto**](https://github.com/NobleSpartan6/otto) - Open-source native computer use for macOS and Windows: TypeSafe Jev, local OCR, and selective planning. · `TypeScript`
 - [**computer\_use**](https://github.com/paulsmith/computer-use-jev) - macOS computer use driven by Jev \(TypeSafe System One\) as the decision maker · `Go`
 - [**jev-browse**](https://github.com/0x7067/jev-browse) - Browser automation with Jev \(TypeSafe\) as decision model · `JavaScript`
@@ -301,8 +303,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-foundation-models**](https://github.com/peterfriese/jev-foundation-models) - A lightweight, native Swift 6 bridge integrating TypeSafe AI's Jev System One decision model into Apple's Foundation Models framework. · `Swift`
 - [**Jevbridge**](https://github.com/tacticocc/Jevbridge) - ACP and MCP adapter that bridges TypeSafe Jev with any LLM — computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode. · `TypeScript`
 - [**jev-mcp**](https://github.com/burnigtm/jev-mcp) - MCP server that puts TypeSafe Jev on the coding loop in Cursor, Codex, and any MCP client · `TypeScript`
-- [**system-one**](https://github.com/sgoedecke/system-one) - Batched single-token choice inference for open language models, compatible with TypeSafe · `Python`
 - [**jev**](https://github.com/dannote/jev) - TypeSafe Jev for OTP: reply to Jev from a GenServer and pattern match on its answer · `Elixir`
+- [**system-one**](https://github.com/sgoedecke/system-one) - Batched single-token choice inference for open language models, compatible with TypeSafe · `Python`
 - [**jev-mcp**](https://github.com/blakestone-x/jev-mcp) - MCP server for TypeSafe Jev: typed classify, score, check, match and screen for any agent, with confidence on every answer · `Python`
 - [**ruby\_llm-typesafe**](https://github.com/kieranklaassen/ruby_llm-typesafe) - TypeSafe structured-output provider for RubyLLM 2 · `Ruby`
 - [**jevalyn**](https://github.com/Ray-Hughes/jevalyn) - The decision layer for your Rails app. A Rails-native wrapper around TypeSafe's Jev System One API: typed, calibrated decisions in your control flow. · `Ruby`
@@ -320,9 +322,9 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**typesafe-sdk-go**](https://github.com/captain-corgi/typesafe-sdk-go) - Community TypeSafe SDK in Golang · `Go`
 - [**zod-jev**](https://github.com/jomatsu/zod-jev) - zod-jev: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**JevSwiftSDK**](https://github.com/NSStudent/JevSwiftSDK) - An independent, type-safe Swift SDK for TypeSafe Jev, with async/await, batching, retries, and SPM support. · `Swift`
+- [**typesafe-dotnet-sdk**](https://github.com/saibimajdi/typesafeai-dotnet-sdk) - Community .NET SDK for the TypeSafe AI System One API — typed noul, choice, and score questions with structured, confidence-scored answers. Not affiliated with TypeSafe AI. · `C#`
 - [**jevgo**](https://github.com/devbackend/jevgo) - Unofficial Go client for the TypeSafe AI System One API \(Jev\) — typed questions in, calibrated answers out. · `Go`
 - [**jev-mcp**](https://github.com/rashedInt32/jev-mcp) - MCP server exposing TypeSafe Jev as typed, calibrated judgment tools: classify, score, check, batched ask. Ships as a Claude Code plugin. · `TypeScript`
-- [**typesafe-dotnet-sdk**](https://github.com/saibimajdi/typesafeai-dotnet-sdk) - Community .NET SDK for the TypeSafe AI System One API — typed noul, choice, and score questions with structured, confidence-scored answers. Not affiliated with TypeSafe AI. · `C#`
 - [**jev-rs**](https://github.com/yijunyu/jev-rs) - System One judgments \(noul/choice/score\) from any LLM in one prefill — a Rust, Jev-compatible /v1/systemone engine · `Rust`
 - [**daf-jev**](https://github.com/docxology/daf-jev) - daf-jev: composable Python toolkit for TypeSafe's Jev \(System One\) decision API — question builders, confidence gates, evaluator, calibration, CLI, MCP server, agent skill · `Python`
 - [**typesafe-sdk**](https://github.com/joshmn/typesafe-sdk) - Ruby client for typesafe.ai · `Ruby`
@@ -331,6 +333,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev4k**](https://github.com/pambrose/jev4k) - A Kotlin DSL and client for TypeSafe's Jev model · `Kotlin`
 - [**jev-go**](https://github.com/Stumble/jev-go) - Community Go SDK for TypeSafe AI Jev / System One · `Go`
 - [**jev-go**](https://github.com/Gaurav-Gosain/jev-go) - Go client for TypeSafe's System One API and its model Jev: typed judgments and calibrated probabilities instead of generated text · `Go`
+- [**typesafe-ai-java**](https://github.com/jamilxt/typesafe-ai-java) - Community-maintained Java SDK for the TypeSafe AI System One \(Jev\) API. Not an official TypeSafe product. · `Java`
 - [**typesafe-ai-go**](https://github.com/kisshan13/typesafe-ai-go) - Community-maintained Go SDK for the TypeSafe AI System One evaluation API, with typed questions, fluent builders, retries, and examples. · `Go`
 - [**jev-accounts-hub**](https://github.com/antTing/jev-accounts-hub) - A multi-account manager and API gateway for Jev. 一个用于 Jev 的多账户管理器和 API 网关。交流群：1102910606 · `Go`
 - [**laravel-typesafe-jev**](https://github.com/Butochnikov/laravel-typesafe-jev) - Unofficial Laravel integration for TypeSafe Jev AI with typed responses, async requests, scoped dependency injection, and testing fakes. · `PHP`
@@ -343,7 +346,6 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**typesafe-sdk-dotnet**](https://github.com/hardkoded/typesafe-sdk-dotnet) - Unofficial .NET port of the TypeSafe AI client SDK \(typed questions &amp; answers\) · `C#`
 - [**typesafe-sdk-swift**](https://github.com/InsaneArts/typesafe-sdk-swift) - Swift SDK for TypeSafe AI · `Swift`
 - [**SystemOneDotNet**](https://github.com/JabbaKadabra/SystemOneDotNet) - .NET client for TypeSafe System One \(Jev\) — typed questions in, typed answers with probabilities and confidence out. No prompt engineering, no output parsing. · `C#`
-- [**typesafe-ai-java**](https://github.com/jamilxt/typesafe-ai-java) - Community-maintained Java SDK for the TypeSafe AI System One \(Jev\) API. Not an official TypeSafe product. · `Java`
 - [**TypeSafeJevPlayground**](https://github.com/laurentkempe/TypeSafeJevPlayground) - TypeSafe Jev Playground - idiomatic .NET port of typesafe-ai/typesafe-sdk-js v0.6.0 · `C#`
 - [**pi-typesafe-jev**](https://github.com/legacybridge-tech/pi-typesafe-jev) - A pi extension that exposes TypeSafe \(Jev, System One\) judgments as five pi tools, so a model can make narrow semantic judgments while your code and your users keep control of thresholds, weights, and actions. · `TypeScript`
 - [**jod**](https://github.com/mateonunez/jod) - Semantic schemas over TypeSafe's Jev — validate the state locally, then project typed answers. · `TypeScript`
@@ -437,6 +439,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-kit**](https://github.com/FlorianRiquelme/jev-kit) - Typed client and benchmark harness for Jev, TypeSafe AI's System One decision model, through the Vercel AI Gateway. Measure accuracy, calibration and cost on your own data before you trust a threshold. · `TypeScript`
 - [**jev-acp**](https://github.com/formulahendry/jev-acp) - Use Jev typed decisions from any ACP \(Agent Client Protocol\) client or IDE · `TypeScript`
 - [**typesafe-sdk-php**](https://github.com/Fox-Islam/typesafe-sdk-php) - Unofficial PHP library for the TypeSafe API · `PHP`
+- [**ai**](https://github.com/futex-ai/ai) - ai: TypeSafe Jev ecosystem repository. · `Rust`
 - [**jev-datagouv-join**](https://github.com/gbesse/jev-datagouv-join) - Resolve ambiguous joins between French public datasets with auditable candidates. · `JavaScript`
 - [**jev-extract**](https://github.com/gbesse/jev-extract) - jev-extract: TypeSafe Jev ecosystem repository. · `JavaScript`
 - [**jev-marianne**](https://github.com/gbesse/jev-marianne) - Version political commitments and detect how sourced promises change over time. · `JavaScript`
@@ -499,8 +502,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-design-test**](https://github.com/bhaiG-de/jev-design-test) - Jev shadcn-block generator · `TypeScript`
 - [**jgrep**](https://github.com/kyu1204/jgrep) - grep for what code does, not what it's called. Semantic code search powered by TypeSafe Jev. · `TypeScript`
 - [**slop-grader**](https://github.com/lukstei/slop-grader) - Jev-powered, rule-based grader for text files. Runs every rule against every line in parallel. No skimming, no missed lines. · `TypeScript`
-- [**jev-code**](https://github.com/rhighs/jev-code) - Interactive TypeScript coding CLI powered by Jev typed decisions and constrained AST generation. · `TypeScript`
 - [**jev-axi**](https://github.com/shiftynick/jev-axi) - Agent-ergonomic CLI for TypeSafe's Jev: fast calibrated judgments \(pick, rate, check, rank, triage, guard\) from the shell · `TypeScript`
+- [**jev-code**](https://github.com/rhighs/jev-code) - Interactive TypeScript coding CLI powered by Jev typed decisions and constrained AST generation. · `TypeScript`
 - [**jev-test-filter**](https://github.com/mizchi/jev-test-filter) - Score every test against a git diff with Jev, and emit the filter arguments vitest, node:test, Playwright, cargo test and go test already understand · `TypeScript`
 - [**daggerverse**](https://github.com/typesafe-ai/daggerverse) - Collection of useful Dagger modules for TypeSafe AI / System One workflows. · `Python`
 - [**patdown**](https://github.com/tyler-dot-earth/patdown) - Block, steer, and "fuzzy lint" with Jev to make agents follow your rules and conventions. CLI, github action, pi package, claude extension, and more. Built with Effect + TypeScript. · `TypeScript`
@@ -509,9 +512,9 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-commit**](https://github.com/valentynkit/jev-commit) - Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, plus checks for debug leftovers and unmentioned work. Warns on mismatches, blocks only on a detected secret. · `Python`
 - [**claude-jev**](https://github.com/0x7067/claude-jev) - Claude Code plugin: Jev for rule checks, verbatim compaction, and prompt routing · `Python`
 - [**jeq**](https://github.com/cristianoliveira/jeq) - What happens when jev meets jq? Intelligence you can pipe · `Go`
+- [**diffjury**](https://github.com/raihankhan-rk/diffjury) - DiffJury — TypeSafe Jev PR risk router + code review coach · `TypeScript`
 - [**every**](https://github.com/sufianetaouil/every) - Ask a yes/no question of every function in a codebase. Ranked answers in seconds, for cents. Grep whose pattern is a question, powered by TypeSafe Jev. · `Python`
 - [**jevc**](https://github.com/doronp/jevc) - Compile agent policy prose into deterministic verdict programs: narrow evidence questions for the model, the verdict computed in code. Install: npm i -g jev-compiler · `TypeScript`
-- [**diffjury**](https://github.com/raihankhan-rk/diffjury) - DiffJury — TypeSafe Jev PR risk router + code review coach · `TypeScript`
 - [**llm-to-jev**](https://github.com/alexwestco/llm-to-jev) - Convert LLM prompts to Jev prompts · `JavaScript`
 - [**claude-jev**](https://github.com/buchmark/claude-jev) - Claude Code plugin that scores review findings, debug hypotheses and design options with TypeSafe's Jev — calibrated probabilities instead of one more opinion. · `TypeScript`
 - [**Convoy**](https://github.com/gokulnair2001/Convoy) - Semantic end-to-end agent testing for iOS, Android, and web. · `TypeScript`
@@ -524,21 +527,21 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-oas-sentinel**](https://github.com/ShuhanSun/jev-oas-sentinel) - Catch breaking API behavior hidden in OpenAPI prose with deterministic checks and TypeSafe JEV System One semantic review. · `Python`
 - [**typesafe-cli**](https://github.com/y0usaf/typesafe-cli) - Ask Jev typed questions from the shell: noul, choice, and score answers as numbers, not prose · `TypeScript`
 - [**tenet**](https://github.com/zoidsh/tenet) - The review gate for code that agents write: rules in plain language, judged on every commit \(TypeSafe Jev community\). · `Go`
-- [**pytest-jev**](https://github.com/allebee/pytest-jev) - Semantic assertions for pytest: test what your LLM app's output means, judged by TypeSafe's Jev. · `Python`
 - [**typesafe-cli**](https://github.com/geilt/typesafe-cli) - CLI and agent skill for TypeSafe System One \(Jev\): typed Choice, Score, and Noul judgments. · `Python`
 - [**jev-assist**](https://github.com/glud123/jev-assist) - Don't burn your expensive main model on grep-and-guess grunt work — let jev rank the whole repo, and save the main model for reading the right files and writing the right code. · `JavaScript`
 - [**jev-cli**](https://github.com/jtsang4/jev-cli) - CLI for TypeSafe AI's Jev evaluation model — typed questions in, structured JSON answers out · `TypeScript`
 - [**lgtm**](https://github.com/stardeckai/lgtm) - Prove that your tests actually test something. Powered by Jev and your own API Key. · `TypeScript`
 - [**prompt2jev**](https://github.com/sumleo/prompt2jev) - Agent skill and CLI that turn natural language, an LLM prompt, or the code that runs one into a TypeSafe Jev decision: typed state, Choice/Score/Noul questions, and a runnable script · `Python`
+- [**codex-jev-compaction**](https://github.com/Wang-auspicious/codex-jev-compaction) - Jev-powered context curation for Codex. Build compact, traceable handoff context through native plugins and skills. · `JavaScript`
 - [**jevx**](https://github.com/aadhil-kh/jevx) - Jev-powered Chrome extension that categorizes X posts and classifies replies in context. · `JavaScript`
-- [**jevgrep**](https://github.com/allebee/jevgrep) - grep by meaning: pipe in any text, ask a yes/no question in plain English, get only the matching lines. Works behind tail -f, about $0.004 per 1,000 lines, powered by TypeSafe's Jev. · `Python`
+- [**pytest-jev**](https://github.com/allebee/pytest-jev) - Semantic assertions for pytest: test what your LLM app's output means, judged by TypeSafe's Jev. · `Python`
 - [**barrunto**](https://github.com/elpumberto/barrunto) - A Chrome extension that brings TypeSafe's Jev to X.com to analyze posts as you browse · `TypeScript`
 - [**five-lines**](https://github.com/jamescazzetta/five-lines) - Use Jev to review a PR diff against the ten rules of Five Lines of Code · `Rust`
 - [**hunk-triage**](https://github.com/morinokami/hunk-triage) - Read the important changes first. · `TypeScript`
 - [**jev-frontend-qa**](https://github.com/Nainish-Rai/jev-frontend-qa) - Evidence-driven frontend QA built on Jev Ultrafast and Browser Harness, with a synthetic todo demo. · `Python`
 - [**typesafe-migration-guard**](https://github.com/opaielsheikh/typesafe-migration-guard) - Automated database migration safety reviewer powered by TypeSafe AI \(Jev System One model\) · `TypeScript`
 - [**jfind**](https://github.com/religa/jfind) - Find files by describing them in plain English: find\(1\) with a semantic --like predicate, answered by TypeSafe.ai's jev model · `Python`
-- [**codex-jev-compaction**](https://github.com/Wang-auspicious/codex-jev-compaction) - Jev-powered context curation for Codex. Build compact, traceable handoff context through native plugins and skills. · `JavaScript`
+- [**jevgrep**](https://github.com/allebee/jevgrep) - grep by meaning: pipe in any text, ask a yes/no question in plain English, get only the matching lines. Works behind tail -f, about $0.004 per 1,000 lines, powered by TypeSafe's Jev. · `Python`
 - [**jev-cli**](https://github.com/andrueandersoncs/jev-cli) - Ask TypeSafe AI typed questions about JSON state from the command line · `HTML`
 - [**nvim-jev-plugin**](https://github.com/balazsorban44/nvim-jev-plugin) - nvim-jev-plugin: TypeSafe Jev ecosystem repository. · `Lua`
 - [**jev-triage**](https://github.com/cephalization/jev-triage) - Uses typeful jev, zero sync to pull and sync large repositories for issue triage · `TypeScript`
@@ -584,6 +587,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**review-gate**](https://github.com/czinegeroland/review-gate) - review-gate: TypeSafe Jev ecosystem repository. · `Rust`
 - [**pi-jev-compact**](https://github.com/dpaluy/pi-jev-compact) - Smart Compact for Harnesses using Jev model · `TypeScript`
 - [**jevctl**](https://github.com/echohello-dev/jevctl) - CLI for typed AI judgments via TypeSafe or OpenRouter · `TypeScript`
+- [**blockly-jev**](https://github.com/eriestra/blockly-jev) - Blockly extension: TypeSafe Jev judgments \(Noul, Choice, Score\) as first-class blocks · `TypeScript`
 - [**nl-lint**](https://github.com/ErlendFax/nl-lint) - Near-instant natural-language lint for your code. · `JavaScript`
 - [**jev-linkedin-slop**](https://github.com/fatsopanda-v3/jev-linkedin-slop) - Chrome extension that rings AI slop in your LinkedIn feed, judged by typesafe/jev-1.13 — a structured decision model · `JavaScript`
 - [**jevtrace**](https://github.com/fscm44xyz/jevtrace) - One DevTool for any Jev-powered application. Inspect every state, question, probability, decision and action. Replay decisions locally. · `TypeScript`
@@ -641,8 +645,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jevfire**](https://github.com/kikoncuo/jevfire) - JEV-inspired parallel decisions for CUDA LLMs. One context, many decisions. vLLM API, game-agent examples, and reproducible benchmarks. · `JavaScript`
 - [**open-jev-typed-decision-engine**](https://github.com/intikhab49/open-jev-typed-decision-engine) - Open reproduction of TypeSafe Jev: a 150M typed decision engine \(noul/choice/score in one non-autoregressive pass, calibrated confidence\). 0.697 vs Jev's 0.727, 2.5x better calibrated, 4x faster, free. Trains on a Colab T4 in 30 min. · `Python`
 - [**typesafe-ai-benchmark**](https://github.com/iammrduncan/typesafe-ai-benchmark) - This is a LLM Gateway that mimics typesafe ai structured output. Like an imposter Jev. · `TypeScript`
-- [**Jev-as-Policy**](https://github.com/YuanKJing/Jev-as-Policy) - The highly anticipated open-source repository for JEV as Policy enables one-click setup of the simulation environment. Evaluations of Astra + JEV on benchmarks such as RoboTwin will also be released soon. · `Python`
 - [**open-jev**](https://github.com/JoshuaSP/open-jev) - Typed JSON inference with DiffusionGemma, with Every and Jev benchmark results · `Python`
+- [**Jev-as-Policy**](https://github.com/YuanKJing/Jev-as-Policy) - The highly anticipated open-source repository for JEV as Policy enables one-click setup of the simulation environment. Evaluations of Astra + JEV on benchmarks such as RoboTwin will also be released soon. · `Python`
 - [**system-one-open**](https://github.com/mithalouni/system-one-open) - Open replica of TypeSafe's Jev: typed calibrated decisions in one forward pass, on Gemma 4 E2B / Gemma 3 270M \(Modal\) · `Python`
 - [**openjev**](https://github.com/zhihz/openjev) - Local bilingual probability decisions from context, questions, and candidate answers. Independent research preview inspired by TypeSafe Jev. · `Python`
 - [**jev-capability-atlas**](https://github.com/Zaious/jev-capability-atlas) - Independent, evidence-based map of when TypeSafe's Jev actually holds up vs. breaks down — real API-call receipts, not a leaderboard. 中文為主的雙語 repo。 · `Python`
@@ -674,6 +678,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**no-hallucination**](https://github.com/aryanchauhanoffical/no-hallucination) - Three measured experiments on RAG hallucination: quote-checking, TypeSafe's Jev, and IBM's STAIR. 850+ graded questions, raw responses included. · `Python`
 - [**jev-spam-eval**](https://github.com/bitnovus/jev-spam-eval) - Zero-shot spam filtering with TypeSafe Jev Noul questions, compared with TF-IDF baselines · `Jupyter Notebook`
 - [**jev-rl**](https://github.com/Bring-AI/jev-rl) - JEV Reinforcement Learning: four classic games trained with JEV-powered rewards, reproducible experiments and checkpoint replays. · `Python`
+- [**typesafe-arena**](https://github.com/DeepBlueDynamics/typesafe-arena) - A playground for TypeSafeAI's Jev Model · `Rust`
 - [**calibre**](https://github.com/FirasSX914/Janus) - Measure when to use Jev and other models on your data, then route accordingly. · `Python`
 - [**jev-sec-bench**](https://github.com/Gaurav-Gosain/jev-sec-bench) - Blind security benchmarks for Jev, TypeSafe's System One model: prompt injection and vulnerable code detection, built on jev-go · `Go`
 - [**jev-research-eval**](https://github.com/jgridifier/jev-research-eval) - Reproducible Jev Ultrafast research-browser eval harness + field note \(QC’d cases, suite runner, report generator\). Not investment advice. · `HTML`
@@ -690,7 +695,6 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-test**](https://github.com/clduab11/jev-test) - Pre-registered benchmark: can a 2B local model \(Gemma 4 E2B\) answer web questions without making things up when a decision model \(TypeSafe Jev\) makes every call? SearXNG for search, MemPalace for verbatim memory, seven arms including open local judges. Spec and thresholds fixed before any run. · `Python`
 - [**paper-package**](https://github.com/CompleteDotTech/paper-package) - Jev research manuscript, evidence, and reproducible paper package · `Python`
 - [**jev-sim**](https://github.com/dashbi1/jev-sim) - Jev-compatible /v1/systemone server reading typed decisions from LLM logits, benchmarked against TypeSafe's Jev on the same items via JevBench · `Python`
-- [**typesafe-arena**](https://github.com/DeepBlueDynamics/typesafe-arena) - A playground for TypeSafeAI's Jev Model · `Rust`
 - [**what-is-jev**](https://github.com/g0runmezadam/what-is-jev) - Independent, source-linked research on TypeSafe AI's Jev \(System One\), with 947 rubric-scored public repositories, recurring patterns, datasets, and bilingual documentation. · `Python`
 - [**RISC-jeV**](https://github.com/i2cjak/RISC-jeV) - I tortured Jev into being a RISC-V CPU. · `Python`
 - [**jev-prompt-optimization**](https://github.com/j341nono/jev-prompt-optimization) - automatically optimizing the instructions and decision criteria of TypeSafe Jev Choice from labeled data · `Python`
@@ -737,6 +741,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-deferred-crispification**](https://github.com/dnakhoa/jev-deferred-crispification) - Position paper: the Hidden-Markov and fuzzy primitives missing from TypeSafe AI's Jev and System-One decision models. Two lemmas, one principle \(Deferred Crispification\), one architecture \(BSF-S1\). · `TeX`
 - [**Mirave**](https://github.com/edoigtrd/Mirave) - Mirave: TypeSafe Jev ecosystem repository. · `Python`
 - [**fraud-jev**](https://github.com/frankied003/fraud-jev) - fraud-jev: TypeSafe Jev ecosystem repository. · `TypeScript`
+- [**reflex-jev**](https://github.com/fullcolorcoder/reflex-jev) - Training demonstration of Jev in a dispatch services command center scenario. · `TypeScript`
 - [**jev-alpha-bench**](https://github.com/Gaurav-Gosain/jev-alpha-bench) - Does Jev predict stock returns from news? It reads the news well; there is no tradeable alpha. Three arms separate reading from recall. · `Go`
 - [**jev-headline-bench**](https://github.com/Gaurav-Gosain/jev-headline-bench) - Can Jev pick the winner of a real headline A/B test? 64.5% across 10,984 Upworthy randomized experiments, 74.7% when the difference was decisive. · `Go`
 - [**jev-btzsc**](https://github.com/Gazer2020/jev-btzsc) - jev-btzsc: TypeSafe Jev ecosystem repository. · `Python`
@@ -907,8 +912,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jevmail**](https://github.com/fazlerocks/jevmail) - Open-source AI email triage for Gmail. Sorts your inbox into Needs reply, Updates, Promos, Sales and Spam with Jev, TypeSafe AI's decision model, via Vercel AI Gateway. Read-only, runs locally, 1,000 emails in about a minute for 3 cents. · `TypeScript`
 - [**HA-Jev**](https://github.com/AboveColin/HA-Jev) - Home Assistant integration for TypeSafe Jev. Ask a question about your house and get a probability, a choice or a score as an entity. · `Python`
 - [**clash-jev**](https://github.com/bytelabs-oss/clash-jev) - A Clash Royale bot with no trained policy: Jev \(TypeSafe System One\) makes every decision from the live game state · `Python`
-- [**jevgpt**](https://github.com/Bewinxed/jevgpt) - A chatbot built on a model that cannot generate text \(TypeSafe AI's Jev, driven autoregressively\) · `TypeScript`
 - [**OneVOneJev**](https://github.com/emrickgarrett/OneVOneJev) - 1v1 Jev quickscope arena — Three.js + TypeSafe System One · `TypeScript`
+- [**jevgpt**](https://github.com/Bewinxed/jevgpt) - A chatbot built on a model that cannot generate text \(TypeSafe AI's Jev, driven autoregressively\) · `TypeScript`
 - [**tsai-sc**](https://github.com/phyous/tsai-sc) - TypeSafe Jev controls original StarCraft shareware through keyboard and mouse with recorded action probabilities. · `Python`
 - [**typesafe-snake**](https://github.com/sorrycc/typesafe-snake) - Snake auto-played by TypeSafe's Jev model: one System One choice per tick, legal moves and facts generated in code · `TypeScript`
 - [**jev-to-answer**](https://github.com/csskrtao/jev-to-answer) - 答案之书jev · `JavaScript`
@@ -921,10 +926,10 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**twitter-jev-guard**](https://github.com/qs-lll/twitter-jev-guard) - 使用 TypeSafe Jev 在 X/Twitter 时间线上识别低质量、垃圾和广告帖子，并在文字区域显示醒目的半透明水印。 · `JavaScript`
 - [**jev-minesweeper**](https://github.com/comoc/jev-minesweeper) - TypeSafe Jev \(System One\) にブラウザ上のマインスイーパーを解かせるデモ · `JavaScript`
 - [**heist-one**](https://github.com/AbdelStark/heist-one) - Observable browser stealth game: Jev makes typed guard judgments while deterministic code owns the world. · `TypeScript`
+- [**gg-friggin-ez**](https://github.com/ItisShikhar/gg-friggin-ez) - Fast, drop-in profanity and toxicity screener for Node.js, powered by TypeSafe AI Jev. Catches leetspeak, character spacing, and romanized profanity across languages including Kannada, Telugu, Tamil, Hindi, and Bengali. ~50-500ms latency. · `TypeScript`
 - [**citation-verifier**](https://github.com/MarissaFamularo/citation-verifier) - Check whether each cited paper supports the sentence citing it. Claude proves the quote, TypeSafe's Jev scores it, a human decides. · `JavaScript`
 - [**typesafe-ai-playground**](https://github.com/BunsDev/typesafe-ai-playground) - Community TypeSafe AI playground: 110 use cases, games, dilemmas and model challenges, with editable prompts, A/B comparisons and a mobile-friendly UI. · `TypeScript`
 - [**typesafe-jev**](https://github.com/gtaras7/typesafe-jev) - Screen a folder of CVs with the TypeSafe Jev decision model: typed judgments, an editable policy, free re-scoring. · `TypeScript`
-- [**gg-friggin-ez**](https://github.com/ItisShikhar/gg-friggin-ez) - Fast, drop-in profanity and toxicity screener for Node.js, powered by TypeSafe AI Jev. Catches leetspeak, character spacing, and romanized profanity across languages including Kannada, Telugu, Tamil, Hindi, and Bengali. ~50-500ms latency. · `TypeScript`
 - [**hundred**](https://github.com/jammaru/jev-lab) - 100 AI NPCs live in a tiny town. Jev chooses the next action; the world writes the story. · `TypeScript`
 - [**paperfocus**](https://github.com/YiLight0/paperfocus) - Question-guided evidence highlighting for research papers, powered by Jev. · `JavaScript`
 - [**jevmoji**](https://github.com/cheeaun/jevmoji) - Type anything. Get related emojis scored 0–3 with Jev. · `JavaScript`
