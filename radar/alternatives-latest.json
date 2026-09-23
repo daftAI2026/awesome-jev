@@ -1,16 +1,93 @@
 {
-  "at": "2026-09-24T00:00:00.000Z",
+  "at": "2026-09-23T18:17:17.528Z",
   "model": "jev-latest",
   "status": "partial",
-  "sources": [],
+  "sources": [
+    {
+      "query": "topic:system-one topic:decision-model fork:false",
+      "fetched": 50,
+      "total": 50,
+      "status": "complete"
+    },
+    {
+      "query": "topic:typed-decisions fork:false",
+      "fetched": 50,
+      "total": 50,
+      "status": "complete"
+    }
+  ],
   "metadata": {
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
-  "added": 0,
-  "pending": 0,
+  "reviewed": 5,
+  "added": 1,
+  "pending": 69,
   "overflow": 0,
   "evicted": 0,
-  "receipts": []
+  "receipts": [
+    {
+      "repo": "nandhakishorm/laya",
+      "status": "review",
+      "reason": "suspicious-review-instructions",
+      "sha": "1e28ac20c0896b1c37a744cd11f740eb98f8b178",
+      "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/1e28ac20c0896b1c37a744cd11f740eb98f8b178/README.md",
+      "evidenceSha256": "6e02340f39a43b8bd27f384cf481da0285ced631d7b84aa03641ba1b100296d4",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-23T18:17:17.528Z"
+    },
+    {
+      "repo": "mizorewww/laya-mlx",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.91,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.91,
+        "category": "alternatives"
+      },
+      "sha": "0a859518634112655cb97c745dbf04f5191aaf13",
+      "evidenceUrl": "https://github.com/mizorewww/laya-mlx/blob/0a859518634112655cb97c745dbf04f5191aaf13/README.md",
+      "evidenceSha256": "e09c88ac8f49dac2d8305bac7ec124266d466c969a40d0e0e3e76c10fd65feed",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-23T18:17:17.528Z"
+    },
+    {
+      "repo": "mizorewww/laya-coreml",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.86,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.6,
+        "category": "alternatives"
+      },
+      "sha": "4619e0483f07adf39068532e85b42ec2347edb83",
+      "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/4619e0483f07adf39068532e85b42ec2347edb83/README.md",
+      "evidenceSha256": "fa1888e4329ba5eda01b674813120ffba94a1d587af94c607aba545d0184cdb5",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-23T18:17:17.528Z"
+    },
+    {
+      "repo": "wfzyx/von",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.8,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.38,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "657f42f45fcfbf8cbfceaff7af5a2193dcec2b8b",
+      "evidenceUrl": "https://github.com/wfzyx/von/blob/657f42f45fcfbf8cbfceaff7af5a2193dcec2b8b/README.md",
+      "evidenceSha256": "a4e0292699f54ff903978f5bda1705a6483ae216d4c4fe85f978d496c97a89db",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-23T18:17:17.528Z"
+    },
+    {
+      "repo": "nokia-applied-research/anyjev",
+      "status": "error",
+      "reason": "jev-http-403"
+    }
+  ],
+  "totalProjects": 1128
 }

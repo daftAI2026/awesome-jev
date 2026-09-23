@@ -39549,5 +39549,50 @@
         "checkedAt": "2026-09-23T16:58:18.016Z"
       }
     }
+  },
+  {
+    "id": "gh-9-mizorewww-laya-mlx",
+    "type": "github",
+    "title": "laya-mlx",
+    "summary": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+    "tags": [
+      "apple-silicon",
+      "decision-model",
+      "inference",
+      "laya",
+      "local-ai",
+      "machine-learning",
+      "mlx",
+      "modernbert"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/mizorewww/laya-mlx",
+    "sourceMeta": {
+      "repo": "mizorewww/laya-mlx",
+      "author": "mizorewww",
+      "stars": 5876,
+      "forks": 434,
+      "openIssues": 11,
+      "language": "Python",
+      "date": "2026-09-19",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "mizorewww/laya-mlx",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "alternatives"
+        },
+        "sha": "0a859518634112655cb97c745dbf04f5191aaf13",
+        "evidenceUrl": "https://github.com/mizorewww/laya-mlx/blob/0a859518634112655cb97c745dbf04f5191aaf13/README.md",
+        "evidenceSha256": "e09c88ac8f49dac2d8305bac7ec124266d466c969a40d0e0e3e76c10fd65feed",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-23T18:17:17.528Z"
+      }
+    }
   }
 ]
