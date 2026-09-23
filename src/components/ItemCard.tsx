@@ -18,6 +18,7 @@ import { useI18n } from '@/i18n'
 import { Badge } from '@/components/ui/badge'
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -76,84 +77,88 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
     meta.stars != null || meta.forks != null || meta.openIssues != null
 
   return (
-    <div className="relative">
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-haspopup={onPreview ? 'dialog' : undefined}
-        onClick={onPreview ? (event) => onPreview(item, event) : undefined}
-        className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-      >
-        <Card size="sm" className="transition-colors hover:bg-muted/60">
-          <CardHeader className={onToggleSaved ? 'pr-12' : undefined}>
-            <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
-              <GithubLogo
-                className="mt-1 size-3.5 shrink-0 text-muted-foreground"
-                weight="fill"
-                aria-hidden
-              />
-              <span className="min-w-0">
-                <span className="group-hover:underline group-hover:underline-offset-2">{item.title}</span>
-                {rank != null && (
-                  <Badge
-                    variant="outline"
-                    className="ml-2 align-middle rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
-                    aria-label={t('githubStarRank', { rank })}
-                  >
-                    {rank}
-                  </Badge>
-                )}
-              </span>
-            </CardTitle>
-            <CardDescription className="text-sm leading-relaxed">
-              {item.summary}
-            </CardDescription>
-          </CardHeader>
-          {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
-            <CardContent className="space-y-2">
-              {metaBits.length > 0 && (
-                <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
-                  {metaBits.join(' · ')}
-                </p>
+    <div className="group relative">
+      <Card size="sm" className="transition-colors group-hover:bg-muted/60">
+        <CardHeader>
+          <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
+            <GithubLogo
+              className="mt-1 size-3.5 shrink-0 text-muted-foreground"
+              weight="fill"
+              aria-hidden
+            />
+            <span className="min-w-0">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-haspopup={onPreview ? 'dialog' : undefined}
+                onClick={onPreview ? (event) => onPreview(item, event) : undefined}
+                className="group-hover:underline group-hover:underline-offset-2 after:absolute after:inset-0 after:z-[1] after:rounded-xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring focus-visible:after:ring-offset-2 focus-visible:after:ring-offset-background"
+              >
+                {item.title}
+              </a>
+              {rank != null && (
+                <Badge
+                  variant="outline"
+                  className="ml-2 align-middle rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
+                  aria-label={t('githubStarRank', { rank })}
+                >
+                  {rank}
+                </Badge>
               )}
-              {hasMetrics && (
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tabular-nums text-muted-foreground">
-                  {meta.stars != null && (
-                    <span className="inline-flex items-center gap-1">
-                      <Star className="size-3 shrink-0" weight="fill" aria-hidden />
-                      {formatCount(meta.stars)}
-                    </span>
-                  )}
-                  {meta.forks != null && (
-                    <span className="inline-flex items-center gap-1">
-                      <GitFork className="size-3 shrink-0" weight="fill" aria-hidden />
-                      {formatCount(meta.forks)}
-                    </span>
-                  )}
-                  {meta.openIssues != null && (
-                    <span className="inline-flex items-center gap-1">
-                      <Bug className="size-3 shrink-0" weight="fill" aria-hidden />
-                      {formatCount(meta.openIssues)}
-                    </span>
-                  )}
-                </div>
-              )}
-              {(item.tags ?? []).length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {(item.tags ?? []).map((tag) => (
-                    <Badge key={tag} variant="outline" className="font-normal">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </CardContent>
+            </span>
+          </CardTitle>
+          {onToggleSaved && (
+            <CardAction className="relative z-10 row-span-1 w-8 self-stretch">
+              <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
+                className="absolute top-1/2 right-0 -translate-y-1/2" />
+            </CardAction>
           )}
-        </Card>
-      </a>
-      {onToggleSaved && <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
-        className="absolute top-1 right-1 z-10" />}
+          <CardDescription className={cn('text-sm leading-relaxed', onToggleSaved && 'col-span-2')}>
+            {item.summary}
+          </CardDescription>
+        </CardHeader>
+        {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
+          <CardContent className="space-y-2">
+            {metaBits.length > 0 && (
+              <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
+                {metaBits.join(' · ')}
+              </p>
+            )}
+            {hasMetrics && (
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tabular-nums text-muted-foreground">
+                {meta.stars != null && (
+                  <span className="inline-flex items-center gap-1">
+                    <Star className="size-3 shrink-0" weight="fill" aria-hidden />
+                    {formatCount(meta.stars)}
+                  </span>
+                )}
+                {meta.forks != null && (
+                  <span className="inline-flex items-center gap-1">
+                    <GitFork className="size-3 shrink-0" weight="fill" aria-hidden />
+                    {formatCount(meta.forks)}
+                  </span>
+                )}
+                {meta.openIssues != null && (
+                  <span className="inline-flex items-center gap-1">
+                    <Bug className="size-3 shrink-0" weight="fill" aria-hidden />
+                    {formatCount(meta.openIssues)}
+                  </span>
+                )}
+              </div>
+            )}
+            {(item.tags ?? []).length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {(item.tags ?? []).map((tag) => (
+                  <Badge key={tag} variant="outline" className="font-normal">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
+          </CardContent>
+        )}
+      </Card>
     </div>
   )
 }
