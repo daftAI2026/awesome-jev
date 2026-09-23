@@ -81,11 +81,17 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
       <Card size="sm" className="transition-colors group-hover:bg-muted/60">
         <CardHeader>
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
-            <GithubLogo
-              className="mt-1 size-3.5 shrink-0 text-muted-foreground"
-              weight="fill"
-              aria-hidden
-            />
+            {rank != null ? (
+              <Badge
+                variant="outline"
+                className="rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
+                aria-label={t('githubStarRank', { rank })}
+              >
+                {rank}
+              </Badge>
+            ) : (
+              <GithubLogo className="mt-1 size-3.5 shrink-0 text-muted-foreground" weight="fill" aria-hidden />
+            )}
             <span className="min-w-0">
               <a
                 href={item.url}
@@ -97,15 +103,6 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
               >
                 {item.title}
               </a>
-              {rank != null && (
-                <Badge
-                  variant="outline"
-                  className="ml-2 align-middle rounded-lg font-mono font-normal tabular-nums text-muted-foreground"
-                  aria-label={t('githubStarRank', { rank })}
-                >
-                  {rank}
-                </Badge>
-              )}
             </span>
           </CardTitle>
           {onToggleSaved && (
