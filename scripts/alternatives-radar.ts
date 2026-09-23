@@ -57,6 +57,7 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
   const files = new Map([...catalog.files].map(([file, entries]) => [file, structuredClone(entries)]))
   const rows = [...files.values()].flat()
   const known = new Set(rows.filter((row) => row.type === 'github').map((row) => repoKey(row.url)))
+  const stars = new Map<string, number>()
   for (const key of Object.keys(state.candidates)) if (known.has(key)) delete state.candidates[key]
   const report: RadarReport = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
     metadata: { ok: 0, failed: 0 }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
@@ -74,6 +75,9 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
         for (const repo of result.items) {
           const key = repoKey(repo.html_url)
           if (!key || repo.private || repo.fork || repo.archived || known.has(key) || key === 'daftai2026/awesome-jev') continue
+          if (Number.isSafeInteger(repo.stargazers_count) && (repo.stargazers_count ?? -1) >= 0) {
+            stars.set(key, Math.max(stars.get(key) ?? 0, repo.stargazers_count ?? 0))
+          }
           if (!Object.hasOwn(state.candidates, key)) {
             if (Object.keys(state.candidates).length >= MAX_QUEUE) { report.overflow++; continue }
             state.candidates[key] = { status: 'pending', discoveredAt: started, attempts: 0 }
@@ -92,7 +96,8 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
 
   const queue = Object.entries(state.candidates)
     .filter(([, entry]) => !entry.retryAt || Date.parse(entry.retryAt) <= now.getTime())
-    .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) || a.localeCompare(b))
+    .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) ||
+      (stars.get(b) ?? 0) - (stars.get(a) ?? 0) || a.localeCompare(b))
   for (const [key, entry] of queue) {
     if (expired(deadline)) break
     const previous: Candidate = structuredClone(entry)

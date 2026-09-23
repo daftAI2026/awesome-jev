@@ -82,7 +82,7 @@ Search Console's 2026-09-20 export is only one day of evidence, not a basis for 
 
 ## Scheduled collection
 
-GitHub Actions runs the server-side radar through read-only collection, secret-free validation, and data-only publishing jobs. Jev credentials never reach Vite or the browser. The resulting commit contains directory data and generated README together. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedule.
+GitHub Actions runs the server-side ecosystem radar through read-only collection, secret-free validation, and data-only publishing jobs. A second workflow applies a distinct open-source-alternative admission policy with its own candidate state, while sharing the GitHub catalog, README renderer and Jev client. Jev credentials never reach Vite or the browser. Each resulting commit contains directory data and generated README together. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedules.
 
 The independent [news integration](news.md) uses AIHOT's public API in a separate hourly Action and commits only `data/news.json` when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 

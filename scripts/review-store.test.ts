@@ -79,3 +79,18 @@ test('radar budgets restore only radar artifacts, never the submission reviewer 
   }
   assert.deepEqual(await latestCheckpoint(api, 20, 'radar'), { runId: 5, artifactId: 101 })
 })
+
+test('alternatives budgets restore only their own workflow artifact', async () => {
+  const api: ReviewApi = async (path) => {
+    if (path.endsWith('alternatives.yml')) return { id: 33 }
+    if (path.includes('/runs?')) return { workflow_runs: [
+      { ...valid, workflow_id: 22, path: '.github/workflows/radar.yml' },
+      { ...valid, workflow_id: 33, path: '.github/workflows/alternatives.yml' },
+    ] }
+    return { artifacts: [
+      { id: 101, name: 'jev-radar-budget-5-1', expired: false, size_in_bytes: 100 },
+      { id: 102, name: 'jev-alternatives-budget-5-1', expired: false, size_in_bytes: 100 },
+    ] }
+  }
+  assert.deepEqual(await latestCheckpoint(api, 20, 'alternatives'), { runId: 5, artifactId: 102 })
+})

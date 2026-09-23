@@ -67,9 +67,10 @@ function githubApi(repos: GitHubRepository[], searchCalls: string[] = []) {
 
 test('dedicated discovery finds both independent implementations and classifies accepted rows as alternatives', async () => {
   const queries: string[] = []
+  const reviewOrder: string[] = []
   const result = await runAlternatives({
     catalog: catalog(), api: githubApi(alternatives, queries), now,
-    review: async () => keep,
+    review: async (row) => { reviewOrder.push(row.sourceMeta?.repo ?? ''); return keep },
   })
 
   assert.ok(queries.length > 0)
@@ -79,6 +80,7 @@ test('dedicated discovery finds both independent implementations and classifies 
   assert.ok(result.rows.every((row) => row.type === 'github' && row.category === 'alternatives'))
   assert.ok(result.rows.every((row) => row.type !== 'github' || !row.tags?.includes('jev')),
     'independent alternatives should not receive the core ecosystem tag by default')
+  assert.equal(reviewOrder[0], 'mizorewww/laya-mlx', 'same-day leads should prioritize high-signal repositories')
 })
 
 test('catalogued repository is deduplicated before evidence fetch or model review', async () => {
