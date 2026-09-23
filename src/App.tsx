@@ -152,7 +152,9 @@ export default function App() {
         className={`h-8 w-full justify-between gap-4 rounded-lg px-3 font-normal ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
       >
         <span className="truncate">{t(FILTER_LABEL[id])}</span>
-        {count != null && <span className="tabular-nums text-xs text-muted-foreground">{count}</span>}
+        {count != null && (id === 'saved'
+          ? <Badge variant="outline" className="min-w-5 rounded-sm px-1.5 font-normal tabular-nums text-muted-foreground">{count}</Badge>
+          : <span className="tabular-nums text-xs text-muted-foreground">{count}</span>)}
       </Button>
     )
   }
