@@ -59,10 +59,10 @@ export function DecryptedBrand({ onClick }: { onClick: (event: MouseEvent<HTMLAn
     <a ref={anchorRef} href="/" aria-label={LABEL} onClick={onClick}
       className="relative inline-block whitespace-nowrap rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
       <span aria-hidden="true" className="invisible">{LABEL}</span>
-      <span aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        {active ? <DecryptedText key={cycle} text={LABEL} speed={60} maxIterations={10} sequential
+      <span aria-hidden="true" className="absolute inset-0">
+        {active ? <DecryptedText key={cycle} text={LABEL} speed={210} maxIterations={10} sequential
           useOriginalCharsOnly={false} revealDirection="start" animateOn="view" clickMode="once"
-          onComplete={scheduleReplay} /> : LABEL}
+          style={{ whiteSpace: 'nowrap' }} onComplete={scheduleReplay} /> : LABEL}
       </span>
     </a>
   )

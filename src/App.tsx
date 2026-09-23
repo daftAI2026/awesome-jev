@@ -193,7 +193,7 @@ export default function App() {
       <a href="#main" className="skip-link sr-only">{t('skipToContent')}</a>
       <header className="sticky top-0 z-50 bg-background">
         <div className="flex h-14 w-full items-center justify-between gap-3 px-4">
-          <h1 className="min-w-0 truncate text-lg font-medium tracking-tight text-foreground">
+          <h1 className="min-w-0 text-base font-medium tracking-tight text-foreground sm:text-lg">
             <DecryptedBrand onClick={returnHome} />
           </h1>
           <div className="flex shrink-0 items-center gap-2">
