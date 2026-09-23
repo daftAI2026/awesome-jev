@@ -151,11 +151,11 @@ export default function App() {
   )
   const categoryNav = (
     <nav aria-label={t('categoryLabel')} className="flex flex-col gap-2">
-      {filterButton('all')}
       {filterButton('top100')}
       {filterButton('news')}
       {filterButton('saved')}
       <Separator className="my-1" />
+      {filterButton('all')}
       {CATEGORIES.map(filterButton)}
     </nav>
   )
