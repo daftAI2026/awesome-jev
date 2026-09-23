@@ -32,6 +32,7 @@ test('only valid, high-confidence keep qualifies; unknowns fail closed', () => {
 })
 test('parse Jev typed answers; malformed/missing/out-of-range answers are errors', () => {
   assert.deepEqual(parseScore(response), { ...score, category: 'sdk' })
+  assert.equal(parseScore({ answers: { ...response.answers, category: { type: 'choice', choice: 'sdk', confidence: 0.4 } } }).category, 'other')
   for (const bad of [{}, { answers: {} }, { answers: { ...response.answers, keep: { choice: 'keep' } } },
     { answers: { ...response.answers, keep: { type: 'choice', choice: ['keep'], confidence: 0.99 } } },
     { answers: { ...response.answers, about: { type: 'noul', noul: 1.1 } } }]) assert.throws(() => parseScore(bad))
