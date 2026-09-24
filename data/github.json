@@ -38883,5 +38883,71 @@
         "checkedAt": "2026-09-23T23:56:45.683Z"
       }
     }
+  },
+  {
+    "id": "gh-11-valentynkit-jev-belay",
+    "type": "github",
+    "title": "jev-belay",
+    "summary": "Claude Code Stop hook that checks transcript evidence before asking TypeSafe Jev whether a task is ready to finish; fails open when the check cannot run.",
+    "tags": [
+      "jev",
+      "claude-code",
+      "stop-hook",
+      "agent"
+    ],
+    "category": "developer",
+    "url": "https://github.com/valentynkit/jev-belay",
+    "sourceMeta": {
+      "repo": "valentynkit/jev-belay",
+      "author": "valentynkit",
+      "stars": 18,
+      "forks": 1,
+      "language": "JavaScript",
+      "date": "2026-09-18"
+    }
+  },
+  {
+    "id": "gh-11-valentynkit-jev-skip",
+    "type": "github",
+    "title": "jev-skip",
+    "summary": "Browser extension that uses captions and TypeSafe Jev to decide when to skip YouTube sponsor segments, with a seek-bar probability heatmap.",
+    "tags": [
+      "jev",
+      "youtube",
+      "browser-extension",
+      "captions"
+    ],
+    "category": "browser",
+    "url": "https://github.com/valentynkit/jev-skip",
+    "sourceMeta": {
+      "repo": "valentynkit/jev-skip",
+      "author": "valentynkit",
+      "stars": 4,
+      "forks": 0,
+      "language": "TypeScript",
+      "date": "2026-09-18"
+    }
+  },
+  {
+    "id": "gh-8-xinyao27-jevonian",
+    "type": "github",
+    "title": "jevonian",
+    "summary": "Local OpenAI/Anthropic/Responses-compatible proxy that uses TypeSafe Jev to route model and thinking level after protocol, context, and quota filtering; records each turn.",
+    "tags": [
+      "jev",
+      "proxy",
+      "router",
+      "typescript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/xinyao27/jevonian",
+    "sourceMeta": {
+      "repo": "xinyao27/jevonian",
+      "author": "xinyao27",
+      "stars": 2,
+      "forks": 2,
+      "language": "TypeScript",
+      "date": "2026-09-19"
+    }
   }
 ]
