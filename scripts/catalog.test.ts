@@ -72,6 +72,10 @@ test('README is deterministic, escaped, count-correct, and preserves handwritten
   const out = renderReadme(text, rows)
   assert.equal(renderReadme(out, rows), out)
   assert.match(out, /projects-2-/); assert.match(out, /Handwritten license/)
+  const badgeLine = out.split('<!-- PROJECT_COUNT:START -->\n')[1].split('\n<!-- PROJECT_COUNT:END -->')[0]
+  assert.equal(badgeLine.split('\n').length, 1)
+  assert.match(badgeLine, /radar\.yml\/badge\.svg\?branch=main&event=push/)
+  assert.match(badgeLine, /github\/stars\/daftAI2026\/awesome-jev/)
   assert.match(out, /&lt;script&gt;/); assert.doesNotMatch(out, /<script>/)
   assert.equal(out.split('<!-- PROJECTS:END -->').length, 2)
 })

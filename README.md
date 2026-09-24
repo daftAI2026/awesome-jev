@@ -1,9 +1,6 @@
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 <!-- PROJECT_COUNT:START -->
-![Projects](https://img.shields.io/badge/projects-1142-10b981?style=classic)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Projects](https://img.shields.io/badge/projects-1142-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc)
 <!-- PROJECT_COUNT:END -->
-[![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev)
-[![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc)
 
 # Awesome JEV
 
