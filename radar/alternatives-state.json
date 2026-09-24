@@ -1472,6 +1472,79 @@
         "checkedAt": "2026-09-23T23:56:45.683Z"
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
+    },
+    "kotalakishanreddy/laya-plus": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T08:44:49.897Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T08:44:49.897Z",
+      "lastReview": {
+        "repo": "kotalakishanreddy/laya-plus",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "ffed1bdff79b83c23e24205e944d2f79bff9d2af",
+        "evidenceUrl": "https://github.com/kotalakishanreddy/laya-plus/blob/ffed1bdff79b83c23e24205e944d2f79bff9d2af/README.md",
+        "evidenceSha256": "d99b7c39d040acde1798aab60b7eb160bdaba95d4aa7c487f5212c8006821e81",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T08:44:49.897Z"
+      },
+      "retryAt": "2026-10-01T08:44:49.897Z"
+    },
+    "alexw1111/laya-cuda": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T08:44:49.897Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T08:44:49.897Z",
+      "lastReview": {
+        "repo": "alexw1111/laya-cuda",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.83,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.33,
+          "category": "alternatives"
+        },
+        "sha": "c72dc4dd1457d3f1996a0a5a56319a30376520f9",
+        "evidenceUrl": "https://github.com/alexw1111/laya-cuda/blob/c72dc4dd1457d3f1996a0a5a56319a30376520f9/README.md",
+        "evidenceSha256": "26acf05b4198186ea4b8bdb7f1190667c7cc6871cd4e6947bb1e3863a991c36a",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T08:44:49.897Z"
+      },
+      "retryAt": "2026-10-01T08:44:49.897Z"
+    },
+    "yaoapp/yao": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T08:44:49.897Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T08:44:49.897Z",
+      "lastReview": {
+        "repo": "yaoapp/yao",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "20efb9d42d8a8f88b22c15e05175ba2b964c412b",
+        "evidenceUrl": "https://github.com/yaoapp/yao/blob/20efb9d42d8a8f88b22c15e05175ba2b964c412b/README.md",
+        "evidenceSha256": "2036289a12ca08b81fe0035f55dd76d205eaac77a8ebc32d06ad778d6e6b6317",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T08:44:49.897Z"
+      },
+      "retryAt": "2026-10-01T08:44:49.897Z"
+    },
+    "rotsl/layaagent": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T08:44:49.897Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T08:44:49.897Z",
+      "lastReview": {
+        "repo": "rotsl/layaagent",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "d4b1506ae1504325900acb343645743836ac421e",
+        "evidenceUrl": "https://github.com/rotsl/layaagent/blob/d4b1506ae1504325900acb343645743836ac421e/README.md",
+        "evidenceSha256": "1708a4f949331e0aef37f8a5aef69a908880303cbc9e1197fb9e1b01dda6d9e6",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T08:44:49.897Z"
+      },
+      "retryAt": "2026-10-01T08:44:49.897Z"
     }
   }
 }
