@@ -38949,5 +38949,27 @@
       "language": "TypeScript",
       "date": "2026-09-19"
     }
+  },
+  {
+    "id": "gh-6-suenot-codex-jev-router",
+    "type": "github",
+    "title": "codex-jev-router",
+    "summary": "Portable Codex subagent-routing workflow using Jev Choice/Noul and local confidence gates, with a Sol fallback; invoked through project instructions rather than an automatic spawn hook.",
+    "tags": [
+      "jev",
+      "codex",
+      "agent",
+      "model-routing"
+    ],
+    "category": "agents",
+    "url": "https://github.com/suenot/codex-jev-router",
+    "sourceMeta": {
+      "repo": "suenot/codex-jev-router",
+      "author": "suenot",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "date": "2026-09-23"
+    }
   }
 ]
