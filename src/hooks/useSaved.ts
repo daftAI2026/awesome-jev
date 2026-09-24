@@ -6,11 +6,14 @@ function readSaved() {
 }
 
 export function useSaved() {
-  const [entries, setEntries] = useState(readSaved)
+  const [entries, setEntries] = useState<ReturnType<typeof readSaved>>([])
   const entriesRef = useRef(entries)
   const [saveError, setSaveError] = useState(false)
 
   useEffect(() => {
+    const initial = readSaved()
+    entriesRef.current = initial
+    setEntries(initial)
     const onStorage = (event: StorageEvent) => {
       if (event.key !== SAVED_KEY && event.key !== null) return
       const next = readSaved()

@@ -90,18 +90,21 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
   )
 }
 
-export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = false }: {
+export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = false, previewId, onPreview, onPreviewClose }: {
   items: NewsItem[]
   query: string
   savedIds: ReadonlySet<string>
   onToggleSaved: (item: NewsItem) => void
   savedView?: boolean
+  previewId?: string | null
+  onPreview: (item: NewsItem) => void
+  onPreviewClose: () => void
 }) {
   const { locale, t } = useI18n()
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
-  const [detailItem, setDetailItem] = useState<NewsItem | null>(null)
-  const [detailOpen, setDetailOpen] = useState(false)
   const detailTriggerRef = useRef<HTMLElement | null>(null)
+  const detailItem = items.find((item) => item.id === previewId) ?? null
+  const detailOpen = detailItem !== null
   const matched = useMemo(() => {
     const term = query.trim().toLocaleLowerCase()
     const filtered = term ? items.filter((item) =>
@@ -127,14 +130,13 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
     detailTriggerRef.current = event.currentTarget
-    setDetailItem(item)
-    setDetailOpen(true)
+    onPreview(item)
   }
   const toggleItemSaved = (item: NewsItem) => {
     if (savedView && savedIds.has(item.id)) {
       if (detailOpen) {
         detailTriggerRef.current = document.getElementById('main')
-        setDetailOpen(false)
+        onPreviewClose()
       } else {
         requestAnimationFrame(() => document.getElementById('main')?.focus())
       }
@@ -175,7 +177,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
           )}
         </>
       )}
-      <NewsDialog item={detailItem} open={detailOpen} onOpenChange={setDetailOpen} triggerRef={detailTriggerRef}
+      <NewsDialog item={detailItem} open={detailOpen} onOpenChange={(open) => { if (!open) onPreviewClose() }} triggerRef={detailTriggerRef}
         saved={detailItem ? savedIds.has(detailItem.id) : false}
         onToggleSaved={detailItem ? () => toggleItemSaved(detailItem) : undefined} />
     </section>

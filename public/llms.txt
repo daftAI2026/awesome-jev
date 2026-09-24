@@ -2,7 +2,7 @@
 
 > A free, community-curated directory of GitHub projects related to TypeSafe AI's Jev / System One models.
 
-The website is a single searchable page. Project cards provide summaries and link to third-party repositories; they are not separate pages on awesomejev.cc. The Jev news section shows source-attributed summaries and links to the source, not full articles. Project metadata and the directory change over time.
+The website has a searchable directory, category pages, and one detail page per GitHub project at /projects/{owner}/{repo}. Project pages show curated summaries and link to the original third-party repositories. The Jev news section shows source-attributed summaries and links to the source, not full articles. Project metadata and the directory change over time.
 
 ## Directory
 

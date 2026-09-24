@@ -14,6 +14,11 @@ export interface NewsItem {
   aihotUrl: string
 }
 
+export function newsPreviewSearch(search: Record<string, unknown>): { preview?: string } {
+  return { preview: typeof search.preview === 'string' && search.preview.length > 0 && search.preview.length <= 200
+    ? search.preview : undefined }
+}
+
 const BACKFILL_THRESHOLD_MS = 72 * 60 * 60 * 1000
 
 export function newsTime(item: NewsItem): number {

@@ -38971,5 +38971,31 @@
       "language": "JavaScript",
       "date": "2026-09-23"
     }
+  },
+  {
+    "id": "gh-14-contrastive-lm-clm",
+    "type": "github",
+    "title": "CLM",
+    "summary": "Open-source contrastive System One decision model with a TypeSafe-compatible API for typed Noul, Choice, and Score judgments.",
+    "tags": [
+      "system-one",
+      "decision-model",
+      "contrastive-learning",
+      "typesafe-compatible",
+      "open-source",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/Contrastive-LM/CLM",
+    "sourceMeta": {
+      "repo": "Contrastive-LM/CLM",
+      "author": "Contrastive-LM",
+      "stars": 586,
+      "forks": 47,
+      "language": "Python",
+      "date": "2026-09-23",
+      "categoryEvidenceSha": "7956937c58ed5839c06ddc4dc6b6b61c3a3e4094",
+      "categoryEvidenceUrl": "https://github.com/Contrastive-LM/CLM/blob/7956937c58ed5839c06ddc4dc6b6b61c3a3e4094/README.md"
+    }
   }
 ]

@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { parseSaved, toggleSaved } from '../src/lib/saved.ts'
+import { parseSaved, savedRouteSearch, toggleSaved } from '../src/lib/saved.ts'
 
 const now = '2026-09-23T00:00:00.000Z'
 
@@ -17,4 +17,13 @@ test('invalid and duplicate local data does not leak into the saved view', () =>
     { ...valid, kind: 'other' }, { ...valid, savedAt: 'bad' }])), [valid])
   assert.deepEqual(parseSaved('{'), [])
   assert.deepEqual(parseSaved(null), [])
+})
+
+test('saved route restores only known source and category filters', () => {
+  assert.deepEqual(savedRouteSearch({ section: 'news', projectCategory: 'agents', newsCategory: 'paper', preview: 'item-1' }), {
+    section: 'news', projectCategory: 'agents', newsCategory: 'paper', preview: 'item-1',
+  })
+  assert.deepEqual(savedRouteSearch({ section: 'other', projectCategory: 'fake', newsCategory: 'fake', preview: '' }), {
+    section: undefined, projectCategory: undefined, newsCategory: undefined, preview: undefined,
+  })
 })

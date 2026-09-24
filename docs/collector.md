@@ -141,7 +141,7 @@ The workflow keeps `contents: read`; `actions: read` is for restoring verified c
 
 ### TypeScript scripts and tests
 
-All collector/reviewer scripts and offline tests use `.ts`. Run `npm run typecheck` for strict TypeScript checks and `npm test` for offline regression tests. CI runs both. Node 22 executes erasable TypeScript directly with `--experimental-strip-types`; no emitted JavaScript or new runtime dependency is needed. Runtime execution does not replace static type checking ([Node documentation](https://nodejs.org/api/typescript.html)).
+All collector/reviewer scripts and offline tests use `.ts`. Run `npm run typecheck` for strict TypeScript checks and `npm test` for offline regression tests. CI runs both. Node 24 executes erasable TypeScript directly with `--experimental-strip-types`; no emitted JavaScript or new runtime dependency is needed. Runtime execution does not replace static type checking ([Node documentation](https://nodejs.org/api/typescript.html)). The root `.node-version` selects the same LTS major for GitHub Actions and Cloudflare Workers Builds.
 
 Discovery receipts retain the reviewed commit, model, timestamp, typed scores and evidence hash. Code-match evidence also records pinned file links and per-file hashes. Accepted entries keep their receipt under `sourceMeta.jevEvidence`; unaccepted candidates keep `lastReview` in `radar/state.json`, so the next `radar/latest.json` does not erase the last basis. No secret values or downloaded source text are persisted. Code search is bounded and subject to GitHub indexing and API limits, not exhaustive coverage ([GitHub search API](https://docs.github.com/en/rest/search/search#search-code)).
 

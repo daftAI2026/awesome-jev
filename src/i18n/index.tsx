@@ -2,32 +2,17 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
-  useState,
   type ReactNode,
 } from 'react'
+import { useRouterState } from '@tanstack/react-router'
 import { en, type MessageKey, type Messages } from './locales/en'
 import { zh } from './locales/zh'
+import { LOCALE_STORAGE_KEY, localeFromPath, localizedPath, type Locale } from '@/lib/locale-routes'
 
-export type Locale = 'en' | 'zh'
-
-const STORAGE_KEY = 'awesome-jev-locale'
+export type { Locale } from '@/lib/locale-routes'
 
 const catalogs: Record<Locale, Messages> = { en, zh }
-
-function detectLocale(): Locale {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === 'en' || stored === 'zh') return stored
-  } catch {
-    /* ignore */
-  }
-  if (typeof navigator !== 'undefined' && /^zh\b/i.test(navigator.language)) {
-    return 'zh'
-  }
-  return 'en'
-}
 
 interface I18nContextValue {
   locale: Locale
@@ -38,15 +23,17 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() => detectLocale())
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const locale = localeFromPath(pathname)
 
   const setLocale = useCallback((next: Locale) => {
-    setLocaleState(next)
     try {
-      localStorage.setItem(STORAGE_KEY, next)
+      localStorage.setItem(LOCALE_STORAGE_KEY, next)
     } catch {
       /* ignore */
     }
+    const target = localizedPath(window.location.pathname, next) + window.location.search + window.location.hash
+    if (target !== window.location.pathname + window.location.search + window.location.hash) window.location.replace(target)
   }, [])
 
   const t = useCallback(
@@ -61,22 +48,6 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     },
     [locale],
   )
-
-  useEffect(() => {
-    const title = catalogs[locale].documentTitle
-    const description = catalogs[locale].documentDescription
-    document.title = title
-    document.documentElement.lang = locale === 'zh' ? 'zh-CN' : 'en'
-    const setMeta = (selector: string, content: string) => {
-      const el = document.querySelector(selector)
-      if (el) el.setAttribute('content', content)
-    }
-    setMeta('meta[name="description"]', description)
-    setMeta('meta[property="og:title"]', title)
-    setMeta('meta[property="og:description"]', description)
-    setMeta('meta[name="twitter:title"]', title)
-    setMeta('meta[name="twitter:description"]', description)
-  }, [locale])
 
   const value = useMemo(
     () => ({ locale, setLocale, t }),

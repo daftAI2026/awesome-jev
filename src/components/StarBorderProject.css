@@ -1,0 +1,56 @@
+.star-border-container.project-star-border {
+  display: block;
+  width: 100%;
+  padding: 1px !important;
+  border-radius: var(--radius);
+  background: var(--border);
+}
+
+.star-border-container.project-star-border > .inner-content {
+  padding: 0;
+  border: 0;
+  border-radius: calc(var(--radius) - 1px);
+  font-size: inherit;
+  text-align: inherit;
+}
+
+.star-border-container.project-star-border > .inner-content > [data-slot="card"] {
+  border-radius: inherit;
+}
+
+.star-border-container.project-star-border > .border-gradient-top,
+.star-border-container.project-star-border > .border-gradient-bottom {
+  top: -50%;
+  left: -50%;
+  right: auto;
+  bottom: auto;
+  width: 200%;
+  height: 200%;
+  border-radius: 0;
+  opacity: 1;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 338deg,
+    var(--ring) 352deg,
+    transparent 360deg
+  ) !important;
+  animation-name: project-star-orbit;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.star-border-container.project-star-border > .border-gradient-bottom {
+  animation-delay: -2.5s;
+}
+
+@keyframes project-star-orbit {
+  to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-star-border > .border-gradient-bottom,
+  .project-star-border > .border-gradient-top {
+    display: none;
+  }
+}

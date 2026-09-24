@@ -4,6 +4,8 @@ import { masonryPositions, MASONRY_ROW_HEIGHT } from '@/lib/masonry'
 import { ItemCard } from '@/components/ItemCard'
 import { useI18n } from '@/i18n'
 
+const SKELETON_CARD_COUNT = 18
+
 export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }: {
   items: DirectoryItem[]
   ranks?: Map<string, number>
@@ -36,7 +38,7 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
         const intrinsicSize = `auto ${heights[index]}px`
         if (cell.style.containIntrinsicSize !== intrinsicSize) cell.style.containIntrinsicSize = intrinsicSize
       })
-      // --- 首屏保留普通网格；定位全部完成后才启用短行，避免水合前卡片堆叠 ---
+      // --- 所有位置写完后再展示卡片，避免预渲染网格闪现 ---
       list.style.gridAutoRows = `${MASONRY_ROW_HEIGHT}px`
       list.dataset.masonryReady = 'true'
     }
@@ -69,16 +71,30 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
   }, [items, locale])
 
   return (
-    <ul
-      ref={listRef}
-      className="card-masonry flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:items-start sm:data-[masonry-ready=true]:gap-y-0 sm:[--masonry-columns:2] lg:grid-cols-3 lg:[--masonry-columns:3]"
-    >
-      {items.map((item) => (
-        <li key={item.id} className="min-w-0">
-          <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview}
-            saved={savedIds?.has(item.id)} onToggleSaved={onToggleSaved} />
-        </li>
-      ))}
-    </ul>
+    <div className="masonry-shell">
+      {items.length > 0 && (
+        <div className="masonry-skeleton" aria-hidden="true">
+          {Array.from({ length: Math.min(items.length, SKELETON_CARD_COUNT) }, (_, index) => (
+            <div key={index} className="masonry-skeleton-card">
+              <span className="masonry-skeleton-title" />
+              <span className="masonry-skeleton-line" />
+              <span className="masonry-skeleton-line" />
+              <span className="masonry-skeleton-line masonry-skeleton-line-short" />
+            </div>
+          ))}
+        </div>
+      )}
+      <ul
+        ref={listRef}
+        className="card-masonry flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:items-start sm:data-[masonry-ready=true]:gap-y-0 sm:[--masonry-columns:2] lg:grid-cols-3 lg:[--masonry-columns:3]"
+      >
+        {items.map((item) => (
+          <li key={item.id} className="min-w-0">
+            <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview}
+              saved={savedIds?.has(item.id)} onToggleSaved={onToggleSaved} />
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

@@ -11,8 +11,12 @@ import {
 } from '@phosphor-icons/react'
 import { cn } from 'cn'
 import type { DirectoryItem } from '@/lib/types'
+import { projectPathFromUrl } from '@/lib/project-routes'
+import { localizedPath } from '@/lib/locale-routes'
 import { TweetBody } from '@/components/TweetBody'
 import { SaveButton } from '@/components/SaveButton'
+import StarBorder from '@/components/StarBorder'
+import '@/components/StarBorderProject.css'
 import { useI18n } from '@/i18n'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -65,7 +69,7 @@ function TweetStat({
 }
 
 function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: ItemCardProps) {
-  const { t } = useI18n()
+  const { locale, t } = useI18n()
   const meta = item.sourceMeta
   const metaBits: string[] = []
 
@@ -73,10 +77,12 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
   if (meta.language) metaBits.push(meta.language)
 
   const hasMetrics = meta.stars != null || meta.forks != null
+  const projectPath = projectPathFromUrl(item.url)
+  const projectHref = projectPath ? localizedPath(projectPath, locale) : item.url
+  const featured = meta.stars != null && meta.stars > 1000
 
-  return (
-    <div className="group relative">
-      <Card size="sm" className="transition-colors group-hover:bg-muted/60">
+  const card = (
+      <Card size="sm" className={cn('transition-colors group-hover:bg-muted/60', featured && 'ring-0')}>
         <CardHeader className="gap-y-3">
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
             {rank != null ? (
@@ -92,12 +98,10 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
             )}
             <span className="min-w-0">
               <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={projectHref}
                 aria-haspopup={onPreview ? 'dialog' : undefined}
                 onClick={onPreview ? (event) => onPreview(item, event) : undefined}
-                className="group-hover:underline group-hover:underline-offset-2 after:absolute after:inset-0 after:z-[1] after:rounded-xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring focus-visible:after:ring-offset-2 focus-visible:after:ring-offset-background"
+                className="group-hover:underline group-hover:underline-offset-2 after:absolute after:inset-0 after:z-[1] after:rounded-xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring focus-visible:after:ring-offset-background"
               >
                 {item.title}
               </a>
@@ -106,7 +110,7 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
           {onToggleSaved && (
             <CardAction className="relative z-10 row-span-1 w-8 self-stretch">
               <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
-                className="absolute top-1/2 right-0 -translate-y-1/2" />
+                className="absolute top-1/2 -right-2 -translate-y-1/2" />
             </CardAction>
           )}
           <CardDescription className={cn('text-sm leading-relaxed', onToggleSaved && 'col-span-2')}>
@@ -148,6 +152,24 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
           </CardContent>
         )}
       </Card>
+  )
+
+  return (
+    <div className="group relative">
+      {featured ? (
+        <StarBorder
+          as="div"
+          className="project-star-border"
+          color="var(--ring)"
+          speed="5s"
+          thickness={1}
+          backgroundColor="var(--card)"
+          textColor="var(--card-foreground)"
+          borderColor="var(--border)"
+        >
+          {card}
+        </StarBorder>
+      ) : card}
     </div>
   )
 }

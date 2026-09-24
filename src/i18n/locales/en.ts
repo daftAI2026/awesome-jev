@@ -1,10 +1,10 @@
 export const en = {
   githubCount: '{count} GitHub projects indexed',
-  documentTitle: 'Awesome JEV · free TypeSafe Jev AI directory',
+  documentTitle: 'Awesome JEV · free TypeSafe Jev / System One AI directory',
   documentDescription:
-    'A free curated directory of TypeSafe Jev AI projects. GitHub projects organized by what they build and how they use Jev.',
+    'A free curated directory of TypeSafe Jev / System One AI projects. GitHub projects organized by what they build and how they use Jev.',
   tagline:
-    'A free curated directory of TypeSafe Jev AI projects.\nGitHub projects organized by what they build and how they use Jev.',
+    'A free curated directory of TypeSafe Jev / System One AI projects.\nGitHub projects organized by what they build and how they use Jev.',
   dataUpdated: 'Data updated',
   dataUpdatedTimezone: 'Time shown in Asia/Shanghai (UTC+8)',
   searchPlaceholder: 'Search GitHub…',

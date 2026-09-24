@@ -1,4 +1,25 @@
+import { CATEGORIES, NEWS_CATEGORIES, type Category } from './categories.ts'
+
 export type SavedKind = 'github' | 'news'
+export type SavedSection = SavedKind
+
+export interface SavedRouteSearch {
+  preview?: string
+  section?: SavedSection
+  projectCategory?: Category
+  newsCategory?: (typeof NEWS_CATEGORIES)[number]
+}
+
+export function savedRouteSearch(search: Record<string, unknown>): SavedRouteSearch {
+  return {
+    preview: typeof search.preview === 'string' && search.preview.length > 0 && search.preview.length <= 200 ? search.preview : undefined,
+    section: search.section === 'github' || search.section === 'news' ? search.section : undefined,
+    projectCategory: typeof search.projectCategory === 'string' && (CATEGORIES as readonly string[]).includes(search.projectCategory)
+      ? search.projectCategory as Category : undefined,
+    newsCategory: typeof search.newsCategory === 'string' && (NEWS_CATEGORIES as readonly string[]).includes(search.newsCategory)
+      ? search.newsCategory as (typeof NEWS_CATEGORIES)[number] : undefined,
+  }
+}
 
 export interface SavedEntry {
   kind: SavedKind

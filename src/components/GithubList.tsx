@@ -1,6 +1,8 @@
 import { Star } from '@phosphor-icons/react'
 import { memo, type MouseEvent } from 'react'
 import type { DirectoryItem } from '@/lib/types'
+import { projectPathFromUrl } from '@/lib/project-routes'
+import { localizedPath } from '@/lib/locale-routes'
 import { useI18n } from '@/i18n'
 import { SaveButton } from '@/components/SaveButton'
 
@@ -15,11 +17,13 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
   onPreview?: (item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => void
   onToggleSaved?: (item: DirectoryItem) => void
 }) {
+  const { locale } = useI18n()
   const stars = item.sourceMeta.stars
   const repo = item.sourceMeta.repo
+  const projectPath = projectPathFromUrl(item.url)
   return (
     <li className="relative">
-      <a href={item.url} target="_blank" rel="noopener noreferrer"
+      <a href={projectPath ? localizedPath(projectPath, locale) : item.url}
         aria-haspopup={onPreview ? 'dialog' : undefined}
         onClick={onPreview ? (event) => onPreview(item, event) : undefined}
         className="grid grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-2 py-3 pr-10 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">

@@ -8,11 +8,11 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | Vite + React 19 + TypeScript |
+| UI | TanStack Start/Router + Vite + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
-| Deploy | Cloudflare Workers static assets (`wrangler.toml` → `./dist`, SPA `not_found_handling`) |
+| Deploy | TanStack Start prerendered HTML via `@cloudflare/vite-plugin` and Cloudflare Workers Static Assets; Worker handles non-prerendered routes |
 
 Visual tokens and restraint are defined in [design.md](design.md); current page behavior is specified in [directory-ui.md](directory-ui.md).
 
@@ -39,17 +39,21 @@ Mobile
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
 - **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left. The Saved shortcut follows Jev news and reads browser-local bookmarks without a server account.
 - **Filtered GitHub projects** remain the primary result set. Jev news has its own static store and card view; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
-- An ordinary card or list-row click opens one shared project preview. The original GitHub URL remains the anchor fallback for modified clicks or disabled JavaScript.
+- An ordinary card or list-row click opens one shared project preview while the URL becomes the project's stable `/projects/:owner/:repo` address. A direct visit or modified click renders a standalone project page; the GitHub URL remains the explicit outbound action.
 
 ## Workers auto-deploy
 
-[`wrangler.toml`](../wrangler.toml) serves the Vite build as Workers **assets** with SPA fallback.
+[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English and Chinese variants of the homepage, Top 100, nine categories and every valid GitHub project detail into route-specific HTML; Cloudflare serves those files as Static Assets before invoking the Worker. The Worker handles non-prerendered routes and returns real 404 responses for unknown projects. This is not an SPA fallback or per-request SSR for the catalog.
+
+The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and Cloudflare Workers Builds; `package.json` declares the same supported major. English and Chinese `/news` and `/saved` pages are prerendered for direct navigation but remain `noindex` and outside the sitemap.
 
 Typical Git-connected Workers Builds flow:
 
 1. Push to `main`
-2. `npm run build` (`tsc -b && vite build`) → `dist/`
+2. `npm run build` validates news, generates the sitemap/OG image, prerenders catalog HTML and builds the client/server bundles with TypeScript checks → `dist/`
 3. `npx wrangler deploy`
+
+Every data commit triggers a full application build; it is not incremental compilation. Cloudflare's asset upload can skip unchanged files. Keep the current finite catalog as static HTML, and measure actual Workers Builds time before adding a more complex incremental publishing system.
 
 Local:
 
@@ -71,12 +75,14 @@ npm run deploy   # build + wrangler deploy
 | `src/components/ItemCard.tsx` | GitHub cards; X card code retained for future placement |
 | `src/components/SavedPanel.tsx` + `src/hooks/useSaved.ts` | Source-grouped local bookmarks and storage lifecycle |
 | `src/App.tsx` | Header, GitHub search and category/news/saved navigation |
+| `src/routes/*` + `src/router.tsx` | TanStack Start routes, head metadata, directory shell, and direct project detail |
+| `src/lib/project-routes.ts` + `src/lib/locale-routes.ts` + `scripts/generate-sitemap.ts` | Stable project identity, language-specific URL variants, and deterministic sitemap generation |
 
 ## Search discoverability
 
-The Vite build renders the existing React homepage into `dist/index.html` after bundling. Google and other crawlers receive the real directory HTML immediately instead of an empty `#root`; React hydrates the same markup for visitors. The server snapshot starts in English, then the browser restores a saved or preferred Chinese locale after hydration. Locale-dependent number formatting and title ordering use explicit locales so the first browser render agrees with the static HTML. This does **not** manufacture separate pages for each listing: the site's only canonical URL and sitemap entry remain the homepage.
+TanStack Start prerenders each finite catalog route in English at its original path and Chinese at `/zh` plus that path. A project has one lower-case identity, with one self-canonical URL per language and reciprocal `hreflang` alternates; the original repository title and summary remain untranslated source data. In-app card clicks use TanStack route masking: the browser shows the language-matched public project URL while retaining the directory beneath the preview; Back or backdrop dismissal returns to the prior filter, and Forward reopens the preview. A reload or copied URL resolves to that language's standalone page. News previews mask an internal search-state history entry without creating a second article URL. Saved source and category filters stay in validated search state. A synchronous head script redirects unprefixed HTML requests to `/zh` before body parsing when the reader previously chose Chinese, or when a new visitor's primary browser language is Chinese; an explicit English choice wins over browser language. IP geolocation is not used. The URL determines the server-rendered locale, so the static HTML and first React render match without an English-to-Chinese flash. Language switching performs a full navigation to the equivalent static path; it intentionally keeps category/project identity and query state, but does not preserve an open preview's transient background. This doubles prerendered page count and should be watched in Workers Builds.
 
-`public/robots.txt` permits crawling and points to `public/sitemap.xml`, which lists only that canonical homepage. Do not add card modal states or outbound repositories as local sitemap URLs. `public/llms.txt` is a short, optional agent-facing guide to the live directory and Markdown catalog; it is not an indexing directive, a substitute for the sitemap, or a claim that individual project pages exist. Keep it factual and small rather than duplicating the catalog into `llms-full.txt`.
+`public/robots.txt` permits crawling and points to the generated `public/sitemap.xml`. The generator lists both language variants of the homepage, Top 100, populated categories, and projects with non-empty summaries, with reciprocal `hreflang` entries; it rejects invalid/duplicate GitHub identities and invents no `lastmod`. Search/sort state, browser-local Saved, client-loaded news summaries, and transient preview routes are not sitemap entries. `public/llms.txt` is a short agent-facing guide, not an indexing directive.
 
 Search Console's 2026-09-20 export is only one day of evidence, not a basis for keyword stuffing or mass-generated thin pages. Verify the rendered homepage with URL Inspection and measure multi-week query trends before changing titles or information architecture.
 

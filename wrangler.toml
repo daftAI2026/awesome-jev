@@ -1,9 +1,13 @@
-# Cloudflare Workers — Vite SPA (static assets)
+# Cloudflare Workers — TanStack Start 预渲染与路由回退
 # Workers Builds (Git): push to main → npm run build → npx wrangler deploy
 
-name = "awesome-jev"
-compatibility_date = "2026-09-18"
+name = "awesome-jev-project"
+main = "@tanstack/react-start/server-entry"
+compatibility_date = "2026-09-24"
+compatibility_flags = ["nodejs_compat"]
 
 [assets]
-directory = "./dist"
-not_found_handling = "single-page-application"
+html_handling = "drop-trailing-slash"
+
+[secrets]
+required = []

@@ -1,17 +1,15 @@
-import { useEffect, useMemo, useState, type MouseEvent } from 'react'
+import { useEffect, useMemo, type MouseEvent } from 'react'
 import { CardMasonry } from '@/components/CardMasonry'
 import { NewsPanel } from '@/components/NewsPanel'
 import { Button } from '@/components/ui/button'
 import { CATEGORIES, CATEGORY_LABEL, NEWS_CATEGORIES, NEWS_CATEGORY_LABEL, type Category } from '@/lib/categories'
 import { searchItems } from '@/lib/search'
 import type { NewsItem } from '@/lib/news'
-import type { SavedEntry, SavedKind } from '@/lib/saved'
+import type { SavedEntry, SavedKind, SavedSection } from '@/lib/saved'
 import type { DirectoryItem } from '@/lib/types'
 import { useI18n } from '@/i18n'
 
 type Project = DirectoryItem & { category?: Category }
-type SavedSection = 'github' | 'news'
-
 function CategoryFilters<T extends string>({ options, selected, onSelect }: {
   options: { id: T; label: string }[]
   selected: T | 'all'
@@ -49,7 +47,8 @@ function UnavailableSaved({ entries, kind, onRemove }: {
 }
 
 export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ranks, onProjectPreview,
-  onToggleProject, onToggleNews, onRemoveMissing, onNewsSelect }: {
+  onToggleProject, onToggleNews, onRemoveMissing, onNewsSelect, newsPreviewId, onNewsPreview, onNewsPreviewClose,
+  section, projectCategory, newsCategory, onSectionChange, onProjectCategoryChange, onNewsCategoryChange }: {
   entries: SavedEntry[]
   projects: Project[]
   news: NewsItem[] | null
@@ -61,12 +60,17 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
   onToggleNews: (item: NewsItem) => void
   onRemoveMissing: (kind: SavedKind, id: string) => void
   onNewsSelect: () => void
+  newsPreviewId?: string | null
+  onNewsPreview: (item: NewsItem) => void
+  onNewsPreviewClose: () => void
+  section: SavedSection
+  projectCategory: Category | 'all'
+  newsCategory: string
+  onSectionChange: (section: SavedSection) => void
+  onProjectCategoryChange: (category: Category | 'all') => void
+  onNewsCategoryChange: (category: string) => void
 }) {
   const { t } = useI18n()
-  const [section, setSection] = useState<SavedSection>(() =>
-    entries.some((entry) => entry.kind === 'github') || !entries.some((entry) => entry.kind === 'news') ? 'github' : 'news')
-  const [projectCategory, setProjectCategory] = useState<Category | 'all'>('all')
-  const [newsCategory, setNewsCategory] = useState<string>('all')
   useEffect(() => {
     if (section === 'news' && entries.some((entry) => entry.kind === 'news')) onNewsSelect()
   }, [section, entries, onNewsSelect])
@@ -100,14 +104,14 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
       </div>
       <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label={t('categorySaved')}>
         <Button variant={section === 'github' ? 'secondary' : 'outline'} aria-pressed={section === 'github'}
-          onClick={() => setSection('github')}>{t('savedProjects')} <span className="ml-1 tabular-nums text-muted-foreground">{savedProjects.length}</span></Button>
+          onClick={() => onSectionChange('github')}>{t('savedProjects')} <span className="ml-1 tabular-nums text-muted-foreground">{savedProjects.length}</span></Button>
         <Button variant={section === 'news' ? 'secondary' : 'outline'} aria-pressed={section === 'news'}
-          onClick={() => setSection('news')}>{t('savedNews')} <span className="ml-1 tabular-nums text-muted-foreground">{entries.filter((entry) => entry.kind === 'news').length}</span></Button>
+          onClick={() => onSectionChange('news')}>{t('savedNews')} <span className="ml-1 tabular-nums text-muted-foreground">{entries.filter((entry) => entry.kind === 'news').length}</span></Button>
       </div>
       {section === 'github' ? (
         <>
           <CategoryFilters options={availableProjectCategories.map((category) => ({ id: category, label: t(CATEGORY_LABEL[category]) }))}
-            selected={activeProjectCategory} onSelect={setProjectCategory} />
+            selected={activeProjectCategory} onSelect={onProjectCategoryChange} />
           {filteredProjects.length > 0
             ? <CardMasonry items={filteredProjects} ranks={ranks} onPreview={onProjectPreview}
                 savedIds={projectIds} onToggleSaved={onToggleProject} />
@@ -119,9 +123,10 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
           ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
           : <>
               <CategoryFilters options={availableNewsCategories.map((category) => ({ id: category, label: t(NEWS_CATEGORY_LABEL[category]) }))}
-                selected={activeNewsCategory} onSelect={setNewsCategory} />
+                selected={activeNewsCategory} onSelect={onNewsCategoryChange} />
               {filteredNews.length > 0
-                ? <NewsPanel items={filteredNews} query={query} savedIds={newsIds} onToggleSaved={onToggleNews} savedView />
+                ? <NewsPanel items={filteredNews} query={query} savedIds={newsIds} onToggleSaved={onToggleNews}
+                    previewId={newsPreviewId} onPreview={onNewsPreview} onPreviewClose={onNewsPreviewClose} savedView />
                 : <p className="py-10 text-sm text-muted-foreground">{t(query ? 'emptySearch' : 'savedEmpty')}</p>}
               <UnavailableSaved entries={missingNews} kind="news" onRemove={onRemoveMissing} />
             </>}

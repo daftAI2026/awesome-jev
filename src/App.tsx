@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
+import { useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour, X } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
@@ -19,12 +20,15 @@ import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { useI18n } from '@/i18n'
 import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
-import { CATEGORIES, CATEGORY_LABEL, type Category } from '@/lib/categories'
+import { CATEGORIES, CATEGORY_LABEL, NEWS_CATEGORIES, type Category } from '@/lib/categories'
 import { useSaved } from '@/hooks/useSaved'
+import { savedRouteSearch, type SavedRouteSearch, type SavedSection } from '@/lib/saved'
 import { searchItems } from '@/lib/search'
 import { githubStarRanks, sortGithubItems } from '@/lib/sort'
 import type { NewsItem } from '@/lib/news'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
+import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
+import { localizedPath, stripLocalePrefix } from '@/lib/locale-routes'
 
 type DirectoryFilter = 'all' | 'top100' | 'news' | 'saved' | Category
 type GithubItem = DirectoryItem & { category?: Category }
@@ -39,8 +43,23 @@ const FILTER_LABEL = {
 } as const
 const GITHUB_SORT_KEY = 'awesome-jev-github-sort'
 const GITHUB_VIEW_KEY = 'awesome-jev-github-view'
-const CATEGORY_KEY = 'awesome-jev-category'
 const TOP_PROJECT_LIMIT = 100
+
+function filterFromPath(pathname: string): DirectoryFilter | null {
+  pathname = stripLocalePrefix(pathname)
+  if (pathname === '/') return 'all'
+  if (pathname === '/top100') return 'top100'
+  if (pathname === '/news') return 'news'
+  if (pathname === '/saved') return 'saved'
+  const category = pathname.match(/^\/category\/([^/]+)\/?$/)?.[1]
+  return CATEGORIES.find((entry) => entry === category) ?? null
+}
+
+function filterPath(filter: DirectoryFilter): string {
+  if (filter === 'all') return '/'
+  if (filter === 'top100' || filter === 'news' || filter === 'saved') return `/${filter}`
+  return `/category/${filter}`
+}
 
 function readStoredSort(): GithubSort {
   try {
@@ -58,20 +77,25 @@ function readStoredView(): GithubView {
   return 'cards'
 }
 
-function readStoredFilter(): DirectoryFilter {
-  try {
-    const value = localStorage.getItem(CATEGORY_KEY)
-    if (value === 'all' || value === 'top100' || value === 'news' || value === 'saved' || CATEGORIES.some((category) => category === value)) return value as DirectoryFilter
-  } catch { /* ignore */ }
-  return 'all'
-}
-
 export default function App() {
-  const { t } = useI18n()
+  const { locale, t } = useI18n()
+  const navigate = useNavigate()
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const basePath = stripLocalePrefix(pathname)
+  const routeSearch = useRouterState({ select: (state) => state.location.search })
+  const newsPreviewId = useRouterState({ select: (state) => {
+    const preview = state.location.search.preview
+    return typeof preview === 'string' ? preview : null
+  } })
+  const newsPreviewIsMasked = useRouterState({ select: (state) => Boolean(state.location.maskedLocation) })
   const [query, setQuery] = useState('')
-  const [sort, setSort] = useState<GithubSort>(readStoredSort)
-  const [view, setView] = useState<GithubView>(readStoredView)
-  const [filter, setFilter] = useState<DirectoryFilter>(readStoredFilter)
+  const [sort, setSort] = useState<GithubSort>('stars')
+  const [view, setView] = useState<GithubView>('cards')
+  const [preferencesReady, setPreferencesReady] = useState(false)
+  const [filter, setFilter] = useState<DirectoryFilter>(() => filterFromPath(pathname) ?? 'all')
+  const [lastSavedSearch, setLastSavedSearch] = useState<SavedRouteSearch>(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : {})
+  const savedSearch = useMemo(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : lastSavedSearch,
+    [basePath, routeSearch, lastSavedSearch])
   const [newsItems, setNewsItems] = useState<NewsItem[] | null>(null)
   const [newsLoadFailed, setNewsLoadFailed] = useState(false)
   const [savedNewsRequested, setSavedNewsRequested] = useState(false)
@@ -82,9 +106,30 @@ export default function App() {
   const searchRef = useRef<HTMLInputElement>(null)
   const detailTriggerRef = useRef<HTMLElement | null>(null)
 
-  useEffect(() => { try { localStorage.setItem(GITHUB_SORT_KEY, sort) } catch { /* ignore */ } }, [sort])
-  useEffect(() => { try { localStorage.setItem(GITHUB_VIEW_KEY, view) } catch { /* ignore */ } }, [view])
-  useEffect(() => { try { localStorage.setItem(CATEGORY_KEY, filter) } catch { /* ignore */ } }, [filter])
+  useEffect(() => {
+    setSort(readStoredSort())
+    setView(readStoredView())
+    setPreferencesReady(true)
+  }, [])
+  useEffect(() => { if (preferencesReady) try { localStorage.setItem(GITHUB_SORT_KEY, sort) } catch { /* ignore */ } }, [sort, preferencesReady])
+  useEffect(() => { if (preferencesReady) try { localStorage.setItem(GITHUB_VIEW_KEY, view) } catch { /* ignore */ } }, [view, preferencesReady])
+  useEffect(() => {
+    const preview = basePath.match(/^\/preview\/([^/]+)\/([^/]+)\/?$/)
+    if (preview) {
+      const project = findGitHubProject(items, preview[1], preview[2])
+      setDetailItem(project ?? null)
+      setDetailOpen(Boolean(project))
+      return
+    }
+    const next = filterFromPath(pathname)
+    if (next) {
+      setFilter(next)
+      setDetailOpen(false)
+    }
+  }, [basePath])
+  useEffect(() => {
+    if (basePath === '/saved') setLastSavedSearch(savedRouteSearch(routeSearch))
+  }, [basePath, routeSearch])
   useEffect(() => {
     if (filter !== 'news' && (filter !== 'saved' || !savedNewsRequested || !savedEntries.some((entry) => entry.kind === 'news'))) return
     if (newsItems !== null || newsLoadFailed) return
@@ -111,9 +156,9 @@ export default function App() {
   const selectFilter = useCallback((next: DirectoryFilter) => {
     const mode = (value: DirectoryFilter) => value === 'news' || value === 'saved' ? value : 'github'
     if (mode(filter) !== mode(next)) setQuery('')
-    setFilter(next)
     setCategoryOpen(false)
-  }, [filter])
+    void navigate({ to: localizedPath(filterPath(next), locale) })
+  }, [filter, locale, navigate])
   const returnHome = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
@@ -124,24 +169,72 @@ export default function App() {
   const openProjectPreview = useCallback((item: DirectoryItem, event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
+    const path = projectPathFromUrl(item.url)
+    if (!path) return
+    const [, , owner, repo] = path.split('/')
     detailTriggerRef.current = event.currentTarget
+    if (filter === 'saved') setLastSavedSearch(savedSearch)
     setDetailItem(item)
     setDetailOpen(true)
-  }, [])
+    void navigate({
+      to: '/{-$locale}/preview/$owner/$repo',
+      params: { locale: locale === 'zh' ? 'zh' : undefined, owner, repo },
+      mask: { to: '/{-$locale}/projects/$owner/$repo', params: { locale: locale === 'zh' ? 'zh' : undefined, owner, repo } },
+      resetScroll: false,
+    })
+  }, [filter, locale, navigate, savedSearch])
+  const onDetailOpenChange = useCallback((open: boolean) => {
+    if (!open && basePath.startsWith('/preview/')) {
+      window.history.back()
+      setDetailOpen(false)
+      return
+    }
+    setDetailOpen(open)
+  }, [basePath])
+  const openNewsPreview = useCallback((item: NewsItem) => {
+    if (filter === 'saved') {
+      const background = { ...savedSearch, section: 'news' as const, preview: undefined }
+      const to = localizedPath('/saved', locale)
+      void navigate({ to, search: { ...background, preview: item.id }, mask: { to, search: background }, resetScroll: false })
+    } else {
+      const to = localizedPath('/news', locale)
+      void navigate({ to, search: { preview: item.id }, mask: { to, search: {} }, resetScroll: false })
+    }
+  }, [filter, locale, navigate, savedSearch])
+  const closeNewsPreview = useCallback(() => {
+    if (!newsPreviewId) return
+    if (newsPreviewIsMasked) {
+      window.history.back()
+    } else {
+      if (filter === 'saved') void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, preview: undefined }, replace: true })
+      else void navigate({ to: localizedPath('/news', locale), search: {}, replace: true })
+    }
+  }, [filter, locale, navigate, newsPreviewId, newsPreviewIsMasked, savedSearch])
+  const selectSavedSection = useCallback((section: SavedSection) => {
+    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, section } })
+  }, [locale, navigate, savedSearch])
+  const selectSavedProjectCategory = useCallback((category: Category | 'all') => {
+    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, projectCategory: category === 'all' ? undefined : category } })
+  }, [locale, navigate, savedSearch])
+  const selectSavedNewsCategory = useCallback((category: string) => {
+    const newsCategory = NEWS_CATEGORIES.find((entry) => entry === category)
+    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, newsCategory } })
+  }, [locale, navigate, savedSearch])
   const savedProjectIds = useMemo(() => new Set(savedEntries.filter((entry) => entry.kind === 'github').map((entry) => entry.id)), [savedEntries])
   const savedNewsIds = useMemo(() => new Set(savedEntries.filter((entry) => entry.kind === 'news').map((entry) => entry.id)), [savedEntries])
+  const savedSection = savedSearch.section ?? (newsPreviewId || (!savedEntries.some((entry) => entry.kind === 'github') && savedEntries.some((entry) => entry.kind === 'news')) ? 'news' : 'github')
   const toggleProjectSavedRaw = useCallback((item: DirectoryItem) => toggleSaved('github', item.id), [toggleSaved])
   const toggleProjectSaved = useCallback((item: DirectoryItem) => {
     if (filter === 'saved' && savedProjectIds.has(item.id)) {
       if (detailOpen) {
         detailTriggerRef.current = document.getElementById('main')
-        setDetailOpen(false)
+        onDetailOpenChange(false)
       } else {
         requestAnimationFrame(() => document.getElementById('main')?.focus())
       }
     }
     toggleProjectSavedRaw(item)
-  }, [filter, savedProjectIds, detailOpen, toggleProjectSavedRaw])
+  }, [filter, savedProjectIds, detailOpen, toggleProjectSavedRaw, onDetailOpenChange])
   const toggleNewsSaved = useCallback((item: NewsItem) => toggleSaved('news', item.id), [toggleSaved])
   const requestSavedNews = useCallback(() => setSavedNewsRequested(true), [])
   const filterButton = (id: DirectoryFilter) => {
@@ -153,10 +246,15 @@ export default function App() {
     return (
       <Button
         key={id}
-        type="button"
+        nativeButton={false}
+        render={<a href={localizedPath(filterPath(id), locale)} />}
         variant={filter === id ? 'secondary' : 'ghost'}
-        aria-pressed={filter === id}
-        onClick={() => selectFilter(id)}
+        aria-current={filter === id ? 'page' : undefined}
+        onClick={(event) => {
+          if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+          event.preventDefault()
+          selectFilter(id)
+        }}
         className={`min-h-8 w-full rounded-lg px-3 py-1.5 font-normal whitespace-nowrap ${id === 'saved' ? 'justify-start gap-2' : 'justify-between gap-4'} ${filter === id ? 'text-foreground' : 'text-muted-foreground'}`}
       >
         <span className={`min-w-0 text-left leading-snug ${id === 'saved' ? '' : 'flex-1'}`}>{t(FILTER_LABEL[id])}</span>
@@ -279,12 +377,17 @@ export default function App() {
             {filter === 'news' ? (
               newsLoadFailed ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoadFailed')}</p>
                 : newsItems === null ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
-                  : <NewsPanel key={query} items={newsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved} />
+                  : <NewsPanel key={query} items={newsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
+                      previewId={newsPreviewId} onPreview={openNewsPreview} onPreviewClose={closeNewsPreview} />
             ) : filter === 'saved' ? (
               <SavedPanel entries={savedEntries} projects={items} news={newsItems} newsLoadFailed={newsLoadFailed}
                 query={query} ranks={githubRanks} onProjectPreview={openProjectPreview}
                 onToggleProject={toggleProjectSaved} onToggleNews={toggleNewsSaved} onRemoveMissing={toggleSaved}
-                onNewsSelect={requestSavedNews} />
+                onNewsSelect={requestSavedNews} newsPreviewId={newsPreviewId}
+                onNewsPreview={openNewsPreview} onNewsPreviewClose={closeNewsPreview}
+                section={savedSection} projectCategory={savedSearch.projectCategory ?? 'all'} newsCategory={savedSearch.newsCategory ?? 'all'}
+                onSectionChange={selectSavedSection} onProjectCategoryChange={selectSavedProjectCategory}
+                onNewsCategoryChange={selectSavedNewsCategory} />
             ) : sorted.length === 0 ? (
               <p className="py-10 text-sm text-muted-foreground">{t(hasQuery ? 'emptySearch' : 'emptySection')}</p>
             ) : view === 'list' ? (
@@ -305,7 +408,7 @@ export default function App() {
         item={detailItem}
         categoryLabel={detailCategory ? t(FILTER_LABEL[detailCategory]) : undefined}
         open={detailOpen}
-        onOpenChange={setDetailOpen}
+        onOpenChange={onDetailOpenChange}
         triggerRef={detailTriggerRef}
         saved={detailItem ? savedProjectIds.has(detailItem.id) : false}
         onToggleSaved={detailItem ? () => toggleProjectSaved(detailItem) : undefined}

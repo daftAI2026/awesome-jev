@@ -18,6 +18,54 @@
   .card-masonry[data-masonry-ready="true"] > li {
     content-visibility: auto;
   }
+
+}
+
+.masonry-shell { position: relative; }
+.masonry-skeleton { display: none; }
+
+@media (scripting: enabled) and (min-width: 40rem) {
+  .masonry-shell:has(.card-masonry:not([data-masonry-ready])) .card-masonry > li {
+    visibility: hidden;
+  }
+
+  .masonry-shell:has(.card-masonry:not([data-masonry-ready])) .masonry-skeleton {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    pointer-events: none;
+  }
+
+  .masonry-skeleton-card {
+    display: flex;
+    min-height: 13rem;
+    flex-direction: column;
+    gap: .75rem;
+    padding: .75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+  }
+
+  .masonry-skeleton-title,
+  .masonry-skeleton-line {
+    display: block;
+    height: .75rem;
+    border-radius: var(--radius-sm);
+    background: var(--muted);
+  }
+
+  .masonry-skeleton-title { width: 46%; height: 1rem; margin-bottom: .75rem; }
+  .masonry-skeleton-line-short { width: 62%; }
+}
+
+@media (scripting: enabled) and (min-width: 64rem) {
+  .masonry-shell:has(.card-masonry:not([data-masonry-ready])) .masonry-skeleton {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
