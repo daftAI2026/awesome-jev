@@ -5,8 +5,7 @@ import type { DirectoryItem } from '@/lib/types'
 import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath } from '@/lib/locale-routes'
 import { SaveButton } from '@/components/SaveButton'
-import StarBorder from '@/components/StarBorder'
-import '@/components/StarBorderProject.css'
+import { FeaturedProjectBorder } from '@/components/FeaturedProjectBorder'
 import { useI18n } from '@/i18n'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -116,24 +115,9 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
       </Card>
   )
 
-  return (
-    <div className="group relative">
-      {featured ? (
-        <StarBorder
-          as="div"
-          className="project-star-border"
-          color="var(--ring)"
-          speed="5s"
-          thickness={1}
-          backgroundColor="var(--card)"
-          textColor="var(--card-foreground)"
-          borderColor="var(--border)"
-        >
-          {card}
-        </StarBorder>
-      ) : card}
-    </div>
-  )
+  return featured
+    ? <FeaturedProjectBorder>{card}</FeaturedProjectBorder>
+    : <div className="group relative">{card}</div>
 }
 
 export const ItemCard = memo(function ItemCard({ item, rank, onPreview, saved, onToggleSaved }: ItemCardProps) {

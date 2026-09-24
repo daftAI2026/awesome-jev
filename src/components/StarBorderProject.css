@@ -38,6 +38,12 @@
   animation-direction: normal;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.group[data-star-active="true"] > .project-star-border > .border-gradient-top,
+.group[data-star-active="true"] > .project-star-border > .border-gradient-bottom {
+  animation-play-state: running;
 }
 
 .star-border-container.project-star-border > .border-gradient-bottom {
