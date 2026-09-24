@@ -240,23 +240,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "kydlikebtc/awesome-jev": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "kydlikebtc/awesome-jev",
-        "status": "review",
-        "reason": "missing-open-source-license",
-        "sha": "b8bae378c7036f45a5a4fd48bc88289d30af0101",
-        "evidenceUrl": "https://github.com/kydlikebtc/awesome-jev/blob/b8bae378c7036f45a5a4fd48bc88289d30af0101/README.md",
-        "evidenceSha256": "dacc8eae7404d2254b1c5c9fe7b39c35a535c0de726a0986a2fa9dce52146b2b",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "quangliz/dan": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1567,6 +1550,30 @@
         "checkedAt": "2026-09-24T14:25:40.340Z"
       },
       "retryAt": "2026-10-01T14:25:40.340Z"
+    },
+    "bhushankinge/jev-laya-classification-bench": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T19:29:42.525Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T19:29:42.525Z",
+      "lastReview": {
+        "repo": "bhushankinge/jev-laya-classification-bench",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.14,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.38,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "d87c2435165744e39b573086d3e0e3b3fd4bcbb1",
+        "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/d87c2435165744e39b573086d3e0e3b3fd4bcbb1/README.md",
+        "evidenceSha256": "729c93bdf1621cf63c53c67c4cdbd810841b9a223d15a5e4885180d84367650a",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T19:29:42.525Z"
+      },
+      "retryAt": "2026-10-01T19:29:42.525Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-24T14:25:40.340Z",
+  "at": "2026-09-24T19:29:42.525Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 57,
-      "total": 57,
+      "fetched": 59,
+      "total": 59,
       "status": "complete"
     }
   ],
@@ -27,20 +27,22 @@
   "evicted": 0,
   "receipts": [
     {
-      "repo": "4nt0ineb/typed-decision-bench",
+      "repo": "bhushankinge/jev-laya-classification-bench",
       "status": "review",
       "score": {
-        "jevAbout": 0.11,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.5,
-        "category": "alternatives"
+        "jevAbout": 0.14,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.38,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "649b302fe4f651679a20fb3886ec69c3d36f12ac",
-      "evidenceUrl": "https://github.com/4nt0ineb/typed-decision-bench/blob/649b302fe4f651679a20fb3886ec69c3d36f12ac/README.md",
-      "evidenceSha256": "d2f56562a6554b8550679e3da4c5b75b0cb1ff0ccf508e63898b5b27a6ec72e9",
+      "sha": "d87c2435165744e39b573086d3e0e3b3fd4bcbb1",
+      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/d87c2435165744e39b573086d3e0e3b3fd4bcbb1/README.md",
+      "evidenceSha256": "729c93bdf1621cf63c53c67c4cdbd810841b9a223d15a5e4885180d84367650a",
       "model": "jev-latest",
-      "checkedAt": "2026-09-24T14:25:40.340Z"
+      "checkedAt": "2026-09-24T19:29:42.525Z"
     }
   ],
-  "totalProjects": 1141
+  "totalProjects": 1171
 }
