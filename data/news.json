@@ -2008,5 +2008,50 @@
     "reason": null,
     "originalUrl": "https://benchmarkheaven.com/jev-models",
     "aihotUrl": "https://aihot.news/items/cmudu5ho307q5roghwle4c3sr"
+  },
+  {
+    "id": "cmug0bd95070xrogvww0pcaha",
+    "title": "JevSearch 用 Jev 验证搜索结果",
+    "originalTitle": "Relevance is great， but relevance to what？ Jev gives you search intelligence that no canned SEO can …",
+    "summary": "相关性很重要，但相关于什么？Jev 给你任何套路 SEO 都钻不进去的搜索智能 🪱\n\n我构建了 JevSearch，用 Jev 搜索网络并验证你的结果。\n\n给出一个查询和筛选标准，用 @browserbase search 获取 t25 结果，然后 Jev 打分并返回 t5 结果。\n\nJev 常常会选择初始前 5 之外的 url，认为它们更相关。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-24T20:21:23.000Z",
+    "discoveredAt": "2026-09-24T20:51:06.781Z",
+    "category": null,
+    "score": 35,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2103218258405118035",
+    "aihotUrl": "https://aihot.news/items/cmug0bd95070xrogvww0pcaha"
+  },
+  {
+    "id": "cmufxxbbd04kjrogv9bwgbwuo",
+    "title": "在 Databricks SQL 中运行开源决策模型 SemIf-OpenJev",
+    "originalTitle": "Running open-Jev in SQL on Databricks",
+    "summary": "Databricks 发布可导入 Notebook，支持在 SQL 中通过 ai_query 直接调用开源决策模型 SemIf-OpenJev，并返回结构化分类结果与选项概率。该流程借助 Serverless GPU 与 AI Runtime 自动下载模型、注册并创建 GPU Model Serving 端点，三步即可完成部署，示例用于将酒店评论分类为好评或差评。",
+    "sourceName": "Databricks：Blog（RSS）",
+    "publishedAt": "2026-09-24T16:55:01.000Z",
+    "discoveredAt": "2026-09-24T19:44:12.558Z",
+    "category": null,
+    "score": 45,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.databricks.com/blog/running-open-jev-sql-databricks",
+    "aihotUrl": "https://aihot.news/items/cmufxxbbd04kjrogv9bwgbwuo"
+  },
+  {
+    "id": "cmufx3m1603mmrogv3z84gzsa",
+    "title": "dejevnerates 项目仍在建设中",
+    "originalTitle": "We're hard at work to give you dejevnerates what you want， signups still closed， stay tuned！ 🏗️",
+    "summary": "我们正在努力为你们这些 dejevnerates 带来你们想要的东西，注册仍然关闭，敬请期待！🏗️",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-24T18:55:39.000Z",
+    "discoveredAt": "2026-09-24T19:21:06.106Z",
+    "category": null,
+    "score": 12,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2103196683932983335",
+    "aihotUrl": "https://aihot.news/items/cmufx3m1603mmrogv3z84gzsa"
   }
 ]
