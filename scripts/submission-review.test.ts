@@ -71,11 +71,46 @@ test('PR extraction compares merge base and reviews only added repositories, inc
     if (path.endsWith('/pulls/3')) return { head: { sha: head }, base: { sha: base } }
     if (path.includes('/files?')) return [{ filename: 'data/items.json', status: 'modified' }]
     if (path.includes('/compare/')) return { merge_base_commit: { sha: merge } }
-    const rows = path.endsWith(merge) ? [item('old')] : [item('old'), item('new')]
+    const rows = path.endsWith(merge) ? [item('old')] : [item('old'), { ...item('new'), sourceMeta: { repo: 'test/new', openIssues: 3 } }]
     return { encoding: 'base64', content: Buffer.from(JSON.stringify(rows)).toString('base64') }
   }, { number: 3, pull_request: {} })
   assert.deepEqual(input.keys, ['test/new'])
   assert.equal(input.notes.length, 1)
+})
+test('PR extraction reads a pinned Git blob when Contents omits files over 1 MB', async () => {
+  const head = 'a'.repeat(40), base = 'b'.repeat(40), merge = 'c'.repeat(40)
+  const oldRows = [item('old')], newRows = [...oldRows, item('new')]
+  const blobs = new Map([[merge, oldRows], [head, newRows]])
+  let blobReads = 0
+  const input = await submissionInput(async (path: string) => {
+    if (path.endsWith('/pulls/6')) return { head: { sha: head }, base: { sha: base } }
+    if (path.includes('/files?')) return [{ filename: 'data/github.json', status: 'modified' }]
+    if (path.includes('/compare/')) return { merge_base_commit: { sha: merge } }
+    const ref = path.match(/[?&]ref=([a-f0-9]{40})$/)?.[1]
+    if (ref) {
+      const rows = blobs.get(ref)
+      assert.ok(rows)
+      return { encoding: 'none', sha: ref, size: Buffer.byteLength(JSON.stringify(rows)) }
+    }
+    const sha = path.match(/\/git\/blobs\/([a-f0-9]{40})$/)?.[1]
+    assert.ok(sha)
+    const rows = blobs.get(sha)
+    assert.ok(rows)
+    blobReads++
+    return { encoding: 'base64', sha, size: Buffer.byteLength(JSON.stringify(rows)), content: Buffer.from(JSON.stringify(rows)).toString('base64') }
+  }, { number: 6, pull_request: {} })
+  assert.deepEqual(input.keys, ['test/new'])
+  assert.equal(blobReads, 2)
+})
+test('PR extraction rejects mismatched blob content instead of reviewing a different revision', async () => {
+  const head = 'a'.repeat(40), base = 'b'.repeat(40), merge = 'c'.repeat(40)
+  await assert.rejects(submissionInput(async (path: string) => {
+    if (path.endsWith('/pulls/6')) return { head: { sha: head }, base: { sha: base } }
+    if (path.includes('/files?')) return [{ filename: 'data/github.json', status: 'modified' }]
+    if (path.includes('/compare/')) return { merge_base_commit: { sha: merge } }
+    if (path.includes('/contents/')) return { encoding: 'none', sha: merge, size: 10 }
+    return { encoding: 'base64', sha: head, size: 10, content: Buffer.from('[]').toString('base64') }
+  }, { number: 6, pull_request: {} }), /submission-invalid-data/)
 })
 test('known projects skip network and model; uncertain scores remain review', async () => {
   const failApi: Api = async () => assert.fail('Existing projects must not make calls')
@@ -243,13 +278,15 @@ test('processing uses submission language for pending, final and error notes', a
       number: 3, state: 'open', title: language === 'zh' ? '[Submission] 申请收录这个项目' : '[Submission] Add project',
       body: '', pull_request: {},
     } : path.endsWith('/pulls/3') ? Promise.reject(new Error('github-http-404')) : api(path)
-    await processSubmission(h.args)
+    assert.equal(await processSubmission(h.args), 'input-error')
     assert.equal(h.paid.length, 0)
     assert.equal(h.writes.length, 2)
     for (const { body } of h.writes) {
-      assert.ok(body.includes(language === 'zh' ? '请检查 JSON 格式' : 'Please check the JSON format'))
+      assert.ok(body.includes(language === 'zh' ? '暂时无法读取收录数据' : 'Could not read the submission data'))
+      assert.ok(!body.includes(language === 'zh' ? '未发现可审查' : 'No new GitHub projects'))
       assert.equal(/\p{Script=Han}/u.test(body), language === 'zh')
     }
+    assert.equal(parsedMeta({ ...botComment(), body: lastWrite(h).body }).retryable, true)
   }
 })
 

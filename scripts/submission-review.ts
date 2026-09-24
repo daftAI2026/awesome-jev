@@ -33,6 +33,7 @@ export const MAX_PROJECTS = 10
 export const DAILY_BUDGET = 100
 export const DAILY_REQUESTS = 2000
 const COOLDOWN_MS = 10 * 60 * 1000
+const MAX_SUBMISSION_FILE_BYTES = 4_500_000
 const BOT = 'github-actions[bot]'
 const safeError = (error: unknown) => error instanceof Error && /^(github|jev|submission)-[a-z0-9-]+$/.test(error.message) ? error.message : 'submission-invalid-data'
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
@@ -118,11 +119,20 @@ export async function eventTargets(api: Api, eventName: string | undefined, even
   }
   return []
 }
-async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<{ type?: string; url?: string }[]> {
+async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<{ type?: string; url?: string; sourceMeta?: unknown }[]> {
   try {
-    const data = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`) as { encoding?: string; content?: string }
-    if (data.encoding !== 'base64' || typeof data.content !== 'string' || data.content.length > 6000000) throw new Error('submission-data-too-large')
-    const rows = JSON.parse(Buffer.from(data.content, 'base64').toString())
+    const file = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`) as { encoding?: string; content?: string; sha?: string; size?: number }
+    let data = file
+    // --- Contents 对超过 1 MB 的文件不给正文；用它返回的 blob SHA 读取同一版本 ---
+    if (file.encoding === 'none') {
+      if (!/^[a-f0-9]{40}$/.test(file.sha ?? '') || typeof file.size !== 'number' || !Number.isSafeInteger(file.size) || file.size < 0 || file.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+      data = await api(`/repos/${REPOSITORY}/git/blobs/${file.sha}`) as typeof file
+      if (data.sha !== file.sha || data.size !== file.size) throw new Error('submission-invalid-data')
+    }
+    if (data.encoding !== 'base64' || typeof data.content !== 'string' || data.content.length > Math.ceil(MAX_SUBMISSION_FILE_BYTES / 3) * 4) throw new Error('submission-data-too-large')
+    const bytes = Buffer.from(data.content, 'base64')
+    if (bytes.byteLength > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+    const rows = JSON.parse(bytes.toString())
     if (!Array.isArray(rows)) throw new Error('submission-invalid-data')
     return rows
   } catch (error) {
@@ -148,6 +158,14 @@ export async function submissionInput(api: Api, issue: Issue, language: Language
     const after = await jsonAt(api, file.filename, pr.head.sha)
     const old = new Set(before.filter((row) => row.type === 'github').map((row) => repoKey(row.url ?? '')))
     const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url ?? '')))
+    // --- 旧 PR 的 openIssues 只为提取审查 URL 而忽略；正式目录仍禁止该字段 ---
+    if (file.filename !== 'data/github.json') {
+      for (const row of additions) {
+        if (row.sourceMeta && typeof row.sourceMeta === 'object' && !Array.isArray(row.sourceMeta)) {
+          delete (row.sourceMeta as Record<string, unknown>).openIssues
+        }
+      }
+    }
     validateRows(additions)
     for (const row of additions) keys.add(repoKey(row.url ?? '')!)
     if (file.filename !== 'data/github.json') notes.push(language === 'zh' ? '数据路径已迁移，请将收录条目放入 data/github.json，不要恢复 items/part 分片。' : 'Please add entries to data/github.json; do not restore the old items/part files.')
@@ -191,7 +209,8 @@ export function renderReport(meta: ReviewMeta, results: SubmissionResult[], note
     return `- [${r.repo}](https://github.com/${r.repo})${zh ? '：' : ': '}**${labels[r.status]}**${zh ? '。' : '. '}${reason}${progress}${[r.evidence, ...(r.evidenceLinks ?? []).slice(0, 2)].filter((url) => url && url.length <= 600).map((url, i) => ` [${zh ? '依据' : 'Evidence'}${i || ''}](${url})`).join('')}`.trimEnd()
   })
   const content = pending ? (zh ? '正在审查，请稍候。' : 'Review in progress.') :
-    lines.join('\n') || (zh ? '未发现可审查的新增 GitHub 项目。' : 'No new GitHub projects found to review.')
+    lines.join('\n') || (meta.retryable ? (zh ? '暂时无法开始审查。' : 'Review temporarily unavailable.') :
+      (zh ? '未发现可审查的新增 GitHub 项目。' : 'No new GitHub projects found to review.'))
   const extra = notes.length ? '\n\n' + notes.map((n) => `- ${n}`).join('\n') : ''
   return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
 }
@@ -201,8 +220,12 @@ export async function processSubmission({ api, writeComment, review, number, man
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
   const language = reportLanguage(issue)
   let input
+  let inputFailed = false
   try { input = await submissionInput(api, issue, language) }
-  catch { input = { keys: [], version: digest([issue.updated_at, issue.body]), notes: [language === 'zh' ? '无法读取收录数据，请检查 JSON 格式和提交路径。' : 'Could not read the submission data. Please check the JSON format and file paths.'] } }
+  catch {
+    inputFailed = true
+    input = { keys: [], version: digest([issue.number, issue.title, issue.body]), notes: [language === 'zh' ? '暂时无法读取收录数据；机器人稍后会重试。' : 'Could not read the submission data; the reviewer will retry later.'] }
+  }
   if (!input.keys.length && !input.notes.length) return 'no-projects'
   const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
   const comments = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
@@ -256,12 +279,12 @@ export async function processSubmission({ api, writeComment, review, number, man
     results.push(result)
   }
   checkpoint()
-  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: results.some((r) => r.status === 'error' || r.status === 'pending' || r.reason === 'submission-daily-requests') }, results, notes, false, language))
+  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: inputFailed || results.some((r) => r.status === 'error' || r.status === 'pending' || r.reason === 'submission-daily-requests') }, results, notes, false, language))
   if (process.env.GITHUB_STEP_SUMMARY) {
     const audit = results.map((r) => ({ repo: r.repo, status: r.status, reason: r.reason, deep: !!r.deep, progress: r.progress, filesRead: r.filesRead ?? 0, evidence: [r.evidence, ...(r.evidenceLinks ?? [])].filter(Boolean) }))
     appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\n### Evidence audit #${number}\n\n\`\`\`json\n${JSON.stringify(audit, null, 2)}\n\`\`\`\n`)
   }
-  return `reviewed-${results.length}`
+  return inputFailed ? 'input-error' : `reviewed-${results.length}`
 }
 
 export function commentWriter(token: string | undefined, { fetchImpl = fetch }: { fetchImpl?: typeof fetch } = {}): WriteComment {
