@@ -1873,5 +1873,35 @@
     "reason": null,
     "originalUrl": "https://www.together.ai/blog/how-to-train-your-own-jev",
     "aihotUrl": "https://aihot.news/items/cmueopn2p0du2royney9xs03m"
+  },
+  {
+    "id": "cmufae54k03neroagmmeho0rr",
+    "title": "Stanford 与 NVIDIA Research 发布对比语言模型 CLM-8B",
+    "originalTitle": "Contrastive Language Models",
+    "summary": "Stanford 与 NVIDIA Research 团队发布 Contrastive Language Models（CLM）及 CLM-8B，用对比学习连接状态与动作，作为快速决策的 System One 模型。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-09-24T04:20:59.000Z",
+    "discoveredAt": "2026-09-24T08:45:26.986Z",
+    "category": "ai-models",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://contrastive-lm.notion.site/",
+    "aihotUrl": "https://aihot.news/items/cmufae54k03neroagmmeho0rr"
+  },
+  {
+    "id": "cmuf9jgea05x8rocsw2y3zzlm",
+    "title": "1.395元复现Jev原型：百度千帆Token Plan最佳实践",
+    "originalTitle": null,
+    "summary": "百度千帆Token Plan个人版以313.9积分（折合1.395元）支持Opencode（基座模型DeepSeek-V4-Flash）在llama.cpp中复现TypeSafe AI的Jev机制，用约400行C++把自回归LLM改造为单次前向传播的结构化决策引擎。",
+    "sourceName": "公众号：百度智能云（文心）",
+    "publishedAt": "2026-09-22T11:29:10.000Z",
+    "discoveredAt": "2026-09-24T08:21:34.285Z",
+    "category": null,
+    "score": 38,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://mp.weixin.qq.com/s?__biz=MzA5NTQ5MzE5OQ%3D%3D&mid=2653160541&idx=3&sn=bbd3bba3e1980287f3087427da8678c9",
+    "aihotUrl": "https://aihot.news/items/cmuf9jgea05x8rocsw2y3zzlm"
   }
 ]
