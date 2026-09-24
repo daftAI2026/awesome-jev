@@ -21,11 +21,7 @@ function fixture(t: TestContext): string {
   const root = mkdtempSync(join(tmpdir(), 'jev-catalog-'))
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'data')); mkdirSync(join(root, 'radar'))
-  const youtube = { id: 'yt-1', type: 'youtube', title: 'Video', summary: 'Video summary', url: 'https://youtube.com/watch?v=abc', sourceMeta: {} }
-  const post = { id: 'x-1', type: 'x', title: 'Post', summary: 'Keep exact text', url: 'https://x.com/test/status/1', sourceMeta: {} }
   writeFileSync(join(root, 'data/github.json'), JSON.stringify([row(), row('two')]))
-  writeFileSync(join(root, 'data/youtube.json'), JSON.stringify([youtube]))
-  writeFileSync(join(root, 'data/x.json'), JSON.stringify([post]))
   writeFileSync(join(root, 'radar/state.json'), JSON.stringify(emptyState()))
   writeFileSync(join(root, 'radar/latest.json'), '{}')
   writeFileSync(join(root, 'README.md'), renderReadme(text, readCatalog(root).rows))
@@ -48,9 +44,9 @@ function snapshot(t: TestContext): { root: string; output: string; result: Snaps
   return { root, output, result }
 }
 
-test('separate sources remain readable', (t) => {
+test('GitHub catalog remains readable', (t) => {
   const root = fixture(t), catalog = readCatalog(root)
-  assert.equal(catalog.rows.length, 3)
+  assert.equal(catalog.rows.length, 2)
   assert.equal(catalog.rows.filter((r) => r.type === 'github').length, 2)
 })
 test('metadata refresh preserves editorial content, stable ID and review scores', () => {
@@ -100,11 +96,10 @@ test('new candidate IDs cannot collide on owner/repo hyphen boundaries', () => {
   const b = candidateRow({ ...meta, full_name: 'a/b-c', html_url: 'https://github.com/a/b-c' })
   assert.notEqual(a.id, b.id)
 })
-test('reviewed snapshot applies as a unit without touching X', (t) => {
-  const { root, output } = snapshot(t), xBefore = readFileSync(join(root, 'data/x.json'), 'utf8')
+test('reviewed snapshot applies as a unit', (t) => {
+  const { root, output } = snapshot(t)
   validateSnapshot(root, output); applySnapshot(root, output)
-  assert.equal(readCatalog(root).rows.length, 4)
-  assert.equal(readFileSync(join(root, 'data/x.json'), 'utf8'), xBefore)
+  assert.equal(readCatalog(root).rows.length, 3)
 })
 const snapshotMutations: ReadonlyArray<[string, (rows: DirectoryRow[]) => void]> = [
   ['delete old row', (rows) => { rows.shift() }],
@@ -118,13 +113,6 @@ for (const [name, mutate] of snapshotMutations) test(`snapshot rejects ${name}`,
   mutate(rows); writeFileSync(path, JSON.stringify(rows))
   assert.throws(() => validateSnapshot(root, output))
 })
-test('snapshot rejects changes to YouTube', (t) => {
-  const { root, output } = snapshot(t), path = join(output, 'data/youtube.json')
-  const rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]; rows[0].summary = 'Changed social text'
-  writeFileSync(path, JSON.stringify(rows))
-  assert.throws(() => validateSnapshot(root, output), /Non-GitHub/)
-})
-
 test('README grouping follows the reviewed category, not self-assigned topics', () => {
   const spoof = { ...row('spoof'), tags: ['sdk'], category: 'other' as const }
   const output = renderReadme(text, [spoof])
@@ -133,17 +121,18 @@ test('README grouping follows the reviewed category, not self-assigned topics', 
   assert.match(output.split('## Other')[1], /spoof/)
 })
 
-test('source mixing and reintroduced legacy shards are rejected', (t) => {
+test('unsupported sources and legacy shards are rejected', (t) => {
   const root = fixture(t)
-  writeFileSync(join(root, 'data/youtube.json'), JSON.stringify([row('wrong')]))
-  assert.throws(() => readCatalog(root), /Wrong source/)
+  writeFileSync(join(root, 'data/youtube.json'), '[]')
+  assert.throws(() => readCatalog(root), /Unsupported catalog/)
+  rmSync(join(root, 'data/youtube.json'))
   writeFileSync(join(root, 'data/part-28.json'), '[]')
-  assert.throws(() => readCatalog(root), /Legacy catalog/)
+  assert.throws(() => readCatalog(root), /Unsupported catalog/)
 })
-test('snapshot rejects changes to X', (t) => {
-  const { root, output } = snapshot(t)
-  writeFileSync(join(output, 'data/x.json'), '[]')
-  assert.throws(() => validateSnapshot(root, output), /X data changed/)
+test('GitHub file rejects non-GitHub rows', (t) => {
+  const root = fixture(t)
+  writeFileSync(join(root, 'data/github.json'), JSON.stringify([{ ...row(), type: 'x' }]))
+  assert.throws(() => readCatalog(root), /Invalid DirectoryItem/)
 })
 
 test('README preserves inline-code language labels and omits missing languages', () => {

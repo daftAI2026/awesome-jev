@@ -5,7 +5,6 @@ import {
   findGitHubProject,
   parseGitHubRepositoryUrl,
   projectPath,
-  projectPathFor,
   projectPathFromUrl,
 } from '../src/lib/project-routes.ts'
 
@@ -68,11 +67,6 @@ test('ambiguous duplicate canonical repository records fail closed', () => {
     project('https://github.com/Owner/Repo', 'one'),
     project('https://github.com/owner/repo', 'two'),
   ], 'owner', 'repo'), undefined)
-})
-
-test('non-GitHub entries do not receive project routes', () => {
-  const news = { ...project('https://github.com/owner/repo'), type: 'x' as const }
-  assert.equal(projectPathFor(news), null)
 })
 
 test('parser exposes normalized lookup key while preserving source spelling', () => {

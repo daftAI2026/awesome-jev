@@ -4,9 +4,9 @@
 
 # Awesome JEV
 
-A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** / **System One** ecosystem projects — official SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, and community awesome-lists. Independent open-source typed-decision alternatives are listed separately and are not presented as official or drop-in compatible. The site currently focuses on GitHub projects grouped by primary use; X posts and YouTube videos remain in separate data files but are hidden from navigation.
+A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** / **System One** ecosystem projects — official SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, and community awesome-lists. Independent open-source typed-decision alternatives are listed separately and are not presented as official or drop-in compatible. The site groups GitHub projects by primary use and presents Jev news separately.
 
-**Site:** [awesomejev.cc](https://awesomejev.cc) · **Data:** [`data/github.json`](data/github.json) + [`data/youtube.json`](data/youtube.json) · **Posts:** [`data/x.json`](data/x.json)
+**Site:** [awesomejev.cc](https://awesomejev.cc) · **Projects:** [`data/github.json`](data/github.json) · **News:** [`data/news.json`](data/news.json)
 
 **Docs:** [Architecture](docs/architecture.md) · [Data model](docs/data-model.md) · [Collector](docs/collector.md) · [Contributing](CONTRIBUTING.md)
 
@@ -1239,7 +1239,7 @@ npm run dev
 
 ## Automated updates
 
-The **Jev ecosystem radar** Action discovers GitHub resources, uses TypeSafe Jev to review relevance, and commits accepted entries plus this README together. It reads all data shards, preserves existing editorial content and leaves X/YouTube entries untouched. Scheduled scanning stays disabled until the API key and enable switch are configured.
+The **Jev ecosystem radar** Action discovers GitHub resources, uses TypeSafe Jev to review relevance, and commits accepted entries plus this README together. It reads the GitHub project store and preserves existing editorial content. Scheduled scanning stays disabled until the API key and enable switch are configured.
 
 See [Collector setup](docs/collector.md) for the `TYPESAFE_API_KEY` Actions secret, preview runs and the schedule switch. After changing directory data manually, run `npm run readme:sync` and `npm run data:check`; project sections and the badge are generated, not hand-maintained.
 
@@ -1247,10 +1247,10 @@ See [Collector setup](docs/collector.md) for the `TYPESAFE_API_KEY` Actions secr
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the directory-item schema, PR hygiene, and link-only policy.
 
-- Prefer PRs that add **real, maintained** open-source projects related to TypeSafe Jev / System One (or high-signal X posts via the collector bot).
-- Keep GitHub, YouTube, and X entries in `data/github.json`, `data/youtube.json`, and `data/x.json` respectively (`id`, `type`, `title`, `summary`, `url`, `sourceMeta`; tags only on GitHub / YouTube).
+- Prefer PRs that add **real, maintained** open-source projects related to TypeSafe Jev / System One.
+- Keep GitHub projects in `data/github.json` (`id`, `type`, `title`, `summary`, `url`, `sourceMeta`, reviewed `category`; optional tags). Jev news has its own `data/news.json` store and collector.
 - One project per PR when possible; include a short summary and tags.
-- Links only — no invented tweet IDs or PLACEHOLDER entries.
+- Links only — no invented repository URLs or PLACEHOLDER entries.
 
 ## License
 

@@ -1,121 +1,41 @@
 # Data model
 
-Canonical stores:
+Canonical public stores:
 
-- [`data/github.json`](../data/github.json) — GitHub projects only
-- [`data/youtube.json`](../data/youtube.json) — YouTube videos only
-- [`data/x.json`](../data/x.json) — X posts only (no tags)
-- [`data/news.json`](../data/news.json) — separate AIHOT Jev news records, not `DirectoryItem`s or GitHub radar inputs
+- [`data/github.json`](../data/github.json) — curated GitHub projects, including independent open-source alternatives
+- [`data/news.json`](../data/news.json) — separate AIHOT Jev news records
 
-The GitHub-first navigation imports `data/github.json` immediately and loads `data/news.json` only when the news section is selected. X and YouTube data remain in their separate files for future placement. The shared catalog validates source placement and globally unique IDs; legacy `items.json` and `part-*.json` files are rejected. Migration preserves all fields and the relative order within each source. The GitHub radar may update only GitHub metadata and append reviewed GitHub entries; YouTube and X remain immutable to the GitHub radar. Separate verified YouTube refreshes may update existing videos’ publication dates and public statistics without changing IDs, editorial text or review scores.
+The project catalog reads only `github.json`. It rejects legacy `items.json` / `part-*.json` shards and the retired `x.json` / `youtube.json` sources rather than silently publishing them. The news view loads `news.json` separately; GitHub radar snapshots cannot edit it. See [news.md](news.md) for the AIHOT sync contract.
 
-The news view imports `data/news.json` independently. Its records are not `DirectoryItem`s and cannot be edited by GitHub, X, or YouTube collectors. The AIHOT collector owns its incremental upserts and URL deduplication; see [news.md](news.md).
+## GitHub `DirectoryItem`
 
-Types live in [`src/lib/types.ts`](../src/lib/types.ts).
-
-## `NewsItem`
-
-Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, optional original title and summary, source name, publication/discovery times, category, AIHOT score and selected/recommendation state, original HTTPS URL, and AIHOT item HTTPS URL. Media URLs and article body are intentionally absent because the public AIHOT API does not contract them. The data file preserves insertion order; the UI sorts a copy by publication time, falling back to discovery time. The site does not expose this store as an API or bulk export.
-
-## `DirectoryItem`
+Types live in [`src/lib/types.ts`](../src/lib/types.ts) and the collector contract in [`scripts/model-types.ts`](../scripts/model-types.ts).
 
 ```ts
 interface DirectoryItem {
   id: string
-  type: 'github' | 'x' | 'youtube'
+  type: 'github'
   title: string
   summary: string
   tags?: string[]
-  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other' // GitHub only
+  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other'
   url: string
   sourceMeta: SourceMeta
 }
 ```
 
-| Field | Meaning |
-| --- | --- |
-| `id` | Stable unique key for React lists and collector upserts |
-| `type` | Board + card style |
-| `title` | Display title (repo name / short headline) — **not** translated by the UI |
-| `summary` | Description; for X this is the post text — **not** translated by the UI |
-| `tags` | GitHub / YouTube only. X posts omit tags. |
-| `category` | One primary GitHub use-case category. `alternatives` means an independent open-source typed-decision implementation, not necessarily a drop-in Jev replacement; `other` means evidence is insufficient, not a negative review. |
-| `url` | Outbound link (repo page or original tweet) |
-| `sourceMeta` | Type-specific metadata |
+`id` is stable across refreshes; `url` is the canonical HTTPS GitHub repository URL. Titles and summaries retain their source language. `category` is one reviewed primary use case: `alternatives` identifies an independent open-source typed-decision implementation, not a certified drop-in replacement; `other` means the purpose lacks enough evidence. Tags are repository topics, not the primary category.
 
-## `SourceMeta`
+`sourceMeta` carries `repo`, `author`, optional creation `date`, display `stars` / `forks` / `language`, optional Jev review scores and pinned `jevEvidence.evidenceUrl`. Open-issue counts are neither stored nor displayed. Unknown GitHub values may be null; a failed refresh must not replace known values with fabricated zeroes. Manual README-backed category refinement may retain `categoryEvidenceSha` and `categoryEvidenceUrl`.
 
-```ts
-interface SourceMeta {
-  // GitHub
-  stars?: number | null
-  forks?: number | null
-  language?: string | null
-  author?: string | null       // GitHub owner, or X display name
-  repo?: string | null
-  jevEvidence?: { evidenceUrl: string } | null // pinned source for reviewed entries
+## News `NewsItem`
 
-  // X
-  handle?: string | null
-  likes?: number | null
-  replies?: number | null
-  retweets?: number | null
-  bookmarks?: number | null
-  date?: string | null
-  mediaUrls?: string[] | null  // first URL used as tweet card image / video poster
-  videoUrls?: string[] | null  // remote mp4 URLs; first plays in the card
-  avatarUrl?: string | null    // profile image on the X card
-}
-```
+Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, optional original title and summary, source name, publication/discovery times, category, AIHOT score and selection state, original HTTPS URL and AIHOT item HTTPS URL. The public AIHOT API does not contract article body or media URLs, so they are not fabricated in this store. The UI sorts a copy by publication time, falling back to discovery time. The site does not expose a bulk-export API.
 
-### GitHub fields
+## Consumption and write boundaries
 
-- `repo` — `owner/name`
-- `stars`, `forks`, `language`, `author` — display metadata on restrained cards; open-issue counts are not stored or displayed
-- Prefer populating from the public GitHub repo API: `stargazers_count` → `stars`, `forks_count` → `forks`
-- Collectors may emit `null` when unknown
-- Optional `date` (YYYY-MM-DD) supports the section “Date” sort
-- Manual README-backed category refinement stores `sourceMeta.categoryEvidenceSha` and `categoryEvidenceUrl` to identify the exact README version used; a GitHub metadata refresh preserves these fields.
-- Some reviewed rows also retain `sourceMeta.jevEvidence`; the project preview links to its pinned `evidenceUrl` when present, without presenting the model's raw confidence as a user-facing verdict.
+The directory imports `data/github.json`, filters by category, searches and sorts it, then renders project cards or rows. News imports `data/news.json` independently. The GitHub radar refreshes every existing project's `stars`, `forks` and `language`; it preserves ID, URL, title, summary, tags, category, Jev scores and pinned evidence. Existing `sourceMeta.repo` display aliases from renames are tolerated; the normalized URL owns deduplication.
 
-### X / YouTube / media
+New reviewed projects append to `github.json`, never replace or reorder existing rows. Admission requires Jev `keep`, `jevAbout >= 0.9` and `jevKeepConfidence >= 0.9`; a category choice is recorded in the same review. `radar/state.json` holds pending/error candidates and cursors, while `radar/latest.json` holds audit receipts. Neither is imported into the website. README project sections and count badge are generated from the same GitHub store; edit descriptions in JSON rather than inside generated README markers.
 
-- `handle` — `@user` or `user` (UI normalizes `@`)
-- `date` — ISO or short display string (YYYY-MM-DD preferred for sorting)
-- `likes`, `replies`, `retweets`, `bookmarks` — X card bottom row (no view counts)
-- `author` — display name next to the avatar on X cards
-- **`mediaUrls`** — remote image URLs from the post; the UI shows the **first** image inside the social card (or as the `<video poster>`). Never commit binary media into this repo.
-- **`videoUrls`** — remote mp4 URLs from the post; the UI plays the **first** with native `<video controls playsInline preload="metadata">`. No autoplay.
-- **`avatarUrl`** — X profile image in the card header
-- YouTube rows use `type: "youtube"`, `sourceMeta.videoId`, `sourceMeta.views`, and a watch URL. Thumbnail is the first `mediaUrls` entry or `https://i.ytimg.com/vi/{videoId}/hqdefault.jpg`.
-- **`jevAbout` / `jevKeep` / `jevKeepConfidence`** — optional collector scores from TypeSafe Jev. Written by `npm run score:sources`, never invented by hand. Not shown on cards until a later pass.
-
-### Collector note
-
-When upserting GitHub rows, include `forks` alongside `stars` whenever the API provides it, but do not persist `open_issues_count`. Upsert X posts into `data/x.json` (never the other source files), without `tags`. URLs and `@mentions` in `summary` are parsed into links in the tweet card.
-
-## UI sort (client-only)
-
-Persisted in `localStorage`:
-
-| Section | Key | Default | Options |
-| --- | --- | --- | --- |
-| Category | `awesome-jev-category` | `all` | `all` or one project category |
-| GitHub | `awesome-jev-github-sort` | `stars` | `stars` \| `date` \| `name` |
-
-Missing numeric fields sort as `0`; missing dates sort last.
-
-## Consumption
-
-`App.tsx` imports `data/github.json`, searches it, filters by the single reviewed category, applies the user sort and renders GitHub cards or rows. X and YouTube data are retained but not bundled into the current page.
-
-## GitHub radar write contract
-
-- Existing records keep their ID, URL, title, summary, tags and Jev scores. Only GitHub display metadata (`stars`, `forks`, `language`) refreshes.
-- Existing `sourceMeta.repo` aliases from repository renames are tolerated. The normalized GitHub URL, not the display alias, owns deduplication and metadata requests.
-- New records receive a Jev `category` choice in the same admission request, and use the same `DirectoryItem` schema, with real Jev `jevAbout`, `jevKeep` and `jevKeepConfidence` scores. Admission requires `keep` and both numeric thresholds at least 0.9. IDs include the owner length to disambiguate hyphenated owner/name combinations.
-- New GitHub records append to `github.json`; no existing record is deleted or reordered. `youtube.json` and `x.json` are immutable to the radar.
-- README categories use the same stored `category` values as the website. Manual prose belongs outside generated markers; edit directory summaries at their source, not in the generated README list.
-- `radar/latest.json` holds the audit report; some accepted rows additionally retain pinned review evidence in `sourceMeta.jevEvidence`. Pending/error candidates live in `radar/state.json`, never in the public directory until accepted.
-
-YouTube `sourceMeta.date` stores the video publication time, preferably a full ISO timestamp with timezone; legacy `YYYY-MM-DD` remains supported. Video and X display components remain in the codebase but are currently hidden. Unknown statistics must not overwrite known values with zero.
+Client-side sort uses `awesome-jev-github-sort` (`stars`, `date`, `name`); missing dates sort last. The page's data-update timestamp follows the newest Git commit touching `data/github.json` or `data/news.json`, not a UI-only change.

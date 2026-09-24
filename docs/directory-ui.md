@@ -4,7 +4,7 @@ This document owns the directory's product-specific composition and behavior. Ap
 
 ## Reader and data
 
-The current page helps readers find curated TypeSafe Jev / System One GitHub projects, judge their recorded summary and metadata, and inspect the original repository. It reads [`data/github.json`](../data/github.json). A distinct Jev news view reads [`data/news.json`](../data/news.json); X and YouTube records remain stored but hidden. Keep UI chrome localized in `src/i18n/locales/*` and retain source titles and summaries in their original language.
+The current page helps readers find curated TypeSafe Jev / System One GitHub projects, judge their recorded summary and metadata, and inspect the original repository. It reads [`data/github.json`](../data/github.json). A distinct Jev news view reads [`data/news.json`](../data/news.json). Keep UI chrome localized in `src/i18n/locales/*` and retain source titles and summaries in their original language.
 
 The opening viewport should reveal identity, searchable inventory, active controls, and the start of results. Keep the result set dominant rather than placing a marketing masthead ahead of the reader's task.
 
@@ -45,6 +45,6 @@ The preview has a dim backdrop and one restrained surface. Project and news dial
 
 ## Boundaries and checks
 
-Only recorded URLs and remote media belong to their sources. Do not invent entries, tweet IDs, screenshots, or claims. Do not add analytics, remote icon kits, or an unrelated visual theme. Keep the full JSON and generated README available for audit without making them the first-read UI.
+Only recorded URLs belong to their sources. Do not invent entries, repository URLs, screenshots, or claims. Do not add analytics, remote icon kits, or an unrelated visual theme. Keep the full JSON and generated README available for audit without making them the first-read UI.
 
 Verify both view modes, filtering, empty search, modified-click fallback, preview dismissal and focus return, desktop and narrow reflow, and light/dark parity. Check the real rendered page rather than assuming that a build alone validates composition.

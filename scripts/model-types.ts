@@ -1,6 +1,3 @@
-
-export type SourceType = 'github' | 'x' | 'youtube'
-
 export type ReviewKeep = 'keep' | 'review' | 'drop'
 export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other'
 
@@ -17,7 +14,6 @@ export interface CatalogSourceMeta extends ScoreInput {
   [key: string]: unknown
   repo?: string
   author?: string
-  handle?: string
   stars?: number
   forks?: number
   language?: string | null
@@ -35,22 +31,11 @@ export interface GitHubDirectoryItem {
   sourceMeta: CatalogSourceMeta
 }
 
-export interface ExternalDirectoryItem {
-  id: string
-  type: 'x' | 'youtube'
-  title: string
-  summary: string
-  tags?: string[]
-  url: string
-  sourceMeta: CatalogSourceMeta
-}
-
-export type DirectoryItem = GitHubDirectoryItem | ExternalDirectoryItem
+export type DirectoryItem = GitHubDirectoryItem
 
 export interface Catalog {
   files: Map<string, DirectoryItem[]>
   rows: DirectoryItem[]
-  social: ExternalDirectoryItem[]
 }
 
 /** GitHub REST responses are untrusted JSON; required fields are validated at use sites. */
@@ -125,7 +110,6 @@ export interface ReviewBody {
     summary: string | null
     url?: string
     repo: string | null
-    handle: string | null
     readme: string
     tags?: string[]
   }

@@ -55,5 +55,5 @@
     "vite": "^8.3.0",
     "wrangler": "^4.37.0"
   },
-  "description": "Curated GitHub projects and X posts about TypeSafe AI's System One model Jev — typed decisions, SDKs, demos, and integrations."
+  "description": "Curated GitHub projects and Jev news about TypeSafe AI's System One model Jev — typed decisions, SDKs, demos, and integrations."
 }

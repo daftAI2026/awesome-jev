@@ -43,7 +43,7 @@ test('budget exhaustion leaves the current radar candidate pending without count
     default_branch: 'main', stargazers_count: 1, forks_count: 0,
   }
   const result = await runRadar({
-    catalog: { files: new Map([['github.json', []], ['youtube.json', []]]), rows: [], social: [] },
+    catalog: { files: new Map([['github.json', []]]), rows: [] },
     state,
     queries: [],
     api: async (path) => path.includes('/commits/') ? { sha: 'a'.repeat(40) } :
@@ -63,7 +63,7 @@ test('default radar limit is queue-sized and processes more than sixty candidate
     state.candidates[`example/app-${index}`] = { status: 'pending', discoveredAt: '2026-09-22T00:00:00.000Z', attempts: 0 }
   }
   const result = await runRadar({
-    catalog: { files: new Map([['github.json', []], ['youtube.json', []]]), rows: [], social: [] },
+    catalog: { files: new Map([['github.json', []]]), rows: [] },
     state,
     queries: [],
     api: async (path) => {

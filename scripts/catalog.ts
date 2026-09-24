@@ -7,20 +7,15 @@ import type {
   Catalog,
   CatalogSourceMeta,
   DirectoryItem,
-  ExternalDirectoryItem,
   GitHubDirectoryItem,
   GitHubRepository,
   ScoreInput,
-  SourceType,
 } from './model-types.ts'
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value)
 
 const parseJson = (text: string): unknown => JSON.parse(text) as unknown
-
-const isSourceType = (value: unknown): value is SourceType =>
-  value === 'github' || value === 'x' || value === 'youtube'
 
 function entriesFrom(value: unknown): DirectoryItem[] {
   validateRows(value)
@@ -29,10 +24,10 @@ function entriesFrom(value: unknown): DirectoryItem[] {
 
 // --- 固定来源边界：禁止旧分片悄悄回流，避免站点漏读新增数据 ---
 export const catalogFiles = (root: string): string[] => {
-  if (readdirSync(join(root, 'data')).some((name) => /^(items|part-\d+)\.json$/.test(name))) {
-    throw new Error('Legacy catalog shards must be migrated')
+  if (readdirSync(join(root, 'data')).some((name) => /^(items|part-\d+|x|youtube)\.json$/.test(name))) {
+    throw new Error('Unsupported catalog source or legacy shards')
   }
-  return ['github.json', 'youtube.json']
+  return ['github.json']
 }
 
 export function readCatalog(root: string): Catalog {
@@ -40,16 +35,9 @@ export function readCatalog(root: string): Catalog {
   for (const file of catalogFiles(root)) {
     files.set(file, entriesFrom(parseJson(readFileSync(join(root, 'data', file), 'utf8'))))
   }
-  const socialRows = entriesFrom(parseJson(readFileSync(join(root, 'data/x.json'), 'utf8')))
-  const all = [...files.entries(), ['x.json', socialRows] as [string, DirectoryItem[]]]
-  for (const [file, entries] of all) {
-    const source = file.slice(0, -5)
-    if (entries.some((row) => row.type !== source)) throw new Error(`Wrong source in ${file}`)
-  }
-  const social = socialRows as ExternalDirectoryItem[]
   const rows = [...files.values()].flat()
-  validateRows([...rows, ...social])
-  return { files, rows, social }
+  validateRows(rows)
+  return { files, rows }
 }
 
 export function repoKey(url: string): string | null {
@@ -68,7 +56,7 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
   const ids = new Set<string>()
   const repos = new Set<string>()
   for (const candidate of rows) {
-    if (!isRecord(candidate) || !isSourceType(candidate.type) ||
+    if (!isRecord(candidate) || candidate.type !== 'github' ||
       !['id', 'title', 'summary', 'url'].every((key) => typeof candidate[key] === 'string' && candidate[key].trim()) ||
       !isRecord(candidate.sourceMeta)) {
       throw new Error('Invalid DirectoryItem')
@@ -83,19 +71,17 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
     if (candidate.tags !== undefined && (!Array.isArray(candidate.tags) || candidate.tags.some((tag) => typeof tag !== 'string'))) {
       throw new Error('Invalid tags')
     }
-    if (candidate.type === 'github') {
-      if (candidate.category !== undefined && !isProjectCategory(candidate.category)) throw new Error(`Invalid category: ${id}`)
-      const key = repoKey(url)
-      if (!key || typeof sourceMeta.repo !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sourceMeta.repo)) {
-        throw new Error(`Invalid repository: ${id}`)
-      }
-      if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
-      repos.add(key)
-      if (Object.hasOwn(sourceMeta, 'openIssues')) throw new Error('Legacy openIssues field')
-      for (const field of ['stars', 'forks'] as const) {
-        const value = sourceMeta[field]
-        if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)
-      }
+    if (candidate.category !== undefined && !isProjectCategory(candidate.category)) throw new Error(`Invalid category: ${id}`)
+    const key = repoKey(url)
+    if (!key || typeof sourceMeta.repo !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sourceMeta.repo)) {
+      throw new Error(`Invalid repository: ${id}`)
+    }
+    if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
+    repos.add(key)
+    if (Object.hasOwn(sourceMeta, 'openIssues')) throw new Error('Legacy openIssues field')
+    for (const field of ['stars', 'forks'] as const) {
+      const value = sourceMeta[field]
+      if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)
     }
   }
 }
@@ -181,7 +167,7 @@ export function replaceRegion(text: string, name: string, content: string): stri
 
 export function renderReadme(text: string, rows: DirectoryItem[]): string {
   validateRows(rows)
-  const projects = rows.filter((row): row is GitHubDirectoryItem => row.type === 'github')
+  const projects = rows
   const groups = new Map<string, GitHubDirectoryItem[]>(sections.map(([title]) => [title, []]))
   for (const row of projects) {
     const section = sections.find(([, category]) => category === (row.category ?? 'other'))
@@ -206,7 +192,7 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
 
 export function syncReadme(root: string, { check = false }: { check?: boolean } = {}): number {
   const { rows } = readCatalog(root)
-  if (check && rows.some((row) => row.type === 'github' && !isProjectCategory(row.category))) {
+  if (check && rows.some((row) => !isProjectCategory(row.category))) {
     throw new Error('GitHub project category missing; run npm run categories:classify')
   }
   const path = join(root, 'README.md')
@@ -214,15 +200,14 @@ export function syncReadme(root: string, { check = false }: { check?: boolean } 
   const after = renderReadme(before, rows)
   if (check && after !== before) throw new Error('README is stale; run npm run readme:sync')
   if (!check && after !== before) writeFileSync(path, after)
-  return rows.filter((row) => row.type === 'github').length
+  return rows.length
 }
 
-// --- 发布边界：快照不能删除旧数据、改人工编辑内容或修改非 GitHub 条目 ---
+// --- 发布边界：快照不能删除旧数据或改写人工编辑内容 ---
 export function validateSnapshot(root: string, snapshot: string): Catalog {
   const current = readCatalog(root)
   const next = readCatalog(snapshot)
   if (!isDeepStrictEqual([...current.files.keys()], [...next.files.keys()])) throw new Error('Unexpected source files')
-  if (!isDeepStrictEqual(current.social, next.social)) throw new Error('X data changed')
   const oldById = new Map(current.rows.map((row) => [row.id, row]))
   for (const [file, rows] of current.files) {
     const after = next.files.get(file)
@@ -231,10 +216,6 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
       const old = rows[i]
       const fresh = after[i]
       if (!old || !fresh) throw new Error('Catalog deletion')
-      if (old.type !== 'github') {
-        if (!isDeepStrictEqual(old, fresh)) throw new Error('Non-GitHub data changed')
-        continue
-      }
       const editorial: Record<string, unknown> = { ...old.sourceMeta }
       for (const key of ['stars', 'forks', 'language'] as const) {
         if (Object.hasOwn(fresh.sourceMeta, key)) editorial[key] = fresh.sourceMeta[key]
@@ -242,10 +223,9 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
       const expected: GitHubDirectoryItem = { ...old, sourceMeta: editorial }
       if (!isDeepStrictEqual(expected, fresh)) throw new Error('Editorial data changed')
     }
-    if (file !== 'github.json' && rows.length !== after.length) throw new Error('New rows must go into github.json')
   }
   for (const row of next.rows.filter((item) => !oldById.has(item.id))) {
-    if (row.type !== 'github' || reviewDecision(row.sourceMeta) !== 'keep') throw new Error('Unreviewed addition')
+    if (reviewDecision(row.sourceMeta) !== 'keep') throw new Error('Unreviewed addition')
   }
   const expected = renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), next.rows)
   if (expected !== readFileSync(join(snapshot, 'README.md'), 'utf8')) throw new Error('Unexpected README changes')

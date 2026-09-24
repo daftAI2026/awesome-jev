@@ -241,9 +241,8 @@ async function main(): Promise<void> {
   }
   const opts = { limit, force, dryRun, concurrency }
   const itemFiles = catalogFiles(root).map((file: string) => `data/${file}`)
-  if (!['all', 'items', 'github', 'youtube', 'x'].includes(only)) throw new Error('Unknown source selection')
-  const files = only === 'all' ? [...itemFiles, 'data/x.json']
-    : only === 'items' ? itemFiles : [`data/${only}.json`]
+  if (!['all', 'github'].includes(only)) throw new Error('Unknown source selection')
+  const files = itemFiles
   let scored = 0
   let skipped = 0
   const tallies = { keep: 0, review: 0, drop: 0 }

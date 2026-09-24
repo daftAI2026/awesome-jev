@@ -44,10 +44,10 @@ const catalogUpdatedAt = (() => {
     // 浅克隆根提交会被 Git 当作所有文件的起点，不能冒充真实数据更新。
     const git = (args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
     if (git(['rev-parse', '--is-shallow-repository']) !== 'false') return null
-    if (git(['status', '--porcelain', '--', 'data/github.json', 'data/youtube.json', 'data/x.json', 'data/news.json'])) return null
+    if (git(['status', '--porcelain', '--', 'data/github.json', 'data/news.json'])) return null
     const output = execFileSync(
       'git',
-      ['log', '-1', '--format=%cI', '--', 'data/github.json', 'data/youtube.json', 'data/x.json', 'data/news.json'],
+      ['log', '-1', '--format=%cI', '--', 'data/github.json', 'data/news.json'],
       { cwd: root, encoding: 'utf8' },
     )
     return normalizeCatalogUpdatedAt(output)

@@ -28,7 +28,7 @@ test('radar reviews unnamed integration evidence and persists its admission basi
   const key = 'example/application', sha = 'b'.repeat(40)
   const bytes = Buffer.from('const model = "jev-latest"; const endpoint = "https://api.typesafe.ai/v1/systemone"')
   const result = await runRadar({
-    catalog: { files: new Map([['github.json', []], ['youtube.json', []]]), rows: [], social: [] },
+    catalog: { files: new Map([['github.json', []]]), rows: [] },
     queries: [], codeQueries: ['"api.typesafe.ai" in:file'],
     api: async (path) => {
       if (path.startsWith('/search/code?')) return { total_count: 1, items: [{ path: 'src/provider.ts', repository: { full_name: key } }] }

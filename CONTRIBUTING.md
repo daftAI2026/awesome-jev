@@ -5,30 +5,27 @@ Thanks for helping curate **Awesome JEV** — a GitHub-first directory of **Jev 
 ## Add items via JSON
 
 - GitHub projects: [`data/github.json`](data/github.json)
-- YouTube explainers: [`data/youtube.json`](data/youtube.json)
-- X posts: [`data/x.json`](data/x.json) — **no `tags` field**; URLs and `@mentions` in the post body are parsed into links on the card
 
-Prefer editing those files (or letting the collector merge into them) over hand-editing the README list alone.
+Prefer editing that file (or letting the collector merge into it) over hand-editing the README list alone.
 
 ### Schema (`DirectoryItem`)
 
 | Field | Type | Notes |
 | --- | --- | --- |
-| `id` | `string` | Stable unique id, e.g. `gh-owner-repo` or `x-<tweetId>` |
-| `type` | `"github"` \| `"x"` \| `"youtube"` | Controls which board / card style |
-| `title` | `string` | Repo name or short post title |
-| `summary` | `string` | One–two sentence description (X: post body, with real URLs) |
-| `tags` | `string[]` | GitHub / YouTube only. Omit on X posts. |
+| `id` | `string` | Stable unique id, e.g. `gh-<owner-length>-owner-repo` |
+| `type` | `"github"` | GitHub project |
+| `title` | `string` | Repository name |
+| `summary` | `string` | One–two sentence repository description |
+| `tags` | `string[]` | Repository topics. |
 | `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `applications`, `alternatives`, or `other`. One primary use case. |
-| `url` | `string` | Canonical link (repo or original tweet) |
+| `url` | `string` | Canonical GitHub repository link |
 | `sourceMeta` | `object` | See [`docs/data-model.md`](docs/data-model.md) |
 
 ### `sourceMeta` (common)
 
-- **GitHub:** `stars`, `forks`, `language`, `author`, `repo`, optional `avatarUrl`
-- **X:** `handle`, `date`, `likes`, `replies`, `retweets`, `bookmarks`, optional `author`, optional `mediaUrls` / `videoUrls` / `avatarUrl`. No view counts.
+- **GitHub:** `stars`, `forks`, `language`, `author`, `repo`, optional `date` and pinned review evidence.
 
-Do not invent fake tweet URLs. If you lack a real `url`, skip the item. Never commit `PLACEHOLDER` entries.
+Use a real canonical repository URL. Never commit `PLACEHOLDER` entries.
 
 New radar-admitted GitHub projects receive a Jev category in the same review call. For manual JSON additions, choose one primary category from the project evidence and run `npm run categories:check`; use `other` only when the purpose is unclear.
 
@@ -36,7 +33,7 @@ To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPE
 
 ## Theme
 
-**In scope:** TypeSafe AI, System One models, **Jev**, official/community SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, awesome-lists, and high-signal discussion with outbound links (e.g. typesafe.ai, GitHub, docs). The separate `alternatives` category is for independent, licensed open-source typed-decision implementations; it does not imply TypeSafe affiliation or Jev API compatibility.
+**In scope:** TypeSafe AI, System One models, **Jev**, official/community SDKs, agent skills, browser & computer-use demos, MCP connectors, routers, awesome-lists, and source-backed resources with outbound links (e.g. typesafe.ai, GitHub, docs). The separate `alternatives` category is for independent, licensed open-source typed-decision implementations; it does not imply TypeSafe affiliation or Jev API compatibility.
 
 **Out of scope:** Unrelated projects or anything that does not clearly connect to TypeSafe / System One / Jev.
 
@@ -44,15 +41,15 @@ To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPE
 
 - One project (or one coherent batch of related links) per PR when possible.
 - Include a short summary and useful tags.
-- Prefer **real, maintained** open-source projects (or high-signal X posts via the collector).
+- Prefer **real, maintained** open-source projects.
 - Run `npm run readme:sync` after adding GitHub projects; README categories follow the stored category.
 - Run `npm run categories:check` and `npm run data:check`.
 - Run `npm run build` locally if you touch TypeScript / UI.
 
 ## Not allowed
 
-- Invented or PLACEHOLDER URLs / tweet IDs.
-- Hosting or embedding media files in this repo (thumbnails must be remote URLs only, e.g. X CDN).
+- Invented or PLACEHOLDER repository URLs.
+- Hosting third-party media files in this repo.
 - Scraped credentials, paywalled dumps, or clearly abusive ToS violations.
 
 ## Docs

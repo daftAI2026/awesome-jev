@@ -29,9 +29,8 @@ const alternatives: GitHubRepository[] = [
 const evidence = 'This independent implementation explores typed decisions, System One, calibrated probability estimates, and decision heads.'
 const keep: JevScore = { jevAbout: 0.98, jevKeep: 'keep', jevKeepConfidence: 0.99, category: 'alternatives' }
 const catalog = (rows: DirectoryItem[] = []): Catalog => ({
-  files: new Map<string, DirectoryItem[]>([['github.json', rows.filter((row) => row.type === 'github')], ['youtube.json', []]]),
+  files: new Map<string, DirectoryItem[]>([['github.json', rows]]),
   rows,
-  social: [],
 })
 
 test('alternative reviews use an implementation-specific prompt rather than the ecosystem client prompt', () => {
@@ -141,12 +140,9 @@ test('candidate retry state survives discovery and a separate snapshot without t
   const output = join(root, 'output')
   mkdirSync(join(root, 'data'), { recursive: true })
   mkdirSync(join(root, 'radar'), { recursive: true })
-  const x = '[{"id":"x-1","type":"x","title":"Post","summary":"Keep exact text","url":"https://x.com/test/status/1","sourceMeta":{}}]\n'
   const coreState = '{"core":"do not replace"}\n'
   const coreReport = '{"coreReport":"do not replace"}\n'
   writeFileSync(join(root, 'data/github.json'), '[]\n')
-  writeFileSync(join(root, 'data/youtube.json'), '[]\n')
-  writeFileSync(join(root, 'data/x.json'), x)
   writeFileSync(join(root, 'radar/state.json'), coreState)
   writeFileSync(join(root, 'radar/latest.json'), coreReport)
   writeFileSync(join(root, 'README.md'), '# Directory\n<!-- PROJECT_COUNT:START -->old<!-- PROJECT_COUNT:END -->\n<!-- PROJECTS:START -->old<!-- PROJECTS:END -->\n')
@@ -161,10 +157,8 @@ test('candidate retry state survives discovery and a separate snapshot without t
   assert.match(readFileSync(join(output, 'README.md'), 'utf8'), /Open-source alternatives/)
   assert.deepEqual(JSON.parse(readFileSync(join(output, 'radar/alternatives-state.json'), 'utf8')).candidates[pendingKey], preserved)
   assert.ok(existsSync(join(output, 'radar/alternatives-latest.json')))
-  assert.equal(readFileSync(join(root, 'data/x.json'), 'utf8'), x)
   assert.equal(readFileSync(join(root, 'radar/state.json'), 'utf8'), coreState)
   assert.equal(readFileSync(join(root, 'radar/latest.json'), 'utf8'), coreReport)
-  if (existsSync(join(output, 'data/x.json'))) assert.equal(readFileSync(join(output, 'data/x.json'), 'utf8'), x)
   if (existsSync(join(output, 'radar/state.json'))) assert.equal(readFileSync(join(output, 'radar/state.json'), 'utf8'), coreState)
   if (existsSync(join(output, 'radar/latest.json'))) assert.equal(readFileSync(join(output, 'radar/latest.json'), 'utf8'), coreReport)
 })

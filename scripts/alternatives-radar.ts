@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -166,7 +166,6 @@ export function writeAlternativesSnapshot(root: string, output: string, result: 
     const content = JSON.stringify(JSON.parse(before)) === JSON.stringify(rows) ? before : `${JSON.stringify(rows, null, 2)}\n`
     writeFileSync(join(output, 'data', file), content)
   }
-  copyFileSync(join(root, 'data/x.json'), join(output, 'data/x.json'))
   writeFileSync(join(output, 'README.md'), renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), result.rows))
   writeFileSync(join(output, stateFile), `${JSON.stringify(result.state, null, 2)}\n`)
   writeFileSync(join(output, reportFile), `${JSON.stringify(result.report, null, 2)}\n`)

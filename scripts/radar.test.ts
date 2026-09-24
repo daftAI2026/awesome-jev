@@ -16,7 +16,7 @@ type RadarReview = RadarOptions['review']
 type EvaluateOptions = NonNullable<Parameters<typeof evaluateJev>[3]>
 type FetchImpl = NonNullable<EvaluateOptions['fetchImpl']>
 type Catalog = RadarOptions['catalog']
-const catalog = (): Catalog => ({ files: new Map<string, ReviewRow[]>([['github.json', []], ['youtube.json', []]]), rows: [], social: [] })
+const catalog = (): Catalog => ({ files: new Map<string, ReviewRow[]>([['github.json', []]]), rows: [] })
 const api: ReviewApi = async (path: string) => path.startsWith('/search/') ? { items: [repo], total_count: 1 } :
   path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
     { encoding: 'base64', size: 100, path: 'README.md', content: Buffer.from('Useful TypeSafe Jev SDK docs at https://docs.typesafe.ai').toString('base64') } : repo
@@ -40,7 +40,6 @@ test('parse Jev typed answers; malformed/missing/out-of-range answers are errors
 test('review scope includes curated lists, not only direct API integration', () => {
   assert.match(reviewBody({ type: 'github', title: 'awesome', summary: 'curated', url: repo.html_url, sourceMeta: { repo: repo.full_name } }).questions.keep.instructions, /curated awesome lists/)
   assert.ok(reviewBody({ type: 'github', title: 'SDK', tags: ['sdk'] }).questions.category)
-  assert.equal(reviewBody({ type: 'youtube', title: 'Video' }).questions.category, undefined)
 })
 test('batch categories use typed Jev choices and fail closed on invalid output', async () => {
   const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Doom demo', summary: 'Playable game', tags: ['game'] }, { title: 'Unknown', summary: '' }]
@@ -93,7 +92,6 @@ test('accepted candidate is appended once with audit evidence and existing data 
   const result = await runRadar({ ...options(), catalog: original, review: async () => ({ ...score, category: 'sdk' }) })
   assert.deepEqual(original, before)
   assert.equal(result.report.added, 1); assert.equal(result.files.get('github.json')!.length, 1)
-  assert.deepEqual(result.files.get('youtube.json'), [])
   assert.equal(result.rows[0].sourceMeta.jevKeep, 'keep')
   const added = result.rows[0]
   if (added.type !== 'github') throw new Error('Expected a GitHub project')
@@ -131,7 +129,7 @@ test('missing README never reaches Jev and cannot enter catalog', async () => {
 test('metadata failure preserves old record; other candidates can still succeed', async () => {
   const old: ReviewRow = { id: 'old', type: 'github', title: 'Old', summary: 'Curated', tags: ['sdk'],
     url: 'https://github.com/test/old', sourceMeta: { repo: 'test/old', stars: 9 } }
-  const original: Catalog = { files: new Map<string, ReviewRow[]>([['github.json', [old]]]), rows: [old], social: [] }
+  const original: Catalog = { files: new Map<string, ReviewRow[]>([['github.json', [old]]]), rows: [old] }
   const result = await runRadar({ ...options(), catalog: original, api: async (path: string) => {
     if (path === '/repos/test/old') throw new Error('github-http-404')
     return api(path)
@@ -171,7 +169,7 @@ test('CLI missing-key preflight cannot touch output or load local env', async (t
   assert.equal(existsSync(output), false)
 })
 
-test('manual scorer enforces one global paid-review limit across all sources', async (t) => {
+test('manual scorer limits paid reviews for GitHub projects', async (t) => {
   const { mkdtempSync, mkdirSync, copyFileSync, writeFileSync, rmSync } = await import('node:fs')
   const { join } = await import('node:path')
   const { tmpdir } = await import('node:os')
@@ -181,7 +179,7 @@ test('manual scorer enforces one global paid-review limit across all sources', a
   mkdirSync(join(root, 'scripts')); mkdirSync(join(root, 'data'))
   writeFileSync(join(root, 'package.json'), '{"type":"module"}')
   for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
-  for (const file of ['github.json', 'youtube.json', 'x.json']) {
+  for (const file of ['github.json']) {
     writeFileSync(join(root, 'data', file), JSON.stringify([1, 2].map((n) => ({ id: `${file}-${n}`, type: 'github',
       title: 'Test', summary: 'Test', url: 'https://github.com/test/test', sourceMeta: {} }))))
   }
@@ -192,7 +190,7 @@ test('manual scorer enforces one global paid-review limit across all sources', a
   })
   assert.equal(child.status, 0, child.stderr)
   const summary = JSON.parse(child.stdout.slice(child.stdout.lastIndexOf('\n{')))
-  assert.equal(summary.scored, 3); assert.equal(summary.skipped, 3)
+  assert.equal(summary.scored, 2); assert.equal(summary.skipped, 0)
 })
 
 test('older unreviewed candidates do not starve behind alphabetically earlier new arrivals', async () => {
@@ -275,7 +273,7 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
   const before = structuredClone(rows)
   const state = { ...emptyState(), metadataCursor: 300 }
   const seen: string[] = []
-  const result = await runRadar({ catalog: { files: new Map<string, ReviewRow[]>([['github.json', rows]]), rows, social: [] },
+  const result = await runRadar({ catalog: { files: new Map<string, ReviewRow[]>([['github.json', rows]]), rows },
     state, queries: [], limit: 1, now,
     review: async () => { assert.fail('Existing repositories must not call Jev') },
     api: async (path: string) => {

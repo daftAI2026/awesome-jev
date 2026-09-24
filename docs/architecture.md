@@ -2,7 +2,7 @@
 
 ## Theme
 
-Searchable directory of curated **GitHub projects** with a separate, source-attributed Jev news view (and retained X and YouTube data for a later placement) about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
+Searchable directory of curated **GitHub projects** with a separate, source-attributed Jev news view about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
 
 ## Stack
 
@@ -38,7 +38,7 @@ Mobile
 - **Search** is a full-width underline field over GitHub projects. Category filtering narrows the search results without changing the stored order.
 - **Rank** sits under search as a shadcn `ToggleGroup`, not custom underline tabs.
 - **Category filter** is a left rail on large screens; below `lg` it opens a shadcn Sheet from the left. The Saved shortcut follows Jev news and reads browser-local bookmarks without a server account.
-- **Filtered GitHub projects** remain the primary result set. Jev news has its own static store and card view; X and YouTube data remain stored but their boards are hidden. Empty results use a localized message.
+- **Filtered GitHub projects** remain the primary result set. Jev news has its own static store and card view. Empty results use a localized message.
 - An ordinary card or list-row click opens one shared project preview while the URL becomes the project's stable `/projects/:owner/:repo` address. A direct visit or modified click renders a standalone project page; the GitHub URL remains the explicit outbound action.
 
 ## Workers auto-deploy
@@ -68,11 +68,10 @@ npm run deploy   # build + wrangler deploy
 
 | Path | Role |
 | --- | --- |
-| `data/github.json` + `data/youtube.json` | Separate GitHub and YouTube stores, type-checked at validation |
-| `data/x.json` | X posts (no tags; links parsed in the card) |
+| `data/github.json` | Curated GitHub projects, validated before publication |
 | `data/news.json` | Separate AIHOT-sourced Jev news snapshot, maintained by the opt-in scheduled Action |
 | `src/lib/types.ts` | `DirectoryItem` / `SourceMeta` |
-| `src/components/ItemCard.tsx` | GitHub cards; X card code retained for future placement |
+| `src/components/ItemCard.tsx` | GitHub project cards and saved controls |
 | `src/components/SavedPanel.tsx` + `src/hooks/useSaved.ts` | Source-grouped local bookmarks and storage lifecycle |
 | `src/App.tsx` | Header, GitHub search and category/news/saved navigation |
 | `src/routes/*` + `src/router.tsx` | TanStack Start routes, head metadata, directory shell, and direct project detail |

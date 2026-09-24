@@ -8,7 +8,6 @@ const fuseOptions: IFuseOptions<DirectoryItem> = {
     { name: 'tags', weight: 0.2 },
     { name: 'sourceMeta.repo', weight: 0.08 },
     { name: 'sourceMeta.author', weight: 0.04 },
-    { name: 'sourceMeta.handle', weight: 0.03 },
   ],
   threshold: 0.35,
   ignoreLocation: true,
