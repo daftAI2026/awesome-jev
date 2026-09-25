@@ -138,15 +138,11 @@ const sections: Array<[string, GitHubDirectoryItem['category']]> = [
   ['Developer tools', 'developer'],
   ['Research & evaluation', 'research'],
   ['Learning & resources', 'resources'],
+  ['Project directories', 'directories'],
   ['Apps & demos', 'applications'],
   ['Open-source alternatives', 'alternatives'],
   ['Other', 'other'],
 ]
-
-// --- 目录仍属于 resources；README 只为其提供更清楚的二级入口 ---
-const directoryRepoNames = /^(?:awesome[-_].+|jev-awesome|jev-case|jev-radar|jev-hub|jev[._-]?apps|jev[._-]?usecases|jev_info_site|jev\.aitools\.fyi|jevsome-projects)$/i
-const isProjectDirectory = (row: GitHubDirectoryItem): boolean =>
-  row.category === 'resources' && directoryRepoNames.test(repoKey(row.url)?.split('/')[1] ?? '')
 
 const escapeMarkdown = (text: string): string => String(text).replace(/[\r\n\t]+/g, ' ')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -184,10 +180,10 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
     .map((row) => `- [**${escapeMarkdown(row.title)}**](${row.url}) - ${escapeMarkdown(row.summary)}${row.sourceMeta.language ? ` · ${languageCode(row.sourceMeta.language)}` : ''}`)
     .join('\n') || '_No projects yet._'
   const body = [...groups].map(([title, group]) => {
-    if (title !== 'Learning & resources') return `## ${title}\n\n${renderRows(group)}`
-    const directories = group.filter(isProjectDirectory)
-    const guides = group.filter((row) => !isProjectDirectory(row))
-    return `## ${title}\n\n### Project directories\n\nThese repositories maintain their own collections of Jev projects and resources. Their entries are not automatically imported into this catalog.\n\n${renderRows(directories)}\n\n### Guides & other resources\n\n${renderRows(guides)}`
+    const note = title === 'Project directories'
+      ? 'These repositories maintain their own collections of Jev projects and resources. Their entries are not automatically imported into this catalog.\n\n'
+      : ''
+    return `## ${title}\n\n${note}${renderRows(group)}`
   }).join('\n\n')
   const badges = [
     '[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)',

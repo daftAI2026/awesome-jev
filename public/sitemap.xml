@@ -46,6 +46,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/alternatives" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/category/directories</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/directories" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/directories" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/category/research</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/research" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/research" />
@@ -6649,6 +6654,11 @@
     <loc>https://awesomejev.cc/zh/category/alternatives</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/alternatives" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/alternatives" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/category/directories</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/directories" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/directories" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/category/research</loc>

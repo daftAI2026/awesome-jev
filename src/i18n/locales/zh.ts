@@ -63,6 +63,7 @@ export const zh: Messages = {
   categoryDeveloper: '开发者工具',
   categoryResearch: '研究与评测',
   categoryResources: '教程与资源',
+  categoryDirectories: '项目目录',
   categoryApplications: '应用与演示',
   categoryAlternatives: '开源替代方案',
   categoryOther: '其他',

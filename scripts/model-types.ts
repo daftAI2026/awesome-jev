@@ -1,5 +1,5 @@
 export type ReviewKeep = 'keep' | 'review' | 'drop'
-export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other'
+export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'directories' | 'applications' | 'alternatives' | 'other'
 
 export interface ScoreInput {
   jevAbout?: number

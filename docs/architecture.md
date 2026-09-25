@@ -43,7 +43,7 @@ Mobile
 
 ## Workers auto-deploy
 
-[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English and Chinese variants of the homepage, Top 100, nine categories and every valid GitHub project detail into route-specific HTML; Cloudflare serves those files as Static Assets before invoking the Worker. The Worker handles non-prerendered routes and returns real 404 responses for unknown projects. This is not an SPA fallback or per-request SSR for the catalog.
+[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English and Chinese variants of the homepage, Top 100, ten categories and every valid GitHub project detail into route-specific HTML; Cloudflare serves those files as Static Assets before invoking the Worker. The Worker handles non-prerendered routes and returns real 404 responses for unknown projects. This is not an SPA fallback or per-request SSR for the catalog.
 
 The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and Cloudflare Workers Builds; `package.json` declares the same supported major. English and Chinese news-item HTML pages are prerendered for stable `/news/{id}` URLs; the aggregate `/news` page prerenders its initial news cards, while browser-local `/saved` remains `noindex` and outside the sitemap.
 

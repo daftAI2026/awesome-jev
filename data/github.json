@@ -259,7 +259,7 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.23
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-kitze-skillbox",
@@ -424,7 +424,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.62
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-typesafe-ai-typesafe-sdk-python",
@@ -648,7 +648,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.56
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-jkudish-jev-browser",
@@ -782,7 +782,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.64
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-shantanugoel-ask-jev-skill",
@@ -1226,7 +1226,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.16
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-shiftynick-jev-axi",
@@ -4211,7 +4211,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.66
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-swiftfaze-jev-studio",
@@ -4459,7 +4459,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.56
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-ojusave-beat-jev",
@@ -6713,7 +6713,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.36
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-brainwires-jevwire",
@@ -8716,7 +8716,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.8
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-heyjunpenn-awesome-jev",
@@ -8739,7 +8739,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.8
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-everyinfra-jev-radar",
@@ -8761,7 +8761,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.97
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-jackzeng-jev_apps",
@@ -8783,7 +8783,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.8
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-rlaope-jeval",
@@ -9037,7 +9037,7 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.78
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-liao96312-jev-arena-nanojev",
@@ -9081,7 +9081,7 @@
       "jevKeep": "review",
       "jevKeepConfidence": 0.78
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-xubqpanda-jevloop",
@@ -9630,7 +9630,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.93
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-kurihada-pi-jev-permit",
@@ -9909,7 +9909,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.94
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-a742987-jevlens",
@@ -10017,7 +10017,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.99
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-12-abhibansal60-tidy",
@@ -10430,7 +10430,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.91
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-9-andrest04-jev-lab",
@@ -10686,7 +10686,7 @@
       "jevKeep": "keep",
       "jevKeepConfidence": 0.97
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-valentynkit-jev-commit",
@@ -13519,7 +13519,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-8-fatwang2-awesome-jev",
@@ -13562,7 +13562,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-10-fazlerocks-jevmail",
@@ -16847,7 +16847,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-jjd-lab-jev-synthetic-survey",
@@ -17131,7 +17131,7 @@
         "checkedAt": "2026-09-22T04:56:17.783Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-9-juanegido-promesometro",
@@ -17634,7 +17634,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-kevhill-jev-hierarchy",
@@ -17802,7 +17802,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-6-kuzanj-awesome-jev",
@@ -17845,7 +17845,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-11-kylemclaren-jevsearch",
@@ -18236,7 +18236,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-10-liamcarlin-navi",
@@ -18641,7 +18641,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-12-makefunstuff-jev-lsp",
@@ -19645,7 +19645,7 @@
         "checkedAt": "2026-09-22T11:39:00.649Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-mura012-jev-test",
@@ -21671,7 +21671,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-rhelmer-filelathe",
@@ -21934,7 +21934,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-18-romainfranceschini-typesafe_ai_sdk",
@@ -22179,7 +22179,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-10-ryan-sunny-dbt-assay",
@@ -22604,7 +22604,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-6-selmar-typesafe-jev-calibrate-for-code-review",
@@ -23329,7 +23329,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-13-spoonnotfound-soupbase",
@@ -24487,7 +24487,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-10-van-vanich-agent-tool-router",
@@ -24646,7 +24646,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-5-vrash-jeval",
@@ -24728,7 +24728,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-15-walidboulanouar-jev-agent-kit",
@@ -25055,7 +25055,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-5-wjw66-deepseek-harness-jev-pre-compaction",
@@ -25484,7 +25484,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-5-yzfly-edgejev",
@@ -27865,7 +27865,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-10-clankagent-pi-jev",
@@ -32248,7 +32248,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-5-ozers-jevsome-projects",
@@ -32292,7 +32292,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-7-pankona-japanese-jev-lint",
@@ -36684,7 +36684,7 @@
         "checkedAt": "2026-09-22T16:57:22.408Z"
       }
     },
-    "category": "resources"
+    "category": "directories"
   },
   {
     "id": "gh-9-antlobach-clojev",
@@ -39013,7 +39013,7 @@
       "catalog",
       "classification"
     ],
-    "category": "resources",
+    "category": "directories",
     "url": "https://github.com/kydlikebtc/awesome-jev",
     "sourceMeta": {
       "repo": "kydlikebtc/awesome-jev",
@@ -39648,7 +39648,7 @@
       "streamlit",
       "typesafe"
     ],
-    "category": "resources",
+    "category": "directories",
     "url": "https://github.com/Justmalhar/awesome-jev-apps",
     "sourceMeta": {
       "repo": "Justmalhar/awesome-jev-apps",
@@ -40819,7 +40819,7 @@
       "typesafe-ai",
       "python"
     ],
-    "category": "resources",
+    "category": "directories",
     "url": "https://github.com/stainlu/awesome-jev",
     "sourceMeta": {
       "repo": "stainlu/awesome-jev",

@@ -18,13 +18,13 @@ interface DirectoryItem {
   title: string
   summary: string
   tags?: string[]
-  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'applications' | 'alternatives' | 'other'
+  category?: 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'directories' | 'applications' | 'alternatives' | 'other'
   url: string
   sourceMeta: SourceMeta
 }
 ```
 
-`id` is stable across refreshes; `url` is the canonical HTTPS GitHub repository URL. Titles and summaries retain their source language. `category` is one reviewed primary use case: `alternatives` identifies an independent open-source typed-decision implementation, not a certified drop-in replacement; `other` means the purpose lacks enough evidence. Tags are repository topics, not the primary category.
+`id` is stable across refreshes; `url` is the canonical HTTPS GitHub repository URL. Titles and summaries retain their source language. `category` is one reviewed primary use case: `directories` identifies collections whose primary purpose is indexing multiple distinct Jev projects or resources; `resources` covers guides, docs and examples; `alternatives` identifies an independent open-source typed-decision implementation, not a certified drop-in replacement; `other` means the purpose lacks enough evidence. Tags are repository topics, not the primary category.
 
 `sourceMeta` carries `repo`, `author`, optional creation `date`, display `stars` / `forks` / `language`, optional Jev review scores and pinned `jevEvidence.evidenceUrl`. Open-issue counts are neither stored nor displayed. Unknown GitHub values may be null; a failed refresh must not replace known values with fabricated zeroes. Manual README-backed category refinement may retain `categoryEvidenceSha` and `categoryEvidenceUrl`.
 
@@ -36,7 +36,7 @@ Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, option
 
 The directory imports `data/github.json`, filters by category, searches and sorts it, then renders project cards or rows. News imports `data/news.json` independently. The GitHub radar refreshes every existing project's `stars`, `forks` and `language`; it preserves ID, URL, title, summary, tags, category, Jev scores and pinned evidence. Existing `sourceMeta.repo` display aliases from renames are tolerated; the normalized URL owns deduplication.
 
-In the generated README, repository names identifying curated lists, directories, and project collections within `resources` receive a `Project directories` subheading. The other resources remain under `Guides & other resources`. This is a navigation aid, not a new primary category or a change to website filtering. Listing an external directory does not import its entries into this catalog; each included GitHub repository still needs its own review.
+`Project directories` is a primary category shared by the README, website sidebar, category routes and sitemap. The README generator reads the stored category; it does not infer classification from repository names. Listing an external directory does not import its entries into this catalog; each included GitHub repository still needs its own review.
 
 New reviewed projects append to `github.json`, never replace or reorder existing rows. Admission requires Jev `keep`, `jevAbout >= 0.9` and `jevKeepConfidence >= 0.9`; a category choice is recorded in the same review. `radar/state.json` holds pending/error candidates and cursors, while `radar/latest.json` holds audit receipts. Neither is imported into the website. README project sections and count badge are generated from the same GitHub store; edit descriptions in JSON rather than inside generated README markers.
 

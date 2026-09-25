@@ -37,6 +37,13 @@ test('sitemap contains the home page, populated category pages, and only describ
   assert.doesNotMatch(result.xml, /\/category\/unknown/)
 })
 
+test('directory category has a crawlable route in both languages', () => {
+  const result = buildSitemap([row('owner', 'awesome-jev', 'A curated project index', 'directories')])
+  assert.deepEqual(result.categories, ['directories'])
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/category\/directories/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/category\/directories/)
+})
+
 test('sitemap adds only news with a stable ID and summary in both locales', () => {
   const news = [
     { id: 'cmu123', title: 'Jev release', summary: 'A source-attributed summary that explains the Jev release and gives readers enough context to decide whether to visit the original source.' },

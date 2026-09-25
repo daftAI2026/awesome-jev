@@ -10,6 +10,7 @@ const CATEGORY_NAMES: Record<Category, string> = {
   browser: 'Browser & computer use',
   developer: 'Developer tools',
   resources: 'Learning & resources',
+  directories: 'Project directories',
   alternatives: 'Open-source alternatives',
   research: 'Research & evaluation',
   sdk: 'SDKs & integrations',
@@ -27,9 +28,13 @@ export const Route = createFileRoute('/_directory/{-$locale}/category/$category'
     const locale = params.locale === 'zh' ? 'zh' : 'en'
     const name = locale === 'zh' ? zh[CATEGORY_LABEL[category]] : CATEGORY_NAMES[category] ?? 'Jev projects'
     const title = `${name} · Awesome JEV`
-    const description = locale === 'zh'
-      ? `浏览${name}分类下的 TypeSafe Jev GitHub 开源项目、项目简介及仓库链接。`
-      : `Browse TypeSafe Jev GitHub projects in ${name.toLowerCase()}, with project details, repository links, and current activity.`
+    const description = category === 'directories'
+      ? locale === 'zh'
+        ? '浏览收录多个 Jev 项目、应用与工具的精选目录；每条均可查看原始 GitHub 仓库。'
+        : 'Explore curated Jev project directories indexing multiple apps, tools, and ecosystem resources, with links to their original repositories.'
+      : locale === 'zh'
+        ? `浏览${name}分类下的 TypeSafe Jev GitHub 开源项目、项目简介及仓库链接。`
+        : `Browse TypeSafe Jev GitHub projects in ${name.toLowerCase()}, with project details, repository links, and current activity.`
     return localizedHead({ path: `/category/${encodeURIComponent(params.category)}`, locale, title, description })
   },
   component: () => null,

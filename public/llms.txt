@@ -9,6 +9,7 @@ The website has a searchable directory, category pages, and one detail page per 
 - [Browse Awesome JEV](https://awesomejev.cc/): Current project directory and Jev news.
 - [Jev news](https://awesomejev.cc/news): Source-attributed news index with links to AIHOT and original sources.
 - [GitHub project catalog](https://raw.githubusercontent.com/daftAI2026/awesome-jev/main/README.md): Markdown list of projects grouped by primary use.
+- [Project directories](https://awesomejev.cc/category/directories): Curated indexes of multiple Jev projects and resources; their entries are not automatically imported here.
 
 ## About the project
 

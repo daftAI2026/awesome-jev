@@ -121,20 +121,20 @@ test('README grouping follows the reviewed category, not self-assigned topics', 
   assert.match(output.split('## Other')[1], /spoof/)
 })
 
-test('README gives resource directories a distinct subheading without changing their category', () => {
-  const directory = { ...row('awesome-jev'), category: 'resources' as const }
+test('README renders directory projects from their reviewed primary category, not their name', () => {
+  const directory = { ...row('curated-list'), category: 'directories' as const }
   const guide = { ...row('guide'), category: 'resources' as const }
-  const other = { ...row('awesome-elsewhere'), category: 'other' as const }
-  const output = renderReadme(text, [directory, guide, other])
-  const directories = output.split('### Project directories\n')[1].split('### Guides & other resources')[0]
-  const guides = output.split('### Guides & other resources\n')[1].split('## Apps & demos')[0]
-  assert.match(directories, /test\/awesome-jev/)
+  const namedGuide = { ...row('awesome-guide'), category: 'resources' as const }
+  const output = renderReadme(text, [directory, guide, namedGuide])
+  const directories = output.split('## Project directories\n')[1].split('## Apps & demos')[0]
+  const guides = output.split('## Learning & resources\n')[1].split('## Project directories')[0]
+  assert.match(directories, /test\/curated-list/)
   assert.match(directories, /not automatically imported into this catalog/)
-  assert.doesNotMatch(directories, /test\/guide|test\/awesome-elsewhere/)
+  assert.doesNotMatch(directories, /test\/guide|test\/awesome-guide/)
   assert.match(guides, /test\/guide/)
-  assert.equal(output.match(/\]\(https:\/\/github\.com\/test\/awesome-jev\)/g)?.length, 1)
-  assert.match(output.split('## Other')[1], /test\/awesome-elsewhere/)
-  assert.equal(renderReadme(output, [directory, guide, other]), output)
+  assert.match(guides, /test\/awesome-guide/)
+  assert.equal(output.match(/\]\(https:\/\/github\.com\/test\/curated-list\)/g)?.length, 1)
+  assert.equal(renderReadme(output, [directory, guide, namedGuide]), output)
 })
 
 test('unsupported sources and legacy shards are rejected', (t) => {

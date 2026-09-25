@@ -40,20 +40,30 @@ test('parse Jev typed answers; malformed/missing/out-of-range answers are errors
 test('review scope includes curated lists, not only direct API integration', () => {
   assert.match(reviewBody({ type: 'github', title: 'awesome', summary: 'curated', url: repo.html_url, sourceMeta: { repo: repo.full_name } }).questions.keep.instructions, /curated awesome lists/)
   assert.ok(reviewBody({ type: 'github', title: 'SDK', tags: ['sdk'] }).questions.category)
+  assert.match(reviewBody({ type: 'github', title: 'Directory' }).questions.category!.criteria!.directories, /multiple distinct Jev projects/)
+  assert.equal(parseScore({ answers: { ...response.answers, category: { type: 'choice', choice: 'directories', confidence: 0.95 } } }).category, 'directories')
+})
+test('accepted directory is stored as a primary category by the existing radar', async () => {
+  const result = await runRadar({ ...options(), review: async () => ({ ...score, category: 'directories' }) })
+  assert.equal(result.rows[0]?.category, 'directories')
+  assert.equal(result.rows[0]?.sourceMeta.category, undefined)
 })
 test('batch categories use typed Jev choices and fail closed on invalid output', async () => {
-  const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Doom demo', summary: 'Playable game', tags: ['game'] }, { title: 'Unknown', summary: '' }]
+  const rows = [{ title: 'SDK', summary: 'API client', tags: ['sdk'] }, { title: 'Doom demo', summary: 'Playable game', tags: ['game'] },
+    { title: 'Project index', summary: 'Curated list of Jev repositories' }, { title: 'Unknown', summary: '' }]
   const fetchImpl: FetchImpl = async (_url, init) => {
     const body = JSON.parse(String(init?.body))
-    assert.equal(body.state.projects.length, 3)
+    assert.equal(body.state.projects.length, 4)
     assert.equal(body.questions.category_0.type, 'choice')
+    assert.ok(body.questions.category_2.criteria.directories)
     return Response.json({ answers: {
       category_0: { type: 'choice', choice: 'sdk', confidence: 0.99 },
       category_1: { type: 'choice', choice: 'applications', confidence: 0.4 },
-      category_2: { type: 'choice', choice: 'other', confidence: 0.99 },
+      category_2: { type: 'choice', choice: 'directories', confidence: 0.95 },
+      category_3: { type: 'choice', choice: 'other', confidence: 0.99 },
     } })
   }
-  assert.deepEqual(await classifyProjects('test-only', rows, { fetchImpl }), ['sdk', 'applications', 'other'])
+  assert.deepEqual(await classifyProjects('test-only', rows, { fetchImpl }), ['sdk', 'applications', 'directories', 'other'])
   await assert.rejects(() => classifyProjects('test-only', rows, { fetchImpl: async () => Response.json({ answers: {} }) }), /jev-invalid-response/)
   await assert.rejects(() => classifyProjects('test-only', Array(9).fill(rows[0]), { fetchImpl }), /jev-invalid-batch/)
 })

@@ -61,6 +61,7 @@ export const en = {
   categoryDeveloper: 'Developer tools',
   categoryResearch: 'Research & evaluation',
   categoryResources: 'Learning & resources',
+  categoryDirectories: 'Project directories',
   categoryApplications: 'Apps & demos',
   categoryAlternatives: 'Open-source alternatives',
   categoryOther: 'Other',
