@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { collectNews, matchesJevNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
+import { collectNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
 import { findNewsItem, hasIndexableNewsSummary, newsPath, newsTime, sortNews } from '../src/lib/news.ts'
 
 function remote(id: string, original = `https://example.com/${id}`, title = id) {
@@ -43,27 +43,22 @@ test('window pagination keeps opaque cursor within one run', async () => {
   assert.deepEqual(waits, [60_000])
 })
 
-test('API-only body matches do not enter the visible Jev news archive', async () => {
-  const unrelatedRemote = {
-    ...remote('unrelated'),
-    originalTitle: 'A model without the search term',
-    summary: 'A decision model unrelated to this directory.',
+test('API search matches are retained even when exposed fields omit the query word', async () => {
+  const apiMatch = {
+    ...remote('apimatch'),
+    title: 'A decision model compared with another model in the source article',
+    originalTitle: 'An open decision model',
+    summary: 'A new decision model returns calibrated scores.',
     reason: null,
   }
-  const unrelated = parseNewsItem(unrelatedRemote)
-  const relevant = parseNewsItem(remote('relevant'))
-  assert.equal(matchesJevNews(unrelated), false)
-  assert.equal(matchesJevNews(relevant), true)
-  assert.equal(matchesJevNews(parseNewsItem({ ...remote('original'), summary: 'No match', originalTitle: 'Jev decision model' })), true)
-
   const root = mkdtempSync(join(tmpdir(), 'awesome-jev-news-filter-'))
   try {
     mkdirSync(join(root, 'data'))
     const path = join(root, 'data/news.json')
-    writeFileSync(path, `${JSON.stringify([unrelated], null, 2)}\n`)
-    const fakeFetch = (async () => page([unrelatedRemote, remote('relevant')])) as typeof fetch
-    assert.deepEqual(await syncNews(root, fakeFetch, async () => {}), { added: 1, updated: 0, removed: 1 })
-    assert.deepEqual(validateNews(JSON.parse(readFileSync(path, 'utf8'))).map((item) => item.id), ['relevant'])
+    writeFileSync(path, '[]\n')
+    const fakeFetch = (async () => page([apiMatch, remote('relevant')])) as typeof fetch
+    assert.deepEqual(await syncNews(root, fakeFetch, async () => {}), { added: 2, updated: 0 })
+    assert.deepEqual(validateNews(JSON.parse(readFileSync(path, 'utf8'))).map((item) => item.id), ['apimatch', 'relevant'])
   } finally {
     rmSync(root, { recursive: true, force: true })
   }
