@@ -2053,5 +2053,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2103196683932983335",
     "aihotUrl": "https://aihot.news/items/cmufx3m1603mmrogv3z84gzsa"
+  },
+  {
+    "id": "cmug60l2n0gnerogvv72ttoi2",
+    "title": "Opus 5.5 制作讲解视频的开源 agent 方案 shipvideo 发布",
+    "originalTitle": "Opus 5.5 擅长制作讲解视频",
+    "summary": "作者发布 launchvideo.io 与 diggerhq/shipvideo 仓库，用 anthropic/claude-opus-5.5 通过 OpenComputer serverless agent 把一个 URL 或提示词直接渲染成 MP4 讲解视频，单次运行无人工编辑。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-24T23:23:18.882Z",
+    "discoveredAt": "2026-09-24T23:30:42.583Z",
+    "category": "tip",
+    "score": 62,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://launchvideo.io/",
+    "aihotUrl": "https://aihot.news/items/cmug60l2n0gnerogvv72ttoi2"
+  },
+  {
+    "id": "cmug2gi4g09ajrogvibob01bt",
+    "title": "Product Hunt 9月30日举办 HYPERSHIP DAY",
+    "originalTitle": "On Sept 30 we're working with @supabase to put on HYPERSHIP DAY on Product Hunt. If you think you c…",
+    "summary": "Product Hunt 将于 9 月 30 日举办 HYPERSHIP DAY，由 Jev 开发商 @typesafeai 与 @supabase 联合赞助。想参与的开发者需在 9 月 30 日午夜前提交发布，当天需实时构建并上线多个功能，奖品包括 Jev 和 Supabase credits、swag 礼盒及后续公布的秘密奖品。不发布的用户也可当天体验新产品、提交功能请求并观察产品实时迭代。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-09-24T21:22:29.000Z",
+    "discoveredAt": "2026-09-24T21:51:06.115Z",
+    "category": null,
+    "score": 28,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2103233636413903158",
+    "aihotUrl": "https://aihot.news/items/cmug2gi4g09ajrogvibob01bt"
   }
 ]
