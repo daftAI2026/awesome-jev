@@ -1,10 +1,18 @@
-import { useLayoutEffect, useRef, type MouseEvent } from 'react'
+import { useCallback, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
+import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import type { DirectoryItem } from '@/lib/types'
-import { masonryPositions, MASONRY_ROW_HEIGHT } from '@/lib/masonry'
+import { MASONRY_ESTIMATE_SIZE, MASONRY_GAP, MASONRY_OVERSCAN, virtualCardColumnStyle } from '@/lib/masonry'
 import { ItemCard } from '@/components/ItemCard'
 import { useI18n } from '@/i18n'
 
 const SKELETON_CARD_COUNT = 18
+const INITIAL_VIEWPORT = { width: 1200, height: 900 }
+
+function viewportColumns(): number {
+  if (window.matchMedia('(min-width: 64rem)').matches) return 3
+  if (window.matchMedia('(min-width: 40rem)').matches) return 2
+  return 1
+}
 
 export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }: {
   items: DirectoryItem[]
@@ -15,64 +23,74 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
 }) {
   const { locale } = useI18n()
   const listRef = useRef<HTMLUListElement>(null)
+  const [columns, setColumns] = useState(3)
+  const [scrollMargin, setScrollMargin] = useState(0)
+  const [ready, setReady] = useState(false)
+  const getItemKey = useCallback((index: number) => items[index].id, [items])
+  const virtualizer = useWindowVirtualizer({
+    count: items.length,
+    lanes: columns,
+    laneAssignmentMode: 'estimate',
+    estimateSize: () => MASONRY_ESTIMATE_SIZE,
+    getItemKey,
+    gap: MASONRY_GAP,
+    overscan: MASONRY_OVERSCAN,
+    scrollMargin,
+    initialRect: INITIAL_VIEWPORT,
+    initialOffset: 0,
+  })
 
   useLayoutEffect(() => {
     const list = listRef.current
     if (!list) return
-    const cells = Array.from(list.children) as HTMLLIElement[]
     let frame = 0
-    let active = true
-    const layout = () => {
-      const style = getComputedStyle(list)
-      // --- 单列走自然文档流；列数由断点给出，不受旧定位撑出的隐式列干扰 ---
-      if (style.display === 'flex') return
-      const columns = Number(style.getPropertyValue('--masonry-columns'))
-      if (!Number.isInteger(columns) || columns < 2) return
-      // --- 先统一读自然高度，再批量写位置，避免交错读写反复重排 ---
-      const heights = cells.map((cell) => cell.firstElementChild?.getBoundingClientRect().height ?? 0)
-      const positions = masonryPositions(heights, columns)
-      cells.forEach((cell, index) => {
-        const position = positions[index]
-        const area = `${position.row} / ${position.column} / span ${position.span} / span 1`
-        if (cell.style.gridArea !== area) cell.style.gridArea = area
-        const intrinsicSize = `auto ${heights[index]}px`
-        if (cell.style.containIntrinsicSize !== intrinsicSize) cell.style.containIntrinsicSize = intrinsicSize
-      })
-      // --- 所有位置写完后再展示卡片，避免预渲染网格闪现 ---
-      list.style.gridAutoRows = `${MASONRY_ROW_HEIGHT}px`
-      list.dataset.masonryReady = 'true'
-    }
-    layout()
-    const scheduleLayout = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(layout)
-    }
-    // --- 仅观察容器宽度；字体与媒体加载后补排，避免千张卡片的观察器循环 ---
-    void document.fonts.ready.then(() => { if (active) scheduleLayout() })
-    list.addEventListener('load', scheduleLayout, true)
-    list.addEventListener('loadedmetadata', scheduleLayout, true)
-    window.addEventListener('resize', scheduleLayout)
     let previousWidth = list.clientWidth
-    const observer = new ResizeObserver(([entry]) => {
-      const width = entry.contentRect.width
-      if (width === previousWidth) return
-      previousWidth = width
-      scheduleLayout()
+    const remeasureMounted = () => {
+      for (const card of list.children) {
+        const element = card as HTMLLIElement
+        const index = Number(element.dataset.index)
+        if (Number.isInteger(index)) virtualizer.resizeItem(index, element.offsetHeight)
+      }
+    }
+    const syncLayout = () => {
+      const nextColumns = viewportColumns()
+      const nextMargin = list.getBoundingClientRect().top + window.scrollY
+      if (nextColumns !== columns) {
+        setColumns(nextColumns)
+      }
+      setScrollMargin((current) => Math.abs(current - nextMargin) > 1 ? nextMargin : current)
+      const width = list.clientWidth
+      if (width !== previousWidth) {
+        previousWidth = width
+        remeasureMounted()
+      }
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => setReady(true))
+    }
+    syncLayout()
+    remeasureMounted()
+    const observer = new ResizeObserver(() => {
+      if (list.clientWidth !== previousWidth) syncLayout()
     })
     observer.observe(list)
+    window.addEventListener('resize', syncLayout)
+    void document.fonts.ready.then(() => {
+      if (list.isConnected) {
+        remeasureMounted()
+        syncLayout()
+      }
+    })
     return () => {
-      active = false
       observer.disconnect()
-      list.removeEventListener('load', scheduleLayout, true)
-      list.removeEventListener('loadedmetadata', scheduleLayout, true)
-      window.removeEventListener('resize', scheduleLayout)
+      window.removeEventListener('resize', syncLayout)
       cancelAnimationFrame(frame)
     }
-  }, [items, locale])
+  }, [columns, locale, virtualizer])
 
+  const virtualItems = virtualizer.getVirtualItems()
   return (
     <div className="masonry-shell">
-      {items.length > 0 && (
+      {items.length > 0 && !ready && (
         <div className="masonry-skeleton" aria-hidden="true">
           {Array.from({ length: Math.min(items.length, SKELETON_CARD_COUNT) }, (_, index) => (
             <div key={index} className="masonry-skeleton-card">
@@ -84,16 +102,22 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
           ))}
         </div>
       )}
-      <ul
-        ref={listRef}
-        className="card-masonry flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:items-start sm:data-[masonry-ready=true]:gap-y-0 sm:[--masonry-columns:2] lg:grid-cols-3 lg:[--masonry-columns:3]"
-      >
-        {items.map((item) => (
-          <li key={item.id} className="min-w-0">
-            <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview}
-              saved={savedIds?.has(item.id)} onToggleSaved={onToggleSaved} />
-          </li>
-        ))}
+      <ul ref={listRef} data-masonry-ready={ready} className="card-masonry relative w-full"
+        style={{ height: virtualizer.getTotalSize() }}>
+        {virtualItems.map((virtualItem) => {
+          const item = items[virtualItem.index]
+          return (
+            <li key={item.id} ref={virtualizer.measureElement} data-index={virtualItem.index}
+              className="absolute top-0 min-w-0"
+              style={{
+                ...virtualCardColumnStyle(virtualItem.lane, columns),
+                transform: `translateY(${virtualItem.start - scrollMargin}px)`,
+              }}>
+              <ItemCard item={item} rank={ranks?.get(item.id)} onPreview={onPreview}
+                saved={savedIds?.has(item.id)} onToggleSaved={onToggleSaved} />
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

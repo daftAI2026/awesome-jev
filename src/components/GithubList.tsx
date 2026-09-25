@@ -1,10 +1,14 @@
 import { Star } from '@phosphor-icons/react'
-import { memo, type MouseEvent } from 'react'
+import { memo, useCallback, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
+import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import type { DirectoryItem } from '@/lib/types'
 import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath } from '@/lib/locale-routes'
 import { useI18n } from '@/i18n'
 import { SaveButton } from '@/components/SaveButton'
+
+const LIST_ESTIMATE_SIZE = 64
+const LIST_OVERSCAN = 12
 
 function formatCount(n: number): string {
   return n.toLocaleString('en-US')
@@ -22,7 +26,7 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
   const repo = item.sourceMeta.repo
   const projectPath = projectPathFromUrl(item.url)
   return (
-    <li className="relative">
+    <div className="relative">
       <a href={projectPath ? localizedPath(projectPath, locale) : item.url}
         aria-haspopup={onPreview ? 'dialog' : undefined}
         onClick={onPreview ? (event) => onPreview(item, event) : undefined}
@@ -39,7 +43,7 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
       </a>
       {onToggleSaved && <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
         className="absolute top-1/2 right-0 z-10 -translate-y-1/2" />}
-    </li>
+    </div>
   )
 })
 
@@ -57,6 +61,30 @@ export function GithubList({
   onToggleSaved?: (item: DirectoryItem) => void
 }) {
   const { t } = useI18n()
+  const listRef = useRef<HTMLUListElement>(null)
+  const [scrollMargin, setScrollMargin] = useState(0)
+  const getItemKey = useCallback((index: number) => items[index].id, [items])
+  const virtualizer = useWindowVirtualizer({
+    count: items.length,
+    estimateSize: () => LIST_ESTIMATE_SIZE,
+    getItemKey,
+    overscan: LIST_OVERSCAN,
+    scrollMargin,
+    initialRect: { width: 1200, height: 900 },
+    initialOffset: 0,
+  })
+
+  useLayoutEffect(() => {
+    const list = listRef.current
+    if (!list) return
+    const syncMargin = () => {
+      const nextMargin = list.getBoundingClientRect().top + window.scrollY
+      setScrollMargin((current) => Math.abs(current - nextMargin) > 1 ? nextMargin : current)
+    }
+    syncMargin()
+    window.addEventListener('resize', syncMargin)
+    return () => window.removeEventListener('resize', syncMargin)
+  }, [])
 
   return (
     <div>
@@ -65,9 +93,16 @@ export function GithubList({
         <span>{t('githubColProject')}</span>
         <span className="text-right">{t('sortStars')}</span>
       </div>
-      <ul>
-        {items.map((item) => <GithubListRow key={item.id} item={item} rank={ranks.get(item.id)}
-          saved={savedIds?.has(item.id) ?? false} onPreview={onPreview} onToggleSaved={onToggleSaved} />)}
+      <ul ref={listRef} className="virtual-list relative" style={{ height: virtualizer.getTotalSize() }}>
+        {virtualizer.getVirtualItems().map((virtualItem) => {
+          const item = items[virtualItem.index]
+          return <li key={item.id} ref={virtualizer.measureElement} data-index={virtualItem.index}
+            className="absolute top-0 w-full"
+            style={{ transform: `translateY(${virtualItem.start - scrollMargin}px)` }}>
+            <GithubListRow item={item} rank={ranks.get(item.id)}
+              saved={savedIds?.has(item.id) ?? false} onPreview={onPreview} onToggleSaved={onToggleSaved} />
+          </li>
+        })}
       </ul>
     </div>
   )
