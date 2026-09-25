@@ -2083,5 +2083,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2103233636413903158",
     "aihotUrl": "https://aihot.news/items/cmug2gi4g09ajrogvibob01bt"
+  },
+  {
+    "id": "cmughpw5b0sx7rogv4dmfcg9o",
+    "title": "Fastino 发布 GLiNER2.5-Decide：可在 CPU 上运行的 340M 开源权重决策模型",
+    "originalTitle": "Fastino Releases GLiNER2.5-Decide： A 340M Open-Weight Decision Model That Runs on CPU",
+    "summary": "Fastino Labs 发布 340M 参数开源权重决策模型 GLiNER2.5-Decide，接受文本和类型化问题 schema，返回带概率分布、置信度和约束可行性元数据的结构化答案，权重采用 Apache 2.0，可运行于 CPU、GPU 或气隙环境。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-09-25T04:46:38.000Z",
+    "discoveredAt": "2026-09-25T04:58:18.647Z",
+    "category": "ai-models",
+    "score": 57,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/09/24/fastino-releases-gliner2-5-decide-a-340m-open-weight-decision-model-that-runs-on-cpu",
+    "aihotUrl": "https://aihot.news/items/cmughpw5b0sx7rogv4dmfcg9o"
   }
 ]
