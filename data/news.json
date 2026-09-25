@@ -1200,21 +1200,6 @@
     "aihotUrl": "https://aihot.news/items/cmu8m4ukd1q7crogrmvhr7o5a"
   },
   {
-    "id": "cmu8llu6p1prhrogrd6nmgfhg",
-    "title": "Nathan Lambert 撰文解释为何仍未接受真正的递归自我改进（RSI）",
-    "originalTitle": "Why I still haven't bought into true RSI",
-    "summary": "Nathan Lambert 撰文阐述他仍不支持真正的递归自我改进（RSI），坚持自己的\"有损自我改进\"基线判断。",
-    "sourceName": "Nathan Lambert：Interconnects（RSS）",
-    "publishedAt": "2026-09-19T15:42:20.000Z",
-    "discoveredAt": "2026-09-19T16:24:57.882Z",
-    "category": "tip",
-    "score": 55,
-    "selected": false,
-    "reason": null,
-    "originalUrl": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
-    "aihotUrl": "https://aihot.news/items/cmu8llu6p1prhrogrd6nmgfhg"
-  },
-  {
     "id": "cmu8ezrfp1iy7rogrtexqdmy0",
     "title": "Convai 发布开源决策模型 Laya，对标 TypeSafe AI 的 Jev",
     "originalTitle": "Laya 是 Jev 的开源版本",
@@ -1875,21 +1860,6 @@
     "aihotUrl": "https://aihot.news/items/cmueopn2p0du2royney9xs03m"
   },
   {
-    "id": "cmufae54k03neroagmmeho0rr",
-    "title": "Stanford 与 NVIDIA Research 发布对比语言模型 CLM-8B",
-    "originalTitle": "Contrastive Language Models",
-    "summary": "Stanford 与 NVIDIA Research 团队发布 Contrastive Language Models（CLM）及 CLM-8B，用对比学习连接状态与动作，作为快速决策的 System One 模型。",
-    "sourceName": "Hacker News：AI 热帖",
-    "publishedAt": "2026-09-24T04:20:59.000Z",
-    "discoveredAt": "2026-09-24T08:45:26.986Z",
-    "category": "ai-models",
-    "score": 58,
-    "selected": false,
-    "reason": null,
-    "originalUrl": "https://contrastive-lm.notion.site/",
-    "aihotUrl": "https://aihot.news/items/cmufae54k03neroagmmeho0rr"
-  },
-  {
     "id": "cmuf9jgea05x8rocsw2y3zzlm",
     "title": "1.395元复现Jev原型：百度千帆Token Plan最佳实践",
     "originalTitle": null,
@@ -1980,21 +1950,6 @@
     "aihotUrl": "https://aihot.news/items/cmufo5akc07fpro8wkfc467ex"
   },
   {
-    "id": "cmufkk74d038xro8wkn32j6re",
-    "title": "斯坦福与 NVIDIA 发布对比式语言模型 CLM-8B",
-    "originalTitle": "对比式语言模型",
-    "summary": "斯坦福大学与 NVIDIA Research 团队发布 Contrastive Language Models（CLM）及 CLM-8B 模型，用 InfoNCE 对比目标连接状态与动作，作为 System One 决策模型。",
-    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
-    "publishedAt": "2026-09-24T13:07:21.703Z",
-    "discoveredAt": "2026-09-24T13:30:01.984Z",
-    "category": "ai-models",
-    "score": 59,
-    "selected": false,
-    "reason": null,
-    "originalUrl": "https://contrastive-lm.notion.site/",
-    "aihotUrl": "https://aihot.news/items/cmufkk74d038xro8wkn32j6re"
-  },
-  {
     "id": "cmudu5ho307q5roghwle4c3sr",
     "title": "JevBench v1.4.1 发布：面向类型化决策模型的可重复基准测试",
     "originalTitle": "Show HN： JevBench：一个用于类型化决策模型的可重复基准测试工具",
@@ -2055,21 +2010,6 @@
     "aihotUrl": "https://aihot.news/items/cmufx3m1603mmrogv3z84gzsa"
   },
   {
-    "id": "cmug60l2n0gnerogvv72ttoi2",
-    "title": "Opus 5.5 制作讲解视频的开源 agent 方案 shipvideo 发布",
-    "originalTitle": "Opus 5.5 擅长制作讲解视频",
-    "summary": "作者发布 launchvideo.io 与 diggerhq/shipvideo 仓库，用 anthropic/claude-opus-5.5 通过 OpenComputer serverless agent 把一个 URL 或提示词直接渲染成 MP4 讲解视频，单次运行无人工编辑。",
-    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
-    "publishedAt": "2026-09-24T23:23:18.882Z",
-    "discoveredAt": "2026-09-24T23:30:42.583Z",
-    "category": "tip",
-    "score": 62,
-    "selected": false,
-    "reason": null,
-    "originalUrl": "https://launchvideo.io/",
-    "aihotUrl": "https://aihot.news/items/cmug60l2n0gnerogvv72ttoi2"
-  },
-  {
     "id": "cmug2gi4g09ajrogvibob01bt",
     "title": "Product Hunt 9月30日举办 HYPERSHIP DAY",
     "originalTitle": "On Sept 30 we're working with @supabase to put on HYPERSHIP DAY on Product Hunt. If you think you c…",
@@ -2083,20 +2023,5 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2103233636413903158",
     "aihotUrl": "https://aihot.news/items/cmug2gi4g09ajrogvibob01bt"
-  },
-  {
-    "id": "cmughpw5b0sx7rogv4dmfcg9o",
-    "title": "Fastino 发布 GLiNER2.5-Decide：可在 CPU 上运行的 340M 开源权重决策模型",
-    "originalTitle": "Fastino Releases GLiNER2.5-Decide： A 340M Open-Weight Decision Model That Runs on CPU",
-    "summary": "Fastino Labs 发布 340M 参数开源权重决策模型 GLiNER2.5-Decide，接受文本和类型化问题 schema，返回带概率分布、置信度和约束可行性元数据的结构化答案，权重采用 Apache 2.0，可运行于 CPU、GPU 或气隙环境。",
-    "sourceName": "MarkTechPost（RSS）",
-    "publishedAt": "2026-09-25T04:46:38.000Z",
-    "discoveredAt": "2026-09-25T04:58:18.647Z",
-    "category": "ai-models",
-    "score": 57,
-    "selected": false,
-    "reason": null,
-    "originalUrl": "https://www.marktechpost.com/2026/09/24/fastino-releases-gliner2-5-decide-a-340m-open-weight-decision-model-that-runs-on-cpu",
-    "aihotUrl": "https://aihot.news/items/cmughpw5b0sx7rogv4dmfcg9o"
   }
 ]

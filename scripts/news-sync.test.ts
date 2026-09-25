@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { collectNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
+import { collectNews, matchesJevNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
 import { findNewsItem, hasIndexableNewsSummary, newsPath, newsTime, sortNews } from '../src/lib/news.ts'
 
 function remote(id: string, original = `https://example.com/${id}`, title = id) {
@@ -11,7 +11,7 @@ function remote(id: string, original = `https://example.com/${id}`, title = id) 
     id,
     title,
     originalTitle: `Original ${id}`,
-    summary: `Summary for ${id}`,
+    summary: `Summary about Jev for ${id}`,
     source: { name: 'Example News' },
     links: { aihot: `https://aihot.news/items/${id}`, original },
     publishedAt: '2026-09-23T10:00:00.000Z',
@@ -37,10 +37,36 @@ test('window pagination keeps opaque cursor within one run', async () => {
   }) as typeof fetch
   const items = await collectNews(fakeFetch, async (milliseconds) => { waits.push(milliseconds) })
   assert.deepEqual(items.map((item) => item.id), ['news0001', 'news0002'])
-  assert.equal(new URL(urls[0]).searchParams.get('q'), 'Jev')
+  assert.equal(new URL(urls[0]).searchParams.get('q'), 'jev')
   assert.equal(new URL(urls[0]).searchParams.get('mode'), 'all')
   assert.equal(new URL(urls[1]).searchParams.get('cursor'), 'opaque-cursor')
   assert.deepEqual(waits, [60_000])
+})
+
+test('API-only body matches do not enter the visible Jev news archive', async () => {
+  const unrelatedRemote = {
+    ...remote('unrelated'),
+    originalTitle: 'A model without the search term',
+    summary: 'A decision model unrelated to this directory.',
+    reason: null,
+  }
+  const unrelated = parseNewsItem(unrelatedRemote)
+  const relevant = parseNewsItem(remote('relevant'))
+  assert.equal(matchesJevNews(unrelated), false)
+  assert.equal(matchesJevNews(relevant), true)
+  assert.equal(matchesJevNews(parseNewsItem({ ...remote('original'), summary: 'No match', originalTitle: 'Jev decision model' })), true)
+
+  const root = mkdtempSync(join(tmpdir(), 'awesome-jev-news-filter-'))
+  try {
+    mkdirSync(join(root, 'data'))
+    const path = join(root, 'data/news.json')
+    writeFileSync(path, `${JSON.stringify([unrelated], null, 2)}\n`)
+    const fakeFetch = (async () => page([unrelatedRemote, remote('relevant')])) as typeof fetch
+    assert.deepEqual(await syncNews(root, fakeFetch, async () => {}), { added: 1, updated: 0, removed: 1 })
+    assert.deepEqual(validateNews(JSON.parse(readFileSync(path, 'utf8'))).map((item) => item.id), ['relevant'])
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
 })
 
 test('timeline ordering uses discovery time unless publication is over 72 hours older', () => {

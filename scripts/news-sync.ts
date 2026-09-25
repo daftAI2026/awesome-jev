@@ -10,6 +10,7 @@ const MAX_PAGES = 15
 const MIN_REQUEST_INTERVAL_MS = 60_000
 const MAX_RETRY_WAIT_MS = 10 * 60_000
 const DATA_FILE = 'data/news.json'
+const SEARCH_TERM = 'jev'
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -82,6 +83,18 @@ export function validateNews(value: unknown): NewsItem[] {
   })
 }
 
+/** API 的 q 可能命中未公开的正文；目录只保留读者能看见 Jev 依据的条目。 */
+export function matchesJevNews(item: NewsItem): boolean {
+  return [item.title, item.originalTitle, item.summary, item.reason]
+    .some((text) => text?.toLowerCase().includes(SEARCH_TERM))
+}
+
+function requireRelevantNews(items: NewsItem[]): NewsItem[] {
+  const unrelated = items.filter((item) => !matchesJevNews(item))
+  if (unrelated.length) throw new Error(`Stored news includes ${unrelated.length} item(s) without visible Jev evidence`)
+  return items
+}
+
 export function mergeNews(existing: NewsItem[], incoming: NewsItem[]): { items: NewsItem[]; added: number; updated: number } {
   const items = [...existing]
   const byId = new Map(items.map((item, index) => [item.id, index]))
@@ -124,7 +137,7 @@ export async function collectNews(
     url.searchParams.set('mode', 'all')
     url.searchParams.set('window', '7d')
     url.searchParams.set('by', 'timeline')
-    url.searchParams.set('q', 'Jev')
+    url.searchParams.set('q', SEARCH_TERM)
     url.searchParams.set('limit', String(PAGE_SIZE))
     if (cursor) url.searchParams.set('cursor', cursor)
     let response: Response
@@ -156,31 +169,34 @@ export async function syncNews(
   root = process.cwd(),
   fetchImpl: typeof fetch = fetch,
   wait: (milliseconds: number) => Promise<unknown> = sleep,
-): Promise<{ added: number; updated: number }> {
+): Promise<{ added: number; updated: number; removed: number }> {
   const path = resolve(root, DATA_FILE)
-  const existing = validateNews(JSON.parse(readFileSync(path, 'utf8')) as unknown)
+  const stored = validateNews(JSON.parse(readFileSync(path, 'utf8')) as unknown)
   const incoming = await collectNews(fetchImpl, wait)
   validateNews(incoming)
-  const result = mergeNews(existing, incoming)
-  validateNews(result.items)
-  if (result.added || result.updated) {
+  const rejectedIds = new Set(incoming.filter((item) => !matchesJevNews(item)).map((item) => item.id))
+  const existing = stored.filter((item) => matchesJevNews(item) && !rejectedIds.has(item.id))
+  const result = mergeNews(existing, incoming.filter(matchesJevNews))
+  requireRelevantNews(validateNews(result.items))
+  const removed = stored.length - existing.length
+  if (result.added || result.updated || removed) {
     const temporary = `${path}.${process.pid}.tmp`
     writeFileSync(temporary, `${JSON.stringify(result.items, null, 2)}\n`)
     renameSync(temporary, path)
   }
-  return { added: result.added, updated: result.updated }
+  return { added: result.added, updated: result.updated, removed }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   if (process.argv[2] === '--check') {
-    validateNews(JSON.parse(readFileSync(resolve(DATA_FILE), 'utf8')) as unknown)
+    requireRelevantNews(validateNews(JSON.parse(readFileSync(resolve(DATA_FILE), 'utf8')) as unknown))
     process.stdout.write('news store valid\n')
   } else if (process.env.AIHOT_NEWS_ENABLED !== 'true') {
     process.stderr.write('AIHOT_NEWS_ENABLED must be true before publishing AIHOT content\n')
     process.exitCode = 1
   } else {
-    syncNews().then(({ added, updated }) => {
-      process.stdout.write(`AIHOT news: ${added} added, ${updated} updated\n`)
+    syncNews().then(({ added, updated, removed }) => {
+      process.stdout.write(`AIHOT news: ${added} added, ${updated} updated, ${removed} unrelated removed\n`)
     }).catch((error: unknown) => {
       process.stderr.write(`${error instanceof Error ? error.message : 'news sync failed'}\n`)
       process.exitCode = 1

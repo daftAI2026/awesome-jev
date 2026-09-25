@@ -11,7 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 const INITIAL_NEWS_COUNT = 16
 const NEWS_OVERSCAN = 8
-const AIHOT_SEARCH = 'https://aihot.news/all?q=jev&page=1'
+const AIHOT_SEARCH = 'https://aihot.news/?q=jev&page=1'
 const TIME_ZONE = 'Asia/Shanghai'
 type NewsRow = { kind: 'date'; key: string; label: string } | { kind: 'item'; item: NewsItem }
 
