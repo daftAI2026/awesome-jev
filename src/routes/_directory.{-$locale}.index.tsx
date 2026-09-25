@@ -1,12 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { en } from '@/i18n/locales/en'
-import { zh } from '@/i18n/locales/zh'
+import { catalogs } from '@/i18n/catalogs'
 import { localizedHead } from '@/lib/locale-head'
+import { localeFromParam } from '@/lib/locale-routes'
 
 export const Route = createFileRoute('/_directory/{-$locale}/')({
   head: ({ params }) => {
-    const locale = params.locale === 'zh' ? 'zh' : 'en'
-    const messages = locale === 'zh' ? zh : en
+    const locale = localeFromParam(params.locale)
+    const messages = catalogs[locale]
     return localizedHead({ path: '/', locale, title: messages.documentTitle, description: messages.documentDescription })
   },
   component: () => null,

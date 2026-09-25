@@ -2,11 +2,12 @@ import { ArrowSquareOut } from '@phosphor-icons/react'
 import { useI18n } from '@/i18n'
 import { newsTime, type NewsItem } from '@/lib/news'
 import { Button } from '@/components/ui/button'
+import { INTL_LOCALE } from '@/lib/locale-routes'
 
 export function NewsItemMeta({ item }: { item: NewsItem }) {
   const { locale, t } = useI18n()
   const date = new Date(newsTime(item)).toISOString()
-  const formattedDate = new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
+  const formattedDate = new Intl.DateTimeFormat(INTL_LOCALE[locale], {
     timeZone: 'Asia/Shanghai', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',
   }).format(new Date(date))
 

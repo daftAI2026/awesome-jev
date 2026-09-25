@@ -9,10 +9,11 @@ import { ThemeMenu } from '@/components/ThemeMenu'
 import { Button } from '@/components/ui/button'
 import { useSaved } from '@/hooks/useSaved'
 import { useI18n } from '@/i18n'
+import { catalogs } from '@/i18n/catalogs'
 import { CATEGORY_LABEL, type Category } from '@/lib/categories'
 import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
 import { localizedHead } from '@/lib/locale-head'
-import { localizedPath } from '@/lib/locale-routes'
+import { isLocalizedRouteParam, localeFromParam, localizedPath } from '@/lib/locale-routes'
 import type { DirectoryItem } from '@/lib/types'
 
 type Project = DirectoryItem & { category?: Category }
@@ -20,7 +21,7 @@ const projects = githubData as Project[]
 
 export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
   beforeLoad: ({ params }) => {
-    if (params.locale && params.locale !== 'zh') throw notFound()
+    if (!isLocalizedRouteParam(params.locale)) throw notFound()
   },
   loader: ({ params }) => {
     const item = findGitHubProject(projects, params.owner, params.repo)
@@ -29,11 +30,11 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
   },
   head: ({ loaderData, params }) => {
     const item = loaderData as Project | undefined
-    if (!item) return { meta: [{ title: 'Project not found · Awesome JEV' }, { name: 'robots', content: 'noindex' }] }
+    if (!item) return { meta: [{ title: `${catalogs[localeFromParam(params.locale)].projectNotFound} · Awesome JEV` }, { name: 'robots', content: 'noindex' }] }
     const path = projectPathFromUrl(item.url)
     const title = `${item.title} · Awesome JEV`
     const description = item.summary.slice(0, 240)
-    return localizedHead({ path: path ?? '/', locale: params.locale === 'zh' ? 'zh' : 'en', title, description, type: 'article' })
+    return localizedHead({ path: path ?? '/', locale: localeFromParam(params.locale), title, description, type: 'article' })
   },
   component: ProjectPage,
   notFoundComponent: ProjectNotFound,
@@ -90,9 +91,9 @@ function ProjectPage() {
 }
 
 function ProjectNotFound() {
-  const { locale } = useI18n()
+  const { locale, t } = useI18n()
   return <main className="mx-auto max-w-2xl px-4 py-16">
-    <h1 className="text-xl font-medium">Project not found</h1>
+    <h1 className="text-xl font-medium">{t('projectNotFound')}</h1>
     <Link to={localizedPath('/', locale)} className="mt-4 inline-block text-sm underline">Awesome JEV</Link>
   </main>
 }

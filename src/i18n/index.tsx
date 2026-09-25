@@ -6,13 +6,11 @@ import {
   type ReactNode,
 } from 'react'
 import { useRouterState } from '@tanstack/react-router'
-import { en, type MessageKey, type Messages } from './locales/en'
-import { zh } from './locales/zh'
+import { type MessageKey } from './locales/en'
+import { catalogs } from './catalogs'
 import { LOCALE_STORAGE_KEY, localeFromPath, localizedPath, type Locale } from '@/lib/locale-routes'
 
 export type { Locale } from '@/lib/locale-routes'
-
-const catalogs: Record<Locale, Messages> = { en, zh }
 
 interface I18nContextValue {
   locale: Locale

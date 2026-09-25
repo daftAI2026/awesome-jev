@@ -17,7 +17,7 @@ export function localizedHead({ path, locale, title, description, robots, type =
       { name: 'description', content: description },
       ...(robots ? [{ name: 'robots', content: robots }] : []),
       { property: 'og:type', content: type },
-      { property: 'og:locale', content: locale === 'zh' ? 'zh_CN' : 'en_US' },
+      { property: 'og:locale', content: { en: 'en_US', zh: 'zh_CN', ja: 'ja_JP' }[locale] },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:url', content: url },

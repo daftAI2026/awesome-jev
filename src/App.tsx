@@ -180,8 +180,8 @@ export default function App() {
     setDetailOpen(true)
     void navigate({
       to: '/{-$locale}/preview/$owner/$repo',
-      params: { locale: locale === 'zh' ? 'zh' : undefined, owner, repo },
-      mask: { to: '/{-$locale}/projects/$owner/$repo', params: { locale: locale === 'zh' ? 'zh' : undefined, owner, repo } },
+      params: { locale: locale === 'en' ? undefined : locale, owner, repo },
+      mask: { to: '/{-$locale}/projects/$owner/$repo', params: { locale: locale === 'en' ? undefined : locale, owner, repo } },
       resetScroll: false,
     })
   }, [filter, locale, navigate, savedSearch])

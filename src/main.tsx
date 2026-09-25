@@ -17,8 +17,8 @@ function canHydrate(): boolean {
   if (!root.hasChildNodes()) return false
   try {
     const storedLocale = localStorage.getItem('awesome-jev-locale')
-    if (storedLocale === 'zh' ||
-      (storedLocale !== 'en' && /^zh\b/i.test(navigator.language))) return false
+    if (storedLocale === 'zh' || storedLocale === 'ja' ||
+      (storedLocale !== 'en' && /^(?:zh|ja)(?:-|$)/i.test(navigator.language))) return false
     const defaults = {
       'awesome-jev-github-sort': 'stars',
       'awesome-jev-github-view': 'cards',

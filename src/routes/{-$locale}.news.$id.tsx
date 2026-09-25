@@ -8,15 +8,16 @@ import { SaveButton } from '@/components/SaveButton'
 import { ThemeMenu } from '@/components/ThemeMenu'
 import { useSaved } from '@/hooks/useSaved'
 import { useI18n } from '@/i18n'
+import { catalogs } from '@/i18n/catalogs'
 import { localizedHead } from '@/lib/locale-head'
-import { localizedPath } from '@/lib/locale-routes'
+import { isLocalizedRouteParam, localeFromParam, localizedPath } from '@/lib/locale-routes'
 import { findNewsItem, hasIndexableNewsSummary, newsPath, type NewsItem } from '@/lib/news'
 
 const news = newsData as NewsItem[]
 
 export const Route = createFileRoute('/{-$locale}/news/$id')({
   beforeLoad: ({ params }) => {
-    if (params.locale && params.locale !== 'zh') throw notFound()
+    if (!isLocalizedRouteParam(params.locale)) throw notFound()
   },
   loader: ({ params }) => {
     const item = findNewsItem(news, params.id)
@@ -25,11 +26,12 @@ export const Route = createFileRoute('/{-$locale}/news/$id')({
   },
   head: ({ loaderData, params }) => {
     const item = loaderData as NewsItem | undefined
-    if (!item) return { meta: [{ title: 'News not found · Awesome JEV' }, { name: 'robots', content: 'noindex' }] }
+    const locale = localeFromParam(params.locale)
+    if (!item) return { meta: [{ title: `${catalogs[locale].newsNotFound} · Awesome JEV` }, { name: 'robots', content: 'noindex' }] }
     return localizedHead({
       path: newsPath(item.id) ?? '/news',
-      locale: params.locale === 'zh' ? 'zh' : 'en',
-      title: `${item.title} · Jev News · Awesome JEV`,
+      locale,
+      title: `${item.title} · ${catalogs[locale].newsLabel} · Awesome JEV`,
       description: (item.summary ?? item.title).replace(/\s+/g, ' ').slice(0, 240),
       robots: hasIndexableNewsSummary(item.summary) ? undefined : 'noindex, follow',
       type: 'article',

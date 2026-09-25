@@ -24,7 +24,7 @@ test('sitemap contains the home page, populated category pages, and only describ
   assert.equal(result.projectCount, 3)
   assert.equal(result.newsCount, 0)
   assert.deepEqual(result.categories, ['agents', 'research'])
-  assert.equal(result.urlCount, 16)
+  assert.equal(result.urlCount, 24)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\//)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/top100/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/news/)
@@ -32,19 +32,22 @@ test('sitemap contains the home page, populated category pages, and only describ
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/category\/research/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/projects\/a-owner\/alpha/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/projects\/a-owner\/alpha/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/ja\/projects\/a-owner\/alpha/)
   assert.match(result.xml, /hreflang="zh-CN"/)
+  assert.match(result.xml, /hreflang="ja-JP"/)
   assert.doesNotMatch(result.xml, /\/projects\/no-summary\/thin/)
   assert.doesNotMatch(result.xml, /\/category\/unknown/)
 })
 
-test('directory category has a crawlable route in both languages', () => {
+test('directory category has a crawlable route in all languages', () => {
   const result = buildSitemap([row('owner', 'awesome-jev', 'A curated project index', 'directories')])
   assert.deepEqual(result.categories, ['directories'])
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/category\/directories/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/category\/directories/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/ja\/category\/directories/)
 })
 
-test('sitemap adds only news with a stable ID and summary in both locales', () => {
+test('sitemap adds only news with a stable ID and summary in all locales', () => {
   const news = [
     { id: 'cmu123', title: 'Jev release', summary: 'A source-attributed summary that explains the Jev release and gives readers enough context to decide whether to visit the original source.' },
     { id: 'cmu456', title: 'No summary', summary: null },
@@ -52,9 +55,10 @@ test('sitemap adds only news with a stable ID and summary in both locales', () =
   ]
   const result = buildSitemap([], 'https://awesomejev.cc', news)
   assert.equal(result.newsCount, 1)
-  assert.equal(result.urlCount, 8)
+  assert.equal(result.urlCount, 12)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/news\/cmu123/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/news\/cmu123/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/ja\/news\/cmu123/)
   assert.doesNotMatch(result.xml, /\/news\/cmu456/)
   assert.doesNotMatch(result.xml, /\/news\/cmu789/)
   assert.throws(() => buildSitemap([], 'https://awesomejev.cc', [...news, news[0]]), /Duplicate news route/)
@@ -93,7 +97,7 @@ test('generator writes the deterministic sitemap to the requested project root',
     writeFileSync(join(root, 'data', 'github.json'), JSON.stringify(items))
     writeFileSync(join(root, 'data', 'news.json'), '[]')
     const result = generateSitemap(root)
-    assert.equal(result.urlCount, 10)
+    assert.equal(result.urlCount, 15)
     assert.equal(readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8'), result.xml)
   } finally {
     rmSync(root, { recursive: true, force: true })

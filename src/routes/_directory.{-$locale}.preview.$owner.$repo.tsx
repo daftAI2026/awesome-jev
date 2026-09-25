@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from '@tanstack/react-router'
 import githubData from '../../data/github.json'
 import { findGitHubProject } from '@/lib/project-routes'
 import { localizedHead } from '@/lib/locale-head'
+import { localeFromParam } from '@/lib/locale-routes'
 import type { DirectoryItem } from '@/lib/types'
 
 export const Route = createFileRoute('/_directory/{-$locale}/preview/$owner/$repo')({
@@ -12,7 +13,7 @@ export const Route = createFileRoute('/_directory/{-$locale}/preview/$owner/$rep
   },
   head: ({ loaderData, params }) => localizedHead({
     path: `/projects/${params.owner.toLowerCase()}/${params.repo.toLowerCase()}`,
-    locale: params.locale === 'zh' ? 'zh' : 'en',
+    locale: localeFromParam(params.locale),
     title: `${loaderData?.title ?? 'Project'} · Awesome JEV`,
     description: loaderData?.summary ?? '',
     type: 'article',

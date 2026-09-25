@@ -12,7 +12,7 @@ import githubData from './data/github.json' with { type: 'json' }
 import newsData from './data/news.json' with { type: 'json' }
 import { projectPathFromUrl } from './src/lib/project-routes.ts'
 import { newsPath } from './src/lib/news.ts'
-import { localizedPath } from './src/lib/locale-routes.ts'
+import { LOCALES, localizedPath } from './src/lib/locale-routes.ts'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
 const projectPaths = githubData
@@ -48,10 +48,7 @@ const englishPrerenderPaths = [
   ...projectPaths,
   ...newsPaths,
 ]
-const prerenderPaths = [
-  ...englishPrerenderPaths,
-  ...englishPrerenderPaths.map((path) => localizedPath(path, 'zh')),
-]
+const prerenderPaths = LOCALES.flatMap((locale) => englishPrerenderPaths.map((path) => localizedPath(path, locale)))
 
 const catalogUpdatedAt = (() => {
   try {

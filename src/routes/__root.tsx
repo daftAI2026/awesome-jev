@@ -7,7 +7,8 @@ import {
   useRouterState,
 } from '@tanstack/react-router'
 import { I18nProvider } from '@/i18n'
-import { LOCALE_STORAGE_KEY, localeFromPath } from '@/lib/locale-routes'
+import { catalogs } from '@/i18n/catalogs'
+import { LANGUAGE_TAG, LOCALE_STORAGE_KEY, localeFromPath } from '@/lib/locale-routes'
 import '../index.css'
 
 const SITE_DESCRIPTION = 'A free curated directory of TypeSafe Jev / System One GitHub projects, organized by what they build and how they use Jev.'
@@ -19,13 +20,14 @@ const THEME_BOOTSTRAP = `(() => {
 })()`
 const LOCALE_BOOTSTRAP = `(() => {
   const path = location.pathname
-  if (path === '/zh' || path.startsWith('/zh/')) return
+  if (path === '/zh' || path.startsWith('/zh/') || path === '/ja' || path.startsWith('/ja/')) return
   let saved = null
   try { saved = localStorage.getItem(${JSON.stringify(LOCALE_STORAGE_KEY)}) } catch {}
-  const preferred = saved === 'en' || saved === 'zh'
+  const preferred = saved === 'en' || saved === 'zh' || saved === 'ja'
     ? saved
-    : /^zh(?:-|$)/i.test(navigator.languages?.[0] || navigator.language || '') ? 'zh' : 'en'
-  if (preferred === 'zh') location.replace('/zh' + (path === '/' ? '' : path) + location.search + location.hash)
+    : /^zh(?:-|$)/i.test(navigator.languages?.[0] || navigator.language || '') ? 'zh'
+    : /^ja(?:-|$)/i.test(navigator.languages?.[0] || navigator.language || '') ? 'ja' : 'en'
+  if (preferred !== 'en') location.replace('/' + preferred + (path === '/' ? '' : path) + location.search + location.hash)
 })()`
 
 export const Route = createRootRoute({
@@ -47,7 +49,7 @@ export const Route = createRootRoute({
     ],
     links: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   }),
-  notFoundComponent: () => <main className="mx-auto max-w-3xl px-6 py-16"><h1 className="text-2xl font-semibold">Page not found</h1></main>,
+  notFoundComponent: NotFoundPage,
   shellComponent: RootDocument,
   component: RootComponent,
 })
@@ -56,10 +58,15 @@ function RootComponent() {
   return <I18nProvider><Outlet /></I18nProvider>
 }
 
+function NotFoundPage() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  return <main className="mx-auto max-w-3xl px-6 py-16"><h1 className="text-2xl font-semibold">{catalogs[localeFromPath(pathname)].pageNotFound}</h1></main>
+}
+
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   return (
-    <html lang={localeFromPath(pathname) === 'zh' ? 'zh-CN' : 'en'}>
+    <html lang={LANGUAGE_TAG[localeFromPath(pathname)]}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOTSTRAP }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />

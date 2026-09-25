@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { CATEGORIES } from '../src/lib/categories.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { hasIndexableNewsSummary, newsPath } from '../src/lib/news.ts'
-import { localeAlternates, localizedPath } from '../src/lib/locale-routes.ts'
+import { LOCALES, localeAlternates, localizedPath } from '../src/lib/locale-routes.ts'
 
 const SITE_ORIGIN = 'https://awesomejev.cc'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -78,7 +78,7 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
     .filter((category) => categorySet.has(category))
     .map((category) => `/category/${category}`)
   const englishPaths = ['/', '/top100', '/news', ...categoryPaths, ...projectPaths, ...newsPaths]
-  const paths = [...englishPaths, ...englishPaths.map((path) => localizedPath(path, 'zh'))]
+  const paths = LOCALES.flatMap((locale) => englishPaths.map((path) => localizedPath(path, locale)))
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',

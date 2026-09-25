@@ -2,7 +2,7 @@ import { useCallback, useLayoutEffect, useMemo, useRef, useState, type MouseEven
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import { useI18n, type Locale } from '@/i18n'
 import { newsPath, newsTime, sortNews, type NewsItem } from '@/lib/news'
-import { localizedPath } from '@/lib/locale-routes'
+import { INTL_LOCALE, localizedPath } from '@/lib/locale-routes'
 import { NewsDialog } from '@/components/NewsDialog'
 import { SaveButton } from '@/components/SaveButton'
 import { NEWS_CATEGORY_LABEL } from '@/lib/categories'
@@ -24,13 +24,13 @@ function dayKey(date: Date): string {
 }
 
 function formatDay(date: Date, locale: Locale): string {
-  return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
+  return new Intl.DateTimeFormat(INTL_LOCALE[locale], {
     timeZone: TIME_ZONE, year: 'numeric', month: 'long', day: 'numeric',
   }).format(date)
 }
 
 function formatTime(date: Date, locale: Locale): string {
-  return new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
+  return new Intl.DateTimeFormat(INTL_LOCALE[locale], {
     timeZone: TIME_ZONE, hour: '2-digit', minute: '2-digit', hour12: false,
   }).format(date)
 }
