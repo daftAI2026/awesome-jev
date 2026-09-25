@@ -2113,5 +2113,50 @@
     "reason": null,
     "originalUrl": "https://arxiv.org/abs/2609.29429",
     "aihotUrl": "https://aihot.news/items/cmugvdzah1b46rogvaei9bq7r"
+  },
+  {
+    "id": "cmuh7vel607jjro55rdyowkhu",
+    "title": "DSPy 3.4.0 原生支持 Jev 与 System One 模型",
+    "originalTitle": "Pay attention to System One models if you are building custom harnesses and agentic workflows. Gre…",
+    "summary": "DSPy 3.4.0 发布，原生支持 Jev 和 System One 模型，并新增专为置信度校准输出设计的优化器 ReAnchor。Elvis Saravia 称用 Jev 构建自定义 harness 在 guardrails、路由和验证器上效果良好，并看好其在技能结构化、工具调用、动态工作流与上下文工程中的应用。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-25T16:57:18.000Z",
+    "discoveredAt": "2026-09-25T17:10:23.487Z",
+    "category": null,
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/omarsar0/status/2103529287676567888",
+    "aihotUrl": "https://aihot.news/items/cmuh7vel607jjro55rdyowkhu"
+  },
+  {
+    "id": "cmuh640ch05lxro55p0838gfp",
+    "title": "DSPy 3.4.0 发布：新增 ReAnchor 优化器",
+    "originalTitle": "this is an honor！ 🥹",
+    "summary": "太荣幸了！🥹\n\nDSPy 3.4.0 刚刚发布！\n\n此版本在 DSPy 中原生支持 Jev 和 System one 模型！可与兼容的 signatures 一起使用。此版本还包含一个全新的优化器 ReAnchor，专门用于校准输出的置信度。",
+    "sourceName": "@completeskeptic",
+    "publishedAt": "2026-09-25T16:03:56.000Z",
+    "discoveredAt": "2026-09-25T16:21:06.902Z",
+    "category": null,
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/CompleteSkeptic/status/2103515857909678542",
+    "aihotUrl": "https://aihot.news/items/cmuh640ch05lxro55p0838gfp"
+  },
+  {
+    "id": "cmuh5qc4s052lro55yvozxh2j",
+    "title": "System One 模型推动自定义 Agent Harness 新浪潮",
+    "originalTitle": "Own your harness， folks. I feel like System One models take custom agent harnesses to a whole diff…",
+    "summary": "DAIR.AI 的 Elvis Saravia 指出，System One 模型正将自定义 agent harness 推向新高度，Jev 之后又出现 Contrastive Language Model（CLM），CLM 比 Jev 快 9 倍，在长周期任务上验证表现更优。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-25T15:56:02.000Z",
+    "discoveredAt": "2026-09-25T16:10:23.104Z",
+    "category": null,
+    "score": 40,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/omarsar0/status/2103513870904053936",
+    "aihotUrl": "https://aihot.news/items/cmuh5qc4s052lro55yvozxh2j"
   }
 ]
