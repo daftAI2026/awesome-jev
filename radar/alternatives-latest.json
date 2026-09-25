@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-24T23:59:27.965Z",
+  "at": "2026-09-25T09:05:10.936Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 54,
-      "total": 54,
+      "fetched": 58,
+      "total": 58,
       "status": "complete"
     },
     {
@@ -20,47 +20,74 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
-  "added": 1,
-  "pending": 75,
+  "reviewed": 5,
+  "added": 0,
+  "pending": 80,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "wiatrm/jevtpp",
-      "status": "keep",
+      "repo": "gitchw/lct",
+      "status": "review",
       "score": {
-        "jevAbout": 0.92,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
+        "jevAbout": 0.66,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.33,
         "category": "alternatives"
       },
-      "sha": "6f8f42c569ab3a586b5e62f198ef4b7ce2717688",
-      "evidenceUrl": "https://github.com/wiatrm/jevtpp/blob/6f8f42c569ab3a586b5e62f198ef4b7ce2717688/README.md",
-      "evidenceSha256": "172c9c45c01ce4d3ec0cba3ad683cffa3d7b1bd6fe45ea410fe28fc9a812653c",
+      "sha": "e54e28468dbf6857a3e567ab883c4b875ffa237d",
+      "evidenceUrl": "https://github.com/gitchw/lct/blob/e54e28468dbf6857a3e567ab883c4b875ffa237d/README.md",
+      "evidenceSha256": "fd61f39fde8ba171d3ff7b73b1116129a2f90a58236f001680530c725f5c6dec",
       "model": "jev-latest",
-      "checkedAt": "2026-09-24T23:59:27.965Z"
+      "checkedAt": "2026-09-25T09:05:10.936Z"
     },
     {
-      "repo": "frederico-kluser/jev-agent-skill",
+      "repo": "cslawyer1985/dsh-jev-router",
       "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "2e2998f0006d12e170dd87939a3e85645911dbc6",
-      "evidenceUrl": "https://github.com/frederico-kluser/jev-agent-skill/blob/2e2998f0006d12e170dd87939a3e85645911dbc6/README.md",
-      "evidenceSha256": "1cf18756b758e8976c43787475d0ffab04774892e91707d0c945c02102caef41",
+      "score": {
+        "jevAbout": 0.07,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.28,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "962a6464672ee4a74044a8e1bf014c9f7509f782",
+      "evidenceUrl": "https://github.com/cslawyer1985/dsh-jev-router/blob/962a6464672ee4a74044a8e1bf014c9f7509f782/README.md",
+      "evidenceSha256": "411ce6d38af69a7f95d4c8fa90e314dd42fa886739cc4803998bd0285493596e",
       "model": "jev-latest",
-      "checkedAt": "2026-09-24T23:59:27.965Z"
+      "checkedAt": "2026-09-25T09:05:10.936Z"
     },
     {
-      "repo": "rudransh2004/carve-jev",
+      "repo": "luminousyyh/laya-decide",
       "status": "review",
       "reason": "missing-open-source-license",
-      "sha": "254059ca3fa7e206a73e4f23755d4b38686a2631",
-      "evidenceUrl": "https://github.com/rudransh2004/carve-jev/blob/254059ca3fa7e206a73e4f23755d4b38686a2631/README.md",
-      "evidenceSha256": "4aa9c3d679ad0a63b367aff893aabf005448f2e9683b31ff6524ca4e669ec462",
+      "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
+      "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
+      "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
       "model": "jev-latest",
-      "checkedAt": "2026-09-24T23:59:27.965Z"
+      "checkedAt": "2026-09-25T09:05:10.936Z"
+    },
+    {
+      "repo": "oaklight/krino",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "bfc2edacb52b68f4fec57cd74a75c10fa13d727e",
+      "evidenceUrl": "https://github.com/oaklight/krino/blob/bfc2edacb52b68f4fec57cd74a75c10fa13d727e/README.md",
+      "evidenceSha256": "531645d7e5b63835f120c41d9b06929ca7f939b07332134adbe2c6e4957fe376",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-25T09:05:10.936Z"
+    },
+    {
+      "repo": "sidneeuncharged29/jev-visual",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "34ff61c71da68e6e2883433d78646078a3b90682",
+      "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/34ff61c71da68e6e2883433d78646078a3b90682/README.md",
+      "evidenceSha256": "fd92bea9fb5aff21e4c8ba7e23e4c60c249c4b650281fc9398691bdc82f326a5",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-25T09:05:10.936Z"
     }
   ],
-  "totalProjects": 1183
+  "totalProjects": 1188
 }

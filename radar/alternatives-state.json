@@ -1601,6 +1601,103 @@
         "checkedAt": "2026-09-24T23:59:27.965Z"
       },
       "retryAt": "2026-10-01T23:59:27.965Z"
+    },
+    "oaklight/krino": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "lastReview": {
+        "repo": "oaklight/krino",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "bfc2edacb52b68f4fec57cd74a75c10fa13d727e",
+        "evidenceUrl": "https://github.com/oaklight/krino/blob/bfc2edacb52b68f4fec57cd74a75c10fa13d727e/README.md",
+        "evidenceSha256": "531645d7e5b63835f120c41d9b06929ca7f939b07332134adbe2c6e4957fe376",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T09:05:10.936Z"
+      },
+      "retryAt": "2026-10-02T09:05:10.936Z"
+    },
+    "cslawyer1985/dsh-jev-router": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "lastReview": {
+        "repo": "cslawyer1985/dsh-jev-router",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.07,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.28,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "962a6464672ee4a74044a8e1bf014c9f7509f782",
+        "evidenceUrl": "https://github.com/cslawyer1985/dsh-jev-router/blob/962a6464672ee4a74044a8e1bf014c9f7509f782/README.md",
+        "evidenceSha256": "411ce6d38af69a7f95d4c8fa90e314dd42fa886739cc4803998bd0285493596e",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T09:05:10.936Z"
+      },
+      "retryAt": "2026-10-02T09:05:10.936Z"
+    },
+    "sidneeuncharged29/jev-visual": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "lastReview": {
+        "repo": "sidneeuncharged29/jev-visual",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "34ff61c71da68e6e2883433d78646078a3b90682",
+        "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/34ff61c71da68e6e2883433d78646078a3b90682/README.md",
+        "evidenceSha256": "fd92bea9fb5aff21e4c8ba7e23e4c60c249c4b650281fc9398691bdc82f326a5",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T09:05:10.936Z"
+      },
+      "retryAt": "2026-10-02T09:05:10.936Z"
+    },
+    "gitchw/lct": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "lastReview": {
+        "repo": "gitchw/lct",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.66,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.33,
+          "category": "alternatives"
+        },
+        "sha": "e54e28468dbf6857a3e567ab883c4b875ffa237d",
+        "evidenceUrl": "https://github.com/gitchw/lct/blob/e54e28468dbf6857a3e567ab883c4b875ffa237d/README.md",
+        "evidenceSha256": "fd61f39fde8ba171d3ff7b73b1116129a2f90a58236f001680530c725f5c6dec",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T09:05:10.936Z"
+      },
+      "retryAt": "2026-10-02T09:05:10.936Z"
+    },
+    "luminousyyh/laya-decide": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "lastReview": {
+        "repo": "luminousyyh/laya-decide",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
+        "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
+        "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T09:05:10.936Z"
+      },
+      "retryAt": "2026-10-02T09:05:10.936Z"
     }
   }
 }
