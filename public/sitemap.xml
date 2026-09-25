@@ -6631,6 +6631,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tacticocc/jevbridge" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/taipanbox/typryx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/taipanbox/typryx" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/takafumikobayashi/jev-snap-lab</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/takafumikobayashi/jev-snap-lab" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/takafumikobayashi/jev-snap-lab" />
@@ -15151,6 +15157,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tacticocc/jevbridge" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/taipanbox/typryx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/taipanbox/typryx" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/takafumikobayashi/jev-snap-lab</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/takafumikobayashi/jev-snap-lab" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/takafumikobayashi/jev-snap-lab" />
@@ -23669,6 +23681,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tacticocc/jevbridge" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tacticocc/jevbridge" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tacticocc/jevbridge" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/taipanbox/typryx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/taipanbox/typryx" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/taipanbox/typryx" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/takafumikobayashi/jev-snap-lab</loc>

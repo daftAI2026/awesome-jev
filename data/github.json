@@ -45473,5 +45473,49 @@
         "checkedAt": "2026-09-25T11:50:42.839Z"
       }
     }
+  },
+  {
+    "id": "gh-9-taipanbox-typryx",
+    "type": "github",
+    "title": "typryx",
+    "summary": "Typed answers with a probability for agent stacks: a choice, a score or a yes/no from a versioned template. Only the fields a template names leave the box, and every answer is on the record. An optional add-on to the TAIPANBOX stack, over HTTP and MCP.",
+    "tags": [
+      "agent-governance",
+      "ai-agents",
+      "ai-security",
+      "golang",
+      "llm-evaluation",
+      "mcp",
+      "probability",
+      "typed-decisions"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/TAIPANBOX/typryx",
+    "sourceMeta": {
+      "repo": "TAIPANBOX/typryx",
+      "author": "TAIPANBOX",
+      "stars": 0,
+      "forks": 0,
+      "language": "Go",
+      "date": "2026-09-25",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "taipanbox/typryx",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "2907caf7c0a9ba894275baa778a735a84f0fdb33",
+        "evidenceUrl": "https://github.com/taipanbox/typryx/blob/2907caf7c0a9ba894275baa778a735a84f0fdb33/README.md",
+        "evidenceSha256": "5dae2e1da0e4f642354c1ab48433c234e1bd4a84e38463ae33f7168a2369a14a",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T14:44:00.381Z"
+      }
+    }
   }
 ]

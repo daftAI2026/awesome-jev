@@ -192,30 +192,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "gopaljigaur/decide": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "gopaljigaur/decide",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.26,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.89,
-          "category": "alternatives",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "941f22ddd417508d410812e39652c9cc41ed3ca8",
-        "evidenceUrl": "https://github.com/gopaljigaur/decide/blob/941f22ddd417508d410812e39652c9cc41ed3ca8/README.md",
-        "evidenceSha256": "3e75f22a520ffee2a1a42e46f89753a4f3af60338fad7a579eead0d705a13865",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "charetterat/awesome-jev-essentials": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -793,30 +769,6 @@
         "sha": "8e5f6bdaf76e5657ecab235fb0143be16456be58",
         "evidenceUrl": "https://github.com/amal-david/awesome-jev/blob/8e5f6bdaf76e5657ecab235fb0143be16456be58/.github/README.md",
         "evidenceSha256": "e8de35130926011307690c132b49f7e2b94a3d585a3b15b0892c5e677ee2c295",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
-    "kyr0/typed-decision-bench": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "kyr0/typed-decision-bench",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.24,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.57,
-          "category": "other",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "e949e5e9ba761f34f1db0dc75c04ebe7294bd803",
-        "evidenceUrl": "https://github.com/kyr0/typed-decision-bench/blob/e949e5e9ba761f34f1db0dc75c04ebe7294bd803/README.md",
-        "evidenceSha256": "ae040ed143be549aa3a1f0047d70d5a702bb590af56a34013837673309d13b95",
         "model": "jev-latest",
         "checkedAt": "2026-09-23T23:56:45.683Z"
       },
@@ -1698,6 +1650,50 @@
         "checkedAt": "2026-09-25T09:05:10.936Z"
       },
       "retryAt": "2026-10-02T09:05:10.936Z"
+    },
+    "dexmac221/doomgemma": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T14:44:00.381Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T14:44:00.381Z",
+      "lastReview": {
+        "repo": "dexmac221/doomgemma",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.09,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.33,
+          "category": "other"
+        },
+        "sha": "cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4",
+        "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4/README.md",
+        "evidenceSha256": "e85b313a73b7c6268e95bc4f60b86ef133c03f780261320a43e4c64a1a89e306",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T14:44:00.381Z"
+      },
+      "retryAt": "2026-10-02T14:44:00.381Z"
+    },
+    "name0x0/jevlet": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T14:44:00.381Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T14:44:00.381Z",
+      "lastReview": {
+        "repo": "name0x0/jevlet",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.83,
+          "category": "alternatives"
+        },
+        "sha": "9d62c46989e965e0d823491e670dc01ed12a345e",
+        "evidenceUrl": "https://github.com/name0x0/jevlet/blob/9d62c46989e965e0d823491e670dc01ed12a345e/README.md",
+        "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T14:44:00.381Z"
+      },
+      "retryAt": "2026-10-02T14:44:00.381Z"
     }
   }
 }
