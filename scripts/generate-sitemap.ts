@@ -3,12 +3,15 @@ import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { CATEGORIES } from '../src/lib/categories.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
+import { hasIndexableNewsSummary, newsPath } from '../src/lib/news.ts'
 import { localeAlternates, localizedPath } from '../src/lib/locale-routes.ts'
 
 const SITE_ORIGIN = 'https://awesomejev.cc'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
 interface SitemapItem {
+  id?: unknown
+  title?: unknown
   type?: unknown
   url?: unknown
   summary?: unknown
@@ -19,6 +22,7 @@ export interface SitemapResult {
   xml: string
   urlCount: number
   projectCount: number
+  newsCount: number
   categories: string[]
 }
 
@@ -31,7 +35,7 @@ function isSitemapItem(value: unknown): value is SitemapItem {
 }
 
 /** Build deterministic index URLs; project pages without useful summaries stay out. */
-export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN): SitemapResult {
+export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, newsItems: readonly unknown[] = []): SitemapResult {
   const normalizedOrigin = new URL(origin).origin
   if (normalizedOrigin !== origin.replace(/\/$/, '')) throw new Error(`Invalid sitemap origin: ${origin}`)
 
@@ -58,10 +62,22 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN): S
   }
 
   projectPaths.sort((a, b) => a.localeCompare(b))
+  const newsPaths: string[] = []
+  const newsPathSet = new Set<string>()
+  for (const value of newsItems) {
+    if (!isSitemapItem(value)) throw new Error('Invalid news sitemap item')
+    if (!hasIndexableNewsSummary(value.summary)) continue
+    const path = typeof value.id === 'string' ? newsPath(value.id) : null
+    if (!path || typeof value.title !== 'string' || !value.title.trim()) throw new Error('Invalid news sitemap identity')
+    if (newsPathSet.has(path)) throw new Error(`Duplicate news route: ${path}`)
+    newsPathSet.add(path)
+    newsPaths.push(path)
+  }
+  newsPaths.sort((a, b) => a.localeCompare(b))
   const categoryPaths = CATEGORIES
     .filter((category) => categorySet.has(category))
     .map((category) => `/category/${category}`)
-  const englishPaths = ['/', '/top100', ...categoryPaths, ...projectPaths]
+  const englishPaths = ['/', '/top100', '/news', ...categoryPaths, ...projectPaths, ...newsPaths]
   const paths = [...englishPaths, ...englishPaths.map((path) => localizedPath(path, 'zh'))]
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
@@ -77,20 +93,24 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN): S
     '',
   ].join('\n')
 
-  return { xml, urlCount: paths.length, projectCount: projectPaths.length, categories: categoryPaths.map((path) => path.slice('/category/'.length)) }
+  return { xml, urlCount: paths.length, projectCount: projectPaths.length, newsCount: newsPaths.length,
+    categories: categoryPaths.map((path) => path.slice('/category/'.length)) }
 }
 
 export function generateSitemap(root = ROOT): SitemapResult {
   const githubPath = join(root, 'data', 'github.json')
   const githubItems: unknown = JSON.parse(readFileSync(githubPath, 'utf8'))
   if (!Array.isArray(githubItems)) throw new Error(`${githubPath} must contain a JSON array`)
+  const newsPathname = join(root, 'data', 'news.json')
+  const newsItems: unknown = JSON.parse(readFileSync(newsPathname, 'utf8'))
+  if (!Array.isArray(newsItems)) throw new Error(`${newsPathname} must contain a JSON array`)
 
-  const result = buildSitemap(githubItems)
+  const result = buildSitemap(githubItems, SITE_ORIGIN, newsItems)
   writeFileSync(join(root, 'public', 'sitemap.xml'), result.xml)
   return result
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const result = generateSitemap()
-  console.log(`Generated sitemap with ${result.urlCount} URLs (${result.projectCount} projects, ${result.categories.length} categories).`)
+  console.log(`Generated sitemap with ${result.urlCount} URLs (${result.projectCount} projects, ${result.newsCount} news, ${result.categories.length} categories).`)
 }

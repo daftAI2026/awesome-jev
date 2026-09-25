@@ -138,13 +138,19 @@ jobs:
           path: ${{ runner.temp }}/snapshot
           merge-multiple: true
       - run: node --experimental-strip-types scripts/alternatives-radar.ts --apply "$RUNNER_TEMP/snapshot"
-      - name: Commit alternatives and README together
+      - run: node --experimental-strip-types scripts/generate-sitemap.ts
+      - name: Render Open Graph image
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq librsvg2-bin
+          node --experimental-strip-types scripts/generate-og.ts
+      - name: Commit alternatives, README and generated assets together
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/github.json README.md radar/alternatives-state.json radar/alternatives-latest.json
+          git add -- data/github.json README.md public/sitemap.xml public/og.svg public/og.png radar/alternatives-state.json radar/alternatives-latest.json
           if ! git diff --cached --quiet; then
             git commit -m 'data: sync open-source alternatives and README'
             # 主分支已被其他采集器修改时安全失败；不 rebase、不强推覆盖。

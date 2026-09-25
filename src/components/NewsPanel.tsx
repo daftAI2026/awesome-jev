@@ -1,16 +1,19 @@
-import { useMemo, useRef, useState, type MouseEvent } from 'react'
+import { useCallback, useLayoutEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
+import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import { useI18n, type Locale } from '@/i18n'
-import { newsTime, sortNews, type NewsItem } from '@/lib/news'
+import { newsPath, newsTime, sortNews, type NewsItem } from '@/lib/news'
+import { localizedPath } from '@/lib/locale-routes'
 import { NewsDialog } from '@/components/NewsDialog'
 import { SaveButton } from '@/components/SaveButton'
 import { NEWS_CATEGORY_LABEL } from '@/lib/categories'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-const PAGE_SIZE = 60
+const INITIAL_NEWS_COUNT = 16
+const NEWS_OVERSCAN = 8
 const AIHOT_SEARCH = 'https://aihot.news/all?q=jev&page=1'
 const TIME_ZONE = 'Asia/Shanghai'
+type NewsRow = { kind: 'date'; key: string; label: string } | { kind: 'item'; item: NewsItem }
 
 function dayKey(date: Date): string {
   const parts = new Intl.DateTimeFormat('en-US', {
@@ -46,11 +49,11 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
     ? t(NEWS_CATEGORY_LABEL[item.category as keyof typeof NEWS_CATEGORY_LABEL]) : item.category
 
   return (
-    <li className="relative min-w-0 sm:grid sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:gap-3">
+    <div className="relative min-w-0 sm:grid sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:gap-3">
       <time dateTime={date} className="hidden pt-5 text-right font-mono text-xs tabular-nums text-muted-foreground sm:block">
         {formatTime(new Date(date), locale)}
       </time>
-      <a href={item.aihotUrl} target="_blank" rel="noopener noreferrer" aria-haspopup="dialog"
+      <a href={localizedPath(newsPath(item.id) ?? '/news', locale)} aria-haspopup="dialog"
         aria-label={t('newsPreview', { title: item.title })}
         onClick={(event) => onPreview(item, event)}
         className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
@@ -86,7 +89,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
       </a>
       <SaveButton saved={saved} compact onToggle={() => onToggleSaved(item)}
         className="absolute top-2 right-2 z-10 sm:top-3 sm:right-3" />
-    </li>
+    </div>
   )
 }
 
@@ -101,8 +104,10 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
   onPreviewClose: () => void
 }) {
   const { locale, t } = useI18n()
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const detailTriggerRef = useRef<HTMLElement | null>(null)
+  const initialListRef = useRef<HTMLOListElement>(null)
+  const virtualListRef = useRef<HTMLOListElement>(null)
+  const [scrollMargin, setScrollMargin] = useState(0)
   const detailItem = items.find((item) => item.id === previewId) ?? null
   const detailOpen = detailItem !== null
   const matched = useMemo(() => {
@@ -111,21 +116,62 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
       `${item.title} ${item.originalTitle ?? ''} ${item.summary ?? ''} ${item.sourceName}`.toLocaleLowerCase().includes(term)) : items
     return sortNews(filtered)
   }, [items, query])
-  const visible = matched.slice(0, visibleCount)
-  const groups = useMemo(() => {
-    const result: { key: string; label: string; items: NewsItem[] }[] = []
-    for (const item of visible) {
+  const rows = useMemo(() => {
+    const result: NewsRow[] = []
+    let previousDay = ''
+    for (const item of matched) {
       const date = new Date(newsTime(item))
       const key = dayKey(date)
-      let group = result[result.length - 1]
-      if (group?.key !== key) {
-        group = { key, label: formatDay(date, locale), items: [] }
-        result.push(group)
+      if (previousDay !== key) {
+        result.push({ kind: 'date', key, label: formatDay(date, locale) })
+        previousDay = key
       }
-      group.items.push(item)
+      result.push({ kind: 'item', item })
     }
     return result
-  }, [visible, locale])
+  }, [matched, locale])
+  const [initialRows, virtualRows] = useMemo(() => {
+    const first: NewsRow[] = []
+    const rest: NewsRow[] = []
+    let itemCount = 0
+    for (const row of rows) {
+      ;(itemCount < INITIAL_NEWS_COUNT ? first : rest).push(row)
+      if (row.kind === 'item') itemCount++
+    }
+    return [first, rest]
+  }, [rows])
+  const getItemKey = useCallback((index: number) => {
+    const row = virtualRows[index]
+    return row.kind === 'date' ? `date:${row.key}` : `news:${row.item.id}`
+  }, [virtualRows])
+  const virtualizer = useWindowVirtualizer({
+    count: virtualRows.length,
+    estimateSize: (index) => virtualRows[index].kind === 'date' ? 72 : 280,
+    getItemKey,
+    overscan: NEWS_OVERSCAN,
+    scrollMargin,
+    initialRect: { width: 1200, height: 900 },
+    initialOffset: 0,
+  })
+
+  useLayoutEffect(() => {
+    const initialList = initialListRef.current
+    const virtualList = virtualListRef.current
+    if (!initialList || !virtualList) return
+    const syncMargin = () => {
+      const nextMargin = virtualList.getBoundingClientRect().top + window.scrollY
+      setScrollMargin((current) => Math.abs(current - nextMargin) > 1 ? nextMargin : current)
+    }
+    syncMargin()
+    const observer = new ResizeObserver(syncMargin)
+    observer.observe(initialList)
+    window.addEventListener('resize', syncMargin)
+    void document.fonts.ready.then(() => { if (virtualList.isConnected) syncMargin() })
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', syncMargin)
+    }
+  }, [virtualRows.length])
   const openPreview = (item: NewsItem, event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
@@ -143,6 +189,13 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
     }
     onToggleSaved(item)
   }
+  const rowContent = (row: NewsRow) => row.kind === 'date'
+    ? <h2 className="text-base font-medium text-foreground">{row.label}</h2>
+    : <NewsCard item={row.item} onPreview={openPreview}
+        saved={savedIds.has(row.item.id)} onToggleSaved={toggleItemSaved} />
+  const rowClass = (row: NewsRow, first: boolean) => row.kind === 'date'
+    ? first ? 'pb-4' : 'pt-5 pb-4'
+    : 'pb-3'
 
   return (
     <section aria-label={t('newsLabel')}>
@@ -160,21 +213,24 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
         <p className="py-10 text-sm text-muted-foreground">{t('emptySearch')}</p>
       ) : (
         <>
-          <ol className="space-y-8">
-            {groups.map((group) => (
-              <li key={group.key}>
-                <h2 className="mb-4 text-base font-medium text-foreground">{group.label}</h2>
-                <ol className="space-y-3">{group.items.map((item) =>
-                  <NewsCard key={item.id} item={item} onPreview={openPreview}
-                    saved={savedIds.has(item.id)} onToggleSaved={toggleItemSaved} />)}</ol>
-              </li>
-            ))}
+          <ol ref={initialListRef}>
+            {initialRows.map((row, index) => <li key={row.kind === 'date' ? `date:${row.key}` : row.item.id}
+              role={row.kind === 'date' ? 'presentation' : undefined} className={rowClass(row, index === 0)}>
+              {rowContent(row)}
+            </li>)}
           </ol>
-          {visibleCount < matched.length && (
-            <div className="mt-8 flex justify-center">
-              <Button variant="outline" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>{t('newsShowMore')}</Button>
-            </div>
-          )}
+          {virtualRows.length > 0 && <ol ref={virtualListRef} className="relative w-full"
+            style={{ height: virtualizer.getTotalSize() }}>
+            {virtualizer.getVirtualItems().map((virtualRow) => {
+              const row = virtualRows[virtualRow.index]
+              return <li key={virtualRow.key} ref={virtualizer.measureElement} data-index={virtualRow.index}
+                role={row.kind === 'date' ? 'presentation' : undefined}
+                className={`absolute top-0 w-full ${rowClass(row, false)}`}
+                style={{ transform: `translateY(${virtualRow.start - scrollMargin}px)` }}>
+                {rowContent(row)}
+              </li>
+            })}
+          </ol>}
         </>
       )}
       <NewsDialog item={detailItem} open={detailOpen} onOpenChange={(open) => { if (!open) onPreviewClose() }} triggerRef={detailTriggerRef}

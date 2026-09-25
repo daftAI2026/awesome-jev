@@ -56,7 +56,6 @@ export const zh: Messages = {
   newsCategoryIndustry: '行业',
   newsCategoryPaper: '论文',
   newsCategoryTutorial: '教程',
-  newsShowMore: '加载更多新闻',
   searchNewsPlaceholder: '搜索新闻…',
   categoryAgents: '智能体与自动化',
   categoryBrowser: '浏览器与电脑操作',
@@ -77,7 +76,7 @@ export const zh: Messages = {
   emptySection: '暂无内容。',
   footerTitle: '社区目录',
   footerDescription:
-    'TypeSafe Jev / System One 项目与讨论。介绍文章：typesafe.ai/blog/introducing-system-one-models-and-jev。实时 API 同步尚在规划；当前为静态种子数据，并由工作日 collector 增量更新。',
+    '社区精选的 TypeSafe Jev / System One 项目与新闻。GitHub Actions 定时更新目录；新闻摘要链接至 AIHOT 和原始来源。',
   sortStars: '星标',
   sortDate: '日期',
   sortName: '名称',

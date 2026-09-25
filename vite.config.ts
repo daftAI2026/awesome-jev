@@ -9,7 +9,9 @@ import tailwindcss from '@tailwindcss/vite'
 import { CATEGORIES } from './src/lib/categories.ts'
 import { normalizeCatalogUpdatedAt } from './src/lib/catalog-updated-at.ts'
 import githubData from './data/github.json' with { type: 'json' }
+import newsData from './data/news.json' with { type: 'json' }
 import { projectPathFromUrl } from './src/lib/project-routes.ts'
+import { newsPath } from './src/lib/news.ts'
 import { localizedPath } from './src/lib/locale-routes.ts'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
@@ -26,6 +28,17 @@ if (uniqueProjectPaths.size !== projectPaths.length) {
   throw new Error('Cannot prerender duplicate canonical GitHub project routes')
 }
 
+const newsPaths = newsData
+  .filter((item) => typeof item.summary === 'string' && item.summary.trim().length > 0)
+  .map((item) => {
+    const path = newsPath(item.id)
+    if (!path) throw new Error(`Cannot prerender invalid news ID: ${item.id}`)
+    return path
+  })
+if (new Set(newsPaths).size !== newsPaths.length) {
+  throw new Error('Cannot prerender duplicate news routes')
+}
+
 const englishPrerenderPaths = [
   '/',
   ...CATEGORIES.map((category) => `/category/${category}`),
@@ -33,6 +46,7 @@ const englishPrerenderPaths = [
   '/news',
   '/saved',
   ...projectPaths,
+  ...newsPaths,
 ]
 const prerenderPaths = [
   ...englishPrerenderPaths,

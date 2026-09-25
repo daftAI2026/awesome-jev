@@ -22,10 +22,12 @@ test('sitemap contains the home page, populated category pages, and only describ
   ])
 
   assert.equal(result.projectCount, 3)
+  assert.equal(result.newsCount, 0)
   assert.deepEqual(result.categories, ['agents', 'research'])
-  assert.equal(result.urlCount, 14)
+  assert.equal(result.urlCount, 16)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\//)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/top100/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/news/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/category\/agents/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/category\/research/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/projects\/a-owner\/alpha/)
@@ -33,6 +35,23 @@ test('sitemap contains the home page, populated category pages, and only describ
   assert.match(result.xml, /hreflang="zh-CN"/)
   assert.doesNotMatch(result.xml, /\/projects\/no-summary\/thin/)
   assert.doesNotMatch(result.xml, /\/category\/unknown/)
+})
+
+test('sitemap adds only news with a stable ID and summary in both locales', () => {
+  const news = [
+    { id: 'cmu123', title: 'Jev release', summary: 'A source-attributed summary that explains the Jev release and gives readers enough context to decide whether to visit the original source.' },
+    { id: 'cmu456', title: 'No summary', summary: null },
+    { id: 'cmu789', title: 'Tiny note', summary: 'Jev is here.' },
+  ]
+  const result = buildSitemap([], 'https://awesomejev.cc', news)
+  assert.equal(result.newsCount, 1)
+  assert.equal(result.urlCount, 8)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/news\/cmu123/)
+  assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/news\/cmu123/)
+  assert.doesNotMatch(result.xml, /\/news\/cmu456/)
+  assert.doesNotMatch(result.xml, /\/news\/cmu789/)
+  assert.throws(() => buildSitemap([], 'https://awesomejev.cc', [...news, news[0]]), /Duplicate news route/)
+  assert.throws(() => buildSitemap([], 'https://awesomejev.cc', [{ id: '../bad', title: 'Bad', summary: news[0].summary }]), /Invalid news sitemap identity/)
 })
 
 test('sitemap project entries are stable and sorted independently of source order', () => {
@@ -65,8 +84,9 @@ test('generator writes the deterministic sitemap to the requested project root',
     mkdirSync(join(root, 'public'))
     const items = [row('Owner', 'Repo')]
     writeFileSync(join(root, 'data', 'github.json'), JSON.stringify(items))
+    writeFileSync(join(root, 'data', 'news.json'), '[]')
     const result = generateSitemap(root)
-    assert.equal(result.urlCount, 8)
+    assert.equal(result.urlCount, 10)
     assert.equal(readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8'), result.xml)
   } finally {
     rmSync(root, { recursive: true, force: true })

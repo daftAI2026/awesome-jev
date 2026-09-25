@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
-import { useNavigate, useRouterState } from '@tanstack/react-router'
+import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour, X } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
@@ -25,7 +25,7 @@ import { useSaved } from '@/hooks/useSaved'
 import { savedRouteSearch, type SavedRouteSearch, type SavedSection } from '@/lib/saved'
 import { searchItems } from '@/lib/search'
 import { githubStarRanks, sortGithubItems } from '@/lib/sort'
-import type { NewsItem } from '@/lib/news'
+import { newsPath, type NewsItem } from '@/lib/news'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath, stripLocalePrefix } from '@/lib/locale-routes'
@@ -96,6 +96,8 @@ export default function App() {
   const [lastSavedSearch, setLastSavedSearch] = useState<SavedRouteSearch>(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : {})
   const savedSearch = useMemo(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : lastSavedSearch,
     [basePath, routeSearch, lastSavedSearch])
+  const routeNewsItems = useMatches({ select: (matches) =>
+    matches.find((match) => match.routeId === '/_directory/{-$locale}/news')?.loaderData as NewsItem[] | undefined })
   const [newsItems, setNewsItems] = useState<NewsItem[] | null>(null)
   const [newsLoadFailed, setNewsLoadFailed] = useState(false)
   const [savedNewsRequested, setSavedNewsRequested] = useState(false)
@@ -131,7 +133,7 @@ export default function App() {
     if (basePath === '/saved') setLastSavedSearch(savedRouteSearch(routeSearch))
   }, [basePath, routeSearch])
   useEffect(() => {
-    if (filter !== 'news' && (filter !== 'saved' || !savedNewsRequested || !savedEntries.some((entry) => entry.kind === 'news'))) return
+    if (filter !== 'saved' || !savedNewsRequested || !savedEntries.some((entry) => entry.kind === 'news')) return
     if (newsItems !== null || newsLoadFailed) return
     let active = true
     import('../data/news.json').then(({ default: rows }) => {
@@ -192,13 +194,16 @@ export default function App() {
     setDetailOpen(open)
   }, [basePath])
   const openNewsPreview = useCallback((item: NewsItem) => {
+    const path = newsPath(item.id)
+    if (!path) return
+    const publicPath = localizedPath(path, locale)
     if (filter === 'saved') {
       const background = { ...savedSearch, section: 'news' as const, preview: undefined }
       const to = localizedPath('/saved', locale)
-      void navigate({ to, search: { ...background, preview: item.id }, mask: { to, search: background }, resetScroll: false })
+      void navigate({ to, search: { ...background, preview: item.id }, mask: { to: publicPath }, resetScroll: false })
     } else {
       const to = localizedPath('/news', locale)
-      void navigate({ to, search: { preview: item.id }, mask: { to, search: {} }, resetScroll: false })
+      void navigate({ to, search: { preview: item.id }, mask: { to: publicPath }, resetScroll: false })
     }
   }, [filter, locale, navigate, savedSearch])
   const closeNewsPreview = useCallback(() => {
@@ -240,7 +245,7 @@ export default function App() {
   const filterButton = (id: DirectoryFilter) => {
     const count = id === 'top100' ? undefined
       : id === 'all' ? items.length
-      : id === 'news' ? newsItems?.length
+      : id === 'news' ? (routeNewsItems ?? newsItems)?.length
       : id === 'saved' ? savedEntries.length
       : categoryCounts[id]
     return (
@@ -265,7 +270,7 @@ export default function App() {
     )
   }
   const categoryNav = (
-    <nav aria-label={t('categoryLabel')} className="flex w-max min-w-52 flex-col gap-2">
+    <nav aria-label={t('categoryLabel')} className="flex w-max min-w-52 flex-col gap-2 xl:w-full xl:min-w-0">
       {filterButton('top100')}
       {filterButton('news')}
       {filterButton('saved')}
@@ -320,7 +325,7 @@ export default function App() {
       </div>
 
       <div className="mx-auto grid w-full max-w-[72.5rem] flex-1 grid-cols-1 gap-8 px-4 pb-8 sm:px-6 lg:px-8 lg:pb-10 xl:grid-cols-[13.5rem_minmax(0,1fr)]">
-        <aside className="hidden xl:block"><div className="sticky top-16 max-h-[calc(100dvh-5rem)] overflow-y-auto">{categoryNav}</div></aside>
+        <aside className="hidden xl:block"><div className="sticky top-16 max-h-[calc(100dvh-5rem)] overflow-x-hidden overflow-y-auto">{categoryNav}</div></aside>
         <div className="min-w-0">
           <div className="mb-6">
             <div className="relative">
@@ -375,9 +380,8 @@ export default function App() {
           {saveError && <p role="alert" className="mb-6 text-sm text-destructive">{t('savedStorageError')}</p>}
           <main id="main" tabIndex={-1}>
             {filter === 'news' ? (
-              newsLoadFailed ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoadFailed')}</p>
-                : newsItems === null ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
-                  : <NewsPanel key={query} items={newsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
+              routeNewsItems === undefined ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
+                  : <NewsPanel key={query} items={routeNewsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
                       previewId={newsPreviewId} onPreview={openNewsPreview} onPreviewClose={closeNewsPreview} />
             ) : filter === 'saved' ? (
               <SavedPanel entries={savedEntries} projects={items} news={newsItems} newsLoadFailed={newsLoadFailed}

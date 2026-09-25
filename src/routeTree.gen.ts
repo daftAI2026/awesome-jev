@@ -15,6 +15,7 @@ import { Route as DirectoryChar123LocaleChar125IndexRouteImport } from './routes
 import { Route as DirectoryChar123LocaleChar125NewsRouteImport } from './routes/_directory.{-$locale}.news'
 import { Route as DirectoryChar123LocaleChar125SavedRouteImport } from './routes/_directory.{-$locale}.saved'
 import { Route as DirectoryChar123LocaleChar125Top100RouteImport } from './routes/_directory.{-$locale}.top100'
+import { Route as Char123LocaleChar125NewsIdRouteImport } from './routes/{-$locale}.news.$id'
 import { Route as DirectoryChar123LocaleChar125CategoryCategoryRouteImport } from './routes/_directory.{-$locale}.category.$category'
 import { Route as Char123LocaleChar125ProjectsOwnerRepoRouteImport } from './routes/{-$locale}.projects.$owner.$repo'
 import { Route as DirectoryChar123LocaleChar125PreviewOwnerRepoRouteImport } from './routes/_directory.{-$locale}.preview.$owner.$repo'
@@ -53,6 +54,12 @@ const DirectoryChar123LocaleChar125Top100Route =
     path: '/top100',
     getParentRoute: () => DirectoryChar123LocaleChar125Route,
   } as any)
+const Char123LocaleChar125NewsIdRoute =
+  Char123LocaleChar125NewsIdRouteImport.update({
+    id: '/{-$locale}/news/$id',
+    path: '/{-$locale}/news/$id',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DirectoryChar123LocaleChar125CategoryCategoryRoute =
   DirectoryChar123LocaleChar125CategoryCategoryRouteImport.update({
     id: '/category/$category',
@@ -78,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
@@ -88,6 +96,7 @@ export interface FileRoutesByTo {
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
@@ -100,6 +109,7 @@ export interface FileRoutesById {
   '/_directory/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/_directory/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/_directory/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/_directory/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/_directory/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
@@ -113,6 +123,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
     | '/{-$locale}/top100'
+    | '/{-$locale}/news/$id'
     | '/{-$locale}/'
     | '/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
@@ -123,6 +134,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
     | '/{-$locale}/top100'
+    | '/{-$locale}/news/$id'
     | '/{-$locale}'
     | '/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
@@ -134,6 +146,7 @@ export interface FileRouteTypes {
     | '/_directory/{-$locale}/news'
     | '/_directory/{-$locale}/saved'
     | '/_directory/{-$locale}/top100'
+    | '/{-$locale}/news/$id'
     | '/_directory/{-$locale}/'
     | '/_directory/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
@@ -142,6 +155,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   DirectoryRoute: typeof DirectoryRouteWithChildren
+  Char123LocaleChar125NewsIdRoute: typeof Char123LocaleChar125NewsIdRoute
   Char123LocaleChar125ProjectsOwnerRepoRoute: typeof Char123LocaleChar125ProjectsOwnerRepoRoute
 }
 
@@ -188,6 +202,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/top100'
       preLoaderRoute: typeof DirectoryChar123LocaleChar125Top100RouteImport
       parentRoute: typeof DirectoryChar123LocaleChar125Route
+    }
+    '/{-$locale}/news/$id': {
+      id: '/{-$locale}/news/$id'
+      path: '/{-$locale}/news/$id'
+      fullPath: '/{-$locale}/news/$id'
+      preLoaderRoute: typeof Char123LocaleChar125NewsIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_directory/{-$locale}/category/$category': {
       id: '/_directory/{-$locale}/category/$category'
@@ -258,6 +279,7 @@ const DirectoryRouteWithChildren = DirectoryRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   DirectoryRoute: DirectoryRouteWithChildren,
+  Char123LocaleChar125NewsIdRoute: Char123LocaleChar125NewsIdRoute,
   Char123LocaleChar125ProjectsOwnerRepoRoute:
     Char123LocaleChar125ProjectsOwnerRepoRoute,
 }

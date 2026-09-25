@@ -33,13 +33,13 @@ jobs:
           AIHOT_NEWS_ENABLED: 'true'
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run typecheck && npm test && npm run news:check && npm run build
-      - name: Publish news-only change
+      - name: Publish news and sitemap together
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/news.json
+          git add -- data/news.json public/sitemap.xml
           if ! git diff --cached --quiet; then
             git commit -m 'data: sync Jev news'
             # 主分支已变化时留给下一轮恢复；不强推、不覆盖其他采集结果。

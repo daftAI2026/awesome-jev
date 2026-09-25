@@ -2,11 +2,12 @@
 
 > A free, community-curated directory of GitHub projects related to TypeSafe AI's Jev / System One models.
 
-The website has a searchable directory, category pages, and one detail page per GitHub project at /projects/{owner}/{repo}. Project pages show curated summaries and link to the original third-party repositories. The Jev news section shows source-attributed summaries and links to the source, not full articles. Project metadata and the directory change over time.
+The website has a searchable directory, category pages, and one detail page per GitHub project at /projects/{owner}/{repo}. Project pages show curated summaries and link to the original third-party repositories. Jev news items have stable summary pages at /news/{id} with attribution and links to AIHOT and the original source, not full articles. Project metadata and news change over time.
 
 ## Directory
 
 - [Browse Awesome JEV](https://awesomejev.cc/): Current project directory and Jev news.
+- [Jev news](https://awesomejev.cc/news): Source-attributed news index with links to AIHOT and original sources.
 - [GitHub project catalog](https://raw.githubusercontent.com/daftAI2026/awesome-jev/main/README.md): Markdown list of projects grouped by primary use.
 
 ## About the project

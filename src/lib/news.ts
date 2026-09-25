@@ -14,6 +14,22 @@ export interface NewsItem {
   aihotUrl: string
 }
 
+const NEWS_ID_PATTERN = /^[a-z0-9]{1,64}$/
+const MIN_INDEXABLE_SUMMARY_LENGTH = 60
+
+export function newsPath(id: string): string | null {
+  return NEWS_ID_PATTERN.test(id) ? `/news/${id}` : null
+}
+
+export function findNewsItem(items: readonly NewsItem[], id: string): NewsItem | undefined {
+  if (!newsPath(id)) return undefined
+  return items.find((item) => item.id === id)
+}
+
+export function hasIndexableNewsSummary(summary: unknown): summary is string {
+  return typeof summary === 'string' && summary.trim().length >= MIN_INDEXABLE_SUMMARY_LENGTH
+}
+
 export function newsPreviewSearch(search: Record<string, unknown>): { preview?: string } {
   return { preview: typeof search.preview === 'string' && search.preview.length > 0 && search.preview.length <= 200
     ? search.preview : undefined }

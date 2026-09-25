@@ -4,7 +4,7 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'nod
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { collectNews, mergeNews, parseNewsItem, syncNews, validateNews } from './news-sync.ts'
-import { newsTime, sortNews } from '../src/lib/news.ts'
+import { findNewsItem, hasIndexableNewsSummary, newsPath, newsTime, sortNews } from '../src/lib/news.ts'
 
 function remote(id: string, original = `https://example.com/${id}`, title = id) {
   return {
@@ -56,6 +56,17 @@ test('timeline ordering uses discovery time unless publication is over 72 hours 
   assert.equal(newsTime(backfilled), Date.parse(backfilled.publishedAt!))
   assert.deepEqual(sortNews([backfilled, fresh, later, sameTime]).map((item) => item.id),
     ['news0002', 'news0004', 'news0001', 'news0003'])
+})
+
+test('news IDs produce stable internal detail paths and reject unsafe route input', () => {
+  const item = parseNewsItem(remote('news0001'))
+  assert.equal(newsPath(item.id), '/news/news0001')
+  assert.equal(findNewsItem([item], item.id), item)
+  assert.equal(findNewsItem([item], 'missing'), undefined)
+  assert.equal(newsPath('../news0001'), null)
+  assert.equal(findNewsItem([item], '../news0001'), undefined)
+  assert.equal(hasIndexableNewsSummary('Jev is here.'), false)
+  assert.equal(hasIndexableNewsSummary('A detailed source-attributed summary describing what happened, why it matters to Jev, and where to read the original report.'), true)
 })
 
 test('merge keys by AIHOT ID, retaining distinct reports of the same original URL', () => {

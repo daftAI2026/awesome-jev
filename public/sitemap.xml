@@ -11,6 +11,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/top100" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/category/agents</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/agents" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/agents" />
@@ -4416,6 +4421,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rawson08/the-llm-dispatcher" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/rawwerks/one-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rawwerks/one-system" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rawwerks/one-system" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/ray-hughes/jevalyn</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ray-hughes/jevalyn" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ray-hughes/jevalyn" />
@@ -4631,6 +4641,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rudy2steiner/awesome-jev-hub" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/running-dolphins/jev-bench</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/running-dolphins/jev-bench" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/running-dolphins/jev-bench" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/ryan-sunny/dbt-assay</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ryan-sunny/dbt-assay" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ryan-sunny/dbt-assay" />
@@ -4644,6 +4659,11 @@
     <loc>https://awesomejev.cc/projects/sachin-chaurasiya/scam-checker-with-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sachin-chaurasiya/scam-checker-with-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sachin-chaurasiya/scam-checker-with-jev" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/safzanpirani/pi-jev-skill-picker</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/safzanpirani/pi-jev-skill-picker" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/safzanpirani/pi-jev-skill-picker" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/safzanpirani/pong-jev</loc>
@@ -4711,6 +4731,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sathariels/jevtriage" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/satiricalguru/fast-jev-agents</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/satiricalguru/fast-jev-agents" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/satiricalguru/fast-jev-agents" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/sauhard74/mem-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sauhard74/mem-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sauhard74/mem-jev" />
@@ -4744,6 +4769,11 @@
     <loc>https://awesomejev.cc/projects/shaharia-lab/jev-cli</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shaharia-lab/jev-cli" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shaharia-lab/jev-cli" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/shahriarbijoy/eslint-plugin-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shahriarbijoy/eslint-plugin-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shahriarbijoy/eslint-plugin-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/shailesh-svg/jev-poc-lead-gen</loc>
@@ -4896,6 +4926,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/siroccomask/snake-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/skyvern-ai/jevscape</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/skyvern-ai/jevscape" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/skyvern-ai/jevscape" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/slatejack/jev-desktop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/slatejack/jev-desktop" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/slatejack/jev-desktop" />
@@ -4924,6 +4959,11 @@
     <loc>https://awesomejev.cc/projects/socai-io/jev-social</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/socai-io/jev-social" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/socai-io/jev-social" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/sohryuu101/fast-jev-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sohryuu101/fast-jev-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sohryuu101/fast-jev-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/solovieff/tg_accessor</loc>
@@ -4976,6 +5016,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sseanliu/jev-vision" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/stainlu/awesome-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/stainlu/awesome-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/stainlu/awesome-jev" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/stardeckai/lgtm</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/stardeckai/lgtm" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/stardeckai/lgtm" />
@@ -5026,6 +5071,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sumleo/prompt2jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/sunyifeng11111/typesafe-minesweeper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sunyifeng11111/typesafe-minesweeper" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sunyifeng11111/typesafe-minesweeper" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/supprocom/typesafeai-sdk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/supprocom/typesafeai-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/supprocom/typesafeai-sdk" />
@@ -5064,6 +5114,11 @@
     <loc>https://awesomejev.cc/projects/takuminoguchi2004/jev-noul-vs-choice</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/takuminoguchi2004/jev-noul-vs-choice" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/takuminoguchi2004/jev-noul-vs-choice" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/tamaratran/fast-jev-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tamaratran/fast-jev-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tamaratran/fast-jev-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/tanaypadar/gpt-vs-jev</loc>
@@ -5119,6 +5174,11 @@
     <loc>https://awesomejev.cc/projects/thehan-co/jevriel</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/thehan-co/jevriel" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/thehan-co/jevriel" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/thehumanworks/jevgrep</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/thehumanworks/jevgrep" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/thehumanworks/jevgrep" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/theoleecj/semif-openjev</loc>
@@ -5206,6 +5266,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomdachs/jev-replay-lab" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/tomohiro-owada/jev-mem</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomohiro-owada/jev-mem" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomohiro-owada/jev-mem" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/tomrichner/can-jev-bayes</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomrichner/can-jev-bayes" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomrichner/can-jev-bayes" />
@@ -5239,6 +5304,11 @@
     <loc>https://awesomejev.cc/projects/tpellet/jevify</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tpellet/jevify" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tpellet/jevify" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/tranbavinhson/jev-snake</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tranbavinhson/jev-snake" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tranbavinhson/jev-snake" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/trivektor/english-2-sql</loc>
@@ -5359,6 +5429,11 @@
     <loc>https://awesomejev.cc/projects/typesafe-sdk-csharp/typesafe-sdk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/typesafe-sdk-csharp/typesafe-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/typesafe-sdk-csharp/typesafe-sdk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/typesafeai/clarity-judge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/typesafeai/clarity-judge" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/typesafeai/clarity-judge" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/typesend/typesafe_ai</loc>
@@ -5496,6 +5571,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vihaanagarwal/jev-diff" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/vineetagarwal54/jev-mcp-middleware</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/vineetagarwal54/jev-mcp-middleware" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vineetagarwal54/jev-mcp-middleware" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/vinilana/live-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/vinilana/live-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vinilana/live-jev" />
@@ -5584,6 +5664,16 @@
     <loc>https://awesomejev.cc/projects/webgrga/jev-board-lab</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/webgrga/jev-board-lab" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/webgrga/jev-board-lab" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/wei-b0/gram-render</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wei-b0/gram-render" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wei-b0/gram-render" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/wiatrm/jevtpp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wiatrm/jevtpp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wiatrm/jevtpp" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/winter-loo/jev-voice-browser</loc>
@@ -5911,6 +6001,611 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/zzsong1023/jev-market-reflex" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/news/cmu48z4fr0ecnro4w8yflkec6</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu48z4fr0ecnro4w8yflkec6" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu48z4fr0ecnro4w8yflkec6" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu52xi6h095yroqbbz8beyhj</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu52xi6h095yroqbbz8beyhj" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu52xi6h095yroqbbz8beyhj" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu56w5ko03gsro4o97xywpzl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu56w5ko03gsro4o97xywpzl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu56w5ko03gsro4o97xywpzl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu57f4kd045rro4o0qrtb1kp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu57f4kd045rro4o0qrtb1kp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu57f4kd045rro4o0qrtb1kp" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu594p4q041cro8tndx9rocs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu594p4q041cro8tndx9rocs" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu594p4q041cro8tndx9rocs" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu5ce77103yero7nv5wgcznx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu5ce77103yero7nv5wgcznx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu5ce77103yero7nv5wgcznx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu5thpzp0jj9roqokbyyuq8p</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu5thpzp0jj9roqokbyyuq8p" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu5thpzp0jj9roqokbyyuq8p" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu60zs02039brofjvtyo7zqm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu60zs02039brofjvtyo7zqm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu60zs02039brofjvtyo7zqm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu64qi370ap7rofjzzjjsv18</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu64qi370ap7rofjzzjjsv18" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu64qi370ap7rofjzzjjsv18" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu65t3i50bzbrofj6yb2pxmh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu65t3i50bzbrofj6yb2pxmh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu65t3i50bzbrofj6yb2pxmh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu67pecj0e0wrofj97vtuwzu</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu67pecj0e0wrofj97vtuwzu" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu67pecj0e0wrofj97vtuwzu" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu68boti0eqarofjjh2ddaf0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu68boti0eqarofjjh2ddaf0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu68boti0eqarofjjh2ddaf0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu69j7ws0g1rrofjkzsmf8f6</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu69j7ws0g1rrofjkzsmf8f6" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu69j7ws0g1rrofjkzsmf8f6" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu6i1jgg0pgprofjxol77gj0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6i1jgg0pgprofjxol77gj0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6i1jgg0pgprofjxol77gj0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu6r8orx089wrowkv9edk3lm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6r8orx089wrowkv9edk3lm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6r8orx089wrowkv9edk3lm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu6wbl1k0dv5rowkxxtep0kt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6wbl1k0dv5rowkxxtep0kt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6wbl1k0dv5rowkxxtep0kt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7bcjae04b6rogrg6t1tzlo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7bcjae04b6rogrg6t1tzlo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7bcjae04b6rogrg6t1tzlo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7cgiic05l3rogr4nao81h1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7cgiic05l3rogr4nao81h1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7cgiic05l3rogr4nao81h1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7hc2e80aavrogr7vbwhcjm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7hc2e80aavrogr7vbwhcjm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7hc2e80aavrogr7vbwhcjm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7m3qj30ifyrogrviibayb9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7m3qj30ifyrogrviibayb9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7m3qj30ifyrogrviibayb9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7n6b3i0joyrogruwd550j0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7n6b3i0joyrogruwd550j0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7n6b3i0joyrogruwd550j0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu7yk01w0v90rogr5tnx4kdv</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7yk01w0v90rogr5tnx4kdv" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7yk01w0v90rogr5tnx4kdv" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8ezrfp1iy7rogrtexqdmy0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8ezrfp1iy7rogrtexqdmy0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8ezrfp1iy7rogrtexqdmy0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8m4ukd1q7crogrmvhr7o5a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8m4ukd1q7crogrmvhr7o5a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8m4ukd1q7crogrmvhr7o5a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8m89ek1qa5rogr16zrfu1z</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8m89ek1qa5rogr16zrfu1z" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8m89ek1qa5rogr16zrfu1z" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8pr71y08n5ro3kdwcaszld</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8pr71y08n5ro3kdwcaszld" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8pr71y08n5ro3kdwcaszld" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8qsosl03gmro5ke16mf479</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8qsosl03gmro5ke16mf479" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8qsosl03gmro5ke16mf479" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8vpc8102yvrorr22uz7leh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8vpc8102yvrorr22uz7leh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8vpc8102yvrorr22uz7leh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8wegm903qtrorrmxzjqphh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8wegm903qtrorrmxzjqphh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8wegm903qtrorrmxzjqphh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu8z37tg030profp4w9mu61q</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8z37tg030profp4w9mu61q" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8z37tg030profp4w9mu61q" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu9051jc034erojrxrdjbqhq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu9051jc034erojrxrdjbqhq" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu9051jc034erojrxrdjbqhq" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu905sdn0359rojrkmu8x5iy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu905sdn0359rojrkmu8x5iy" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu905sdn0359rojrkmu8x5iy" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu90gznv03kvrojr9nvhjxs3</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu90gznv03kvrojr9nvhjxs3" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu90gznv03kvrojr9nvhjxs3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu96hspn02mprodqgl2whwsb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu96hspn02mprodqgl2whwsb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu96hspn02mprodqgl2whwsb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu96whtr037lrodq991cv6o7</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu96whtr037lrodq991cv6o7" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu96whtr037lrodq991cv6o7" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu98mxc603f7rob4q2u3brpg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu98mxc603f7rob4q2u3brpg" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu98mxc603f7rob4q2u3brpg" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmu9zixvm08yvrowjdrrd6n41</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu9zixvm08yvrowjdrrd6n41" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu9zixvm08yvrowjdrrd6n41" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuabbcbm09p1ro5t86snho11</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabbcbm09p1ro5t86snho11" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabbcbm09p1ro5t86snho11" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuabbcbm09p2ro5tz9lc6eb9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabbcbm09p2ro5tz9lc6eb9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabbcbm09p2ro5tz9lc6eb9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuabls030a3kro5tfk5zp2zx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabls030a3kro5tfk5zp2zx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabls030a3kro5tfk5zp2zx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuadroll0fjaro5tmgw8wlz5</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuadroll0fjaro5tmgw8wlz5" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuadroll0fjaro5tmgw8wlz5" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuakeye30mgsro5tmkdupgr9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuakeye30mgsro5tmkdupgr9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuakeye30mgsro5tmkdupgr9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuaogvp40qy0ro5tdi4aulmb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaogvp40qy0ro5tdi4aulmb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaogvp40qy0ro5tdi4aulmb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuaopakd0r90ro5t6y64dgck</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaopakd0r90ro5t6y64dgck" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaopakd0r90ro5t6y64dgck" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuaw7dxb096qroln5haa1pri</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaw7dxb096qroln5haa1pri" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaw7dxb096qroln5haa1pri" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuayck790bkjrolnwtlbuehx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuayck790bkjrolnwtlbuehx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuayck790bkjrolnwtlbuehx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmub4jrmf0igcroln00yszy63</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub4jrmf0igcroln00yszy63" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub4jrmf0igcroln00yszy63" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmub5mte50jusrolngdryrri1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub5mte50jusrolngdryrri1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub5mte50jusrolngdryrri1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmub8u57l0qphroln9gas77lx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub8u57l0qphroln9gas77lx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub8u57l0qphroln9gas77lx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubg1erd0ymbrolni8v6mpwi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubg1erd0ymbrolni8v6mpwi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubg1erd0ymbrolni8v6mpwi" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubh50s40zy2rolngstxafql</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubh50s40zy2rolngstxafql" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubh50s40zy2rolngstxafql" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubhvftd10qjrolnr7q9k3lt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubhvftd10qjrolnr7q9k3lt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubhvftd10qjrolnr7q9k3lt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubi8bwb1141roln8scp6ida</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubi8bwb1141roln8scp6ida" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubi8bwb1141roln8scp6ida" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubja6lg1295rolnxm9jpm9k</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubja6lg1295rolnxm9jpm9k" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubja6lg1295rolnxm9jpm9k" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubl85hs032bro0lxhod57si</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubl85hs032bro0lxhod57si" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubl85hs032bro0lxhod57si" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubnjftn03jgro4vin9hpioh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubnjftn03jgro4vin9hpioh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubnjftn03jgro4vin9hpioh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubofwji04dwro4vba5ofu04</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubofwji04dwro4vba5ofu04" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubofwji04dwro4vba5ofu04" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubqsb9b03varoci9d10ccq1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubqsb9b03varoci9d10ccq1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubqsb9b03varoci9d10ccq1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubua4mj0396ro993w3kiy40</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubua4mj0396ro993w3kiy40" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubua4mj0396ro993w3kiy40" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubulddp03l2ro99gf6r3q7d</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubulddp03l2ro99gf6r3q7d" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubulddp03l2ro99gf6r3q7d" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubwfaok05ipro99dtdxzy3w</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubwfaok05ipro99dtdxzy3w" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubwfaok05ipro99dtdxzy3w" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmubwxqlr02y6rokikumgdixn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubwxqlr02y6rokikumgdixn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubwxqlr02y6rokikumgdixn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuby5qr404jrro9iyb3bpyrm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuby5qr404jrro9iyb3bpyrm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuby5qr404jrro9iyb3bpyrm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuby5qr404jsro9irkni3knk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuby5qr404jsro9irkni3knk" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuby5qr404jsro9irkni3knk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuc0pmoe04g1rots1wchwbmo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuc0pmoe04g1rots1wchwbmo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuc0pmoe04g1rots1wchwbmo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuc5srxo0abfrots6ur78l90</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuc5srxo0abfrots6ur78l90" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuc5srxo0abfrots6ur78l90" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucacvms0jherotsh8pnnrjn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucacvms0jherotsh8pnnrjn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucacvms0jherotsh8pnnrjn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucbfeut0kharots3wf2bnef</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucbfeut0kharots3wf2bnef" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucbfeut0kharots3wf2bnef" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucci2d6038iroij2viijgon</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucci2d6038iroij2viijgon" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucci2d6038iroij2viijgon" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucmqmro0fn6roeds7hlnajz</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucmqmro0fn6roeds7hlnajz" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucmqmro0fn6roeds7hlnajz" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucqgii60jz4roedj9fsw3qh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucqgii60jz4roedj9fsw3qh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucqgii60jz4roedj9fsw3qh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucu8im70omcroedhbgu1l65</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucu8im70omcroedhbgu1l65" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucu8im70omcroedhbgu1l65" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucwvmws0ronroedd6u1rmzw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucwvmws0ronroedd6u1rmzw" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucwvmws0ronroedd6u1rmzw" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucxdnhr0saxroedzl8k4p57</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucxdnhr0saxroedzl8k4p57" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucxdnhr0saxroedzl8k4p57" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucxyky704ftronibjzp4dos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucxyky704ftronibjzp4dos" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucxyky704ftronibjzp4dos" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmucyoyj20537ronirfgez60t</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucyoyj20537ronirfgez60t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucyoyj20537ronirfgez60t" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud3aitp04aorov6u4cc6gkk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud3aitp04aorov6u4cc6gkk" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud3aitp04aorov6u4cc6gkk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud3aitp04aprov6dvqb2dyg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud3aitp04aprov6dvqb2dyg" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud3aitp04aprov6dvqb2dyg" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud4d3n405lwrov66q7uhqmh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud4d3n405lwrov66q7uhqmh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud4d3n405lwrov66q7uhqmh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud4mk4803m4roa91kt0er0t</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud4mk4803m4roa91kt0er0t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud4mk4803m4roa91kt0er0t" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud7kt5r05bprorasrihdvn3</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud7kt5r05bprorasrihdvn3" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud7kt5r05bprorasrihdvn3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmud7kt5r05bqrorax1pr87nc</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud7kt5r05bqrorax1pr87nc" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud7kt5r05bqrorax1pr87nc" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudm693b0g1xrogg6sqibgzb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudm693b0g1xrogg6sqibgzb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudm693b0g1xrogg6sqibgzb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudnnjbe0hporogggdm18xlz</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudnnjbe0hporogggdm18xlz" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudnnjbe0hporogggdm18xlz" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudpvn230nxlroggwv3fzq9g</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudpvn230nxlroggwv3fzq9g" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudpvn230nxlroggwv3fzq9g" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudpvn230nxmroggdp0jx9uj</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudpvn230nxmroggdp0jx9uj" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudpvn230nxmroggdp0jx9uj" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudqgjcd0ogtrogg2y2d6c5p</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudqgjcd0ogtrogg2y2d6c5p" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudqgjcd0ogtrogg2y2d6c5p" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuds094r05cdroghwwmmc65a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuds094r05cdroghwwmmc65a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuds094r05cdroghwwmmc65a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudu5ho307q5roghwle4c3sr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudu5ho307q5roghwle4c3sr" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudu5ho307q5roghwle4c3sr" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuduxq5808mnroghv31b4dqf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuduxq5808mnroghv31b4dqf" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuduxq5808mnroghv31b4dqf" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmudxd6qk0b8crogh5aduuxxe</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudxd6qk0b8crogh5aduuxxe" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudxd6qk0b8crogh5aduuxxe" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue2hf6w0k6lrogh323szven</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue2hf6w0k6lrogh323szven" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue2hf6w0k6lrogh323szven" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue6k79h0oruroghf3cfe87j</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue6k79h0oruroghf3cfe87j" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue6k79h0oruroghf3cfe87j" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue78fh50prkrogh123f0smh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue78fh50prkrogh123f0smh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue78fh50prkrogh123f0smh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue7lu9z0q15rogh48n8uirl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue7lu9z0q15rogh48n8uirl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue7lu9z0q15rogh48n8uirl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue7msqq0q1kroghdvw8fr7b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue7msqq0q1kroghdvw8fr7b" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue7msqq0q1kroghdvw8fr7b" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmue8ofzm0r6uroghhbx42nhf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue8ofzm0r6uroghhbx42nhf" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue8ofzm0r6uroghhbx42nhf" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuec3fqj0v44roghe38ned3r</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuec3fqj0v44roghe38ned3r" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuec3fqj0v44roghe38ned3r" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmueho4yn065rrovx7uqxb1ce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueho4yn065rrovx7uqxb1ce" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueho4yn065rrovx7uqxb1ce" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuek20s205hkroynl449lqr2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuek20s205hkroynl449lqr2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuek20s205hkroynl449lqr2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmueki1qb05rlroyn4k2zk1q2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueki1qb05rlroyn4k2zk1q2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueki1qb05rlroyn4k2zk1q2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmueopn2p0du2royney9xs03m</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueopn2p0du2royney9xs03m" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueopn2p0du2royney9xs03m" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmueq8e9n0f7troyno9saf9wp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueq8e9n0f7troyno9saf9wp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueq8e9n0f7troyno9saf9wp" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuetoik404c4rohbioiq18ye</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuetoik404c4rohbioiq18ye" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuetoik404c4rohbioiq18ye" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmueurtqk03slroyq3uvmsq6a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueurtqk03slroyq3uvmsq6a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueurtqk03slroyq3uvmsq6a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuev7lmz04fyroyqopvgqwkm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuev7lmz04fyroyqopvgqwkm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuev7lmz04fyroyqopvgqwkm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuexqizy03aoroowri5o5yc4</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuexqizy03aoroowri5o5yc4" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuexqizy03aoroowri5o5yc4" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuez2jrq041aroodhes2mly9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuez2jrq041aroodhes2mly9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuez2jrq041aroodhes2mly9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuf20swz07agroodkchdzy1v</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf20swz07agroodkchdzy1v" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf20swz07agroodkchdzy1v" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuf3bxxo08ubrood3j8q8lrn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf3bxxo08ubrood3j8q8lrn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf3bxxo08ubrood3j8q8lrn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmuf9jgea05x8rocsw2y3zzlm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf9jgea05x8rocsw2y3zzlm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf9jgea05x8rocsw2y3zzlm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufae54k03neroagmmeho0rr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufae54k03neroagmmeho0rr" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufae54k03neroagmmeho0rr" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufkk74d038xro8wkn32j6re</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufkk74d038xro8wkn32j6re" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufkk74d038xro8wkn32j6re" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufo5akc07fpro8wkfc467ex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufo5akc07fpro8wkfc467ex" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufo5akc07fpro8wkfc467ex" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufpw01h03v5roxzbjbbud56</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufpw01h03v5roxzbjbbud56" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufpw01h03v5roxzbjbbud56" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufstbci07fyroxzup6yzhjl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufstbci07fyroxzup6yzhjl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufstbci07fyroxzup6yzhjl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmufxxbbd04kjrogv9bwgbwuo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufxxbbd04kjrogv9bwgbwuo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufxxbbd04kjrogv9bwgbwuo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmug0bd95070xrogvww0pcaha</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug0bd95070xrogvww0pcaha" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug0bd95070xrogvww0pcaha" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmug2gi4g09ajrogvibob01bt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug2gi4g09ajrogvibob01bt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug2gi4g09ajrogvibob01bt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmug60l2n0gnerogvv72ttoi2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug60l2n0gnerogvv72ttoi2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug60l2n0gnerogvv72ttoi2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/news/cmughpw5b0sx7rogv4dmfcg9o</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmughpw5b0sx7rogv4dmfcg9o" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmughpw5b0sx7rogv4dmfcg9o" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh" />
@@ -5919,6 +6614,11 @@
     <loc>https://awesomejev.cc/zh/top100</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/top100" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/top100" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/category/agents</loc>
@@ -10326,6 +11026,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rawson08/the-llm-dispatcher" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/rawwerks/one-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rawwerks/one-system" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rawwerks/one-system" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/ray-hughes/jevalyn</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ray-hughes/jevalyn" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ray-hughes/jevalyn" />
@@ -10541,6 +11246,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rudy2steiner/awesome-jev-hub" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/running-dolphins/jev-bench</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/running-dolphins/jev-bench" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/running-dolphins/jev-bench" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/ryan-sunny/dbt-assay</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ryan-sunny/dbt-assay" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ryan-sunny/dbt-assay" />
@@ -10554,6 +11264,11 @@
     <loc>https://awesomejev.cc/zh/projects/sachin-chaurasiya/scam-checker-with-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sachin-chaurasiya/scam-checker-with-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sachin-chaurasiya/scam-checker-with-jev" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/safzanpirani/pi-jev-skill-picker</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/safzanpirani/pi-jev-skill-picker" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/safzanpirani/pi-jev-skill-picker" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/safzanpirani/pong-jev</loc>
@@ -10621,6 +11336,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sathariels/jevtriage" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/satiricalguru/fast-jev-agents</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/satiricalguru/fast-jev-agents" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/satiricalguru/fast-jev-agents" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/sauhard74/mem-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sauhard74/mem-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sauhard74/mem-jev" />
@@ -10654,6 +11374,11 @@
     <loc>https://awesomejev.cc/zh/projects/shaharia-lab/jev-cli</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shaharia-lab/jev-cli" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shaharia-lab/jev-cli" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/shahriarbijoy/eslint-plugin-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shahriarbijoy/eslint-plugin-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shahriarbijoy/eslint-plugin-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/shailesh-svg/jev-poc-lead-gen</loc>
@@ -10806,6 +11531,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/siroccomask/snake-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/skyvern-ai/jevscape</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/skyvern-ai/jevscape" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/skyvern-ai/jevscape" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/slatejack/jev-desktop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/slatejack/jev-desktop" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/slatejack/jev-desktop" />
@@ -10834,6 +11564,11 @@
     <loc>https://awesomejev.cc/zh/projects/socai-io/jev-social</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/socai-io/jev-social" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/socai-io/jev-social" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/sohryuu101/fast-jev-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sohryuu101/fast-jev-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sohryuu101/fast-jev-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/solovieff/tg_accessor</loc>
@@ -10886,6 +11621,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sseanliu/jev-vision" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/stainlu/awesome-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/stainlu/awesome-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/stainlu/awesome-jev" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/stardeckai/lgtm</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/stardeckai/lgtm" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/stardeckai/lgtm" />
@@ -10936,6 +11676,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sumleo/prompt2jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/sunyifeng11111/typesafe-minesweeper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/sunyifeng11111/typesafe-minesweeper" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/sunyifeng11111/typesafe-minesweeper" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/supprocom/typesafeai-sdk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/supprocom/typesafeai-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/supprocom/typesafeai-sdk" />
@@ -10974,6 +11719,11 @@
     <loc>https://awesomejev.cc/zh/projects/takuminoguchi2004/jev-noul-vs-choice</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/takuminoguchi2004/jev-noul-vs-choice" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/takuminoguchi2004/jev-noul-vs-choice" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/tamaratran/fast-jev-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tamaratran/fast-jev-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tamaratran/fast-jev-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/tanaypadar/gpt-vs-jev</loc>
@@ -11029,6 +11779,11 @@
     <loc>https://awesomejev.cc/zh/projects/thehan-co/jevriel</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/thehan-co/jevriel" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/thehan-co/jevriel" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/thehumanworks/jevgrep</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/thehumanworks/jevgrep" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/thehumanworks/jevgrep" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/theoleecj/semif-openjev</loc>
@@ -11116,6 +11871,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomdachs/jev-replay-lab" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/tomohiro-owada/jev-mem</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomohiro-owada/jev-mem" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomohiro-owada/jev-mem" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/tomrichner/can-jev-bayes</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomrichner/can-jev-bayes" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomrichner/can-jev-bayes" />
@@ -11149,6 +11909,11 @@
     <loc>https://awesomejev.cc/zh/projects/tpellet/jevify</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tpellet/jevify" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tpellet/jevify" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/tranbavinhson/jev-snake</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tranbavinhson/jev-snake" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tranbavinhson/jev-snake" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/trivektor/english-2-sql</loc>
@@ -11269,6 +12034,11 @@
     <loc>https://awesomejev.cc/zh/projects/typesafe-sdk-csharp/typesafe-sdk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/typesafe-sdk-csharp/typesafe-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/typesafe-sdk-csharp/typesafe-sdk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/typesafeai/clarity-judge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/typesafeai/clarity-judge" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/typesafeai/clarity-judge" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/typesend/typesafe_ai</loc>
@@ -11406,6 +12176,11 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vihaanagarwal/jev-diff" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/vineetagarwal54/jev-mcp-middleware</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/vineetagarwal54/jev-mcp-middleware" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vineetagarwal54/jev-mcp-middleware" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/vinilana/live-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/vinilana/live-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/vinilana/live-jev" />
@@ -11494,6 +12269,16 @@
     <loc>https://awesomejev.cc/zh/projects/webgrga/jev-board-lab</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/webgrga/jev-board-lab" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/webgrga/jev-board-lab" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/wei-b0/gram-render</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wei-b0/gram-render" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wei-b0/gram-render" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/wiatrm/jevtpp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wiatrm/jevtpp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wiatrm/jevtpp" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/winter-loo/jev-voice-browser</loc>
@@ -11819,5 +12604,610 @@
     <loc>https://awesomejev.cc/zh/projects/zzsong1023/jev-market-reflex</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/zzsong1023/jev-market-reflex" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/zzsong1023/jev-market-reflex" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu48z4fr0ecnro4w8yflkec6</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu48z4fr0ecnro4w8yflkec6" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu48z4fr0ecnro4w8yflkec6" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu52xi6h095yroqbbz8beyhj</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu52xi6h095yroqbbz8beyhj" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu52xi6h095yroqbbz8beyhj" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu56w5ko03gsro4o97xywpzl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu56w5ko03gsro4o97xywpzl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu56w5ko03gsro4o97xywpzl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu57f4kd045rro4o0qrtb1kp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu57f4kd045rro4o0qrtb1kp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu57f4kd045rro4o0qrtb1kp" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu594p4q041cro8tndx9rocs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu594p4q041cro8tndx9rocs" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu594p4q041cro8tndx9rocs" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu5ce77103yero7nv5wgcznx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu5ce77103yero7nv5wgcznx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu5ce77103yero7nv5wgcznx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu5thpzp0jj9roqokbyyuq8p</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu5thpzp0jj9roqokbyyuq8p" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu5thpzp0jj9roqokbyyuq8p" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu60zs02039brofjvtyo7zqm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu60zs02039brofjvtyo7zqm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu60zs02039brofjvtyo7zqm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu64qi370ap7rofjzzjjsv18</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu64qi370ap7rofjzzjjsv18" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu64qi370ap7rofjzzjjsv18" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu65t3i50bzbrofj6yb2pxmh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu65t3i50bzbrofj6yb2pxmh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu65t3i50bzbrofj6yb2pxmh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu67pecj0e0wrofj97vtuwzu</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu67pecj0e0wrofj97vtuwzu" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu67pecj0e0wrofj97vtuwzu" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu68boti0eqarofjjh2ddaf0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu68boti0eqarofjjh2ddaf0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu68boti0eqarofjjh2ddaf0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu69j7ws0g1rrofjkzsmf8f6</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu69j7ws0g1rrofjkzsmf8f6" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu69j7ws0g1rrofjkzsmf8f6" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu6i1jgg0pgprofjxol77gj0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6i1jgg0pgprofjxol77gj0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6i1jgg0pgprofjxol77gj0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu6r8orx089wrowkv9edk3lm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6r8orx089wrowkv9edk3lm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6r8orx089wrowkv9edk3lm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu6wbl1k0dv5rowkxxtep0kt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu6wbl1k0dv5rowkxxtep0kt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu6wbl1k0dv5rowkxxtep0kt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7bcjae04b6rogrg6t1tzlo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7bcjae04b6rogrg6t1tzlo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7bcjae04b6rogrg6t1tzlo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7cgiic05l3rogr4nao81h1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7cgiic05l3rogr4nao81h1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7cgiic05l3rogr4nao81h1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7hc2e80aavrogr7vbwhcjm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7hc2e80aavrogr7vbwhcjm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7hc2e80aavrogr7vbwhcjm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7m3qj30ifyrogrviibayb9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7m3qj30ifyrogrviibayb9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7m3qj30ifyrogrviibayb9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7n6b3i0joyrogruwd550j0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7n6b3i0joyrogruwd550j0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7n6b3i0joyrogruwd550j0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu7yk01w0v90rogr5tnx4kdv</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu7yk01w0v90rogr5tnx4kdv" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu7yk01w0v90rogr5tnx4kdv" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8ezrfp1iy7rogrtexqdmy0</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8ezrfp1iy7rogrtexqdmy0" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8ezrfp1iy7rogrtexqdmy0" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8m4ukd1q7crogrmvhr7o5a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8m4ukd1q7crogrmvhr7o5a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8m4ukd1q7crogrmvhr7o5a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8m89ek1qa5rogr16zrfu1z</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8m89ek1qa5rogr16zrfu1z" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8m89ek1qa5rogr16zrfu1z" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8pr71y08n5ro3kdwcaszld</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8pr71y08n5ro3kdwcaszld" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8pr71y08n5ro3kdwcaszld" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8qsosl03gmro5ke16mf479</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8qsosl03gmro5ke16mf479" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8qsosl03gmro5ke16mf479" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8vpc8102yvrorr22uz7leh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8vpc8102yvrorr22uz7leh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8vpc8102yvrorr22uz7leh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8wegm903qtrorrmxzjqphh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8wegm903qtrorrmxzjqphh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8wegm903qtrorrmxzjqphh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu8z37tg030profp4w9mu61q</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu8z37tg030profp4w9mu61q" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu8z37tg030profp4w9mu61q" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu9051jc034erojrxrdjbqhq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu9051jc034erojrxrdjbqhq" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu9051jc034erojrxrdjbqhq" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu905sdn0359rojrkmu8x5iy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu905sdn0359rojrkmu8x5iy" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu905sdn0359rojrkmu8x5iy" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu90gznv03kvrojr9nvhjxs3</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu90gznv03kvrojr9nvhjxs3" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu90gznv03kvrojr9nvhjxs3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu96hspn02mprodqgl2whwsb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu96hspn02mprodqgl2whwsb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu96hspn02mprodqgl2whwsb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu96whtr037lrodq991cv6o7</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu96whtr037lrodq991cv6o7" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu96whtr037lrodq991cv6o7" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu98mxc603f7rob4q2u3brpg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu98mxc603f7rob4q2u3brpg" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu98mxc603f7rob4q2u3brpg" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmu9zixvm08yvrowjdrrd6n41</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmu9zixvm08yvrowjdrrd6n41" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmu9zixvm08yvrowjdrrd6n41" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuabbcbm09p1ro5t86snho11</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabbcbm09p1ro5t86snho11" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabbcbm09p1ro5t86snho11" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuabbcbm09p2ro5tz9lc6eb9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabbcbm09p2ro5tz9lc6eb9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabbcbm09p2ro5tz9lc6eb9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuabls030a3kro5tfk5zp2zx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuabls030a3kro5tfk5zp2zx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuabls030a3kro5tfk5zp2zx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuadroll0fjaro5tmgw8wlz5</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuadroll0fjaro5tmgw8wlz5" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuadroll0fjaro5tmgw8wlz5" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuakeye30mgsro5tmkdupgr9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuakeye30mgsro5tmkdupgr9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuakeye30mgsro5tmkdupgr9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuaogvp40qy0ro5tdi4aulmb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaogvp40qy0ro5tdi4aulmb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaogvp40qy0ro5tdi4aulmb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuaopakd0r90ro5t6y64dgck</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaopakd0r90ro5t6y64dgck" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaopakd0r90ro5t6y64dgck" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuaw7dxb096qroln5haa1pri</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuaw7dxb096qroln5haa1pri" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuaw7dxb096qroln5haa1pri" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuayck790bkjrolnwtlbuehx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuayck790bkjrolnwtlbuehx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuayck790bkjrolnwtlbuehx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmub4jrmf0igcroln00yszy63</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub4jrmf0igcroln00yszy63" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub4jrmf0igcroln00yszy63" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmub5mte50jusrolngdryrri1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub5mte50jusrolngdryrri1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub5mte50jusrolngdryrri1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmub8u57l0qphroln9gas77lx</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmub8u57l0qphroln9gas77lx" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmub8u57l0qphroln9gas77lx" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubg1erd0ymbrolni8v6mpwi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubg1erd0ymbrolni8v6mpwi" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubg1erd0ymbrolni8v6mpwi" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubh50s40zy2rolngstxafql</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubh50s40zy2rolngstxafql" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubh50s40zy2rolngstxafql" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubhvftd10qjrolnr7q9k3lt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubhvftd10qjrolnr7q9k3lt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubhvftd10qjrolnr7q9k3lt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubi8bwb1141roln8scp6ida</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubi8bwb1141roln8scp6ida" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubi8bwb1141roln8scp6ida" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubja6lg1295rolnxm9jpm9k</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubja6lg1295rolnxm9jpm9k" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubja6lg1295rolnxm9jpm9k" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubl85hs032bro0lxhod57si</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubl85hs032bro0lxhod57si" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubl85hs032bro0lxhod57si" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubnjftn03jgro4vin9hpioh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubnjftn03jgro4vin9hpioh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubnjftn03jgro4vin9hpioh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubofwji04dwro4vba5ofu04</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubofwji04dwro4vba5ofu04" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubofwji04dwro4vba5ofu04" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubqsb9b03varoci9d10ccq1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubqsb9b03varoci9d10ccq1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubqsb9b03varoci9d10ccq1" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubua4mj0396ro993w3kiy40</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubua4mj0396ro993w3kiy40" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubua4mj0396ro993w3kiy40" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubulddp03l2ro99gf6r3q7d</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubulddp03l2ro99gf6r3q7d" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubulddp03l2ro99gf6r3q7d" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubwfaok05ipro99dtdxzy3w</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubwfaok05ipro99dtdxzy3w" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubwfaok05ipro99dtdxzy3w" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmubwxqlr02y6rokikumgdixn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmubwxqlr02y6rokikumgdixn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmubwxqlr02y6rokikumgdixn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuby5qr404jrro9iyb3bpyrm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuby5qr404jrro9iyb3bpyrm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuby5qr404jrro9iyb3bpyrm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuby5qr404jsro9irkni3knk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuby5qr404jsro9irkni3knk" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuby5qr404jsro9irkni3knk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuc0pmoe04g1rots1wchwbmo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuc0pmoe04g1rots1wchwbmo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuc0pmoe04g1rots1wchwbmo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuc5srxo0abfrots6ur78l90</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuc5srxo0abfrots6ur78l90" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuc5srxo0abfrots6ur78l90" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucacvms0jherotsh8pnnrjn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucacvms0jherotsh8pnnrjn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucacvms0jherotsh8pnnrjn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucbfeut0kharots3wf2bnef</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucbfeut0kharots3wf2bnef" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucbfeut0kharots3wf2bnef" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucci2d6038iroij2viijgon</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucci2d6038iroij2viijgon" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucci2d6038iroij2viijgon" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucmqmro0fn6roeds7hlnajz</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucmqmro0fn6roeds7hlnajz" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucmqmro0fn6roeds7hlnajz" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucqgii60jz4roedj9fsw3qh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucqgii60jz4roedj9fsw3qh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucqgii60jz4roedj9fsw3qh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucu8im70omcroedhbgu1l65</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucu8im70omcroedhbgu1l65" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucu8im70omcroedhbgu1l65" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucwvmws0ronroedd6u1rmzw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucwvmws0ronroedd6u1rmzw" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucwvmws0ronroedd6u1rmzw" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucxdnhr0saxroedzl8k4p57</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucxdnhr0saxroedzl8k4p57" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucxdnhr0saxroedzl8k4p57" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucxyky704ftronibjzp4dos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucxyky704ftronibjzp4dos" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucxyky704ftronibjzp4dos" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmucyoyj20537ronirfgez60t</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmucyoyj20537ronirfgez60t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmucyoyj20537ronirfgez60t" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud3aitp04aorov6u4cc6gkk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud3aitp04aorov6u4cc6gkk" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud3aitp04aorov6u4cc6gkk" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud3aitp04aprov6dvqb2dyg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud3aitp04aprov6dvqb2dyg" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud3aitp04aprov6dvqb2dyg" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud4d3n405lwrov66q7uhqmh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud4d3n405lwrov66q7uhqmh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud4d3n405lwrov66q7uhqmh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud4mk4803m4roa91kt0er0t</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud4mk4803m4roa91kt0er0t" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud4mk4803m4roa91kt0er0t" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud7kt5r05bprorasrihdvn3</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud7kt5r05bprorasrihdvn3" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud7kt5r05bprorasrihdvn3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmud7kt5r05bqrorax1pr87nc</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmud7kt5r05bqrorax1pr87nc" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmud7kt5r05bqrorax1pr87nc" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudm693b0g1xrogg6sqibgzb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudm693b0g1xrogg6sqibgzb" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudm693b0g1xrogg6sqibgzb" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudnnjbe0hporogggdm18xlz</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudnnjbe0hporogggdm18xlz" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudnnjbe0hporogggdm18xlz" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudpvn230nxlroggwv3fzq9g</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudpvn230nxlroggwv3fzq9g" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudpvn230nxlroggwv3fzq9g" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudpvn230nxmroggdp0jx9uj</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudpvn230nxmroggdp0jx9uj" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudpvn230nxmroggdp0jx9uj" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudqgjcd0ogtrogg2y2d6c5p</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudqgjcd0ogtrogg2y2d6c5p" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudqgjcd0ogtrogg2y2d6c5p" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuds094r05cdroghwwmmc65a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuds094r05cdroghwwmmc65a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuds094r05cdroghwwmmc65a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudu5ho307q5roghwle4c3sr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudu5ho307q5roghwle4c3sr" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudu5ho307q5roghwle4c3sr" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuduxq5808mnroghv31b4dqf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuduxq5808mnroghv31b4dqf" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuduxq5808mnroghv31b4dqf" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmudxd6qk0b8crogh5aduuxxe</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmudxd6qk0b8crogh5aduuxxe" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmudxd6qk0b8crogh5aduuxxe" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue2hf6w0k6lrogh323szven</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue2hf6w0k6lrogh323szven" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue2hf6w0k6lrogh323szven" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue6k79h0oruroghf3cfe87j</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue6k79h0oruroghf3cfe87j" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue6k79h0oruroghf3cfe87j" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue78fh50prkrogh123f0smh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue78fh50prkrogh123f0smh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue78fh50prkrogh123f0smh" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue7lu9z0q15rogh48n8uirl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue7lu9z0q15rogh48n8uirl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue7lu9z0q15rogh48n8uirl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue7msqq0q1kroghdvw8fr7b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue7msqq0q1kroghdvw8fr7b" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue7msqq0q1kroghdvw8fr7b" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmue8ofzm0r6uroghhbx42nhf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmue8ofzm0r6uroghhbx42nhf" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmue8ofzm0r6uroghhbx42nhf" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuec3fqj0v44roghe38ned3r</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuec3fqj0v44roghe38ned3r" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuec3fqj0v44roghe38ned3r" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmueho4yn065rrovx7uqxb1ce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueho4yn065rrovx7uqxb1ce" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueho4yn065rrovx7uqxb1ce" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuek20s205hkroynl449lqr2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuek20s205hkroynl449lqr2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuek20s205hkroynl449lqr2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmueki1qb05rlroyn4k2zk1q2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueki1qb05rlroyn4k2zk1q2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueki1qb05rlroyn4k2zk1q2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmueopn2p0du2royney9xs03m</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueopn2p0du2royney9xs03m" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueopn2p0du2royney9xs03m" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmueq8e9n0f7troyno9saf9wp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueq8e9n0f7troyno9saf9wp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueq8e9n0f7troyno9saf9wp" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuetoik404c4rohbioiq18ye</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuetoik404c4rohbioiq18ye" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuetoik404c4rohbioiq18ye" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmueurtqk03slroyq3uvmsq6a</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmueurtqk03slroyq3uvmsq6a" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmueurtqk03slroyq3uvmsq6a" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuev7lmz04fyroyqopvgqwkm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuev7lmz04fyroyqopvgqwkm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuev7lmz04fyroyqopvgqwkm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuexqizy03aoroowri5o5yc4</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuexqizy03aoroowri5o5yc4" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuexqizy03aoroowri5o5yc4" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuez2jrq041aroodhes2mly9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuez2jrq041aroodhes2mly9" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuez2jrq041aroodhes2mly9" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuf20swz07agroodkchdzy1v</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf20swz07agroodkchdzy1v" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf20swz07agroodkchdzy1v" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuf3bxxo08ubrood3j8q8lrn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf3bxxo08ubrood3j8q8lrn" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf3bxxo08ubrood3j8q8lrn" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmuf9jgea05x8rocsw2y3zzlm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmuf9jgea05x8rocsw2y3zzlm" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmuf9jgea05x8rocsw2y3zzlm" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufae54k03neroagmmeho0rr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufae54k03neroagmmeho0rr" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufae54k03neroagmmeho0rr" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufkk74d038xro8wkn32j6re</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufkk74d038xro8wkn32j6re" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufkk74d038xro8wkn32j6re" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufo5akc07fpro8wkfc467ex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufo5akc07fpro8wkfc467ex" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufo5akc07fpro8wkfc467ex" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufpw01h03v5roxzbjbbud56</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufpw01h03v5roxzbjbbud56" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufpw01h03v5roxzbjbbud56" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufstbci07fyroxzup6yzhjl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufstbci07fyroxzup6yzhjl" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufstbci07fyroxzup6yzhjl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmufxxbbd04kjrogv9bwgbwuo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmufxxbbd04kjrogv9bwgbwuo" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmufxxbbd04kjrogv9bwgbwuo" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmug0bd95070xrogvww0pcaha</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug0bd95070xrogvww0pcaha" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug0bd95070xrogvww0pcaha" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmug2gi4g09ajrogvibob01bt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug2gi4g09ajrogvibob01bt" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug2gi4g09ajrogvibob01bt" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmug60l2n0gnerogvv72ttoi2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmug60l2n0gnerogvv72ttoi2" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmug60l2n0gnerogvv72ttoi2" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/news/cmughpw5b0sx7rogv4dmfcg9o</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news/cmughpw5b0sx7rogv4dmfcg9o" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news/cmughpw5b0sx7rogv4dmfcg9o" />
   </url>
 </urlset>

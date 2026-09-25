@@ -54,7 +54,6 @@ export const en = {
   newsCategoryIndustry: 'Industry',
   newsCategoryPaper: 'Research',
   newsCategoryTutorial: 'Tutorial',
-  newsShowMore: 'Show more news',
   searchNewsPlaceholder: 'Search news…',
   categoryAgents: 'Agents & automation',
   categoryBrowser: 'Browser & computer use',
@@ -75,7 +74,7 @@ export const en = {
   emptySection: 'No items yet.',
   footerTitle: 'Community directory',
   footerDescription:
-    'TypeSafe Jev / System One projects and discussion. Launch post: typesafe.ai/blog/introducing-system-one-models-and-jev. Live API sync is future work; content today is static seed data plus weekday collector updates.',
+    'Community-curated TypeSafe Jev / System One projects and news. GitHub Actions refresh the directory; news summaries link to AIHOT and their original sources.',
   sortStars: 'Stars',
   sortDate: 'Date',
   sortName: 'Name',
