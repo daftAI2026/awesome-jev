@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-24T19:29:42.525Z",
+  "at": "2026-09-24T23:59:27.965Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 52,
-      "total": 52,
+      "fetched": 54,
+      "total": 54,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 59,
-      "total": 59,
+      "fetched": 60,
+      "total": 60,
       "status": "complete"
     }
   ],
@@ -20,29 +20,47 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
-  "added": 0,
-  "pending": 74,
+  "reviewed": 3,
+  "added": 1,
+  "pending": 75,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "bhushankinge/jev-laya-classification-bench",
-      "status": "review",
+      "repo": "wiatrm/jevtpp",
+      "status": "keep",
       "score": {
-        "jevAbout": 0.14,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.38,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevAbout": 0.92,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.92,
+        "category": "alternatives"
       },
-      "sha": "d87c2435165744e39b573086d3e0e3b3fd4bcbb1",
-      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/d87c2435165744e39b573086d3e0e3b3fd4bcbb1/README.md",
-      "evidenceSha256": "729c93bdf1621cf63c53c67c4cdbd810841b9a223d15a5e4885180d84367650a",
+      "sha": "6f8f42c569ab3a586b5e62f198ef4b7ce2717688",
+      "evidenceUrl": "https://github.com/wiatrm/jevtpp/blob/6f8f42c569ab3a586b5e62f198ef4b7ce2717688/README.md",
+      "evidenceSha256": "172c9c45c01ce4d3ec0cba3ad683cffa3d7b1bd6fe45ea410fe28fc9a812653c",
       "model": "jev-latest",
-      "checkedAt": "2026-09-24T19:29:42.525Z"
+      "checkedAt": "2026-09-24T23:59:27.965Z"
+    },
+    {
+      "repo": "frederico-kluser/jev-agent-skill",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "2e2998f0006d12e170dd87939a3e85645911dbc6",
+      "evidenceUrl": "https://github.com/frederico-kluser/jev-agent-skill/blob/2e2998f0006d12e170dd87939a3e85645911dbc6/README.md",
+      "evidenceSha256": "1cf18756b758e8976c43787475d0ffab04774892e91707d0c945c02102caef41",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-24T23:59:27.965Z"
+    },
+    {
+      "repo": "rudransh2004/carve-jev",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "254059ca3fa7e206a73e4f23755d4b38686a2631",
+      "evidenceUrl": "https://github.com/rudransh2004/carve-jev/blob/254059ca3fa7e206a73e4f23755d4b38686a2631/README.md",
+      "evidenceSha256": "4aa9c3d679ad0a63b367aff893aabf005448f2e9683b31ff6524ca4e669ec462",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-24T23:59:27.965Z"
     }
   ],
-  "totalProjects": 1171
+  "totalProjects": 1183
 }

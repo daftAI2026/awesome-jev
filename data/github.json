@@ -40994,5 +40994,49 @@
         "checkedAt": "2026-09-24T21:31:04.130Z"
       }
     }
+  },
+  {
+    "id": "gh-6-wiatrm-jevtpp",
+    "type": "github",
+    "title": "jevtpp",
+    "summary": "Jev-like decisions. Strong C++ types.",
+    "tags": [
+      "cpp",
+      "cpp20",
+      "ggml",
+      "inference",
+      "jev",
+      "laya",
+      "machine-learning",
+      "observability"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/wiatrM/jevtpp",
+    "sourceMeta": {
+      "repo": "wiatrM/jevtpp",
+      "author": "wiatrM",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "date": "2026-09-24",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "wiatrm/jevtpp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "6f8f42c569ab3a586b5e62f198ef4b7ce2717688",
+        "evidenceUrl": "https://github.com/wiatrm/jevtpp/blob/6f8f42c569ab3a586b5e62f198ef4b7ce2717688/README.md",
+        "evidenceSha256": "172c9c45c01ce4d3ec0cba3ad683cffa3d7b1bd6fe45ea410fe28fc9a812653c",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T23:59:27.965Z"
+      }
+    }
   }
 ]

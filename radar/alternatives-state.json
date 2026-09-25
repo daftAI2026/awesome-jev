@@ -1104,13 +1104,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "stainlu/awesome-jev": {
-      "status": "error",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "retryAt": "2026-09-24T23:56:45.683Z"
-    },
     "mizorewww/laya-coreml": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1574,6 +1567,40 @@
         "checkedAt": "2026-09-24T19:29:42.525Z"
       },
       "retryAt": "2026-10-01T19:29:42.525Z"
+    },
+    "rudransh2004/carve-jev": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T23:59:27.965Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T23:59:27.965Z",
+      "lastReview": {
+        "repo": "rudransh2004/carve-jev",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "254059ca3fa7e206a73e4f23755d4b38686a2631",
+        "evidenceUrl": "https://github.com/rudransh2004/carve-jev/blob/254059ca3fa7e206a73e4f23755d4b38686a2631/README.md",
+        "evidenceSha256": "4aa9c3d679ad0a63b367aff893aabf005448f2e9683b31ff6524ca4e669ec462",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T23:59:27.965Z"
+      },
+      "retryAt": "2026-10-01T23:59:27.965Z"
+    },
+    "frederico-kluser/jev-agent-skill": {
+      "status": "review",
+      "discoveredAt": "2026-09-24T23:59:27.965Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-24T23:59:27.965Z",
+      "lastReview": {
+        "repo": "frederico-kluser/jev-agent-skill",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "2e2998f0006d12e170dd87939a3e85645911dbc6",
+        "evidenceUrl": "https://github.com/frederico-kluser/jev-agent-skill/blob/2e2998f0006d12e170dd87939a3e85645911dbc6/README.md",
+        "evidenceSha256": "1cf18756b758e8976c43787475d0ffab04774892e91707d0c945c02102caef41",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-24T23:59:27.965Z"
+      },
+      "retryAt": "2026-10-01T23:59:27.965Z"
     }
   }
 }
