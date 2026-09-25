@@ -36,6 +36,8 @@ Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, option
 
 The directory imports `data/github.json`, filters by category, searches and sorts it, then renders project cards or rows. News imports `data/news.json` independently. The GitHub radar refreshes every existing project's `stars`, `forks` and `language`; it preserves ID, URL, title, summary, tags, category, Jev scores and pinned evidence. Existing `sourceMeta.repo` display aliases from renames are tolerated; the normalized URL owns deduplication.
 
+In the generated README, repository names identifying curated lists, directories, and project collections within `resources` receive a `Project directories` subheading. The other resources remain under `Guides & other resources`. This is a navigation aid, not a new primary category or a change to website filtering. Listing an external directory does not import its entries into this catalog; each included GitHub repository still needs its own review.
+
 New reviewed projects append to `github.json`, never replace or reorder existing rows. Admission requires Jev `keep`, `jevAbout >= 0.9` and `jevKeepConfidence >= 0.9`; a category choice is recorded in the same review. `radar/state.json` holds pending/error candidates and cursors, while `radar/latest.json` holds audit receipts. Neither is imported into the website. README project sections and count badge are generated from the same GitHub store; edit descriptions in JSON rather than inside generated README markers.
 
 Client-side sort uses `awesome-jev-github-sort` (`stars`, `date`, `name`); missing dates sort last. The page's data-update timestamp follows the newest Git commit touching `data/github.json` or `data/news.json`, not a UI-only change.
