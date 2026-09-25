@@ -2023,5 +2023,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2103233636413903158",
     "aihotUrl": "https://aihot.news/items/cmug2gi4g09ajrogvibob01bt"
+  },
+  {
+    "id": "cmugvdzah1b46rogvaei9bq7r",
+    "title": "Jev：用 RLCD 训练的单次调用模型零样本检测 AI 对齐失效",
+    "originalTitle": "Just Ask Jev： Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+    "summary": "用强化学习校准决策（RLCD）训练的模型 Jev 可在单次调用中对同一输入回答多个带类型的问题并给出校准概率，零样本检测对齐失效的中位 AUROC 达 0.886，在多数基准上超过有监督基线。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-24T00:00:00.000Z",
+    "discoveredAt": "2026-09-25T11:20:58.273Z",
+    "category": null,
+    "score": 46,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2609.29429",
+    "aihotUrl": "https://aihot.news/items/cmugvdzah1b46rogvaei9bq7r"
   }
 ]
