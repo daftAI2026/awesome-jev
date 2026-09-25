@@ -51791,5 +51791,49 @@
         "checkedAt": "2026-09-25T17:11:29.590Z"
       }
     }
+  },
+  {
+    "id": "gh-8-codepawl-tacet",
+    "type": "github",
+    "title": "tacet",
+    "summary": "Typed decisions from one encoder pass. Open weights, Apache 2.0.",
+    "tags": [
+      "calibration",
+      "classification",
+      "encoder",
+      "huggingface",
+      "machine-learning",
+      "mmbert",
+      "nlp",
+      "open-weights"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/codepawl/tacet",
+    "sourceMeta": {
+      "repo": "codepawl/tacet",
+      "author": "codepawl",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "date": "2026-09-25",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "codepawl/tacet",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "alternatives"
+        },
+        "sha": "a4826aed400c00ce483132adaf2c97af833bc7b0",
+        "evidenceUrl": "https://github.com/codepawl/tacet/blob/a4826aed400c00ce483132adaf2c97af833bc7b0/README.md",
+        "evidenceSha256": "aa954101ad566ef12c8a96c9d2e2b4735a8f4455531ad2b12dcdb02053fc5c6e",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T19:32:21.650Z"
+      }
+    }
   }
 ]

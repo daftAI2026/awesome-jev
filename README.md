@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-1440-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-1441-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -1476,6 +1476,7 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**omg**](https://github.com/bokuweb/omg) - A System One style decision model runtime in Rust. · `Rust`
 - [**truetype.ai-open**](https://github.com/stephenlb/truetype.ai-open) - Open source replica of Truetype AI using open weight models · `Python`
 - [**jevtpp**](https://github.com/wiatrM/jevtpp) - Jev-like decisions. Strong C++ types. · `C++`
+- [**tacet**](https://github.com/codepawl/tacet) - Typed decisions from one encoder pass. Open weights, Apache 2.0. · `Python`
 - [**laya-server**](https://github.com/pambrose/laya-server) - A proof of concept implementation of TypeSafe's Jev API, backed by local Laya checkpoints. · `Python`
 - [**typedecide**](https://github.com/ardada2468/typedecide) - Open-source implementation of the typed-decision pattern popularised by TypeSafe's Jev: read a decision out of a small language model's logits, in the browser. Library, benchmarks and paper. Not affiliated with TypeSafe. · `Python`
 - [**lmr-rs**](https://github.com/faulker/lmr-rs) - lmr-rs: TypeSafe Jev ecosystem repository. · `Rust`

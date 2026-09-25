@@ -1747,6 +1747,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codenamev/ruby-laya" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/codepawl/tacet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codepawl/tacet" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/codercise/jev-in-practice</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codercise/jev-in-practice" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codercise/jev-in-practice" />
@@ -11215,6 +11221,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codenamev/ruby-laya" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/codepawl/tacet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codepawl/tacet" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/codercise/jev-in-practice</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codercise/jev-in-practice" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codercise/jev-in-practice" />
@@ -20681,6 +20693,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codenamev/ruby-laya" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codenamev/ruby-laya" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codenamev/ruby-laya" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/codepawl/tacet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codepawl/tacet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codepawl/tacet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/codercise/jev-in-practice</loc>

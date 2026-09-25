@@ -566,23 +566,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "chorylee7/jev": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "chorylee7/jev",
-        "status": "review",
-        "reason": "missing-open-source-license",
-        "sha": "e73e156c988d35b8bc38a6617c41187d72fb6074",
-        "evidenceUrl": "https://github.com/chorylee7/jev/blob/e73e156c988d35b8bc38a6617c41187d72fb6074/README.md",
-        "evidenceSha256": "8ff9c29e14b03973c11177b5a2db6431fbc40e9789fdaa97941be2ed9db6e83a",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "ashafizullah/jev-linkedin": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1694,6 +1677,50 @@
         "checkedAt": "2026-09-25T14:44:00.381Z"
       },
       "retryAt": "2026-10-02T14:44:00.381Z"
+    },
+    "shanghua-gao/rsi-jev": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T19:32:21.650Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T19:32:21.650Z",
+      "lastReview": {
+        "repo": "shanghua-gao/rsi-jev",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.85,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.65,
+          "category": "alternatives"
+        },
+        "sha": "2dffab473b7b663681644956c4e6eb185e7e15c3",
+        "evidenceUrl": "https://github.com/shanghua-gao/rsi-jev/blob/2dffab473b7b663681644956c4e6eb185e7e15c3/README.md",
+        "evidenceSha256": "1cec2f93944eabd64293fa7167fd568e6fa90d8b2ee69c08e5aff5dffad17b64",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T19:32:21.650Z"
+      },
+      "retryAt": "2026-10-02T19:32:21.650Z"
+    },
+    "teilomillet/kayak": {
+      "status": "review",
+      "discoveredAt": "2026-09-25T19:32:21.650Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-25T19:32:21.650Z",
+      "lastReview": {
+        "repo": "teilomillet/kayak",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.77,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.87,
+          "category": "alternatives"
+        },
+        "sha": "a9d345f541abb847b585ca7c98eb7c39027f77b4",
+        "evidenceUrl": "https://github.com/teilomillet/kayak/blob/a9d345f541abb847b585ca7c98eb7c39027f77b4/README.md",
+        "evidenceSha256": "eaa1eb921253c0f7d94af3e6678ecffac76348d469e544980a58ef44b7110972",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-25T19:32:21.650Z"
+      },
+      "retryAt": "2026-10-02T19:32:21.650Z"
     }
   }
 }

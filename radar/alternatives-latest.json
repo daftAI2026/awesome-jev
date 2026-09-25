@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-25T14:44:00.381Z",
+  "at": "2026-09-25T19:32:21.650Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 60,
-      "total": 60,
+      "fetched": 61,
+      "total": 61,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 60,
-      "total": 60,
+      "fetched": 63,
+      "total": 63,
       "status": "complete"
     }
   ],
@@ -22,55 +22,55 @@
   },
   "reviewed": 3,
   "added": 1,
-  "pending": 80,
+  "pending": 81,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "name0x0/jevlet",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.93,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.83,
-        "category": "alternatives"
-      },
-      "sha": "9d62c46989e965e0d823491e670dc01ed12a345e",
-      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/9d62c46989e965e0d823491e670dc01ed12a345e/README.md",
-      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-25T14:44:00.381Z"
-    },
-    {
-      "repo": "dexmac221/doomgemma",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.09,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.33,
-        "category": "other"
-      },
-      "sha": "cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4",
-      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4/README.md",
-      "evidenceSha256": "e85b313a73b7c6268e95bc4f60b86ef133c03f780261320a43e4c64a1a89e306",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-25T14:44:00.381Z"
-    },
-    {
-      "repo": "taipanbox/typryx",
+      "repo": "codepawl/tacet",
       "status": "keep",
       "score": {
-        "jevAbout": 0.92,
+        "jevAbout": 0.91,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.95,
+        "jevKeepConfidence": 0.96,
         "category": "alternatives"
       },
-      "sha": "2907caf7c0a9ba894275baa778a735a84f0fdb33",
-      "evidenceUrl": "https://github.com/taipanbox/typryx/blob/2907caf7c0a9ba894275baa778a735a84f0fdb33/README.md",
-      "evidenceSha256": "5dae2e1da0e4f642354c1ab48433c234e1bd4a84e38463ae33f7168a2369a14a",
+      "sha": "a4826aed400c00ce483132adaf2c97af833bc7b0",
+      "evidenceUrl": "https://github.com/codepawl/tacet/blob/a4826aed400c00ce483132adaf2c97af833bc7b0/README.md",
+      "evidenceSha256": "aa954101ad566ef12c8a96c9d2e2b4735a8f4455531ad2b12dcdb02053fc5c6e",
       "model": "jev-latest",
-      "checkedAt": "2026-09-25T14:44:00.381Z"
+      "checkedAt": "2026-09-25T19:32:21.650Z"
+    },
+    {
+      "repo": "shanghua-gao/rsi-jev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.85,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.65,
+        "category": "alternatives"
+      },
+      "sha": "2dffab473b7b663681644956c4e6eb185e7e15c3",
+      "evidenceUrl": "https://github.com/shanghua-gao/rsi-jev/blob/2dffab473b7b663681644956c4e6eb185e7e15c3/README.md",
+      "evidenceSha256": "1cec2f93944eabd64293fa7167fd568e6fa90d8b2ee69c08e5aff5dffad17b64",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-25T19:32:21.650Z"
+    },
+    {
+      "repo": "teilomillet/kayak",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.77,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.87,
+        "category": "alternatives"
+      },
+      "sha": "a9d345f541abb847b585ca7c98eb7c39027f77b4",
+      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/a9d345f541abb847b585ca7c98eb7c39027f77b4/README.md",
+      "evidenceSha256": "eaa1eb921253c0f7d94af3e6678ecffac76348d469e544980a58ef44b7110972",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-25T19:32:21.650Z"
     }
   ],
-  "totalProjects": 1290
+  "totalProjects": 1441
 }
