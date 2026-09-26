@@ -53,6 +53,7 @@ The radar's `jevEvidence.evidenceSha256` fingerprints the complete review materi
 
 ```sh
 npm run inclusion:check
+npm run inclusion:verify -- <base-commit-sha>
 node --experimental-strip-types scripts/inclusion.ts --queue 40 > /tmp/inclusion-review-batch.json
 node --experimental-strip-types scripts/inclusion.ts --preview /path/to/review-batch.json
 node --experimental-strip-types scripts/inclusion.ts --apply /path/to/review-batch.json
@@ -60,7 +61,9 @@ node --experimental-strip-types scripts/inclusion.ts --apply /path/to/review-bat
 
 The queue prioritizes outstanding projects by stars, including legacy projects without an earlier review receipt. Batch size controls a local reviewer work packet, not an admission or daily quota. Unavailable evidence remains unresolved; it does not generate a rationale from the queue order.
 
-GitHub metadata refreshes preserve `inclusion` alongside the original author description and machine review. Existing Actions can read the extended catalog without another model or API key. Newly admitted rows may have no editorial rationale yet; a separate prose-generating model is not implicitly introduced. Jev can select predefined rationale options in a future structured-review extension, but current reviewer-written text is not fabricated by the collector.
+GitHub metadata refreshes preserve `inclusion` alongside the original author description and machine review. Existing Actions can read the extended catalog without another model or API key. Newly admitted rows may have no editorial rationale yet; a separate prose-generating model is not implicitly introduced. Current reviewer-written text is not fabricated by the collector.
+
+The radar's push/PR verification compares against the event's fixed base commit and fetches sources only for added or edited rationales. Ordinary star/fork refreshes do not refetch unchanged evidence. The submission bot independently runs the same comparison from trusted `main` code, including rationale-only PRs for existing projects. An absent source, invalid record or mismatched quote fails verification; no model call or credential is needed. Matching a quote proves its occurrence, not the correctness of the surrounding prose: maintainers still review the interpretation and translations. Removing a rationale remains a visible, maintainer-reviewed data change rather than a fabricated replacement.
 
 ## News `NewsItem`
 

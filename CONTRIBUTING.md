@@ -17,7 +17,7 @@ Prefer editing that file (or letting the collector merge into it) over hand-edit
 | `title` | `string` | Repository name |
 | `summary` | `string` | One–two sentence repository description |
 | `tags` | `string[]` | Repository topics. |
-| `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `applications`, `alternatives`, or `other`. One primary use case. |
+| `category` | `string` | Required for GitHub: `agents`, `browser`, `sdk`, `developer`, `research`, `resources`, `directories`, `applications`, `alternatives`, or `other`. One primary use case. |
 | `url` | `string` | Canonical GitHub repository link |
 | `sourceMeta` | `object` | See [`docs/data-model.md`](docs/data-model.md) |
 
@@ -44,6 +44,7 @@ To score harvested rows with Jev, create a gitignored `.env.local` and set `TYPE
 - Prefer **real, maintained** open-source projects.
 - Run `npm run readme:sync` after adding GitHub projects; README categories follow the stored category.
 - Run `npm run categories:check` and `npm run data:check`.
+- Keep the author's `summary` unchanged when explaining admission. Optional `sourceMeta.inclusion` needs English, Chinese and Japanese reasons with short, exact quotes at fixed commits in the same repository. See [the data contract](docs/data-model.md#inclusion-rationale-and-review-scores). Run `npm run inclusion:verify -- <base-commit-sha>` when adding or editing a rationale; CI verifies only changed rationales, including edits to already-listed projects. Missing reasons remain explicitly unavailable rather than being invented from review scores.
 - Run `npm run build` locally if you touch TypeScript / UI.
 
 ## Not allowed

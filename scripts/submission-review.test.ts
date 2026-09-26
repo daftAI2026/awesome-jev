@@ -1,9 +1,11 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { REPOSITORY, MARKER, reportLanguage, repositoryLinks, reviewMeta, cacheReason, eventTargets,
   submissionInput, assessProject, renderReport, processSubmission, commentWriter } from './submission-review.ts'
+import type { SourceReader } from './inclusion.ts'
 import type { SubmissionOptions, SubmissionResult } from './submission-review.ts'
-import type { GitHubRepository, JevScore } from './model-types.ts'
+import type { DirectoryItem, GitHubRepository, JevScore } from './model-types.ts'
 import type { ReviewRow, Reviewer } from './review-types.ts'
 
 const now = new Date('2026-09-22T10:00:00Z')
@@ -27,6 +29,55 @@ const apiRepo: GitHubRepository = { full_name: 'test/new', html_url: 'https://gi
 const score: JevScore = { jevAbout: 0.95, jevKeep: 'keep', jevKeepConfidence: 0.96 }
 const evidenceApi: Api = async (path: string) => path.includes('/git/commits/') ? { tree: { sha: 'b'.repeat(40) } } : path.includes('/git/trees/') ? { tree: [], truncated: false } : path.includes('/commits/') ? { sha: 'a'.repeat(40) } : path.includes('/readme?') ?
   { encoding: 'base64', path: 'README.md', content: Buffer.from('TypeSafe AI Jev SDK https://typesafe.ai').toString('base64') } : apiRepo
+
+const PR_HEAD = 'a'.repeat(40), PR_BASE = 'b'.repeat(40), PR_MERGE = 'c'.repeat(40)
+const gitBlobSha = (bytes: Buffer) => createHash('sha1').update(`blob ${bytes.byteLength}\0`).update(bytes).digest('hex')
+const exactSizeRows = (rows: DirectoryItem[], targetBytes: number): DirectoryItem[] => {
+  const last = rows.length - 1
+  assert.ok(last >= 0)
+  const size = Buffer.byteLength(JSON.stringify(rows))
+  assert.ok(size <= targetBytes)
+  const result = rows.map((row) => ({ ...row }))
+  result[last] = { ...result[last]!, summary: result[last]!.summary + 'x'.repeat(targetBytes - size) }
+  assert.equal(Buffer.byteLength(JSON.stringify(result)), targetBytes)
+  return result
+}
+const wrapBase64 = (content: string) => content.match(/.{1,60}/g)?.join('\r\n') ?? ''
+
+function pullRequestFilesApi({ before, after, forceBlob = false, wrappedBlob = false, afterBlobContent }: {
+  before: DirectoryItem[]; after: DirectoryItem[]; forceBlob?: boolean; wrappedBlob?: boolean; afterBlobContent?: Buffer
+}): { api: Api; blobReads: () => number } {
+  const rowsByRevision = new Map([[PR_MERGE, before], [PR_HEAD, after]])
+  const blobs = new Map<string, { bytes: Buffer; isAfter: boolean }>()
+  let reads = 0
+  const api: Api = async (path: string) => {
+    if (path.endsWith('/pulls/3')) return { head: { sha: PR_HEAD }, base: { sha: PR_BASE } }
+    if (path.includes('/files?')) return [{ filename: 'data/github.json', status: 'modified' }]
+    if (path.includes('/compare/')) return { merge_base_commit: { sha: PR_MERGE } }
+    const revision = path.match(/[?&]ref=([a-f0-9]{40})$/)?.[1]
+    if (revision) {
+      const rows = rowsByRevision.get(revision)
+      assert.ok(rows)
+      const bytes = Buffer.from(JSON.stringify(rows))
+      const sha = gitBlobSha(bytes)
+      const isAfter = revision === PR_HEAD
+      blobs.set(sha, { bytes, isAfter })
+      if (forceBlob || bytes.byteLength > 1_000_000) return { encoding: 'none', sha, size: bytes.byteLength }
+      return { encoding: 'base64', sha, size: bytes.byteLength, content: bytes.toString('base64') }
+    }
+    const blobSha = path.match(/\/git\/blobs\/([a-f0-9]{40})$/)?.[1]
+    if (blobSha) {
+      const blob = blobs.get(blobSha)
+      assert.ok(blob)
+      reads++
+      const bytes = blob.isAfter && afterBlobContent ? afterBlobContent : blob.bytes
+      const content = bytes.toString('base64')
+      return { encoding: 'base64', sha: blobSha, size: blob.bytes.byteLength, content: wrappedBlob && blob.isAfter ? wrapBase64(content) : content }
+    }
+    throw new Error(`unexpected-pr-test-path:${path}`)
+  }
+  return { api, blobReads: () => reads }
+}
 
 test('only GitHub HTTPS repositories are extracted and deduplicated', () => {
   assert.deepEqual(repositoryLinks(`https://github.com/Test/NEW https://github.com/test/new/blob/main/a https://evil.test/test/no http://github.com/test/no https://github.com/${REPOSITORY}`), ['test/new'])
@@ -77,30 +128,89 @@ test('PR extraction compares merge base and reviews only added repositories, inc
   assert.deepEqual(input.keys, ['test/new'])
   assert.equal(input.notes.length, 1)
 })
-test('PR extraction reads a pinned Git blob when Contents omits files over 1 MB', async () => {
-  const head = 'a'.repeat(40), base = 'b'.repeat(40), merge = 'c'.repeat(40)
-  const oldRows = [item('old')], newRows = [...oldRows, item('new')]
-  const blobs = new Map([[merge, oldRows], [head, newRows]])
-  let blobReads = 0
-  const input = await submissionInput(async (path: string) => {
-    if (path.endsWith('/pulls/6')) return { head: { sha: head }, base: { sha: base } }
-    if (path.includes('/files?')) return [{ filename: 'data/github.json', status: 'modified' }]
-    if (path.includes('/compare/')) return { merge_base_commit: { sha: merge } }
-    const ref = path.match(/[?&]ref=([a-f0-9]{40})$/)?.[1]
-    if (ref) {
-      const rows = blobs.get(ref)
-      assert.ok(rows)
-      return { encoding: 'none', sha: ref, size: Buffer.byteLength(JSON.stringify(rows)) }
-    }
-    const sha = path.match(/\/git\/blobs\/([a-f0-9]{40})$/)?.[1]
-    assert.ok(sha)
-    const rows = blobs.get(sha)
-    assert.ok(rows)
-    blobReads++
-    return { encoding: 'base64', sha, size: Buffer.byteLength(JSON.stringify(rows)), content: Buffer.from(JSON.stringify(rows)).toString('base64') }
-  }, { number: 6, pull_request: {} })
+test('PR extraction reads actual >1 MB catalogs from the pinned blob and accepts GitHub line wraps', async () => {
+  const oldRows = exactSizeRows([item('old')], 1_000_001)
+  const newRows = exactSizeRows([item('old'), item('new')], 1_000_123)
+  const { api, blobReads } = pullRequestFilesApi({ before: oldRows, after: newRows, wrappedBlob: true })
+  const input = await submissionInput(api, { number: 3, pull_request: {} })
   assert.deepEqual(input.keys, ['test/new'])
-  assert.equal(blobReads, 2)
+  assert.equal(blobReads(), 2)
+})
+
+test('PR extraction accepts a catalog of exactly 4,500,000 decoded bytes', async () => {
+  const after = exactSizeRows([item('new')], 4_500_000)
+  const { api, blobReads } = pullRequestFilesApi({ before: [], after, wrappedBlob: true })
+  const input = await submissionInput(api, { number: 3, pull_request: {} })
+  assert.deepEqual(input.keys, ['test/new'])
+  assert.equal(blobReads(), 1)
+})
+
+test('PR extraction rejects catalogs above the byte cap before fetching the blob', async () => {
+  const after = exactSizeRows([item('new')], 4_500_001)
+  const { api, blobReads } = pullRequestFilesApi({ before: [], after })
+  await assert.rejects(submissionInput(api, { number: 3, pull_request: {} }), /submission-data-too-large/)
+  assert.equal(blobReads(), 0)
+})
+
+test('PR extraction rejects blob metadata whose size differs from decoded bytes', async () => {
+  const after = [item('new')]
+  const { api, blobReads } = pullRequestFilesApi({ before: [], after, forceBlob: true, afterBlobContent: Buffer.from('[]') })
+  await assert.rejects(submissionInput(api, { number: 3, pull_request: {} }), /submission-invalid-data/)
+  assert.equal(blobReads(), 2)
+})
+
+const inclusionSource = 'Actual source evidence for this project.'
+const inclusionRow = (quote: string): DirectoryItem => ({
+  ...item('existing'),
+  sourceMeta: {
+    repo: 'test/existing',
+    inclusion: {
+      text: { en: 'The project documents Jev use.', zh: '项目文档说明了 Jev 用法。', ja: 'Jev の利用方法を記載しています。' },
+      evidence: [{ url: `https://github.com/test/existing/blob/${'d'.repeat(40)}/README.md`, quote }],
+      checkedAt: '2026-09-27T00:00:00Z', reviewer: 'gpt-6-luna',
+    },
+  },
+})
+
+test('inclusion-only PR verifies changed quotes but skips network for unchanged evidence', async () => {
+  const old = inclusionRow('Old documented evidence for project.')
+  const changed = inclusionRow(inclusionSource)
+  const changedApi = pullRequestFilesApi({ before: [old], after: [changed] }).api
+  let reads = 0
+  const readSource: SourceReader = async () => { reads++; return inclusionSource }
+  const changedInput = await submissionInput(changedApi, { number: 3, pull_request: {} }, 'en', readSource)
+  assert.deepEqual(changedInput.keys, [])
+  assert.equal(reads, 1)
+
+  const unchangedApi = pullRequestFilesApi({ before: [changed], after: [changed] }).api
+  const unchangedInput = await submissionInput(unchangedApi, { number: 3, pull_request: {} }, 'en', async () => {
+    throw new Error('unchanged inclusion must not fetch its source')
+  })
+  assert.deepEqual(unchangedInput.keys, [])
+})
+
+test('forged inclusion-only PR reports temporary extraction failure, not no-projects or recommendation', async () => {
+  const before = inclusionRow('Old documented evidence for project.')
+  const after = inclusionRow('Fabricated evidence for this project.')
+  const prApi = pullRequestFilesApi({ before: [before], after: [after] }).api
+  const h = harness()
+  let sourceReads = 0
+  h.args.readSource = async () => { sourceReads++; return inclusionSource }
+  h.args.api = async (path: string) => {
+    if (path === `/repos/${REPOSITORY}/issues/3`) return {
+      number: 3, state: 'open', title: '[Submission] Update inclusion rationale', body: '', pull_request: {},
+    }
+    if (path.includes(`/issues/3/comments?`) || path.includes(`/issues/comments?`)) return []
+    return prApi(path)
+  }
+  assert.equal(await processSubmission(h.args), 'input-error')
+  assert.equal(sourceReads, 1)
+  assert.equal(h.paid.length, 0)
+  assert.ok(lastWrite(h).body.includes('Could not read the submission data'))
+  assert.ok(lastWrite(h).body.includes('Review temporarily unavailable'))
+  assert.ok(!lastWrite(h).body.includes('No new GitHub projects found'))
+  assert.ok(!lastWrite(h).body.includes('Recommended for inclusion'))
+  assert.equal(parsedMeta({ ...botComment(), body: lastWrite(h).body }).retryable, true)
 })
 test('PR extraction rejects mismatched blob content instead of reviewing a different revision', async () => {
   const head = 'a'.repeat(40), base = 'b'.repeat(40), merge = 'c'.repeat(40)

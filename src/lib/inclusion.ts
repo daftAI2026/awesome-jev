@@ -52,12 +52,19 @@ export function isInclusionBasis(value: unknown, repositoryUrl: string): value i
   const citations = new Set<string>()
   const wordsBySource = new Map<string, number>()
   return value.evidence.every((entry) => {
-    if (!isRecord(entry) || !pinnedSource(entry.url, repositoryUrl) ||
+    if (!isRecord(entry)) return false
+    const source = pinnedSource(entry.url, repositoryUrl)
+    if (!source ||
       typeof entry.quote !== 'string' || entry.quote.trim().length < 8 || entry.quote.length > 350) return false
     const key = `${entry.url}\n${entry.quote}`
     if (citations.has(key)) return false
     citations.add(key)
-    const file = (entry.url as string).split('#')[0]
+    // GitHub 仓库名大小写和等价转义不能把同一文件拆成多份摘录预算。
+    const canonical = new URL(source.rawUrl)
+    const parts = canonical.pathname.split('/')
+    parts[1] = parts[1].toLowerCase()
+    parts[2] = parts[2].toLowerCase()
+    const file = parts.join('/')
     const words = (wordsBySource.get(file) ?? 0) + excerptUnits(entry.quote)
     if (words > 25) return false
     wordsBySource.set(file, words)

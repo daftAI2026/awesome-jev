@@ -6,6 +6,8 @@ import { createGitHubClient } from './github-client.ts'
 import { githubEvidence } from './github-evidence.ts'
 import { readCatalog, repoKey, validateRows } from './catalog.ts'
 import { evaluateJev, inspectJev } from './jev-client.ts'
+import { sourceReader, verifyChangedInclusions, type SourceReader } from './inclusion.ts'
+import type { DirectoryItem } from './model-types.ts'
 
 import { createReviewStore } from './review-store.ts'
 import { reviewRepository, REVIEW_POLICY } from './repository-review.ts'
@@ -23,7 +25,7 @@ export type SubmissionResult = Omit<ScanResult, 'status' | 'evidence'> & { evide
 interface ReviewMeta { version: number; fingerprint: string; at: string; day: string; used: number; requests?: number; completed?: SubmissionResult[]; pending?: boolean; retryable?: boolean }
 interface ActiveMeta extends ReviewMeta { requests: number; completed: SubmissionResult[] }
 type WriteComment = (number: number, id: number | undefined, body: string) => Promise<{ id: number }>
-export interface SubmissionOptions { api: Api; writeComment: WriteComment; review: Reviewer; number: number; manual: boolean; known: Set<string>; now?: Date; store?: ScanOptions['store']; inspect?: ScanOptions['inspect']; deadline?: number }
+export interface SubmissionOptions { api: Api; writeComment: WriteComment; review: Reviewer; number: number; manual: boolean; known: Set<string>; now?: Date; store?: ScanOptions['store']; inspect?: ScanOptions['inspect']; deadline?: number; readSource?: SourceReader }
 interface PullRequest { draft?: boolean; head: { sha: string }; base: { sha: string } }
 interface ChangedFile { filename: string; status: string }
 
@@ -34,6 +36,10 @@ export const DAILY_BUDGET = 100
 export const DAILY_REQUESTS = 2000
 const COOLDOWN_MS = 10 * 60 * 1000
 const MAX_SUBMISSION_FILE_BYTES = 4_500_000
+const MAX_BASE64_CHARS = Math.ceil(MAX_SUBMISSION_FILE_BYTES / 3) * 4
+// --- GitHub 的 Base64 可按行折叠；为每四字符一次 CRLF 留有界余量 ---
+const MAX_BASE64_RESPONSE_CHARS = MAX_BASE64_CHARS + Math.ceil(MAX_BASE64_CHARS / 4) * 2
+const base64CharactersPattern = /^[A-Za-z0-9+/]*={0,2}$/
 const BOT = 'github-actions[bot]'
 const safeError = (error: unknown) => error instanceof Error && /^(github|jev|submission)-[a-z0-9-]+$/.test(error.message) ? error.message : 'submission-invalid-data'
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
@@ -119,7 +125,18 @@ export async function eventTargets(api: Api, eventName: string | undefined, even
   }
   return []
 }
-async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<{ type?: string; url?: string; sourceMeta?: unknown }[]> {
+function decodeSubmissionBase64(content: string): Buffer {
+  if (content.length > MAX_BASE64_RESPONSE_CHARS) throw new Error('submission-data-too-large')
+  const encoded = content.replace(/\r\n?|\n/g, '')
+  if (encoded.length > MAX_BASE64_CHARS) throw new Error('submission-data-too-large')
+  if (encoded.length % 4 !== 0 || !base64CharactersPattern.test(encoded)) throw new Error('submission-invalid-data')
+  const bytes = Buffer.from(encoded, 'base64')
+  if (bytes.toString('base64') !== encoded) throw new Error('submission-invalid-data')
+  if (bytes.byteLength > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+  return bytes
+}
+
+async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<DirectoryItem[]> {
   try {
     const file = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`) as { encoding?: string; content?: string; sha?: string; size?: number }
     let data = file
@@ -129,18 +146,24 @@ async function jsonAt(api: Api, path: string, sha: string, optional = false): Pr
       data = await api(`/repos/${REPOSITORY}/git/blobs/${file.sha}`) as typeof file
       if (data.sha !== file.sha || data.size !== file.size) throw new Error('submission-invalid-data')
     }
-    if (data.encoding !== 'base64' || typeof data.content !== 'string' || data.content.length > Math.ceil(MAX_SUBMISSION_FILE_BYTES / 3) * 4) throw new Error('submission-data-too-large')
-    const bytes = Buffer.from(data.content, 'base64')
-    if (bytes.byteLength > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
-    const rows = JSON.parse(bytes.toString())
+    if (data.size !== undefined && (!Number.isSafeInteger(data.size) || data.size < 0)) throw new Error('submission-invalid-data')
+    if (data.size !== undefined && data.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+    if (data.encoding !== 'base64' || typeof data.content !== 'string') throw new Error('submission-data-too-large')
+    const bytes = decodeSubmissionBase64(data.content)
+    if ((data.size !== undefined && data.size !== bytes.byteLength) || (file.size !== undefined && file.size !== bytes.byteLength)) {
+      throw new Error('submission-invalid-data')
+    }
+    let rows: unknown
+    try { rows = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes)) }
+    catch { throw new Error('submission-invalid-data') }
     if (!Array.isArray(rows)) throw new Error('submission-invalid-data')
-    return rows
+    return rows as DirectoryItem[]
   } catch (error) {
     if (optional && error instanceof Error && error.message === 'github-http-404') return []
     throw error
   }
 }
-export async function submissionInput(api: Api, issue: Issue, language: Language = reportLanguage(issue)) {
+export async function submissionInput(api: Api, issue: Issue, language: Language = reportLanguage(issue), readSource: SourceReader = sourceReader()) {
   if (!issue.pull_request) return { keys: repositoryLinks(issue.body), version: digest([issue.title, issue.body]), notes: [] }
   const pr = await api(`/repos/${REPOSITORY}/pulls/${issue.number}`) as PullRequest
   if (pr.draft) return { keys: [], version: pr.head.sha, notes: [] }
@@ -156,6 +179,7 @@ export async function submissionInput(api: Api, issue: Issue, language: Language
   for (const file of dataFiles) {
     const before = await jsonAt(api, file.filename, base!, true)
     const after = await jsonAt(api, file.filename, pr.head.sha)
+    if (file.filename === 'data/github.json') await verifyChangedInclusions(after, before, readSource)
     const old = new Set(before.filter((row) => row.type === 'github').map((row) => repoKey(row.url ?? '')))
     const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url ?? '')))
     // --- 旧 PR 的 openIssues 只为提取审查 URL 而忽略；正式目录仍禁止该字段 ---
@@ -215,13 +239,13 @@ export function renderReport(meta: ReviewMeta, results: SubmissionResult[], note
   return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
 }
 
-export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity }: SubmissionOptions) {
+export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity, readSource }: SubmissionOptions) {
   const issue = await api(`/repos/${REPOSITORY}/issues/${number}`) as Issue
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
   const language = reportLanguage(issue)
   let input
   let inputFailed = false
-  try { input = await submissionInput(api, issue, language) }
+  try { input = await submissionInput(api, issue, language, readSource) }
   catch {
     inputFailed = true
     input = { keys: [], version: digest([issue.number, issue.title, issue.body]), notes: [language === 'zh' ? '暂时无法读取收录数据；机器人稍后会重试。' : 'Could not read the submission data; the reviewer will retry later.'] }

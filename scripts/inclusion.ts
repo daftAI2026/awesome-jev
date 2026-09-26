@@ -1,6 +1,8 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { execFileSync } from 'node:child_process'
+import { isDeepStrictEqual } from 'node:util'
 import { isInclusionBasis, pinnedSource, type InclusionBasis } from '../src/lib/inclusion.ts'
 import { readCatalog, validateRows } from './catalog.ts'
 import { isRecord, type DirectoryItem, type FetchImpl } from './model-types.ts'
@@ -100,12 +102,52 @@ export async function mergeReviewedInclusions(
   return { rows: merged, reviewed: completed.length, unresolved: entries.length - completed.length }
 }
 
+// --- 增量校验：普通统计刷新不联网，新增或编辑依据必须重新核实引文 ---
+export async function verifyChangedInclusions(
+  rows: DirectoryItem[], baseline: DirectoryItem[], readSource: SourceReader,
+): Promise<number> {
+  validateRows(rows)
+  const previous = new Map(baseline.map((row) => [row.id, row]))
+  const changed = rows.filter((row) => {
+    if (!row.sourceMeta.inclusion) return false
+    const old = previous.get(row.id)
+    return !old || row.url !== old.url || !isDeepStrictEqual(row.sourceMeta.inclusion, old.sourceMeta?.inclusion)
+  })
+  const result = await mergeReviewedInclusions(rows, changed.map((row) => ({
+    id: row.id, inclusion: row.sourceMeta.inclusion,
+  })), readSource)
+  return result.reviewed
+}
+
+export function readInclusionBaseline(root: string, revision: string): DirectoryItem[] {
+  // 只接受固定 SHA；禁止将外部字符串作为 Git 选项或 shell 表达式执行。
+  if (!/^[a-f0-9]{40}$/.test(revision)) throw new Error('inclusion-invalid-base-sha')
+  if (/^0{40}$/.test(revision)) return []
+  let value: unknown
+  try {
+    value = JSON.parse(execFileSync('git', ['show', `${revision}:data/github.json`], {
+      cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'],
+    }))
+  } catch {
+    throw new Error('inclusion-baseline-unavailable')
+  }
+  if (!Array.isArray(value) || value.some((row) => !isRecord(row) || typeof row.id !== 'string' ||
+    typeof row.url !== 'string' || !isRecord(row.sourceMeta))) throw new Error('inclusion-invalid-baseline')
+  return value as DirectoryItem[]
+}
+
 async function main(): Promise<void> {
   const args = process.argv.slice(2)
   const apply = args[0] === '--apply'
-  if (!['--preview', '--apply', '--check', '--queue'].includes(args[0] ?? '')) throw new Error('inclusion-use-preview-apply-check-or-queue')
+  if (!['--preview', '--apply', '--check', '--queue', '--verify-changed'].includes(args[0] ?? '')) throw new Error('inclusion-use-preview-apply-check-queue-or-verify-changed')
   const root = process.cwd()
   const catalog = readCatalog(root)
+  if (args[0] === '--verify-changed') {
+    if (args.length !== 2) throw new Error('inclusion-invalid-arguments')
+    const reviewed = await verifyChangedInclusions(catalog.rows, readInclusionBaseline(root, args[1]), sourceReader())
+    process.stdout.write(`Verified changed inclusion sources: ${reviewed}\n`)
+    return
+  }
   if (args[0] === '--queue') {
     if (args.length !== 2) throw new Error('inclusion-invalid-arguments')
     process.stdout.write(JSON.stringify(pendingInclusions(catalog.rows, Number(args[1])), null, 2) + '\n')

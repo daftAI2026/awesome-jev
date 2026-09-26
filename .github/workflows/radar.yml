@@ -40,6 +40,14 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify new or edited rationale quotes at pinned sources
+        run: |
+          if [ -z "$INCLUSION_BASE_SHA" ]; then
+            INCLUSION_BASE_SHA=$(git rev-parse HEAD^)
+          fi
+          npm run inclusion:verify -- "$INCLUSION_BASE_SHA"
+        env:
+          INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build
   scan:
     permissions:
