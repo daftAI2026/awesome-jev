@@ -91093,6 +91093,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "An independent lab explores fitting Jev beside Claude Code, including per-turn model routing and failure fallback; author-reported measurements are not reproduced here.",
+          "zh": "这是一个独立实验室，探讨如何在 Claude Code 旁使用 Jev，包括逐轮模型路由和故障回退；作者报告的测量结果未在此复现。",
+          "ja": "Claude CodeとJevを組み合わせる際のルーティングや判断の境界を検討する独立ラボです。READMEの測定値は再検証していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/Pasblinn/jev-lab/blob/7deb1f5a752a023393c371559d7b1525bacc3cbd/README.md",
+            "quote": "An open lab for using **[Jev](https://docs.typesafe.ai)** *correctly* next to **Claude Code**."
+          },
+          {
+            "url": "https://github.com/Pasblinn/jev-lab/blob/7deb1f5a752a023393c371559d7b1525bacc3cbd/README.md",
+            "quote": "where a typed decision belongs, where it does not"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91137,6 +91156,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This Figma copy-review plugin scores selected text against declared criteria, then lets Jev choose among the exact existing TextNodes; it does not rewrite copy, and its thresholds are uncalibrated.",
+          "zh": "这个 Figma 文案审阅插件按声明的标准评估选中文本，再让 Jev 从原有 TextNode 中选择具体对象；它不会改写文案，且阈值尚未校准。",
+          "ja": "選択したFigmaテキストを基準で評価し、Jevが該当ノードを示すレビュー用プラグインです。文章の書き換えは行わず、閾値も未校正です。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/gbesse/figma-jev-review/blob/5c2bd09b869e36de9528ea7b10bb929a347bd702/README.md",
+            "quote": "The plugin never writes copy."
+          },
+          {
+            "url": "https://github.com/gbesse/figma-jev-review/blob/5c2bd09b869e36de9528ea7b10bb929a347bd702/README.md",
+            "quote": "Jev selects among the exact TextNodes already present in the selection."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91181,6 +91219,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This Premiere UXP panel turns typed Jev review findings on SRT captions into timeline markers in an undoable transaction; README says Premiere-host execution still needs validation.",
+          "zh": "这个 Premiere UXP 面板把 SRT 字幕的 Jev 类型化审阅结果转换为时间线标记，并可一次撤销；README 说明仍需在 Premiere 主机中验证。",
+          "ja": "SRT字幕のJev審査結果をPremiereのタイムラインマーカーにするUXPパネルです。一括で取り消せますが、Premiere上での実行は未検証です。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/gbesse/jev-premiere-markers/blob/0b86a810aea9d7c573046f920ff4c9928fa5e2a0/README.md",
+            "quote": "A Premiere UXP panel that turns typed Jev review findings into timeline markers."
+          },
+          {
+            "url": "https://github.com/gbesse/jev-premiere-markers/blob/0b86a810aea9d7c573046f920ff4c9928fa5e2a0/README.md",
+            "quote": "marker transaction still require host validation"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91225,6 +91282,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This Unreal Engine 5.8 C++ plugin issues one asynchronous finite Jev decision per StateTree entry, rejects stale revisions, and cancels on exit; README says it was not compiled or loaded in Unreal there.",
+          "zh": "这个 Unreal Engine 5.8 C++ 插件在 StateTree 进入状态时异步发起一次有限 Jev 判断，拒绝过期版本并在退出时取消；README 说明未在 Unreal 中编译或加载。",
+          "ja": "Unreal Engine 5.8のC++プラグインで、StateTreeの状態開始時に有限のJev判断を非同期実行し、古い版を拒否して終了時に取り消します。READMEではUnreal上で未ビルドとされています。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/gbesse/jev-unreal-statetree/blob/7a29d778b02e299648d2563f8f5cd4b64657e855/README.md",
+            "quote": "Run finite, revision-guarded Jev decisions as native Unreal Engine 5.8 StateTree tasks."
+          },
+          {
+            "url": "https://github.com/gbesse/jev-unreal-statetree/blob/7a29d778b02e299648d2563f8f5cd4b64657e855/README.md",
+            "quote": "rejects stale world revisions"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91286,6 +91362,25 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "The Pydantic AI repository contains a TypeSafe provider and TypeSafeModel backed by the TypeSafe SDK for Jev typed decisions; this is one specific integration, not a claim that the whole framework runs on Jev.",
+          "zh": "Pydantic AI 仓库内有基于 TypeSafe SDK 的 TypeSafe provider 和 TypeSafeModel，用于 Jev 类型化判断；这是其中一项特定集成，并非整个框架都由 Jev 驱动。",
+          "ja": "Pydantic AIリポジトリには、TypeSafe SDKを介してJevの型付き判断を扱うプロバイダーとモデルがあります。これは特定の連携機能で、フレームワーク全体がJevで動くという意味ではありません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/pydantic/pydantic-ai/blob/497ca3a620a28d43c94d26dab7979b8758e5cf98/docs/models/typesafe.md",
+            "quote": "is the Pydantic AI model class for Jev"
+          },
+          {
+            "url": "https://github.com/pydantic/pydantic-ai/blob/497ca3a620a28d43c94d26dab7979b8758e5cf98/pydantic_ai_slim/pydantic_ai/providers/typesafe.py",
+            "quote": "Provider for the [TypeSafe](https://typesafe.ai) API, which serves the Jev models."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91328,6 +91423,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "jev-swap finds decision-like LLM calls in TypeScript/JavaScript or Python, generates a Jev module with a confidence-gated fallback, and replays recorded traffic for comparison; savings estimates are not guaranteed.",
+          "zh": "jev-swap 会在 TypeScript/JavaScript 或 Python 项目中寻找类似决策的 LLM 调用，生成带置信度回退的 Jev 模块，并回放已记录流量进行比较；节省估算不构成保证。",
+          "ja": "TypeScript／JavaScript／Pythonから判断型のLLM呼び出しを探し、確信度に応じた代替処理付きのJevコードを生成し、記録済み通信で比較します。削減額は保証されません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/0xjba/jev-swap/blob/c6b82425c57a211b22e63e432e6b2959470b3c71/README.md",
+            "quote": "convert them to [TypeSafe Jev](https://docs.typesafe.ai)"
+          },
+          {
+            "url": "https://github.com/0xjba/jev-swap/blob/c6b82425c57a211b22e63e432e6b2959470b3c71/README.md",
+            "quote": "shadow-test them on recorded traffic."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91379,6 +91493,25 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T11:24:52.568Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This bounded browser tool for Pi, OpenCode, Amp, and MCP uses an observe-decide-validate-act loop; it checks Jev probabilities, confidence, and risk before deterministic browser execution.",
+          "zh": "这个面向 Pi、OpenCode、Amp 和 MCP 的有界浏览器工具采用观察、判断、验证、执行流程；在确定性浏览器操作前检查 Jev 概率、置信度和风险。",
+          "ja": "Pi・OpenCode・Amp・MCP向けの範囲限定ブラウザーツールで、観察・判断・検証・実行の手順を取ります。ブラウザー操作前にJevの確率・確信度・リスクを確認します。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/XYenon/ajevt-browser/blob/abe83741ad1531e35fc737db9fedcc92fc3ffaab/README.md",
+            "quote": "A bounded Jev System-1 browser tool for Pi, OpenCode V2, Amp, and MCP."
+          },
+          {
+            "url": "https://github.com/XYenon/ajevt-browser/blob/abe83741ad1531e35fc737db9fedcc92fc3ffaab/README.md",
+            "quote": "strict probability/confidence/risk validation"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91424,6 +91557,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This OpenCode hook prunes stale tool calls/results using Jev judgments while keeping retained messages verbatim; failures are fail-open and leave the request untouched.",
+          "zh": "这个 OpenCode 钩子用 Jev 判断裁剪过时的工具调用或结果，同时原样保留留下的消息；发生错误时会放行，不改动请求。",
+          "ja": "OpenCodeのフックがJevの判断で古いツール呼び出しや結果を整理し、残すメッセージは原文のまま保ちます。失敗時は要求を変更しない設計です。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/hoshinodis/opencode-context-pruner/blob/2957de0381fb74fb48924bd0668164b4bc482761/README.md",
+            "quote": "only old tool calls/results are dropped or truncated, decided by calibrated Jev judgments."
+          },
+          {
+            "url": "https://github.com/hoshinodis/opencode-context-pruner/blob/2957de0381fb74fb48924bd0668164b4bc482761/README.md",
+            "quote": "fail-open: any error leaves the request untouched"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91469,6 +91621,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "RLCD Gateway is a self-hosted proxy for LLM and decision providers, including Jev; its README describes context pruning and auditing/calibration, not self-hosting the Jev model itself.",
+          "zh": "RLCD Gateway 是面向 LLM 和决策模型提供方的自托管代理，包括 Jev；README 描述了上下文裁剪和审计／校准，并非自托管 Jev 模型本身。",
+          "ja": "RLCD GatewayはJevを含むLLM・判断モデル向けのセルフホスト型ゲートウェイです。READMEは文脈整理や監査・校正を説明していますが、Jevモデル自体を自ホストするものではありません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/JimmyWesley/rlcd-gateway/blob/0541ab1887e36c8e3e8358567742a17f241bcb57/README.md",
+            "quote": "A self-hosted gateway for LLMs and decision models."
+          },
+          {
+            "url": "https://github.com/JimmyWesley/rlcd-gateway/blob/0541ab1887e36c8e3e8358567742a17f241bcb57/README.md",
+            "quote": "Apps that call Jev or open-rlcd System One decision models change only"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91513,6 +91684,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "Astra provides a Codex/Claude Code context-selection skill and harness: it narrows file candidates locally, Jev selects what the coding model should read, and that separate model writes code.",
+          "zh": "Astra 提供 Codex／Claude Code 上下文选择技能和工具：先在本地缩小候选文件，再由 Jev 选择编码模型要读的内容，代码由另一个模型编写。",
+          "ja": "Codex／Claude Code向けのコンテキスト選択スキルとハーネスです。候補をローカルで絞り、Jevが読むファイルを選び、コードは別のモデルが書きます。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/Oranquelui/astra-jev-harness/blob/49bd3b7eda0c0bbc030c0c2c8eb2ab246731fac0/README.md",
+            "quote": "Narrow large repositories locally, let **Jev judge the bounded candidates**"
+          },
+          {
+            "url": "https://github.com/Oranquelui/astra-jev-harness/blob/49bd3b7eda0c0bbc030c0c2c8eb2ab246731fac0/README.md",
+            "quote": "then let **your coding model write the code**."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91553,6 +91743,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This Go client exposes TypeSafe System One typed questions and answers; the README describes an API client, but this review does not establish official status or test compatibility.",
+          "zh": "这个 Go 客户端提供 TypeSafe System One 类型化问题与回答；README 将其描述为 API 客户端，本次未确认官方属性或测试兼容性。",
+          "ja": "TypeSafe System Oneの型付き質問と回答を扱うGoクライアントです。READMEではAPIクライアントとして紹介されていますが、公式性や互換性は検証していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/jmelahman/typesafe-sdk-go/blob/afc0d2a1eecf2528e65b4421d8083929b0b60d73/README.md",
+            "quote": "A Go client for the [TypeSafe](https://typesafe.ai) API, with no dependencies"
+          },
+          {
+            "url": "https://github.com/jmelahman/typesafe-sdk-go/blob/afc0d2a1eecf2528e65b4421d8083929b0b60d73/README.md",
+            "quote": "client.SystemOne"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91598,6 +91807,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This MCP server lets coding agents operate a real Chrome browser; Jev supplies bounded element and outcome decisions while the agent remains the planner. README performance figures are not reproduced here.",
+          "zh": "这个 MCP 服务让编程代理操作真实 Chrome 浏览器；Jev 提供有限的元素和结果判断，规划仍由代理负责。README 中的性能数据未在此复现。",
+          "ja": "MCPサーバーを通じてコーディングエージェントが実際のChromeを操作します。Jevは要素や結果を判断し、計画役はエージェントに残します。READMEの性能値は再現していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/legostin/jev-mcp/blob/606e948996f808d806e547fab902ed996339baa6/README.md",
+            "quote": "(MCP) server that lets **Claude Code, Codex and any MCP-capable AI agent drive a real Chrome browser**"
+          },
+          {
+            "url": "https://github.com/legostin/jev-mcp/blob/606e948996f808d806e547fab902ed996339baa6/README.md",
+            "quote": "JEV makes the many small decisions"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91643,6 +91871,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This small benchmark compares Jev with OpenJev, Laya, and local/hosted models on shared zero-shot English/French classification tasks; the authors limit it to one dataset and question type, and the metrics were not reproduced.",
+          "zh": "这项小型基准在相同的英法语零样本分类任务上比较 Jev、OpenJev、Laya 及本地／托管模型；作者将结论限制在一个数据集和一种问题，本次未复现指标。",
+          "ja": "英仏語の同一分類課題でJev、OpenJev、Layaやローカル／ホスト型モデルを比べる小規模評価です。作者は1データセット・1種の質問に限定しており、数値は再現していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/4nt0ineB/typed-decision-bench/blob/649b302fe4f651679a20fb3886ec69c3d36f12ac/README.md",
+            "quote": "A small benchmark on one question"
+          },
+          {
+            "url": "https://github.com/4nt0ineB/typed-decision-bench/blob/649b302fe4f651679a20fb3886ec69c3d36f12ac/README.md",
+            "quote": "This is a first check, not a verdict: one dataset, one kind of question"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91686,6 +91933,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This browser extension sends LinkedIn posts to Jev for an AI-writing judgment and folds posts above a user threshold; the README acknowledges false positives and says its benchmarks are not human-labeled.",
+          "zh": "这个浏览器扩展用 Jev 判断 LinkedIn 帖子是否像 AI 撰写，并按用户阈值折叠帖子；README 承认会误判，且其基准不是以人工标签评定。",
+          "ja": "LinkedIn投稿をJevでAI生成らしさ判定し、確率が設定値を超える投稿を折りたたむ拡張機能です。READMEは誤判定の可能性と、ベンチマークが人手ラベルではない点を記しています。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/effective-shipping/slop-fold/blob/36b843e7855c9e8452fcaed5fd6d11c95586e3d5/README.md",
+            "quote": "Each post in your feed goes to [Jev](https://docs.typesafe.ai)"
+          },
+          {
+            "url": "https://github.com/effective-shipping/slop-fold/blob/36b843e7855c9e8452fcaed5fd6d11c95586e3d5/README.md",
+            "quote": "Plain code makes the decision. Jev only supplies the numbers."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91731,6 +91997,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This CLI uses one Jev choice per repository to sort GitHub stars into existing Lists; classification writes a report, while applying assignments is a separate gated step.",
+          "zh": "这个 CLI 对每个仓库用一次 Jev 选择，将 GitHub Star 分类到已有 Lists；分类先生成报告，写入分配结果则是单独的受控步骤。",
+          "ja": "リポジトリごとにJevへ選択を依頼し、GitHub Starを既存のListに分類するCLIです。分類結果はまずレポートに記録し、割当ての反映は別の承認付き手順です。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/MA22DE/git-star-list-sort/blob/7e4d11b623f4efd8c9e3aa729fbbf27de03c80b3/README.md",
+            "quote": "One Jev request per repository, answered as a single `choice` question."
+          },
+          {
+            "url": "https://github.com/MA22DE/git-star-list-sort/blob/7e4d11b623f4efd8c9e3aa729fbbf27de03c80b3/README.md",
+            "quote": "**Classification never writes to GitHub.** It produces a report"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91776,6 +92061,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This repository includes Jev-vs-Laya arenas for highway-env, Snake, and Blackjack with requests and answers displayed; game and benchmark results are not independently evaluated here.",
+          "zh": "该仓库包含 Jev 与 Laya 在 highway-env、Snake 和 Blackjack 中对战的场景，并展示请求和回答；本次未独立评估游戏或基准结果。",
+          "ja": "JevとLayaがhighway-env、Snake、Blackjackで対戦するアリーナ例を含み、要求と回答も表示します。ゲームや評価結果は独立検証していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/nadeem4/jev-demo/blob/e9e785caa25aa490348cbda8095577deb9935c10/README.md",
+            "quote": "Jev vs open-source Laya"
+          },
+          {
+            "url": "https://github.com/nadeem4/jev-demo/blob/e9e785caa25aa490348cbda8095577deb9935c10/README.md",
+            "quote": "playing highway-env, Snake and Blackjack with zero training."
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91820,6 +92124,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This LangChain support-ops tutorial demonstrates Jev typed classification, model routing, risky-tool middleware, and evaluation; README marks the middleware experimental and reported runs were not re-executed.",
+          "zh": "这个 LangChain 支持运营教程演示 Jev 类型化分类、模型路由、风险工具中间件和评估；README 将中间件标为实验性，报告的运行结果未重新执行。",
+          "ja": "LangChainのサポート業務チュートリアルで、Jevによる型付き分類・モデル振り分け・危険なツールの制御・評価を示します。ミドルウェアは実験的で、実行結果は再検証していません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/PromptEngineer48/langchain-jev-tutorial/blob/4cfb9710ea56df705a077adec03b313cfff07240/README.md",
+            "quote": "LangChain + Jev: a support-ops agent that decides in milliseconds"
+          },
+          {
+            "url": "https://github.com/PromptEngineer48/langchain-jev-tutorial/blob/4cfb9710ea56df705a077adec03b313cfff07240/README.md",
+            "quote": "Jev blocks risky tool calls"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   },
@@ -91865,6 +92188,25 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-26T16:23:47.558Z"
+      },
+      "inclusion": {
+        "text": {
+          "en": "This single-runway air-traffic simulator lets Jev turn radio text into typed commands or sequence arrivals; it is a demo, not validated real-world ATC software.",
+          "zh": "这个单跑道航空管制模拟器让 Jev 将无线电文本转换为类型化指令，或安排进场飞机顺序；它是演示，不是经验证的真实空管软件。",
+          "ja": "単一滑走路の航空管制シミュレーターで、Jevが無線文を型付き指示に変換したり、到着機を順序付けたりします。実運用の管制ソフトではありません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/Zeb88/jev-approach-control/blob/7fc7cb5ccb6c471683105a6e1ce43e24524b646b/README.md",
+            "quote": "small air traffic control sim for a single runway"
+          },
+          {
+            "url": "https://github.com/Zeb88/jev-approach-control/blob/7fc7cb5ccb6c471683105a6e1ce43e24524b646b/README.md",
+            "quote": "Jev turns the text into typed commands"
+          }
+        ],
+        "checkedAt": "2026-09-26T16:58:08Z",
+        "reviewer": "gpt-6-luna"
       }
     }
   }
