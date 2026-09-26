@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-26T18:42:48.900Z",
+  "at": "2026-09-26T23:52:49.056Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 69,
-      "total": 69,
+      "fetched": 70,
+      "total": 70,
       "status": "complete"
     }
   ],
@@ -20,44 +20,27 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
-  "added": 0,
-  "pending": 80,
+  "reviewed": 1,
+  "added": 1,
+  "pending": 70,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "lab-emi/chiplaya",
-      "status": "review",
+      "repo": "heldernoid/decida",
+      "status": "keep",
       "score": {
-        "jevAbout": 0.84,
+        "jevAbout": 0.94,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.93,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "700988637f9429d180dcda50757504d41060d2bd",
-      "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
-      "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-26T18:42:48.900Z"
-    },
-    {
-      "repo": "lakoreai/sev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.88,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.84,
+        "jevKeepConfidence": 0.98,
         "category": "alternatives"
       },
-      "sha": "fefcfc33d01c08104dc3de0374ad4e5daf07f923",
-      "evidenceUrl": "https://github.com/lakoreai/sev/blob/fefcfc33d01c08104dc3de0374ad4e5daf07f923/README.md",
-      "evidenceSha256": "a292dc1d15402941d9467956c2749021635c988d017576d13a2ffdf2ac65ac64",
+      "sha": "c05e6079519f9076af02dbeced9b3416be8175be",
+      "evidenceUrl": "https://github.com/heldernoid/decida/blob/c05e6079519f9076af02dbeced9b3416be8175be/README.md",
+      "evidenceSha256": "d9ed1d17a1cd6f247f1d23566dd3e35a92ea10a2d8eaedd4ca43ade3e53256e7",
       "model": "jev-latest",
-      "checkedAt": "2026-09-26T18:42:48.900Z"
+      "checkedAt": "2026-09-26T23:52:49.056Z"
     }
   ],
-  "totalProjects": 1690
+  "totalProjects": 1925
 }

@@ -102395,5 +102395,47 @@
         "checkedAt": "2026-09-26T21:10:43.236Z"
       }
     }
+  },
+  {
+    "id": "gh-10-heldernoid-decida",
+    "type": "github",
+    "title": "decida",
+    "summary": "system one server and test bench for typed decisions",
+    "tags": [
+      "bert-models",
+      "decision-engine",
+      "decision-service",
+      "decision-support",
+      "typed-decisions",
+      "html"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/heldernoid/decida",
+    "sourceMeta": {
+      "repo": "heldernoid/decida",
+      "author": "heldernoid",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "date": "2026-09-26",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "heldernoid/decida",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "alternatives"
+        },
+        "sha": "c05e6079519f9076af02dbeced9b3416be8175be",
+        "evidenceUrl": "https://github.com/heldernoid/decida/blob/c05e6079519f9076af02dbeced9b3416be8175be/README.md",
+        "evidenceSha256": "d9ed1d17a1cd6f247f1d23566dd3e35a92ea10a2d8eaedd4ca43ade3e53256e7",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T23:52:49.056Z"
+      }
+    }
   }
 ]
