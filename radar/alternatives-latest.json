@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-25T19:32:21.650Z",
+  "at": "2026-09-26T00:08:50.699Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 63,
-      "total": 63,
+      "fetched": 64,
+      "total": 64,
       "status": "complete"
     }
   ],
@@ -20,57 +20,27 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
-  "added": 1,
+  "reviewed": 1,
+  "added": 0,
   "pending": 81,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "codepawl/tacet",
-      "status": "keep",
-      "score": {
-        "jevAbout": 0.91,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.96,
-        "category": "alternatives"
-      },
-      "sha": "a4826aed400c00ce483132adaf2c97af833bc7b0",
-      "evidenceUrl": "https://github.com/codepawl/tacet/blob/a4826aed400c00ce483132adaf2c97af833bc7b0/README.md",
-      "evidenceSha256": "aa954101ad566ef12c8a96c9d2e2b4735a8f4455531ad2b12dcdb02053fc5c6e",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-25T19:32:21.650Z"
-    },
-    {
-      "repo": "shanghua-gao/rsi-jev",
+      "repo": "donliggett/julius",
       "status": "review",
       "score": {
-        "jevAbout": 0.85,
+        "jevAbout": 0.89,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.65,
+        "jevKeepConfidence": 0.51,
         "category": "alternatives"
       },
-      "sha": "2dffab473b7b663681644956c4e6eb185e7e15c3",
-      "evidenceUrl": "https://github.com/shanghua-gao/rsi-jev/blob/2dffab473b7b663681644956c4e6eb185e7e15c3/README.md",
-      "evidenceSha256": "1cec2f93944eabd64293fa7167fd568e6fa90d8b2ee69c08e5aff5dffad17b64",
+      "sha": "66886e2d03d08012c31b9662cc3bb8e923960fe8",
+      "evidenceUrl": "https://github.com/donliggett/julius/blob/66886e2d03d08012c31b9662cc3bb8e923960fe8/README.md",
+      "evidenceSha256": "cb8c952ec4445b88c42538915d964664c1dbe4317ac5233f2d5ded3d47dc48c9",
       "model": "jev-latest",
-      "checkedAt": "2026-09-25T19:32:21.650Z"
-    },
-    {
-      "repo": "teilomillet/kayak",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.77,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.87,
-        "category": "alternatives"
-      },
-      "sha": "a9d345f541abb847b585ca7c98eb7c39027f77b4",
-      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/a9d345f541abb847b585ca7c98eb7c39027f77b4/README.md",
-      "evidenceSha256": "eaa1eb921253c0f7d94af3e6678ecffac76348d469e544980a58ef44b7110972",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-25T19:32:21.650Z"
+      "checkedAt": "2026-09-26T00:08:50.699Z"
     }
   ],
-  "totalProjects": 1441
+  "totalProjects": 1501
 }

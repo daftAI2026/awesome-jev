@@ -566,30 +566,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "ashafizullah/jev-linkedin": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "ashafizullah/jev-linkedin",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.16,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.48,
-          "category": "other",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "1e072954f796d4ffeac4817858872c2c94488e27",
-        "evidenceUrl": "https://github.com/ashafizullah/jev-linkedin/blob/1e072954f796d4ffeac4817858872c2c94488e27/README.md",
-        "evidenceSha256": "47b7b64c746383f7b85b2c88ed27fe6c5182e8c47c94c9a72540ccac3217c134",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "github30/openjev": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1721,6 +1697,28 @@
         "checkedAt": "2026-09-25T19:32:21.650Z"
       },
       "retryAt": "2026-10-02T19:32:21.650Z"
+    },
+    "donliggett/julius": {
+      "status": "review",
+      "discoveredAt": "2026-09-26T00:08:50.699Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-26T00:08:50.699Z",
+      "lastReview": {
+        "repo": "donliggett/julius",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.89,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.51,
+          "category": "alternatives"
+        },
+        "sha": "66886e2d03d08012c31b9662cc3bb8e923960fe8",
+        "evidenceUrl": "https://github.com/donliggett/julius/blob/66886e2d03d08012c31b9662cc3bb8e923960fe8/README.md",
+        "evidenceSha256": "cb8c952ec4445b88c42538915d964664c1dbe4317ac5233f2d5ded3d47dc48c9",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T00:08:50.699Z"
+      },
+      "retryAt": "2026-10-03T00:08:50.699Z"
     }
   }
 }
