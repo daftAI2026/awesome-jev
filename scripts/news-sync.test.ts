@@ -64,6 +64,65 @@ test('API search matches are retained even when exposed fields omit the query wo
   }
 })
 
+test('original news links accept legacy HTTP without changing the source scheme', () => {
+  const original = 'http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html'
+  const item = parseNewsItem(remote('legacyhttp', original))
+  assert.equal(item.originalUrl, original)
+  assert.equal(item.aihotUrl, 'https://aihot.news/items/legacyhttp')
+  assert.deepEqual(validateNews([item]), [item])
+})
+
+test('HTTP original URLs do not permit unsafe protocols, credentials or HTTP AIHOT links', () => {
+  for (const original of ['javascript:alert(1)', 'data:text/html,bad', 'file:///etc/passwd',
+    'ftp://example.com/news', 'http://user:password@example.com/news', 'https://user:password@example.com/news',
+    '//example.com/news', 'not a URL']) {
+    assert.throws(() => parseNewsItem(remote('unsafeurl', original)))
+  }
+  assert.throws(() => parseNewsItem({ ...remote('httpaihot'), links: {
+    original: 'http://example.com/news', aihot: 'http://aihot.news/items/httpaihot',
+  } }), /Unsafe AIHOT URL/)
+  assert.throws(() => parseNewsItem(remote('badsource', 'javascript:alert(1)')),
+    /Unsafe original URL \(badsource\)/)
+  assert.throws(() => parseNewsItem(remote('badsource', 'not a URL')),
+    /Invalid original URL \(badsource\)/)
+})
+
+test('legacy HTTP reports sync with HTTPS reports across paced pages and remain idempotent', async () => {
+  const root = mkdtempSync(join(tmpdir(), 'awesome-jev-news-http-'))
+  try {
+    mkdirSync(join(root, 'data'))
+    const path = join(root, 'data/news.json')
+    writeFileSync(path, JSON.stringify([parseNewsItem(remote('existing'))]))
+    const original = 'http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html'
+    const waits: number[] = []
+    const fakeFetch = (async (input) => new URL(String(input)).searchParams.has('cursor')
+      ? page([remote('legacytwo', original), remote('freshhttps')])
+      : page([remote('legacyone', original)], true, 'next-http-page')) as typeof fetch
+    assert.deepEqual(await syncNews(root, fakeFetch, async (ms) => { waits.push(ms) }), { added: 3, updated: 0 })
+    const synced = validateNews(JSON.parse(readFileSync(path, 'utf8')))
+    assert.deepEqual(synced.map((item) => item.id), ['existing', 'legacyone', 'legacytwo', 'freshhttps'])
+    assert.equal(synced[1].originalUrl, original)
+    assert.equal(synced[2].originalUrl, original)
+    assert.deepEqual(waits, [60_000])
+    assert.deepEqual(await syncNews(root, fakeFetch, async () => {}), { added: 0, updated: 0 })
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
+test('unsafe original URL on a later page still prevents any partial snapshot write', async () => {
+  const root = mkdtempSync(join(tmpdir(), 'awesome-jev-news-unsafe-'))
+  try {
+    mkdirSync(join(root, 'data'))
+    const path = join(root, 'data/news.json')
+    const previous = JSON.stringify([parseNewsItem(remote('existing'))]) + '\n'
+    writeFileSync(path, previous)
+    const fakeFetch = (async (input) => new URL(String(input)).searchParams.has('cursor')
+      ? page([remote('badsource', 'javascript:alert(1)')])
+      : page([remote('goodsource')], true, 'next-unsafe-page')) as typeof fetch
+    await assert.rejects(syncNews(root, fakeFetch, async () => {}), /Unsafe original URL/)
+    assert.equal(readFileSync(path, 'utf8'), previous)
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
 test('timeline ordering uses discovery time unless publication is over 72 hours older', () => {
   const fresh = parseNewsItem({ ...remote('news0001'), publishedAt: '2026-09-23T09:00:00.000Z' })
   const later = parseNewsItem({ ...remote('news0002'), discoveredAt: '2026-09-23T10:11:00.000Z' })

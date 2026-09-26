@@ -26,10 +26,12 @@ function requireDate(value: unknown, label: string): string {
   return text
 }
 
-function requireUrl(value: unknown, label: string): string {
+function requireUrl(value: unknown, label: string, protocols: readonly ('http:' | 'https:')[] = ['https:']): string {
   const text = requireText(value, label, 2048)
-  const url = new URL(text)
-  if (url.protocol !== 'https:' || url.username || url.password) throw new Error(`Unsafe ${label}`)
+  let url: URL
+  try { url = new URL(text) }
+  catch { throw new Error(`Invalid ${label}`) }
+  if (!protocols.some((protocol) => protocol === url.protocol) || url.username || url.password) throw new Error(`Unsafe ${label}`)
   return url.href
 }
 
@@ -37,7 +39,7 @@ export function parseNewsItem(value: unknown): NewsItem {
   if (!isRecord(value) || !isRecord(value.source) || !isRecord(value.links)) throw new Error('Invalid AIHOT item')
   const id = requireText(value.id, 'news id', 64)
   if (!/^[a-z0-9]+$/.test(id)) throw new Error('Invalid news id')
-  const aihotUrl = requireUrl(value.links.aihot, 'AIHOT URL')
+  const aihotUrl = requireUrl(value.links.aihot, `AIHOT URL (${id})`)
   const aihot = new URL(aihotUrl)
   if (aihot.origin !== 'https://aihot.news' || aihot.pathname !== `/items/${id}` || aihot.search || aihot.hash) {
     throw new Error('Unexpected AIHOT item URL')
@@ -55,7 +57,8 @@ export function parseNewsItem(value: unknown): NewsItem {
     score: value.score == null ? null : requireScore(value.score),
     selected: value.selected,
     reason: value.reason == null ? null : requireText(value.reason, 'recommendation reason', 2000),
-    originalUrl: requireUrl(value.links.original, 'original URL'),
+    // --- 原文是导航外链，不由采集器请求；保留来源的 HTTP/HTTPS，不擅自升级 ---
+    originalUrl: requireUrl(value.links.original, `original URL (${id})`, ['https:', 'http:']),
     aihotUrl,
   }
 }
