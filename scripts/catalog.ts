@@ -3,6 +3,7 @@ import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { isDeepStrictEqual } from 'node:util'
 import { isProjectCategory, reviewDecision } from './jev-client.ts'
+import { isInclusionBasis } from '../src/lib/inclusion.ts'
 import type {
   Catalog,
   CatalogSourceMeta,
@@ -79,6 +80,9 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
     if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
     repos.add(key)
     if (Object.hasOwn(sourceMeta, 'openIssues')) throw new Error('Legacy openIssues field')
+    if (sourceMeta.inclusion !== undefined && !isInclusionBasis(sourceMeta.inclusion, url)) {
+      throw new Error(`Invalid inclusion basis: ${id}`)
+    }
     for (const field of ['stars', 'forks'] as const) {
       const value = sourceMeta[field]
       if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)

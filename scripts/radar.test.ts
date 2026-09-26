@@ -187,6 +187,8 @@ test('manual scorer limits paid reviews for GitHub projects', async (t) => {
   const root = mkdtempSync(join(tmpdir(), 'jev-score-cli-'))
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'scripts')); mkdirSync(join(root, 'data'))
+  mkdirSync(join(root, 'src/lib'), { recursive: true })
+  copyFileSync('src/lib/inclusion.ts', join(root, 'src/lib/inclusion.ts'))
   writeFileSync(join(root, 'package.json'), '{"type":"module"}')
   for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
   for (const file of ['github.json']) {

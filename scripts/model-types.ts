@@ -1,3 +1,5 @@
+import type { InclusionBasis } from '../src/lib/inclusion.ts'
+
 export type ReviewKeep = 'keep' | 'review' | 'drop'
 export type ProjectCategory = 'agents' | 'browser' | 'sdk' | 'developer' | 'research' | 'resources' | 'directories' | 'applications' | 'alternatives' | 'other'
 
@@ -18,6 +20,7 @@ export interface CatalogSourceMeta extends ScoreInput {
   forks?: number
   language?: string | null
   date?: string
+  inclusion?: InclusionBasis
 }
 
 export interface GitHubDirectoryItem {

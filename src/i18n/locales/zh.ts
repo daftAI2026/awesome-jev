@@ -95,7 +95,8 @@ export const zh: Messages = {
   projectStars: '星标',
   projectForks: '派生',
   projectTags: '主题',
-  projectReviewSource: '审查来源',
+  projectInclusionBasis: '收录依据',
+  projectInclusionPending: '暂无收录依据',
   projectViewEvidence: '查看引用来源',
   projectOpenGithub: '前往 GitHub',
 }

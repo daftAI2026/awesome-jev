@@ -92,7 +92,8 @@ export const ja: Messages = {
   projectStars: 'スター',
   projectForks: 'フォーク',
   projectTags: 'トピック',
-  projectReviewSource: '審査時の参照元',
+  projectInclusionBasis: '掲載理由',
+  projectInclusionPending: '掲載理由は準備中です',
   projectViewEvidence: '参照元を見る',
   projectOpenGithub: 'GitHub で開く',
 }

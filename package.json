@@ -19,6 +19,7 @@
     "test": "node --experimental-strip-types --test scripts/*.test.ts",
     "readme:sync": "node --experimental-strip-types scripts/catalog.ts",
     "data:check": "node --experimental-strip-types scripts/catalog.ts --check",
+    "inclusion:check": "node --experimental-strip-types scripts/inclusion.ts --check",
     "radar:scan": "node --experimental-strip-types scripts/radar.ts",
     "alternatives:audit": "node --experimental-strip-types scripts/alternative-audit.ts",
     "news:check": "node --experimental-strip-types scripts/news-sync.ts --check",

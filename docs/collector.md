@@ -4,6 +4,8 @@
 
 Collect TypeSafe AI **Jev / System One** ecosystem resources: official and community SDKs, curated lists, research, demos, integrations and useful educational material. A direct API call is not required for inclusion. This is a relevance review, not a runtime or performance certification.
 
+Admission scores are not prose explanations. Source-reviewed, localized rationales live separately in `sourceMeta.inclusion`; see [the data-model contract](data-model.md#inclusion-rationale-and-review-scores). Metadata refresh and snapshot validation preserve this editorial field. The existing radar/submission review continues using Jev alone, and newly admitted projects without a rationale show the pending state instead of a score-derived explanation. Local reviewer batches can be previewed and imported with `scripts/inclusion.ts` without adding an Actions secret or another model endpoint.
+
 The project catalog reads `data/github.json`; the separate AIHOT collector owns `data/news.json`. GitHub collectors must deduplicate by canonical repository URL, preserve stable IDs and editorial fields, and never replace the catalog with a partial subset. Old `items.json` / `part-*.json` shards and retired `x.json` / `youtube.json` sources are rejected by validation; do not recreate them.
 
 The GitHub radar only discovers **public, non-fork, non-archived GitHub repositories**. New entries append to `data/github.json`. A second, separate Action discovers independent open-source typed-decision implementations under `alternatives`; it shares the catalog and reviewer but not the core radar queue. After a manual project edit, regenerate README before committing:

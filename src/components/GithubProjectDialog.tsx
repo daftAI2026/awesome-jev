@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { PreviewDialogHeader } from '@/components/PreviewDialogHeader'
 import { PreviewDialogFooter } from '@/components/PreviewDialogFooter'
+import { isInclusionBasis, pinnedSource } from '@/lib/inclusion'
 
 interface GithubProjectDialogProps {
   item: DirectoryItem | null
@@ -19,11 +20,14 @@ interface GithubProjectDialogProps {
 }
 
 export function GithubProjectContent({ item, categoryLabel, standalone = false }: { item: DirectoryItem; categoryLabel?: string; standalone?: boolean }) {
-  const { t } = useI18n()
+  const { locale, t } = useI18n()
   const SectionHeading = standalone ? 'h2' : 'h3'
   const meta = item.sourceMeta
   const citedUrl = meta.jevEvidence?.evidenceUrl
   const evidenceUrl = citedUrl?.startsWith('https://github.com/') ? citedUrl : null
+  const inclusion = isInclusionBasis(meta.inclusion, item.url) ? meta.inclusion : null
+  const inclusionSources = inclusion?.evidence.filter((source, index, sources) =>
+    sources.findIndex((candidate) => candidate.url === source.url) === index) ?? []
 
   return (
     <>
@@ -40,15 +44,30 @@ export function GithubProjectContent({ item, categoryLabel, standalone = false }
           {meta.forks != null && <div className="flex items-baseline gap-2"><dt className="text-muted-foreground">{t('projectForks')}</dt><dd className="font-medium tabular-nums">{meta.forks.toLocaleString('en-US')}</dd></div>}
         </dl>
       )}
-      {evidenceUrl && (
-        <section className="mt-6">
-          <SectionHeading className="text-sm font-medium">{t('projectReviewSource')}</SectionHeading>
+      <section className="mt-6">
+        <SectionHeading className="text-sm font-medium">{t('projectInclusionBasis')}</SectionHeading>
+        <p className="mt-2 break-words text-sm leading-relaxed text-muted-foreground">
+          {inclusion ? inclusion.text[locale] : t('projectInclusionPending')}
+        </p>
+        {inclusion ? (
+          <ul className="mt-2 flex flex-col items-start gap-2">
+            {inclusionSources.map((source) => (
+              <li key={source.url} className="max-w-full">
+                <a href={source.url} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex max-w-full items-center gap-2 text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                  <span className="min-w-0 break-all">{pinnedSource(source.url, item.url)?.path}</span>
+                  <ArrowSquareOut className="size-4 shrink-0" aria-hidden />
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : evidenceUrl ? (
           <a href={evidenceUrl} target="_blank" rel="noopener noreferrer"
             className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
             {t('projectViewEvidence')}<ArrowSquareOut className="size-4" aria-hidden />
           </a>
-        </section>
-      )}
+        ) : null}
+      </section>
       {(item.tags ?? []).length > 0 && (
         <section className="mt-6" aria-label={t('projectTags')}>
           <SectionHeading className="text-sm font-medium">{t('projectTags')}</SectionHeading>

@@ -57,6 +57,25 @@ test('metadata refresh preserves editorial content, stable ID and review scores'
   assert.equal(after.sourceMeta.custom, 'preserve'); assert.equal(after.sourceMeta.stars, 2)
   assert.throws(() => refreshRow(before, { ...meta, html_url: 'https://github.com/test/moved' }))
 })
+
+test('radar snapshots preserve inclusion rationale and reject a stale snapshot that loses it', (t) => {
+  const { root, output } = snapshot(t)
+  const basis = {
+    text: { en: 'Includes a Jev integration.', zh: '包含 Jev 集成', ja: 'Jev 連携を含みます。' },
+    evidence: [{ url: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, quote: 'Includes a Jev integration.' }],
+    checkedAt: '2026-09-26T00:00:00.000Z', reviewer: 'gpt-6-luna',
+  }
+  const current = readCatalog(root).rows
+  current[0].sourceMeta.inclusion = basis
+  writeFileSync(join(root, 'data/github.json'), JSON.stringify(current))
+  const next = readCatalog(output).rows
+  next[0].sourceMeta.inclusion = basis
+  writeFileSync(join(output, 'data/github.json'), JSON.stringify(next))
+  assert.doesNotThrow(() => validateSnapshot(root, output))
+  delete next[0].sourceMeta.inclusion
+  writeFileSync(join(output, 'data/github.json'), JSON.stringify(next))
+  assert.throws(() => validateSnapshot(root, output), /Editorial data changed/)
+})
 test('GitHub issue counts are ignored rather than stored', () => {
   const response = { ...meta, open_issues_count: 17 }
   assert.equal(Object.hasOwn(candidateRow(response, keptScore).sourceMeta, 'openIssues'), false)

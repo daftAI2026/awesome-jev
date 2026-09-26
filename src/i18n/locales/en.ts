@@ -93,7 +93,8 @@ export const en = {
   projectStars: 'Stars',
   projectForks: 'Forks',
   projectTags: 'Topics',
-  projectReviewSource: 'Review source',
+  projectInclusionBasis: 'Why it is listed',
+  projectInclusionPending: 'No inclusion rationale available yet',
   projectViewEvidence: 'View cited source',
   projectOpenGithub: 'Open on GitHub',
 } as const
