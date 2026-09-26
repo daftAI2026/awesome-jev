@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-26T00:08:50.699Z",
+  "at": "2026-09-26T08:49:12.120Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 61,
-      "total": 61,
+      "fetched": 62,
+      "total": 62,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 64,
-      "total": 64,
+      "fetched": 65,
+      "total": 65,
       "status": "complete"
     }
   ],
@@ -20,27 +20,44 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 2,
   "added": 0,
-  "pending": 81,
+  "pending": 77,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "donliggett/julius",
+      "repo": "sfmqrb/awesome-decision-models",
       "status": "review",
       "score": {
-        "jevAbout": 0.89,
+        "jevAbout": 0.15,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.51,
+        "jevKeepConfidence": 0.44,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "c6a4c6481936a50f247e115badd315af933bceee",
+      "evidenceUrl": "https://github.com/sfmqrb/awesome-decision-models/blob/c6a4c6481936a50f247e115badd315af933bceee/README.md",
+      "evidenceSha256": "a67de50ea8459d20b9dfab9cf9f9a8033600a3f8f3c558fbad964f1caeca396e",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-26T08:49:12.120Z"
+    },
+    {
+      "repo": "talex-touch/flint",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.5,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.42,
         "category": "alternatives"
       },
-      "sha": "66886e2d03d08012c31b9662cc3bb8e923960fe8",
-      "evidenceUrl": "https://github.com/donliggett/julius/blob/66886e2d03d08012c31b9662cc3bb8e923960fe8/README.md",
-      "evidenceSha256": "cb8c952ec4445b88c42538915d964664c1dbe4317ac5233f2d5ded3d47dc48c9",
+      "sha": "425f0dc756179f69152e7d50a6f2946f21c02306",
+      "evidenceUrl": "https://github.com/talex-touch/flint/blob/425f0dc756179f69152e7d50a6f2946f21c02306/README.md",
+      "evidenceSha256": "b3af84e10a004b171951722d072f38b019540c5854507ff1657cc3343adc9cb6",
       "model": "jev-latest",
-      "checkedAt": "2026-09-26T00:08:50.699Z"
+      "checkedAt": "2026-09-26T08:49:12.120Z"
     }
   ],
-  "totalProjects": 1501
+  "totalProjects": 1672
 }

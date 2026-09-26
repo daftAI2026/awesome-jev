@@ -30,74 +30,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "backant-io/jevelry": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "backant-io/jevelry",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.06,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.53,
-          "category": "other",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "b32d90075d000785af722196a0991b3f4670ba0a",
-        "evidenceUrl": "https://github.com/backant-io/jevelry/blob/b32d90075d000785af722196a0991b3f4670ba0a/README.md",
-        "evidenceSha256": "c3eeaaebeac5a277d7a99c0a21aff693f9b6a9ff21e2f47a37726b54ad942116",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
-    "allebee/jevk5": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "allebee/jevk5",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.92,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.8,
-          "category": "alternatives"
-        },
-        "sha": "01d3cc99e11d5a080d9d15dd232eaa89e0941c1d",
-        "evidenceUrl": "https://github.com/allebee/jevk5/blob/01d3cc99e11d5a080d9d15dd232eaa89e0941c1d/README.md",
-        "evidenceSha256": "0b41e01faa3e83122b4f178827392cc3a1461766a1b9e3055098aaeb9123680c",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
-    "asktheway/dsh-jev-interceptor": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "asktheway/dsh-jev-interceptor",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.39,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.26,
-          "category": "other"
-        },
-        "sha": "aaceff2bf92955a09230a8780fa12aa12eba9788",
-        "evidenceUrl": "https://github.com/asktheway/dsh-jev-interceptor/blob/aaceff2bf92955a09230a8780fa12aa12eba9788/README.md",
-        "evidenceSha256": "5ccc7f69f3536ba27be3c059d4ca4746ce3144c6e77917ac2a70ad9b49543650",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "dimiscodes/tavli": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -256,23 +188,6 @@
         "checkedAt": "2026-09-23T18:17:17.528Z"
       },
       "retryAt": "2026-09-30T18:17:17.528Z"
-    },
-    "thinkflowlab/system1-agents": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "thinkflowlab/system1-agents",
-        "status": "review",
-        "reason": "insufficient-alternative-context",
-        "sha": "0f0b4c9eca03127875cfdf0d941fbd22c16478a4",
-        "evidenceUrl": "https://github.com/thinkflowlab/system1-agents/blob/0f0b4c9eca03127875cfdf0d941fbd22c16478a4/README.md",
-        "evidenceSha256": "f874ba67c0e55935137afc34550d15ad2e1b0f5ef99c6936746889928fc2ea10",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
     },
     "mpuig/system-one": {
       "status": "review",
@@ -687,47 +602,6 @@
         "sha": "c8a9afa2eccc294b23442d6596b2d6fc07307649",
         "evidenceUrl": "https://github.com/tamnd/kime/blob/c8a9afa2eccc294b23442d6596b2d6fc07307649/README.md",
         "evidenceSha256": "842d6bf01aae068729784b808e2088be59736150aea1fb020892365dbc5283a5",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
-    "jessie-qingyu/jev-in-the-wild": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "jessie-qingyu/jev-in-the-wild",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.07,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.6,
-          "category": "other",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "57e54fc21846e3757bfa63dd7f34bb89e981243b",
-        "evidenceUrl": "https://github.com/jessie-qingyu/jev-in-the-wild/blob/57e54fc21846e3757bfa63dd7f34bb89e981243b/README.md",
-        "evidenceSha256": "f148ae8beab98258b55d5486f7a096f5ac6e09735abb29f5d0671f0df78f3eb1",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
-    "amal-david/awesome-jev": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "amal-david/awesome-jev",
-        "status": "review",
-        "reason": "missing-open-source-license",
-        "sha": "8e5f6bdaf76e5657ecab235fb0143be16456be58",
-        "evidenceUrl": "https://github.com/amal-david/awesome-jev/blob/8e5f6bdaf76e5657ecab235fb0143be16456be58/.github/README.md",
-        "evidenceSha256": "e8de35130926011307690c132b49f7e2b94a3d585a3b15b0892c5e677ee2c295",
         "model": "jev-latest",
         "checkedAt": "2026-09-23T23:56:45.683Z"
       },
@@ -1719,6 +1593,52 @@
         "checkedAt": "2026-09-26T00:08:50.699Z"
       },
       "retryAt": "2026-10-03T00:08:50.699Z"
+    },
+    "talex-touch/flint": {
+      "status": "review",
+      "discoveredAt": "2026-09-26T08:49:12.120Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-26T08:49:12.120Z",
+      "lastReview": {
+        "repo": "talex-touch/flint",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.5,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.42,
+          "category": "alternatives"
+        },
+        "sha": "425f0dc756179f69152e7d50a6f2946f21c02306",
+        "evidenceUrl": "https://github.com/talex-touch/flint/blob/425f0dc756179f69152e7d50a6f2946f21c02306/README.md",
+        "evidenceSha256": "b3af84e10a004b171951722d072f38b019540c5854507ff1657cc3343adc9cb6",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T08:49:12.120Z"
+      },
+      "retryAt": "2026-10-03T08:49:12.120Z"
+    },
+    "sfmqrb/awesome-decision-models": {
+      "status": "review",
+      "discoveredAt": "2026-09-26T08:49:12.120Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-26T08:49:12.120Z",
+      "lastReview": {
+        "repo": "sfmqrb/awesome-decision-models",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.15,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.44,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "c6a4c6481936a50f247e115badd315af933bceee",
+        "evidenceUrl": "https://github.com/sfmqrb/awesome-decision-models/blob/c6a4c6481936a50f247e115badd315af933bceee/README.md",
+        "evidenceSha256": "a67de50ea8459d20b9dfab9cf9f9a8033600a3f8f3c558fbad964f1caeca396e",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T08:49:12.120Z"
+      },
+      "retryAt": "2026-10-03T08:49:12.120Z"
     }
   }
 }
