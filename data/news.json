@@ -2413,5 +2413,50 @@
     "reason": null,
     "originalUrl": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
     "aihotUrl": "https://aihot.news/items/cmui5ah9r067qrov0vninzs7o"
+  },
+  {
+    "id": "cmuiuc9kb06snrohyjhhldvwk",
+    "title": "Jev 与 Instructor 能否搭配使用",
+    "originalTitle": "do people want to use jev with instructor？",
+    "summary": "有人想用 jev 搭配 instructor 吗？",
+    "sourceName": "X：Jason Liu (@jxnlco)",
+    "publishedAt": "2026-09-26T20:25:25.000Z",
+    "discoveredAt": "2026-09-26T20:27:09.580Z",
+    "category": null,
+    "score": 9,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/jxnlco/status/2103944048327479651",
+    "aihotUrl": "https://aihot.news/items/cmuiuc9kb06snrohyjhhldvwk"
+  },
+  {
+    "id": "cmuitc2zq05nrrohypr5i9jqb",
+    "title": "巴西 Supersonic Labs 发布 144.3M 参数开源决策模型 Julia 1，可在 CPU 上运行",
+    "originalTitle": "Supersonic Labs Releases Julia 1： A 144.3M-Parameter Open Decision Model That Runs on a CPU",
+    "summary": "巴西 AI 实验室 Supersonic Labs 发布 144.3M 参数的开源决策模型 Julia 1，权重以 Apache 2.0 协议托管在 Hugging Face，可在普通 CPU 上运行，不生成文本，只对 2 到 20 个候选答案输出选择和概率。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-09-26T19:50:57.000Z",
+    "discoveredAt": "2026-09-26T19:58:58.903Z",
+    "category": "ai-models",
+    "score": 50,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/09/26/supersonic-labs-releases-julia-1-a-144-3m-parameter-open-decision-model-that-runs-on-a-cpu",
+    "aihotUrl": "https://aihot.news/items/cmuitc2zq05nrrohypr5i9jqb"
+  },
+  {
+    "id": "cmuiqff1b02vurohyiw16gh81",
+    "title": "Jev 成 OpenRouter 分类请求首选",
+    "originalTitle": "Jev is quickly beocming the primary choice for classification requests on OpenRouter. It took 27% o…",
+    "summary": "Jev 正迅速成为 OpenRouter 上分类请求的首选。\n\n它占据了该类别每周请求量的 27%，几乎是此前位居榜首的 DeepSeek V4 Flash 份额的两倍",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-09-26T18:30:05.000Z",
+    "discoveredAt": "2026-09-26T18:37:37.955Z",
+    "category": null,
+    "score": 31,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2103915026205806610",
+    "aihotUrl": "https://aihot.news/items/cmuiqff1b02vurohyiw16gh81"
   }
 ]
