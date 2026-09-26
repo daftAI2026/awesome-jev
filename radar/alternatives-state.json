@@ -1307,28 +1307,6 @@
       },
       "retryAt": "2026-10-01T08:44:49.897Z"
     },
-    "4nt0ineb/typed-decision-bench": {
-      "status": "review",
-      "discoveredAt": "2026-09-24T14:25:40.340Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-24T14:25:40.340Z",
-      "lastReview": {
-        "repo": "4nt0ineb/typed-decision-bench",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.11,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.5,
-          "category": "alternatives"
-        },
-        "sha": "649b302fe4f651679a20fb3886ec69c3d36f12ac",
-        "evidenceUrl": "https://github.com/4nt0ineb/typed-decision-bench/blob/649b302fe4f651679a20fb3886ec69c3d36f12ac/README.md",
-        "evidenceSha256": "d2f56562a6554b8550679e3da4c5b75b0cb1ff0ccf508e63898b5b27a6ec72e9",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-24T14:25:40.340Z"
-      },
-      "retryAt": "2026-10-01T14:25:40.340Z"
-    },
     "bhushankinge/jev-laya-classification-bench": {
       "status": "review",
       "discoveredAt": "2026-09-24T19:29:42.525Z",
@@ -1685,6 +1663,52 @@
         "checkedAt": "2026-09-26T13:52:54.166Z"
       },
       "retryAt": "2026-10-03T13:52:54.166Z"
+    },
+    "lab-emi/chiplaya": {
+      "status": "review",
+      "discoveredAt": "2026-09-26T18:42:48.900Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-26T18:42:48.900Z",
+      "lastReview": {
+        "repo": "lab-emi/chiplaya",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.84,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.93,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "700988637f9429d180dcda50757504d41060d2bd",
+        "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
+        "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T18:42:48.900Z"
+      },
+      "retryAt": "2026-10-03T18:42:48.900Z"
+    },
+    "lakoreai/sev": {
+      "status": "review",
+      "discoveredAt": "2026-09-26T18:42:48.900Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-26T18:42:48.900Z",
+      "lastReview": {
+        "repo": "lakoreai/sev",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.84,
+          "category": "alternatives"
+        },
+        "sha": "fefcfc33d01c08104dc3de0374ad4e5daf07f923",
+        "evidenceUrl": "https://github.com/lakoreai/sev/blob/fefcfc33d01c08104dc3de0374ad4e5daf07f923/README.md",
+        "evidenceSha256": "a292dc1d15402941d9467956c2749021635c988d017576d13a2ffdf2ac65ac64",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-26T18:42:48.900Z"
+      },
+      "retryAt": "2026-10-03T18:42:48.900Z"
     }
   }
 }
