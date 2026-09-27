@@ -1564,6 +1564,28 @@
         "checkedAt": "2026-09-27T09:31:08.198Z"
       },
       "retryAt": "2026-10-04T09:31:08.198Z"
+    },
+    "omnijev/onejev": {
+      "status": "review",
+      "discoveredAt": "2026-09-27T14:49:16.442Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-27T14:49:16.442Z",
+      "lastReview": {
+        "repo": "omnijev/onejev",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.88,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.46,
+          "category": "alternatives"
+        },
+        "sha": "d5da9cba606a8f395aa3c16b8dcdf42015b272e8",
+        "evidenceUrl": "https://github.com/omnijev/onejev/blob/d5da9cba606a8f395aa3c16b8dcdf42015b272e8/README.md",
+        "evidenceSha256": "8c654d6abe3c9268a0923f18b0008b09b6f3f640ba5b7f03600b2fe5eb137990",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-27T14:49:16.442Z"
+      },
+      "retryAt": "2026-10-04T14:49:16.442Z"
     }
   }
 }

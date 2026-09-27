@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-27T09:31:08.198Z",
+  "at": "2026-09-27T14:49:16.442Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 65,
-      "total": 65,
+      "fetched": 66,
+      "total": 66,
       "status": "complete"
     },
     {
@@ -20,64 +20,27 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
+  "reviewed": 1,
   "added": 0,
-  "pending": 74,
+  "pending": 75,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "eastriverlee/julia.swift",
+      "repo": "omnijev/onejev",
       "status": "review",
       "score": {
-        "jevAbout": 0.92,
+        "jevAbout": 0.88,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.74,
+        "jevKeepConfidence": 0.46,
         "category": "alternatives"
       },
-      "sha": "647589a10933d6f1b7380c2b54b8857f7e27fbde",
-      "evidenceUrl": "https://github.com/eastriverlee/julia.swift/blob/647589a10933d6f1b7380c2b54b8857f7e27fbde/README.md",
-      "evidenceSha256": "09502e4085f76032da0aad46cb8f9cae97a4857dba3e1c6eb5ef51f7f4aa6e1d",
+      "sha": "d5da9cba606a8f395aa3c16b8dcdf42015b272e8",
+      "evidenceUrl": "https://github.com/omnijev/onejev/blob/d5da9cba606a8f395aa3c16b8dcdf42015b272e8/README.md",
+      "evidenceSha256": "8c654d6abe3c9268a0923f18b0008b09b6f3f640ba5b7f03600b2fe5eb137990",
       "model": "jev-latest",
-      "checkedAt": "2026-09-27T09:31:08.198Z"
-    },
-    {
-      "repo": "gbesse/typed-locale-invariants",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "0ed37ac396fe8ec3ced8956fee836a97bdd04fff",
-      "evidenceUrl": "https://github.com/gbesse/typed-locale-invariants/blob/0ed37ac396fe8ec3ced8956fee836a97bdd04fff/README.md",
-      "evidenceSha256": "72c66573c3cf39b57974a47cb959f59c5c4a05e4fca6ee558f5563b623951464",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T09:31:08.198Z"
-    },
-    {
-      "repo": "manjunathshiva/opendecider",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "27bb4ae1978a4dc1e1dbdb50140934e780af935c",
-      "evidenceUrl": "https://github.com/manjunathshiva/opendecider/blob/27bb4ae1978a4dc1e1dbdb50140934e780af935c/README.md",
-      "evidenceSha256": "c681abee47a4ccef2e4ab210b75284420e64a27cd8809b0e4652c1fd07ff2781",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T09:31:08.198Z"
-    },
-    {
-      "repo": "mr-ds-ml-85/syfox",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.87,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.55,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "3adb35b6930b2de364e25ea9176b332bee35323d",
-      "evidenceUrl": "https://github.com/mr-ds-ml-85/syfox/blob/3adb35b6930b2de364e25ea9176b332bee35323d/README.md",
-      "evidenceSha256": "2a4d1b3d56cf050c1ef54ad6c78095b4784feef2a7671a597387c3e6a8b73d99",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T09:31:08.198Z"
+      "checkedAt": "2026-09-27T14:49:16.442Z"
     }
   ],
-  "totalProjects": 1925
+  "totalProjects": 1926
 }
