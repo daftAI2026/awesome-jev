@@ -958,30 +958,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "ariel-frischer/jevkit": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "ariel-frischer/jevkit",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.03,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.47,
-          "category": "other",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "4bda844160cca340897a72d4fa2763dd7b826a82",
-        "evidenceUrl": "https://github.com/ariel-frischer/jevkit/blob/4bda844160cca340897a72d4fa2763dd7b826a82/README.md",
-        "evidenceSha256": "86bcae5f46b183ea6fc079eac9a262267a08f28be1ad93092648ec61357eab2e",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "fabricioctelles/modelsystem": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1586,6 +1562,67 @@
         "checkedAt": "2026-09-27T14:49:16.442Z"
       },
       "retryAt": "2026-10-04T14:49:16.442Z"
+    },
+    "vicfei/awesome-jev-prompts": {
+      "status": "review",
+      "discoveredAt": "2026-09-27T19:15:22.688Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-27T19:15:22.688Z",
+      "lastReview": {
+        "repo": "vicfei/awesome-jev-prompts",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "7c188409c572ebfe61a091f59d00a8ae93373e55",
+        "evidenceUrl": "https://github.com/vicfei/awesome-jev-prompts/blob/7c188409c572ebfe61a091f59d00a8ae93373e55/README.md",
+        "evidenceSha256": "87b4d98393c73335851303fd818e2f12df39a3b7828446f74a7dc93e15f25f71",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-27T19:15:22.688Z"
+      },
+      "retryAt": "2026-10-04T19:15:22.688Z"
+    },
+    "lakoreai/pholaya": {
+      "status": "review",
+      "discoveredAt": "2026-09-27T19:15:22.688Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-27T19:15:22.688Z",
+      "lastReview": {
+        "repo": "lakoreai/pholaya",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.79,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.65,
+          "category": "alternatives"
+        },
+        "sha": "17633bd44245f03c40929b701b2d479390b588da",
+        "evidenceUrl": "https://github.com/lakoreai/pholaya/blob/17633bd44245f03c40929b701b2d479390b588da/README.md",
+        "evidenceSha256": "12b52bee101132bdb9106f4987b3be7615d4ea43769c4b0a0332a1891f54473a",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-27T19:15:22.688Z"
+      },
+      "retryAt": "2026-10-04T19:15:22.688Z"
+    },
+    "foxl-ai/bobcat": {
+      "status": "review",
+      "discoveredAt": "2026-09-27T19:15:22.688Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-27T19:15:22.688Z",
+      "lastReview": {
+        "repo": "foxl-ai/bobcat",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.87,
+          "category": "alternatives"
+        },
+        "sha": "c03944861e12b94000166f1f3255135df62fdbda",
+        "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/c03944861e12b94000166f1f3255135df62fdbda/README.md",
+        "evidenceSha256": "11f4d1bf4eb767b7691fd1e4424a7a29cccff2bfee0d43d362e43b9e3d660a32",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-27T19:15:22.688Z"
+      },
+      "retryAt": "2026-10-04T19:15:22.688Z"
     }
   }
 }
