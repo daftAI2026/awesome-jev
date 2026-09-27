@@ -2458,5 +2458,20 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenRouter/status/2103915026205806610",
     "aihotUrl": "https://aihot.news/items/cmuiqff1b02vurohyiw16gh81"
+  },
+  {
+    "id": "cmuiz28lz0eusrohy07p4mcvt",
+    "title": "Modal 与 CMU 推出 Quail：单张 H100 上每分钟处理超 10 亿 token",
+    "originalTitle": "Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine",
+    "summary": "Modal 与 CMU Full Stack Data Lab 合作推出查询感知推理层 Quail，在单个 H100 GPU 上对某多表连接查询实现每分钟超 10 亿 token 的处理速度，比同硬件 vLLM 基线快 10 倍以上，Modal 上成本低于每 10 亿 token 6 美分。",
+    "sourceName": "Modal 官方工程博客（RSS）",
+    "publishedAt": "2026-09-24T00:00:00.000Z",
+    "discoveredAt": "2026-09-24T00:00:00.000Z",
+    "category": null,
+    "score": 46,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://modal.com/blog/quail-billion-tpm",
+    "aihotUrl": "https://aihot.news/items/cmuiz28lz0eusrohy07p4mcvt"
   }
 ]
