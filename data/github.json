@@ -102437,5 +102437,28 @@
         "checkedAt": "2026-09-26T23:52:49.056Z"
       }
     }
+  },
+  {
+    "id": "gh-8-feder-cr-jev",
+    "type": "github",
+    "title": "jevos",
+    "summary": "Open-source, CPU-only alternative to Jev for yes/no decisions: MiniCPM5-1B cut to 17 layers with a one-logit output head, quantized to a 619 MB GGUF, one forward pass on llama.cpp, no GPU.",
+    "tags": [
+      "jev",
+      "decision-model",
+      "gguf",
+      "llama-cpp",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/feder-cr/jev",
+    "sourceMeta": {
+      "repo": "feder-cr/jev",
+      "author": "feder-cr",
+      "stars": 879,
+      "forks": 120,
+      "language": "Python",
+      "date": "2026-09-27"
+    }
   }
 ]
