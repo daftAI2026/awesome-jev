@@ -2473,5 +2473,20 @@
     "reason": null,
     "originalUrl": "https://modal.com/blog/quail-billion-tpm",
     "aihotUrl": "https://aihot.news/items/cmuiz28lz0eusrohy07p4mcvt"
+  },
+  {
+    "id": "cmujrs8b40uo9ro9h3fuuyn6w",
+    "title": "Privatemode 团队用 GLM-5.3-Flash 将 LLM 变成单次前向的类型化决策模型",
+    "originalTitle": "将 GLM-5.3-Flash 转换为类似 Jev 的决策模型",
+    "summary": "Privatemode 团队展示了一种无需微调的方法，通过编号选项、预填 choice_index： 前缀并读取选项索引的 log 概率，让 GLM-5.3-Flash 在单次前向中输出带概率的类型化决策。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-27T11:32:15.779Z",
+    "discoveredAt": "2026-09-27T12:03:23.016Z",
+    "category": "tip",
+    "score": 67,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+    "aihotUrl": "https://aihot.news/items/cmujrs8b40uo9ro9h3fuuyn6w"
   }
 ]
