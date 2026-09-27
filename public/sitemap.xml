@@ -3523,6 +3523,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fbddcz/agentic-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/feder-cr/jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/feder-cr/jev" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/feliperfpereira/jevbrowser</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/feliperfpereira/jevbrowser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/feliperfpereira/jevbrowser" />
@@ -16009,6 +16015,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fbddcz/agentic-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/feder-cr/jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/feder-cr/jev" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/feliperfpereira/jevbrowser</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/feliperfpereira/jevbrowser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/feliperfpereira/jevbrowser" />
@@ -28493,6 +28505,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/fbddcz/agentic-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/fbddcz/agentic-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fbddcz/agentic-jev" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/feder-cr/jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/feder-cr/jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/feder-cr/jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/feliperfpereira/jevbrowser</loc>

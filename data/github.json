@@ -102437,5 +102437,47 @@
         "checkedAt": "2026-09-26T23:52:49.056Z"
       }
     }
+  },
+  {
+    "id": "gh-8-feder-cr-jev",
+    "type": "github",
+    "title": "jevos",
+    "summary": "Open-source, CPU-only alternative to Jev for yes/no decisions: MiniCPM5-1B cut to 17 layers with a one-logit output head, quantized to a 619 MB GGUF, one forward pass on llama.cpp, no GPU.",
+    "tags": [
+      "jev",
+      "decision-model",
+      "gguf",
+      "llama-cpp",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/feder-cr/jev",
+    "sourceMeta": {
+      "repo": "feder-cr/jev",
+      "author": "feder-cr",
+      "stars": 879,
+      "forks": 120,
+      "language": "Python",
+      "date": "2026-09-27",
+      "inclusion": {
+        "text": {
+          "en": "Independent, MIT-licensed local decision implementation that returns probabilities for yes/no questions. Its published jevos model currently supports Noul only; this listing does not certify full Jev compatibility or the author’s benchmark results.",
+          "zh": "独立的 MIT 许可本地决策实现，能为是／否问题返回概率。发布的 jevos 模型目前只支持 Noul；收录不代表完整兼容 Jev，也不为作者的基准测试结果背书。",
+          "ja": "MIT ライセンスの独立したローカル意思決定実装で、はい／いいえの質問に対する確率を返します。公開されている jevos モデルは現在 Noul のみ対応しています。掲載は Jev との完全な互換性や作者のベンチマーク結果を保証するものではありません。"
+        },
+        "evidence": [
+          {
+            "url": "https://github.com/feder-cr/jev/blob/eb74cf78e5377e85fcaa76f6ebc9f82e8b517250/README.md",
+            "quote": "Every answer is `noul`, the probability that the answer is yes (0 to 1)."
+          },
+          {
+            "url": "https://github.com/feder-cr/jev/blob/eb74cf78e5377e85fcaa76f6ebc9f82e8b517250/LICENSE",
+            "quote": "Permission is hereby granted, free of charge"
+          }
+        ],
+        "checkedAt": "2026-09-27T09:49:42.265Z",
+        "reviewer": "maintainer source review"
+      }
+    }
   }
 ]
