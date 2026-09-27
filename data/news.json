@@ -2488,5 +2488,35 @@
     "reason": null,
     "originalUrl": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
     "aihotUrl": "https://aihot.news/items/cmujrs8b40uo9ro9h3fuuyn6w"
+  },
+  {
+    "id": "cmuk1ojkt14qzro9hm5tbu25i",
+    "title": "把 Jev 用作 Agent 编辑后的模糊 linter：规则筛选与置信度分层实验",
+    "originalTitle": "This is brilliant. Recommended reading. It's a great example of how you could potentially build mo…",
+    "summary": "Michael Thiessen 实验将 Jev 作为 Agent harness 中编辑后运行的模糊 linter：把编码指南拆成无需额外上下文和推理的微小规则，并构建合成 eval 加 held out 集防止过拟合。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-27T16:33:47.000Z",
+    "discoveredAt": "2026-09-27T16:40:23.086Z",
+    "category": "tip",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/omarsar0/status/2104248143739015190",
+    "aihotUrl": "https://aihot.news/items/cmuk1ojkt14qzro9hm5tbu25i"
+  },
+  {
+    "id": "cmuk0lz7b13m2ro9hm92v09yi",
+    "title": "Julia-1 分类模型发布，训练仅花 104 美元",
+    "originalTitle": "Cool to see classification models resurge in the era of agents. The effects of Jev are insane. Al…",
+    "summary": "supersonicai 发布首个分类模型 Julia-1，号称几乎能在任何设备上运行，训练与实验的云 GPU 花费约 R$540（US$104.08）。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-09-27T15:42:50.000Z",
+    "discoveredAt": "2026-09-27T16:10:23.134Z",
+    "category": null,
+    "score": 35,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/omarsar0/status/2104235323970523543",
+    "aihotUrl": "https://aihot.news/items/cmuk0lz7b13m2ro9hm92v09yi"
   }
 ]
