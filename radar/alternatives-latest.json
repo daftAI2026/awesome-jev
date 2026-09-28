@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-27T23:57:32.781Z",
+  "at": "2026-09-28T10:09:20.542Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 68,
-      "total": 68,
+      "fetched": 71,
+      "total": 71,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 73,
-      "total": 73,
+      "fetched": 76,
+      "total": 76,
       "status": "complete"
     }
   ],
@@ -20,11 +20,74 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 5,
   "added": 0,
-  "pending": 77,
+  "pending": 82,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "yeyan00/jev-decision",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "25a0a481cbae59c7c985eff9000e46fa0fdc9057",
+      "evidenceUrl": "https://github.com/yeyan00/jev-decision/blob/25a0a481cbae59c7c985eff9000e46fa0fdc9057/README.md",
+      "evidenceSha256": "85206fb32c24069bf97323b07221f257e03e1efc5ce97ff1e56dac961781d0f9",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T10:09:20.542Z"
+    },
+    {
+      "repo": "donthash/laya-nepali",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.85,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.58,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "fb76d43728a8d63a8e39b622f789709308345d8b",
+      "evidenceUrl": "https://github.com/donthash/laya-nepali/blob/fb76d43728a8d63a8e39b622f789709308345d8b/README.md",
+      "evidenceSha256": "87b91265fa7e0b6558dc4294cf7532b8f6006704304f3838d163d6901acac86a",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T10:09:20.542Z"
+    },
+    {
+      "repo": "muthuishere/openjevx",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "6fccc9b31fb00fb2804a4d5d224df0e3350d96b3",
+      "evidenceUrl": "https://github.com/muthuishere/openjevx/blob/6fccc9b31fb00fb2804a4d5d224df0e3350d96b3/README.md",
+      "evidenceSha256": "edf82266bf6c0a5f5aee500cfcf2609bc2f396fa24d6ebeedfbce2d4a6802637",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T10:09:20.542Z"
+    },
+    {
+      "repo": "omnijev/awesome-jev-papers",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "52d484163089ff05b9276f17c5b82fe16d09ae32",
+      "evidenceUrl": "https://github.com/omnijev/awesome-jev-papers/blob/52d484163089ff05b9276f17c5b82fe16d09ae32/README.md",
+      "evidenceSha256": "3ba73f3c697bc15b34e1573abc443362d86e63882e15627fb8d0fa88c1743d3f",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T10:09:20.542Z"
+    },
+    {
+      "repo": "rosariodibartolo/jev-agent-skill",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.09,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.45,
+        "category": "other"
+      },
+      "sha": "8054f9a7c6f595ea074ae819cc78df05b7146fda",
+      "evidenceUrl": "https://github.com/rosariodibartolo/jev-agent-skill/blob/8054f9a7c6f595ea074ae819cc78df05b7146fda/README.md",
+      "evidenceSha256": "f28b9691ac065aa80a59782c5d19377aad19548f658672ca7714a6af1b726b91",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T10:09:20.542Z"
+    }
+  ],
   "totalProjects": 2000
 }
