@@ -1720,6 +1720,111 @@
         "checkedAt": "2026-09-28T10:09:20.542Z"
       },
       "retryAt": "2026-10-05T10:09:20.542Z"
+    },
+    "marcodicesare-dev/jev-skill": {
+      "status": "review",
+      "discoveredAt": "2026-09-28T21:22:59.946Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-28T21:22:59.946Z",
+      "lastReview": {
+        "repo": "marcodicesare-dev/jev-skill",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.12,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.61,
+          "category": "other"
+        },
+        "sha": "082bd48e99371f907f334dd0b73e745ee3be3d86",
+        "evidenceUrl": "https://github.com/marcodicesare-dev/jev-skill/blob/082bd48e99371f907f334dd0b73e745ee3be3d86/README.md",
+        "evidenceSha256": "dbee911f92cf864a59e421420206e6ac223ce18f617e4eb3239da7d856466893",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-28T21:22:59.946Z"
+      },
+      "retryAt": "2026-10-05T21:22:59.946Z"
+    },
+    "jrodrigotech/reflex-system-one": {
+      "status": "review",
+      "discoveredAt": "2026-09-28T21:22:59.946Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-28T21:22:59.946Z",
+      "lastReview": {
+        "repo": "jrodrigotech/reflex-system-one",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.65,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.74,
+          "category": "alternatives"
+        },
+        "sha": "5bfda7af5b1d51aae43a2cf44eabc257fd2749ab",
+        "evidenceUrl": "https://github.com/jrodrigotech/reflex-system-one/blob/5bfda7af5b1d51aae43a2cf44eabc257fd2749ab/README.md",
+        "evidenceSha256": "f49fd431670a05be7628fe8cf803fb732e585a525d54c42989f29266b060e20e",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-28T21:22:59.946Z"
+      },
+      "retryAt": "2026-10-05T21:22:59.946Z"
+    },
+    "frederico-kluser/jev-playground": {
+      "status": "review",
+      "discoveredAt": "2026-09-28T21:22:59.946Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-28T21:22:59.946Z",
+      "lastReview": {
+        "repo": "frederico-kluser/jev-playground",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.11,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.79,
+          "category": "other"
+        },
+        "sha": "126c4a2b47f51f8de522b72e36fa5a6491195458",
+        "evidenceUrl": "https://github.com/frederico-kluser/jev-playground/blob/126c4a2b47f51f8de522b72e36fa5a6491195458/README.md",
+        "evidenceSha256": "9bcea1393c81efeb7b2fa4aeb492f8387a37f5d7b218a8e8f8d4591888114f6d",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-28T21:22:59.946Z"
+      },
+      "retryAt": "2026-10-05T21:22:59.946Z"
+    },
+    "mellob1989/laya-runpod": {
+      "status": "review",
+      "discoveredAt": "2026-09-28T21:22:59.946Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-28T21:22:59.946Z",
+      "lastReview": {
+        "repo": "mellob1989/laya-runpod",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "bc4a2f567d8e41d222dea47e435aa3225c56978e",
+        "evidenceUrl": "https://github.com/mellob1989/laya-runpod/blob/bc4a2f567d8e41d222dea47e435aa3225c56978e/README.md",
+        "evidenceSha256": "eb539c1f53edcc896e2b09f332e7616faf463dd6ac7c6b68c1f9182e23c4b197",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-28T21:22:59.946Z"
+      },
+      "retryAt": "2026-10-05T21:22:59.946Z"
+    },
+    "toufiqqureshi/anarkali": {
+      "status": "review",
+      "discoveredAt": "2026-09-28T21:22:59.946Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-28T21:22:59.946Z",
+      "lastReview": {
+        "repo": "toufiqqureshi/anarkali",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.7,
+          "category": "alternatives"
+        },
+        "sha": "9f680af89e54b3a0aecd9367529e20867e21aeb2",
+        "evidenceUrl": "https://github.com/toufiqqureshi/anarkali/blob/9f680af89e54b3a0aecd9367529e20867e21aeb2/README.md",
+        "evidenceSha256": "99eb897300cc4426496c6e6ec2ef1280a840d1eaabfe28eaa7c83e1dd9afe413",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-28T21:22:59.946Z"
+      },
+      "retryAt": "2026-10-05T21:22:59.946Z"
     }
   }
 }
