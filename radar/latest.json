@@ -1,77 +1,77 @@
 {
-  "at": "2026-09-27T21:20:54.542Z",
+  "at": "2026-09-28T05:23:57.119Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 1954,
+      "total": 1980,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 6341,
+      "total": 6425,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 5188,
+      "total": 5259,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 200,
-      "total": 431,
+      "fetched": 35,
+      "total": 435,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 200,
-      "total": 502,
+      "fetched": 106,
+      "total": 506,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3023,
+      "total": 3057,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
       "fetched": 200,
-      "total": 21984,
+      "total": 22048,
       "status": "search-cap"
     },
     {
       "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 200,
-      "total": 6192,
+      "total": 6304,
       "status": "search-cap"
     },
     {
       "query": "code:\"TYPESAFE_API_KEY\" in:file",
       "fetched": 200,
-      "total": 46080,
+      "total": 45760,
       "status": "search-cap"
     },
     {
       "query": "code:\"jev-latest\" in:file",
       "fetched": 200,
-      "total": 38528,
+      "total": 37888,
       "status": "search-cap"
     }
   ],
   "metadata": {
     "ok": 1959,
-    "failed": 40
+    "failed": 41
   },
-  "reviewed": 4,
-  "added": 1,
-  "pending": 1999,
-  "overflow": 680,
+  "reviewed": 6,
+  "added": 0,
+  "pending": 2000,
+  "overflow": 654,
   "evicted": 0,
   "receipts": [
     {
@@ -225,6 +225,11 @@
       "reason": "github-network-or-timeout"
     },
     {
+      "repo": "ryan-sunny/dbt-assay",
+      "status": "metadata-error",
+      "reason": "github-http-404"
+    },
+    {
       "repo": "v60samurai/jev-atlas",
       "status": "metadata-error",
       "reason": "github-http-404"
@@ -275,97 +280,32 @@
       "reason": "github-http-404"
     },
     {
-      "repo": "tom-r-main/footwork",
-      "status": "keep",
-      "score": {
-        "jevAbout": 0.96,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.99,
-        "category": "agents"
-      },
-      "sha": "afe6d9493dc7d067ee67838b90650d59c902df17",
-      "evidenceUrl": "https://github.com/tom-r-main/footwork/blob/afe6d9493dc7d067ee67838b90650d59c902df17/README.md",
-      "evidenceSha256": "e90a95fefd896cf31daf7b6e8d74f629919c7bcc6adaaf83297dd435bd275ea8",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/tom-r-main/footwork/blob/afe6d9493dc7d067ee67838b90650d59c902df17/jevdual/results/q8-q9e-live-dev-20260922-162350/taxonomy.md",
-          "path": "jevdual/results/q8-q9e-live-dev-20260922-162350/taxonomy.md",
-          "sha256": "28071c512a165ddee671757af8201af6fbdae6d45a8c6365be029731b96fb0dc"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T21:20:54.542Z"
+      "repo": "nowork-studio/awesome-ai-startups",
+      "status": "error",
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "nicobailon/surf-cli",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.11,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.33,
-        "category": "browser",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "13467c6ae43325898b86d39b00c9a5ee016565e9",
-      "evidenceUrl": "https://github.com/nicobailon/surf-cli/blob/13467c6ae43325898b86d39b00c9a5ee016565e9/README.md",
-      "evidenceSha256": "373769c83332cce8d74f7fcf9b3716cde8342bb730cf962ba44ff151abab2047",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/nicobailon/surf-cli/blob/13467c6ae43325898b86d39b00c9a5ee016565e9/native/semantic-provider.cjs",
-          "path": "native/semantic-provider.cjs",
-          "sha256": "3867fb2a45839243cb3972c787f5d4fab24d1385e6baefde9ba8210adf663356"
-        },
-        {
-          "url": "https://github.com/nicobailon/surf-cli/blob/13467c6ae43325898b86d39b00c9a5ee016565e9/native/semantic-cli.cjs",
-          "path": "native/semantic-cli.cjs",
-          "sha256": "e8de59e35436cc4d0427d00a02698df235734d2949c34c9eb8cdafbb832f99d4"
-        },
-        {
-          "url": "https://github.com/nicobailon/surf-cli/blob/13467c6ae43325898b86d39b00c9a5ee016565e9/package.json",
-          "path": "package.json",
-          "sha256": "4ff7a33fc009f2c8570847d4cdab877839eccf537af0cdb08f30112f3f162c04"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T21:20:54.542Z"
+      "repo": "mabodx/awesome-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "tinyhumansai/openhuman",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.64,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.39,
-        "category": "agents",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "771808e15aa8e26606edaa92317656ac8affdc22",
-      "evidenceUrl": "https://github.com/tinyhumansai/openhuman/blob/771808e15aa8e26606edaa92317656ac8affdc22/README.md",
-      "evidenceSha256": "124a3d5cc4e34dc1ca111d71d6b00cd741f4d5d0c264ee35c4edbec4a43ddb73",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/tinyhumansai/openhuman/blob/771808e15aa8e26606edaa92317656ac8affdc22/crates/openhuman-cli/src/bin/tool_search_bench.rs",
-          "path": "crates/openhuman-cli/src/bin/tool_search_bench.rs",
-          "sha256": "05127b22fca9b1c59e16d3480475a3a5d70541b83c373daa8c30a553eebfb821"
-        },
-        {
-          "url": "https://github.com/tinyhumansai/openhuman/blob/771808e15aa8e26606edaa92317656ac8affdc22/docs/plans/jev-tool-search-baseline.md",
-          "path": "docs/plans/jev-tool-search-baseline.md",
-          "sha256": "ea158129945392b55d18dc6d8afd4c4bd54d201e23eda7ff35a3e943e95c7b2c"
-        },
-        {
-          "url": "https://github.com/tinyhumansai/openhuman/blob/771808e15aa8e26606edaa92317656ac8affdc22/gitbooks/developing/jev.md",
-          "path": "gitbooks/developing/jev.md",
-          "sha256": "a188ce495be7ddba980bc827ee9005208bfb1ee4533bf6038382aa9eeeeb73d7"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-09-27T21:20:54.542Z"
+      "repo": "omrigotlieb/awesome-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "berriai/litellm",
+      "repo": "ljnchn/rps-game-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "makiisthenes/jevaiexperimentation",
+      "status": "error",
+      "reason": "github-empty-readme"
+    },
+    {
+      "repo": "can1357/oh-my-pi",
       "status": "error",
       "reason": "jev-evidence-too-large"
     }
