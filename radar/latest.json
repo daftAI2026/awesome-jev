@@ -1,77 +1,77 @@
 {
-  "at": "2026-09-28T05:23:57.119Z",
+  "at": "2026-09-28T13:54:40.964Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 1980,
+      "total": 2008,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 6425,
+      "total": 6542,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 5259,
+      "total": 5379,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 35,
-      "total": 435,
+      "fetched": 200,
+      "total": 443,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 106,
-      "total": 506,
+      "fetched": 200,
+      "total": 515,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3057,
+      "total": 3093,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
       "fetched": 200,
-      "total": 22048,
+      "total": 20992,
       "status": "search-cap"
     },
     {
       "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 200,
-      "total": 6304,
+      "total": 6480,
       "status": "search-cap"
     },
     {
       "query": "code:\"TYPESAFE_API_KEY\" in:file",
-      "fetched": 200,
-      "total": 45760,
-      "status": "search-cap"
+      "fetched": 0,
+      "total": 0,
+      "status": "github-http-429"
     },
     {
       "query": "code:\"jev-latest\" in:file",
-      "fetched": 200,
-      "total": 37888,
-      "status": "search-cap"
+      "fetched": 100,
+      "total": 37760,
+      "status": "github-http-429"
     }
   ],
   "metadata": {
-    "ok": 1959,
-    "failed": 41
+    "ok": 1956,
+    "failed": 44
   },
-  "reviewed": 6,
-  "added": 0,
-  "pending": 2000,
-  "overflow": 654,
+  "reviewed": 24,
+  "added": 1,
+  "pending": 1999,
+  "overflow": 798,
   "evicted": 0,
   "receipts": [
     {
@@ -215,6 +215,16 @@
       "reason": "github-http-404"
     },
     {
+      "repo": "jiawei686/jev-review-mcp",
+      "status": "metadata-error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "jiawei686/jev-screen-mcp",
+      "status": "metadata-error",
+      "reason": "github-http-404"
+    },
+    {
       "repo": "johnsonran/pi-jev",
       "status": "metadata-error",
       "reason": "github-http-404"
@@ -250,6 +260,11 @@
       "reason": "github-network-or-timeout"
     },
     {
+      "repo": "mjyoke1111/jev-lab",
+      "status": "metadata-error",
+      "reason": "github-http-404"
+    },
+    {
       "repo": "jiangkoumo/ego-jev",
       "status": "metadata-error",
       "reason": "github-network-or-timeout"
@@ -280,35 +295,142 @@
       "reason": "github-http-404"
     },
     {
-      "repo": "nowork-studio/awesome-ai-startups",
+      "repo": "wh000wh000/awesome-jev-live",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "mabodx/awesome-jev",
+      "repo": "stephenmcconnachie/starred",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "omrigotlieb/awesome-jev",
-      "status": "error",
-      "reason": "github-invalid-readme"
-    },
-    {
-      "repo": "ljnchn/rps-game-jev",
+      "repo": "ege-bulut/jevcraft",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "makiisthenes/jevaiexperimentation",
+      "repo": "pygarap/my-awesome-stars",
       "status": "error",
-      "reason": "github-empty-readme"
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "can1357/oh-my-pi",
+      "repo": "radrebelsam/awesome-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "thevibeworks/awesome-typesafe-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "altstack/dj-set-curator",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "b0mbxstic/jev-chatgpt",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "baltzparra/jev-study",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "bokuweb/grande",
+      "status": "error",
+      "reason": "github-http-409"
+    },
+    {
+      "repo": "nsillik/jevvin-off",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "pomodorozhong/exp-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "ryder-mhumble/awsome-jev-router",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "satangel2222/superego",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "shikaizhong-design/jego",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "tomcat7707/jev-tetris-player",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "unnati-23/jev-typesafe-guide",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "virtualmachinist/omapi-overlay",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "wallstreetpete/awesome-open-source-trading",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "wanlanglin/jev-wikirace",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "waxmell114514/awesome-jev-compaction",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "waxmell114514/jev-fps",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "keeltrace/hermes-nerve",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.94,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.9,
+        "category": "agents"
+      },
+      "sha": "7456a5ed51d1af640a4d57800bc71a3de5f354b5",
+      "evidenceUrl": "https://github.com/keeltrace/hermes-nerve/blob/7456a5ed51d1af640a4d57800bc71a3de5f354b5/README.md",
+      "evidenceSha256": "0b3d96be40b81b38e545be83b60268efa89d0a3871c28e20082977a950fe93fe",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/keeltrace/hermes-nerve/blob/7456a5ed51d1af640a4d57800bc71a3de5f354b5/docs/PROVIDER_SETUP.md",
+          "path": "docs/PROVIDER_SETUP.md",
+          "sha256": "5d0669bed85520817b179a1af5477e223eab146c373777676bdc6c5ed8262d9b"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-09-28T13:54:40.964Z"
+    },
+    {
+      "repo": "jzkk720/cubecloud-skills-bundle-kit",
       "status": "error",
       "reason": "jev-evidence-too-large"
     }
   ],
-  "totalProjects": 2000
+  "totalProjects": 2001
 }

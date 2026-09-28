@@ -5905,6 +5905,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kcc989/keeled" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/keeltrace/hermes-nerve</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/keeltrace/hermes-nerve" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/keepwonder/jev-hub</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/keepwonder/jev-hub" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/keepwonder/jev-hub" />
@@ -18925,6 +18931,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kcc989/keeled" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/keeltrace/hermes-nerve</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/keeltrace/hermes-nerve" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/keepwonder/jev-hub</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/keepwonder/jev-hub" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/keepwonder/jev-hub" />
@@ -31943,6 +31955,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kcc989/keeled" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kcc989/keeled" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kcc989/keeled" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/keeltrace/hermes-nerve</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/keeltrace/hermes-nerve" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/keeltrace/hermes-nerve" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/keepwonder/jev-hub</loc>
