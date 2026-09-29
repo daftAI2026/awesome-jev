@@ -2923,5 +2923,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/09/27/20-agentic-use-cases-of-typesafe-ais-jev",
     "aihotUrl": "https://aihot.news/items/cmukovht61zrzro9hvn3ud5ed"
+  },
+  {
+    "id": "jzoqeqrxi6h81opcvei6el6kv",
+    "title": "从 Bag-of-Words 到 Jev：Sebastian Raschka 梳理语言模型文本分类方法史并实测 Jev",
+    "originalTitle": "Language Models for Text Classification: From Bag-of-Words to Jev",
+    "summary": "Sebastian Raschka 撰文梳理文本分类技术从 bag-of-words、RNN/CNN 到 BERT 与 GPT 类模型的演进，并实测 TypeSafe AI 新发布的 Jev 模型。",
+    "sourceName": "Ahead of AI（RSS）",
+    "publishedAt": "2026-09-29T10:50:25.000Z",
+    "discoveredAt": "2026-09-29T10:53:09.475Z",
+    "category": "tip",
+    "score": 69,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+    "aihotUrl": "https://aihot.news/items/jzoqeqrxi6h81opcvei6el6kv"
   }
 ]
