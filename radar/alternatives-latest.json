@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-28T21:22:59.946Z",
+  "at": "2026-09-29T01:14:57.594Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 73,
-      "total": 73,
+      "fetched": 75,
+      "total": 75,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 80,
-      "total": 80,
+      "fetched": 81,
+      "total": 81,
       "status": "complete"
     }
   ],
@@ -20,82 +20,54 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 5,
+  "reviewed": 3,
   "added": 0,
-  "pending": 87,
+  "pending": 90,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "marcodicesare-dev/jev-skill",
+      "repo": "choiyounggi/jev-gate",
       "status": "review",
-      "score": {
-        "jevAbout": 0.12,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.61,
-        "category": "other"
-      },
-      "sha": "082bd48e99371f907f334dd0b73e745ee3be3d86",
-      "evidenceUrl": "https://github.com/marcodicesare-dev/jev-skill/blob/082bd48e99371f907f334dd0b73e745ee3be3d86/README.md",
-      "evidenceSha256": "dbee911f92cf864a59e421420206e6ac223ce18f617e4eb3239da7d856466893",
+      "reason": "insufficient-alternative-context",
+      "sha": "d94ded235b9345ba90bc22308af4eaf7c108b994",
+      "evidenceUrl": "https://github.com/choiyounggi/jev-gate/blob/d94ded235b9345ba90bc22308af4eaf7c108b994/README.md",
+      "evidenceSha256": "8ad34b6bb990d2c82f8ff0b923611d2a6c2eb99782892d2d5712626c17c21e0e",
       "model": "jev-latest",
-      "checkedAt": "2026-09-28T21:22:59.946Z"
+      "checkedAt": "2026-09-29T01:14:57.594Z"
     },
     {
-      "repo": "toufiqqureshi/anarkali",
+      "repo": "esterhuizen/system-one-on-snapdragon",
       "status": "review",
       "score": {
-        "jevAbout": 0.95,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.7,
+        "jevAbout": 0.35,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.22,
         "category": "alternatives"
       },
-      "sha": "9f680af89e54b3a0aecd9367529e20867e21aeb2",
-      "evidenceUrl": "https://github.com/toufiqqureshi/anarkali/blob/9f680af89e54b3a0aecd9367529e20867e21aeb2/README.md",
-      "evidenceSha256": "99eb897300cc4426496c6e6ec2ef1280a840d1eaabfe28eaa7c83e1dd9afe413",
+      "sha": "bcf8849ad6971024e0a023392a9f086bd5b9da5d",
+      "evidenceUrl": "https://github.com/esterhuizen/system-one-on-snapdragon/blob/bcf8849ad6971024e0a023392a9f086bd5b9da5d/README.md",
+      "evidenceSha256": "ebf5002c9d541eb1b11faa696fcc64220f8126154d5da715e5cbb9b4a346d0b4",
       "model": "jev-latest",
-      "checkedAt": "2026-09-28T21:22:59.946Z"
+      "checkedAt": "2026-09-29T01:14:57.594Z"
     },
     {
-      "repo": "frederico-kluser/jev-playground",
+      "repo": "tak-bro/local-jev-bench",
       "status": "review",
       "score": {
-        "jevAbout": 0.11,
+        "jevAbout": 0.72,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.79,
-        "category": "other"
+        "jevKeepConfidence": 0.76,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "126c4a2b47f51f8de522b72e36fa5a6491195458",
-      "evidenceUrl": "https://github.com/frederico-kluser/jev-playground/blob/126c4a2b47f51f8de522b72e36fa5a6491195458/README.md",
-      "evidenceSha256": "9bcea1393c81efeb7b2fa4aeb492f8387a37f5d7b218a8e8f8d4591888114f6d",
+      "sha": "fe1dcd3ded1c52e8360770b241ad85f25f4f090f",
+      "evidenceUrl": "https://github.com/tak-bro/local-jev-bench/blob/fe1dcd3ded1c52e8360770b241ad85f25f4f090f/README.md",
+      "evidenceSha256": "8b8a87d38cd8edb70e7769137e2fcfca4b9a98139ec19e555fa83057d4d9d939",
       "model": "jev-latest",
-      "checkedAt": "2026-09-28T21:22:59.946Z"
-    },
-    {
-      "repo": "jrodrigotech/reflex-system-one",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.65,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.74,
-        "category": "alternatives"
-      },
-      "sha": "5bfda7af5b1d51aae43a2cf44eabc257fd2749ab",
-      "evidenceUrl": "https://github.com/jrodrigotech/reflex-system-one/blob/5bfda7af5b1d51aae43a2cf44eabc257fd2749ab/README.md",
-      "evidenceSha256": "f49fd431670a05be7628fe8cf803fb732e585a525d54c42989f29266b060e20e",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-28T21:22:59.946Z"
-    },
-    {
-      "repo": "mellob1989/laya-runpod",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "bc4a2f567d8e41d222dea47e435aa3225c56978e",
-      "evidenceUrl": "https://github.com/mellob1989/laya-runpod/blob/bc4a2f567d8e41d222dea47e435aa3225c56978e/README.md",
-      "evidenceSha256": "eb539c1f53edcc896e2b09f332e7616faf463dd6ac7c6b68c1f9182e23c4b197",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-28T21:22:59.946Z"
+      "checkedAt": "2026-09-29T01:14:57.594Z"
     }
   ],
-  "totalProjects": 2001
+  "totalProjects": 2009
 }

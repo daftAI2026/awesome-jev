@@ -1825,6 +1825,69 @@
         "checkedAt": "2026-09-28T21:22:59.946Z"
       },
       "retryAt": "2026-10-05T21:22:59.946Z"
+    },
+    "choiyounggi/jev-gate": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T01:14:57.594Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T01:14:57.594Z",
+      "lastReview": {
+        "repo": "choiyounggi/jev-gate",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "d94ded235b9345ba90bc22308af4eaf7c108b994",
+        "evidenceUrl": "https://github.com/choiyounggi/jev-gate/blob/d94ded235b9345ba90bc22308af4eaf7c108b994/README.md",
+        "evidenceSha256": "8ad34b6bb990d2c82f8ff0b923611d2a6c2eb99782892d2d5712626c17c21e0e",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T01:14:57.594Z"
+      },
+      "retryAt": "2026-10-06T01:14:57.594Z"
+    },
+    "tak-bro/local-jev-bench": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T01:14:57.594Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T01:14:57.594Z",
+      "lastReview": {
+        "repo": "tak-bro/local-jev-bench",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.72,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.76,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "fe1dcd3ded1c52e8360770b241ad85f25f4f090f",
+        "evidenceUrl": "https://github.com/tak-bro/local-jev-bench/blob/fe1dcd3ded1c52e8360770b241ad85f25f4f090f/README.md",
+        "evidenceSha256": "8b8a87d38cd8edb70e7769137e2fcfca4b9a98139ec19e555fa83057d4d9d939",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T01:14:57.594Z"
+      },
+      "retryAt": "2026-10-06T01:14:57.594Z"
+    },
+    "esterhuizen/system-one-on-snapdragon": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T01:14:57.594Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T01:14:57.594Z",
+      "lastReview": {
+        "repo": "esterhuizen/system-one-on-snapdragon",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.35,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.22,
+          "category": "alternatives"
+        },
+        "sha": "bcf8849ad6971024e0a023392a9f086bd5b9da5d",
+        "evidenceUrl": "https://github.com/esterhuizen/system-one-on-snapdragon/blob/bcf8849ad6971024e0a023392a9f086bd5b9da5d/README.md",
+        "evidenceSha256": "ebf5002c9d541eb1b11faa696fcc64220f8126154d5da715e5cbb9b4a346d0b4",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T01:14:57.594Z"
+      },
+      "retryAt": "2026-10-06T01:14:57.594Z"
     }
   }
 }
