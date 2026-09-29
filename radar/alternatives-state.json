@@ -221,28 +221,6 @@
       },
       "retryAt": "2026-09-30T23:56:45.683Z"
     },
-    "instax-dutta/sysone-bench": {
-      "status": "review",
-      "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T23:56:45.683Z",
-      "lastReview": {
-        "repo": "instax-dutta/sysone-bench",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.35,
-          "jevKeep": "drop",
-          "jevKeepConfidence": 0.54,
-          "category": "other"
-        },
-        "sha": "1ac3650a65e3783ac9615f26b02bc7c1d5ad3b23",
-        "evidenceUrl": "https://github.com/instax-dutta/sysone-bench/blob/1ac3650a65e3783ac9615f26b02bc7c1d5ad3b23/README.md",
-        "evidenceSha256": "1af63fa865685ef50618fb22b155db226668fed42a55601be11373ca15cec2aa",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-23T23:56:45.683Z"
-      },
-      "retryAt": "2026-09-30T23:56:45.683Z"
-    },
     "m0rphtail/papaya": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
@@ -1888,6 +1866,47 @@
         "checkedAt": "2026-09-29T01:14:57.594Z"
       },
       "retryAt": "2026-10-06T01:14:57.594Z"
+    },
+    "tangwut/jev-alternative": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T10:07:30.319Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T10:07:30.319Z",
+      "lastReview": {
+        "repo": "tangwut/jev-alternative",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "9d8778653fc606c570a9d17c473ec2c57ac739ce",
+        "evidenceUrl": "https://github.com/tangwut/jev-alternative/blob/9d8778653fc606c570a9d17c473ec2c57ac739ce/README.md",
+        "evidenceSha256": "78031aed455c3e76f5fbf0368c9ccb053689ecd9f407da6dfa151a0bc85e48fe",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T10:07:30.319Z"
+      },
+      "retryAt": "2026-10-06T10:07:30.319Z"
+    },
+    "org2ai/wald-4b": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T10:07:30.319Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T10:07:30.319Z",
+      "lastReview": {
+        "repo": "org2ai/wald-4b",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.73,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "704ec0f9286fb09029ca08547f7810e7a2009f95",
+        "evidenceUrl": "https://github.com/org2ai/wald-4b/blob/704ec0f9286fb09029ca08547f7810e7a2009f95/README.md",
+        "evidenceSha256": "25d4e2dadb5eb7d21ee7813a62c2f3752fda0a0204dbb33007694142ae908d19",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T10:07:30.319Z"
+      },
+      "retryAt": "2026-10-06T10:07:30.319Z"
     }
   }
 }

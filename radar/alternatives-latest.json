@@ -1,12 +1,12 @@
 {
-  "at": "2026-09-29T01:14:57.594Z",
+  "at": "2026-09-29T10:07:30.319Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 75,
-      "total": 75,
+      "fetched": 76,
+      "total": 76,
       "status": "complete"
     },
     {
@@ -20,54 +20,39 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
+  "reviewed": 2,
   "added": 0,
-  "pending": 90,
+  "pending": 91,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "choiyounggi/jev-gate",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "d94ded235b9345ba90bc22308af4eaf7c108b994",
-      "evidenceUrl": "https://github.com/choiyounggi/jev-gate/blob/d94ded235b9345ba90bc22308af4eaf7c108b994/README.md",
-      "evidenceSha256": "8ad34b6bb990d2c82f8ff0b923611d2a6c2eb99782892d2d5712626c17c21e0e",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-29T01:14:57.594Z"
-    },
-    {
-      "repo": "esterhuizen/system-one-on-snapdragon",
+      "repo": "org2ai/wald-4b",
       "status": "review",
       "score": {
-        "jevAbout": 0.35,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.22,
-        "category": "alternatives"
-      },
-      "sha": "bcf8849ad6971024e0a023392a9f086bd5b9da5d",
-      "evidenceUrl": "https://github.com/esterhuizen/system-one-on-snapdragon/blob/bcf8849ad6971024e0a023392a9f086bd5b9da5d/README.md",
-      "evidenceSha256": "ebf5002c9d541eb1b11faa696fcc64220f8126154d5da715e5cbb9b4a346d0b4",
-      "model": "jev-latest",
-      "checkedAt": "2026-09-29T01:14:57.594Z"
-    },
-    {
-      "repo": "tak-bro/local-jev-bench",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.72,
+        "jevAbout": 0.93,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.76,
+        "jevKeepConfidence": 0.73,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "fe1dcd3ded1c52e8360770b241ad85f25f4f090f",
-      "evidenceUrl": "https://github.com/tak-bro/local-jev-bench/blob/fe1dcd3ded1c52e8360770b241ad85f25f4f090f/README.md",
-      "evidenceSha256": "8b8a87d38cd8edb70e7769137e2fcfca4b9a98139ec19e555fa83057d4d9d939",
+      "sha": "704ec0f9286fb09029ca08547f7810e7a2009f95",
+      "evidenceUrl": "https://github.com/org2ai/wald-4b/blob/704ec0f9286fb09029ca08547f7810e7a2009f95/README.md",
+      "evidenceSha256": "25d4e2dadb5eb7d21ee7813a62c2f3752fda0a0204dbb33007694142ae908d19",
       "model": "jev-latest",
-      "checkedAt": "2026-09-29T01:14:57.594Z"
+      "checkedAt": "2026-09-29T10:07:30.319Z"
+    },
+    {
+      "repo": "tangwut/jev-alternative",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "9d8778653fc606c570a9d17c473ec2c57ac739ce",
+      "evidenceUrl": "https://github.com/tangwut/jev-alternative/blob/9d8778653fc606c570a9d17c473ec2c57ac739ce/README.md",
+      "evidenceSha256": "78031aed455c3e76f5fbf0368c9ccb053689ecd9f407da6dfa151a0bc85e48fe",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-29T10:07:30.319Z"
     }
   ],
-  "totalProjects": 2009
+  "totalProjects": 2024
 }
