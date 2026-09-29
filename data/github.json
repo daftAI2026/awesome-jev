@@ -109124,5 +109124,49 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       }
     }
+  },
+  {
+    "id": "gh-7-tamkimd-tamev",
+    "type": "github",
+    "title": "tamev",
+    "summary": "Open-source multi-device Jev-like decision models you can train and run yourself: 5.33 ms on one CPU thread. Apache-2.0.",
+    "tags": [
+      "calibration",
+      "coreml",
+      "cpu-inference",
+      "decision-engine",
+      "decision-model",
+      "edge-ai",
+      "jev",
+      "jev-alternative"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/tamkimd/tamev",
+    "sourceMeta": {
+      "repo": "tamkimd/tamev",
+      "author": "tamkimd",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "date": "2026-09-29",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.9,
+      "jevEvidence": {
+        "repo": "tamkimd/tamev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.9,
+          "category": "alternatives"
+        },
+        "sha": "7e7200865b6ec2bf25039d3ac2c21ce839a31926",
+        "evidenceUrl": "https://github.com/tamkimd/tamev/blob/7e7200865b6ec2bf25039d3ac2c21ce839a31926/README.md",
+        "evidenceSha256": "13eb2da30c9859a11df63bae8b49e97638933e7e8073a245a958bf9501801b6d",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T20:12:32.881Z"
+      }
+    }
   }
 ]

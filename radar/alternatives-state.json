@@ -1907,6 +1907,72 @@
         "checkedAt": "2026-09-29T10:07:30.319Z"
       },
       "retryAt": "2026-10-06T10:07:30.319Z"
+    },
+    "opendecisions/opendecisions": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T20:12:32.881Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T20:12:32.881Z",
+      "lastReview": {
+        "repo": "opendecisions/opendecisions",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.86,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "c9fb35b2d859170cc830815c8fee199eac3fba0f",
+        "evidenceUrl": "https://github.com/opendecisions/opendecisions/blob/c9fb35b2d859170cc830815c8fee199eac3fba0f/README.md",
+        "evidenceSha256": "e65128d8f6be66a508305bff5b8fbd64e0a6449c925d416ed5106bfaac0d7363",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T20:12:32.881Z"
+      },
+      "retryAt": "2026-10-06T20:12:32.881Z"
+    },
+    "keta1930/what-the-jev": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T20:12:32.881Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T20:12:32.881Z",
+      "lastReview": {
+        "repo": "keta1930/what-the-jev",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.09,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.32,
+          "category": "other"
+        },
+        "sha": "f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b",
+        "evidenceUrl": "https://github.com/keta1930/what-the-jev/blob/f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b/README.md",
+        "evidenceSha256": "9cc98cfd0a7e0f774b9bac59e1d73b38d558d6f13fbd0bf1b2b0726790207cab",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T20:12:32.881Z"
+      },
+      "retryAt": "2026-10-06T20:12:32.881Z"
+    },
+    "ken-jo/veyra": {
+      "status": "review",
+      "discoveredAt": "2026-09-29T20:12:32.881Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-29T20:12:32.881Z",
+      "lastReview": {
+        "repo": "ken-jo/veyra",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86,
+          "category": "alternatives"
+        },
+        "sha": "4ff422bb336fdf48e7cd1a35c88af28d74ba46f0",
+        "evidenceUrl": "https://github.com/ken-jo/veyra/blob/4ff422bb336fdf48e7cd1a35c88af28d74ba46f0/README.md",
+        "evidenceSha256": "ddca3aea6e4db5ba891a0088788b13e8a783c68a335c8bc5cfe2e818983dee61",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-29T20:12:32.881Z"
+      },
+      "retryAt": "2026-10-06T20:12:32.881Z"
     }
   }
 }

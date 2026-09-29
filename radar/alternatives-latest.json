@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-29T10:07:30.319Z",
+  "at": "2026-09-29T20:12:32.881Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 76,
-      "total": 76,
+      "fetched": 79,
+      "total": 79,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 81,
-      "total": 81,
+      "fetched": 83,
+      "total": 83,
       "status": "complete"
     }
   ],
@@ -20,39 +20,72 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
-  "added": 0,
-  "pending": 91,
+  "reviewed": 4,
+  "added": 1,
+  "pending": 94,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "org2ai/wald-4b",
+      "repo": "keta1930/what-the-jev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.09,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.32,
+        "category": "other"
+      },
+      "sha": "f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b",
+      "evidenceUrl": "https://github.com/keta1930/what-the-jev/blob/f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b/README.md",
+      "evidenceSha256": "9cc98cfd0a7e0f774b9bac59e1d73b38d558d6f13fbd0bf1b2b0726790207cab",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-29T20:12:32.881Z"
+    },
+    {
+      "repo": "ken-jo/veyra",
       "status": "review",
       "score": {
         "jevAbout": 0.93,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.73,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevKeepConfidence": 0.86,
+        "category": "alternatives"
       },
-      "sha": "704ec0f9286fb09029ca08547f7810e7a2009f95",
-      "evidenceUrl": "https://github.com/org2ai/wald-4b/blob/704ec0f9286fb09029ca08547f7810e7a2009f95/README.md",
-      "evidenceSha256": "25d4e2dadb5eb7d21ee7813a62c2f3752fda0a0204dbb33007694142ae908d19",
+      "sha": "4ff422bb336fdf48e7cd1a35c88af28d74ba46f0",
+      "evidenceUrl": "https://github.com/ken-jo/veyra/blob/4ff422bb336fdf48e7cd1a35c88af28d74ba46f0/README.md",
+      "evidenceSha256": "ddca3aea6e4db5ba891a0088788b13e8a783c68a335c8bc5cfe2e818983dee61",
       "model": "jev-latest",
-      "checkedAt": "2026-09-29T10:07:30.319Z"
+      "checkedAt": "2026-09-29T20:12:32.881Z"
     },
     {
-      "repo": "tangwut/jev-alternative",
+      "repo": "opendecisions/opendecisions",
       "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "9d8778653fc606c570a9d17c473ec2c57ac739ce",
-      "evidenceUrl": "https://github.com/tangwut/jev-alternative/blob/9d8778653fc606c570a9d17c473ec2c57ac739ce/README.md",
-      "evidenceSha256": "78031aed455c3e76f5fbf0368c9ccb053689ecd9f407da6dfa151a0bc85e48fe",
+      "score": {
+        "jevAbout": 0.86,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.95,
+        "category": "alternatives"
+      },
+      "sha": "c9fb35b2d859170cc830815c8fee199eac3fba0f",
+      "evidenceUrl": "https://github.com/opendecisions/opendecisions/blob/c9fb35b2d859170cc830815c8fee199eac3fba0f/README.md",
+      "evidenceSha256": "e65128d8f6be66a508305bff5b8fbd64e0a6449c925d416ed5106bfaac0d7363",
       "model": "jev-latest",
-      "checkedAt": "2026-09-29T10:07:30.319Z"
+      "checkedAt": "2026-09-29T20:12:32.881Z"
+    },
+    {
+      "repo": "tamkimd/tamev",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.92,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.9,
+        "category": "alternatives"
+      },
+      "sha": "7e7200865b6ec2bf25039d3ac2c21ce839a31926",
+      "evidenceUrl": "https://github.com/tamkimd/tamev/blob/7e7200865b6ec2bf25039d3ac2c21ce839a31926/README.md",
+      "evidenceSha256": "13eb2da30c9859a11df63bae8b49e97638933e7e8073a245a958bf9501801b6d",
+      "model": "jev-latest",
+      "checkedAt": "2026-09-29T20:12:32.881Z"
     }
   ],
-  "totalProjects": 2024
+  "totalProjects": 2083
 }

@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2082-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2083-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -2120,6 +2120,7 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**jev-patterns**](https://github.com/rodrigopsasaki/jev-patterns) - Typed distribution patterns for Jev responses: descriptive shapes, composable predicates, and exhaustive matching. · `JavaScript`
 - [**jeff-ink**](https://github.com/saembit/jeff-ink) - Type anything, the story stays authored. Jev maps free text to Ink choices. · `TypeScript`
 - [**typryx**](https://github.com/TAIPANBOX/typryx) - Typed answers with a probability for agent stacks: a choice, a score or a yes/no from a versioned template. Only the fields a template names leave the box, and every answer is on the record. An optional add-on to the TAIPANBOX stack, over HTTP and MCP. · `Go`
+- [**tamev**](https://github.com/tamkimd/tamev) - Open-source multi-device Jev-like decision models you can train and run yourself: 5.33 ms on one CPU thread. Apache-2.0. · `Python`
 - [**bivio**](https://github.com/TheRealF/bivio) - Decisioni tipizzate da un modello linguistico, sul tuo computer, senza generare un token. La versione libera dell'idea di Jev. · `Python`
 - [**Kapteeni**](https://github.com/TriusAI/Kapteeni) - A Jev-compatible System One decision model · `Python`
 - [**jev-decision-lab**](https://github.com/yAntPower/jev-decision-lab) - A self-hosted, bilingual playground for Jev’s Choice, Noul, and Score judgments. · `JavaScript`
