@@ -1323,30 +1323,6 @@
       },
       "retryAt": "2026-10-03T08:49:12.120Z"
     },
-    "sfmqrb/awesome-decision-models": {
-      "status": "review",
-      "discoveredAt": "2026-09-26T08:49:12.120Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-26T08:49:12.120Z",
-      "lastReview": {
-        "repo": "sfmqrb/awesome-decision-models",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.15,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.44,
-          "category": "alternatives",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "c6a4c6481936a50f247e115badd315af933bceee",
-        "evidenceUrl": "https://github.com/sfmqrb/awesome-decision-models/blob/c6a4c6481936a50f247e115badd315af933bceee/README.md",
-        "evidenceSha256": "a67de50ea8459d20b9dfab9cf9f9a8033600a3f8f3c558fbad964f1caeca396e",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-26T08:49:12.120Z"
-      },
-      "retryAt": "2026-10-03T08:49:12.120Z"
-    },
     "thegovind/blink": {
       "status": "review",
       "discoveredAt": "2026-09-26T13:52:54.166Z",
@@ -1973,6 +1949,45 @@
         "checkedAt": "2026-09-29T20:12:32.881Z"
       },
       "retryAt": "2026-10-06T20:12:32.881Z"
+    },
+    "samratduttaofficial/watersheep": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T00:45:18.800Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T00:45:18.800Z",
+      "lastReview": {
+        "repo": "samratduttaofficial/watersheep",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "0e0533d1d20d021954e1d854c496332796fc5d97",
+        "evidenceUrl": "https://github.com/samratduttaofficial/watersheep/blob/0e0533d1d20d021954e1d854c496332796fc5d97/README.md",
+        "evidenceSha256": "9191b7bfe6ace8c98805f283aa974af33f681f4555e4aa6b53da25f26e149b2f",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T00:45:18.800Z"
+      },
+      "retryAt": "2026-10-07T00:45:18.800Z"
+    },
+    "algorythm-canada/openjevswift": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T00:45:18.800Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T00:45:18.800Z",
+      "lastReview": {
+        "repo": "algorythm-canada/openjevswift",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.59,
+          "category": "other"
+        },
+        "sha": "5cbe1156d32819c5ea20b2c5f43c68c1ebcfe3d7",
+        "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/5cbe1156d32819c5ea20b2c5f43c68c1ebcfe3d7/README.md",
+        "evidenceSha256": "62270fe9702232df302bdb05e43ee520588c5441aa87f0f557feae5f295f4524",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T00:45:18.800Z"
+      },
+      "retryAt": "2026-10-07T00:45:18.800Z"
     }
   }
 }
