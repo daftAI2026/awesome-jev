@@ -943,6 +943,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amrit-nigam/jev-royal" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/amyrmahdy/decima</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amyrmahdy/decima" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/anakinrm/jev-confidence-kit</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/anakinrm/jev-confidence-kit" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/anakinrm/jev-confidence-kit" />
@@ -15205,6 +15211,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amrit-nigam/jev-royal" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/amyrmahdy/decima</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amyrmahdy/decima" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/anakinrm/jev-confidence-kit</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/anakinrm/jev-confidence-kit" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/anakinrm/jev-confidence-kit" />
@@ -29465,6 +29477,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/amrit-nigam/jev-royal" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/amrit-nigam/jev-royal" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amrit-nigam/jev-royal" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/amyrmahdy/decima</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/amyrmahdy/decima" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/amyrmahdy/decima" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/anakinrm/jev-confidence-kit</loc>

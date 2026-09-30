@@ -96,26 +96,24 @@
     "wfzyx/von": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T18:17:17.528Z",
+      "attempts": 2,
+      "checkedAt": "2026-09-30T20:17:38.263Z",
       "lastReview": {
         "repo": "wfzyx/von",
         "status": "review",
         "score": {
-          "jevAbout": 0.8,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.38,
-          "category": "alternatives",
-          "needsReview": true,
-          "conflictingEvidence": false
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.63,
+          "category": "alternatives"
         },
-        "sha": "657f42f45fcfbf8cbfceaff7af5a2193dcec2b8b",
-        "evidenceUrl": "https://github.com/wfzyx/von/blob/657f42f45fcfbf8cbfceaff7af5a2193dcec2b8b/README.md",
-        "evidenceSha256": "a4e0292699f54ff903978f5bda1705a6483ae216d4c4fe85f978d496c97a89db",
+        "sha": "0acaa0683cc08aae5a71bc2f489d47ab6929ae06",
+        "evidenceUrl": "https://github.com/wfzyx/von/blob/0acaa0683cc08aae5a71bc2f489d47ab6929ae06/README.md",
+        "evidenceSha256": "8fe4ca4f73116704b688a95e2bd7b5bfa7e806e3b7f4d4a3ba9a58c70ebddf29",
         "model": "jev-latest",
-        "checkedAt": "2026-09-23T18:17:17.528Z"
+        "checkedAt": "2026-09-30T20:17:38.263Z"
       },
-      "retryAt": "2026-09-30T18:17:17.528Z"
+      "retryAt": "2026-10-07T20:17:38.263Z"
     },
     "mpuig/system-one": {
       "status": "review",
@@ -407,19 +405,19 @@
     "nandhakishorm/laya": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T18:17:17.528Z",
+      "attempts": 2,
+      "checkedAt": "2026-09-30T20:17:38.263Z",
       "lastReview": {
         "repo": "nandhakishorm/laya",
         "status": "review",
         "reason": "suspicious-review-instructions",
-        "sha": "1e28ac20c0896b1c37a744cd11f740eb98f8b178",
-        "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/1e28ac20c0896b1c37a744cd11f740eb98f8b178/README.md",
-        "evidenceSha256": "6e02340f39a43b8bd27f384cf481da0285ced631d7b84aa03641ba1b100296d4",
+        "sha": "6d942c92081fbc139e736bbd9ac0023223c29b7f",
+        "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/6d942c92081fbc139e736bbd9ac0023223c29b7f/README.md",
+        "evidenceSha256": "b7613f94b485a25f3fbd191bcdbca304049a8ff0dfb24dc0be81251b4b0d5a1d",
         "model": "jev-latest",
-        "checkedAt": "2026-09-23T18:17:17.528Z"
+        "checkedAt": "2026-09-30T20:17:38.263Z"
       },
-      "retryAt": "2026-09-30T18:17:17.528Z"
+      "retryAt": "2026-10-07T20:17:38.263Z"
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -730,24 +728,24 @@
     "mizorewww/laya-coreml": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-23T18:17:17.528Z",
+      "attempts": 2,
+      "checkedAt": "2026-09-30T20:17:38.263Z",
       "lastReview": {
         "repo": "mizorewww/laya-coreml",
         "status": "review",
         "score": {
           "jevAbout": 0.86,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.6,
+          "jevKeepConfidence": 0.51,
           "category": "alternatives"
         },
         "sha": "4619e0483f07adf39068532e85b42ec2347edb83",
         "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/4619e0483f07adf39068532e85b42ec2347edb83/README.md",
         "evidenceSha256": "fa1888e4329ba5eda01b674813120ffba94a1d587af94c607aba545d0184cdb5",
         "model": "jev-latest",
-        "checkedAt": "2026-09-23T18:17:17.528Z"
+        "checkedAt": "2026-09-30T20:17:38.263Z"
       },
-      "retryAt": "2026-09-30T18:17:17.528Z"
+      "retryAt": "2026-10-07T20:17:38.263Z"
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1517,23 +1515,6 @@
       },
       "retryAt": "2026-10-04T14:49:16.442Z"
     },
-    "vicfei/awesome-jev-prompts": {
-      "status": "review",
-      "discoveredAt": "2026-09-27T19:15:22.688Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-27T19:15:22.688Z",
-      "lastReview": {
-        "repo": "vicfei/awesome-jev-prompts",
-        "status": "review",
-        "reason": "missing-open-source-license",
-        "sha": "7c188409c572ebfe61a091f59d00a8ae93373e55",
-        "evidenceUrl": "https://github.com/vicfei/awesome-jev-prompts/blob/7c188409c572ebfe61a091f59d00a8ae93373e55/README.md",
-        "evidenceSha256": "87b4d98393c73335851303fd818e2f12df39a3b7828446f74a7dc93e15f25f71",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-27T19:15:22.688Z"
-      },
-      "retryAt": "2026-10-04T19:15:22.688Z"
-    },
     "lakoreai/pholaya": {
       "status": "review",
       "discoveredAt": "2026-09-27T19:15:22.688Z",
@@ -1906,28 +1887,6 @@
       },
       "retryAt": "2026-10-06T20:12:32.881Z"
     },
-    "keta1930/what-the-jev": {
-      "status": "review",
-      "discoveredAt": "2026-09-29T20:12:32.881Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-29T20:12:32.881Z",
-      "lastReview": {
-        "repo": "keta1930/what-the-jev",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.09,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.32,
-          "category": "other"
-        },
-        "sha": "f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b",
-        "evidenceUrl": "https://github.com/keta1930/what-the-jev/blob/f90e3a6bfe3bfdd015bd4c3d0c6cd5a99622753b/README.md",
-        "evidenceSha256": "9cc98cfd0a7e0f774b9bac59e1d73b38d558d6f13fbd0bf1b2b0726790207cab",
-        "model": "jev-latest",
-        "checkedAt": "2026-09-29T20:12:32.881Z"
-      },
-      "retryAt": "2026-10-06T20:12:32.881Z"
-    },
     "ken-jo/veyra": {
       "status": "review",
       "discoveredAt": "2026-09-29T20:12:32.881Z",
@@ -2058,6 +2017,23 @@
         "checkedAt": "2026-09-30T09:59:31.148Z"
       },
       "retryAt": "2026-10-07T09:59:31.148Z"
+    },
+    "dfm88/toolhunch": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T20:17:38.263Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T20:17:38.263Z",
+      "lastReview": {
+        "repo": "dfm88/toolhunch",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "0998a5a6ec288ef350e463b217ba14e08f88e9ab",
+        "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/0998a5a6ec288ef350e463b217ba14e08f88e9ab/README.md",
+        "evidenceSha256": "e4a85dd96906870b60317f21c9b4a24f5427e8c7b45f3aabc65b5687d31d5234",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T20:17:38.263Z"
+      },
+      "retryAt": "2026-10-07T20:17:38.263Z"
     }
   }
 }

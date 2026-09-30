@@ -113536,5 +113536,49 @@
         "checkedAt": "2026-09-30T12:34:31.273Z"
       }
     }
+  },
+  {
+    "id": "gh-9-amyrmahdy-decima",
+    "type": "github",
+    "title": "decima",
+    "summary": "Open, CPU-sized Jev-style (System One) decision model: situation + question + options → calibrated probabilities. 122M, ~20 ms on one CPU core, runs in your browser.",
+    "tags": [
+      "calibration",
+      "decision-model",
+      "jev",
+      "jev-alternative",
+      "multilingual",
+      "onnx",
+      "system-one",
+      "typed-decisions"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/amyrmahdy/decima",
+    "sourceMeta": {
+      "repo": "amyrmahdy/decima",
+      "author": "amyrmahdy",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "date": "2026-09-27",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "amyrmahdy/decima",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "alternatives"
+        },
+        "sha": "d5a640231dcd9b68d7b8d7eb45dc98f3a6c876a4",
+        "evidenceUrl": "https://github.com/amyrmahdy/decima/blob/d5a640231dcd9b68d7b8d7eb45dc98f3a6c876a4/README.md",
+        "evidenceSha256": "4119ec34e8ee970763e4e25f7fd5d8d03835e9679e61b4f88c1c44597140021c",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T20:17:38.263Z"
+      }
+    }
   }
 ]
