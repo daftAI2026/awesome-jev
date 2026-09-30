@@ -2461,14 +2461,14 @@
   },
   {
     "id": "cmuiz28lz0eusrohy07p4mcvt",
-    "title": "Modal 与 CMU 推出 Quail：联合优化查询规划器与推理引擎加速 AI-SQL",
-    "originalTitle": "QuAIL: Speeding up AI-SQL by jointly optimizing query planner and inference engine",
+    "title": "Modal 与 CMU 推出 Quail：联合优化查询规划器与推理引擎，加速 AI-SQL",
+    "originalTitle": "Quail: Speeding up AI-SQL by jointly optimizing query planner and inference engine",
     "summary": "Modal 与 CMU Full Stack Data Lab 联合推出查询感知推理层 Quail，通过联合优化查询规划器与推理引擎加速 AI-SQL 查询。在某个多表连接查询上，Quail 单张 H100 GPU 每分钟处理超 10 亿 token，比同硬件 vLLM 基线快 10 倍以上，Modal 上成本低于每 10 亿 token 6 美分。",
     "sourceName": "Modal 官方工程博客（RSS）",
     "publishedAt": "2026-09-24T00:00:00.000Z",
     "discoveredAt": "2026-09-24T00:00:00.000Z",
     "category": "ai-products",
-    "score": 48,
+    "score": 43,
     "selected": false,
     "reason": null,
     "originalUrl": "https://modal.com/blog/quail-billion-tpm",
@@ -3043,5 +3043,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/09/29/liquid-ai-releases-d1-a-decision-model-that-returns-calibrated-probabilities-with-zero-output-tokens/",
     "aihotUrl": "https://aihot.news/items/u78k2wjhfgffqy7g206rz5vq9"
+  },
+  {
+    "id": "s8c4avy3el5n2hb52o8z87tvt",
+    "title": "OpenAI DevDay 2026、Manus 2.0 与 Claude Sonnet 5.5 发布",
+    "originalTitle": "BestBlogs 早报 · 09-30｜OpenAI DevDay 2026 大会，Manus 2.0 推出 Cue，Claude Sonnet 5.5 降低任务成本",
+    "summary": "OpenAI DevDay 2026 发布常驻智能体 Dots、协作空间 ChatGPT Space、基于 GPT-6 Luna 的 Decisions API 及 Codex 云端环境。",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-09-30T00:23:15.000Z",
+    "discoveredAt": "2026-09-30T00:48:36.341Z",
+    "category": "industry",
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/hongming731/status/2105091066156536126",
+    "aihotUrl": "https://aihot.news/items/s8c4avy3el5n2hb52o8z87tvt"
   }
 ]
