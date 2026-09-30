@@ -3088,5 +3088,20 @@
     "reason": null,
     "originalUrl": "https://arxiv.org/abs/2609.35342",
     "aihotUrl": "https://aihot.news/items/pfbo0wtwfjx63fuwikw8q6b6v"
+  },
+  {
+    "id": "z9lxb2hubagac2ibm7i26at6j",
+    "title": "Pi.dev 官方复盘：为何把曾公开拒绝的 MCP 纳入核心",
+    "originalTitle": "Pi.dev：你说过不搞MCP",
+    "summary": "Earendil 团队发文解释 Pi 此前曾公开声明不支持 MCP，如今却将其纳入核心功能。原因一是 MCP 本身一年间已有改进，二是为支持延迟工具加载等新模型能力所需的工具元数据改动本身通用，还能让 Jev 更容易在 Pi 中使用。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-09-30T11:24:17.398Z",
+    "discoveredAt": "2026-09-30T11:37:35.794Z",
+    "category": "ai-products",
+    "score": 59,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://earendil.com/posts/you-said-no-mcp/",
+    "aihotUrl": "https://aihot.news/items/z9lxb2hubagac2ibm7i26at6j"
   }
 ]
