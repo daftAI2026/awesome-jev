@@ -1988,6 +1988,76 @@
         "checkedAt": "2026-09-30T00:45:18.800Z"
       },
       "retryAt": "2026-10-07T00:45:18.800Z"
+    },
+    "computational-social-science/jevrsi": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T09:59:31.148Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T09:59:31.148Z",
+      "lastReview": {
+        "repo": "computational-social-science/jevrsi",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.67,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.28,
+          "category": "alternatives"
+        },
+        "sha": "64f188c6b30ef8b933655da5311b8b7dfac96939",
+        "evidenceUrl": "https://github.com/computational-social-science/jevrsi/blob/64f188c6b30ef8b933655da5311b8b7dfac96939/README.md",
+        "evidenceSha256": "c8cbffccac61e3dfc9aa75ba212f7c4f97f616754318bbddb33c7d6990ed03dd",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T09:59:31.148Z"
+      },
+      "retryAt": "2026-10-07T09:59:31.148Z"
+    },
+    "hitsz-tmg/jevembed": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T09:59:31.148Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T09:59:31.148Z",
+      "lastReview": {
+        "repo": "hitsz-tmg/jevembed",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.81,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "bc7e6bfad78b2971fe11fa13942af5a189f5a8d9",
+        "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/bc7e6bfad78b2971fe11fa13942af5a189f5a8d9/README.md",
+        "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T09:59:31.148Z"
+      },
+      "retryAt": "2026-10-07T09:59:31.148Z"
+    },
+    "timiku/v1-decisions-vllm": {
+      "status": "review",
+      "discoveredAt": "2026-09-30T09:59:31.148Z",
+      "attempts": 1,
+      "checkedAt": "2026-09-30T09:59:31.148Z",
+      "lastReview": {
+        "repo": "timiku/v1-decisions-vllm",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.38,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "23fbc042c4321a2dab2eb7bcbb8508a8a51a5ea6",
+        "evidenceUrl": "https://github.com/timiku/v1-decisions-vllm/blob/23fbc042c4321a2dab2eb7bcbb8508a8a51a5ea6/README.md",
+        "evidenceSha256": "579935429b5741c1db5fea3fd3e6838a8918b65153e1e445e5ec588b319d6ef6",
+        "model": "jev-latest",
+        "checkedAt": "2026-09-30T09:59:31.148Z"
+      },
+      "retryAt": "2026-10-07T09:59:31.148Z"
     }
   }
 }
