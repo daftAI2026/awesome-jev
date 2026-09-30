@@ -3058,5 +3058,35 @@
     "reason": null,
     "originalUrl": "https://x.com/hongming731/status/2105091066156536126",
     "aihotUrl": "https://aihot.news/items/s8c4avy3el5n2hb52o8z87tvt"
+  },
+  {
+    "id": "filfkf59gnd0qas2h386bf4tm",
+    "title": "Chinese-Jev：将 System One 模型引入中文任务",
+    "originalTitle": "Chinese-Jev: Bringing System One Model to Chinese-Language Tasks",
+    "summary": "研究者推出 Chinese-Jev，将 Jev 这类 System One 模型扩展到中文决策任务，并发布评测基准 CJ-Bench。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-29T00:00:00.000Z",
+    "discoveredAt": "2026-09-30T04:54:35.442Z",
+    "category": "paper",
+    "score": 33,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2609.36965",
+    "aihotUrl": "https://aihot.news/items/filfkf59gnd0qas2h386bf4tm"
+  },
+  {
+    "id": "pfbo0wtwfjx63fuwikw8q6b6v",
+    "title": "Jev 心里想\"我不知道\"却不说出口：Sys1Cal-v1 概率校准数据集发布",
+    "originalTitle": "Jev thinks \"I don't know'', but doesn't say it: Introducing Sys1Cal-v1 Dataset for Probability Calibration",
+    "summary": "针对 System One 模型 Jev 的概率校准承诺缺乏公开测试的问题，研究者发布 Sys1Cal-v1 数据集，用已知精确概率 P(A) 的真/假命题，通过 Noul、Choice、Score 三个原语查询并以全变差距离评估。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-28T00:00:00.000Z",
+    "discoveredAt": "2026-09-30T07:26:32.470Z",
+    "category": "paper",
+    "score": 45,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2609.35342",
+    "aihotUrl": "https://aihot.news/items/pfbo0wtwfjx63fuwikw8q6b6v"
   }
 ]
