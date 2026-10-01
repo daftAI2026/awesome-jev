@@ -1,16 +1,16 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 7,
-    "\"typesafe.ai\" in:readme fork:false": 7,
-    "\"Jev\" \"System One\" in:readme fork:false": 7,
-    "topic:typesafe-ai fork:false": 1,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
-    "\"TypeSafe\" \"Jev\" fork:false": 7,
-    "code:\"api.typesafe.ai\" in:file": 1,
-    "code:\"@typesafe-ai/sdk\" in:file": 1,
-    "code:\"TYPESAFE_API_KEY\" in:file": 5,
-    "code:\"jev-latest\" in:file": 8
+    "topic:jev fork:false": 9,
+    "\"typesafe.ai\" in:readme fork:false": 9,
+    "\"Jev\" \"System One\" in:readme fork:false": 9,
+    "topic:typesafe-ai fork:false": 3,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
+    "\"TypeSafe\" \"Jev\" fork:false": 9,
+    "code:\"api.typesafe.ai\" in:file": 3,
+    "code:\"@typesafe-ai/sdk\" in:file": 3,
+    "code:\"TYPESAFE_API_KEY\" in:file": 7,
+    "code:\"jev-latest\" in:file": 10
   },
   "metadataCursor": 0,
   "candidates": {
@@ -351,7 +351,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-25T17:11:29.590Z"
       },
-      "stars": 140,
+      "stars": 143,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -1046,7 +1046,7 @@
         }
       ],
       "retryAt": "2026-10-07T22:16:19.563Z",
-      "stars": 340
+      "stars": 339
     },
     "gbesse/jev-cardgen": {
       "status": "review",
@@ -1440,7 +1440,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 12
+      "stars": 11
     },
     "frostney/clean-code-review": {
       "status": "review",
@@ -5449,7 +5449,7 @@
     "openbyteinc/quantdinger": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5460,9 +5460,9 @@
           "path": "backend_api_python/app/routes/settings.py"
         }
       ],
-      "checkedAt": "2026-09-27T12:02:23.218Z",
-      "retryAt": "2026-10-01T12:02:23.218Z",
-      "stars": 12344
+      "checkedAt": "2026-10-01T13:14:43.978Z",
+      "retryAt": "2026-10-08T13:14:43.978Z",
+      "stars": 12349
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -5749,7 +5749,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 110
+      "stars": 109
     },
     "raniellimontagna/jev-guard-mcp": {
       "status": "review",
@@ -6313,7 +6313,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1239
+      "stars": 1241
     },
     "reactive-skills/reactive-skills": {
       "status": "review",
@@ -6807,7 +6807,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-25T17:11:29.590Z"
       },
-      "stars": 184,
+      "stars": 183,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -8480,7 +8480,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 114
+      "stars": 116
     },
     "mdgchamomile/pi-jev": {
       "status": "error",
@@ -12355,7 +12355,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1
+      "stars": 0
     },
     "thecnfor/shizurak": {
       "status": "review",
@@ -14997,7 +14997,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
       "attempts": 1,
-      "stars": 4480,
+      "stars": 4481,
       "checkedAt": "2026-09-25T11:50:42.839Z",
       "lastReview": {
         "repo": "embabel/embabel-agent",
@@ -27097,7 +27097,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T11:39:00.649Z",
       "attempts": 1,
-      "stars": 121,
+      "stars": 139,
       "checkedAt": "2026-09-25T17:11:29.590Z",
       "lastReview": {
         "repo": "libingzheren/jev-mem",
@@ -28876,7 +28876,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 1,
-      "stars": 16,
+      "stars": 17,
       "checkedAt": "2026-09-26T04:58:02.853Z",
       "lastReview": {
         "repo": "vinibrsl/gut",
@@ -30021,7 +30021,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 2,
       "checkedAt": "2026-09-26T04:58:02.853Z",
       "lastReview": {
         "repo": "satiricalguru/hinge-jev",
@@ -32626,7 +32626,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 2,
       "checkedAt": "2026-09-26T04:58:02.853Z",
       "lastReview": {
         "repo": "mani-aiml/jev-demos",
@@ -34306,7 +34306,7 @@
       "status": "review",
       "discoveredAt": "2026-09-24T21:31:04.130Z",
       "attempts": 1,
-      "stars": 15,
+      "stars": 14,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -41021,7 +41021,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 8049,
+      "stars": 8067,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "yaoapp/yao",
@@ -41379,7 +41379,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 1,
-      "stars": 39,
+      "stars": 40,
       "checkedAt": "2026-09-27T16:57:57.246Z",
       "lastReview": {
         "repo": "shamspias/laya-bangla",
@@ -42253,9 +42253,12 @@
         {
           "query": "\"jev-latest\" in:file",
           "path": "src/server/jev.ts"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "docs/permissions.md"
         }
-      ],
-      "retryAt": "2026-10-06T12:52:50.716Z"
+      ]
     },
     "bluewakame/donguriko-live": {
       "status": "review",
@@ -44020,9 +44023,12 @@
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "internal/cli/auth_test.go"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": ".github/workflows/integration.yml"
         }
       ],
-      "retryAt": "2026-10-04T16:57:57.246Z",
       "checkedAt": "2026-09-27T16:57:57.246Z",
       "lastReview": {
         "repo": "frodi-karlsson/onesie",
@@ -45410,7 +45416,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T12:52:50.716Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "vsekhar/decide",
@@ -45486,7 +45492,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T12:52:50.716Z",
       "attempts": 1,
-      "stars": 4,
+      "stars": 6,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "aleskxyz/kev-onnx",
@@ -47261,7 +47267,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 8,
+      "stars": 9,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "caiovicentino/jev-risk-check-provider",
@@ -47772,6 +47778,36 @@
         "checkedAt": "2026-10-01T05:53:38.417Z"
       },
       "retryAt": "2026-10-08T05:53:38.417Z"
+    },
+    "faizahmd2/pinproc": {
+      "status": "pending",
+      "discoveredAt": "2026-10-01T13:14:43.978Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "asertyui1/decide.js": {
+      "status": "pending",
+      "discoveredAt": "2026-10-01T13:14:43.978Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "emiroberti77/jev-py-integration": {
+      "status": "pending",
+      "discoveredAt": "2026-10-01T13:14:43.978Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "yichenbc/jev-charactor": {
+      "status": "pending",
+      "discoveredAt": "2026-10-01T13:14:43.978Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "stefafafan/jev-fzf": {
+      "status": "pending",
+      "discoveredAt": "2026-10-01T13:14:43.978Z",
+      "attempts": 0,
+      "stars": 0
     }
   }
 }

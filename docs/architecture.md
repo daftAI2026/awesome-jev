@@ -50,7 +50,7 @@ The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Acti
 Typical Git-connected Workers Builds flow:
 
 1. Push to `main`
-2. `npm run build` validates news, generates the sitemap/OG image, prerenders catalog HTML and builds the client/server bundles with TypeScript checks → `dist/`
+2. `npm run build` validates catalog capacity/structure, reports rationale coverage, validates news, generates the sitemap/OG image, prerenders catalog HTML and builds the client/server bundles with TypeScript checks → `dist/`
 3. `npx wrangler deploy`
 
 Every data commit triggers a full application build; it is not incremental compilation. Cloudflare's asset upload can skip unchanged files. Keep the current finite catalog as static HTML, and measure actual Workers Builds time before adding a more complex incremental publishing system.
