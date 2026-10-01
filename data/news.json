@@ -3193,5 +3193,20 @@
     "reason": null,
     "originalUrl": "https://x.com/openclaw/status/2105349910136799335",
     "aihotUrl": "https://aihot.news/items/mwjpf3tb5hxgs7xgjd9ec80jq"
+  },
+  {
+    "id": "do7k6m2naho7vii0d5mlirn2b",
+    "title": "Latent Space 在 OpenAI DevDay 专访 Ari Weinstein 与 Nikunj Handa，谈 Computer Use 进展与 Decisions API 由来",
+    "originalTitle": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+    "summary": "Latent Space 在 OpenAI DevDay 发布两段专访：Computer Use 负责人 Ari Weinstein 称 Computer Use 已比几个月前\"180 度不同\"。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-09-30T22:23:40.000Z",
+    "discoveredAt": "2026-09-30T23:17:37.567Z",
+    "category": "tip",
+    "score": 69,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.latent.space/p/devday-2026",
+    "aihotUrl": "https://aihot.news/items/do7k6m2naho7vii0d5mlirn2b"
   }
 ]
