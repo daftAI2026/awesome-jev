@@ -3208,5 +3208,50 @@
     "reason": null,
     "originalUrl": "https://www.latent.space/p/devday-2026",
     "aihotUrl": "https://aihot.news/items/do7k6m2naho7vii0d5mlirn2b"
+  },
+  {
+    "id": "e35nbut09oibxnr7lcfhdefv8",
+    "title": "Jev 决策导向模型推荐重排序实证研究：与 Qwen 重排序器的质量-延迟权衡对比",
+    "originalTitle": "Decision-Oriented Recommendation Reranking: An Empirical Study of Jev",
+    "summary": "一项受控实证研究对比了 TypeSafe AI 称为\"System One Model\"的 Jev 与推荐专用模型及 pointwise、listwise Qwen 重排序器在多个 Amazon Reviews 领域和候选集规模下的推荐重排序表现。结果显示 Jev 在保持较强推荐效果的同时，延迟增长比 pointwise Qwen 重排序器更为平缓，但服务延迟仍显著高于推荐专用模型。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-30T00:00:00.000Z",
+    "discoveredAt": "2026-10-01T04:21:39.071Z",
+    "category": "paper",
+    "score": 31,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2609.40241",
+    "aihotUrl": "https://aihot.news/items/e35nbut09oibxnr7lcfhdefv8"
+  },
+  {
+    "id": "r3hcndpnyfh6rf00flkfb52ex",
+    "title": "JEV 等直接决策模型存在序数尺度利用偏差，BA-LoRA 后训练可将利用率从约 47% 提升至 86%",
+    "originalTitle": "More Choices, Fewer Decisions: Ordinal-Scale Bias in JEV-like Direct-Decision Models",
+    "summary": "研究分析 JEV 1.13 与三个开源 KEV 模型，发现直接决策模型存在\"序数尺度利用偏差\"：在 ANLI 上 JEV 准确率 74.95%，却把 38.8% 的预测和 51.3% 的错误都归为 Neutral。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-30T00:00:00.000Z",
+    "discoveredAt": "2026-10-01T03:23:36.067Z",
+    "category": "paper",
+    "score": 39,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2609.38827",
+    "aihotUrl": "https://aihot.news/items/r3hcndpnyfh6rf00flkfb52ex"
+  },
+  {
+    "id": "ytx2eh7sl54lo6owh2pvjnvpt",
+    "title": "OpenClaw 播客第12期谈决策模型与智能体",
+    "originalTitle": "Jev &amp; OpenClaw Enterprise",
+    "summary": "Jev & OpenClaw Enterprise\n\n@hrudolph 和 @Pat_Erichsen 与来自 @typesafeai 的 @allietheicon 以及 @jlehman_ 讨论决策模型。来自 @OpenAI 的 @kevins8 稍后加入，讨论工作中的智能体。\n\n观看或收听 The ClawCast 第 12 期：\nhttps://openclaw.ai/podcast/episode-12",
+    "sourceName": "X：OpenClaw (@openclaw)",
+    "publishedAt": "2026-10-01T01:50:28.000Z",
+    "discoveredAt": "2026-10-01T02:18:38.101Z",
+    "category": "tip",
+    "score": 16,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/openclaw/status/2105475400797413578",
+    "aihotUrl": "https://aihot.news/items/ytx2eh7sl54lo6owh2pvjnvpt"
   }
 ]
