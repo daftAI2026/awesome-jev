@@ -1,12 +1,12 @@
 /**
- * [INPUT]: 依赖 GitHub 数据、项目查找工具、详情组件和共享 404 页面
+ * [INPUT]: 依赖 getProject 同源数据边界、项目身份工具、详情组件和共享 404 页面
  * [OUTPUT]: 对外提供 项目详情 Route、预渲染元数据及缺失项目边界
  * [POS]: routes 的独立项目页，与目录内的遮罩预览共享项目身份
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { ArrowLeft, ArrowSquareOut, GithubLogo } from '@phosphor-icons/react'
-import githubData from '../../data/github.json'
+import { getProject } from '@/lib/catalog.functions'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
 import { GithubProjectContent } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
@@ -18,20 +18,19 @@ import { useSaved } from '@/hooks/useSaved'
 import { useI18n } from '@/i18n'
 import { catalogs } from '@/i18n/catalogs'
 import { CATEGORY_LABEL, type Category } from '@/lib/categories'
-import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
+import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedHead } from '@/lib/locale-head'
 import { isLocalizedRouteParam, localeFromParam, localizedPath } from '@/lib/locale-routes'
 import type { DirectoryItem } from '@/lib/types'
 
 type Project = DirectoryItem & { category?: Category }
-const projects = githubData as Project[]
 
 export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
   beforeLoad: ({ params }) => {
     if (!isLocalizedRouteParam(params.locale)) throw notFound()
   },
-  loader: ({ params }) => {
-    const item = findGitHubProject(projects, params.owner, params.repo)
+  loader: async ({ params }) => {
+    const item = await getProject({ data: { owner: params.owner, repo: params.repo } })
     if (!item) throw notFound()
     return item as Project
   },

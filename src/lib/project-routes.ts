@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 目录条目类型与 GitHub URL/路径白名单
+ * [OUTPUT]: 对外提供 规范仓库身份、详情路径与无歧义目录查找
+ * [POS]: lib 的项目身份边界，路由与采集侧共享规则而不依赖快照
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { DirectoryItem } from './types.ts'
 
 export interface GitHubRepository {

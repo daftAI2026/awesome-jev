@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 仓库 URL、三语言收录说明和固定源码证据
+ * [OUTPUT]: 对外提供 InclusionBasis、固定来源解析及证据预算校验
+ * [POS]: lib 的收录依据边界，采集和详情展示共享真实性规则
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 export interface InclusionBasis {
   text: { en: string; zh: string; ja: string }
   evidence: Array<{ url: string; quote: string }>

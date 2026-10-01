@@ -1,3 +1,7 @@
+# [INPUT]: 依赖 GitHub Issue/PR 事件、可信 main 审查脚本与检查点
+# [OUTPUT]: 生成建议性审查评论并保留可恢复预算状态
+# [POS]: workflows 的投稿审查链路；不 checkout PR head，不改目录或合并
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev submission review
 on:
   schedule:

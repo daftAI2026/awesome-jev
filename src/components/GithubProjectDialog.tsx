@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Dialog、目录条目、收录证据校验及共享预览头尾
+ * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent
+ * [POS]: components 的项目证据阅读层，目录预览与直接详情不复制内容
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Dialog } from '@base-ui/react/dialog'
 import { ArrowSquareOut } from '@phosphor-icons/react'
 import type { RefObject } from 'react'

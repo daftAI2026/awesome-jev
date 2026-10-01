@@ -1,3 +1,7 @@
+# [INPUT]: 依赖 AIHOT 同步、新闻验证和构建脚本
+# [OUTPUT]: 执行独立新闻同步并发布快照及站点地图
+# [POS]: workflows 的新闻链路；不修改 GitHub 项目数据
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev news sync
 on:
   schedule:

@@ -42,6 +42,8 @@ One continuous canvas is the default. A card, border, or contrasting surface mus
 
 Show source-backed values, their units, and necessary qualifiers together. Do not invent precision or encode ranking with decorative graphics. If peers cannot share one honest visual scale, use aligned text instead. Prefer direct labels over legends and icon-only controls.
 
+UI primitives use Tailwind’s standard `transition`, not `transition-all`: inherited `visibility` is a rendering gate, not an interaction animation. Keep existing color, focus-ring, opacity and press translation feedback.
+
 Default to stillness. Motion is justified only when it explains a state change, and it must respect `prefers-reduced-motion`. Reject decorative gradients, glows, blobs, textures, glass, fake depth, stock illustrations, and arbitrary third-party marks.
 
 ## Review before shipping

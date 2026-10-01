@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 既有项目/新闻分类与 i18n 标签契约
+ * [OUTPUT]: 对外提供 分类白名单、分类类型及文案键映射
+ * [POS]: lib 的 taxonomy 权威，采集、路由和界面使用同一分类
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 export const CATEGORIES = ['agents', 'applications', 'browser', 'developer', 'resources', 'alternatives', 'directories', 'research', 'sdk', 'other'] as const
 export type Category = (typeof CATEGORIES)[number]
 

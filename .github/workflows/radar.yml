@@ -1,3 +1,7 @@
+# [INPUT]: 依赖 GitHub 搜索、核心雷达和已有目录校验脚本
+# [OUTPUT]: 执行核心采集、PR 校验与经过验证的数据发布
+# [POS]: workflows 的核心采集链路；扫描、验证与发布权限分离
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev ecosystem radar
 on:
   push:

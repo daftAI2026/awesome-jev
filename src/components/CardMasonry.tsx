@@ -1,7 +1,14 @@
+/**
+ * [INPUT]: 依赖 TanStack Virtual、masonry 几何/启动窗口规则、ItemCard 与当前语言
+ * [OUTPUT]: 对外提供有序且有界的 CardMasonry，窄屏预渲染内容可在水合前阅读
+ * [POS]: components 的项目虚拟布局；初始流保留 SSR 前缀与阅读位置，就绪提交同步接管虚拟窗口
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
 import { useCallback, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
-import { useWindowVirtualizer } from '@tanstack/react-virtual'
+import { useWindowVirtualizer, windowScroll } from '@tanstack/react-virtual'
 import type { DirectoryItem } from '@/lib/types'
-import { MASONRY_ESTIMATE_SIZE, MASONRY_GAP, MASONRY_OVERSCAN, virtualCardColumnStyle } from '@/lib/masonry'
+import { MASONRY_ESTIMATE_SIZE, MASONRY_GAP, MASONRY_OVERSCAN, virtualCardColumnStyle, masonryRenderItems, masonryBootstrapScrollOffset, masonryScrollAdjustment } from '@/lib/masonry'
 import { ItemCard } from '@/components/ItemCard'
 import { useI18n } from '@/i18n'
 
@@ -38,7 +45,16 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
     scrollMargin,
     initialRect: INITIAL_VIEWPORT,
     initialOffset: 0,
+    // --- SSR 身份不变；水合前用户已读到的位置不能被初始化同步清零 ---
+    scrollToFn: (offset, options, instance) => windowScroll(
+      masonryBootstrapScrollOffset(offset, window.scrollY, ready),
+      ready ? options : { ...options, adjustments: undefined }, instance,
+    ),
   })
+  // --- Virtualizer 的公开实例策略，不是 React 状态；自然流阶段禁止内部滚动补偿 ---
+  // oxlint-disable-next-line react/immutability
+  virtualizer.shouldAdjustScrollPositionOnItemSizeChange = masonryScrollAdjustment(ready)
+  const [initialVirtualItems] = useState(() => virtualizer.getVirtualItems())
 
   useLayoutEffect(() => {
     const list = listRef.current
@@ -46,10 +62,13 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
     let frame = 0
     let previousWidth = list.clientWidth
     const remeasureMounted = () => {
-      for (const card of list.children) {
+      // --- 先读后写，避免每次更新虚拟尺寸后再次触发布局读取 ---
+      const measurements = Array.from(list.children, (card) => {
         const element = card as HTMLLIElement
-        const index = Number(element.dataset.index)
-        if (Number.isInteger(index)) virtualizer.resizeItem(index, element.offsetHeight)
+        return { index: Number(element.dataset.index), height: element.offsetHeight }
+      })
+      for (const { index, height } of measurements) {
+        if (Number.isInteger(index)) virtualizer.resizeItem(index, height)
       }
     }
     const syncLayout = () => {
@@ -87,7 +106,9 @@ export function CardMasonry({ items, ranks, onPreview, savedIds, onToggleSaved }
     }
   }, [columns, locale, virtualizer])
 
-  const virtualItems = virtualizer.getVirtualItems()
+  const virtualItems = masonryRenderItems(
+    initialVirtualItems, virtualizer.getVirtualItems(), ready, items.length, columns,
+  )
   return (
     <div className="masonry-shell">
       {items.length > 0 && !ready && (

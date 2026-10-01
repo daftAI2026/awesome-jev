@@ -1,5 +1,11 @@
+/**
+ * [INPUT]: 依赖 getNewsIndex 同源数据边界、新闻搜索校验与本地化 head
+ * [OUTPUT]: 对外提供新闻索引 Route 和可供 App 消费的 loaderData
+ * [POS]: routes 的新闻数据入口；预渲染保留首屏，客户端导航由 Start 读取同一快照
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createFileRoute } from '@tanstack/react-router'
-import newsData from '../../data/news.json'
+import { getNewsIndex } from '@/lib/catalog.functions'
 import { newsPreviewSearch } from '@/lib/news'
 import { localizedHead } from '@/lib/locale-head'
 import { localeFromParam } from '@/lib/locale-routes'
@@ -9,7 +15,7 @@ const DESCRIPTION = 'Recent news and updates related to TypeSafe Jev and its ope
 
 export const Route = createFileRoute('/_directory/{-$locale}/news')({
   validateSearch: newsPreviewSearch,
-  loader: () => newsData,
+  loader: () => getNewsIndex(),
   head: ({ params }) => {
     const locale = localeFromParam(params.locale)
     return localizedHead({

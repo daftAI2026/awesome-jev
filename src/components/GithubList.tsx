@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 TanStack Virtual、目录条目、项目身份与收藏动作
+ * [OUTPUT]: 对外提供 GithubList 的有界单通道排名列表
+ * [POS]: components 的项目列表布局，与 CardMasonry 共享数据和预览行为
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Star } from '@phosphor-icons/react'
 import { memo, useCallback, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'

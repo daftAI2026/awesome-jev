@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 GitHub 事件/来源读取、既有整仓审查与可信检查点存储
+ * [OUTPUT]: 对外提供投稿识别、候选提取、建议性审查和机器人评论的预算/缓存边界
+ * [POS]: scripts 的 Issue/PR 审查编排；仅运行可信代码，不写目录或合并申请
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { readFileSync, appendFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Tailwind、shadcn 与 Geist 字体样式
- * [OUTPUT]: 对外提供 明暗主题语义 token、全局基础样式和目录布局规则
+ * [OUTPUT]: 对外提供 明暗主题 token、基础样式及窄屏水合前可阅读的目录流布局
  * [POS]: src 的唯一视觉基础，由根文档引入
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -70,6 +70,28 @@
 @media (scripting: enabled) and (min-width: 64rem) {
   .masonry-shell:has(.card-masonry:not([data-masonry-ready="true"])) .masonry-skeleton {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- 窄屏只有一列，预渲染卡片无需等待 JavaScript 计算瀑布流 --- */
+@media (scripting: enabled) and (max-width: 39.999rem) {
+  .card-masonry:not([data-masonry-ready="true"]) {
+    display: flex;
+    height: auto !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .masonry-shell:has(.card-masonry:not([data-masonry-ready="true"])) .card-masonry > li {
+    position: relative;
+    left: auto !important;
+    width: auto !important;
+    transform: none !important;
+    visibility: visible;
+  }
+
+  .masonry-shell:has(.card-masonry:not([data-masonry-ready="true"])) .masonry-skeleton {
+    display: none;
   }
 }
 

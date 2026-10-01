@@ -1,3 +1,7 @@
+# [INPUT]: 依赖替代实现采集与可信快照校验脚本
+# [OUTPUT]: 执行独立开源替代实现的发现、验证与发布
+# [POS]: workflows 的替代实现链路；独立开关、预算和状态
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Open-source alternatives radar
 on:
   schedule:

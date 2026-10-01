@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Fuse.js 与目录公共类型
+ * [OUTPUT]: 对外提供 项目检索、标签提取及来源/标签过滤
+ * [POS]: lib 的本地搜索层，目录数据由调用方提供，不读取网络
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import Fuse, { type IFuseOptions } from 'fuse.js'
 import type { DirectoryItem, FilterType } from './types'
 

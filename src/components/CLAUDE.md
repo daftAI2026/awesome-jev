@@ -3,7 +3,7 @@
 
 成员清单
 AsciiWordmark.tsx: 原始字符字标，CSS 容器宽度适配
-CardMasonry.tsx: 有序项目虚拟瀑布流，视口内测量而不挂载完整目录
+CardMasonry.tsx: 有序项目虚拟瀑布流，预就绪保持 SSR 前缀与阅读位置，就绪提交同步接管有界窗口
 DecryptedBrand.tsx: 品牌链接与悬停解码适配，遵循减少动态效果偏好
 DecryptedText.tsx: React Bits 字符解码实现，被品牌适配器消费
 FeaturedProjectBorder.tsx: 星标阈值边框适配，按可见性控制装饰动画

@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 TanStack Virtual、新闻纯规则、i18n 与新闻摘要对话框
+ * [OUTPUT]: 对外提供 NewsPanel 的本地检索与有界分日时间线
+ * [POS]: components 的新闻索引阅读层，路由交付快照而不抓取原文
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import { useI18n, type Locale } from '@/i18n'

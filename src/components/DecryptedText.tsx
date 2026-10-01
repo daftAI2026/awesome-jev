@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 状态与 motion/react 的字符动画容器
+ * [OUTPUT]: 对外提供 DecryptedText 上游字符解码组件
+ * [POS]: components 的署名第三方实现，站点行为由 DecryptedBrand 适配而非另造动画
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 /*
  * React Bits DecryptedText, adapted from commit bb9bebe4ed4ddeecfb4304079be6470ef8573273
  * https://github.com/DavidHDev/react-bits/blob/bb9bebe4ed4ddeecfb4304079be6470ef8573273/src/ts-tailwind/TextAnimations/DecryptedText/DecryptedText.tsx

@@ -26,6 +26,7 @@ export const ja: Messages = {
   projectNotFound: 'プロジェクトが見つかりません',
   newsNotFound: 'ニュースが見つかりません',
   openGithub: 'GitHub でソースコードを見る',
+  submitProject: 'プロジェクトを投稿',
   languageLabel: '言語',
   themeLabel: '外観',
   themeSystem: 'システム設定に合わせる',

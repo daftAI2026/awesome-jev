@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 inclusion 的固定源码收录依据类型
+ * [OUTPUT]: 对外提供 DirectoryItem、SourceMeta 及目录筛选/排序/展示类型
+ * [POS]: lib 的数据接口层，将采集快照与展示消费者解耦
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { InclusionBasis } from './inclusion.ts'
 
 export type ItemType = 'github'

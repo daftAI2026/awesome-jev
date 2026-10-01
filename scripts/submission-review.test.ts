@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖投稿审核工具与离线 GitHub/模型/存储替身
+ * [OUTPUT]: 对外提供事件、安全边界、预算和重试状态的回归验证
+ * [POS]: scripts 的投稿审查测试；证明外部申请不会越过可信写入与审核边界
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'

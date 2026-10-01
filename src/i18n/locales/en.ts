@@ -26,6 +26,7 @@ export const en = {
   projectNotFound: 'Project not found',
   newsNotFound: 'News not found',
   openGithub: 'Open source on GitHub',
+  submitProject: 'Submit a project',
   languageLabel: 'Language',
   themeLabel: 'Appearance',
   themeSystem: 'System',

@@ -2,7 +2,17 @@
 
 Thanks for helping curate **Awesome JEV** — a GitHub-first directory of **Jev ecosystem projects** about **TypeSafe AI’s System One model [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** (typed decisions, SDKs, demos, integrations).
 
-## Add items via JSON
+## Suggest a project (no code changes required)
+
+Open the [Submit a project Issue form](https://github.com/daftAI2026/awesome-jev/issues/new?template=submit-project.yml), also linked beside the source-repository button in the website header. Sign in to GitHub and provide one repository URL, its purpose, and concrete Jev / System One evidence in that repository. Independent typed-decision alternatives should include their license evidence. Check existing entries and open submissions first; do not post credentials or private material.
+
+The form keeps the `[Submission]` title prefix so the existing review bot recognizes the request without requiring a label. The bot reads repository sources and posts advisory findings; it does not add entries, merge PRs or certify security. Maintainers make the final inclusion decision. Keep evidence links within the submitted repository: the current Issue parser treats other GitHub repository links in the body as additional candidates. See [the review boundary](docs/collector.md#submission-review-bot-issues-and-pull-requests).
+
+无需修改代码：点击网站页头“提交项目”，登录 GitHub 后填写仓库地址、项目用途及同仓库内的关联证据。每个申请推荐一个项目，维护者最终确认收录；机器人不会自动上架。
+
+## Add items via pull request
+
+Prefer a PR when you want to make the actual catalog change yourself. Fork the repository, edit the JSON below, regenerate README, then open a PR using the supplied template. A PR template describes changes; it does not create a catalog entry by itself.
 
 - GitHub projects: [`data/github.json`](data/github.json)
 

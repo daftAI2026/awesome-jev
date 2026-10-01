@@ -28,6 +28,7 @@ export const zh: Messages = {
   projectNotFound: '项目不存在',
   newsNotFound: '新闻不存在',
   openGithub: '在 GitHub 上查看源码',
+  submitProject: '提交项目',
   languageLabel: '语言',
   themeLabel: '外观',
   themeSystem: '跟随系统',

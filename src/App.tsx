@@ -1,12 +1,12 @@
 /**
  * [INPUT]: 依赖 目录数据、搜索/排序工具及项目/新闻/收藏组件
- * [OUTPUT]: 对外提供 App 目录布局与筛选交互
+ * [OUTPUT]: 对外提供 App 目录布局、筛选交互及 GitHub 投稿表单入口
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
-import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour, X } from '@phosphor-icons/react'
+import { GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
 import githubData from '../data/github.json'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
@@ -311,6 +311,13 @@ export default function App() {
               aria-label={t('openGithub')} className="size-9 text-muted-foreground">
               <GithubLogo className="size-4" weight="fill" aria-hidden />
             </Button>
+            <Button variant="ghost" size="sm" nativeButton={false}
+              render={<a href="https://github.com/daftAI2026/awesome-jev/issues/new?template=submit-project.yml" target="_blank" rel="noopener noreferrer" />}
+              aria-label={t('submitProject')} title={t('submitProject')}
+              className="size-9 text-muted-foreground sm:w-auto sm:px-2 sm:font-normal">
+              <Plus className="size-4" aria-hidden />
+              <span className="hidden sm:inline">{t('submitProject')}</span>
+            </Button>
             <ThemeMenu />
             <LanguageMenu />
           </div>
@@ -346,7 +353,8 @@ export default function App() {
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <Sheet open={categoryOpen} onOpenChange={setCategoryOpen}>
-                <SheetTrigger render={<Button variant="outline" size="sm" className="xl:hidden" aria-label={t('openCategories')} />}>
+                <SheetTrigger render={<Button variant="outline" size="sm" className="xl:hidden"
+                  aria-label={`${t(FILTER_LABEL[filter])} · ${t('openCategories')}`} />}>
                   <List className="size-4" weight="fill" aria-hidden />
                   {t(FILTER_LABEL[filter])}
                 </SheetTrigger>

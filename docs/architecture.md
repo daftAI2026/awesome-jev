@@ -20,7 +20,7 @@ Visual tokens and restraint are defined in [design.md](design.md); current page 
 
 ```
 Sticky header (full viewport, no divider)
-  └── Title + GitHub + theme + language
+  └── Title + GitHub + Submit a project + theme + language
 Hero
   └── Full-width ASCII wordmark + tagline under it
 Body
@@ -77,6 +77,12 @@ npm run deploy   # build + wrangler deploy
 | `src/routes/*` + `src/router.tsx` | TanStack Start routes, head metadata, directory shell, and direct project/news HTML |
 | `src/lib/project-routes.ts` + `src/lib/news.ts` + `src/lib/locale-routes.ts` + `scripts/generate-sitemap.ts` | Stable item identities, language-specific URL variants, and deterministic sitemap generation |
 
+## Route data delivery
+
+`src/lib/catalog.functions.ts` uses the installed TanStack Start `createServerFn` GET boundary. JSON imports remain inside handlers, so the compiler removes them from browser RPC stubs. Project/news detail loaders return only the requested record, and the news index returns the existing news snapshot. During SSR/prerender these functions execute locally; browser navigation calls the same-origin Worker endpoint, without a custom fetch wrapper, external API, or new database. Missing records still become route-level HTTP 404s. The preview loader dynamically imports the GitHub module already loaded by the directory, returning only its title/summary to head metadata without adding an RPC to an otherwise local preview.
+
+`App` still imports the full GitHub snapshot for local search, sorting, filters, saved items and immediate project previews. That dataset belongs to the directory chunk, not every route's entry. Saved news remains a deferred import on demand. This change reduces unrelated data on detail pages and removes news data from homepage startup; it does **not** remove the GitHub catalog from a fully interactive homepage. Keep RPC deployment and static HTML from the same build. See [performance.md](performance.md) for the report baseline, decisions and verification boundaries.
+
 ## Search discoverability
 
 TanStack Start prerenders each finite catalog route in English at its original path, Chinese at `/zh`, and Japanese at `/ja`. A project has one lower-case identity, with one self-canonical URL per language and reciprocal `hreflang` alternates; the original repository title and summary remain untranslated source data. In-app card clicks use TanStack route masking: the browser shows the language-matched public URL while retaining the directory beneath the preview; Back or backdrop dismissal returns to the prior filter, and Forward reopens the preview. A reload or copied URL resolves to that language's standalone HTML. News previews use the same behavior with a stable AIHOT-ID-based `/news/{id}` path; the item page contains the API summary and outbound source links, not the original article. Saved source and category filters stay in validated search state. A synchronous head script redirects unprefixed HTML requests to the stored locale, or, without a saved choice, to `/zh` or `/ja` according to the browser's primary language; an explicit English choice wins over browser language. IP geolocation is not used. The URL determines the server-rendered locale, so the static HTML and first React render match without a language flash. Language switching performs a full navigation to the equivalent static path; it intentionally keeps category/project identity and query state, but does not preserve an open preview's transient background. Three variants triple prerendered page count relative to English alone and should be watched in Workers Builds.
@@ -84,6 +90,10 @@ TanStack Start prerenders each finite catalog route in English at its original p
 `public/robots.txt` permits crawling and points to the generated `public/sitemap.xml`. The generator lists all three language variants of the homepage, Top 100, the prerendered News index, populated categories, projects with non-empty summaries, and source-attributed news items whose stored summaries have at least 60 characters, with reciprocal `hreflang` entries; it rejects invalid/duplicate identities and invents no `lastmod`. Short news notes keep direct HTML but are `noindex`. Search/sort state, browser-local Saved, and transient preview state are not sitemap entries. `public/llms.txt` is a short agent-facing guide, not an indexing directive.
 
 Search Console's 2026-09-20 export is only one day of evidence, not a basis for keyword stuffing or mass-generated thin pages. Verify the rendered homepage with URL Inspection and measure multi-week query trends before changing titles or information architecture.
+
+## Scroll restoration
+
+Scroll restoration uses the installed Router's public callback option. The first client render of the unchanged, non-hash URL preserves a nonzero position already reached while JavaScript was loading; the position is read at render time, not router creation time. This one-shot exception is consumed even if navigation intervened. Subsequent navigation, history restoration and hash behavior retain Router defaults; no second scroll cache or private Router field is introduced.
 
 ## Scheduled collection
 

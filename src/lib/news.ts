@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 新闻条目与 ISO 时间戳，不依赖快照
+ * [OUTPUT]: 对外提供 新闻身份、摘要索引边界、预览搜索校验及时间排序
+ * [POS]: lib 的新闻纯规则，被路由、展示与采集脚本共用
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 export interface NewsItem {
   id: string
   title: string

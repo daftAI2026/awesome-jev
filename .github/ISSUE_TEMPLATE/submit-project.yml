@@ -1,0 +1,53 @@
+# [INPUT]: 依赖投稿者提供的公开 GitHub 仓库与来源证据
+# [OUTPUT]: 生成 [Submission] Issue，交由既有收录机器人和维护者审核
+# [POS]: ISSUE_TEMPLATE 的项目投稿表单；不要求编辑目录，不自动发布
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+name: Submit a project / 提交项目
+description: Suggest a Jev / System One project without editing JSON. 无需修改代码即可推荐项目。
+title: "[Submission] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Recommend one public GitHub repository per issue. A GitHub account is required.
+        每个申请请推荐一个公开 GitHub 仓库，需要登录 GitHub。
+        The existing bot reviews relevance; maintainers decide inclusion. Submission does not automatically add a project.
+        机器人提供关联性审查建议，维护者最终确认收录；提交后不会自动上架。
+        Do not include API keys, credentials or private material. 请勿填写密钥、凭据或私有资料。
+  - type: input
+    id: repository
+    attributes:
+      label: GitHub repository / 仓库地址
+      description: Canonical repository URL, not a profile, article or demo site. 请填写仓库首页地址。
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Project description / 项目简介
+      description: Briefly explain what the project does. 简要说明项目用途。
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Jev / System One connection / 关联证据
+      description: |
+        Explain the connection and link to README, documentation or code in this same repository.
+        For independent typed-decision alternatives, explain the implementation and link to its license.
+        请说明与 Jev / System One 的具体关联，并附同一仓库的 README、文档或代码链接。
+        独立类型化决策替代实现请说明实现方式，并附许可证链接。不要附其他待推荐仓库的链接。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前确认
+      options:
+        - label: I checked the directory and open submissions for duplicates. 已检查目录与未处理申请，避免重复投稿。
+          required: true
+        - label: This is a public, non-fork, non-archived repository with verifiable evidence. 仓库公开、非 fork、未归档，关联证据可核验。
+          required: true
+        - label: I understand review is advisory, not automatic inclusion or a security certification. 我理解审核建议不代表自动收录或安全认证。
+          required: true

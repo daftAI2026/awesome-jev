@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 目录公共类型与来源星标/日期
+ * [OUTPUT]: 对外提供 项目排序与稳定的全目录星标排名
+ * [POS]: lib 的排序权威，App、列表及收藏共享排名身份
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { DirectoryItem, GithubSort } from './types.ts'
 
 function numOrZero(v: number | null | undefined): number {
