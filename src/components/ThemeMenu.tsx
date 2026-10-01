@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 系统配色、浏览器偏好存储、HeaderChoiceMenu 与 i18n
+ * [OUTPUT]: 对外提供 ThemeMenu 主题控制
+ * [POS]: components 的主题适配器，将偏好同步到现有文档主题类
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Moon, Sun } from '@phosphor-icons/react'
 import { useSyncExternalStore } from 'react'
 import { HeaderChoiceMenu } from '@/components/HeaderChoiceMenu'

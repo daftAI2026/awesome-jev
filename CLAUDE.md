@@ -1,0 +1,25 @@
+# Awesome JEV - TypeSafe Jev / System One 项目与新闻目录
+React 19 + TypeScript 6 + TanStack Start/Router + Vite 8 + Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24
+
+<directory>
+src/ - 路由、目录界面与纯前端工具 (5 子目录: components, hooks, i18n, lib, routes)
+data/ - GitHub 项目与 AIHOT 新闻的独立 JSON 快照
+docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为准
+scripts/ - 服务端采集/审核、发布资产生成与 Node test，不进入前端请求链
+public/ - 静态 favicon、robots、sitemap、llms 与 Open Graph 资产
+radar/ - 生态与替代实现的状态及发布报告
+.github/ - 自动采集与可信数据发布工作流
+</directory>
+<config>
+package.json - Node 24 与构建/检查命令的权威
+vite.config.ts - 有限目录的三语言预渲染与 Cloudflare 服务端构建
+wrangler.toml - awesome-jev-project Worker 与 Static Assets 配置
+src/index.css - 唯一语义主题、字体与视觉 token
+</config>
+
+数据 → 纯工具/页面 loader → 组件。路由语言驱动文案；有效详情可预渲染，未知地址保留 HTTP 404。404 由 NotFoundPage 共用恢复布局，不建立第二套主题或目录数据。
+
+访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
+验证: npm run typecheck、npm run lint、npm test、npm run build。使用 Node 24；不将 .env 或采集凭据写入文档。
+
+法则: 极简·稳定·导航·版本精确；修改后按文件头部 → 局部地图 → 全局地图检查。

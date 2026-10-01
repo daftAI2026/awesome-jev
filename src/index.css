@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Tailwind、shadcn 与 Geist 字体样式
+ * [OUTPUT]: 对外提供 明暗主题语义 token、全局基础样式和目录布局规则
+ * [POS]: src 的唯一视觉基础，由根文档引入
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";

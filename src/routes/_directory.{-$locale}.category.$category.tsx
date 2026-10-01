@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 分类白名单、语言文案与 localizedHead
+ * [OUTPUT]: 对外提供 分类校验 Route 和分类搜索元数据
+ * [POS]: routes 的分类叶节点，非法分类交给根 404 边界
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { CATEGORIES, type Category } from '@/lib/categories'
 import { CATEGORY_LABEL } from '@/lib/categories'

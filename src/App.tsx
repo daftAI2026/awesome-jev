@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 目录数据、搜索/排序工具及项目/新闻/收藏组件
+ * [OUTPUT]: 对外提供 App 目录布局与筛选交互
+ * [POS]: src 的目录编排层，由 _directory 路由挂载
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, SquaresFour, X } from '@phosphor-icons/react'

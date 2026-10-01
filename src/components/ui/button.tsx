@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Button、cva 与 cn
+ * [OUTPUT]: 对外提供 Button 和 buttonVariants
+ * [POS]: components/ui 的按钮原语，由页面组合语义与行为
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"

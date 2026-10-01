@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖站点界面语义
+ * [OUTPUT]: 对外提供 en 文案、MessageKey 和 Messages 类型
+ * [POS]: i18n/locales 的英文基准，定义所有语言必须满足的文案键
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 export const en = {
   githubCount: '{count} GitHub projects indexed',
   documentTitle: 'Awesome JEV · free TypeSafe Jev / System One AI directory',
@@ -11,6 +17,12 @@ export const en = {
   searchLabel: 'Search',
   skipToContent: 'Skip to content',
   pageNotFound: 'Page not found',
+  pageNotFoundDescription: 'This address does not match a page on Awesome JEV. Check the URL or continue exploring the directory.',
+  projectNotFoundDescription: 'This repository is not in the current directory. Browse the catalog to find another Jev project.',
+  newsNotFoundDescription: 'This news item is not in the current archive. Browse Jev news for available summaries and sources.',
+  notFoundPath: 'Requested path',
+  notFoundBackHome: 'Back to all projects',
+  notFoundExplore: 'Continue exploring',
   projectNotFound: 'Project not found',
   newsNotFound: 'News not found',
   openGithub: 'Open source on GitHub',

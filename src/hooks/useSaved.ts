@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 生命周期、浏览器 localStorage 与 lib/saved 纯存储契约
+ * [OUTPUT]: 对外提供 useSaved 收藏状态与可失败的切换操作
+ * [POS]: hooks 的浏览器存储适配层，为目录和详情提供同一收藏接口
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { parseSaved, SAVED_KEY, toggleSaved, type SavedKind } from '@/lib/saved'
 

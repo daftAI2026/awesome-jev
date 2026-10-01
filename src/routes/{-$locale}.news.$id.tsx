@@ -1,8 +1,15 @@
+/**
+ * [INPUT]: 依赖 新闻快照、新闻身份工具、摘要组件和共享 404 页面
+ * [OUTPUT]: 对外提供 新闻详情 Route、索引策略及缺失新闻边界
+ * [POS]: routes 的独立新闻页，只展示已有摘要和原始来源链接
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { ArrowLeft } from '@phosphor-icons/react'
 import newsData from '../../data/news.json'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
 import { LanguageMenu } from '@/components/LanguageMenu'
+import { NotFoundPage } from '@/components/NotFoundPage'
 import { NewsItemContent, NewsItemMeta, NewsSourceLinks } from '@/components/NewsItemContent'
 import { SaveButton } from '@/components/SaveButton'
 import { ThemeMenu } from '@/components/ThemeMenu'
@@ -38,7 +45,12 @@ export const Route = createFileRoute('/{-$locale}/news/$id')({
     })
   },
   component: NewsItemPage,
+  notFoundComponent: NewsNotFound,
 })
+
+function NewsNotFound() {
+  return <NotFoundPage kind="news" />
+}
 
 function NewsItemPage() {
   const item = Route.useLoaderData()

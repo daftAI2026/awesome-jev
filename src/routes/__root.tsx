@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 TanStack 文档壳、i18n、共享 404 页面与全局样式
+ * [OUTPUT]: 对外提供 根 Route、首屏语言/主题初始化及文档 head
+ * [POS]: routes 的根边界，承接未知地址而不重定向成成功页面
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { ReactNode } from 'react'
 import {
   createRootRoute,
@@ -7,7 +13,7 @@ import {
   useRouterState,
 } from '@tanstack/react-router'
 import { I18nProvider } from '@/i18n'
-import { catalogs } from '@/i18n/catalogs'
+import { NotFoundPage } from '@/components/NotFoundPage'
 import { LANGUAGE_TAG, LOCALE_STORAGE_KEY, localeFromPath } from '@/lib/locale-routes'
 import '../index.css'
 
@@ -31,25 +37,33 @@ const LOCALE_BOOTSTRAP = `(() => {
 })()`
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { title: 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
-      { name: 'description', content: SITE_DESCRIPTION },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Awesome JEV' },
-      { property: 'og:image', content: 'https://awesomejev.cc/og.png' },
-      { property: 'og:image:type', content: 'image/png' },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:image', content: 'https://awesomejev.cc/og.png' },
-    ],
-    links: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-  }),
-  notFoundComponent: NotFoundPage,
+  head: ({ matches }) => {
+    const missing = matches.some((match) => match.status === 'notFound' || match._notFound)
+    return {
+      meta: [
+        { charSet: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        { title: missing
+          ? '404 · Awesome JEV'
+          : 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
+        ...(missing
+          ? [{ name: 'robots', content: 'noindex, follow' }]
+          : []),
+        { name: 'description', content: SITE_DESCRIPTION },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Awesome JEV' },
+        { property: 'og:image', content: 'https://awesomejev.cc/og.png' },
+        { property: 'og:image:type', content: 'image/png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://awesomejev.cc/og.png' },
+      ],
+      links: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    }
+  },
+  notFoundComponent: () => <NotFoundPage />,
   shellComponent: RootDocument,
   component: RootComponent,
 })
@@ -58,15 +72,10 @@ function RootComponent() {
   return <I18nProvider><Outlet /></I18nProvider>
 }
 
-function NotFoundPage() {
-  const pathname = useRouterState({ select: (state) => state.location.pathname })
-  return <main className="mx-auto max-w-3xl px-6 py-16"><h1 className="text-2xl font-semibold">{catalogs[localeFromPath(pathname)].pageNotFound}</h1></main>
-}
-
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   return (
-    <html lang={LANGUAGE_TAG[localeFromPath(pathname)]}>
+    <html lang={LANGUAGE_TAG[localeFromPath(pathname)]} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOTSTRAP }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />

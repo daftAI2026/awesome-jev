@@ -1,4 +1,10 @@
-import type { Messages } from './en'
+/**
+ * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
+ * [OUTPUT]: 对外提供 ja 文案
+ * [POS]: i18n/locales 的日文，与英文基准保持键契约一致
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+import type { Messages } from './en.ts'
 
 export const ja: Messages = {
   githubCount: 'GitHub プロジェクト {count} 件を掲載',
@@ -11,6 +17,12 @@ export const ja: Messages = {
   searchLabel: '検索',
   skipToContent: '本文へ移動',
   pageNotFound: 'ページが見つかりません',
+  pageNotFoundDescription: 'このアドレスに対応する Awesome JEV のページはありません。URL を確認するか、プロジェクト一覧をご覧ください。',
+  projectNotFoundDescription: 'このリポジトリは現在の一覧に掲載されていません。ほかの Jev プロジェクトをご覧ください。',
+  newsNotFoundDescription: 'このニュースは現在のアーカイブにありません。Jev ニュースから公開中の要約と参照元をご覧ください。',
+  notFoundPath: 'アクセスしたパス',
+  notFoundBackHome: 'プロジェクト一覧に戻る',
+  notFoundExplore: 'ほかのコンテンツを見る',
   projectNotFound: 'プロジェクトが見つかりません',
   newsNotFound: 'ニュースが見つかりません',
   openGithub: 'GitHub でソースコードを見る',

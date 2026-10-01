@@ -49,3 +49,13 @@ Default to stillness. Motion is justified only when it explains a state change, 
 Render the actual page, not only component previews. Inspect the first viewport and full page in light and dark, on desktop and narrow mobile. Check hierarchy, data fidelity, alignment, readable wrapping, focus visibility, keyboard use, and outbound links. Preserve semantic landmarks, one descriptive `h1`, source order, accessible names, and a skip link. Reflow before hiding overflow or shrinking controls; meet WCAG AA.
 
 The test is whether a reader can identify the task, scan the evidence, and act without noticing the styling machinery.
+
+## Not-found pages
+
+Unknown addresses, missing catalog projects, and missing news IDs share `src/components/NotFoundPage.tsx`. Keep the real HTTP 404 response: do not redirect to a successful homepage or create a synthetic catalog entry. Error pages use `noindex` and have no canonical URL.
+
+Use the same continuous canvas, Geist Sans, semantic theme tokens, 56px site header, and existing theme/language menus. A left-aligned 404 status is the visual anchor; one descriptive heading and source-specific explanation follow. Show only the requested pathname in Geist Mono, never the query string or hash. Long paths wrap rather than widening the viewport.
+
+One primary link returns to the current language's project directory. A separated, quiet navigation group offers Top 100 and Jev news. Preserve keyboard focus, a skip link, and English/Chinese/Japanese route variants. Narrow screens stack status and explanation; desktop places them side by side inside the existing 1160px frame. Add no illustrations, decorative cards, new palette, or entrance animation.
+
+The synchronous theme bootstrap may add a theme class to `<html>` before hydration. Suppress hydration attribute warnings only on that document element; do not suppress mismatches across error-page content or move theme selection after first paint.

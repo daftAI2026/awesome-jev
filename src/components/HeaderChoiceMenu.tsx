@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Menu、Button 和 Phosphor Check
+ * [OUTPUT]: 对外提供 HeaderChoiceMenu 单选菜单
+ * [POS]: components 的菜单基础组合，被主题与语言控制共用
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Menu } from '@base-ui/react/menu'
 import { Check } from '@phosphor-icons/react'
 import type { ReactNode } from 'react'

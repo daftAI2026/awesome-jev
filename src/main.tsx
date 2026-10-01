@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React DOM、App、I18nProvider 与全局样式
+ * [OUTPUT]: 对外提供 旧 index.html 的客户端启动与水合策略
+ * [POS]: src 的保留 SPA 启动入口；当前 TanStack Start 使用框架生成的客户端入口
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'

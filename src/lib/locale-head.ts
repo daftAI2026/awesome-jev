@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 locale-routes 的规范地址和语言 alternates
+ * [OUTPUT]: 对外提供 localizedHead 元数据构造器
+ * [POS]: lib 的有效页面 SEO 适配器，缺失页面不生成规范地址
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { localeAlternates, localizedPath, type Locale } from './locale-routes.ts'
 
 interface LocalizedHeadOptions {

@@ -1,4 +1,10 @@
-import type { Messages } from './en'
+/**
+ * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
+ * [OUTPUT]: 对外提供 zh 文案
+ * [POS]: i18n/locales 的简体中文，与英文基准保持键契约一致
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+import type { Messages } from './en.ts'
 
 export const zh: Messages = {
   githubCount: '已收录 {count} 个 GitHub 项目',
@@ -13,6 +19,12 @@ export const zh: Messages = {
   searchLabel: '搜索',
   skipToContent: '跳到主要内容',
   pageNotFound: '页面不存在',
+  pageNotFoundDescription: '这个地址没有对应的 Awesome JEV 页面。请检查网址，或返回目录继续浏览。',
+  projectNotFoundDescription: '当前目录中没有收录这个仓库。返回目录，看看其他 Jev 项目。',
+  newsNotFoundDescription: '当前新闻归档中没有这条内容。你可以浏览 Jev 新闻，查看已有摘要和来源。',
+  notFoundPath: '访问路径',
+  notFoundBackHome: '返回项目目录',
+  notFoundExplore: '继续浏览',
   projectNotFound: '项目不存在',
   newsNotFound: '新闻不存在',
   openGithub: '在 GitHub 上查看源码',

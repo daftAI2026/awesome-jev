@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 DecryptedText、语言路径与系统减少动态效果偏好
+ * [OUTPUT]: 对外提供 DecryptedBrand 可访问品牌链接
+ * [POS]: components 的品牌适配器，为目录和独立页面提供同一返回入口
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useEffect, useState, type MouseEvent } from 'react'
 import DecryptedText from './DecryptedText'
 import { useI18n } from '@/i18n'

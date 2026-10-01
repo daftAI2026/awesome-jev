@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 站内绝对路径和 en/zh/ja 语言约定
+ * [OUTPUT]: 对外提供 语言识别、路径转换、hreflang 与语言常量
+ * [POS]: lib 的纯 URL 规则，由路由、i18n 和 sitemap 共用
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 export const LOCALES = ['en', 'zh', 'ja'] as const
 export type Locale = (typeof LOCALES)[number]
 const PREFIXED_LOCALES = LOCALES.filter((locale) => locale !== 'en')

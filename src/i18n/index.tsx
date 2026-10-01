@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 路由 pathname、catalogs 和语言 URL 工具
+ * [OUTPUT]: 对外提供 I18nProvider、useI18n 与 Locale 类型
+ * [POS]: i18n 的路由驱动文案边界，不维护第二份语言状态
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import {
   createContext,
   useCallback,
