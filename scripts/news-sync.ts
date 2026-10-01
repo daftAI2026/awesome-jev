@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 AIHOT 官方分页 API、Node 文件系统与独立新闻契约
+ * [OUTPUT]: 对外提供新闻校验、按 ID 合并与完整同步；失败不替换旧快照
+ * [POS]: scripts 的新闻采集边界，不混入 GitHub 目录或付费审核
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'

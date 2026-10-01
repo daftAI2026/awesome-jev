@@ -1,10 +1,16 @@
+/**
+ * [INPUT]: 依赖共享目录、GitHub 取证、模型审核与核心雷达状态契约
+ * [OUTPUT]: 对外提供替代实现采集、状态校验和快照写入
+ * [POS]: scripts 的独立替代实现队列，复用请求及付费边界
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createHash } from 'node:crypto'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { applySnapshot, candidateRow, readCatalog, renderReadme, repoKey, validateSnapshot } from './catalog.ts'
-import { createGitHubClient } from './github-client.ts'
+import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
 import { alternativeEvidenceIssue, githubEvidence } from './github-evidence.ts'
 import { evaluateJev, JEV_MODEL, reviewDecision } from './jev-client.ts'
 import { createRadarBudget } from './radar-budget.ts'
@@ -20,9 +26,8 @@ const DAY = 86400000
 const MAX_QUEUE = 2000
 const stateFile = 'radar/alternatives-state.json'
 const reportFile = 'radar/alternatives-latest.json'
-const expired = (deadline: number): boolean => Number.isFinite(deadline) && Date.now() >= deadline
 const deferred = (error: unknown): boolean => error instanceof Error &&
-  ['radar-budget-exhausted', 'radar-budget-persist-failed', 'radar-deadline'].includes(error.message)
+  (isGitHubRunDeferred(error) || ['radar-budget-exhausted', 'radar-budget-persist-failed', 'radar-deadline'].includes(error.message))
 const safeReason = (error: unknown): string => error instanceof Error && /^(github|jev)-[a-z0-9-]+$/.test(error.message)
   ? error.message : 'candidate-invalid-evidence'
 
@@ -36,6 +41,7 @@ export interface AlternativesOptions {
   review: (row: JevRow, text: string, options?: RadarReviewOptions) => Promise<JevScore>
   now?: Date
   deadline?: number
+  clock?: () => number
   beforeRequest?: () => Promise<void>
   queries?: string[]
 }
@@ -49,9 +55,15 @@ export interface AlternativesResult {
 
 // --- 独立候选队列：核心雷达负责 TypeSafe 生态与旧条目元数据，此处只审替代实现 ---
 export async function runAlternatives({ catalog, state = emptyState(), api, review, now = new Date(),
-  deadline = Infinity, beforeRequest, queries = ALTERNATIVE_QUERIES }: AlternativesOptions): Promise<AlternativesResult> {
+  deadline = Infinity, clock = Date.now, beforeRequest, queries = ALTERNATIVE_QUERIES }: AlternativesOptions): Promise<AlternativesResult> {
   validateState(state)
   if (!(deadline === Infinity || Number.isFinite(deadline)) || deadline < 0) throw new Error('radar-invalid-deadline')
+  const expired = () => Number.isFinite(deadline) && clock() >= deadline
+  const upstream = api
+  api = async (path) => {
+    if (expired()) throw new Error('github-deadline')
+    return upstream(path)
+  }
   state = structuredClone(state)
   const started = now.toISOString()
   const files = new Map([...catalog.files].map(([file, entries]) => [file, structuredClone(entries)]))
@@ -63,6 +75,7 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
     metadata: { ok: 0, failed: 0 }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
 
   for (const query of queries) {
+    if (report.deferred) break
     let page = state.pages[query] ?? 1
     const source = { query, fetched: 0, total: 0, status: 'bounded' }
     try {
@@ -90,7 +103,10 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
         if (page >= lastPage || result.items.length < 100) break
         page++
       }
-    } catch (error) { source.status = safeReason(error) }
+    } catch (error) {
+      source.status = safeReason(error)
+      if (isGitHubRunDeferred(error)) report.deferred = { phase: 'discovery', reason: (error as Error).message }
+    }
     report.sources.push(source)
   }
 
@@ -99,21 +115,23 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
     .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) ||
       (stars.get(b) ?? 0) - (stars.get(a) ?? 0) || a.localeCompare(b))
   for (const [key, entry] of queue) {
-    if (expired(deadline)) break
+    if (report.deferred) break
+    if (expired()) { report.deferred = { phase: 'review', reason: 'github-deadline' }; break }
     const previous: Candidate = structuredClone(entry)
     entry.checkedAt = started
     entry.attempts++
     report.reviewed++
     try {
       const { repo, sha, text, evidenceUrl } = await githubEvidence(api, key)
-      if (expired(deadline)) throw new Error('radar-deadline')
+      if (expired()) throw new Error('radar-deadline')
       const candidate = candidateRow(repo, {}, { alternative: true })
       const license = repo.license?.spdx_id
       const reason = !license || license === 'NOASSERTION' ? 'missing-open-source-license' : alternativeEvidenceIssue(repo, text)
       const score = reason ? undefined : await review(candidate, text, {
         beforeRequest: async () => {
-          if (expired(deadline)) throw new Error('radar-deadline')
+          if (expired()) throw new Error('radar-deadline')
           await beforeRequest?.()
+          if (expired()) throw new Error('radar-deadline')
         },
       })
       const rawDecision = reason ? 'review' : reviewDecision(score)
@@ -138,7 +156,8 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
         entry.retryAt = new Date(now.getTime() + (entry.status === 'drop' ? 30 : 7) * DAY).toISOString()
       }
     } catch (error) {
-      if (deferred(error) || expired(deadline)) {
+      if (deferred(error) || expired()) {
+        report.deferred = { phase: 'review', reason: error instanceof Error ? error.message : 'github-deadline' }
         state.candidates[key] = previous
         report.reviewed--
         break
@@ -152,7 +171,7 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
   }
   report.pending = Object.values(state.candidates).filter((entry) => entry.status !== 'drop').length
   report.totalProjects = known.size
-  report.status = report.sources.every((source) => source.status === 'complete') && !report.pending &&
+  report.status = !report.deferred && report.sources.every((source) => source.status === 'complete') && !report.pending &&
     !report.overflow && !report.receipts.some((receipt) => receipt.status === 'error') ? 'complete' : 'partial'
   validateState(state)
   return { files, rows, state, report }
@@ -192,16 +211,17 @@ async function main(): Promise<void> {
   if (!output || resolve(output) === root) throw new Error('Provide a separate snapshot output directory')
   const budgetDirectory = process.env.JEV_ALTERNATIVES_BUDGET_DIR ?? join(process.env.RUNNER_TEMP ?? tmpdir(), 'jev-alternatives-budget')
   const budget = createRadarBudget(budgetDirectory)
+  const deadline = Date.now() + RADAR_EXECUTION_MS
   const result = await runAlternatives({ catalog: readCatalog(root),
     state: JSON.parse(readFileSync(join(root, stateFile), 'utf8')) as RadarState,
-    api: createGitHubClient(process.env.GITHUB_TOKEN),
+    api: createGitHubClient(process.env.GITHUB_TOKEN, { deadline }),
     review: (row, text, options) => evaluateJev(key, row, text, { ...options, alternative: true }),
     beforeRequest: budget.beforeRequest,
-    deadline: Date.now() + RADAR_EXECUTION_MS,
+    deadline,
   })
   writeAlternativesSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}.\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}.\n${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary)
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })
 }

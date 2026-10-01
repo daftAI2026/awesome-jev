@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 本地 JSON 文件系统和 UTC 时钟
+ * [OUTPUT]: 对外提供 请求前持久化的独立日预算
+ * [POS]: 服务端采集预算账本，恢复定位由 review-checkpoint 提供
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 

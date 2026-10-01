@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 model-types 的请求/评分与 GitHub 来源类型
+ * [OUTPUT]: 对外提供 整仓任务、分段、覆盖、receipt 和持久化接口
+ * [POS]: 审核状态契约，连接无状态模型接口与可恢复扫描器
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 
 import type {
   FactScores as ModelFactScores,

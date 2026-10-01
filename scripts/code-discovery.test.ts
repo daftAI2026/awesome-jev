@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Node test 与代码发现、取证和雷达的离线桩
+ * [OUTPUT]: 对外提供固定提交、哈希校验及运行暂停传播断言
+ * [POS]: scripts 的代码证据验收，不执行被审查仓库或访问网络
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
@@ -43,3 +49,12 @@ test('radar reviews unnamed integration evidence and persists its admission basi
   assert.equal(result.report.receipts[0].evidenceLinks?.[0].path, 'src/provider.ts')
   assert.ok(result.rows[0].sourceMeta.jevEvidence)
 })
+
+for (const reason of ['github-deadline', 'github-rate-limited', 'github-request-budget']) {
+  test(`integration evidence propagates ${reason} instead of marking a candidate incomplete`, async () => {
+    let calls = 0
+    await assert.rejects(integrationEvidence(async () => { calls++; throw new Error(reason) }, 'example/app', 'a'.repeat(40),
+      [{ path: 'src/a.ts', query: 'sdk' }, { path: 'src/b.ts', query: 'sdk' }]), new RegExp(reason))
+    assert.equal(calls, 1)
+  })
+}

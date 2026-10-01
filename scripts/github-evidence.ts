@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 共享 GitHub 读取与规范仓库身份、固定提交和 README 响应
+ * [OUTPUT]: 对外提供 核心/替代证据前置规则与固定版本 GitHub 取证
+ * [POS]: 采集与投稿的来源边界，只读取证据，不执行第三方代码
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { GitHubApi, GitHubEvidence, GitHubReadme, GitHubRepository } from './model-types.ts'
 import { repoKey } from './catalog.ts'
 

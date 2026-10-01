@@ -143,8 +143,8 @@ test('PR extraction reads actual >1 MB catalogs from the pinned blob and accepts
   assert.equal(blobReads(), 2)
 })
 
-test('PR extraction accepts a catalog of exactly 4,500,000 decoded bytes', async () => {
-  const after = exactSizeRows([item('new')], 4_500_000)
+test('PR extraction accepts a catalog of exactly 16 MiB decoded bytes', async () => {
+  const after = exactSizeRows([item('new')], 16 * 1024 * 1024)
   const { api, blobReads } = pullRequestFilesApi({ before: [], after, wrappedBlob: true })
   const input = await submissionInput(api, { number: 3, pull_request: {} })
   assert.deepEqual(input.keys, ['test/new'])
@@ -152,9 +152,9 @@ test('PR extraction accepts a catalog of exactly 4,500,000 decoded bytes', async
 })
 
 test('PR extraction rejects catalogs above the byte cap before fetching the blob', async () => {
-  const after = exactSizeRows([item('new')], 4_500_001)
+  const after = exactSizeRows([item('new')], 16 * 1024 * 1024 + 1)
   const { api, blobReads } = pullRequestFilesApi({ before: [], after })
-  await assert.rejects(submissionInput(api, { number: 3, pull_request: {} }), /submission-data-too-large/)
+  await assert.rejects(submissionInput(api, { number: 3, pull_request: {} }), /submission-catalog-too-large/)
   assert.equal(blobReads(), 0)
 })
 
@@ -276,7 +276,9 @@ function harness({ previous, recent = [], count = 1, failReview = false }: Harne
     if (failReview) { await options.beforeRequest(); throw new Error('jev-http-401') }
     return score
   }
-  return { writes, paid, args: { api, known: new Set<string>(), number: 3, manual: true, now, writeComment, review } }
+  const args: SubmissionOptions = { api, known: new Set<string>(), number: 3, manual: true, now, writeComment, review }
+  args.clock = () => args.now!
+  return { writes, paid, args }
 }
 const lastWrite = (h: Harness): WriteRecord => {
   const write = h.writes.at(-1)
@@ -550,4 +552,202 @@ test('run deadline stops requests while preserving resumable status', async () =
   await processSubmission(h.args)
   assert.equal(h.paid.length, 0)
   assert.ok(!lastWrite(h).body.includes('Recommended for inclusion'))
+})
+
+test('a small PR remains reviewable when its base and head exceed the former 4.5 MB cap', async () => {
+  const before = exactSizeRows([item('old')], 4_500_001)
+  const after = exactSizeRows([item('old'), item('new')], 4_500_123)
+  const { api } = pullRequestFilesApi({ before, after })
+  assert.deepEqual((await submissionInput(api, { number: 3, pull_request: {} })).keys, ['test/new'])
+})
+test('removing every candidate immediately invalidates the old report without spending budget', async () => {
+  const previous = botComment({ ...meta, used: 3, requests: 12, completed: [{ repo: 'test/new', status: 'keep' }] })
+  const h = harness({ previous, count: 0 })
+  assert.equal(await processSubmission(h.args), 'no-projects')
+  assert.equal(h.paid.length, 0)
+  assert.equal(h.writes.length, 1)
+  assert.equal(h.writes[0].id, previous.id)
+  assert.match(h.writes[0].body, /no longer contains reviewable projects/i)
+  const invalidated = parsedMeta({ ...previous, body: h.writes[0].body })
+  assert.equal(invalidated.used, 3); assert.equal(invalidated.requests, 12)
+  assert.equal(invalidated.pending, false); assert.equal(invalidated.retryable, false)
+  assert.deepEqual(invalidated.completed, [])
+  assert.notEqual(invalidated.fingerprint, meta.fingerprint)
+  assert.match(h.writes[0].body, /Input fingerprint/)
+  const rerun = harness({ previous: { ...previous, body: h.writes[0].body }, count: 0 })
+  assert.equal(await processSubmission(rerun.args), 'no-projects')
+  assert.equal(rerun.writes.length, 0)
+})
+test('an empty first submission does not create a bot comment or spend budget', async () => {
+  const h = harness({ count: 0 })
+  assert.equal(await processSubmission(h.args), 'no-projects')
+  assert.equal(h.writes.length, 0); assert.equal(h.paid.length, 0)
+})
+
+test('PR extraction checks malformed nested metadata even on an unchanged repository', async () => {
+  const malformed = { ...item('old'), sourceMeta: { repo: 'test/old', jevEvidence: { evidenceUrl: 42 } } }
+  const { api } = pullRequestFilesApi({ before: [item('old')], after: [malformed] })
+  await assert.rejects(submissionInput(api, { number: 3, pull_request: {} }), /Invalid jevEvidence/)
+})
+test('PR extraction rejects newly mismatched repo identity but preserves unchanged historical aliases', async () => {
+  const historical = { ...item('old'), sourceMeta: { repo: 'historic/name' } }
+  const accepted = pullRequestFilesApi({ before: [historical], after: [historical, item('new')] })
+  assert.deepEqual((await submissionInput(accepted.api, { number: 3, pull_request: {} })).keys, ['test/new'])
+  const rejected = pullRequestFilesApi({ before: [historical], after: [historical, { ...item('new'), sourceMeta: { repo: 'wrong/name' } }] })
+  await assert.rejects(submissionInput(rejected.api, { number: 3, pull_request: {} }), /Invalid repository identity/)
+})
+test('oversized base or head is permanent, retains budget and does not promise an automatic retry', async () => {
+  for (const revision of ['base', 'head']) {
+    const over = exactSizeRows([item('old')], 16 * 1024 * 1024 + 1)
+    const { api } = pullRequestFilesApi({ before: revision === 'base' ? over : [], after: revision === 'head' ? over : [item('new')] })
+    const h = harness({ previous: botComment({ ...meta, at: '2026-09-22T09:00:00Z' }) })
+    const original = h.args.api
+    h.args.api = async (path) => path.endsWith('/issues/3') ? { number: 3, state: 'open', title: '[Submission] new', pull_request: {} } :
+      path.includes('/comments?') ? original(path) : api(path)
+    assert.equal(await processSubmission(h.args), 'input-error')
+    assert.equal(h.paid.length, 0)
+    assert.match(lastWrite(h).body, /automatic retries cannot resolve this/i)
+    const final = parsedMeta({ ...botComment(), body: lastWrite(h).body })
+    assert.equal(final.retryable, false); assert.equal(final.used, meta.used)
+  }
+})
+test('comment transport serializes concurrent writes with at least a second between completions', async () => {
+  let clock = 0
+  const starts: number[] = [], waits: number[] = []
+  const writer = commentWriter('fake-test-only', {
+    now: () => clock,
+    wait: async (milliseconds) => { waits.push(milliseconds); clock += milliseconds },
+    fetchImpl: async () => { starts.push(clock); return Response.json({ id: 8 }) },
+  })
+  await Promise.all([writer(3, undefined, 'reserve'), writer(3, 8, 'before paid'), writer(3, 8, 'complete')])
+  assert.deepEqual(starts, [0, 1000, 2000])
+  assert.deepEqual(waits, [1000, 1000])
+})
+test('a failed pre-payment comment write prevents every paid attempt', async () => {
+  const h = harness({ failReview: true })
+  let writes = 0
+  h.args.writeComment = async (number, id, body) => {
+    writes++
+    if (writes === 2) throw new Error('github-comment-http-429')
+    h.writes.push({ number, id, body })
+    return { id: 8 }
+  }
+  let attempts = 0
+  h.args.review = async (_row, _text, options) => { await options.beforeRequest(); attempts++; return score }
+  assert.equal(await processSubmission(h.args), 'reviewed-1')
+  assert.equal(attempts, 0)
+  assert.match(lastWrite(h).body, /Review temporarily unavailable/)
+})
+
+test('PR extraction accepts one byte below the cap and rejects oversized base before its blob fetch', async () => {
+  const almost = exactSizeRows([item('new')], 16 * 1024 * 1024 - 1)
+  const accepted = pullRequestFilesApi({ before: [], after: almost })
+  assert.deepEqual((await submissionInput(accepted.api, { number: 3, pull_request: {} })).keys, ['test/new'])
+  const over = exactSizeRows([item('old')], 16 * 1024 * 1024 + 1)
+  const rejected = pullRequestFilesApi({ before: over, after: [item('new')] })
+  await assert.rejects(submissionInput(rejected.api, { number: 3, pull_request: {} }), /submission-catalog-too-large/)
+  assert.equal(rejected.blobReads(), 0)
+})
+test('candidate withdrawal retains prior-day charges without moving them into today', async () => {
+  const previous = botComment({ ...meta, at: '2026-09-21T23:59:00Z', day: '2026-09-21', used: 3, requests: 12 })
+  const h = harness({ previous, count: 0 })
+  await processSubmission(h.args)
+  const invalidated = parsedMeta({ ...previous, body: lastWrite(h).body })
+  assert.equal(invalidated.day, '2026-09-21'); assert.equal(invalidated.used, 3); assert.equal(invalidated.requests, 12)
+})
+
+// --- UTC 日账本不能把跨午夜后的实际付费请求归到昨天 ---
+for (const phase of ['reservation', 'comment', 'task-checkpoint'] as const) {
+  test(`UTC rollover at ${phase} prevents paid attempts and resumes under a new daily ledger`, async () => {
+    const h = harness()
+    let time = new Date('2026-09-22T23:59:59Z')
+    h.args.now = time
+    Object.assign(h.args, { clock: () => time })
+    let reached!: () => void, release!: () => void
+    const entered = new Promise<void>((resolve) => { reached = resolve })
+    const held = new Promise<void>((resolve) => { release = resolve })
+    const writer = h.args.writeComment
+    let writes = 0, attempts = 0
+    h.args.writeComment = async (number, id, body) => {
+      writes++
+      const result = await writer(number, id, body)
+      if (phase === 'reservation' && writes === 1) time = new Date('2026-09-23T00:00:00Z')
+      if (phase === 'comment' && writes === 2) { reached(); await held }
+      return result
+    }
+    if (phase === 'task-checkpoint') {
+      h.args.store = {
+        load: async () => null,
+        save: async (_id, task) => { if (task.inFlight) { reached(); await held } },
+      }
+    }
+    h.args.review = async (_row, _text, options) => { await options.beforeRequest(); attempts++; return score }
+    const running = processSubmission(h.args)
+    if (phase !== 'reservation') {
+      await entered
+      time = new Date('2026-09-23T00:00:00Z')
+      release()
+    }
+    await running
+    assert.equal(attempts, 0)
+    const previous = { ...botComment(), body: lastWrite(h).body }
+    const final = parsedMeta(previous)
+    assert.equal(final.day, '2026-09-22')
+    assert.equal(final.requests, phase === 'reservation' ? 0 : 1)
+    assert.equal(final.retryable, true)
+    assert.match(lastWrite(h).body, /UTC day changed/)
+    const resumed = harness({ previous, recent: [previous] })
+    resumed.args.manual = false
+    resumed.args.now = new Date('2026-09-23T00:11:00Z')
+    Object.assign(resumed.args, { clock: () => resumed.args.now! })
+    let resumedAttempts = 0
+    resumed.args.review = async (_row, _text, options) => { await options.beforeRequest(); resumedAttempts++; return score }
+    await processSubmission(resumed.args)
+    assert.equal(resumedAttempts, 1)
+    const resumedMeta = parsedMeta({ ...previous, body: lastWrite(resumed).body })
+    assert.equal(resumedMeta.day, '2026-09-23')
+    assert.equal(resumedMeta.requests, 1)
+  })
+}
+
+test('default request clock is the real UTC day, not the captured submission date', async () => {
+  const h = harness()
+  const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000)
+  h.args.now = yesterday
+  delete h.args.clock
+  let attempts = 0
+  h.args.review = async (_row, _text, options) => { await options.beforeRequest(); attempts++; return score }
+  await processSubmission(h.args)
+  assert.equal(attempts, 0)
+  const final = parsedMeta({ ...botComment(), body: lastWrite(h).body })
+  assert.equal(final.day, yesterday.toISOString().slice(0, 10))
+  assert.equal(final.requests, 0)
+  assert.equal(final.retryable, true)
+})
+test('UTC rollover stops later projects and the next day resumes only unfinished work', async () => {
+  const h = harness({ count: 2 })
+  let time = new Date('2026-09-22T23:59:59Z')
+  h.args.now = time
+  h.args.clock = () => time
+  const reviewed: string[] = []
+  h.args.review = async (row, _text, options) => {
+    await options.beforeRequest()
+    reviewed.push(row.sourceMeta.repo!)
+    time = new Date('2026-09-23T00:00:00Z')
+    return score
+  }
+  await processSubmission(h.args)
+  assert.deepEqual(reviewed, ['test/new0'])
+  const previous = { ...botComment(), body: lastWrite(h).body }
+  assert.equal(parsedMeta(previous).requests, 1)
+  const resumed = harness({ previous, recent: [previous], count: 2 })
+  resumed.args.manual = false
+  resumed.args.now = new Date('2026-09-23T00:11:00Z')
+  const unfinished: string[] = []
+  resumed.args.review = async (row, _text, options) => { await options.beforeRequest(); unfinished.push(row.sourceMeta.repo!); return score }
+  await processSubmission(resumed.args)
+  assert.deepEqual(unfinished, ['test/new1'])
+  const final = parsedMeta({ ...previous, body: lastWrite(resumed).body })
+  assert.equal(final.day, '2026-09-23'); assert.equal(final.requests, 1)
+  assert.equal(final.completed?.length, 2)
 })

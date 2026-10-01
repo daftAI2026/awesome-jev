@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 仓库 URL、三语言收录说明和固定源码证据
- * [OUTPUT]: 对外提供 InclusionBasis、固定来源解析及证据预算校验
+ * [OUTPUT]: 对外提供 InclusionBasis、固定来源/目录证据 URL 解析及证据预算校验
  * [POS]: lib 的收录依据边界，采集和详情展示共享真实性规则
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -41,6 +41,22 @@ export function pinnedSource(url: unknown, repositoryUrl: string): { rawUrl: str
     return { rawUrl: `https://raw.githubusercontent.com/${parts[0]}/${parts[1]}/${parts[3]}/${pathParts.map(encodeURIComponent).join('/')}`, path: pathParts.join('/') }
   } catch {
     return null
+  }
+}
+
+// --- README 与代码证据共用链接边界：整仓快照可指向 tree，引用仍必须是 blob ---
+export function isPinnedEvidenceUrl(value: unknown, repositoryUrl: string): value is string {
+  if (pinnedSource(value, repositoryUrl)) return true
+  if (typeof value !== 'string') return false
+  try {
+    const source = new URL(value), repository = new URL(repositoryUrl)
+    if (repository.origin !== 'https://github.com' || repository.username || repository.password || repository.search || repository.hash ||
+      !/^\/[\w.-]+\/[\w.-]+\/?$/.test(repository.pathname) ||
+      source.origin !== 'https://github.com' || source.username || source.password || source.search || source.hash) return false
+    const match = source.pathname.match(/^\/([\w.-]+\/[\w.-]+)\/tree\/([a-f0-9]{40})\/?$/)
+    return !!match && `/${match[1]}`.toLowerCase() === repository.pathname.replace(/\/$/, '').toLowerCase()
+  } catch {
+    return false
   }
 }
 

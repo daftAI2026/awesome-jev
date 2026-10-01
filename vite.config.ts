@@ -1,7 +1,14 @@
+/**
+ * [INPUT]: 依赖 Vite/Start/Cloudflare 构建插件、规范快照、目录展示投影与 Git 历史
+ * [OUTPUT]: 对外提供多环境构建、有限预渲染路径及可信更新时间配置
+ * [POS]: 根级构建编排，规范数据决定索引，展示虚拟模块只裁剪浏览器未用审计字段
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+import { directoryCatalogPlugin } from './scripts/directory-catalog.ts'
 import { cloudflare } from '@cloudflare/vite-plugin'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import react from '@vitejs/plugin-react'
@@ -71,6 +78,7 @@ export default defineConfig({
   // 本项目构建只需 Vite define 的 catalog 时间戳，不读取 .env.local。
   envDir: false,
   plugins: [
+    directoryCatalogPlugin(path.join(root, 'data/github.json')),
     tailwindcss(),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tanstackStart({

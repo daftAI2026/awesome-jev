@@ -1,5 +1,12 @@
+/**
+ * [INPUT]: 依赖 GitHub 请求、仓库审核的文件排除与 Node crypto 哈希
+ * [OUTPUT]: 对外提供代码搜索线索及固定提交的完整代码证据
+ * [POS]: scripts 的发现与取证衔接层，搜索索引不代替当前仓库证据
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createHash } from 'node:crypto'
 import { exclusion } from './repository-review.ts'
+import { isGitHubRunDeferred } from './github-client.ts'
 
 type Api = (path: string) => Promise<unknown>
 export const CODE_QUERIES = ['"api.typesafe.ai" in:file', '"@typesafe-ai/sdk" in:file', '"TYPESAFE_API_KEY" in:file', '"jev-latest" in:file']
@@ -34,7 +41,10 @@ export async function integrationEvidence(api: Api, key: string, sha: string, hi
       const url = `https://github.com/${key}/blob/${sha}/${route}`
       texts.push(`\n--- Integration evidence: ${path} ---\n${text}`)
       links.push({ url, path, sha256: createHash('sha256').update(bytes).digest('hex') })
-    } catch { incomplete = true }
+    } catch (error) {
+      if (isGitHubRunDeferred(error)) throw error
+      incomplete = true
+    }
   }
   return { text: texts.join('\n'), links, incomplete }
 }

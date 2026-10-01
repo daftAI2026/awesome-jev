@@ -81,7 +81,7 @@ npm run deploy   # build + wrangler deploy
 
 `src/lib/catalog.functions.ts` uses the installed TanStack Start `createServerFn` GET boundary. JSON imports remain inside handlers, so the compiler removes them from browser RPC stubs. Project/news detail loaders return only the requested record, and the news index returns the existing news snapshot. During SSR/prerender these functions execute locally; browser navigation calls the same-origin Worker endpoint, without a custom fetch wrapper, external API, or new database. Missing records still become route-level HTTP 404s. The preview loader dynamically imports the GitHub module already loaded by the directory, returning only its title/summary to head metadata without adding an RPC to an otherwise local preview.
 
-`App` still imports the full GitHub snapshot for local search, sorting, filters, saved items and immediate project previews. That dataset belongs to the directory chunk, not every route's entry. Saved news remains a deferred import on demand. This change reduces unrelated data on detail pages and removes news data from homepage startup; it does **not** remove the GitHub catalog from a fully interactive homepage. Keep RPC deployment and static HTML from the same build. See [performance.md](performance.md) for the report baseline, decisions and verification boundaries.
+`App` and the masked preview share `virtual:directory-catalog`, a Vite build-time whitelist projection of the canonical GitHub snapshot. It preserves every current search/sort/card/preview field, complete inclusion rationale and pinned evidence URL; unused machine scores and audit hashes/links remain in canonical JSON but are not sent to the directory. There is no generated second source of truth, new RPC or preview loading state. Development invalidates both projected and canonical modules across Vite environments when the catalog changes. Standalone server detail reads and prerender path enumeration still use canonical data. That dataset belongs to the directory chunk, not every route's entry. Saved news remains a deferred import on demand. This change reduces unrelated data on detail pages and removes news data from homepage startup; it does **not** remove the GitHub catalog from a fully interactive homepage. Keep RPC deployment and static HTML from the same build. See [performance.md](performance.md) for the report baseline, decisions and verification boundaries.
 
 ## Search discoverability
 
@@ -101,7 +101,7 @@ GitHub Actions runs the server-side ecosystem radar through read-only collection
 
 The independent [news integration](news.md) uses AIHOT's public API in a separate hourly Action and commits `data/news.json` and the regenerated sitemap when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 
-An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.
+The production build itself runs `data:check`, including catalog capacity and README validation, so a separate Workers build cannot silently skip these code-level checks. This is not a branch-protection rule or a semantic/security admission certificate. An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.
 
 ## Search Console report triage (2026-10-01)
 
@@ -110,3 +110,5 @@ The Coverage Drilldown export dated 2026-10-01 contains one example, `http://awe
 At the time of the check, HTTP still serves 200. Optional transport hardening belongs at the Cloudflare zone edge via SSL/TLS → Edge Certificates → Always Use HTTPS, not a client-side redirect or a Worker-only guard that static assets can bypass. Enabling it is separate from resolving this non-error report; do not claim it has been enabled without an actual 301 check.
 
 Runtime error-page regression: with a running local or preview server, `TEST_SITE_ORIGIN=http://127.0.0.1:5173 node --test scripts/not-found.test.ts` checks unknown URLs, invalid categories, missing projects and missing news in all three locales, plus healthy homepages. `npm test` skips these HTTP checks unless the origin is supplied.
+
+Core metadata scheduling remains offline in scripts: scalar GraphQL batches first refresh the final Top 100, then up to 1,000 other projects using the published identity cursor. This does not change browser data flow or author descriptions. Details and incomplete-Top publication guards are in [collector.md](collector.md).

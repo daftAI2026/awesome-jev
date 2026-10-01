@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 GitHub 事件/来源读取、既有整仓审查与可信检查点存储
- * [OUTPUT]: 对外提供投稿识别、候选提取、建议性审查和机器人评论的预算/缓存边界
+ * [OUTPUT]: 对外提供投稿识别、候选提取、建议性审查和机器人评论的动态 UTC 预算/缓存边界
  * [POS]: scripts 的 Issue/PR 审查编排；仅运行可信代码，不写目录或合并申请
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -8,9 +8,10 @@ import { readFileSync, appendFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
+import { setTimeout as waitFor } from 'node:timers/promises'
 import { createGitHubClient } from './github-client.ts'
 import { githubEvidence } from './github-evidence.ts'
-import { readCatalog, repoKey, validateRows } from './catalog.ts'
+import { MAX_CATALOG_FILE_BYTES, readCatalog, repoKey, validateRows, validateRepositoryIdentityChanges } from './catalog.ts'
 import { evaluateJev, inspectJev } from './jev-client.ts'
 import { sourceReader, verifyChangedInclusions, type SourceReader } from './inclusion.ts'
 import type { DirectoryItem } from './model-types.ts'
@@ -28,10 +29,10 @@ type ScanOptions = NonNullable<Parameters<typeof reviewRepository>[4]>
 type Reviewer = Parameters<typeof reviewRepository>[1]
 type ScanResult = Awaited<ReturnType<typeof reviewRepository>>
 export type SubmissionResult = Omit<ScanResult, 'status' | 'evidence'> & { evidence?: string; status: ScanResult['status'] | 'included' | 'error'; filesRead?: number }
-interface ReviewMeta { version: number; fingerprint: string; at: string; day: string; used: number; requests?: number; completed?: SubmissionResult[]; pending?: boolean; retryable?: boolean }
+interface ReviewMeta { inputVersion?: string; version: number; fingerprint: string; at: string; day: string; used: number; requests?: number; completed?: SubmissionResult[]; pending?: boolean; retryable?: boolean }
 interface ActiveMeta extends ReviewMeta { requests: number; completed: SubmissionResult[] }
 type WriteComment = (number: number, id: number | undefined, body: string) => Promise<{ id: number }>
-export interface SubmissionOptions { api: Api; writeComment: WriteComment; review: Reviewer; number: number; manual: boolean; known: Set<string>; now?: Date; store?: ScanOptions['store']; inspect?: ScanOptions['inspect']; deadline?: number; readSource?: SourceReader }
+export interface SubmissionOptions { api: Api; writeComment: WriteComment; review: Reviewer; number: number; manual: boolean; known: Set<string>; now?: Date; clock?: () => Date; store?: ScanOptions['store']; inspect?: ScanOptions['inspect']; deadline?: number; readSource?: SourceReader }
 interface PullRequest { draft?: boolean; head: { sha: string }; base: { sha: string } }
 interface ChangedFile { filename: string; status: string }
 
@@ -41,7 +42,7 @@ export const MAX_PROJECTS = 10
 export const DAILY_BUDGET = 100
 export const DAILY_REQUESTS = 2000
 const COOLDOWN_MS = 10 * 60 * 1000
-const MAX_SUBMISSION_FILE_BYTES = 4_500_000
+const MAX_SUBMISSION_FILE_BYTES = MAX_CATALOG_FILE_BYTES
 const MAX_BASE64_CHARS = Math.ceil(MAX_SUBMISSION_FILE_BYTES / 3) * 4
 // --- GitHub 的 Base64 可按行折叠；为每四字符一次 CRLF 留有界余量 ---
 const MAX_BASE64_RESPONSE_CHARS = MAX_BASE64_CHARS + Math.ceil(MAX_BASE64_CHARS / 4) * 2
@@ -132,13 +133,13 @@ export async function eventTargets(api: Api, eventName: string | undefined, even
   return []
 }
 function decodeSubmissionBase64(content: string): Buffer {
-  if (content.length > MAX_BASE64_RESPONSE_CHARS) throw new Error('submission-data-too-large')
+  if (content.length > MAX_BASE64_RESPONSE_CHARS) throw new Error('submission-catalog-too-large')
   const encoded = content.replace(/\r\n?|\n/g, '')
-  if (encoded.length > MAX_BASE64_CHARS) throw new Error('submission-data-too-large')
+  if (encoded.length > MAX_BASE64_CHARS) throw new Error('submission-catalog-too-large')
   if (encoded.length % 4 !== 0 || !base64CharactersPattern.test(encoded)) throw new Error('submission-invalid-data')
   const bytes = Buffer.from(encoded, 'base64')
   if (bytes.toString('base64') !== encoded) throw new Error('submission-invalid-data')
-  if (bytes.byteLength > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+  if (bytes.byteLength > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-catalog-too-large')
   return bytes
 }
 
@@ -148,13 +149,14 @@ async function jsonAt(api: Api, path: string, sha: string, optional = false): Pr
     let data = file
     // --- Contents 对超过 1 MB 的文件不给正文；用它返回的 blob SHA 读取同一版本 ---
     if (file.encoding === 'none') {
-      if (!/^[a-f0-9]{40}$/.test(file.sha ?? '') || typeof file.size !== 'number' || !Number.isSafeInteger(file.size) || file.size < 0 || file.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
+      if (!/^[a-f0-9]{40}$/.test(file.sha ?? '') || typeof file.size !== 'number' || !Number.isSafeInteger(file.size) || file.size < 0) throw new Error('submission-invalid-data')
+      if (file.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-catalog-too-large')
       data = await api(`/repos/${REPOSITORY}/git/blobs/${file.sha}`) as typeof file
       if (data.sha !== file.sha || data.size !== file.size) throw new Error('submission-invalid-data')
     }
     if (data.size !== undefined && (!Number.isSafeInteger(data.size) || data.size < 0)) throw new Error('submission-invalid-data')
-    if (data.size !== undefined && data.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-data-too-large')
-    if (data.encoding !== 'base64' || typeof data.content !== 'string') throw new Error('submission-data-too-large')
+    if (data.size !== undefined && data.size > MAX_SUBMISSION_FILE_BYTES) throw new Error('submission-catalog-too-large')
+    if (data.encoding !== 'base64' || typeof data.content !== 'string') throw new Error('submission-invalid-data')
     const bytes = decodeSubmissionBase64(data.content)
     if ((data.size !== undefined && data.size !== bytes.byteLength) || (file.size !== undefined && file.size !== bytes.byteLength)) {
       throw new Error('submission-invalid-data')
@@ -185,7 +187,11 @@ export async function submissionInput(api: Api, issue: Issue, language: Language
   for (const file of dataFiles) {
     const before = await jsonAt(api, file.filename, base!, true)
     const after = await jsonAt(api, file.filename, pr.head.sha)
-    if (file.filename === 'data/github.json') await verifyChangedInclusions(after, before, readSource)
+    // --- 全部 base/head 先校验，再做新增提取；已有行的恶意嵌套类型不能被过滤掉 ---
+    if (file.filename === 'data/github.json') {
+      validateRows(before)
+      await verifyChangedInclusions(after, before, readSource)
+    }
     const old = new Set(before.filter((row) => row.type === 'github').map((row) => repoKey(row.url ?? '')))
     const additions = after.filter((row) => row.type === 'github' && !old.has(repoKey(row.url ?? '')))
     // --- 旧 PR 的 openIssues 只为提取审查 URL 而忽略；正式目录仍禁止该字段 ---
@@ -197,6 +203,7 @@ export async function submissionInput(api: Api, issue: Issue, language: Language
       }
     }
     validateRows(additions)
+    validateRepositoryIdentityChanges(additions, [])
     for (const row of additions) keys.add(repoKey(row.url ?? '')!)
     if (file.filename !== 'data/github.json') notes.push(language === 'zh' ? '数据路径已迁移，请将收录条目放入 data/github.json，不要恢复 items/part 分片。' : 'Please add entries to data/github.json; do not restore the old items/part files.')
   }
@@ -210,6 +217,7 @@ export async function assessProject(api: Api, review: Reviewer, key: string, kno
     return await reviewRepository(api, review, key, evidence, options)
   } catch (error) {
     const reason = safeError(error)
+    if (reason === 'submission-day-changed') return { repo: key, status: 'review', reason }
     if (['jev-evidence-too-large', 'github-invalid-readme', 'github-empty-readme', 'github-ineligible-repository', 'submission-project-budget', 'submission-daily-requests'].includes(reason)) {
       return { repo: key, status: 'review', reason: reason === 'submission-daily-requests' ? reason : 'incomplete-evidence' }
     }
@@ -226,6 +234,7 @@ export function renderReport(meta: ReviewMeta, results: SubmissionResult[], note
     'instruction-like-evidence': zh ? '项目说明需要人工核对。' : 'The project description needs a manual check.',
     'insufficient-usage-evidence': zh ? '补查后证据仍不充分，请指出具体使用示例或实现位置。' : 'The follow-up check was inconclusive. Please point to a concrete usage example or implementation.',
     'incomplete-evidence': zh ? '本轮未能完整检查所需材料，需要进一步复核；不代表项目不合格。' : 'The required evidence could not be fully checked. Further review is needed; this is not a rejection.',
+    'submission-day-changed': zh ? 'UTC 日期已切换，本轮已暂停付费审查；后续运行会按新日期额度继续。' : 'The UTC day changed. Paid review is paused; a later run will continue with the new daily allowance.',
     'submission-daily-requests': zh ? '审查额度暂时用完，将在后续运行中继续。' : 'The review budget is temporarily exhausted. A later run will retry.',
     'scan-pending': zh ? '尚未检查完，下次自动接着处理。' : 'The scan is not finished. A later run will continue from its checkpoint.',
     'unconfirmed-request': zh ? '上次请求结果未能确认，已暂停以避免重复扣费，需要维护者确认重试。' : 'The previous request outcome is unknown. Review is paused to avoid duplicate charges; a maintainer can authorize a retry.',
@@ -242,28 +251,43 @@ export function renderReport(meta: ReviewMeta, results: SubmissionResult[], note
     lines.join('\n') || (meta.retryable ? (zh ? '暂时无法开始审查。' : 'Review temporarily unavailable.') :
       (zh ? '未发现可审查的新增 GitHub 项目。' : 'No new GitHub projects found to review.'))
   const extra = notes.length ? '\n\n' + notes.map((n) => `- ${n}`).join('\n') : ''
-  return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}\n`
+  const binding = `\n\n${zh ? '输入指纹' : 'Input fingerprint'}: \`${meta.fingerprint}\`` +
+    (meta.inputVersion ? `\n${zh ? '投稿版本' : 'Submission version'}: \`${meta.inputVersion}\`` : '')
+  return `${MARKER}\n<!-- jev-meta:${Buffer.from(JSON.stringify(meta)).toString('base64')} -->\n## ${zh ? 'Jev 收录审查' : 'Jev submission review'}\n\n${String(meta.at).slice(0, 10)} (UTC)\n\n${content}${extra}${binding}\n`
 }
 
-export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), store, inspect, deadline = Infinity, readSource }: SubmissionOptions) {
+export async function processSubmission({ api, writeComment, review, number, manual, known, now = new Date(), clock = () => new Date(), store, inspect, deadline = Infinity, readSource }: SubmissionOptions) {
   const issue = await api(`/repos/${REPOSITORY}/issues/${number}`) as Issue
   if (issue.state !== 'open' || (!manual && !issue.pull_request && !isSubmission(issue))) return 'not-submission'
   const language = reportLanguage(issue)
   let input
   let inputFailed = false
+  let retryInput = true
   try { input = await submissionInput(api, issue, language, readSource) }
-  catch {
+  catch (error) {
     inputFailed = true
-    input = { keys: [], version: digest([issue.number, issue.title, issue.body]), notes: [language === 'zh' ? '暂时无法读取收录数据；机器人稍后会重试。' : 'Could not read the submission data; the reviewer will retry later.'] }
+    retryInput = !(error instanceof Error && error.message === 'submission-catalog-too-large')
+    input = { keys: [], version: digest([issue.number, issue.title, issue.body]), notes: [!retryInput ? (language === 'zh' ? '目录文件超过审查读取的安全上限，需要维护者调整数据交付边界；自动重试无法解决。' : 'The catalog exceeds the bounded review input limit. A maintainer must adjust catalog delivery; automatic retries cannot resolve this.') : (language === 'zh' ? '暂时无法读取收录数据；机器人稍后会重试。' : 'Could not read the submission data; the reviewer will retry later.')] }
   }
-  if (!input.keys.length && !input.notes.length) return 'no-projects'
   const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
   const comments = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
+  if (!input.keys.length && !input.notes.length) {
+    // --- 撤回候选立即撤销旧状态；保留原 UTC 日计费，不新增付费或预算查询 ---
+    if (previous && oldMeta && oldMeta.fingerprint !== fingerprint) {
+      const invalidated = { ...oldMeta, inputVersion: input.version, fingerprint, at: now.toISOString(), completed: [], pending: false, retryable: false }
+      const note = language === 'zh' ? '当前投稿不再包含可审查项目；旧审查结果已失效。' : 'The current submission no longer contains reviewable projects; previous review results are no longer valid.'
+      await writeComment(number, previous.id, renderReport(invalidated, [], [note], false, language))
+    }
+    return 'no-projects'
+  }
   const skip = cacheReason(oldMeta, fingerprint, manual, now)
   if (skip) return skip
   const day = now.toISOString().slice(0, 10)
+  const assertLedgerDay = () => {
+    if (clock().toISOString().slice(0, 10) !== day) throw new Error('submission-day-changed')
+  }
   const recent = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/comments?since=${day}T00:00:00Z`)
   const used = recent.reduce((sum, comment) => {
     const meta = reviewMeta(comment)
@@ -275,10 +299,10 @@ export async function processSubmission({ api, writeComment, review, number, man
   }, 0)
   const keys = input.keys.slice(0, MAX_PROJECTS)
   const completed = !manual && oldMeta?.fingerprint === fingerprint && Array.isArray(oldMeta.completed) ? oldMeta.completed : []
-  const cached = new Map(completed.filter((r) => r && keys.includes(r.repo) && ['included', 'keep', 'review', 'drop'].includes(r.status) && r.reason !== 'submission-daily-requests').map((r) => [r.repo, r]))
+  const cached = new Map(completed.filter((r) => r && keys.includes(r.repo) && ['included', 'keep', 'review', 'drop'].includes(r.status) && !['submission-daily-requests', 'submission-day-changed'].includes(r.reason ?? '')).map((r) => [r.repo, r]))
   const reserve = keys.filter((key) => !known.has(key) && !cached.has(key)).length
   if (used + reserve > DAILY_BUDGET || (reserve && requests >= DAILY_REQUESTS)) return 'daily-budget-exhausted'
-  const meta: ActiveMeta = { version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
+  const meta: ActiveMeta = { inputVersion: input.version, version: 1, fingerprint, at: now.toISOString(), day, used: (oldMeta?.day === day ? oldMeta.used : 0) + reserve, requests: oldMeta?.day === day ? oldMeta.requests ?? 0 : 0, completed: [...cached.values()], pending: true }
   const notes = [...input.notes]
   if (input.keys.length > MAX_PROJECTS) notes.push(language === 'zh' ? `本次仅审查前 ${MAX_PROJECTS} 个；另外 ${input.keys.length - MAX_PROJECTS} 个请拆分申请。` : `Reviewed the first ${MAX_PROJECTS} projects. Please submit the remaining ${input.keys.length - MAX_PROJECTS} separately.`)
   // 先保留预算，再调用模型；崩溃或网络失败也不能反复免费重试额度。
@@ -294,22 +318,24 @@ export async function processSubmission({ api, writeComment, review, number, man
   for (const key of keys) {
     if (cached.has(key)) { results.push(cached.get(key)!); continue }
     const beforeRequest = async () => {
+      assertLedgerDay()
       if (Date.now() >= deadline) throw new Error('submission-run-budget')
       if (requests >= DAILY_REQUESTS) throw new Error('submission-daily-requests')
       requests++; meta.requests++
       checkpoint()
       // 每一次 HTTP 尝试先记账；失败请求也记入每日防刷上限，跨申请共享额度。
       await writeComment(number, comment.id, renderReport(meta, results, notes, true, language))
+      assertLedgerDay()
     }
     const result: SubmissionResult = unavailable && !known.has(key) ? { repo: key, status: 'error', reason: 'jev-deferred-after-error' } :
-      await assessProject(api, (row, text, options) => review(row, text, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } }), key, known, {
-        store, manual, deadline, inspect: inspect && ((row, segments, options) => inspect(row, segments, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.() } })),
+      await assessProject(api, (row, text, options) => review(row, text, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.(); assertLedgerDay() } }), key, known, {
+        store, manual, deadline, inspect: inspect && ((row, segments, options) => inspect(row, segments, { ...options, beforeRequest: async () => { await beforeRequest(); await options.beforeRequest?.(); assertLedgerDay() } })),
       })
-    if (result.reason?.startsWith('jev-')) unavailable = true
+    if (result.reason?.startsWith('jev-') || result.reason === 'submission-day-changed') unavailable = true
     results.push(result)
   }
   checkpoint()
-  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: inputFailed || results.some((r) => r.status === 'error' || r.status === 'pending' || r.reason === 'submission-daily-requests') }, results, notes, false, language))
+  await writeComment(number, comment.id, renderReport({ ...meta, pending: false, retryable: (inputFailed && retryInput) || results.some((r) => r.status === 'error' || r.status === 'pending' || ['submission-daily-requests', 'submission-day-changed'].includes(r.reason ?? '')) }, results, notes, false, language))
   if (process.env.GITHUB_STEP_SUMMARY) {
     const audit = results.map((r) => ({ repo: r.repo, status: r.status, reason: r.reason, deep: !!r.deep, progress: r.progress, filesRead: r.filesRead ?? 0, evidence: [r.evidence, ...(r.evidenceLinks ?? [])].filter(Boolean) }))
     appendFileSync(process.env.GITHUB_STEP_SUMMARY, `\n### Evidence audit #${number}\n\n\`\`\`json\n${JSON.stringify(audit, null, 2)}\n\`\`\`\n`)
@@ -317,9 +343,15 @@ export async function processSubmission({ api, writeComment, review, number, man
   return inputFailed ? 'input-error' : `reviewed-${results.length}`
 }
 
-export function commentWriter(token: string | undefined, { fetchImpl = fetch }: { fetchImpl?: typeof fetch } = {}): WriteComment {
-  return async (number, id, body) => {
+export function commentWriter(token: string | undefined, { fetchImpl = fetch, now = Date.now, wait = waitFor }: {
+  fetchImpl?: typeof fetch; now?: () => number; wait?: (milliseconds: number) => Promise<unknown>
+} = {}): WriteComment {
+  // --- 人类评论仍是当前付费账本；只节流传输，不跳过请求前持久化 ---
+  let queue: Promise<unknown> = Promise.resolve()
+  let completedAt: number | null = null
+  const write: WriteComment = async (number, id, body) => {
     if (!validNumber(number) || (id != null && !validNumber(id))) throw new Error('submission-invalid-number')
+    if (completedAt !== null) await wait(Math.max(0, 1000 - (now() - completedAt)))
     const path = id == null ? `issues/${number}/comments` : `issues/comments/${id}`
     let response
     try {
@@ -329,10 +361,16 @@ export function commentWriter(token: string | undefined, { fetchImpl = fetch }: 
         body: JSON.stringify({ body }),
       })
     } catch { throw new Error('github-comment-network-error') }
+    finally { completedAt = now() }
     if (!response.ok) { await response.body?.cancel(); throw new Error(`github-comment-http-${response.status}`) }
     const result = await response.json()
     if (!validNumber(result.id)) throw new Error('github-invalid-response')
     return result
+  }
+  return (number, id, body) => {
+    const pending = queue.then(() => write(number, id, body))
+    queue = pending.catch(() => undefined)
+    return pending
   }
 }
 async function main() {

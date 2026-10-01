@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Node test、核心雷达与注入的离线 GitHub / 模型桩
+ * [OUTPUT]: 对外提供核心雷达、元数据与审核恢复的回归断言
+ * [POS]: scripts 的采集编排离线验收，不调用真实网络或付费模型
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { classifyProjects, evaluateJev, parseScore, reviewDecision, reviewBody } from './jev-client.ts'
@@ -136,16 +142,17 @@ test('missing README never reaches Jev and cannot enter catalog', async () => {
   }, review: async () => { called = true; return score } })
   assert.equal(called, false); assert.equal(result.report.added, 0)
 })
-test('metadata failure preserves old record; other candidates can still succeed', async () => {
+test('failed priority metadata preserves old record and blocks paid candidates', async () => {
   const old: ReviewRow = { id: 'old', type: 'github', title: 'Old', summary: 'Curated', tags: ['sdk'],
     url: 'https://github.com/test/old', sourceMeta: { repo: 'test/old', stars: 9 } }
   const original: Catalog = { files: new Map<string, ReviewRow[]>([['github.json', [old]]]), rows: [old] }
-  const result = await runRadar({ ...options(), catalog: original, api: async (path: string) => {
-    if (path === '/repos/test/old') throw new Error('github-http-404')
+  const result = await runRadar({ ...options(), catalog: original, api: async (path) => {
+    if (path === '/graphql') return { data: { r0: null, rateLimit: { cost: 1 } }, errors: [{ type: 'NOT_FOUND', path: ['r0'] }] }
     return api(path)
   } })
   assert.deepEqual(result.rows[0], old); assert.equal(result.report.metadata.failed, 1)
-  assert.equal(result.report.added, 1)
+  assert.equal(result.report.added, 0)
+  assert.equal(result.report.metadata.top100.complete, false)
 })
 test('search cursors continue across runs; search cap is explicit', async () => {
   const pages: number[] = []
@@ -281,30 +288,223 @@ for (const [evidence, reason] of [
 test('every existing GitHub repository is refreshed regardless of candidate limit or old cursor', async () => {
   const rows: ReviewRow[] = Array.from({ length: 501 }, (_, i) => ({ id: `old-${i}`, type: 'github', title: `Old ${i}`,
     summary: 'Curated', url: `https://github.com/test/old-${i}`,
-    sourceMeta: { repo: `test/old-${i}`, stars: 10, forks: 8, language: 'JavaScript', ...score } }))
+    sourceMeta: { repo: `test/old-${i}`, stars: 501 - i, forks: 8, language: 'JavaScript', ...score } }))
   const before = structuredClone(rows)
   const state = { ...emptyState(), metadataCursor: 300 }
   const seen: string[] = []
   const result = await runRadar({ catalog: { files: new Map<string, ReviewRow[]>([['github.json', rows]]), rows },
     state, queries: [], limit: 1, now,
     review: async () => { assert.fail('Existing repositories must not call Jev') },
-    api: async (path: string) => {
-      seen.push(path)
-      if (path === '/repos/test/old-200') throw new Error('github-http-404')
-      return { html_url: `https://github.com/${path.slice('/repos/'.length)}`,
-        stargazers_count: 4, forks_count: 2, language: 'TypeScript' }
+    api: async (path, request) => {
+      assert.equal(path, '/graphql')
+      const query = request!.query
+      const payload = graphResponse(query, () => 4)
+      for (const match of query.matchAll(/(r\d+):\s*repository\(owner:\s*"test",\s*name:\s*"(old-\d+)"\)/g)) {
+        seen.push(match[2])
+        if (match[2] === 'old-500') payload.data[match[1]] = null
+      }
+      return payload
     },
   })
   assert.equal(seen.length, 501)
   assert.equal(new Set(seen).size, 501)
-  assert.deepEqual(result.report.metadata, { ok: 500, failed: 1 })
-  assert.deepEqual(result.rows[200], before[200])
+  assert.equal(result.report.metadata.ok, 500)
+  assert.equal(result.report.metadata.failed, 1)
+  assert.deepEqual(result.rows[500], before[500])
   for (const [i, row] of result.rows.entries()) {
-    if (i === 200) continue
+    if (i === 500) continue
     assert.deepEqual(row, { ...before[i], sourceMeta: { ...before[i].sourceMeta,
       stars: 4, forks: 2, language: 'TypeScript' } })
   }
   assert.deepEqual(rows, before)
-  assert.equal(result.state.metadataCursor, 0)
   assert.equal(result.report.reviewed, 0)
+})
+
+test('deadline spans discovery and preserves untouched candidates', async () => {
+  const state = emptyState()
+  state.candidates['test/jev-sdk'] = { status: 'review', discoveredAt: now.toISOString(), attempts: 2 }
+  let calls = 0
+  const result = await runRadar({ ...options(), state, deadline: 100, clock: () => 100,
+    api: async () => { calls++; return { items: [], total_count: 0 } } })
+  assert.equal(calls, 0)
+  assert.equal(result.report.status, 'partial')
+  assert.equal(result.report.deferred?.phase, 'discovery')
+  assert.deepEqual(result.state.candidates, state.candidates)
+})
+test('deadline in metadata stops all later requests, keeps old rows and reports unfinished refresh', async () => {
+  const rows = metadataRows(51)
+  let time = 0; let calls = 0
+  const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', rows]]), rows }, queries: [], deadline: 100, clock: () => time,
+    api: async (_path, request) => { calls++; time = 100; return graphResponse(request!.query, () => 10000) } })
+  assert.equal(calls, 1)
+  assert.equal(result.report.metadata.ok, 50)
+  assert.equal(result.report.metadata.failed, 0)
+  assert.deepEqual(result.report.deferred, { phase: 'metadata', reason: 'github-deadline', metadataRemaining: 1 })
+  assert.equal(result.report.status, 'partial')
+  assert.deepEqual(result.rows[50], rows[50])
+})
+test('shared quota exhaustion in discovery stops metadata and preserves review queue', async () => {
+  let calls = 0
+  const state = emptyState()
+  state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  const result = await runRadar({ ...options(), state, queries: ['first', 'second'], api: async () => { calls++; throw new Error('github-rate-limited') } })
+  assert.equal(calls, 1)
+  assert.equal(result.report.deferred?.reason, 'github-rate-limited')
+  assert.equal(result.report.reviewed, 0)
+  assert.deepEqual(result.state.candidates, state.candidates)
+})
+
+test('quota pause during integration evidence restores the candidate without a paid review', async () => {
+  const state = emptyState()
+  state.candidates['test/jev-sdk'] = { status: 'review', discoveredAt: now.toISOString(), attempts: 2,
+    codeHints: [{ path: 'src/provider.ts', query: 'sdk' }] }
+  let reviews = 0
+  const result = await runRadar({ ...options(), state, queries: [],
+    api: async (path) => path.includes('/contents/') ? Promise.reject(new Error('github-rate-limited')) : api(path),
+    review: async () => { reviews++; return score } })
+  assert.equal(reviews, 0)
+  assert.equal(result.report.reviewed, 0)
+  assert.equal(result.report.deferred?.phase, 'review')
+  assert.deepEqual(result.state.candidates, state.candidates)
+})
+
+test('budget persistence that crosses the deadline does not permit a paid request', async () => {
+  let time = 0; let paid = 0
+  const result = await runRadar({ ...options(), deadline: 100, clock: () => time,
+    beforeRequest: async () => { time = 100 },
+    review: async (_row, _text, opts) => { await opts?.beforeRequest?.(); paid++; return score } })
+  assert.equal(paid, 0)
+  assert.equal(result.report.deferred?.phase, 'review')
+  assert.equal(result.report.reviewed, 0)
+})
+
+// --- 批量读取走真实共享客户端；5000 项跨轮只轮转其它项，不轮转 Top100 ---
+function metadataRows(count: number): ReviewRow[] {
+  return Array.from({ length: count }, (_, i) => ({ id: `m-${i}`, type: 'github', title: `Project ${i}`, summary: 'Curated',
+    url: `https://github.com/test/m-${i}`, sourceMeta: { repo: `test/m-${i}`, stars: count - i } }))
+}
+function graphResponse(query: string, stars: (key: string) => number = (key) => 10000 - Number(key.split('-').at(-1)), missing = new Set<string>()) {
+  const data: Record<string, unknown> = { rateLimit: { cost: 1, remaining: 999, limit: 1000, resetAt: '2026-10-02T00:00:00Z' } }
+  for (const match of query.matchAll(/(r\d+):\s*repository\(owner:\s*"([^"]+)",\s*name:\s*"([^"]+)"\)/g)) {
+    const key = `${match[2]}/${match[3]}`
+    data[match[1]] = missing.has(key) ? null : { nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(key), forkCount: 2, primaryLanguage: { name: 'TypeScript' } }
+  }
+  return { data }
+}
+test('default runRadar prioritizes top100 then batches 1000 others with persistent cursor across 5000 rows', async () => {
+  const rows = metadataRows(5000)
+  let state = emptyState()
+  let currentRows = rows
+  const ever = new Set<string>()
+  for (let round = 0; round < 5; round++) {
+    const calls: string[][] = []
+    const shared = createGitHubClient('test', { wait: async () => {}, fetchImpl: async (url, init) => {
+      assert.equal(url, 'https://api.github.com/graphql')
+      assert.equal(init?.method, 'POST')
+      const query = JSON.parse(init?.body as string).query as string
+      const keys = [...query.matchAll(/name:\s*"m-(\d+)"/g)].map((m) => `test/m-${m[1]}`)
+      calls.push(keys); keys.forEach((key) => ever.add(key))
+      return Response.json(graphResponse(query, (key) => 5000 - Number(key.split('-').at(-1))))
+    } })
+    const result = await runRadar({ catalog: { files: new Map([['github.json', currentRows]]), rows: currentRows }, state,
+      queries: [], api: shared, review: async () => { assert.fail('No paid metadata review') } })
+    assert.deepEqual(calls.slice(0, 2).flat(), Array.from({ length: 100 }, (_, i) => `test/m-${i}`))
+    assert.equal(result.report.metadata.top100.ok, 100)
+    assert.equal(result.report.metadata.top100.complete, true)
+    assert.equal(result.report.status, 'partial')
+    assert.ok(result.report.metadata.remaining > 0)
+    assert.equal(result.report.metadata.cost, calls.length)
+    assert.ok(calls.every((batch) => batch.length <= 50))
+    assert.ok(result.report.metadata.other <= 1000)
+    state = result.state; currentRows = result.rows
+  }
+  assert.equal(ever.size, 5000)
+  assert.deepEqual(rows, metadataRows(5000))
+})
+test('metadata precedes discovery and incomplete top100 blocks candidate paid calls', async () => {
+  const rows = metadataRows(2)
+  const state = emptyState()
+  state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  const calls: string[] = []
+  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, state, queries: ['discover'],
+    api: async (path, request) => { calls.push(path); return path === '/graphql' ? graphResponse(request!.query, () => 2, new Set(['test/m-0'])) : { items: [], total_count: 0 } },
+    review: async () => { assert.fail('Incomplete priority must not call paid model') } })
+  assert.deepEqual(calls, ['/graphql'])
+  assert.equal(result.report.metadata.top100.complete, false)
+  assert.equal(result.report.metadata.top100.ok, 1)
+  assert.deepEqual(result.state.candidates, state.candidates)
+})
+test('priority closure refreshes cached outsiders entering top100 after initial leaders drop', async () => {
+  const rows = metadataRows(150)
+  const seen = new Set<string>()
+  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, queries: [], metadataLimit: 0,
+    api: async (_path, request) => {
+      const query = request!.query
+      for (const match of query.matchAll(/name:\s*"m-(\d+)"/g)) seen.add(`test/m-${match[1]}`)
+      return graphResponse(query, (key) => Number(key.split('-').at(-1)) < 100 ? 0 : 50)
+    }, review: async () => { assert.fail('No paid metadata review') } })
+  assert.equal(seen.size, 150)
+  assert.equal(result.report.metadata.top100.complete, true)
+  assert.equal(result.report.metadata.other, 0)
+})
+
+test('new paid-accepted high-star candidate is fresh in final top100 without redundant GraphQL', async () => {
+  const rows = metadataRows(100)
+  let batches = 0
+  const accepted = { ...repo, stargazers_count: 99999 }
+  const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', rows]]), rows },
+    api: async (path, request) => {
+      if (path === '/graphql') { batches++; return graphResponse(request!.query, () => 100) }
+      if (path.startsWith('/search/')) return { items: [accepted], total_count: 1 }
+      if (path === '/repos/test/jev-sdk') return accepted
+      return api(path)
+    } })
+  assert.equal(result.report.added, 1)
+  assert.equal(result.report.metadata.top100.complete, true)
+  assert.equal(result.report.metadata.top100.ok, 100)
+  assert.equal(batches, 2)
+  assert.equal(result.rows.at(-1)?.sourceMeta.stars, 99999)
+})
+test('priority failure report enumerates every unrefreshed displayed top repository', async () => {
+  const rows = metadataRows(2)
+  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, queries: [],
+    api: async (_path, request) => graphResponse(request!.query, () => 2, new Set(['test/m-0'])),
+    review: async () => { assert.fail('No paid call') } })
+  assert.deepEqual(result.report.metadata.top100.unrefreshed, ['test/m-0'])
+})
+
+// --- failed 诊断不能借输出目录残留的 data/README 被误 apply；旧快照仍兼容 ---
+for (const [label, top, expected] of [
+  ['explicit incomplete', { ok: 0, total: 100, complete: false, unrefreshed: ['test/fail'] }, 'github-top100-incomplete'],
+  ['malformed complete', { ok: 0, total: 100, complete: 'yes', unrefreshed: [] }, 'github-invalid-top100-report'],
+  ['inconsistent complete', { ok: 50, total: 100, complete: true, unrefreshed: [] }, 'github-invalid-top100-report'],
+  ['malformed null', null, 'github-invalid-top100-report'],
+  ['modern completed rotation partial', { ok: 100, total: 100, complete: true, unrefreshed: [] }, undefined],
+  ['legacy omitted', undefined, undefined],
+] as const) test(`CLI --apply guards ${label} without touching baseline files`, async () => {
+  const fs = await import('node:fs')
+  const { join, resolve } = await import('node:path')
+  const { tmpdir } = await import('node:os')
+  const { spawnSync } = await import('node:child_process')
+  const temporary = fs.mkdtempSync(join(tmpdir(), 'jev-top100-apply-'))
+  const root = join(temporary, 'root'); const snapshot = join(temporary, 'snapshot')
+  const files = ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json']
+  try {
+    for (const directory of [root, snapshot]) {
+      fs.mkdirSync(join(directory, 'data'), { recursive: true }); fs.mkdirSync(join(directory, 'radar'), { recursive: true })
+      for (const file of files) fs.copyFileSync(resolve(file), join(directory, file))
+    }
+    const before = files.map((file) => fs.readFileSync(join(root, file)))
+    const report = JSON.parse(fs.readFileSync(join(snapshot, 'radar/latest.json'), 'utf8'))
+    report.status = 'partial'; report.metadata = { ok: 0, failed: 1 }
+    if (top !== undefined) report.metadata.top100 = top
+    fs.writeFileSync(join(snapshot, 'radar/latest.json'), JSON.stringify(report))
+    const result = spawnSync(process.execPath, ['--experimental-strip-types', resolve('scripts/radar.ts'), '--apply', snapshot], {
+      cwd: root, encoding: 'utf8', env: { ...process.env, TYPESAFE_API_KEY: '', GITHUB_TOKEN: '' },
+    })
+    if (expected) {
+      assert.notEqual(result.status, 0); assert.match(result.stderr, new RegExp(expected))
+      files.forEach((file, i) => assert.deepEqual(fs.readFileSync(join(root, file)), before[i]))
+    } else assert.equal(result.status, 0, result.stderr)
+  } finally { fs.rmSync(temporary, { recursive: true, force: true }) }
 })

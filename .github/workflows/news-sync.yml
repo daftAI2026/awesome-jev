@@ -36,7 +36,7 @@ jobs:
         env:
           AIHOT_NEWS_ENABLED: 'true'
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm run typecheck && npm test && npm run news:check && npm run build
+      - run: npm run typecheck && npm test && npm run news:check && npm run build && npm run test:delivery
       - name: Publish news and sitemap together
         env:
           GH_TOKEN: ${{ github.token }}

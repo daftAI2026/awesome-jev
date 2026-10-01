@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+/**
+ * [INPUT]: 依赖目录、GitHub 固定提交取证与模型分类审核
+ * [OUTPUT]: 对外提供替代实现初筛、整仓审查与本地检查点恢复
+ * [POS]: scripts 的显式本地审计入口，不自动改写公开目录
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createHash } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
@@ -6,7 +12,7 @@ import { dirname, join, resolve } from 'node:path'
 import { setTimeout as sleep } from 'node:timers/promises'
 import { fileURLToPath } from 'node:url'
 import { readCatalog, repoKey } from './catalog.ts'
-import { createGitHubClient } from './github-client.ts'
+import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
 import { alternativeEvidenceIssue, githubEvidence } from './github-evidence.ts'
 import { classifyProjects, evaluateJev, JEV_MODEL, reviewDecision } from './jev-client.ts'
 import type { GitHubApi, GitHubDirectoryItem, JevScore, ProjectCategory, ReviewKeep } from './model-types.ts'
@@ -91,7 +97,7 @@ async function fetchEvidence(api: GitHubApi, repo: string): ReturnType<typeof gi
 }
 
 export async function auditAlternatives(rows: GitHubDirectoryItem[], key: string, githubToken: string,
-  state: AuditState, persist: (state: AuditState) => void): Promise<AuditState> {
+  state: AuditState, persist: (state: AuditState) => void, options: { api?: GitHubApi } = {}): Promise<AuditState> {
   for (let start = 0; start < rows.length; start += 8) {
     const batch = rows.slice(start, start + 8)
     const pending = batch.filter((row) => !Object.hasOwn(state.screened, row.id))
@@ -106,7 +112,7 @@ export async function auditAlternatives(rows: GitHubDirectoryItem[], key: string
 
   const candidates = rows.filter((row) => possibleAlternative(row, state.screened[row.id]))
     .sort((a, b) => (b.sourceMeta.stars ?? 0) - (a.sourceMeta.stars ?? 0) || a.id.localeCompare(b.id))
-  const api = createGitHubClient(githubToken)
+  const api = options.api ?? createGitHubClient(githubToken)
   let consecutiveForbidden = 0
   process.stdout.write(`${candidates.length} candidates for repository review\n`)
   for (const row of candidates) {
@@ -133,6 +139,7 @@ export async function auditAlternatives(rows: GitHubDirectoryItem[], key: string
         license, checkedAt,
       }
     } catch (error) {
+      if (isGitHubRunDeferred(error)) throw error
       if (error instanceof Error && error.message.startsWith('jev-') && error.message !== 'jev-http-403') throw error
       if (error instanceof Error && error.message === 'jev-http-403') consecutiveForbidden++
       verdict = { decision: 'review', reason: error instanceof Error ? error.message : 'github-unavailable', checkedAt }

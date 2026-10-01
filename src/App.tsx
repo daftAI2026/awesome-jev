@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 目录数据、搜索/排序工具及项目/新闻/收藏组件
+ * [INPUT]: 依赖规范目录的展示虚拟模块、搜索/排序工具及项目/新闻/收藏组件
  * [OUTPUT]: 对外提供 App 目录布局、筛选交互及 GitHub 投稿表单入口
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -7,7 +7,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
-import githubData from '../data/github.json'
+import githubData from 'virtual:directory-catalog'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { CardMasonry } from '@/components/CardMasonry'
 import { DecryptedBrand } from '@/components/DecryptedBrand'

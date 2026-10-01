@@ -5,7 +5,7 @@
 catalog-updated-at.ts: 历史时间戳校验与固定时区展示，缺失时不造时间
 catalog.functions.ts: Start 同源只读数据边界，详情交付单条记录，新闻索引按路由读取，快照仅在 handler 内导入
 categories.ts: 项目/新闻分类及标签键的共享白名单
-inclusion.ts: 收录证据结构校验，前端与采集脚本共用
+inclusion.ts: 收录依据及同仓固定 blob/tree 证据边界，前端与采集共用而不信任类型断言
 locale-head.ts: 有效页面规范 URL、语言 alternates 和分享元数据
 locale-routes.ts: en/zh/ja 路径识别、转换和 hreflang 的纯规则
 masonry.ts: 有序虚拟瀑布流几何与启动状态规则，预就绪保留 SSR 前缀及用户阅读位置

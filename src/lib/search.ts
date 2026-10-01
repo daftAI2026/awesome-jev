@@ -5,7 +5,7 @@
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import Fuse, { type IFuseOptions } from 'fuse.js'
-import type { DirectoryItem, FilterType } from './types'
+import type { DirectoryItem, FilterType } from './types.ts'
 
 const fuseOptions: IFuseOptions<DirectoryItem> = {
   keys: [

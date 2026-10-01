@@ -7,7 +7,7 @@ _directory.tsx: 无路径目录布局，将 App 与子路由 Outlet 组合
 _directory.{-$locale}.category.$category.tsx: 分类白名单校验与分类元数据，非法分类交给根 404
 _directory.{-$locale}.index.tsx: 目录首页及对应语言的搜索元数据
 _directory.{-$locale}.news.tsx: Start 服务端函数加载新闻索引，预渲染与客户端导航消费同一快照
-_directory.{-$locale}.preview.$owner.$repo.tsx: 动态导入复用目录快照生成预览元数据，避免全站启动依赖和额外 RPC
+_directory.{-$locale}.preview.$owner.$repo.tsx: 动态导入复用目录展示投影生成预览元数据，避免全站启动依赖和额外 RPC
 _directory.{-$locale}.saved.tsx: 浏览器本地收藏的验证搜索状态，禁止索引
 _directory.{-$locale}.top100.tsx: 全目录星标前 100 的页面身份与元数据
 _directory.{-$locale}.tsx: 语言分组，拒绝未知语言参数并向子路由传递布局

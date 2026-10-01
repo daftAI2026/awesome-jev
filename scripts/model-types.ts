@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 共享三语言收录依据类型
+ * [OUTPUT]: 对外提供 采集目录、GitHub 来源/只读查询、模型请求与评分契约
+ * [POS]: 服务端共享类型权威，区分规范审计记录与前端展示类型
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { InclusionBasis } from '../src/lib/inclusion.ts'
 
 export type ReviewKeep = 'keep' | 'review' | 'drop'
@@ -75,7 +81,8 @@ export interface GitHubEvidence {
   evidenceUrl: string
 }
 
-export type GitHubApi = (path: string) => Promise<unknown>
+export interface GitHubQuery { query: string }
+export type GitHubApi = (path: string, request?: GitHubQuery) => Promise<unknown>
 
 export type Waiter = (milliseconds: number) => Promise<unknown>
 

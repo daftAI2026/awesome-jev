@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖浏览器收藏身份、项目/新闻快照和现有搜索与卡片组件
+ * [OUTPUT]: 对外提供 SavedPanel 的本地收藏筛选、展示和打开动作
+ * [POS]: components 的收藏组合层，复用目录呈现而不维护第二份富数据
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useEffect, useMemo, type MouseEvent } from 'react'
 import { CardMasonry } from '@/components/CardMasonry'
 import { NewsPanel } from '@/components/NewsPanel'

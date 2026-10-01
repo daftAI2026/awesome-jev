@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖新闻同步真实函数、临时快照与离线 AIHOT 响应
+ * [OUTPUT]: 对外提供分页、重试、增量保留及失败不发布的回归验证
+ * [POS]: scripts 的新闻完整性护栏，不请求真实来源或付费接口
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'

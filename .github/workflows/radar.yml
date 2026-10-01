@@ -1,4 +1,4 @@
-# [INPUT]: 依赖 GitHub 搜索、核心雷达和已有目录校验脚本
+# [INPUT]: 依赖 GitHub 只读批量元数据/搜索、核心雷达和已有目录校验脚本
 # [OUTPUT]: 执行核心采集、PR 校验与经过验证的数据发布
 # [POS]: workflows 的核心采集链路；扫描、验证与发布权限分离
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -52,7 +52,7 @@ jobs:
           npm run inclusion:verify -- "$INCLUSION_BASE_SHA"
         env:
           INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build
+      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
   scan:
     permissions:
       contents: read
@@ -93,6 +93,10 @@ jobs:
           github-token: ${{ github.token }}
           path: ${{ runner.temp }}/jev-radar-budget
           merge-multiple: true
+      - name: Verify built-in token metadata capability (no model key)
+        run: node --experimental-strip-types scripts/github-metadata.ts --probe
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Collect and review (no dependency installation)
         id: collect
         run: node --experimental-strip-types scripts/radar.ts "$RUNNER_TEMP/snapshot"
@@ -109,6 +113,14 @@ jobs:
           path: ${{ runner.temp }}/jev-radar-budget/*.json
           if-no-files-found: error
           retention-days: 7
+      - name: Save failed metadata diagnostics (not a publishable snapshot)
+        if: failure() && steps.collect.outcome == 'failure'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: radar-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/snapshot/radar
+          if-no-files-found: warn
+          retention-days: 14
       - id: snapshot
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -136,7 +148,7 @@ jobs:
           merge-multiple: true
       - run: node --experimental-strip-types scripts/radar.ts --apply "$RUNNER_TEMP/snapshot"
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build
+      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
   publish:
     needs: [scan, validate]
     if: github.event_name == 'schedule' || inputs.publish == true

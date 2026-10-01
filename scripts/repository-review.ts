@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 固定 GitHub 证据、Jev 原子评估与 review-store 持久化契约
+ * [OUTPUT]: 对外提供 整仓文件清单、分段进度、受限覆盖声明及完成 receipt
+ * [POS]: 投稿的可恢复取证编排；覆盖未完成不能给整仓结论
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createHash } from 'node:crypto'
 import { TextDecoder } from 'node:util'
 import { candidateRow } from './catalog.ts'

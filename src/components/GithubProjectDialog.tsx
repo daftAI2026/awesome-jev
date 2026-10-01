@@ -13,7 +13,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { PreviewDialogHeader } from '@/components/PreviewDialogHeader'
 import { PreviewDialogFooter } from '@/components/PreviewDialogFooter'
-import { isInclusionBasis, pinnedSource } from '@/lib/inclusion'
+import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource } from '@/lib/inclusion'
 
 interface GithubProjectDialogProps {
   item: DirectoryItem | null
@@ -30,7 +30,7 @@ export function GithubProjectContent({ item, categoryLabel, standalone = false }
   const SectionHeading = standalone ? 'h2' : 'h3'
   const meta = item.sourceMeta
   const citedUrl = meta.jevEvidence?.evidenceUrl
-  const evidenceUrl = citedUrl?.startsWith('https://github.com/') ? citedUrl : null
+  const evidenceUrl = isPinnedEvidenceUrl(citedUrl, item.url) ? citedUrl : null
   const inclusion = isInclusionBasis(meta.inclusion, item.url) ? meta.inclusion : null
   const inclusionSources = inclusion?.evidence.filter((source, index, sources) =>
     sources.findIndex((candidate) => candidate.url === source.url) === index) ?? []

@@ -1,10 +1,18 @@
+/**
+ * [INPUT]: 依赖 catalog、GitHub 取证、模型审核和 radar-budget 的可信采集能力
+ * [OUTPUT]: 对外提供核心雷达状态校验、运行和快照写入
+ * [POS]: scripts 的核心生态采集编排，Top100 优先、其它元数据续点刷新并持久化候选
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
-import { readCatalog, repoKey, refreshRow, candidateRow, renderReadme, applySnapshot } from './catalog.ts'
-import { createGitHubClient } from './github-client.ts'
+import { readCatalog, repoKey, candidateRow, renderReadme, applySnapshot } from './catalog.ts'
+import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
+import { refreshMetadata, updateMetadataTop } from './github-metadata.ts'
+import type { MetadataReport } from './github-metadata.ts'
 import { githubEvidence, evidenceIssue } from './github-evidence.ts'
 import { evaluateJev, reviewDecision, JEV_MODEL } from './jev-client.ts'
 
@@ -19,11 +27,11 @@ export interface RadarReviewOptions {
 }
 
 export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt }
-export interface RadarState { version: number; pages: Record<string, number>; metadataCursor: number; candidates: Record<string, Candidate> }
+export interface RadarState { version: number; pages: Record<string, number>; metadataCursor: number; metadataNext?: string; candidates: Record<string, Candidate> }
 interface Source { query: string; fetched: number; total: number; status: string }
 export interface Receipt { repo: string | null; status: string; reason?: string; score?: JevScore; sha?: string; evidenceUrl?: string; evidenceSha256?: string; evidenceLinks?: EvidenceLink[]; model?: string; checkedAt?: string }
-export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number }; reviewed: number; added: number; pending: number; overflow: number; evicted: number; receipts: Receipt[]; totalProjects?: number }
-export interface RadarOptions { catalog: Catalog; state?: RadarState; api: GitHubApi; review: (row: JevRow, text: string, options?: RadarReviewOptions) => Promise<JevScore>; now?: Date; limit?: number; queries?: string[]; codeQueries?: string[]; deadline?: number; beforeRequest?: () => Promise<void> }
+export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number } & Partial<Omit<MetadataReport, 'ok' | 'failed'>>; reviewed: number; added: number; pending: number; overflow: number; evicted: number; receipts: Receipt[]; totalProjects?: number; deferred?: { phase: string; reason: string; metadataRemaining?: number } }
+export interface RadarOptions { catalog: Catalog; state?: RadarState; api: GitHubApi; review: (row: JevRow, text: string, options?: RadarReviewOptions) => Promise<JevScore>; now?: Date; limit?: number; queries?: string[]; codeQueries?: string[]; deadline?: number; clock?: () => number; metadataLimit?: number; beforeRequest?: () => Promise<void> }
 interface RadarResult { files: Map<string, DirectoryItem[]>; rows: DirectoryItem[]; state: RadarState; report: RadarReport }
 
 export const QUERIES = [
@@ -36,9 +44,8 @@ export const RADAR_EXECUTION_MS = 25 * 60 * 1000
 const DAY = 86400000
 export const emptyState = (): RadarState => ({ version: 1, pages: {}, metadataCursor: 0, candidates: {} })
 
-const deadlineReached = (deadline: number): boolean => Number.isFinite(deadline) && Date.now() >= deadline
 const isDeferredRunError = (error: unknown): boolean => error instanceof Error &&
-  (error.message === 'radar-budget-exhausted' || error.message === 'radar-budget-persist-failed' || error.message === 'radar-deadline')
+  (isGitHubRunDeferred(error) || error.message === 'radar-budget-exhausted' || error.message === 'radar-budget-persist-failed' || error.message === 'radar-deadline')
 
 const isTimestamp = (value: unknown) => typeof value === 'string' &&
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(value) && Number.isFinite(Date.parse(value))
@@ -46,7 +53,8 @@ const isTimestamp = (value: unknown) => typeof value === 'string' &&
 export function validateState(state: RadarState) {
   if (state?.version !== 1 || !state.pages || Array.isArray(state.pages) || typeof state.pages !== 'object' ||
     !state.candidates || typeof state.candidates !== 'object' || Array.isArray(state.candidates) ||
-    !Number.isSafeInteger(state.metadataCursor) || state.metadataCursor < 0) throw new Error('Invalid radar state')
+    !Number.isSafeInteger(state.metadataCursor) || state.metadataCursor < 0 ||
+    state.metadataNext !== undefined && (typeof state.metadataNext !== 'string' || !repoKey(`https://github.com/${state.metadataNext}`))) throw new Error('Invalid radar state')
   if (Object.keys(state.candidates).length > MAX_QUEUE) throw new Error('Radar queue overflow')
   for (const page of Object.values(state.pages)) {
     if (!Number.isSafeInteger(page) || page < 1 || page > 10) throw new Error('Invalid search cursor')
@@ -65,9 +73,15 @@ export function validateState(state: RadarState) {
 
 const safeReason = (error: unknown) => error instanceof Error && /^(github|jev)-[a-z0-9-]+$/.test(error.message) ? error.message : 'candidate-invalid-evidence'
 
-export async function runRadar({ catalog, state = emptyState(), api, review, now = new Date(), limit = MAX_QUEUE, queries = QUERIES, codeQueries = [], deadline = Infinity, beforeRequest }: RadarOptions) {
+export async function runRadar({ catalog, state = emptyState(), api, review, now = new Date(), limit = MAX_QUEUE, queries = QUERIES, codeQueries = [], deadline = Infinity, clock = Date.now, metadataLimit, beforeRequest }: RadarOptions) {
   if (!Number.isSafeInteger(limit) || limit < 1 || limit > MAX_QUEUE) throw new Error(`limit must be 1..${MAX_QUEUE}`)
   if (!(deadline === Infinity || Number.isFinite(deadline)) || deadline < 0) throw new Error('radar-invalid-deadline')
+  const deadlineReached = () => Number.isFinite(deadline) && clock() >= deadline
+  const upstream = api
+  api = async (path, request) => {
+    if (deadlineReached()) throw new Error('github-deadline')
+    return upstream(path, request)
+  }
   validateState(state)
   state = structuredClone(state)
   const started = now.toISOString()
@@ -75,8 +89,19 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   const rows = [...files.values()].flat()
   const known = new Set(rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)))
   for (const key of Object.keys(state.candidates)) if (known.has(key)) delete state.candidates[key]
-  const report: RadarReport = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
-    metadata: { ok: 0, failed: 0 }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
+  const report: RadarReport & { metadata: MetadataReport } = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
+    metadata: { ok: 0, failed: 0, cost: 0, batches: 0, other: 0, remaining: 0, top100: { ok: 0, total: 0, complete: true, unrefreshed: [] } }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
+  const defer = (error: unknown, phase: string) => {
+    if (!isGitHubRunDeferred(error)) return
+    report.deferred = { phase, reason: (error as Error).message }
+  }
+
+  // --- Top100 在发现之前读取；其它项按规范位置续点，不改变人工排序 ---
+  const metadata = await refreshMetadata(rows, state, api, metadataLimit)
+  report.metadata = metadata.report
+  report.receipts.push(...metadata.failures.map((failure) => ({ ...failure, status: 'metadata-error' })))
+  if (metadata.deferred) report.deferred = metadata.deferred
+  else if (!report.metadata.top100.complete) report.deferred = { phase: 'metadata', reason: 'github-top100-incomplete', metadataRemaining: report.metadata.remaining }
 
   const rejectedCache = Object.entries(state.candidates).filter(([, e]) => e.status === 'drop')
     .sort(([, a], [, b]) => (a.checkedAt ?? a.discoveredAt).localeCompare(b.checkedAt ?? b.discoveredAt))
@@ -85,6 +110,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
 
   // --- 每个查询每轮两页；游标轮转到第十页，显式报告 GitHub 搜索上限 ---
   for (const query of queries) {
+    if (report.deferred) break
     let page = state.pages[query] ?? 1
     const source = { query, fetched: 0, total: 0, status: 'bounded' }
     try {
@@ -117,12 +143,16 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         if (page >= lastPage || data.items.length < 100) break
         page++
       }
-    } catch (error) { source.status = safeReason(error) }
+    } catch (error) {
+      source.status = safeReason(error)
+      defer(error, 'discovery')
+    }
     report.sources.push(source)
   }
 
   // --- 代码搜索补充：SDK / API 端点命中，不要求项目名含 Jev ---
   for (const query of codeQueries) {
+    if (report.deferred) break
     const cursor = `code:${query}`
     let page = state.pages[cursor] ?? 1
     const source: Source = { query: cursor, fetched: 0, total: 0, status: 'bounded' }
@@ -150,24 +180,12 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         if (page >= lastPage || data.count < 100) break
         page++
       }
-    } catch (error) { source.status = safeReason(error) }
+    } catch (error) {
+      source.status = safeReason(error)
+      defer(error, 'discovery')
+    }
     report.sources.push(source)
   }
-
-  // --- 全量刷新已有仓库；失败保持旧数据，单个失效仓库不拖垮整轮 ---
-  const github = rows.filter((r) => r.type === 'github')
-  for (const row of github) {
-    try {
-      const meta = await api(`/repos/${repoKey(row.url)}`) as GitHubRepository
-      Object.assign(row, refreshRow(row, meta))
-      report.metadata.ok++
-    } catch (error) {
-      report.metadata.failed++
-      report.receipts.push({ repo: repoKey(row.url), status: 'metadata-error', reason: safeReason(error) })
-    }
-  }
-  // 兼容旧版持久化状态；全量刷新不再使用轮转游标。
-  state.metadataCursor = 0
 
   const batch = Object.entries(state.candidates)
     .filter(([, entry]) => !entry.retryAt || Date.parse(entry.retryAt) <= now.getTime())
@@ -176,7 +194,8 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       (y.stars ?? 0) - (x.stars ?? 0) || a.localeCompare(b))
     .slice(0, limit)
   for (const [key, entry] of batch) {
-    if (deadlineReached(deadline)) break
+    if (report.deferred) break
+    if (deadlineReached()) { report.deferred = { phase: 'review', reason: 'github-deadline' }; break }
     const previous = {
       status: entry.status,
       checkedAt: entry.checkedAt,
@@ -191,13 +210,14 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       const { repo, sha, text: readme, evidenceUrl } = await githubEvidence(api, key, { allowFullScan: !!entry.codeHints?.length })
       const integration = await integrationEvidence(api, key, sha, entry.codeHints ?? [])
       const text = readme + integration.text
-      if (deadlineReached(deadline)) throw new Error('radar-deadline')
+      if (deadlineReached()) throw new Error('radar-deadline')
       const candidate = candidateRow(repo)
       const reason = integration.incomplete ? 'github-incomplete-integration-evidence' : evidenceIssue(repo, text)
       const score = reason ? undefined : await review(candidate, text, {
         beforeRequest: async () => {
-          if (deadlineReached(deadline)) throw new Error('radar-deadline')
+          if (deadlineReached()) throw new Error('radar-deadline')
           await beforeRequest?.()
+          if (deadlineReached()) throw new Error('radar-deadline')
         },
       })
       const decision = reason ? 'review' : reviewDecision(score)
@@ -213,6 +233,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         files.get('github.json')!.push(candidate)
         rows.push(candidate)
         known.add(key)
+        metadata.fresh.add(key)
         delete state.candidates[key]
         report.added++
       } else {
@@ -221,8 +242,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         entry.retryAt = new Date(now.getTime() + (decision === 'drop' ? 30 : 7) * DAY).toISOString()
       }
     } catch (error) {
-      if (isDeferredRunError(error) || deadlineReached(deadline)) {
-        entry.status = 'pending'
+      if (isDeferredRunError(error) || deadlineReached()) {
+        report.deferred = { phase: 'review', reason: error instanceof Error ? error.message : 'github-deadline' }
+        entry.status = previous.status
         entry.attempts = previous.attempts
         if (previous.checkedAt === undefined) delete entry.checkedAt
         else entry.checkedAt = previous.checkedAt
@@ -241,15 +263,28 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       if (reason.startsWith('jev-')) break
     }
   }
+  updateMetadataTop(rows, metadata.fresh, report.metadata)
   report.pending = Object.values(state.candidates).filter((e) => e.status !== 'drop').length
   report.totalProjects = known.size
-  report.status = report.sources.every((s) => s.status === 'complete') && !report.metadata.failed &&
-    !report.pending && !report.overflow && !report.evicted && !report.receipts.some((r) => r.status === 'error') ? 'complete' : 'partial'
+  report.status = !report.deferred && report.sources.every((s) => s.status === 'complete') && !report.metadata.failed &&
+    !report.metadata.remaining && !report.pending && !report.overflow && !report.evicted && !report.receipts.some((r) => r.status === 'error') ? 'complete' : 'partial'
   validateState(state)
   return { files, rows, state, report }
 }
 
+// --- 旧报告兼容；新 Top100 诊断绝不能借残留快照文件进入发布路径 ---
+function validatePublishMetadata(metadata: unknown): void {
+  if (!metadata || typeof metadata !== 'object' || !('top100' in metadata)) return
+  const top = metadata.top100
+  if (top && typeof top === 'object' && 'complete' in top && top.complete === false) throw new Error('github-top100-incomplete')
+  if (!top || typeof top !== 'object' || !('complete' in top) || top.complete !== true ||
+    !('ok' in top) || !('total' in top) || typeof top.ok !== 'number' || typeof top.total !== 'number' ||
+    !Number.isSafeInteger(top.ok) || !Number.isSafeInteger(top.total) || top.ok < 0 || top.total > 100 || top.ok !== top.total ||
+    !('unrefreshed' in top) || !Array.isArray(top.unrefreshed) || top.unrefreshed.length !== 0) throw new Error('github-invalid-top100-report')
+}
+
 export function writeSnapshot(root: string, output: string, result: RadarResult) {
+  validatePublishMetadata(result.report.metadata)
   mkdirSync(join(output, 'data'), { recursive: true })
   mkdirSync(join(output, 'radar'), { recursive: true })
   for (const [file, rows] of result.files) {
@@ -269,6 +304,7 @@ async function main() {
     validateState(JSON.parse(readFileSync(join(snapshot, 'radar/state.json'), 'utf8')))
     const report = JSON.parse(readFileSync(join(snapshot, 'radar/latest.json'), 'utf8'))
     if (!['complete', 'partial'].includes(report.status) || !Array.isArray(report.receipts)) throw new Error('Invalid report')
+    validatePublishMetadata(report.metadata)
     applySnapshot(root, snapshot)
     return
   }
@@ -284,19 +320,25 @@ async function main() {
   const limit = process.env.GITHUB_EVENT_NAME === 'schedule' ? MAX_QUEUE : Number(process.env.RADAR_LIMIT ?? MAX_QUEUE)
   const result = await runRadar({ catalog: readCatalog(root),
     state: JSON.parse(readFileSync(join(root, 'radar/state.json'), 'utf8')),
-    api: createGitHubClient(process.env.GITHUB_TOKEN),
+    api: createGitHubClient(process.env.GITHUB_TOKEN, { deadline }),
     review: (row, text, options) => evaluateJev(key, row, text, options),
     beforeRequest: budget.beforeRequest,
     deadline,
     limit,
     codeQueries: CODE_QUERIES,
   })
-  writeSnapshot(root, resolve(output), result)
+  if (!result.report.metadata.top100.complete) {
+    const checkpoint = join(resolve(output), 'radar')
+    mkdirSync(checkpoint, { recursive: true })
+    writeFileSync(join(checkpoint, 'state.json'), JSON.stringify(result.state, null, 2) + '\n')
+    writeFileSync(join(checkpoint, 'latest.json'), JSON.stringify(result.report, null, 2) + '\n')
+  } else writeSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Jev radar\n\nStatus: ${result.report.status}\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}; metadata refreshed: ${result.report.metadata.ok}; metadata failed: ${result.report.metadata.failed}.\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Jev radar\n\nStatus: ${result.report.status}\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}; metadata refreshed: ${result.report.metadata.ok}; metadata failed: ${result.report.metadata.failed}; Top100: ${result.report.metadata.top100.ok}/${result.report.metadata.top100.total}; other: ${result.report.metadata.other}; remaining: ${result.report.metadata.remaining}; GraphQL cost: ${result.report.metadata.cost ?? 'unknown'}.\n${!result.report.metadata.top100.complete ? `Top100 incomplete repositories: ${result.report.metadata.top100.unrefreshed.join(', ')}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}; metadata remaining: ${result.report.deferred.metadataRemaining ?? 0}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary +
     result.report.sources.map((source) => `${source.query}: ${source.status}; fetched ${source.fetched} / ${source.total}\n`).join(''))
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })
+  if (!result.report.metadata.top100.complete) throw new Error('github-top100-incomplete')
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

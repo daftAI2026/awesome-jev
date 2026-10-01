@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Node test、替代实现雷达与离线请求桩
+ * [OUTPUT]: 对外提供替代实现采集及边界恢复回归断言
+ * [POS]: scripts 的独立队列验收，不调用真实网络或付费模型
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
@@ -172,4 +178,13 @@ test('invalid alternatives state is rejected before a scan can run', async () =>
   await assert.rejects(() => runAlternatives({
     catalog: catalog(), api: async () => { throw new Error('should not call') }, review: async () => keep, state: invalid,
   }), /state/i)
+})
+
+test('alternatives deadline covers discovery before any request', async () => {
+  let calls = 0
+  const result = await runAlternatives({ catalog: catalog(), api: async () => { calls++; return { items: [], total_count: 0 } },
+    review: async () => { throw new Error('not called') }, now, deadline: 100, clock: () => 100, queries: ['first', 'second'] })
+  assert.equal(calls, 0)
+  assert.equal(result.report.status, 'partial')
+  assert.equal(result.report.deferred?.phase, 'discovery')
 })

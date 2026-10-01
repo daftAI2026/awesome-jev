@@ -1,10 +1,16 @@
+/**
+ * [INPUT]: 依赖规范目录与固定 Git 基线、共享收录依据及来源读取
+ * [OUTPUT]: 对外提供增量身份/证据核验、审核结果导入和缺失说明队列
+ * [POS]: scripts 的人工收录依据入口，来源核实与模型评分相互独立
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import { isDeepStrictEqual } from 'node:util'
 import { isInclusionBasis, pinnedSource, type InclusionBasis } from '../src/lib/inclusion.ts'
-import { readCatalog, validateRows } from './catalog.ts'
+import { readCatalog, validateRows, validateRepositoryIdentityChanges } from './catalog.ts'
 import { isRecord, type DirectoryItem, type FetchImpl } from './model-types.ts'
 
 export interface ReviewedInclusion {
@@ -107,6 +113,7 @@ export async function verifyChangedInclusions(
   rows: DirectoryItem[], baseline: DirectoryItem[], readSource: SourceReader,
 ): Promise<number> {
   validateRows(rows)
+  validateRepositoryIdentityChanges(rows, baseline)
   const previous = new Map(baseline.map((row) => [row.id, row]))
   const changed = rows.filter((row) => {
     if (!row.sourceMeta.inclusion) return false

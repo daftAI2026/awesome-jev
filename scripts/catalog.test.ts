@@ -1,9 +1,15 @@
+/**
+ * [INPUT]: 依赖 catalog 的真实校验、快照和 README 函数与临时目录
+ * [OUTPUT]: 对外提供规范字段、仓库身份和发布不覆盖人工内容的回归验证
+ * [POS]: scripts 的目录契约测试，不执行外部项目或付费请求
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test, { type TestContext } from 'node:test'
 import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { candidateRow, readCatalog, refreshRow, renderReadme, validateRows, validateSnapshot, applySnapshot, repoKey } from './catalog.ts'
+import { candidateRow, syncReadme, readCatalog, refreshRow, renderReadme, validateRows, validateSnapshot, applySnapshot, repoKey, MAX_CATALOG_FILE_BYTES, catalogFileUsage, validateRepositoryIdentityChanges } from './catalog.ts'
 import { writeSnapshot, emptyState } from './radar.ts'
 
 type DirectoryRow = ReturnType<typeof readCatalog>['rows'][number]
@@ -192,3 +198,101 @@ test('language code fences contain remote backticks and escape README markers', 
   assert.equal(output.split('<!-- PROJECTS:END -->').length, 2)
   assert.equal(renderReadme(output, [item]), output)
 })
+
+// --- 外部快照不能用 TypeScript 类型断言替代嵌套运行时契约 ---
+const malformedMetadata: Array<[string, unknown]> = [
+  ['jevEvidence', { evidenceUrl: 42 }], ['jevEvidence', []],
+  ['jevEvidence', { evidenceUrl: 'https://github.com.evil.test/test/one' }],
+  ['jevEvidence', { evidenceUrl: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, score: { jevAbout: NaN } }],
+  ['date', '2026-02-30'], ['date', 42], ['language', []], ['author', {}],
+  ['jevAbout', NaN], ['jevAbout', -0.1], ['jevKeepConfidence', 1.1], ['jevKeep', 'approved'], ['jevKeep', ['keep']],
+  ['jevEvidence', { evidenceUrl: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, evidenceLinks: [{ url: 42, path: 'README.md', sha256: 'b'.repeat(64) }] }],
+  ['jevEvidence', { evidenceUrl: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, model: 42 }],
+  ['jevEvidence', { evidenceUrl: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, checkedAt: '2026-02-30T00:00:00Z' }],
+  ['needsReview', 'yes'], ['conflictingEvidence', 1],
+]
+for (const [field, value] of malformedMetadata) test(`catalog rejects malformed ${field}: ${JSON.stringify(value)}`, () => {
+  const candidate = row()
+  candidate.sourceMeta[field] = value
+  assert.throws(() => validateRows([candidate]), /Invalid/)
+})
+test('catalog accepts valid optional evidence, absent inclusion and nullable upstream metadata', () => {
+  const candidate = row()
+  candidate.sourceMeta = { ...candidate.sourceMeta, language: null,
+    date: '2026-09-22', jevAbout: 0, jevKeep: 'review', jevKeepConfidence: 1,
+    jevEvidence: { evidenceUrl: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`,
+      sha: 'a'.repeat(40), evidenceSha256: 'b'.repeat(64), model: 'jev-latest',
+      checkedAt: '2026-09-22T00:00:00.000Z', score: keptScore,
+      evidenceLinks: [{ url: `https://github.com/test/one/blob/${'a'.repeat(40)}/README.md`, path: 'README.md', sha256: 'b'.repeat(64) }] } }
+  assert.doesNotThrow(() => validateRows([candidate]))
+})
+
+test('catalog size budget reports 90/95 percent and rejects invalid size inputs', () => {
+  assert.equal(catalogFileUsage(Math.ceil(MAX_CATALOG_FILE_BYTES * 0.9) - 1), 'normal')
+  assert.equal(catalogFileUsage(Math.ceil(MAX_CATALOG_FILE_BYTES * 0.9)), 'warning')
+  assert.equal(catalogFileUsage(Math.ceil(MAX_CATALOG_FILE_BYTES * 0.95)), 'critical')
+  assert.equal(catalogFileUsage(MAX_CATALOG_FILE_BYTES), 'critical')
+  assert.equal(catalogFileUsage(MAX_CATALOG_FILE_BYTES + 1), 'oversize')
+  for (const value of [NaN, -1, 0.5, Infinity]) assert.throws(() => catalogFileUsage(value), /Invalid/)
+})
+test('repository identity preserves only unchanged historical aliases, not new or edited mismatches', () => {
+  const historical = { ...row(), sourceMeta: { ...row().sourceMeta, repo: 'old/name' } }
+  assert.doesNotThrow(() => validateRepositoryIdentityChanges([historical], [historical]))
+  assert.throws(() => validateRepositoryIdentityChanges([historical], []), /Invalid repository identity/)
+  assert.throws(() => validateRepositoryIdentityChanges([{ ...historical, url: 'https://github.com/test/renamed' }], [historical]), /Invalid repository identity/)
+  assert.throws(() => validateRepositoryIdentityChanges([{ ...historical, sourceMeta: { repo: 'different/repo' } }], [historical]), /Invalid repository identity/)
+  assert.doesNotThrow(() => validateRepositoryIdentityChanges([{ ...row(), sourceMeta: { repo: 'TEST/ONE' } }], []))
+})
+test('automated snapshots cannot introduce a mismatched repository identity', (t) => {
+  const { root, output } = snapshot(t)
+  const path = join(output, 'data/github.json'), rows = JSON.parse(readFileSync(path, 'utf8')) as DirectoryRow[]
+  rows.at(-1)!.sourceMeta.repo = 'other/project'
+  writeFileSync(path, JSON.stringify(rows))
+  assert.throws(() => validateSnapshot(root, output), /Invalid repository identity/)
+})
+
+// --- 容量用合法 JSON 加空白模拟，不制造无用的业务字段或只验证常量 ---
+function capacityFixture(t: TestContext, bytes: number): string {
+  const root = fixture(t), rows = readCatalog(root).rows
+  for (const candidate of rows) candidate.category = 'sdk'
+  const json = JSON.stringify(rows)
+  const content = json + ' '.repeat(bytes - Buffer.byteLength(json))
+  assert.equal(Buffer.byteLength(content), bytes)
+  writeFileSync(join(root, 'data/github.json'), content)
+  writeFileSync(join(root, 'README.md'), renderReadme(text, rows))
+  return root
+}
+
+test('data check emits a visible Actions warning at the capacity threshold', (t) => {
+  const root = capacityFixture(t, Math.ceil(MAX_CATALOG_FILE_BYTES * 0.9))
+  const messages: string[] = []
+  const stderr = process.stderr.write
+  const previous = process.env.GITHUB_ACTIONS
+  process.env.GITHUB_ACTIONS = 'true'
+  process.stderr.write = ((chunk: string | Uint8Array) => { messages.push(String(chunk)); return true }) as typeof process.stderr.write
+  try { assert.equal(syncReadme(root, { check: true }), 2) }
+  finally {
+    process.stderr.write = stderr
+    if (previous === undefined) delete process.env.GITHUB_ACTIONS
+    else process.env.GITHUB_ACTIONS = previous
+  }
+  assert.match(messages.join(''), /::warning file=data\/github.json::Catalog file is 90.0%/)
+})
+
+
+test('data check leaves the last byte below 95 percent publishable', (t) => {
+  const root = capacityFixture(t, Math.ceil(MAX_CATALOG_FILE_BYTES * 0.95) - 1)
+  const stderr = process.stderr.write
+  process.stderr.write = (() => true) as typeof process.stderr.write
+  try { assert.equal(syncReadme(root, { check: true }), 2) }
+  finally { process.stderr.write = stderr }
+})
+for (const bytes of [Math.ceil(MAX_CATALOG_FILE_BYTES * 0.95), Math.ceil(MAX_CATALOG_FILE_BYTES * 0.95) + 1, MAX_CATALOG_FILE_BYTES]) {
+  test(`data check blocks publication at ${bytes} bytes before the read safety limit`, (t) => {
+    const root = capacityFixture(t, bytes)
+    assert.equal(readCatalog(root).rows.length, 2, 'Local reads must remain possible for migration')
+    assert.throws(() => syncReadme(root, { check: true }), /Catalog publication capacity.*migrate.*5%/i)
+    assert.equal(syncReadme(root), 2, 'Local README generation is not publication and must stay available')
+    assert.equal(readFileSync(join(root, 'data/github.json')).byteLength, bytes)
+  })
+}

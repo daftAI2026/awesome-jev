@@ -7,6 +7,8 @@ collector.md: 采集、审核、限流与可信发布的运行规则
 data-model.md: 持久化目录数据字段、来源和证据契约
 design.md: 稳定视觉契约，现有 CSS token 是实现权威
 directory-ui.md: 目录 composition、检索、预览和收藏的产品行为
+reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
+inclusion-follow-up.md: 全量依据复核后的 27 项待补证清单，区分不可达、空仓、占位与跨仓范围；禁止编造依据或自动移除
 news.md: AIHOT 新闻来源、摘要边界及独立同步流程
 performance.md: 双端 PageSpeed 基线、警告取舍、数据交付边界与复测方法，不把入口缩小冒充整页收益
 

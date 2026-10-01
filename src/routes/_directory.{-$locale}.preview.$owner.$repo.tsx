@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖目录已加载的 GitHub 快照模块、项目身份工具与本地化 head
+ * [INPUT]: 依赖目录已加载的展示投影虚拟模块、项目身份工具与本地化 head
  * [OUTPUT]: 对外提供项目预览 Route、当前项目标题/摘要及真实 404
- * [POS]: routes 的遮罩元数据入口；动态导入复用目录快照，避免启动包依赖与额外 RPC
+ * [POS]: routes 的遮罩元数据入口；动态导入复用目录展示投影，避免启动包依赖与额外 RPC
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createFileRoute, notFound } from '@tanstack/react-router'
@@ -12,7 +12,7 @@ import type { DirectoryItem } from '@/lib/types'
 
 export const Route = createFileRoute('/_directory/{-$locale}/preview/$owner/$repo')({
   loader: async ({ params }) => {
-    const { default: projects } = await import('../../data/github.json')
+    const { default: projects } = await import('virtual:directory-catalog')
     const item = findGitHubProject(projects as DirectoryItem[], params.owner, params.repo)
     if (!item) throw notFound()
     return { title: item.title, summary: item.summary }

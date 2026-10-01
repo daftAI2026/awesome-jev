@@ -1,9 +1,15 @@
+/**
+ * [INPUT]: 依赖规范目录 JSON、模型分类规则与收录依据校验
+ * [OUTPUT]: 对外提供目录读取、运行时校验、容量发布门槛、README 渲染和受控快照应用
+ * [POS]: scripts 的规范数据边界，守住人工编辑字段与自动发布权限
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { isDeepStrictEqual } from 'node:util'
 import { isProjectCategory, reviewDecision } from './jev-client.ts'
-import { isInclusionBasis } from '../src/lib/inclusion.ts'
+import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource } from '../src/lib/inclusion.ts'
 import type {
   Catalog,
   CatalogSourceMeta,
@@ -15,6 +21,14 @@ import type {
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value)
+
+// --- 有界资源预算：同一规范快照也用于不可信 PR 的 base/head 读取 ---
+export const MAX_CATALOG_FILE_BYTES = 16 * 1024 * 1024
+export function catalogFileUsage(bytes: number): 'normal' | 'warning' | 'critical' | 'oversize' {
+  if (!Number.isSafeInteger(bytes) || bytes < 0) throw new Error('Invalid catalog file size')
+  return bytes > MAX_CATALOG_FILE_BYTES ? 'oversize' : bytes >= MAX_CATALOG_FILE_BYTES * 0.95 ? 'critical' :
+    bytes >= MAX_CATALOG_FILE_BYTES * 0.9 ? 'warning' : 'normal'
+}
 
 const parseJson = (text: string): unknown => JSON.parse(text) as unknown
 
@@ -34,7 +48,9 @@ export const catalogFiles = (root: string): string[] => {
 export function readCatalog(root: string): Catalog {
   const files = new Map<string, DirectoryItem[]>()
   for (const file of catalogFiles(root)) {
-    files.set(file, entriesFrom(parseJson(readFileSync(join(root, 'data', file), 'utf8'))))
+    const bytes = readFileSync(join(root, 'data', file))
+    if (catalogFileUsage(bytes.byteLength) === 'oversize') throw new Error('Catalog file too large; review the bounded catalog delivery design')
+    files.set(file, entriesFrom(parseJson(bytes.toString('utf8'))))
   }
   const rows = [...files.values()].flat()
   validateRows(rows)
@@ -52,6 +68,63 @@ export function repoKey(url: string): string | null {
   }
 }
 
+// --- 可选显示字段仍必须有真实类型；缺少收录说明不代表不合格 ---
+function validDate(value: string, timestamp = false): boolean {
+  const pattern = timestamp ? /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/ : /^\d{4}-\d{2}-\d{2}$/
+  if (!pattern.test(value) || !Number.isFinite(Date.parse(value))) return false
+  const canonical = new Date(value).toISOString()
+  return timestamp ? canonical === (value.includes('.') ? value : value.replace('Z', '.000Z')) : canonical.slice(0, 10) === value
+}
+function validateScore(value: Record<string, unknown>): void {
+  for (const key of ['jevAbout', 'jevKeepConfidence'] as const) {
+    const score = value[key]
+    if (score != null && (typeof score !== 'number' || !Number.isFinite(score) || score < 0 || score > 1)) throw new Error(`Invalid ${key}`)
+  }
+  if (value.jevKeep != null && (typeof value.jevKeep !== 'string' || !['keep', 'review', 'drop'].includes(value.jevKeep))) throw new Error('Invalid jevKeep')
+  for (const key of ['needsReview', 'conflictingEvidence'] as const) {
+    if (value[key] !== undefined && typeof value[key] !== 'boolean') throw new Error(`Invalid ${key}`)
+  }
+  if (value.category !== undefined && !isProjectCategory(value.category)) throw new Error('Invalid score category')
+}
+function validateSourceFields(meta: Record<string, unknown>, url: string): void {
+  for (const key of ['author', 'language'] as const) {
+    if (meta[key] != null && typeof meta[key] !== 'string') throw new Error(`Invalid ${key}`)
+  }
+  if (meta.date != null && (typeof meta.date !== 'string' || !validDate(meta.date))) throw new Error('Invalid date')
+  validateScore(meta)
+  if (meta.jevEvidence != null) {
+    const evidence = meta.jevEvidence
+    if (!isRecord(evidence) || !isPinnedEvidenceUrl(evidence.evidenceUrl, url)) throw new Error('Invalid jevEvidence')
+    if (evidence.repo !== undefined && (typeof evidence.repo !== 'string' || repoKey(`https://github.com/${evidence.repo}`) !== repoKey(url))) throw new Error('Invalid evidence repository')
+    for (const [key, pattern] of [['sha', /^[a-f0-9]{40}$/], ['evidenceSha256', /^[a-f0-9]{64}$/]] as const) {
+      if (evidence[key] !== undefined && (typeof evidence[key] !== 'string' || !pattern.test(evidence[key]))) throw new Error(`Invalid evidence ${key}`)
+    }
+    if (evidence.checkedAt !== undefined && (typeof evidence.checkedAt !== 'string' || !validDate(evidence.checkedAt, true))) throw new Error('Invalid evidence date')
+    if (evidence.model !== undefined && (typeof evidence.model !== 'string' || !evidence.model.trim() || evidence.model.length > 120)) throw new Error('Invalid evidence model')
+    if (evidence.status !== undefined && (typeof evidence.status !== 'string' || !['pending', 'review', 'keep', 'drop'].includes(evidence.status))) throw new Error('Invalid evidence status')
+    if (evidence.score !== undefined) {
+      if (!isRecord(evidence.score)) throw new Error('Invalid evidence score')
+      validateScore(evidence.score)
+    }
+    if (evidence.evidenceLinks !== undefined && (!Array.isArray(evidence.evidenceLinks) || evidence.evidenceLinks.some((link) => {
+      if (!isRecord(link) || typeof link.path !== 'string' || typeof link.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(link.sha256)) return true
+      return pinnedSource(link.url, url)?.path !== link.path
+    }))) throw new Error('Invalid evidence links')
+  }
+}
+
+// --- 历史别名只在原身份不变时保留；新增/改名不能伪装成另一个仓库 ---
+export function validateRepositoryIdentityChanges(rows: DirectoryItem[], baseline: DirectoryItem[]): void {
+  const oldById = new Map(baseline.map((row) => [row.id, row]))
+  for (const row of rows) {
+    const old = oldById.get(row.id)
+    if (old && old.url === row.url && old.sourceMeta.repo === row.sourceMeta.repo) continue
+    if (typeof row.sourceMeta.repo !== 'string' || repoKey(`https://github.com/${row.sourceMeta.repo}`) !== repoKey(row.url)) {
+      throw new Error(`Invalid repository identity: ${row.id}`)
+    }
+  }
+}
+
 export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
   if (!Array.isArray(rows)) throw new Error('Catalog must be an array')
   const ids = new Set<string>()
@@ -65,6 +138,7 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
     const id = candidate.id as string
     const url = candidate.url as string
     const sourceMeta = candidate.sourceMeta
+    validateSourceFields(sourceMeta, url)
     if (ids.has(id)) throw new Error(`Duplicate id: ${id}`)
     ids.add(id)
     const parsedUrl = new URL(url)
@@ -202,6 +276,18 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
 
 export function syncReadme(root: string, { check = false }: { check?: boolean } = {}): number {
   const { rows } = readCatalog(root)
+  if (check) {
+    const bytes = readFileSync(join(root, 'data/github.json')).byteLength
+    const usage = catalogFileUsage(bytes)
+    // --- 提前阻止发布，保留读取/迁移所需余量；不是等到安全读上限才停机 ---
+    if (usage === 'critical') {
+      throw new Error(`Catalog publication capacity reached (${(100 * bytes / MAX_CATALOG_FILE_BYTES).toFixed(1)}% of ${MAX_CATALOG_FILE_BYTES} bytes); migrate to versioned bounded shards before publishing and retain 5% read-limit headroom.`)
+    }
+    if (usage === 'warning') {
+      const message = `Catalog file is ${(100 * bytes / MAX_CATALOG_FILE_BYTES).toFixed(1)}% of the bounded ${MAX_CATALOG_FILE_BYTES}-byte submission limit (${usage}); plan the next catalog delivery boundary.`
+      process.stderr.write(process.env.GITHUB_ACTIONS === 'true' ? `::warning file=data/github.json::${message}\n` : `${message}\n`)
+    }
+  }
   if (check && rows.some((row) => !isProjectCategory(row.category))) {
     throw new Error('GitHub project category missing; run npm run categories:classify')
   }
@@ -217,6 +303,7 @@ export function syncReadme(root: string, { check = false }: { check?: boolean } 
 export function validateSnapshot(root: string, snapshot: string): Catalog {
   const current = readCatalog(root)
   const next = readCatalog(snapshot)
+  validateRepositoryIdentityChanges(next.rows, current.rows)
   if (!isDeepStrictEqual([...current.files.keys()], [...next.files.keys()])) throw new Error('Unexpected source files')
   const oldById = new Map(current.rows.map((row) => [row.id, row]))
   for (const [file, rows] of current.files) {

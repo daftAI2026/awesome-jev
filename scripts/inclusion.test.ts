@@ -1,6 +1,12 @@
+/**
+ * [INPUT]: 依赖共享固定证据校验和真实增量导入函数、离线来源替身
+ * [OUTPUT]: 对外提供证据范围、仓库身份与不覆盖人工说明的回归验证
+ * [POS]: scripts 的收录依据契约测试，不联网或调用付费模型
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { isInclusionBasis, pinnedSource, type InclusionBasis } from '../src/lib/inclusion.ts'
+import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource, type InclusionBasis } from '../src/lib/inclusion.ts'
 import { parseReviewedInclusions, mergeReviewedInclusions, sourceReader, pendingInclusions,
   verifyChangedInclusions, readInclusionBaseline } from './inclusion.ts'
 import { refreshRow, validateRows } from './catalog.ts'
@@ -169,4 +175,24 @@ test('Git baselines require fixed SHAs and a missing revision is not treated as 
     assert.throws(() => readInclusionBaseline(process.cwd(), revision), /invalid-base-sha/)
   }
   assert.throws(() => readInclusionBaseline(process.cwd(), 'f'.repeat(40)))
+})
+
+test('manual PR entry validates newly added and changed repository identities even without inclusion', async () => {
+  const mismatch = { ...row, sourceMeta: { ...row.sourceMeta, repo: 'unrelated/repo' } }
+  await assert.rejects(verifyChangedInclusions([mismatch], [], async () => assert.fail('No source reads')), /Invalid repository identity/)
+  await assert.rejects(verifyChangedInclusions([mismatch], [row], async () => assert.fail('No source reads')), /Invalid repository identity/)
+  assert.equal(await verifyChangedInclusions([mismatch], [mismatch], async () => assert.fail('Preserve history')), 0)
+  assert.equal(await verifyChangedInclusions([row], [], async () => assert.fail('Missing inclusion allowed')), 0)
+})
+
+test('evidence link guard handles untyped values and preserves pinned repository tree evidence', () => {
+  assert.equal(isPinnedEvidenceUrl(url, row.url), true)
+  assert.equal(isPinnedEvidenceUrl(`https://github.com/TEST/project/tree/${sha}`, row.url), true)
+  for (const value of [42, null, {}, [], 'javascript:alert(1)',
+    `https://github.com.evil.test/test/project/tree/${sha}`, `https://user@github.com/test/project/tree/${sha}`,
+    'https://github.com/test/project/tree/main', `https://github.com/test/other/tree/${sha}`,
+    `https://github.com/test/project/tree/${sha}?preview=1`, `https://github.com/test/project/tree/${sha}#fragment`]) {
+    assert.equal(isPinnedEvidenceUrl(value, row.url), false)
+  }
+  assert.equal(isPinnedEvidenceUrl(`https://github.com/test/project/tree/${sha}`, row.url + '?wrong=1'), false)
 })

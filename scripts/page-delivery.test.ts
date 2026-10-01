@@ -83,3 +83,22 @@ for (const [route, title] of [[projectPath, project.title], [newsItemPath, news.
     assert.doesNotMatch(html, /<meta name="robots" content="noindex/)
   })
 }
+
+
+function assertNoDirectoryAudit(source: string) {
+  for (const marker of ['jevAbout', 'jevKeepConfidence', 'categoryEvidenceSha', 'categoryEvidenceUrl', 'evidenceSha256', 'evidenceLinks']) {
+    assert.ok(!source.includes(marker), `Unused catalog audit data leaked into startup modules: ${marker}`)
+  }
+}
+
+test('directory audit exclusion guard rejects the canonical rich snapshot', () => {
+  assert.throws(() => assertNoDirectoryAudit(JSON.stringify(githubData)))
+  assert.doesNotThrow(() => assertNoDirectoryAudit('export default [{sourceMeta:{repo:"example/app",jevEvidence:{evidenceUrl:"https://github.com/example/app"}}}]'))
+})
+
+test('homepage startup uses the display projection without catalog audit fields', { skip: !build }, () => {
+  const html = readFileSync(path.join(build!, 'index.html'), 'utf8')
+  const modules = modulesFor(html, build!).join('\n')
+  assert.ok(modules.includes(project.id), 'Projection must retain the complete local directory identity')
+  assertNoDirectoryAudit(modules)
+})
