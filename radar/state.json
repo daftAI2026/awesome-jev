@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 9,
-    "\"typesafe.ai\" in:readme fork:false": 9,
-    "\"Jev\" \"System One\" in:readme fork:false": 9,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 9,
-    "code:\"api.typesafe.ai\" in:file": 3,
-    "code:\"@typesafe-ai/sdk\" in:file": 3,
+    "topic:jev fork:false": 1,
+    "\"typesafe.ai\" in:readme fork:false": 1,
+    "\"Jev\" \"System One\" in:readme fork:false": 1,
+    "topic:typesafe-ai fork:false": 5,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
+    "\"TypeSafe\" \"Jev\" fork:false": 1,
+    "code:\"api.typesafe.ai\" in:file": 5,
+    "code:\"@typesafe-ai/sdk\" in:file": 5,
     "code:\"TYPESAFE_API_KEY\" in:file": 7,
     "code:\"jev-latest\" in:file": 10
   },
-  "metadataCursor": 0,
+  "metadataCursor": 1064,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -5400,7 +5400,7 @@
         "checkedAt": "2026-10-01T05:53:38.417Z"
       },
       "retryAt": "2026-10-08T05:53:38.417Z",
-      "stars": 32
+      "stars": 33
     },
     "ashishakkumar/jev-checkpoint": {
       "status": "error",
@@ -9587,7 +9587,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "codeHints": [
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "src/worker.ts"
+        }
+      ]
     },
     "gbesse/worldkit": {
       "status": "review",
@@ -11267,7 +11272,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 371
+      "stars": 382
     },
     "asimog/cancerjev": {
       "status": "review",
@@ -23275,7 +23280,7 @@
         "checkedAt": "2026-09-24T21:31:04.130Z"
       },
       "retryAt": "2026-10-01T21:31:04.130Z",
-      "stars": 63
+      "stars": 68
     },
     "a-dev/quizbun": {
       "status": "review",
@@ -31008,7 +31013,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-26T04:58:02.853Z"
       },
-      "retryAt": "2026-10-03T04:58:02.853Z"
+      "retryAt": "2026-10-03T04:58:02.853Z",
+      "stars": 0
     },
     "hiper2d/werewolf-ai-party-game": {
       "status": "review",
@@ -32626,7 +32632,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 1,
-      "stars": 2,
+      "stars": 4,
       "checkedAt": "2026-09-26T04:58:02.853Z",
       "lastReview": {
         "repo": "mani-aiml/jev-demos",
@@ -34935,7 +34941,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T17:11:29.590Z",
       "attempts": 1,
-      "stars": 4,
+      "stars": 5,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "arczhi/jet",
@@ -36186,7 +36192,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 1,
-      "stars": 27,
+      "stars": 30,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "akivet/mica-v0.1-4b",
@@ -36308,7 +36314,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 1,
-      "stars": 9,
+      "stars": 11,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
@@ -37435,7 +37441,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 1,
-      "stars": 24,
+      "stars": 25,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "eas4ai/sudus",
@@ -38486,7 +38492,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T04:58:02.853Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "muriel-gasparini/ban4life",
@@ -40086,7 +40092,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 1,
-      "stars": 33,
+      "stars": 35,
       "checkedAt": "2026-09-26T21:10:43.236Z",
       "lastReview": {
         "repo": "kikeven/zerikai_memory",
@@ -41624,7 +41630,7 @@
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 141,
+      "stars": 146,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "retryAt": "2026-10-01T12:52:50.716Z"
     },
@@ -47809,5 +47815,6 @@
       "attempts": 0,
       "stars": 0
     }
-  }
+  },
+  "metadataNext": "zyw052/astrbot_plugin_jev_radar"
 }

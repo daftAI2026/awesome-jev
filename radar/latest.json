@@ -1,369 +1,197 @@
 {
-  "at": "2026-10-01T13:14:43.978Z",
+  "at": "2026-10-01T22:41:36.405Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2222,
+      "total": 2257,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 7286,
+      "total": 7389,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 6051,
+      "total": 6132,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
       "fetched": 200,
-      "total": 486,
+      "total": 507,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
       "fetched": 200,
-      "total": 552,
+      "total": 558,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3328,
+      "total": 3353,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
       "fetched": 200,
-      "total": 25152,
+      "total": 26240,
       "status": "search-cap"
     },
     {
       "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 200,
-      "total": 8896,
+      "total": 8080,
       "status": "search-cap"
     },
     {
       "query": "code:\"TYPESAFE_API_KEY\" in:file",
-      "fetched": 200,
-      "total": 47872,
-      "status": "search-cap"
-    },
-    {
-      "query": "code:\"jev-latest\" in:file",
-      "fetched": 200,
-      "total": 43712,
-      "status": "search-cap"
+      "fetched": 0,
+      "total": 0,
+      "status": "github-rate-limited"
     }
   ],
   "metadata": {
-    "ok": 2142,
-    "failed": 57
+    "ok": 1079,
+    "failed": 22,
+    "batches": 23,
+    "cost": 23,
+    "other": 1000,
+    "remaining": 1120,
+    "top100": {
+      "ok": 100,
+      "total": 100,
+      "complete": true,
+      "unrefreshed": []
+    }
   },
-  "reviewed": 1,
+  "reviewed": 0,
   "added": 0,
   "pending": 2000,
-  "overflow": 1152,
+  "overflow": 736,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "abdelstark/awesome-typesafe",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "itsmostafa/typesafe-mcp",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "gamesonrblx/jevbridge",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "bunsdev/typesafe-ai-playground",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "huntedman/jevlint",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "devagrawal09/jev-code",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
       "repo": "typesafe-ai/overwatch",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "eriestra/almond-fastloop",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "bunsdev/clarity-judge",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "phureewat29/got-jev",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "zoidsh/tenet",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "itsaslamopenclawdata/growthcompany_jevoutputs",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "zavocc/ground-zero",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "altregubov/jev-antigravity-decider",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "thomasschafer/jev-bench",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "adhamelhayek-lab/jev-connector",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "thumay9700/jev-plays",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "sarems/jevscan",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "gloridifice/pi-jev-router",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "bunsdev/river-oaks",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "tinyhumansai/tinyjevclient",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "trophee-bot/typesafe-oracles",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "bunsdev/typesafe-ui",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "xubqpanda/jevrepo",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "xubqpanda/jevloop",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "fruitymcdoo/jevchat",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "church-of-lane/csharp-jef-sdk",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "codewitheren/jev-openrouter-demo",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "completedottech/jev-factorio-agent",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "generallymatthew/factlabel",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "jiawei686/jev-review-mcp",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "jiawei686/jev-screen-mcp",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "johnsonran/pi-jev",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "navidkashani/jev-guard",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "peterfriese/jev-foundation-models",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "ryan-sunny/dbt-assay",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "v60samurai/jev-atlas",
-      "status": "metadata-error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "zhlei07/open-system-one",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "bald0wang/jev-docs-zh",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "carlaiau/readwithjev",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     },
     {
       "repo": "mjyoke1111/jev-lab",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "uehaj/jev-semgrep",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "ajmeese7/hdd-analyzer",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ajmeese7/jev-chess",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "jiangkoumo/ego-jev",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "prestonkakukdev/agent-defense",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "stephenlb/truetype.ai-open",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "p3lera/jev-computer-use",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "dperezcabrera/system-one-chess",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "dperezcabrera/system-one-poker",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "pakkio/openjev",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "tayaee/typesafe-ai-jev-demo",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "sudorandom/protoc-gen-jev",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "vbarrai/jurai",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "faizullah9181/esketcher",
-      "status": "metadata-error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "itani404/jev-explained",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "deadczarvc/jev-factkeep-compaction",
-      "status": "metadata-error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "openbyteinc/quantdinger",
-      "status": "error",
-      "reason": "jev-evidence-too-large"
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
     }
   ],
+  "deferred": {
+    "phase": "discovery",
+    "reason": "github-rate-limited"
+  },
   "totalProjects": 2199
 }
