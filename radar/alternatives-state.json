@@ -1165,25 +1165,25 @@
     "sidneeuncharged29/jev-visual": {
       "status": "review",
       "discoveredAt": "2026-09-25T09:05:10.936Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T10:02:27.972Z",
       "lastReview": {
         "repo": "sidneeuncharged29/jev-visual",
         "status": "review",
         "reason": "insufficient-alternative-context",
-        "sha": "34ff61c71da68e6e2883433d78646078a3b90682",
-        "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/34ff61c71da68e6e2883433d78646078a3b90682/README.md",
-        "evidenceSha256": "fd92bea9fb5aff21e4c8ba7e23e4c60c249c4b650281fc9398691bdc82f326a5",
+        "sha": "e04e0ca985c82e99962d73ec68da5573618424a0",
+        "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/e04e0ca985c82e99962d73ec68da5573618424a0/README.md",
+        "evidenceSha256": "34a41b3caf4147109d5dd39cdf6d1f53b0fe6d9a4ac73daae5eec1897c6456da",
         "model": "jev-latest",
-        "checkedAt": "2026-09-25T09:05:10.936Z"
+        "checkedAt": "2026-10-02T10:02:27.972Z"
       },
-      "retryAt": "2026-10-02T09:05:10.936Z"
+      "retryAt": "2026-10-09T10:02:27.972Z"
     },
     "luminousyyh/laya-decide": {
       "status": "review",
       "discoveredAt": "2026-09-25T09:05:10.936Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-25T09:05:10.936Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T10:02:27.972Z",
       "lastReview": {
         "repo": "luminousyyh/laya-decide",
         "status": "review",
@@ -1192,9 +1192,9 @@
         "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
         "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
         "model": "jev-latest",
-        "checkedAt": "2026-09-25T09:05:10.936Z"
+        "checkedAt": "2026-10-02T10:02:27.972Z"
       },
-      "retryAt": "2026-10-02T09:05:10.936Z"
+      "retryAt": "2026-10-09T10:02:27.972Z"
     },
     "dexmac221/doomgemma": {
       "status": "review",
@@ -2179,6 +2179,54 @@
         "checkedAt": "2026-10-02T01:04:44.302Z"
       },
       "retryAt": "2026-10-09T01:04:44.302Z"
+    },
+    "arish096/awesome-jev-use-cases": {
+      "status": "review",
+      "discoveredAt": "2026-10-02T10:02:27.972Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-02T10:02:27.972Z",
+      "lastReview": {
+        "repo": "arish096/awesome-jev-use-cases",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.05,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.69,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "bdbaee23b08c15d03a7c456aa777a023cb0da54a",
+        "evidenceUrl": "https://github.com/arish096/awesome-jev-use-cases/blob/bdbaee23b08c15d03a7c456aa777a023cb0da54a/README.md",
+        "evidenceSha256": "b37d86a7d0482b37020e7b8eec8fce13384bd05ca2919f4a368e65fda6bba13c",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-02T10:02:27.972Z"
+      },
+      "retryAt": "2026-10-09T10:02:27.972Z"
+    },
+    "anotiawang/awesome-decision-models": {
+      "status": "review",
+      "discoveredAt": "2026-10-02T10:02:27.972Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-02T10:02:27.972Z",
+      "lastReview": {
+        "repo": "anotiawang/awesome-decision-models",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.3,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.63,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "35fd1cb280be008b9cbd2ce3b8e43d300d317c4d",
+        "evidenceUrl": "https://github.com/anotiawang/awesome-decision-models/blob/35fd1cb280be008b9cbd2ce3b8e43d300d317c4d/README.md",
+        "evidenceSha256": "adab4976675fa238ca3a283fcdd95edf0d7037af0ecb324ef8063490eda2fffd",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-02T10:02:27.972Z"
+      },
+      "retryAt": "2026-10-09T10:02:27.972Z"
     }
   }
 }
