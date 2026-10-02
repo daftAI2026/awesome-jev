@@ -3418,5 +3418,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2105809232738283853",
     "aihotUrl": "https://aihot.news/items/dxqwoencgcj9we267cjiy7gok"
+  },
+  {
+    "id": "ci1av3or7imwd2u2w2u7z2dcp",
+    "title": "AWS Strands Labs 发布开源决策模型 Strands Decider 2B，中位延迟约 115 ms",
+    "originalTitle": "AWS Strands Labs Releases Strands Decider 2B: An Open Source Decision Model That Picks Options in About 115 ms",
+    "summary": "AWS Strands Labs 开源决策模型 Strands Decider 2B（1.9B 参数），不生成文本，只在选项、yes/no 概率或量表评分中给出带置信度的答案。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-02T06:35:00.000Z",
+    "discoveredAt": "2026-10-02T06:39:31.913Z",
+    "category": "ai-models",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/01/aws-strands-labs-releases-strands-decider-2b/",
+    "aihotUrl": "https://aihot.news/items/ci1av3or7imwd2u2w2u7z2dcp"
+  },
+  {
+    "id": "nsgsppuhdxji84da9rpmiqv01",
+    "title": "JevSpawn：通过组合式动作空间实现自适应智能体推理",
+    "originalTitle": "JevSpawn: Adaptive Agentic Inference through Compositional Action Spaces",
+    "summary": "JevSpawn 是一种组合式策略，将自然语言任务描述与有限域概率探索连接起来，通过并行动作生成配合反馈驱动的分支选择、表示修正与备选方案恢复，在无需额外训练的情况下减少重复生成和上下文计算。在八项基准任务上对比七种智能体基线和一种 TypeSafe Jev 变体，JevSpawn 任务表现更优、导航更快。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-09-30T00:00:00.000Z",
+    "discoveredAt": "2026-10-02T12:10:40.774Z",
+    "category": "paper",
+    "score": 31,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2610.00437",
+    "aihotUrl": "https://aihot.news/items/nsgsppuhdxji84da9rpmiqv01"
   }
 ]
