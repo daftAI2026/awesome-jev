@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-02T10:02:27.972Z",
+  "at": "2026-10-02T20:07:29.545Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -27,58 +27,54 @@
   "evicted": 0,
   "receipts": [
     {
-      "repo": "luminousyyh/laya-decide",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
-      "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
-      "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-02T10:02:27.972Z"
-    },
-    {
-      "repo": "sidneeuncharged29/jev-visual",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "e04e0ca985c82e99962d73ec68da5573618424a0",
-      "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/e04e0ca985c82e99962d73ec68da5573618424a0/README.md",
-      "evidenceSha256": "34a41b3caf4147109d5dd39cdf6d1f53b0fe6d9a4ac73daae5eec1897c6456da",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-02T10:02:27.972Z"
-    },
-    {
-      "repo": "anotiawang/awesome-decision-models",
+      "repo": "name0x0/jevlet",
       "status": "review",
       "score": {
-        "jevAbout": 0.3,
+        "jevAbout": 0.94,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.63,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevKeepConfidence": 0.86,
+        "category": "alternatives"
       },
-      "sha": "35fd1cb280be008b9cbd2ce3b8e43d300d317c4d",
-      "evidenceUrl": "https://github.com/anotiawang/awesome-decision-models/blob/35fd1cb280be008b9cbd2ce3b8e43d300d317c4d/README.md",
-      "evidenceSha256": "adab4976675fa238ca3a283fcdd95edf0d7037af0ecb324ef8063490eda2fffd",
+      "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
+      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
+      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
       "model": "jev-latest",
-      "checkedAt": "2026-10-02T10:02:27.972Z"
+      "checkedAt": "2026-10-02T20:07:29.545Z"
     },
     {
-      "repo": "arish096/awesome-jev-use-cases",
+      "repo": "dexmac221/doomgemma",
       "status": "review",
       "score": {
-        "jevAbout": 0.05,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.69,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevAbout": 0.09,
+        "jevKeep": "drop",
+        "jevKeepConfidence": 0.24,
+        "category": "other"
       },
-      "sha": "bdbaee23b08c15d03a7c456aa777a023cb0da54a",
-      "evidenceUrl": "https://github.com/arish096/awesome-jev-use-cases/blob/bdbaee23b08c15d03a7c456aa777a023cb0da54a/README.md",
-      "evidenceSha256": "b37d86a7d0482b37020e7b8eec8fce13384bd05ca2919f4a368e65fda6bba13c",
+      "sha": "cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4",
+      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4/README.md",
+      "evidenceSha256": "e85b313a73b7c6268e95bc4f60b86ef133c03f780261320a43e4c64a1a89e306",
       "model": "jev-latest",
-      "checkedAt": "2026-10-02T10:02:27.972Z"
+      "checkedAt": "2026-10-02T20:07:29.545Z"
+    },
+    {
+      "repo": "teilomillet/kayak",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.8,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.79,
+        "category": "alternatives"
+      },
+      "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
+      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
+      "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-02T20:07:29.545Z"
+    },
+    {
+      "repo": "momen-devv/multitenant-ecommerce",
+      "status": "error",
+      "reason": "github-http-404"
     }
   ],
   "totalProjects": 2199

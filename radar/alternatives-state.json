@@ -1199,68 +1199,68 @@
     "dexmac221/doomgemma": {
       "status": "review",
       "discoveredAt": "2026-09-25T14:44:00.381Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-25T14:44:00.381Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T20:07:29.545Z",
       "lastReview": {
         "repo": "dexmac221/doomgemma",
         "status": "review",
         "score": {
           "jevAbout": 0.09,
           "jevKeep": "drop",
-          "jevKeepConfidence": 0.33,
+          "jevKeepConfidence": 0.24,
           "category": "other"
         },
         "sha": "cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4",
         "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4/README.md",
         "evidenceSha256": "e85b313a73b7c6268e95bc4f60b86ef133c03f780261320a43e4c64a1a89e306",
         "model": "jev-latest",
-        "checkedAt": "2026-09-25T14:44:00.381Z"
+        "checkedAt": "2026-10-02T20:07:29.545Z"
       },
-      "retryAt": "2026-10-02T14:44:00.381Z"
+      "retryAt": "2026-10-09T20:07:29.545Z"
     },
     "name0x0/jevlet": {
       "status": "review",
       "discoveredAt": "2026-09-25T14:44:00.381Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-25T14:44:00.381Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T20:07:29.545Z",
       "lastReview": {
         "repo": "name0x0/jevlet",
         "status": "review",
         "score": {
-          "jevAbout": 0.93,
+          "jevAbout": 0.94,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.83,
+          "jevKeepConfidence": 0.86,
           "category": "alternatives"
         },
-        "sha": "9d62c46989e965e0d823491e670dc01ed12a345e",
-        "evidenceUrl": "https://github.com/name0x0/jevlet/blob/9d62c46989e965e0d823491e670dc01ed12a345e/README.md",
+        "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
+        "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
         "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
         "model": "jev-latest",
-        "checkedAt": "2026-09-25T14:44:00.381Z"
+        "checkedAt": "2026-10-02T20:07:29.545Z"
       },
-      "retryAt": "2026-10-02T14:44:00.381Z"
+      "retryAt": "2026-10-09T20:07:29.545Z"
     },
     "teilomillet/kayak": {
       "status": "review",
       "discoveredAt": "2026-09-25T19:32:21.650Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-25T19:32:21.650Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T20:07:29.545Z",
       "lastReview": {
         "repo": "teilomillet/kayak",
         "status": "review",
         "score": {
-          "jevAbout": 0.77,
+          "jevAbout": 0.8,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.87,
+          "jevKeepConfidence": 0.79,
           "category": "alternatives"
         },
-        "sha": "a9d345f541abb847b585ca7c98eb7c39027f77b4",
-        "evidenceUrl": "https://github.com/teilomillet/kayak/blob/a9d345f541abb847b585ca7c98eb7c39027f77b4/README.md",
-        "evidenceSha256": "eaa1eb921253c0f7d94af3e6678ecffac76348d469e544980a58ef44b7110972",
+        "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
+        "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
+        "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
         "model": "jev-latest",
-        "checkedAt": "2026-09-25T19:32:21.650Z"
+        "checkedAt": "2026-10-02T20:07:29.545Z"
       },
-      "retryAt": "2026-10-02T19:32:21.650Z"
+      "retryAt": "2026-10-09T20:07:29.545Z"
     },
     "donliggett/julius": {
       "status": "review",
@@ -2113,9 +2113,9 @@
     "momen-devv/multitenant-ecommerce": {
       "status": "error",
       "discoveredAt": "2026-10-01T10:26:55.519Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-01T10:26:55.519Z",
-      "retryAt": "2026-10-02T10:26:55.519Z"
+      "attempts": 2,
+      "checkedAt": "2026-10-02T20:07:29.545Z",
+      "retryAt": "2026-10-04T20:07:29.545Z"
     },
     "nvkudva/ollajev": {
       "status": "review",
