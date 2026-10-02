@@ -15,7 +15,9 @@ code-discovery.test.ts: Node test code-discovery 的契约与回归验证，运�
 code-discovery.ts: 代码搜索线索与固定提交内容证据提取
 directory-catalog.test.ts: 全目录展示/检索/排序等价及真实 Vite client/SSR 热更新的投影回归
 directory-catalog.ts: 构建期展示白名单与虚拟模块，规范快照保留完整审计且无第二份生成数据
-generate-og.ts: 依据目录计数生成 Open Graph SVG/PNG
+og-image.test.ts: 真实 WASM PNG、白底排版、动态计数及 HTTP 版本/缓存/失败边界回归
+og-delivery.test.ts: 实际 Worker PNG、缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
+share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
 generate-sitemap.test.ts: Node test generate-sitemap 的契约与回归验证，运行 npm test
 generate-sitemap.ts: 生成三种语言的有限索引，排除收藏和不足摘要
 github-client.test.ts: Node test 实际响应头、限流等待、截止与权限错误的离线回归

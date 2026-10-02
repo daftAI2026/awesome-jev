@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖现有 Vite 预览、构建产物和 Node 交付测试，不访问采集 API
+ * [INPUT]: 依赖现有 Vite 预览、构建产物和 Node 页面/OG 交付测试，不访问采集 API
  * [OUTPUT]: 对外提供 runDelivery、可取消命令入口与零跳过集成验收
  * [POS]: scripts 的构建后验收编排器；只拥有并清理自己启动的进程组
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -96,7 +96,7 @@ export async function runDelivery(options: DeliveryOptions = {}): Promise<string
     }
     if (!ready) throw new Error(`Preview startup timeout: ${preview.output()}`)
     options.signal?.throwIfAborted()
-    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts'], cwd, env, output)
+    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts', 'scripts/og-delivery.test.ts'], cwd, env, output)
     let timer: ReturnType<typeof setTimeout> | undefined
     const cancelled = () => cancelReject?.(options.signal?.reason ?? new Error('Delivery cancelled'))
     let cancelReject: ((reason: unknown) => void) | undefined

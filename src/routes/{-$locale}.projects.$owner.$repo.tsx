@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 getProject 同源数据边界、项目身份工具、详情组件和共享 404 页面
+ * [INPUT]: 依赖 getProject、项目/分享图身份工具、详情组件和共享 404 页面
  * [OUTPUT]: 对外提供 项目详情 Route、预渲染元数据及缺失项目边界
  * [POS]: routes 的独立项目页，与目录内的遮罩预览共享项目身份
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -20,6 +20,7 @@ import { catalogs } from '@/i18n/catalogs'
 import { CATEGORY_LABEL, type Category } from '@/lib/categories'
 import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedHead } from '@/lib/locale-head'
+import { projectShareImage } from '@/lib/share-image'
 import { isLocalizedRouteParam, localeFromParam, localizedPath } from '@/lib/locale-routes'
 import type { DirectoryItem } from '@/lib/types'
 
@@ -40,7 +41,7 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
     const path = projectPathFromUrl(item.url)
     const title = `${item.title} · Awesome JEV`
     const description = item.summary.slice(0, 240)
-    return localizedHead({ path: path ?? '/', locale: localeFromParam(params.locale), title, description, type: 'article' })
+    return localizedHead({ path: path ?? '/', locale: localeFromParam(params.locale), title, description, type: 'article', image: projectShareImage(item) })
   },
   component: ProjectPage,
   notFoundComponent: ProjectNotFound,

@@ -2,10 +2,10 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-architecture.md: 技术栈、路由/预渲染/发布边界与全局数据流
+architecture.md: 技术栈、路由/发布边界、分享图内容版本、工作台开发/生产隔离与同源检查数据流
 collector.md: 采集、审核、限流与可信发布的运行规则
 data-model.md: 持久化目录数据字段、来源和证据契约
-design.md: 稳定视觉契约，现有 CSS token 是实现权威
+design.md: 稳定视觉契约、白底黑字代码分享图和检查工作台；现有 CSS token 是页面实现权威
 directory-ui.md: 目录 composition、检索、预览和收藏的产品行为
 reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
 inclusion-follow-up.md: 全量依据复核后的 27 项待补证清单，区分不可达、空仓、占位与跨仓范围；禁止编造依据或自动移除

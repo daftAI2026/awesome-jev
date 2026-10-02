@@ -10,18 +10,27 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DirectoryRouteImport } from './routes/_directory'
+import { Route as OgDotpngRouteImport } from './routes/og[.]png'
 import { Route as DirectoryChar123LocaleChar125RouteImport } from './routes/_directory.{-$locale}'
+import { Route as Char123LocaleChar125OgWorkbenchRouteImport } from './routes/{-$locale}.og-workbench'
 import { Route as DirectoryChar123LocaleChar125IndexRouteImport } from './routes/_directory.{-$locale}.index'
 import { Route as DirectoryChar123LocaleChar125NewsRouteImport } from './routes/_directory.{-$locale}.news'
 import { Route as DirectoryChar123LocaleChar125SavedRouteImport } from './routes/_directory.{-$locale}.saved'
 import { Route as DirectoryChar123LocaleChar125Top100RouteImport } from './routes/_directory.{-$locale}.top100'
+import { Route as ApiOgSiteRouteImport } from './routes/api.og.site'
 import { Route as Char123LocaleChar125NewsIdRouteImport } from './routes/{-$locale}.news.$id'
 import { Route as DirectoryChar123LocaleChar125CategoryCategoryRouteImport } from './routes/_directory.{-$locale}.category.$category'
 import { Route as Char123LocaleChar125ProjectsOwnerRepoRouteImport } from './routes/{-$locale}.projects.$owner.$repo'
 import { Route as DirectoryChar123LocaleChar125PreviewOwnerRepoRouteImport } from './routes/_directory.{-$locale}.preview.$owner.$repo'
+import { Route as ApiOgProjectsOwnerRepoRouteImport } from './routes/api.og.projects.$owner.$repo'
 
 const DirectoryRoute = DirectoryRouteImport.update({
   id: '/_directory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OgDotpngRoute = OgDotpngRouteImport.update({
+  id: '/og.png',
+  path: '/og.png',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DirectoryChar123LocaleChar125Route =
@@ -29,6 +38,12 @@ const DirectoryChar123LocaleChar125Route =
     id: '/{-$locale}',
     path: '/{-$locale}',
     getParentRoute: () => DirectoryRoute,
+  } as any)
+const Char123LocaleChar125OgWorkbenchRoute =
+  Char123LocaleChar125OgWorkbenchRouteImport.update({
+    id: '/{-$locale}/og-workbench',
+    path: '/{-$locale}/og-workbench',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const DirectoryChar123LocaleChar125IndexRoute =
   DirectoryChar123LocaleChar125IndexRouteImport.update({
@@ -54,6 +69,11 @@ const DirectoryChar123LocaleChar125Top100Route =
     path: '/top100',
     getParentRoute: () => DirectoryChar123LocaleChar125Route,
   } as any)
+const ApiOgSiteRoute = ApiOgSiteRouteImport.update({
+  id: '/api/og/site',
+  path: '/api/og/site',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Char123LocaleChar125NewsIdRoute =
   Char123LocaleChar125NewsIdRouteImport.update({
     id: '/{-$locale}/news/$id',
@@ -78,85 +98,118 @@ const DirectoryChar123LocaleChar125PreviewOwnerRepoRoute =
     path: '/preview/$owner/$repo',
     getParentRoute: () => DirectoryChar123LocaleChar125Route,
   } as any)
+const ApiOgProjectsOwnerRepoRoute = ApiOgProjectsOwnerRepoRouteImport.update({
+  id: '/api/og/projects/$owner/$repo',
+  path: '/api/og/projects/$owner/$repo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof DirectoryRouteWithChildren
+  '/og.png': typeof OgDotpngRoute
   '/{-$locale}': typeof DirectoryChar123LocaleChar125RouteWithChildren
+  '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/api/og/site': typeof ApiOgSiteRoute
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
   '/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
+  '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof DirectoryRouteWithChildren
+  '/og.png': typeof OgDotpngRoute
+  '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/api/og/site': typeof ApiOgSiteRoute
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
   '/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
+  '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_directory': typeof DirectoryRouteWithChildren
+  '/og.png': typeof OgDotpngRoute
   '/_directory/{-$locale}': typeof DirectoryChar123LocaleChar125RouteWithChildren
+  '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/_directory/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/_directory/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
   '/_directory/{-$locale}/top100': typeof DirectoryChar123LocaleChar125Top100Route
+  '/api/og/site': typeof ApiOgSiteRoute
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/_directory/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/_directory/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
   '/_directory/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
+  '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/og.png'
     | '/{-$locale}'
+    | '/{-$locale}/og-workbench'
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
     | '/{-$locale}/top100'
+    | '/api/og/site'
     | '/{-$locale}/news/$id'
     | '/{-$locale}/'
     | '/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
     | '/{-$locale}/preview/$owner/$repo'
+    | '/api/og/projects/$owner/$repo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/og.png'
+    | '/{-$locale}/og-workbench'
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
     | '/{-$locale}/top100'
+    | '/api/og/site'
     | '/{-$locale}/news/$id'
     | '/{-$locale}'
     | '/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
     | '/{-$locale}/preview/$owner/$repo'
+    | '/api/og/projects/$owner/$repo'
   id:
     | '__root__'
     | '/_directory'
+    | '/og.png'
     | '/_directory/{-$locale}'
+    | '/{-$locale}/og-workbench'
     | '/_directory/{-$locale}/news'
     | '/_directory/{-$locale}/saved'
     | '/_directory/{-$locale}/top100'
+    | '/api/og/site'
     | '/{-$locale}/news/$id'
     | '/_directory/{-$locale}/'
     | '/_directory/{-$locale}/category/$category'
     | '/{-$locale}/projects/$owner/$repo'
     | '/_directory/{-$locale}/preview/$owner/$repo'
+    | '/api/og/projects/$owner/$repo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   DirectoryRoute: typeof DirectoryRouteWithChildren
+  OgDotpngRoute: typeof OgDotpngRoute
+  Char123LocaleChar125OgWorkbenchRoute: typeof Char123LocaleChar125OgWorkbenchRoute
+  ApiOgSiteRoute: typeof ApiOgSiteRoute
   Char123LocaleChar125NewsIdRoute: typeof Char123LocaleChar125NewsIdRoute
   Char123LocaleChar125ProjectsOwnerRepoRoute: typeof Char123LocaleChar125ProjectsOwnerRepoRoute
+  ApiOgProjectsOwnerRepoRoute: typeof ApiOgProjectsOwnerRepoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -168,12 +221,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DirectoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/og.png': {
+      id: '/og.png'
+      path: '/og.png'
+      fullPath: '/og.png'
+      preLoaderRoute: typeof OgDotpngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_directory/{-$locale}': {
       id: '/_directory/{-$locale}'
       path: '/{-$locale}'
       fullPath: '/{-$locale}'
       preLoaderRoute: typeof DirectoryChar123LocaleChar125RouteImport
       parentRoute: typeof DirectoryRoute
+    }
+    '/{-$locale}/og-workbench': {
+      id: '/{-$locale}/og-workbench'
+      path: '/{-$locale}/og-workbench'
+      fullPath: '/{-$locale}/og-workbench'
+      preLoaderRoute: typeof Char123LocaleChar125OgWorkbenchRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_directory/{-$locale}/': {
       id: '/_directory/{-$locale}/'
@@ -203,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DirectoryChar123LocaleChar125Top100RouteImport
       parentRoute: typeof DirectoryChar123LocaleChar125Route
     }
+    '/api/og/site': {
+      id: '/api/og/site'
+      path: '/api/og/site'
+      fullPath: '/api/og/site'
+      preLoaderRoute: typeof ApiOgSiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/{-$locale}/news/$id': {
       id: '/{-$locale}/news/$id'
       path: '/{-$locale}/news/$id'
@@ -230,6 +304,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/preview/$owner/$repo'
       preLoaderRoute: typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRouteImport
       parentRoute: typeof DirectoryChar123LocaleChar125Route
+    }
+    '/api/og/projects/$owner/$repo': {
+      id: '/api/og/projects/$owner/$repo'
+      path: '/api/og/projects/$owner/$repo'
+      fullPath: '/api/og/projects/$owner/$repo'
+      preLoaderRoute: typeof ApiOgProjectsOwnerRepoRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -279,9 +360,13 @@ const DirectoryRouteWithChildren = DirectoryRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   DirectoryRoute: DirectoryRouteWithChildren,
+  OgDotpngRoute: OgDotpngRoute,
+  Char123LocaleChar125OgWorkbenchRoute: Char123LocaleChar125OgWorkbenchRoute,
+  ApiOgSiteRoute: ApiOgSiteRoute,
   Char123LocaleChar125NewsIdRoute: Char123LocaleChar125NewsIdRoute,
   Char123LocaleChar125ProjectsOwnerRepoRoute:
     Char123LocaleChar125ProjectsOwnerRepoRoute,
+  ApiOgProjectsOwnerRepoRoute: ApiOgProjectsOwnerRepoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

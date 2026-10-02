@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 TanStack 文档壳、i18n、共享 404 页面与全局样式
+ * [INPUT]: 依赖 TanStack 文档壳、i18n、共享 404、构建期全站图片地址及分享图契约
  * [OUTPUT]: 对外提供 根 Route、首屏语言/主题初始化及文档 head
  * [POS]: routes 的根边界，承接未知地址而不重定向成成功页面
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -15,6 +15,7 @@ import {
 import { I18nProvider } from '@/i18n'
 import { NotFoundPage } from '@/components/NotFoundPage'
 import { LANGUAGE_TAG, LOCALE_STORAGE_KEY, localeFromPath } from '@/lib/locale-routes'
+import { shareImageMeta } from '@/lib/share-image'
 import '../index.css'
 
 const SITE_DESCRIPTION = 'A free curated directory of TypeSafe Jev / System One GitHub projects, organized by what they build and how they use Jev.'
@@ -52,13 +53,7 @@ export const Route = createRootRoute({
         { name: 'description', content: SITE_DESCRIPTION },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Awesome JEV' },
-        { property: 'og:image', content: 'https://awesomejev.cc/og.png' },
-        { property: 'og:image:type', content: 'image/png' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: 'https://awesomejev.cc/og.png' },
+        ...shareImageMeta({ path: import.meta.env.VITE_SITE_OG_PATH || '/api/og/site', alt: import.meta.env.VITE_SITE_OG_ALT || 'Awesome JEV · TypeSafe Jev / System One GitHub projects · awesomejev.cc' }),
       ],
       links: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     }

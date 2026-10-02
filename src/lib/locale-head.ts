@@ -1,10 +1,11 @@
 /**
- * [INPUT]: 依赖 locale-routes 的规范地址和语言 alternates
+ * [INPUT]: 依赖 locale-routes 的规范地址/语言 alternates 与 share-image 的图片元数据
  * [OUTPUT]: 对外提供 localizedHead 元数据构造器
  * [POS]: lib 的有效页面 SEO 适配器，缺失页面不生成规范地址
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { localeAlternates, localizedPath, type Locale } from './locale-routes.ts'
+import { shareImageMeta, SITE_ORIGIN, type ShareImage } from './share-image.ts'
 
 interface LocalizedHeadOptions {
   path: string
@@ -13,10 +14,11 @@ interface LocalizedHeadOptions {
   description: string
   robots?: string
   type?: 'article' | 'website'
+  image?: ShareImage
 }
 
-export function localizedHead({ path, locale, title, description, robots, type = 'website' }: LocalizedHeadOptions) {
-  const url = `https://awesomejev.cc${localizedPath(path, locale)}`
+export function localizedHead({ path, locale, title, description, robots, type = 'website', image }: LocalizedHeadOptions) {
+  const url = `${SITE_ORIGIN}${localizedPath(path, locale)}`
   return {
     meta: [
       { title },
@@ -29,6 +31,7 @@ export function localizedHead({ path, locale, title, description, robots, type =
       { property: 'og:url', content: url },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
+      ...(image ? shareImageMeta(image) : []),
     ],
     links: [{ rel: 'canonical', href: url }, ...localeAlternates(path)],
   }

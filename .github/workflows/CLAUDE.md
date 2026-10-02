@@ -7,6 +7,8 @@ news-sync.yml: AIHOT 新闻独立同步与验证，仅发布新闻快照和站�
 radar.yml: 核心生态采集、PR/推送校验与数据发布；内置 token 先做无模型凭据探针，Top100 不完整的诊断 artifact 不进入验证/发布，权限分离
 submission-review.yml: 可信 main 上的 Issue/PR 建议性审查与恢复，允许写评论但不改目录或合并 PR
 
+radar/alternatives 发布目录、README 与 sitemap，不再生成或提交 OG 图片；部署后的 Worker 从同一目录快照按请求渲染。
+
 radar/alternatives 的 verify/validate 与 news 的 sync 验证均在 build 后执行 test:delivery；构建图和真实 HTTP 检查不得靠 skip 变绿。
 
 法则: 可信代码·权限隔离·发布前验证
