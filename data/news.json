@@ -3448,5 +3448,20 @@
     "reason": null,
     "originalUrl": "https://arxiv.org/abs/2610.00437",
     "aihotUrl": "https://aihot.news/items/nsgsppuhdxji84da9rpmiqv01"
+  },
+  {
+    "id": "mb26uw50pn1n1f3xxi97iwwo9",
+    "title": "Jev 结合 PageIndex 实现长文档搜索",
+    "originalTitle": "Jev can search 🔍 through a long document just like you would! 🕵️",
+    "summary": "Jev 能像你一样🔍搜索长文档！🕵️",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-10-02T17:17:37.000Z",
+    "discoveredAt": "2026-10-02T17:22:23.672Z",
+    "category": "tip",
+    "score": 43,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2106071115915550786",
+    "aihotUrl": "https://aihot.news/items/mb26uw50pn1n1f3xxi97iwwo9"
   }
 ]
