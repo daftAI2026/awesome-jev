@@ -1124,32 +1124,32 @@
     "bhushankinge/jev-laya-classification-bench": {
       "status": "review",
       "discoveredAt": "2026-09-24T19:29:42.525Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-24T19:29:42.525Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T01:04:44.302Z",
       "lastReview": {
         "repo": "bhushankinge/jev-laya-classification-bench",
         "status": "review",
         "score": {
-          "jevAbout": 0.14,
+          "jevAbout": 0.15,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.38,
+          "jevKeepConfidence": 0.21,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "d87c2435165744e39b573086d3e0e3b3fd4bcbb1",
-        "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/d87c2435165744e39b573086d3e0e3b3fd4bcbb1/README.md",
-        "evidenceSha256": "729c93bdf1621cf63c53c67c4cdbd810841b9a223d15a5e4885180d84367650a",
+        "sha": "728f2eba42871fa5bbe13c09ccfcb07943366cd9",
+        "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
+        "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
         "model": "jev-latest",
-        "checkedAt": "2026-09-24T19:29:42.525Z"
+        "checkedAt": "2026-10-02T01:04:44.302Z"
       },
-      "retryAt": "2026-10-01T19:29:42.525Z"
+      "retryAt": "2026-10-09T01:04:44.302Z"
     },
     "rudransh2004/carve-jev": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-09-24T23:59:27.965Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-24T23:59:27.965Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-02T01:04:44.302Z",
       "lastReview": {
         "repo": "rudransh2004/carve-jev",
         "status": "review",
@@ -1160,7 +1160,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-24T23:59:27.965Z"
       },
-      "retryAt": "2026-10-01T23:59:27.965Z"
+      "retryAt": "2026-10-04T01:04:44.302Z"
     },
     "sidneeuncharged29/jev-visual": {
       "status": "review",
@@ -2116,6 +2116,69 @@
       "attempts": 1,
       "checkedAt": "2026-10-01T10:26:55.519Z",
       "retryAt": "2026-10-02T10:26:55.519Z"
+    },
+    "nvkudva/ollajev": {
+      "status": "review",
+      "discoveredAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "lastReview": {
+        "repo": "nvkudva/ollajev",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.82,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "351f0f7f7a12bf0b88ff1bc56cda73f49cbdd9fb",
+        "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/351f0f7f7a12bf0b88ff1bc56cda73f49cbdd9fb/README.md",
+        "evidenceSha256": "9b4044de0f0cc1e09c8bcd6e2cf0169ffff30d541b42b3a2eb0ab27fdc040dc0",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-02T01:04:44.302Z"
+      },
+      "retryAt": "2026-10-09T01:04:44.302Z"
+    },
+    "senna-lang/qwen3-4b-system-one": {
+      "status": "review",
+      "discoveredAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "lastReview": {
+        "repo": "senna-lang/qwen3-4b-system-one",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.81,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.21,
+          "category": "other"
+        },
+        "sha": "5bb0a8728c925f49ff00f70161d593aa16ea215f",
+        "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/5bb0a8728c925f49ff00f70161d593aa16ea215f/README.md",
+        "evidenceSha256": "500844d066ddb74dd631de916a8b2bbd1ae71e53fc62326f19e9767eeed759c6",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-02T01:04:44.302Z"
+      },
+      "retryAt": "2026-10-09T01:04:44.302Z"
+    },
+    "threelightstudio/jev-laya-local-daemon": {
+      "status": "review",
+      "discoveredAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "lastReview": {
+        "repo": "threelightstudio/jev-laya-local-daemon",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "0c9a266cac632890abddac7e66f2ed68d649abe5",
+        "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
+        "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-02T01:04:44.302Z"
+      },
+      "retryAt": "2026-10-09T01:04:44.302Z"
     }
   }
 }
