@@ -3658,5 +3658,35 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/02/decision-ai-models-explained-typesafe-jev-vs-fastino-glide-gliner2-5-decide-and-open-source-competitors/",
     "aihotUrl": "https://aihot.news/items/d6dkxfl31arzstmc0ho1qrtzu"
+  },
+  {
+    "id": "jlcw6a57l3eemfz10bzfm5zjz",
+    "title": "亚马逊 Strands Agents 推出 Strands Decider 2B 开源决策模型，支持本地部署",
+    "originalTitle": "亚马逊推出 Strands Decider 2B 开源决策模型，支持本地部署",
+    "summary": "亚马逊 Strands Agents 团队推出 Strands Decider 2B 决策模型，已在 GitHub 开源、权重上线 Hugging Face，可在本地 CPU / GPU 运行。",
+    "sourceName": "IT之家（RSS）",
+    "publishedAt": "2026-10-03T08:50:25.000Z",
+    "discoveredAt": "2026-10-03T08:56:14.192Z",
+    "category": "ai-models",
+    "score": 45,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/009/509.htm",
+    "aihotUrl": "https://aihot.news/items/jlcw6a57l3eemfz10bzfm5zjz"
+  },
+  {
+    "id": "dwisfgfbgkllh4uvsjgqia3uw",
+    "title": "Meta Muse、OpenAI Dots 与 Uber 助手：智能体主动开口后，何时保持沉默",
+    "originalTitle": "Meta, OpenAI and Uber Just Taught AI Agents to Talk First. What About When to Stay Quiet?",
+    "summary": "作者分析 Meta Muse、OpenAI Dots 和 Uber 司机助手的共同点：智能体主动开口，把难点从写什么转移到何时打断、用哪个渠道。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-03T07:05:11.000Z",
+    "discoveredAt": "2026-10-03T07:59:13.177Z",
+    "category": "tip",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/03/meta-openai-and-uber-just-taught-ai-agents-to-talk-first-what-about-when-to-stay-quiet/",
+    "aihotUrl": "https://aihot.news/items/dwisfgfbgkllh4uvsjgqia3uw"
   }
 ]
