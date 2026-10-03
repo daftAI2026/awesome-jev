@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖规范项目/新闻快照、路径身份与语言 alternates
+ * [OUTPUT]: 对外提供 buildSitemap、generateSitemap 与离线生成命令
+ * [POS]: scripts 的有限索引资产边界；不收录收藏、工作台或图片 API，不伪造 lastmod
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'

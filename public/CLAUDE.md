@@ -2,7 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-favicon.svg: SVG 站点图标
+favicon.svg: SVG 站点图标，用户提供的 J 矢量路径与透明底，不依赖字体
 llms.txt: AI 阅读入口与规范来源链接
 robots.txt: 搜索引擎抓取与 sitemap 入口，允许 OG 图片 API
 sitemap.xml: 三语言有效页面索引，生成器不收录 OG 工作台或图片 API

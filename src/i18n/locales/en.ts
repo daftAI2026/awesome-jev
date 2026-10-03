@@ -5,10 +5,22 @@
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  projectCategoryLink: 'Browse this category',
+  relatedProjects: 'Related projects',
+  relatedSharedTopics: 'Shared topics',
+  categoryAgentsDescription: 'Find agents and automation projects that use Jev to make typed decisions within workflows.',
+  categoryApplicationsDescription: 'Explore apps and demos showing how Jev is used in concrete products and experiments.',
+  categoryBrowserDescription: 'Find browser and computer-use projects that use Jev for decisions and action selection.',
+  categoryDeveloperDescription: 'Explore development tools and utilities for building and working with Jev projects.',
+  categoryResourcesDescription: 'Find learning materials, examples and reference resources about Jev and System One.',
+  categoryDirectoriesDescription: 'Explore directories that index multiple Jev projects, tools and ecosystem resources.',
+  categoryAlternativesDescription: 'Explore independent open-source alternatives and implementations, with recorded inclusion evidence.',
+  categoryResearchDescription: 'Find research and evaluation projects exploring decision models and Jev-related approaches.',
+  categorySdkDescription: 'Find SDKs, client libraries and integrations for connecting Jev to your applications.',
+  categoryOtherDescription: 'Browse projects that do not fit the other categories, then inspect their original repositories.',
   githubCount: '{count} GitHub projects indexed',
   documentTitle: 'Awesome JEV · free TypeSafe Jev / System One AI directory',
-  documentDescription:
-    'A free curated directory of TypeSafe Jev / System One AI projects. GitHub projects organized by what they build and how they use Jev.',
+  documentDescription: 'Awesome JEV is a free directory of TypeSafe Jev / System One GitHub projects. Find agents, SDKs, apps and developer tools, with source-backed inclusion notes and repository links.',
   tagline:
     'A free curated directory of TypeSafe Jev / System One AI projects.\nGitHub projects organized by what they build and how they use Jev.',
   dataUpdated: 'Data updated',

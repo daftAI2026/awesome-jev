@@ -17,6 +17,7 @@ import type { Catalog, DirectoryItem, GitHubRepository, JevScore } from './model
 const now = new Date('2026-09-24T00:00:00.000Z')
 const alternatives: GitHubRepository[] = [
   {
+    id: 1001, node_id: 'fixture:1001',
     html_url: 'https://github.com/mizorewww/laya-mlx', full_name: 'mizorewww/laya-mlx', name: 'laya-mlx',
     owner: { login: 'mizorewww' }, description: 'An independent typed-decision model with calibrated probabilities.',
     default_branch: 'main', topics: ['system-one', 'decision-model'], language: 'Python',
@@ -24,6 +25,7 @@ const alternatives: GitHubRepository[] = [
     license: { spdx_id: 'MIT' }, private: false, fork: false, archived: false,
   },
   {
+    id: 1002, node_id: 'fixture:1002',
     html_url: 'https://github.com/nokia-applied-research/AnyJev', full_name: 'nokia-applied-research/AnyJev', name: 'AnyJev',
     owner: { login: 'nokia-applied-research' }, description: 'An independent System One typed-decision model with probabilities.',
     default_branch: 'main', topics: ['system-one', 'decision-model'], language: 'Python',
@@ -187,4 +189,38 @@ test('alternatives deadline covers discovery before any request', async () => {
   assert.equal(calls, 0)
   assert.equal(result.report.status, 'partial')
   assert.equal(result.report.deferred?.phase, 'discovery')
+})
+
+for (const queued of [false, true]) test(`renamed listed alternative is skipped before paid review (${queued ? 'queued' : 'discovered'})`, async () => {
+  const renamed = { ...alternatives[0], id: 42, node_id: 'opaque' }
+  const listed = candidateRow(renamed)
+  listed.url = 'https://github.com/original/old-name'
+  listed.sourceMeta.repo = 'original/old-name'
+  const state = emptyAlternativesState()
+  if (queued) state.candidates[renamed.full_name.toLowerCase()] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  const result = await runAlternatives({ catalog: catalog([listed]), state, api: githubApi([renamed]), now,
+    queries: queued ? [] : ['discover'], review: async () => { assert.fail('Rename must not incur another model review') } })
+  assert.equal(result.report.reviewed, 0)
+  assert.equal(result.report.added, 0)
+  assert.equal(result.report.pending, 0)
+  assert.equal(result.rows.length, 1)
+  assert.deepEqual(result.rows[0], listed)
+})
+
+test('legacy renamed alternative is anchored before discovery without evidence or paid review', async () => {
+  const repo = alternatives[1], known = candidateRow(repo, keep)
+  delete known.sourceMeta.githubIdentity
+  known.url = 'https://github.com/nokia-applied-research/old-name'
+  known.sourceMeta.repo = 'nokia-applied-research/old-name'
+  const api = async (path: string): Promise<unknown> => path === '/graphql' ? { data: {
+    r0: { id: repo.node_id, databaseId: repo.id, nameWithOwner: repo.full_name, url: repo.html_url,
+      stargazerCount: repo.stargazers_count, forkCount: repo.forks_count, primaryLanguage: null }, rateLimit: { cost: 1 },
+  } } : githubApi([repo])(path)
+  const result = await runAlternatives({ catalog: catalog([known]), api, now,
+    review: async () => { throw new Error('already catalogued object must not be reviewed') } })
+  assert.equal(result.report.identity?.ok, 1)
+  assert.equal(result.report.added, 0)
+  assert.equal(result.report.reviewed, 0)
+  assert.equal(result.rows[0].url, known.url)
+  assert.equal(result.rows[0].sourceMeta.githubIdentity?.databaseId, repo.id)
 })

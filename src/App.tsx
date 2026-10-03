@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖规范目录的展示虚拟模块、搜索/排序工具及项目/新闻/收藏组件
- * [OUTPUT]: 对外提供 App 目录布局、筛选交互及 GitHub 投稿表单入口
+ * [OUTPUT]: 对外提供 App 目录布局、手机固定两行控制栏、分类说明、筛选交互及 GitHub 投稿入口
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -26,7 +26,7 @@ import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { useI18n } from '@/i18n'
 import { formatCatalogUpdatedAt } from '@/lib/catalog-updated-at'
-import { CATEGORIES, CATEGORY_LABEL, NEWS_CATEGORIES, type Category } from '@/lib/categories'
+import { CATEGORIES, CATEGORY_LABEL, CATEGORY_DESCRIPTION, NEWS_CATEGORIES, type Category } from '@/lib/categories'
 import { useSaved } from '@/hooks/useSaved'
 import { savedRouteSearch, type SavedRouteSearch, type SavedSection } from '@/lib/saved'
 import { searchItems } from '@/lib/search'
@@ -295,6 +295,8 @@ export default function App() {
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
   const hasQuery = query.trim().length > 0
   const resultLabel = t(matched.length === 1 ? 'resultCount' : 'resultCountPlural', { count: matched.length })
+  const activeCategory = CATEGORIES.find((category) => category === filter)
+  const BrandHeading = activeCategory ? 'div' : 'h1'
   const detailCategory = detailItem ? items.find((item) => item.id === detailItem.id)?.category : undefined
 
   return (
@@ -302,9 +304,9 @@ export default function App() {
       <a href="#main" className="skip-link sr-only">{t('skipToContent')}</a>
       <header className="sticky top-0 z-50 bg-background">
         <div className="flex h-14 w-full items-center justify-between gap-3 px-4">
-          <h1 className="min-w-0 text-base font-medium tracking-tight text-foreground sm:text-lg">
+          <BrandHeading className="min-w-0 text-base font-medium tracking-tight text-foreground sm:text-lg">
             <DecryptedBrand onClick={returnHome} />
-          </h1>
+          </BrandHeading>
           <div className="flex shrink-0 items-center gap-2">
             <Button variant="ghost" size="icon-sm" nativeButton={false}
               render={<a href="https://github.com/daftAI2026/awesome-jev" target="_blank" rel="noopener noreferrer" />}
@@ -351,9 +353,9 @@ export default function App() {
                 <Badge variant="outline" className="rounded-lg font-mono font-normal text-muted-foreground">/</Badge>
               </kbd>
             </div>
-            <div className="mt-4 flex flex-wrap items-center gap-4">
+            <div className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap">
               <Sheet open={categoryOpen} onOpenChange={setCategoryOpen}>
-                <SheetTrigger render={<Button variant="outline" size="sm" className="xl:hidden"
+                <SheetTrigger render={<Button variant="outline" size="sm" className="col-span-2 justify-self-start xl:hidden"
                   aria-label={`${t(FILTER_LABEL[filter])} · ${t('openCategories')}`} />}>
                   <List className="size-4" weight="fill" aria-hidden />
                   {t(FILTER_LABEL[filter])}
@@ -393,6 +395,10 @@ export default function App() {
           {hasQuery && filter !== 'news' && filter !== 'saved' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
           {saveError && <p role="alert" className="mb-6 text-sm text-destructive">{t('savedStorageError')}</p>}
           <main id="main" tabIndex={-1}>
+            {activeCategory && <section data-category-intro className="mb-6">
+              <h1 className="text-xl font-medium">{t(CATEGORY_LABEL[activeCategory])}</h1>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t(CATEGORY_DESCRIPTION[activeCategory])}</p>
+            </section>}
             {filter === 'news' ? (
               routeNewsItems === undefined ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
                   : <NewsPanel key={query} items={routeNewsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}

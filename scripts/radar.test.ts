@@ -195,9 +195,9 @@ test('manual scorer limits paid reviews for GitHub projects', async (t) => {
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'scripts')); mkdirSync(join(root, 'data'))
   mkdirSync(join(root, 'src/lib'), { recursive: true })
-  copyFileSync('src/lib/inclusion.ts', join(root, 'src/lib/inclusion.ts'))
+  for (const file of ['inclusion.ts', 'project-routes.ts']) copyFileSync(`src/lib/${file}`, join(root, 'src/lib', file))
   writeFileSync(join(root, 'package.json'), '{"type":"module"}')
-  for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
+  for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts', 'github-identity.ts', 'model-types.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
   for (const file of ['github.json']) {
     writeFileSync(join(root, 'data', file), JSON.stringify([1, 2].map((n) => ({ id: `${file}-${n}`, type: 'github',
       title: 'Test', summary: 'Test', url: 'https://github.com/test/test', sourceMeta: {} }))))
@@ -306,7 +306,7 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
       return payload
     },
   })
-  assert.equal(seen.length, 501)
+  assert.equal(seen.length, 502) // 未读到身份的旧项额外执行同一批读；仍不修改其统计。
   assert.equal(new Set(seen).size, 501)
   assert.equal(result.report.metadata.ok, 500)
   assert.equal(result.report.metadata.failed, 1)
@@ -314,7 +314,8 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
   for (const [i, row] of result.rows.entries()) {
     if (i === 500) continue
     assert.deepEqual(row, { ...before[i], sourceMeta: { ...before[i].sourceMeta,
-      stars: 4, forks: 2, language: 'TypeScript' } })
+      stars: 4, forks: 2, language: 'TypeScript', githubIdentity: {
+        databaseId: fixtureDatabaseId(`test/old-${i}`), nodeId: `test/old-${i}` } } })
   }
   assert.deepEqual(rows, before)
   assert.equal(result.report.reviewed, 0)
@@ -383,12 +384,19 @@ function metadataRows(count: number): ReviewRow[] {
   return Array.from({ length: count }, (_, i) => ({ id: `m-${i}`, type: 'github', title: `Project ${i}`, summary: 'Curated',
     url: `https://github.com/test/m-${i}`, sourceMeta: { repo: `test/m-${i}`, stars: count - i } }))
 }
+const fixtureIds = new Map<string, number>()
+function fixtureDatabaseId(key: string): number {
+  if (!fixtureIds.has(key)) fixtureIds.set(key, fixtureIds.size + 100000)
+  return fixtureIds.get(key)!
+}
 function graphResponse(query: string, stars: (key: string) => number = (key) => 10000 - Number(key.split('-').at(-1)), missing = new Set<string>()) {
   const data: Record<string, unknown> = { rateLimit: { cost: 1, remaining: 999, limit: 1000, resetAt: '2026-10-02T00:00:00Z' } }
-  for (const match of query.matchAll(/(r\d+):\s*repository\(owner:\s*"([^"]+)",\s*name:\s*"([^"]+)"\)/g)) {
-    const key = `${match[2]}/${match[3]}`
-    data[match[1]] = missing.has(key) ? null : { nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(key), forkCount: 2, primaryLanguage: { name: 'TypeScript' } }
+  const put = (alias: string, key: string) => {
+    const databaseId = fixtureDatabaseId(key)
+    data[alias] = missing.has(key) ? null : { id: key, databaseId, nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(key), forkCount: 2, primaryLanguage: { name: 'TypeScript' } }
   }
+  for (const match of query.matchAll(/(r\d+):\s*repository\(owner:\s*"([^"]+)",\s*name:\s*"([^"]+)"\)/g)) put(match[1], `${match[2]}/${match[3]}`)
+  for (const match of query.matchAll(/(r\d+):\s*node\(id:\s*"([^"]+)"\)/g)) put(match[1], match[2])
   return { data }
 }
 test('default runRadar prioritizes top100 then batches 1000 others with persistent cursor across 5000 rows', async () => {
@@ -402,7 +410,7 @@ test('default runRadar prioritizes top100 then batches 1000 others with persiste
       assert.equal(url, 'https://api.github.com/graphql')
       assert.equal(init?.method, 'POST')
       const query = JSON.parse(init?.body as string).query as string
-      const keys = [...query.matchAll(/name:\s*"m-(\d+)"/g)].map((m) => `test/m-${m[1]}`)
+      const keys = [...query.matchAll(/(?:name:\s*"m-|node\(id:\s*"test\/m-)(\d+)"/g)].map((m) => `test/m-${m[1]}`)
       calls.push(keys); keys.forEach((key) => ever.add(key))
       return Response.json(graphResponse(query, (key) => 5000 - Number(key.split('-').at(-1))))
     } })
@@ -413,7 +421,8 @@ test('default runRadar prioritizes top100 then batches 1000 others with persiste
     assert.equal(result.report.metadata.top100.complete, true)
     assert.equal(result.report.status, 'partial')
     assert.ok(result.report.metadata.remaining > 0)
-    assert.equal(result.report.metadata.cost, calls.length)
+    assert.equal(result.report.metadata.cost! + result.report.identity!.cost!, calls.length)
+    assert.equal(result.report.identity!.ok, round === 0 ? 3900 : 0)
     assert.ok(calls.every((batch) => batch.length <= 50))
     assert.ok(result.report.metadata.other <= 1000)
     state = result.state; currentRows = result.rows
@@ -507,4 +516,77 @@ for (const [label, top, expected] of [
       files.forEach((file, i) => assert.deepEqual(fs.readFileSync(join(root, file)), before[i]))
     } else assert.equal(result.status, 0, result.stderr)
   } finally { fs.rmSync(temporary, { recursive: true, force: true }) }
+})
+
+for (const queued of [false, true]) test(`renamed listed repository is not reviewed or admitted twice (${queued ? 'queued' : 'discovered'})`, async () => {
+  const source = metadataRows(1)
+  source[0].sourceMeta.githubIdentity = { databaseId: 42, nodeId: 'opaque' }
+  const renamed = { ...repo, id: 42, node_id: 'opaque' }
+  const state = emptyState()
+  if (queued) state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  const result = await runRadar({ ...options(), state, queries: queued ? [] : ['discover'],
+    catalog: { files: new Map([['github.json', source]]), rows: source },
+    api: async (path, request) => {
+      if (path === '/graphql') {
+        assert.match(request!.query, /node\(id:"opaque"\)/)
+        return { data: { r0: { id: 'opaque', databaseId: 42, nameWithOwner: 'test/jev-sdk', url: renamed.html_url,
+          stargazerCount: 10, forkCount: 2, primaryLanguage: null }, rateLimit: { cost: 1 } } }
+      }
+      if (path.startsWith('/search/')) return { items: [renamed], total_count: 1 }
+      if (path === '/repos/test/jev-sdk') return renamed
+      return api(path)
+    }, review: async () => { assert.fail('Rename must not incur another model review') } })
+  assert.equal(result.report.metadata.top100.complete, true)
+  assert.equal(result.report.reviewed, 0)
+  assert.equal(result.report.added, 0)
+  assert.equal(result.report.pending, 0)
+  assert.equal(result.rows.length, 1)
+  assert.equal(result.rows[0].url, source[0].url)
+})
+
+test('legacy rows beyond the statistics rotation get identity before discovery and never re-enter after rename', async () => {
+  const source = metadataRows(1101)
+  const old = 'test/m-1100'
+  const renamed = { ...repo, id: fixtureDatabaseId(old), node_id: old }
+  let current = source, state = emptyState(), paid = 0
+  for (let round = 0; round < 2; round++) {
+    const result = await runRadar({ ...options(), state, catalog: { files: new Map([['github.json', current]]), rows: current },
+      api: async (path, request) => {
+        if (path === '/graphql') {
+          const payload = graphResponse(request!.query, (key) => 1101 - Number(key.split('-').at(-1)))
+          for (const value of Object.values(payload.data)) {
+            if (value && typeof value === 'object' && 'nameWithOwner' in value && value.nameWithOwner === old) {
+              Object.assign(value, { nameWithOwner: renamed.full_name, url: renamed.html_url })
+            }
+          }
+          return payload
+        }
+        if (path.startsWith('/search/')) return { items: [renamed], total_count: 1 }
+        if (path === '/repos/test/jev-sdk') return renamed
+        return api(path)
+      }, review: async () => { paid++; return score } })
+    assert.equal(result.report.metadata.other, 1000)
+    assert.equal(result.report.added, 0)
+    assert.equal(result.rows.length, 1101)
+    assert.equal(result.rows[1100].sourceMeta.githubIdentity?.databaseId, renamed.id)
+    assert.equal(result.report.identity?.ok, round === 0 ? 1 : 0)
+    current = result.rows; state = result.state
+  }
+  assert.equal(paid, 0)
+})
+
+test('temporary bootstrap field errors pause discovery and paid review for legacy renamed objects', async () => {
+  const source = metadataRows(1101)
+  const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', source]]), rows: source },
+    api: async (path, request) => {
+      if (path !== '/graphql') throw new Error('discovery must wait for identity reads')
+      if (request!.query.includes('name:"m-1100"')) return { data: { r0: null, rateLimit: { cost: 1 } },
+        errors: [{ type: 'INTERNAL', path: ['r0'] }] }
+      return graphResponse(request!.query, (key) => 1101 - Number(key.split('-').at(-1)))
+    }, review: async () => { throw new Error('paid review must wait for identity reads') } })
+  assert.equal(result.report.identity?.failed, 1)
+  assert.equal(result.report.deferred?.phase, 'identity')
+  assert.equal(result.report.reviewed, 0)
+  assert.equal(result.report.added, 0)
+  assert.equal(result.rows.length, 1101)
 })

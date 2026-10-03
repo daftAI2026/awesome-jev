@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、已构建静态 HTML/模块图及 TEST_SITE_ORIGIN 运行站点
- * [OUTPUT]: 对外提供启动包数据边界、详情交付与预渲染内容的回归检查
+ * [OUTPUT]: 对外提供启动包数据边界、favicon、清洗旧地址 301、详情交付与预渲染内容的回归检查
  * [POS]: scripts 的性能交付护栏；检查总依赖而非仅检查变小的入口文件
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -12,6 +12,12 @@ import githubData from '../data/github.json' with { type: 'json' }
 import newsData from '../data/news.json' with { type: 'json' }
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { newsPath } from '../src/lib/news.ts'
+import { relatedProjects, type CategorizedProject } from '../src/lib/related-projects.ts'
+import { CATEGORY_DESCRIPTION } from '../src/lib/categories.ts'
+import { en } from '../src/i18n/locales/en.ts'
+import { zh } from '../src/i18n/locales/zh.ts'
+import { ja } from '../src/i18n/locales/ja.ts'
+import { localizedPath, type Locale } from '../src/lib/locale-routes.ts'
 
 const build = process.env.TEST_BUILD_OUTPUT
 const origin = process.env.TEST_SITE_ORIGIN
@@ -19,6 +25,7 @@ const project = githubData[0]
 const news = newsData.find((item) => item.summary && item.summary.trim().length >= 60)!
 const projectPath = projectPathFromUrl(project.url)!
 const newsItemPath = newsPath(news.id)!
+const catalogs = { en, zh, ja }
 
 function assertNoSnapshot(source: string, marker: string) {
   assert.ok(!source.includes(marker), `Complete snapshot leaked into startup modules: ${marker}`)
@@ -45,6 +52,20 @@ test('snapshot exclusion guards reject an actual full snapshot', () => {
   assert.throws(() => assertNoSnapshot(JSON.stringify(githubData), project.id))
   assert.throws(() => assertNoSnapshot(JSON.stringify(newsData), news.id))
   assert.doesNotThrow(() => assertNoSnapshot('export const title = "Awesome JEV"', project.id))
+})
+
+test('root icon serves the supplied transparent J SVG without fonts or a background', { skip: !origin }, async () => {
+  const page = await (await fetch(`${origin}/`)).text()
+  assert.match(page, /<link\b[^>]*rel="icon"[^>]*href="\/favicon\.svg"/)
+  const response = await fetch(`${origin}/favicon.svg`)
+  assert.equal(response.status, 200)
+  assert.match(response.headers.get('content-type') ?? '', /image\/svg\+xml/)
+  const svg = await response.text()
+  assert.equal(svg, readFileSync('public/favicon.svg', 'utf8'))
+  assert.match(svg, /viewBox="0 0 9 11"/)
+  assert.match(svg, /<path d="M3\.6 10\.368/)
+  assert.match(svg, /fill="black"/)
+  assert.doesNotMatch(svg, /<(?:text|rect|image)\b/)
 })
 
 test('shared entry stays below 512 KiB without project/news snapshots', { skip: !build }, () => {
@@ -101,4 +122,49 @@ test('homepage startup uses the display projection without catalog audit fields'
   const modules = modulesFor(html, build!).join('\n')
   assert.ok(modules.includes(project.id), 'Projection must retain the complete local directory identity')
   assertNoDirectoryAudit(modules)
+})
+
+const expectedRelated = relatedProjects(githubData as CategorizedProject[], project as CategorizedProject)
+const escapeHtml = (text: string) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;')
+
+for (const locale of ['en', 'zh', 'ja'] as Locale[]) {
+  test(`built ${locale} project HTML has crawlable category and bounded topic-based recommendations`, { skip: !build }, () => {
+    const route = localizedPath(projectPath, locale)
+    const html = readFileSync(path.join(build!, route, 'index.html'), 'utf8')
+    assert.match(html, /data-project-category/)
+    assert.ok(html.includes(`href="${localizedPath(`/category/${project.category}`, locale)}"`))
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1)
+    for (const related of expectedRelated) assert.ok(html.includes(`href="${localizedPath(related.path, locale)}"`))
+    assert.equal(html.includes('data-related-projects'), expectedRelated.length > 0)
+    const modules = modulesFor(html, build!).join('\n')
+    assertNoSnapshot(modules, project.id)
+    assertNoSnapshot(modules, news.id)
+    assert.ok(!modules.includes('Brand query sample'), 'Development workbench leaked into detail startup')
+  })
+
+  test(`built ${locale} category uses one visible H1 and the same description as metadata`, { skip: !build }, () => {
+    const route = localizedPath('/category/browser', locale)
+    const html = readFileSync(path.join(build!, route, 'index.html'), 'utf8')
+    const description = escapeHtml(catalogs[locale][CATEGORY_DESCRIPTION.browser])
+    assert.match(html, /data-category-intro/)
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1)
+    assert.ok(html.includes(`name="description" content="${description}"`))
+    assert.ok(html.includes(`>${description}</p>`))
+  })
+}
+
+test('cleaned duplicate project addresses permanently redirect in every locale', { skip: !origin }, async () => {
+  const aliases = githubData.flatMap((row) => (row.sourceMeta.previousUrls ?? []).map((url: string) => ({ url, current: row.url })))
+  assert.ok(aliases.length > 0, 'cleanup must preserve the published old addresses')
+  for (const { url, current } of aliases) {
+    for (const locale of ['en', 'zh', 'ja'] as const) {
+      const destination = localizedPath(projectPathFromUrl(current)!, locale)
+      const response = await fetch(`${origin}${localizedPath(projectPathFromUrl(url)!, locale)}`, { redirect: 'manual' })
+      assert.equal(response.status, 301, `${locale}: ${url}`)
+      assert.equal(new URL(response.headers.get('location')!, origin).pathname, destination)
+      const target = await fetch(`${origin}${destination}`)
+      assert.equal(target.status, 200)
+      await response.body?.cancel(); await target.body?.cancel()
+    }
+  }
 })

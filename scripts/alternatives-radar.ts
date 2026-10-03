@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖共享目录、GitHub 取证、模型审核与核心雷达状态契约
  * [OUTPUT]: 对外提供替代实现采集、状态校验和快照写入
- * [POS]: scripts 的独立替代实现队列，复用请求及付费边界
+ * [POS]: scripts 的独立替代实现队列，复用请求及付费边界，用数字 ID 排除改名后的已收录对象
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createHash } from 'node:crypto'
@@ -11,6 +11,8 @@ import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { applySnapshot, candidateRow, readCatalog, renderReadme, repoKey, validateSnapshot } from './catalog.ts'
 import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
+import { knownGitHubIds } from './github-identity.ts'
+import { bootstrapIdentities } from './github-metadata.ts'
 import { alternativeEvidenceIssue, githubEvidence } from './github-evidence.ts'
 import { evaluateJev, JEV_MODEL, reviewDecision } from './jev-client.ts'
 import { createRadarBudget } from './radar-budget.ts'
@@ -60,9 +62,9 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
   if (!(deadline === Infinity || Number.isFinite(deadline)) || deadline < 0) throw new Error('radar-invalid-deadline')
   const expired = () => Number.isFinite(deadline) && clock() >= deadline
   const upstream = api
-  api = async (path) => {
+  api = async (path, request) => {
     if (expired()) throw new Error('github-deadline')
-    return upstream(path)
+    return upstream(path, request)
   }
   state = structuredClone(state)
   const started = now.toISOString()
@@ -73,6 +75,9 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
   for (const key of Object.keys(state.candidates)) if (known.has(key)) delete state.candidates[key]
   const report: RadarReport = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
     metadata: { ok: 0, failed: 0 }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
+  report.identity = await bootstrapIdentities(rows, api)
+  if (report.identity.deferred) report.deferred = { phase: 'identity', reason: report.identity.deferred }
+  const knownIds = knownGitHubIds(rows)
 
   for (const query of queries) {
     if (report.deferred) break
@@ -87,7 +92,7 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
         source.fetched += result.items.length
         for (const repo of result.items) {
           const key = repoKey(repo.html_url)
-          if (!key || repo.private || repo.fork || repo.archived || known.has(key) || key === 'daftai2026/awesome-jev') continue
+          if (!key || repo.private || repo.fork || repo.archived || known.has(key) || repo.id !== undefined && knownIds.has(repo.id) || key === 'daftai2026/awesome-jev') continue
           if (Number.isSafeInteger(repo.stargazers_count) && (repo.stargazers_count ?? -1) >= 0) {
             stars.set(key, Math.max(stars.get(key) ?? 0, repo.stargazers_count ?? 0))
           }
@@ -123,6 +128,9 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
     report.reviewed++
     try {
       const { repo, sha, text, evidenceUrl } = await githubEvidence(api, key)
+      if (repo.id !== undefined && knownIds.has(repo.id)) {
+        delete state.candidates[key]; report.reviewed--; continue
+      }
       if (expired()) throw new Error('radar-deadline')
       const candidate = candidateRow(repo, {}, { alternative: true })
       const license = repo.license?.spdx_id
@@ -148,6 +156,7 @@ export async function runAlternatives({ catalog, state = emptyState(), api, revi
         files.get('github.json')!.push(candidate)
         rows.push(candidate)
         known.add(key)
+        if (candidate.sourceMeta.githubIdentity) knownIds.add(candidate.sourceMeta.githubIdentity.databaseId)
         delete state.candidates[key]
         report.added++
       } else {
@@ -221,7 +230,7 @@ async function main(): Promise<void> {
   })
   writeAlternativesSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}.\n${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}.\n${result.report.identity ? `Identity baseline: ${result.report.identity.ok} added; ${result.report.identity.failed} unavailable; GraphQL cost: ${result.report.identity.cost ?? 'unknown'}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary)
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })
 }

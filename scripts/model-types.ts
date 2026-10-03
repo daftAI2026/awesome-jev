@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 共享三语言收录依据类型
+ * [INPUT]: 依赖共享三语言收录依据类型与 GitHub 数字/Node 身份字段
  * [OUTPUT]: 对外提供 采集目录、GitHub 来源/只读查询、模型请求与评分契约
  * [POS]: 服务端共享类型权威，区分规范审计记录与前端展示类型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -27,6 +27,13 @@ export interface CatalogSourceMeta extends ScoreInput {
   language?: string | null
   date?: string
   inclusion?: InclusionBasis
+  previousUrls?: string[]
+  githubIdentity?: GitHubIdentity
+}
+
+export interface GitHubIdentity {
+  databaseId: number
+  nodeId: string
 }
 
 export interface GitHubDirectoryItem {
@@ -49,6 +56,8 @@ export interface Catalog {
 
 /** GitHub REST responses are untrusted JSON; required fields are validated at use sites. */
 export interface GitHubRepository {
+  id?: number
+  node_id?: string
   html_url: string
   full_name: string
   name: string

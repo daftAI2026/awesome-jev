@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖人工复核的 GitHub 旧/新路径同一 immutable repository ID 与固定提交证据
- * [OUTPUT]: 对外提供仅用于统计读取的显式迁移映射，不改目录 URL、ID 或审计身份
- * [POS]: scripts 的受控身份例外清单，由 github-metadata 精确校验目标与 databaseId；未知迁移拒绝
+ * [OUTPUT]: 对外提供历史迁移的数字 ID 种子与既有核验凭据，不改目录 URL、ID 或审计身份
+ * [POS]: scripts 的旧数据身份锚点；自动基线优先，后续改名不再追加人工例外或绑定历史目标名称
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 interface MetadataIdentityAlias {

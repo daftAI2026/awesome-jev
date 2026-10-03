@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 catalog、GitHub 取证、模型审核和 radar-budget 的可信采集能力
  * [OUTPUT]: 对外提供核心雷达状态校验、运行和快照写入
- * [POS]: scripts 的核心生态采集编排，Top100 优先、其它元数据续点刷新并持久化候选
+ * [POS]: scripts 的核心生态采集编排，Top100 优先、其它元数据续点刷新；仓库数字 ID 防止改名重复入队
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -11,8 +11,9 @@ import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
 import { readCatalog, repoKey, candidateRow, renderReadme, applySnapshot } from './catalog.ts'
 import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
-import { refreshMetadata, updateMetadataTop } from './github-metadata.ts'
-import type { MetadataReport } from './github-metadata.ts'
+import { knownGitHubIds } from './github-identity.ts'
+import { bootstrapIdentities, refreshMetadata, updateMetadataTop } from './github-metadata.ts'
+import type { IdentityBootstrapReport, MetadataReport } from './github-metadata.ts'
 import { githubEvidence, evidenceIssue } from './github-evidence.ts'
 import { evaluateJev, reviewDecision, JEV_MODEL } from './jev-client.ts'
 
@@ -30,7 +31,7 @@ export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; di
 export interface RadarState { version: number; pages: Record<string, number>; metadataCursor: number; metadataNext?: string; candidates: Record<string, Candidate> }
 interface Source { query: string; fetched: number; total: number; status: string }
 export interface Receipt { repo: string | null; status: string; reason?: string; score?: JevScore; sha?: string; evidenceUrl?: string; evidenceSha256?: string; evidenceLinks?: EvidenceLink[]; model?: string; checkedAt?: string }
-export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number } & Partial<Omit<MetadataReport, 'ok' | 'failed'>>; reviewed: number; added: number; pending: number; overflow: number; evicted: number; receipts: Receipt[]; totalProjects?: number; deferred?: { phase: string; reason: string; metadataRemaining?: number } }
+export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number } & Partial<Omit<MetadataReport, 'ok' | 'failed'>>; identity?: IdentityBootstrapReport; reviewed: number; added: number; pending: number; overflow: number; evicted: number; receipts: Receipt[]; totalProjects?: number; deferred?: { phase: string; reason: string; metadataRemaining?: number } }
 export interface RadarOptions { catalog: Catalog; state?: RadarState; api: GitHubApi; review: (row: JevRow, text: string, options?: RadarReviewOptions) => Promise<JevScore>; now?: Date; limit?: number; queries?: string[]; codeQueries?: string[]; deadline?: number; clock?: () => number; metadataLimit?: number; beforeRequest?: () => Promise<void> }
 interface RadarResult { files: Map<string, DirectoryItem[]>; rows: DirectoryItem[]; state: RadarState; report: RadarReport }
 
@@ -90,7 +91,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   const known = new Set(rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)))
   for (const key of Object.keys(state.candidates)) if (known.has(key)) delete state.candidates[key]
   const report: RadarReport & { metadata: MetadataReport } = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
-    metadata: { ok: 0, failed: 0, cost: 0, batches: 0, other: 0, remaining: 0, top100: { ok: 0, total: 0, complete: true, unrefreshed: [] } }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
+    metadata: { ok: 0, failed: 0, cost: 0, batches: 0, other: 0, remaining: 0, top100: { ok: 0, total: 0, complete: true, unrefreshed: [] }, resolved: [] }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
   const defer = (error: unknown, phase: string) => {
     if (!isGitHubRunDeferred(error)) return
     report.deferred = { phase, reason: (error as Error).message }
@@ -102,7 +103,12 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   report.receipts.push(...metadata.failures.map((failure) => ({ ...failure, status: 'metadata-error' })))
   if (metadata.deferred) report.deferred = metadata.deferred
   else if (!report.metadata.top100.complete) report.deferred = { phase: 'metadata', reason: 'github-top100-incomplete', metadataRemaining: report.metadata.remaining }
+  if (!report.deferred) {
+    report.identity = await bootstrapIdentities(rows, api)
+    if (report.identity.deferred) report.deferred = { phase: 'identity', reason: report.identity.deferred }
+  }
 
+  const knownIds = knownGitHubIds(rows)
   const rejectedCache = Object.entries(state.candidates).filter(([, e]) => e.status === 'drop')
     .sort(([, a], [, b]) => (a.checkedAt ?? a.discoveredAt).localeCompare(b.checkedAt ?? b.discoveredAt))
     .map(([key]) => key)
@@ -121,7 +127,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         source.fetched += data.items.length
         for (const repo of data.items) {
           const key = repoKey(repo.html_url)
-          if (!key || repo.private || repo.fork || repo.archived || known.has(key) || evicted.has(key) || key === 'daftai2026/awesome-jev') continue
+          if (!key || repo.private || repo.fork || repo.archived || known.has(key) || repo.id !== undefined && knownIds.has(repo.id) || evicted.has(key) || key === 'daftai2026/awesome-jev') continue
           if (!Object.hasOwn(state.candidates, key)) {
             if (Object.keys(state.candidates).length >= MAX_QUEUE) {
               const oldestDrop = rejectedCache.shift()
@@ -208,6 +214,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.reviewed++
     try {
       const { repo, sha, text: readme, evidenceUrl } = await githubEvidence(api, key, { allowFullScan: !!entry.codeHints?.length })
+      if (repo.id !== undefined && knownIds.has(repo.id)) {
+        delete state.candidates[key]; report.reviewed--; continue
+      }
       const integration = await integrationEvidence(api, key, sha, entry.codeHints ?? [])
       const text = readme + integration.text
       if (deadlineReached()) throw new Error('radar-deadline')
@@ -233,6 +242,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         files.get('github.json')!.push(candidate)
         rows.push(candidate)
         known.add(key)
+        if (candidate.sourceMeta.githubIdentity) knownIds.add(candidate.sourceMeta.githubIdentity.databaseId)
         metadata.fresh.add(key)
         delete state.candidates[key]
         report.added++
@@ -334,7 +344,7 @@ async function main() {
     writeFileSync(join(checkpoint, 'latest.json'), JSON.stringify(result.report, null, 2) + '\n')
   } else writeSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Jev radar\n\nStatus: ${result.report.status}\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}; metadata refreshed: ${result.report.metadata.ok}; metadata failed: ${result.report.metadata.failed}; Top100: ${result.report.metadata.top100.ok}/${result.report.metadata.top100.total}; other: ${result.report.metadata.other}; remaining: ${result.report.metadata.remaining}; GraphQL cost: ${result.report.metadata.cost ?? 'unknown'}.\n${!result.report.metadata.top100.complete ? `Top100 incomplete repositories: ${result.report.metadata.top100.unrefreshed.join(', ')}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}; metadata remaining: ${result.report.deferred.metadataRemaining ?? 0}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Jev radar\n\nStatus: ${result.report.status}\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}; metadata refreshed: ${result.report.metadata.ok}; metadata failed: ${result.report.metadata.failed}; Top100: ${result.report.metadata.top100.ok}/${result.report.metadata.top100.total}; other: ${result.report.metadata.other}; remaining: ${result.report.metadata.remaining}; GraphQL cost: ${result.report.metadata.cost ?? 'unknown'}.\n${!result.report.metadata.top100.complete ? `Top100 incomplete repositories: ${result.report.metadata.top100.unrefreshed.join(', ')}.\n` : ''}${result.report.metadata.resolved.length ? `Resolved repository names: ${result.report.metadata.resolved.map(({ from, to, databaseId }) => `${from} → ${to} (ID ${databaseId})`).join('; ')}.\n` : ''}${result.report.identity ? `Identity baseline: ${result.report.identity.ok} added; ${result.report.identity.failed} unavailable; GraphQL cost: ${result.report.identity.cost ?? 'unknown'}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}; metadata remaining: ${result.report.deferred.metadataRemaining ?? 0}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary +
     result.report.sources.map((source) => `${source.query}: ${source.status}; fetched ${source.fetched} / ${source.total}\n`).join(''))
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })

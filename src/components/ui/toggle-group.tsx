@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Toggle/ToggleGroup、toggleVariants 与 cn 的样式组合
+ * [OUTPUT]: 对外提供 ToggleGroup/ToggleGroupItem，组内共享尺寸、外观、间距和方向
+ * [POS]: components/ui 的切换组原语；页面负责排序/视图语义，本层负责组内一致性
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { Toggle as TogglePrimitive } from "@base-ui/react/toggle"
 import { ToggleGroup as ToggleGroupPrimitive } from "@base-ui/react/toggle-group"

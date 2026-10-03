@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖 Base UI Dialog、目录条目、收录证据校验及共享预览头尾
- * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent
+ * [INPUT]: 依赖 Base UI Dialog、目录条目/收录证据、共享预览头尾、语言分类路由和可选统计适配器
+ * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent；独立页分类链接与非阻塞出站统计
  * [POS]: components 的项目证据阅读层，目录预览与直接详情不复制内容
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -13,6 +13,10 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { PreviewDialogHeader } from '@/components/PreviewDialogHeader'
 import { PreviewDialogFooter } from '@/components/PreviewDialogFooter'
+import { Link } from '@tanstack/react-router'
+import { localizedPath } from '@/lib/locale-routes'
+import type { Category } from '@/lib/categories'
+import { trackProjectAction } from '@/lib/analytics'
 import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource } from '@/lib/inclusion'
 
 interface GithubProjectDialogProps {
@@ -25,7 +29,7 @@ interface GithubProjectDialogProps {
   onToggleSaved?: () => void
 }
 
-export function GithubProjectContent({ item, categoryLabel, standalone = false }: { item: DirectoryItem; categoryLabel?: string; standalone?: boolean }) {
+export function GithubProjectContent({ item, categoryLabel, category, standalone = false }: { item: DirectoryItem; categoryLabel?: string; category?: Category; standalone?: boolean }) {
   const { locale, t } = useI18n()
   const SectionHeading = standalone ? 'h2' : 'h3'
   const meta = item.sourceMeta
@@ -40,7 +44,9 @@ export function GithubProjectContent({ item, categoryLabel, standalone = false }
       <p className="break-words text-base leading-relaxed text-foreground">{item.summary}</p>
       {(categoryLabel || meta.language) && (
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-          {categoryLabel && <span>{categoryLabel}</span>}
+          {categoryLabel && (standalone && category ? <Link data-project-category to={localizedPath(`/category/${category}`, locale)}
+            onClick={() => trackProjectAction('project-category-open', locale, 'detail', category)}
+            className="underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring">{categoryLabel}</Link> : <span>{categoryLabel}</span>)}
           {meta.language && <span>{meta.language}</span>}
         </div>
       )}
@@ -89,7 +95,7 @@ export function GithubProjectContent({ item, categoryLabel, standalone = false }
 export function GithubProjectDialog({
   item, categoryLabel, open, onOpenChange, triggerRef, saved, onToggleSaved,
 }: GithubProjectDialogProps) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const meta = item?.sourceMeta
 
   return (
@@ -115,7 +121,7 @@ export function GithubProjectDialog({
             </div>
 
             <PreviewDialogFooter>
-              <Button className="h-10 gap-2 px-4" nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" />}>
+              <Button className="h-10 gap-2 px-4" nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" onClick={() => trackProjectAction('github-open', locale, 'preview')} />}>
                 {t('projectOpenGithub')}<ArrowSquareOut className="size-4" aria-hidden />
               </Button>
             </PreviewDialogFooter>

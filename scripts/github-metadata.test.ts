@@ -1,12 +1,12 @@
 /**
  * [INPUT]: 依赖 Node test 与批量元数据的身份、续点及只读探针接口
- * [OUTPUT]: 对外提供局部响应、排名更替、追加和真实客户端额度暂停的离线验收
+ * [OUTPUT]: 对外提供局部响应、改名身份、排名更替、追加和真实客户端额度暂停的离线验收
  * [POS]: scripts 元数据调度契约，不连接 GitHub 或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { readMetadataBatch, refreshMetadata, probeMetadata, metadataTop } from './github-metadata.ts'
+import { readMetadataBatch, refreshMetadata, probeMetadata, metadataTop, bootstrapIdentities } from './github-metadata.ts'
 import { METADATA_IDENTITY_ALIASES } from './github-metadata-aliases.ts'
 import { repoKey } from './catalog.ts'
 import { createGitHubClient } from './github-client.ts'
@@ -19,7 +19,11 @@ const response = (query: string, stars = (i: number) => 10000 - i) => {
   const data: Record<string, unknown> = { rateLimit: { cost: 1 } }
   for (const match of query.matchAll(/(r\d+):\s*repository\(owner:"test", name:"r-(\d+)"\)/g)) {
     const key = `test/r-${match[2]}`
-    data[match[1]] = { nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(Number(match[2])), forkCount: 2, primaryLanguage: null }
+    data[match[1]] = { id: key, databaseId: 1000 + Number(match[2]), nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(Number(match[2])), forkCount: 2, primaryLanguage: null }
+  }
+  for (const match of query.matchAll(/(r\d+):\s*node\(id:"test\/r-(\d+)"\)/g)) {
+    const key = `test/r-${match[2]}`
+    data[match[1]] = { id: key, databaseId: 1000 + Number(match[2]), nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: stars(Number(match[2])), forkCount: 2, primaryLanguage: null }
   }
   return { data }
 }
@@ -103,7 +107,7 @@ test('probe uses one fixed cross-public sentinel batch, never mutable canonical 
     const data: Record<string, unknown> = { rateLimit: { cost: 1 } }
     for (const match of request!.query.matchAll(/(r\d+):\s*repository\(owner:"([^"]+)", name:"([^"]+)"\)/g)) {
       const key = `${match[2]}/${match[3]}`; sentinels.push(key)
-      data[match[1]] = { nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: 1, forkCount: 1, primaryLanguage: null }
+      data[match[1]] = { id: key, databaseId: 1000 + Number(match[1].slice(1)), nameWithOwner: key, url: `https://github.com/${key}`, stargazerCount: 1, forkCount: 1, primaryLanguage: null }
     }
     return { data }
   }
@@ -139,7 +143,57 @@ test('top membership change does not reset the other cursor or reorder the canon
   assert.deepEqual(source.map((row) => row.id), beforeOrder)
 })
 
+test('previously unseen rename creates its baseline automatically; later moves query the object, not a reclaimed name', async () => {
+  const source = rows(1)
+  const before = structuredClone(source[0])
+  assert.equal(METADATA_IDENTITY_ALIASES['test/r-0'], undefined)
+  for (const [round, nodeId] of ['opaque-original', 'opaque-migrated'].entries()) {
+    const current = round ? 'new-owner/moved-again' : 'test/renamed'
+    const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+      if (!round) assert.match(request!.query, /repository\(owner:"test", name:"r-0"\)/)
+      else {
+        assert.match(request!.query, /node\(id:"opaque-original"\)/)
+        assert.doesNotMatch(request!.query, /repository\(/)
+      }
+      return { data: { r0: { id: nodeId, databaseId: 42, nameWithOwner: current, url: `https://github.com/${current}`,
+        stargazerCount: 100, forkCount: 3, primaryLanguage: null }, rateLimit: { cost: 1 } } }
+    })
+    assert.equal(result.report.top100.complete, true)
+    assert.deepEqual(result.report.resolved, [{ from: 'test/r-0', to: current, databaseId: 42 }])
+    assert.deepEqual(source[0], { ...before, sourceMeta: { ...before.sourceMeta, stars: 100, forks: 3, language: null,
+      githubIdentity: { databaseId: 42, nodeId } } })
+  }
+})
+test('unavailable or replaced baseline object retains the complete old row and blocks incomplete Top100', async () => {
+  const source = rows(1)
+  source[0].sourceMeta.githubIdentity = { databaseId: 42, nodeId: 'opaque' }
+  const before = structuredClone(source)
+  for (const value of [null, { id: 'opaque', databaseId: 43, nameWithOwner: 'test/r-0', url: source[0].url,
+    stargazerCount: 100, forkCount: 2, primaryLanguage: null }]) {
+    const result = await refreshMetadata(source, emptyState(), async () => ({ data: { r0: value, rateLimit: { cost: 1 } } }))
+    assert.equal(result.report.top100.complete, false)
+    assert.equal(result.report.failed, 1)
+    assert.deepEqual(source, before)
+  }
+})
+
 const reviewedMoves = Object.entries(METADATA_IDENTITY_ALIASES)
+test('2026-10-03 renamed Top100 item keeps the stored immutable ID and preserves public identity', async () => {
+  const old = 'anotiawang/awesome-jev'
+  const target = 'anotiawang/awesome-decision-models'
+  for (const databaseId of [1374404623, 1374404624]) {
+    const source: DirectoryItem[] = [{ ...rows(1)[0], url: `https://github.com/${old}`, sourceMeta: { repo: old, stars: 597, githubIdentity: { databaseId: 1374404623, nodeId: 'R_original' } } }]
+    const before = structuredClone(source[0])
+    const result = await refreshMetadata(source, emptyState(), async () => ({ data: {
+      r0: { id: 'R_updated', databaseId, nameWithOwner: target, url: `https://github.com/${target}`, stargazerCount: 605, forkCount: 124, primaryLanguage: null },
+      rateLimit: { cost: 1 },
+    } }))
+    const accepted = databaseId === 1374404623
+    assert.equal(result.report.top100.complete, accepted)
+    assert.equal(result.report.ok, accepted ? 1 : 0)
+    assert.deepEqual(source[0], accepted ? { ...before, sourceMeta: { ...before.sourceMeta, stars: 605, forks: 124, language: null, githubIdentity: { databaseId, nodeId: 'R_updated' } } } : before)
+  }
+})
 for (const [old, { target, repositoryId }] of reviewedMoves) test(`reviewed stats alias ${old} keeps all canonical/editorial/audit identity fields unchanged`, async () => {
   const source: DirectoryItem[] = [{ ...rows(1)[0], url: `https://github.com/${old}`, sourceMeta: {
     repo: old, author: '原作者', stars: 5, forks: 8, language: 'Old', date: '2026-09-01',
@@ -149,18 +203,18 @@ for (const [old, { target, repositoryId }] of reviewedMoves) test(`reviewed stat
   const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
     assert.match(request!.query, /\bdatabaseId\b/)
     assert.ok(request!.query.includes(`owner:${JSON.stringify(old.split('/')[0])}, name:${JSON.stringify(old.split('/')[1])}`))
-    return { data: { r0: { databaseId: repositoryId, nameWithOwner: target, url: `https://github.com/${target}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }
+    return { data: { r0: { id: `fixture:${repositoryId}`, databaseId: repositoryId, nameWithOwner: target, url: `https://github.com/${target}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }
   })
   assert.equal(result.report.top100.complete, true)
   assert.equal(result.report.ok, 1)
-  assert.deepEqual(source[0], { ...before, sourceMeta: { ...before.sourceMeta, stars: 9, forks: 10, language: null } })
+  assert.deepEqual(source[0], { ...before, sourceMeta: { ...before.sourceMeta, stars: 9, forks: 10, language: null, githubIdentity: { databaseId: repositoryId, nodeId: `fixture:${repositoryId}` } } })
 })
-test('reviewed alias rejects mismatched URL/name, unknown second move and reclaimed old identity', async () => {
+test('legacy identity seed accepts another rename but rejects mismatched URL and a reclaimed name', async () => {
   const [old, { target, repositoryId }] = reviewedMoves[0]
   const source = [{ ...rows(1)[0], url: `https://github.com/${old}` }]
-  for (const [name, url] of [[target, 'attacker/wrong'], [`${target}-v2`, `${target}-v2`], [old, old]]) {
-    const result = await readMetadataBatch(async () => ({ data: { r0: { databaseId: repositoryId, nameWithOwner: name, url: `https://github.com/${url}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }), source)
-    assert.equal(result.repositories[0], null)
+  for (const [name, url, databaseId, accepted] of [[target, 'attacker/wrong', repositoryId, false], [`${target}-v2`, `${target}-v2`, repositoryId, true], [old, old, repositoryId + 1, false]] as const) {
+    const result = await readMetadataBatch(async () => ({ data: { r0: { id: 'R_test', databaseId, nameWithOwner: name, url: `https://github.com/${url}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }), source)
+    assert.equal(Boolean(result.repositories[0]), accepted)
   }
 })
 
@@ -187,8 +241,48 @@ test('all 28 reviewed targets reject wrong, missing or invalid immutable IDs', a
   for (const [old, { target, repositoryId }] of reviewedMoves) {
     const source = [{ ...rows(1)[0], url: `https://github.com/${old}` }]
     for (const databaseId of [repositoryId + 1, undefined, null, String(repositoryId), -1]) {
-      const result = await readMetadataBatch(async () => ({ data: { r0: { databaseId, nameWithOwner: target, url: `https://github.com/${target}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }), source)
+      const result = await readMetadataBatch(async () => ({ data: { r0: { id: 'R_test', databaseId, nameWithOwner: target, url: `https://github.com/${target}`, stargazerCount: 9, forkCount: 10, primaryLanguage: null }, rateLimit: { cost: 1 } } }), source)
       assert.equal(result.repositories[0], null, `${old}: mismatched immutable ID accepted`)
     }
+  }
+})
+
+// --- 身份迁移只补机器字段，不重写编辑内容、不因历史别名重复阻塞整轮 ---
+test('legacy identity bootstrap preserves all stats/editorial fields, permits existing aliases and is a no-op afterwards', async () => {
+  const source = rows(2), before = structuredClone(source)
+  const report = await bootstrapIdentities(source, async (_path, request) => {
+    const result = response(request!.query)
+    Object.assign(result.data.r1 as object, { id: 'test/r-0', databaseId: 1000 })
+    return result
+  })
+  assert.equal(report.ok, 2)
+  assert.equal(report.deferred, undefined)
+  for (const [i, row] of source.entries()) {
+    const { githubIdentity, ...unchanged } = row.sourceMeta
+    assert.equal(githubIdentity!.databaseId, 1000)
+    assert.deepEqual({ ...row, sourceMeta: unchanged }, before[i])
+  }
+  assert.equal((await bootstrapIdentities(source, async () => { throw new Error('unexpected API call') })).batches, 0)
+})
+test('unavailable legacy identity keeps its row while request deferral pauses before discovery', async () => {
+  const source = rows(1), before = structuredClone(source)
+  const unavailable = await bootstrapIdentities(source, async () => ({ data: { r0: null, rateLimit: { cost: 1 } } }))
+  assert.equal(unavailable.failed, 1)
+  assert.equal(unavailable.deferred, undefined)
+  assert.deepEqual(source, before)
+  const limited = await bootstrapIdentities(source, async () => { throw new Error('github-budget-exhausted') })
+  assert.equal(limited.deferred, 'github-budget-exhausted')
+  assert.equal(limited.cost, null)
+  assert.deepEqual(source, before)
+})
+
+test('bootstrap pauses discovery on GraphQL errors but tolerates explicitly absent legacy repositories', async () => {
+  for (const [type, deferred] of [['INTERNAL', true], ['NOT_FOUND', false]] as const) {
+    const source = rows(1), before = structuredClone(source)
+    const report = await bootstrapIdentities(source, async () => ({ data: { r0: null, rateLimit: { cost: 1 } },
+      errors: [{ type, path: ['r0'] }] }))
+    assert.equal(Boolean(report.deferred), deferred)
+    assert.equal(report.failed, 1)
+    assert.deepEqual(source, before)
   }
 })

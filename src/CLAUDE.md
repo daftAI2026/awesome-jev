@@ -3,7 +3,7 @@
 
 成员清单
 cloudflare-env.d.ts: Wrangler 自动生成 ASSETS 绑定类型，运行时全局类型由 workers-types 提供
-App.tsx: React 目录编排，连接数据、筛选、收藏与遮罩预览，页头直达既有审核的 GitHub 投稿表单
+App.tsx: React 目录编排，手机 Grid 固定分类/操作两行、桌面保留 Flex，连接数据/说明/筛选/收藏与遮罩预览
 directory-catalog.d.ts: 构建展示虚拟模块的类型桥，避免前端引用 Node 插件实现
 index.css: Tailwind 4 语义主题、字体和目录布局规则，窄屏卡片不等待水合才能显示
 routeTree.gen.ts: TanStack 自动生成路由树，不手动编辑

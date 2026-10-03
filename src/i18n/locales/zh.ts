@@ -7,10 +7,22 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  projectCategoryLink: '浏览所属分类',
+  relatedProjects: '相关项目',
+  relatedSharedTopics: '共同主题',
+  categoryAgentsDescription: '查找使用 Jev 在工作流中进行类型化决策的智能体与自动化项目。',
+  categoryApplicationsDescription: '浏览将 Jev 用于具体产品与实验的应用和演示项目。',
+  categoryBrowserDescription: '查找使用 Jev 进行决策和动作选择的浏览器与电脑操作项目。',
+  categoryDeveloperDescription: '浏览用于构建和开发 Jev 项目的工具与实用程序。',
+  categoryResourcesDescription: '查找 Jev 与 System One 的学习资料、示例和参考资源。',
+  categoryDirectoriesDescription: '浏览汇集多个 Jev 项目、工具与生态资源的目录。',
+  categoryAlternativesDescription: '浏览独立的开源替代方案与实现，并查看已记录的收录依据。',
+  categoryResearchDescription: '查找探索决策模型及 Jev 相关方法的研究与评测项目。',
+  categorySdkDescription: '查找用于将 Jev 接入应用的 SDK、客户端库与集成项目。',
+  categoryOtherDescription: '浏览尚未归入其他分类的项目，查看简介和原始仓库。',
   githubCount: '已收录 {count} 个 GitHub 项目',
   documentTitle: 'Awesome JEV · TypeSafe Jev / System One 免费 AI 目录',
-  documentDescription:
-    'TypeSafe Jev / System One 的免费 AI 精选目录：按用途分类的 GitHub 开源项目',
+  documentDescription: 'Awesome JEV 是 TypeSafe Jev / System One 的免费 GitHub 项目目录。按用途查找智能体、SDK、应用与开发工具，查看收录依据及原始仓库。',
   tagline:
     'TypeSafe Jev / System One 的免费 AI 精选目录\n按用途分类的 GitHub 开源项目',
   dataUpdated: '数据更新',

@@ -45,7 +45,9 @@ test('directory projection strips audit-only fields and keeps every current UI f
 test('projection is detached, preserves optional/null values and cannot leak future audit additions', () => {
   const row = structuredClone(full[0]) as DirectoryCatalogItem & { futureAudit?: string }
   row.futureAudit = 'unconsumed top-level audit'
-  const meta = row.sourceMeta as typeof row.sourceMeta & { futureAudit?: string }
+  const meta = row.sourceMeta as typeof row.sourceMeta & { futureAudit?: string; githubIdentity?: { databaseId: number; nodeId: string }; previousUrls?: string[] }
+  meta.githubIdentity = { databaseId: 42, nodeId: 'opaque' }
+  meta.previousUrls = ['https://github.com/test/old']
   meta.futureAudit = 'unconsumed nested audit'
   meta.language = null
   delete meta.date
@@ -55,6 +57,8 @@ test('projection is detached, preserves optional/null values and cannot leak fut
   assert.equal(Object.hasOwn(projected.sourceMeta, 'date'), false)
   assert.equal(Object.hasOwn(projected, 'futureAudit'), false)
   assert.equal(Object.hasOwn(projected.sourceMeta, 'futureAudit'), false)
+  assert.equal(Object.hasOwn(projected.sourceMeta, 'githubIdentity'), false)
+  assert.equal(Object.hasOwn(projected.sourceMeta, 'previousUrls'), false)
   projected.tags?.push('only-projection')
   if (projected.sourceMeta.inclusion) projected.sourceMeta.inclusion.text.en = 'only-projection'
   assert.deepEqual(row, before)

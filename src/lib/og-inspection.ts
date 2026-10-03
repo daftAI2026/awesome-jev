@@ -1,9 +1,10 @@
 /**
- * [INPUT]: 依赖浏览器 DOMParser、同源 HTTP 读取与 share-image 图片契约
+ * [INPUT]: 依赖浏览器 DOMParser、local-inspection 有界同源读取与 share-image 图片契约
  * [OUTPUT]: 对外提供 inspectSharePage，返回真实 HTML 元数据与 PNG 响应诊断
  * [POS]: lib 的工作台只读探针，不运行被检查页面脚本，不请求第三方分享平台
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
+import { readLocal, boundedBytes } from './local-inspection.ts'
 import { OG_HEIGHT, OG_WIDTH, SITE_ORIGIN, type ShareImage } from './share-image.ts'
 
 export interface OgInspection {
@@ -12,33 +13,6 @@ export interface OgInspection {
   pageStatus: number
   imageStatus: number | null
   imageSize: string | null
-}
-
-// --- 仅允许内部路径；所有网络读取归这个有超时、可取消的只读边界管理 ---
-async function readLocal(path: string, signal?: AbortSignal): Promise<Response> {
-  if (!path.startsWith('/') || path.startsWith('//') || path.includes('\\')) throw new Error('Expected a same-origin path')
-  return fetch(path, { signal: AbortSignal.any([AbortSignal.timeout(15_000), ...(signal ? [signal] : [])]), cache: 'no-store' })
-}
-
-// --- 限制实际读取量而非读完再判定，错误响应不能吞掉工作台内存 ---
-async function boundedBytes(response: Response, limit: number): Promise<Uint8Array<ArrayBuffer>> {
-  const reader = response.body?.getReader()
-  if (!reader) return new Uint8Array()
-  const chunks: Uint8Array[] = []
-  let length = 0
-  try {
-    while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
-      length += value.length
-      if (length > limit) throw new Error('Response exceeds inspection budget')
-      chunks.push(value)
-    }
-  } finally { await reader.cancel(); reader.releaseLock() }
-  const bytes = new Uint8Array(length)
-  let offset = 0
-  for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length }
-  return bytes
 }
 
 export async function inspectSharePage(path: string, expectedImage: ShareImage, signal?: AbortSignal): Promise<OgInspection> {

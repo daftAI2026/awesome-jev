@@ -1,10 +1,10 @@
 /**
  * [INPUT]: 依赖 getProject、项目/分享图身份工具、详情组件和共享 404 页面
- * [OUTPUT]: 对外提供 项目详情 Route、预渲染元数据及缺失项目边界
- * [POS]: routes 的独立项目页，与目录内的遮罩预览共享项目身份
+ * [OUTPUT]: 对外提供 项目详情 Route、最多三条相关项目内链、预渲染元数据、旧地址 301 及缺失项目边界
+ * [POS]: routes 的独立项目页，与目录内的遮罩预览共享项目身份；相关摘要只随独立详情交付
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
-import { createFileRoute, Link, notFound } from '@tanstack/react-router'
+import { createFileRoute, Link, notFound, redirect } from '@tanstack/react-router'
 import { ArrowLeft, ArrowSquareOut, GithubLogo } from '@phosphor-icons/react'
 import { getProject } from '@/lib/catalog.functions'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
@@ -17,14 +17,12 @@ import { Button } from '@/components/ui/button'
 import { useSaved } from '@/hooks/useSaved'
 import { useI18n } from '@/i18n'
 import { catalogs } from '@/i18n/catalogs'
-import { CATEGORY_LABEL, type Category } from '@/lib/categories'
+import { CATEGORY_LABEL } from '@/lib/categories'
 import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedHead } from '@/lib/locale-head'
 import { projectShareImage } from '@/lib/share-image'
 import { isLocalizedRouteParam, localeFromParam, localizedPath } from '@/lib/locale-routes'
-import type { DirectoryItem } from '@/lib/types'
-
-type Project = DirectoryItem & { category?: Category }
+import { trackProjectAction } from '@/lib/analytics'
 
 export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
   beforeLoad: ({ params }) => {
@@ -33,10 +31,12 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
   loader: async ({ params }) => {
     const item = await getProject({ data: { owner: params.owner, repo: params.repo } })
     if (!item) throw notFound()
-    return item as Project
+    if ('redirectTo' in item && item.redirectTo) throw redirect({ href: localizedPath(item.redirectTo, localeFromParam(params.locale)), statusCode: 301 })
+    if (!item.item) throw notFound()
+    return { item: item.item, related: item.related }
   },
   head: ({ loaderData, params }) => {
-    const item = loaderData as Project | undefined
+    const item = loaderData?.item
     if (!item) return { meta: [{ title: `${catalogs[localeFromParam(params.locale)].projectNotFound} · Awesome JEV` }, { name: 'robots', content: 'noindex' }] }
     const path = projectPathFromUrl(item.url)
     const title = `${item.title} · Awesome JEV`
@@ -48,7 +48,7 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
 })
 
 function ProjectPage() {
-  const item = Route.useLoaderData()
+  const { item, related } = Route.useLoaderData()
   const { locale, t } = useI18n()
   const { entries, toggle } = useSaved()
   const saved = entries.some((entry) => entry.kind === 'github' && entry.id === item.id)
@@ -82,16 +82,27 @@ function ProjectPage() {
             <SaveButton saved={saved} onToggle={() => toggle('github', item.id)} />
           </div>
           <div className="px-4 pb-6 sm:px-6">
-            <GithubProjectContent item={item} categoryLabel={categoryLabel} standalone />
+            <GithubProjectContent item={item} categoryLabel={categoryLabel} category={item.category} standalone />
           </div>
           <div className="flex justify-end border-t border-border p-4 sm:px-6">
-            <Button nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" />} className="h-10 gap-2 px-4">
+            <Button nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" onClick={() => trackProjectAction('github-open', locale, 'detail', item.category)} />} className="h-10 gap-2 px-4">
               <GithubLogo className="size-4" weight="fill" aria-hidden />
               {t('projectOpenGithub')}
               <ArrowSquareOut className="size-4" aria-hidden />
             </Button>
           </div>
         </article>
+        {related.length > 0 && <section data-related-projects className="mt-10" aria-label={t('relatedProjects')}>
+          <h2 className="text-base font-medium">{t('relatedProjects')}</h2>
+          <ul className="mt-4 divide-y divide-border">
+            {related.map((project) => <li key={project.path} className="py-4 first:pt-0">
+              <Link to={localizedPath(project.path, locale)} onClick={() => trackProjectAction('related-project-open', locale, 'detail', item.category)}
+                className="break-words text-sm font-medium underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring">{project.title}</Link>
+              <p className="mt-2 break-words text-sm leading-relaxed text-muted-foreground">{project.summary}</p>
+              <p className="mt-2 break-words text-xs text-muted-foreground">{t('relatedSharedTopics')}: {project.topics.join(', ')}</p>
+            </li>)}
+          </ul>
+        </section>}
       </main>
     </div>
   )

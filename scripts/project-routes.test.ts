@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖项目路径、规范地址查找和清洗旧地址的纯函数
+ * [OUTPUT]: 对外提供路径安全、精确匹配与地址历史重定向回归
+ * [POS]: scripts 的公共项目地址契约，不连接 GitHub 或加载规范快照
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import type { DirectoryItem } from '../src/lib/types.ts'
@@ -6,6 +12,7 @@ import {
   parseGitHubRepositoryUrl,
   projectPath,
   projectPathFromUrl,
+  projectRedirectPath,
 } from '../src/lib/project-routes.ts'
 
 const project = (url: string, id = 'project'): DirectoryItem => ({
@@ -75,4 +82,12 @@ test('parser exposes normalized lookup key while preserving source spelling', ()
     repo: 'Jev-SDK',
     key: 'typesafeai/jev-sdk',
   })
+})
+
+test('cleaned repository addresses redirect to one current record without becoming catalog entries', () => {
+  const item = { ...project('https://github.com/Owner/New'), sourceMeta: { previousUrls: ['https://github.com/Owner/Old'] } }
+  assert.equal(projectRedirectPath([item], 'OWNER', 'OLD'), '/projects/owner/new')
+  assert.equal(projectRedirectPath([item], 'owner', 'missing'), null)
+  assert.equal(projectRedirectPath([item, item], 'owner', 'old'), null)
+  assert.equal(projectRedirectPath([item], '../owner', 'old'), null)
 })

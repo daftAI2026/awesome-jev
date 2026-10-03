@@ -1,4 +1,4 @@
-# [INPUT]: 依赖 AIHOT 同步、新闻验证和构建脚本
+# [INPUT]: 依赖 AIHOT 同步、新闻验证、构建和共享最新 main 发布脚本
 # [OUTPUT]: 执行独立新闻同步并发布快照及站点地图
 # [POS]: workflows 的新闻链路；不修改 GitHub 项目数据
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -21,7 +21,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
@@ -37,15 +37,7 @@ jobs:
           AIHOT_NEWS_ENABLED: 'true'
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run typecheck && npm test && npm run news:check && npm run build && npm run test:delivery
-      - name: Publish news and sitemap together
+      - name: Publish news and sitemap on latest main
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/news.json public/sitemap.xml
-          if ! git diff --cached --quiet; then
-            git commit -m 'data: sync Jev news'
-            # 主分支已变化时留给下一轮恢复；不强推、不覆盖其他采集结果。
-            git -c credential.helper='!gh auth git-credential' push origin HEAD:main
-          fi
+        run: node --experimental-strip-types scripts/publish-data.ts news

@@ -2,9 +2,14 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+analytics.ts: 可选 Umami 非阻塞项目动作统计，不记录搜索/收藏且 DEV 不发送
+local-inspection.ts: OG/SEO 共用的可取消同源读取和流式容量边界
+related-projects.ts: 每个快照弱键索引一次分类/主题，交付最多三条稳定相关摘要，重复身份排除
+seo-inspection.ts: 服务端 HTML 与 sitemap 事实抽取及正常/错误/排除诊断，不读取排名
+workbench.ts: 单一工作台工具/目标/宽度搜索状态白名单、规范路径项目选择与同语言目标地址
 catalog-updated-at.ts: 历史时间戳校验与固定时区展示，缺失时不造时间
-catalog.functions.ts: Start 同源只读数据边界，详情交付单条记录，新闻索引按路由读取，快照仅在 handler 内导入
-categories.ts: 项目/新闻分类及标签键的共享白名单
+catalog.functions.ts: Start 同源只读数据边界，项目交付当前记录及最多三条相关摘要或旧地址 301 目标，新闻详情交付单条记录，新闻索引按路由读取，快照仅在 handler 内导入
+categories.ts: 项目/新闻分类及名称/用途说明键的共享白名单
 inclusion.ts: 收录依据及同仓固定 blob/tree 证据边界，前端与采集共用而不信任类型断言
 locale-head.ts: 有效页面规范 URL、语言 alternates 与可覆盖的 OG/Twitter 图片元数据
 locale-routes.ts: en/zh/ja 路径识别、转换和 hreflang 的纯规则
@@ -15,7 +20,7 @@ og-render.server.ts: Workers WASM 栅格化适配器，通过 ASSETS 读取有�
 og-service.server.ts: 当前规范快照与 Workers Cache 的服务端入口，仅缓存未命中时加载渲染器
 og-template.ts: 白底 ASCII 分享图纯 SVG 排版，全文身份与限行文字分离
 og-inspection.ts: 浏览器有界同源只读探针，检验实际 OG/Twitter 标签、canonical 与 PNG 响应，不模拟第三方缓存
-project-routes.ts: GitHub 项目规范路径与目录身份查找
+project-routes.ts: GitHub 项目规范路径、精确查找与同一记录的清洗旧地址重定向
 saved.ts: 仅存来源 ID/保存时间的本地收藏契约及搜索校验
 scroll-restoration.ts: 首次水合保留实际阅读位置的一次性策略，后续导航/hash 恢复 Router 默认行为
 share-image.ts: 全站/项目内容版本图片地址、尺寸和 OG/Twitter 契约，不加载快照

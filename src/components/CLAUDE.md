@@ -8,7 +8,7 @@ DecryptedBrand.tsx: 品牌链接与悬停解码适配，遵循减少动态效果
 DecryptedText.tsx: React Bits 字符解码实现，被品牌适配器消费
 FeaturedProjectBorder.tsx: 星标阈值边框适配，按可见性控制装饰动画
 GithubList.tsx: 项目排名列表，虚拟化并保留详情/收藏动作
-GithubProjectDialog.tsx: 项目预览对话框及独立页共用的项目证据内容
+GithubProjectDialog.tsx: 项目预览与独立页共享证据正文，独立页分类可导航，GitHub 出站统计不阻塞点击
 HeaderChoiceMenu.tsx: Base UI 单选菜单组合，主题/语言共用
 ItemCard.tsx: 项目卡片的来源、证据、排名和收藏入口
 ItemRow.tsx: 项目列表单行的排名、详情与收藏入口
@@ -28,6 +28,7 @@ ThemeMenu.tsx: 系统/明/暗主题偏好同步与现有主题类适配
 VideoMasonry.tsx: 视频内容的布局组件，非当前 GitHub 主结果来源
 
 子模块
+workbench/: 见 workbench/CLAUDE.md，单一 DEV 工作台壳与 OG/SEO/真实页面预览
 ui/: 见 ui/CLAUDE.md
 
 法则: 成员完整·依赖单向·数据来源明确

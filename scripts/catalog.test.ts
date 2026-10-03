@@ -64,6 +64,47 @@ test('metadata refresh preserves editorial content, stable ID and review scores'
   assert.throws(() => refreshRow(before, { ...meta, html_url: 'https://github.com/test/moved' }))
 })
 
+test('identity baseline validates API fields, permits opaque Node ID migration and rejects replacement or removal', () => {
+  const before = row('new')
+  const anchored = refreshRow(before, { ...meta, id: 42, node_id: 'opaque-original' })
+  assert.deepEqual(anchored.sourceMeta.githubIdentity, { databaseId: 42, nodeId: 'opaque-original' })
+  const migrated = refreshRow(anchored, { ...meta, id: 42, node_id: 'opaque-migrated' })
+  assert.doesNotThrow(() => validateRepositoryIdentityChanges([migrated], [anchored]))
+  for (const upstream of [{ ...meta, id: 43, node_id: 'other' }, meta, { ...meta, id: 42 }, { ...meta, id: 0, node_id: 'opaque' }]) {
+    assert.throws(() => refreshRow(anchored, upstream))
+  }
+  for (const identity of [undefined, { databaseId: 43, nodeId: 'other' }]) {
+    assert.throws(() => validateRepositoryIdentityChanges([{ ...anchored, sourceMeta: { ...anchored.sourceMeta, githubIdentity: identity } }], [anchored]), /GitHub identity changed/)
+  }
+  for (const identity of [{ databaseId: -1, nodeId: 'opaque' }, { databaseId: 1.5, nodeId: 'opaque' }, { databaseId: 42, nodeId: '' }]) {
+    assert.throws(() => validateRows([{ ...before, sourceMeta: { ...before.sourceMeta, githubIdentity: identity } }]), /Invalid GitHub identity/)
+  }
+})
+
+test('cleaned catalog rejects two rows for one GitHub object', () => {
+  const first = row('old'), second = row('renamed')
+  first.sourceMeta.githubIdentity = second.sourceMeta.githubIdentity = { databaseId: 42, nodeId: 'opaque' }
+  assert.throws(() => validateRows([first, second]), /Duplicate GitHub identity/)
+})
+test('automated snapshots may establish identity once, then cannot remove or replace it', (t) => {
+  const { root, output } = snapshot(t)
+  const next = readCatalog(output).rows
+  next[0].sourceMeta.githubIdentity = { databaseId: 42, nodeId: 'opaque-original' }
+  writeFileSync(join(output, 'data/github.json'), JSON.stringify(next))
+  assert.doesNotThrow(() => validateSnapshot(root, output))
+  const current = readCatalog(root).rows
+  current[0].sourceMeta.githubIdentity = next[0].sourceMeta.githubIdentity
+  writeFileSync(join(root, 'data/github.json'), JSON.stringify(current))
+  next[0].sourceMeta.githubIdentity.nodeId = 'opaque-migrated'
+  writeFileSync(join(output, 'data/github.json'), JSON.stringify(next))
+  assert.doesNotThrow(() => validateSnapshot(root, output))
+  for (const identity of [undefined, { databaseId: 43, nodeId: 'other' }]) {
+    next[0].sourceMeta.githubIdentity = identity
+    writeFileSync(join(output, 'data/github.json'), JSON.stringify(next))
+    assert.throws(() => validateSnapshot(root, output), /GitHub identity changed/)
+  }
+})
+
 test('radar snapshots preserve inclusion rationale and reject a stale snapshot that loses it', (t) => {
   const { root, output } = snapshot(t)
   const basis = {
@@ -296,3 +337,13 @@ for (const bytes of [Math.ceil(MAX_CATALOG_FILE_BYTES * 0.95), Math.ceil(MAX_CAT
     assert.equal(readFileSync(join(root, 'data/github.json')).byteLength, bytes)
   })
 }
+
+test('previous repository addresses are safe, unique and do not duplicate canonical routes', () => {
+  const item = row('current')
+  item.sourceMeta.previousUrls = ['https://github.com/test/old']
+  assert.doesNotThrow(() => validateRows([item]))
+  for (const previousUrls of [['https://evil.example/test/old'], [item.url], ['https://github.com/test/old', 'https://github.com/test/OLD']]) {
+    assert.throws(() => validateRows([{ ...item, sourceMeta: { ...item.sourceMeta, previousUrls } }]), /previous repository URLs/)
+  }
+  assert.throws(() => validateRows([item, row('old')]), /Previous URL collides/)
+})

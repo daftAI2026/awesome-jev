@@ -113,11 +113,24 @@ test('production workbench returns 404 before loading data while public site met
     assert.ok(!html.includes('id="og-search"'))
     assert.ok(!html.includes('id="og-project"'))
     assert.ok(!html.includes(project.url))
+    assert.ok(!html.includes('id="workbench-target"'))
     const head = await fetchLocal(locale + '/og-workbench', { method: 'HEAD' })
     assert.equal(head.status, 404)
     assert.equal(await head.text(), '')
     const spoofed = await fetchLocal(locale + '/og-workbench?dev=true&enabled=1')
     assert.equal(spoofed.status, 404)
+    for (const tool of ['og', 'seo', 'preview']) {
+      const target = `${locale}/og-workbench?tool=${tool}&preset=project&width=mobile&dev=true`
+      for (const method of ['GET', 'HEAD']) {
+        const result = await fetchLocal(target, { method })
+        assert.equal(result.status, 404, `${method} ${target}`)
+        if (method === 'GET') {
+          const body = await result.text()
+          assert.ok(!body.includes('id="workbench-target"'))
+          assert.ok(!body.includes(project.url))
+        } else assert.equal(await result.text(), '')
+      }
+    }
     const home = await fetchLocal(locale || '/')
     const tags = metadata(await home.text())
     assert.deepEqual(tags.get('og:image'), [SITE_ORIGIN + siteShareImage(count).path])

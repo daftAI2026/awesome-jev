@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖共享 GitHub 只读客户端、catalog 的身份/人工字段保护、人工复核迁移 ID 清单及 UI 星标排名
- * [OUTPUT]: 对外提供 50 项元数据批读、Top100 优先与其它项续点刷新、无付费凭据探针
- * [POS]: scripts 的元数据调度边界，雷达保持规范顺序并按服务端实际额度暂停；已人工复核迁移只映射统计
+ * [INPUT]: 依赖共享 GitHub 只读客户端、catalog 的编辑保护、持久化身份/历史 ID 种子与 UI 排名
+ * [OUTPUT]: 对外提供 50 项按 ID/首次地址解析的元数据批读、自动身份基线、Top100/轮转与只读探针
+ * [POS]: scripts 的元数据调度边界；改名不要求人工例外，真实身份不匹配或读取失败仍保留旧数据
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { resolve } from 'node:path'
@@ -9,6 +9,7 @@ import { pathToFileURL } from 'node:url'
 import { refreshRow, repoKey } from './catalog.ts'
 import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
 import { METADATA_IDENTITY_ALIASES } from './github-metadata-aliases.ts'
+import { readGitHubIdentity, repositoryIdentity } from './github-identity.ts'
 import { githubStarRanks } from '../src/lib/sort.ts'
 import type { DirectoryItem, GitHubApi, GitHubRepository } from './model-types.ts'
 
@@ -17,8 +18,12 @@ export const METADATA_OTHER_LIMIT = 1000
 export interface MetadataReport {
   ok: number; failed: number; batches: number; cost: number | null; other: number; remaining: number
   top100: { ok: number; total: number; complete: boolean; unrefreshed: string[] }
+  resolved: { from: string; to: string; databaseId: number }[]
 }
 interface MetadataCursor { metadataCursor: number; metadataNext?: string }
+export interface IdentityBootstrapReport {
+  ok: number; failed: number; batches: number; cost: number | null; resolved: MetadataReport['resolved']; deferred?: string
+}
 const record = (value: unknown): value is Record<string, unknown> => !!value && typeof value === 'object' && !Array.isArray(value)
 const rowKey = (row: DirectoryItem): string => {
   const key = repoKey(row.url)
@@ -37,43 +42,77 @@ export function updateMetadataTop(rows: DirectoryItem[], fresh: Set<string>, rep
   report.remaining = rows.filter((row) => row.type === 'github' && !fresh.has(rowKey(row))).length
 }
 
-// --- 无连接字段；每个 alias 固定映射原身份，重命名/空值/局部错误不覆盖人工记录 ---
-export async function readMetadataBatch(api: GitHubApi, rows: DirectoryItem[]): Promise<{ repositories: (GitHubRepository | null)[]; cost: number | null }> {
+// --- 有基线按 Node ID 查对象；旧数据由 GitHub 解析地址后自动建基线，不把名字当身份 ---
+export async function readMetadataBatch(api: GitHubApi, rows: DirectoryItem[]): Promise<{ repositories: (GitHubRepository | null)[]; cost: number | null; resolved: MetadataReport['resolved']; deferred?: string }> {
   if (!rows.length || rows.length > METADATA_BATCH_SIZE) throw new Error('github-invalid-metadata-batch')
   const fields = rows.map((row, i) => {
     const key = rowKey(row)
     if (!key) throw new Error('github-invalid-metadata-identity')
+    const identity = readGitHubIdentity(row.sourceMeta.githubIdentity)
+    if (row.sourceMeta.githubIdentity !== undefined && !identity) throw new Error('github-invalid-identity')
     const [owner, name] = key.split('/')
-    return `r${i}: repository(owner:${JSON.stringify(owner)}, name:${JSON.stringify(name)}) { databaseId nameWithOwner url stargazerCount forkCount primaryLanguage { name } }`
+    const lookup = identity ? `node(id:${JSON.stringify(identity.nodeId)})` : `repository(owner:${JSON.stringify(owner)}, name:${JSON.stringify(name)})`
+    const fields = 'id databaseId nameWithOwner url stargazerCount forkCount primaryLanguage { name }'
+    return `r${i}: ${lookup} { ${identity ? `... on Repository { ${fields} }` : fields} }`
   })
   const payload = await api('/graphql', { query: `query CatalogMetadata { ${fields.join('\n')} rateLimit { cost remaining limit resetAt } }` })
   if (!record(payload) || !record(payload.data) || payload.errors !== undefined && !Array.isArray(payload.errors)) throw new Error('github-invalid-response')
   const data = payload.data
   const errors = (payload.errors ?? []) as unknown[]
   const globalError = errors.some((error) => !record(error) || !Array.isArray(error.path) || typeof error.path[0] !== 'string')
+  const resolved: MetadataReport['resolved'] = []
   const repositories = rows.map((row, i): GitHubRepository | null => {
     const alias = `r${i}`
     if (globalError || errors.some((error) => record(error) && Array.isArray(error.path) && error.path[0] === alias)) return null
     const value = data[alias]
-    const identity = METADATA_IDENTITY_ALIASES[rowKey(row)]
-    const expected = identity?.target ?? rowKey(row)
+    const baseline = readGitHubIdentity(row.sourceMeta.githubIdentity)
+    const expectedId = baseline?.databaseId ?? METADATA_IDENTITY_ALIASES[rowKey(row)]?.repositoryId
+    const identity = record(value) ? readGitHubIdentity({ databaseId: value.databaseId, nodeId: value.id }) : null
     if (!record(value) || typeof value.nameWithOwner !== 'string' || typeof value.url !== 'string' ||
-      repoKey(value.url) !== expected || repoKey(`https://github.com/${value.nameWithOwner}`) !== expected ||
-      identity !== undefined && value.databaseId !== identity.repositoryId ||
+      !identity || !repoKey(value.url) || repoKey(value.url) !== repoKey(`https://github.com/${value.nameWithOwner}`) ||
+      expectedId !== undefined && identity.databaseId !== expectedId ||
       !count(value.stargazerCount) || !count(value.forkCount) ||
       !(value.primaryLanguage === null || record(value.primaryLanguage) && typeof value.primaryLanguage.name === 'string')) return null
+    const current = repoKey(value.url)!
+    if (current !== rowKey(row)) resolved.push({ from: rowKey(row), to: current, databaseId: identity.databaseId })
     const [owner, name] = value.nameWithOwner.split('/')
-    return { html_url: row.url, full_name: value.nameWithOwner, owner: { login: owner }, name,
+    return { id: identity.databaseId, node_id: identity.nodeId, html_url: row.url, full_name: value.nameWithOwner, owner: { login: owner }, name,
       stargazers_count: value.stargazerCount, forks_count: value.forkCount,
       language: value.primaryLanguage === null ? null : (value.primaryLanguage as { name: string }).name }
   })
-  return { repositories, cost: record(data.rateLimit) && count(data.rateLimit.cost) ? data.rateLimit.cost : null }
+  return { repositories, resolved, ...(errors.some((error) => !record(error) || error.type !== 'NOT_FOUND') ? { deferred: 'github-invalid-response' } : {}), cost: record(data.rateLimit) && count(data.rateLimit.cost) ? data.rateLimit.cost : null }
+}
+
+// --- 旧目录先补齐对象身份；复用同一批读，额外读取不改统计、不推进轮转续点 ---
+export async function bootstrapIdentities(rows: DirectoryItem[], api: GitHubApi): Promise<IdentityBootstrapReport> {
+  const report: IdentityBootstrapReport = { ok: 0, failed: 0, batches: 0, cost: 0, resolved: [] }
+  const pending = rows.filter((row) => !readGitHubIdentity(row.sourceMeta.githubIdentity))
+  try {
+    for (let i = 0; i < pending.length; i += METADATA_BATCH_SIZE) {
+      const batch = pending.slice(i, i + METADATA_BATCH_SIZE)
+      const result = await readMetadataBatch(api, batch)
+      report.batches++; report.resolved.push(...result.resolved)
+      report.cost = report.cost === null || result.cost === null ? null : report.cost + result.cost
+      batch.forEach((row, index) => {
+        const repository = result.repositories[index]
+        const identity = repository && repositoryIdentity(repository)
+        if (!identity) { report.failed++; return }
+        row.sourceMeta.githubIdentity = identity
+        report.ok++
+      })
+      if (result.deferred) throw new Error(result.deferred)
+    }
+  } catch (error) {
+    report.cost = null
+    report.deferred = error instanceof Error && /^github-[a-z0-9-]+$/.test(error.message) ? error.message : 'github-invalid-response'
+  }
+  return report
 }
 
 export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCursor, api: GitHubApi, otherLimit = METADATA_OTHER_LIMIT) {
   if (!count(otherLimit) || otherLimit > METADATA_OTHER_LIMIT) throw new Error('github-invalid-metadata-limit')
   const report: MetadataReport = { ok: 0, failed: 0, batches: 0, cost: 0, other: 0, remaining: rows.length,
-    top100: { ok: 0, total: 0, complete: false, unrefreshed: [] } }
+    top100: { ok: 0, total: 0, complete: false, unrefreshed: [] }, resolved: [] }
   const fresh = new Set<string>()
   const attempted = new Set<string>()
   const failures: { repo: string; reason: string }[] = []
@@ -83,6 +122,7 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
       const result = await readMetadataBatch(api, batch)
       report.batches++
       report.cost = report.cost === null || result.cost === null ? null : report.cost + result.cost
+      report.resolved.push(...result.resolved)
       batch.forEach((row, i) => {
         const key = rowKey(row)
         attempted.add(key)

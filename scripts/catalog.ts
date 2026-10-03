@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖规范目录 JSON、模型分类规则与收录依据校验
+ * [INPUT]: 依赖规范目录 JSON、模型分类规则、收录依据、共享安全地址与 GitHub 身份基线校验
  * [OUTPUT]: 对外提供目录读取、运行时校验、容量发布门槛、README 渲染和受控快照应用
  * [POS]: scripts 的规范数据边界，守住人工编辑字段与自动发布权限
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -10,6 +10,8 @@ import { pathToFileURL } from 'node:url'
 import { isDeepStrictEqual } from 'node:util'
 import { isProjectCategory, reviewDecision } from './jev-client.ts'
 import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource } from '../src/lib/inclusion.ts'
+import { projectPathFromUrl } from '../src/lib/project-routes.ts'
+import { readGitHubIdentity, repositoryIdentity } from './github-identity.ts'
 import type {
   Catalog,
   CatalogSourceMeta,
@@ -87,6 +89,7 @@ function validateScore(value: Record<string, unknown>): void {
   if (value.category !== undefined && !isProjectCategory(value.category)) throw new Error('Invalid score category')
 }
 function validateSourceFields(meta: Record<string, unknown>, url: string): void {
+  if (meta.githubIdentity !== undefined && !readGitHubIdentity(meta.githubIdentity)) throw new Error('Invalid GitHub identity')
   for (const key of ['author', 'language'] as const) {
     if (meta[key] != null && typeof meta[key] !== 'string') throw new Error(`Invalid ${key}`)
   }
@@ -118,6 +121,10 @@ export function validateRepositoryIdentityChanges(rows: DirectoryItem[], baselin
   const oldById = new Map(baseline.map((row) => [row.id, row]))
   for (const row of rows) {
     const old = oldById.get(row.id)
+    const identity = readGitHubIdentity(old?.sourceMeta.githubIdentity)
+    if (identity && identity.databaseId !== readGitHubIdentity(row.sourceMeta.githubIdentity)?.databaseId) {
+      throw new Error(`GitHub identity changed: ${row.id}`)
+    }
     if (old && old.url === row.url && old.sourceMeta.repo === row.sourceMeta.repo) continue
     if (typeof row.sourceMeta.repo !== 'string' || repoKey(`https://github.com/${row.sourceMeta.repo}`) !== repoKey(row.url)) {
       throw new Error(`Invalid repository identity: ${row.id}`)
@@ -129,6 +136,8 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
   if (!Array.isArray(rows)) throw new Error('Catalog must be an array')
   const ids = new Set<string>()
   const repos = new Set<string>()
+  const githubIds = new Set<number>()
+  const previousUrls = new Set<string>()
   for (const candidate of rows) {
     if (!isRecord(candidate) || candidate.type !== 'github' ||
       !['id', 'title', 'summary', 'url'].every((key) => typeof candidate[key] === 'string' && candidate[key].trim()) ||
@@ -139,6 +148,19 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
     const url = candidate.url as string
     const sourceMeta = candidate.sourceMeta
     validateSourceFields(sourceMeta, url)
+    const identity = readGitHubIdentity(sourceMeta.githubIdentity)
+    if (identity) {
+      if (githubIds.has(identity.databaseId)) throw new Error(`Duplicate GitHub identity: ${identity.databaseId}`)
+      githubIds.add(identity.databaseId)
+    }
+    if (sourceMeta.previousUrls !== undefined) {
+      if (!Array.isArray(sourceMeta.previousUrls)) throw new Error('Invalid previous repository URLs')
+      for (const previous of sourceMeta.previousUrls) {
+        const key = typeof previous === 'string' ? projectPathFromUrl(previous) : null
+        if (!key || key === projectPathFromUrl(url) || previousUrls.has(key)) throw new Error('Invalid previous repository URLs')
+        previousUrls.add(key)
+      }
+    }
     if (ids.has(id)) throw new Error(`Duplicate id: ${id}`)
     ids.add(id)
     const parsedUrl = new URL(url)
@@ -162,9 +184,11 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
       if (value != null && (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 0)) throw new Error(`Invalid ${field}`)
     }
   }
+  if ([...repos].some((key) => previousUrls.has(projectPathFromUrl(`https://github.com/${key}`)!))) throw new Error('Previous URL collides with a published repository')
 }
 
 export function metadataOf(repo: GitHubRepository): CatalogSourceMeta {
+  const identity = repositoryIdentity(repo)
   const stars = repo.stargazers_count
   const forks = repo.forks_count
   if (typeof stars !== 'number' || !Number.isSafeInteger(stars) || stars < 0 ||
@@ -175,12 +199,15 @@ export function metadataOf(repo: GitHubRepository): CatalogSourceMeta {
     stars,
     forks,
     language: repo.language ?? null,
+    ...(identity ? { githubIdentity: identity } : {}),
   }
 }
 
 export function refreshRow<T extends DirectoryItem>(row: T, repo: GitHubRepository): T {
-  // --- 只更新显示元数据；不重写人工摘要、标签与审查结论 ---
+  // --- 统计与 API 身份基线自动更新；公开地址、人工摘要与审查结论不变 ---
   if (repoKey(repo.html_url) !== repoKey(row.url)) throw new Error('Repository moved; manual review required')
+  const identity = readGitHubIdentity(row.sourceMeta.githubIdentity)
+  if (identity && identity.databaseId !== repositoryIdentity(repo)?.databaseId) throw new Error('github-identity-mismatch')
   return { ...row, sourceMeta: { ...row.sourceMeta, ...metadataOf(repo) } } as T
 }
 
@@ -314,7 +341,7 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
       const fresh = after[i]
       if (!old || !fresh) throw new Error('Catalog deletion')
       const editorial: Record<string, unknown> = { ...old.sourceMeta }
-      for (const key of ['stars', 'forks', 'language'] as const) {
+      for (const key of ['stars', 'forks', 'language', 'githubIdentity'] as const) {
         if (Object.hasOwn(fresh.sourceMeta, key)) editorial[key] = fresh.sourceMeta[key]
       }
       const expected: GitHubDirectoryItem = { ...old, sourceMeta: editorial }

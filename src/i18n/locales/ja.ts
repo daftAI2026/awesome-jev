@@ -7,9 +7,22 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  projectCategoryLink: 'このカテゴリを見る',
+  relatedProjects: '関連プロジェクト',
+  relatedSharedTopics: '共通トピック',
+  categoryAgentsDescription: 'ワークフロー内で Jev の型付き判断を使うエージェントや自動化プロジェクトを探せます。',
+  categoryApplicationsDescription: '具体的な製品や実験で Jev を使うアプリとデモを探せます。',
+  categoryBrowserDescription: '判断やアクション選択に Jev を使うブラウザ操作・コンピューター操作プロジェクトを探せます。',
+  categoryDeveloperDescription: 'Jev プロジェクトの開発に役立つツールやユーティリティを探せます。',
+  categoryResourcesDescription: 'Jev と System One の学習資料、サンプル、参考情報を探せます。',
+  categoryDirectoriesDescription: '複数の Jev プロジェクト、ツール、関連資料をまとめた一覧を探せます。',
+  categoryAlternativesDescription: '独立したオープンソースの代替実装を探し、記録された掲載根拠を確認できます。',
+  categoryResearchDescription: '判断モデルや Jev 関連の手法を扱う研究・評価プロジェクトを探せます。',
+  categorySdkDescription: 'Jev をアプリに接続する SDK、クライアントライブラリ、連携プロジェクトを探せます。',
+  categoryOtherDescription: 'ほかのカテゴリに属さないプロジェクトの概要と元のリポジトリを確認できます。',
   githubCount: 'GitHub プロジェクト {count} 件を掲載',
   documentTitle: 'Awesome JEV · TypeSafe Jev / System One の無料 AI プロジェクト集',
-  documentDescription: 'TypeSafe Jev / System One に関する無料のプロジェクト集。GitHub のオープンソースプロジェクトを用途別に探せます。',
+  documentDescription: 'Awesome JEV は TypeSafe Jev / System One の無料 GitHub プロジェクト集です。エージェント、SDK、アプリ、開発ツールを用途別に探し、掲載根拠と元のリポジトリを確認できます。',
   tagline: 'TypeSafe Jev / System One の無料 AI プロジェクト集\nGitHub のオープンソースプロジェクトを用途別に紹介',
   dataUpdated: 'データ更新',
   dataUpdatedTimezone: '時刻は中国標準時（UTC+8）で表示',

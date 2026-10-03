@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 TanStack 文档壳、i18n、共享 404、构建期全站图片地址及分享图契约
- * [OUTPUT]: 对外提供 根 Route、首屏语言/主题初始化及文档 head
+ * [OUTPUT]: 对外提供 根 Route、首屏语言/主题初始化及文档 head；开发预览不发送 Umami 数据
  * [POS]: routes 的根边界，承接未知地址而不重定向成成功页面
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -75,7 +75,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOTSTRAP }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
         <HeadContent />
-        <script defer src="https://umami.sofxcking.cool/script.js" data-website-id="2c5691f6-1473-43cf-8dce-5311d9e9c085" />
+        {!import.meta.env.DEV && <script defer src="https://umami.sofxcking.cool/script.js" data-website-id="2c5691f6-1473-43cf-8dce-5311d9e9c085" />}
       </head>
       <body>
         {children}
