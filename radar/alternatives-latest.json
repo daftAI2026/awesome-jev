@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-02T20:07:29.545Z",
+  "at": "2026-10-03T00:43:39.960Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,61 +20,26 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
+  "reviewed": 1,
   "added": 0,
   "pending": 106,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "name0x0/jevlet",
+      "repo": "donliggett/julius",
       "status": "review",
       "score": {
-        "jevAbout": 0.94,
+        "jevAbout": 0.89,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.86,
+        "jevKeepConfidence": 0.49,
         "category": "alternatives"
       },
-      "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
-      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
-      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
+      "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
+      "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
+      "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
       "model": "jev-latest",
-      "checkedAt": "2026-10-02T20:07:29.545Z"
-    },
-    {
-      "repo": "dexmac221/doomgemma",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.09,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.24,
-        "category": "other"
-      },
-      "sha": "cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4",
-      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/cdf2d040ea9ad2756f35a6daf3adf5f230a45ce4/README.md",
-      "evidenceSha256": "e85b313a73b7c6268e95bc4f60b86ef133c03f780261320a43e4c64a1a89e306",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-02T20:07:29.545Z"
-    },
-    {
-      "repo": "teilomillet/kayak",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.8,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.79,
-        "category": "alternatives"
-      },
-      "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
-      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
-      "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-02T20:07:29.545Z"
-    },
-    {
-      "repo": "momen-devv/multitenant-ecommerce",
-      "status": "error",
-      "reason": "github-http-404"
+      "checkedAt": "2026-10-03T00:43:39.960Z"
     }
   ],
   "totalProjects": 2199
