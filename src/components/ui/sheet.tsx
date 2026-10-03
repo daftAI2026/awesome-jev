@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Dialog 的模态生命周期、React 内容组合、cn 和既有 Button
+ * [OUTPUT]: 对外提供 Sheet 及触发/关闭、面板、头尾和标题描述组合，支持四边定位
+ * [POS]: ui 的侧面板原语，供目录与工作台窄屏导航复用；调用方拥有开关和内容
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog"
 import { cn } from "cn"

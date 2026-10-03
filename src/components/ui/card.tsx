@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 内容组合、cn 与站点语义 CSS token；调用方提供数据属性与动作
+ * [OUTPUT]: 对外提供 Card 及标题/摘要/动作/正文/头尾分区，透传完整卡片的 DOM 属性
+ * [POS]: ui 的卡片排版原语，项目与新闻消费布局，不在此决定预览、收藏或数据来源
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { cn } from "cn"
 

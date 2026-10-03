@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 TanStack Virtual、目录条目、项目身份与收藏动作
- * [OUTPUT]: 对外提供 GithubList 的有界单通道排名列表
+ * [OUTPUT]: 对外提供 GithubList 的有界单通道排名列表，完整行标记作为预览飞出/归位来源
  * [POS]: components 的项目列表布局，与 CardMasonry 共享数据和预览行为
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -32,7 +32,7 @@ const GithubListRow = memo(function GithubListRow({ item, rank, saved, onPreview
   const repo = item.sourceMeta.repo
   const projectPath = projectPathFromUrl(item.url)
   return (
-    <div className="relative">
+    <div data-preview-origin className="relative">
       <a href={projectPath ? localizedPath(projectPath, locale) : item.url}
         aria-haspopup={onPreview ? 'dialog' : undefined}
         onClick={onPreview ? (event) => onPreview(item, event) : undefined}

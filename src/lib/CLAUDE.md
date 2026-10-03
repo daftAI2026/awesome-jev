@@ -21,6 +21,7 @@ og-service.server.ts: 当前规范快照与 Workers Cache 的服务端入口，�
 og-template.ts: 白底 ASCII 分享图纯 SVG 排版，全文身份与限行文字分离
 og-inspection.ts: 浏览器有界同源只读探针，检验实际 OG/Twitter 标签、canonical 与 PNG 响应，不模拟第三方缓存
 project-routes.ts: GitHub 项目规范路径、精确查找与同一记录的清洗旧地址重定向
+preview-motion.ts: 来源卡片到居中弹窗的中心差/等比缩放纯几何，缺失/不可见来源只淡出，不定义动画曲线
 saved.ts: 仅存来源 ID/保存时间的本地收藏契约及搜索校验
 scroll-restoration.ts: 首次水合保留实际阅读位置的一次性策略，后续导航/hash 恢复 Router 默认行为
 share-image.ts: 全站/项目内容版本图片地址、尺寸和 OG/Twitter 契约，不加载快照

@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI 的标题/关闭语义、Button 和 SaveButton；调用方提供标题、辅助内容与动作
+ * [OUTPUT]: 对外提供 PreviewDialogHeader，共享预览标题及可选收藏和关闭布局
+ * [POS]: components 的项目/新闻预览共享头部，只组织展示和动作，不持有路由或收藏状态
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { Dialog } from '@base-ui/react/dialog'
 import { X } from '@phosphor-icons/react'
 import type { ReactNode } from 'react'

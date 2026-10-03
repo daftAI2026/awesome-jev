@@ -60,7 +60,7 @@ score-sources.ts: 离线来源打分/分类入口，不进入前端包
 submission-entry.test.ts: Node test 页头链接、表单标题与单仓库候选提取，离线验证投稿接入而不创建真实申请
 submission-review.test.ts: Node test submission-review 的契约与回归验证，运行 npm test
 submission-review.ts: 可信投稿提取、带输入版本的可失效报告与串行节流的请求前预算评论
-ui-transitions.test.ts: Node test UI 原语显隐过渡与编译后 CSS，保留颜色、焦点和按压反馈而排除 visibility
+ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理
 verify-delivery.ts: 构建后零跳过 HTTP/模块图验收，拥有临时预览生命周期，不调用采集接口

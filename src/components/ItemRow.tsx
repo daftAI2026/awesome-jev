@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 DirectoryItem 的来源身份、摘要与元数据
+ * [OUTPUT]: 对外提供 ItemRow 外链条目，不参与站内预览与本机收藏
+ * [POS]: components 的简式外链阅读单元，与承担站内预览的 GithubListRow 分离
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import type { DirectoryItem } from '@/lib/types'
 
 interface ItemRowProps {

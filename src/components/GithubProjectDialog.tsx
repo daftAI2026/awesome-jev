@@ -1,10 +1,9 @@
 /**
- * [INPUT]: 依赖 Base UI Dialog、目录条目/收录证据、共享预览头尾、语言分类路由和可选统计适配器
+ * [INPUT]: 依赖目录条目/收录证据、共享预览外壳与头尾、语言分类路由和可选统计适配器
  * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent；独立页分类链接与非阻塞出站统计
  * [POS]: components 的项目证据阅读层，目录预览与直接详情不复制内容
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
-import { Dialog } from '@base-ui/react/dialog'
 import { ArrowSquareOut } from '@phosphor-icons/react'
 import type { RefObject } from 'react'
 import type { DirectoryItem } from '@/lib/types'
@@ -13,6 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { PreviewDialogHeader } from '@/components/PreviewDialogHeader'
 import { PreviewDialogFooter } from '@/components/PreviewDialogFooter'
+import { PreviewDialogFrame } from '@/components/PreviewDialogFrame'
 import { Link } from '@tanstack/react-router'
 import { localizedPath } from '@/lib/locale-routes'
 import type { Category } from '@/lib/categories'
@@ -99,35 +99,18 @@ export function GithubProjectDialog({
   const meta = item?.sourceMeta
 
   return (
-    <Dialog.Root open={open} onOpenChange={onOpenChange}>
-      {item ? (
-        <Dialog.Portal>
-          <Dialog.Backdrop
-            className="fixed inset-0 z-50 bg-black/40"
-          />
-          <Dialog.Popup
-            finalFocus={triggerRef}
-            className="fixed top-1/2 left-1/2 z-50 flex max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl border border-border bg-background text-foreground outline-none"
-          >
-            <PreviewDialogHeader title={item.title} saved={saved} onToggleSaved={onToggleSaved}
-              closeLabel={t('projectClose')}
-              subtitle={meta?.repo ? <p className="break-all font-mono text-xs text-muted-foreground">{meta.repo}</p> : undefined}
-            />
-
-            <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-6 sm:px-6">
-              <Dialog.Description render={<div />}>
-                <GithubProjectContent item={item} categoryLabel={categoryLabel} />
-              </Dialog.Description>
-            </div>
-
-            <PreviewDialogFooter>
-              <Button className="h-10 gap-2 px-4" nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" onClick={() => trackProjectAction('github-open', locale, 'preview')} />}>
-                {t('projectOpenGithub')}<ArrowSquareOut className="size-4" aria-hidden />
-              </Button>
-            </PreviewDialogFooter>
-          </Dialog.Popup>
-        </Dialog.Portal>
-      ) : null}
-    </Dialog.Root>
+    <PreviewDialogFrame open={open && item !== null} onOpenChange={onOpenChange} triggerRef={triggerRef}
+      header={item && <PreviewDialogHeader title={item.title} saved={saved} onToggleSaved={onToggleSaved}
+        closeLabel={t('projectClose')}
+        subtitle={meta?.repo ? <p className="break-all font-mono text-xs text-muted-foreground">{meta.repo}</p> : undefined}
+      />}
+      footer={item && <PreviewDialogFooter>
+        <Button className="h-10 gap-2 px-4" nativeButton={false} render={<a href={item.url} target="_blank" rel="noopener noreferrer" onClick={() => trackProjectAction('github-open', locale, 'preview')} />}>
+          {t('projectOpenGithub')}<ArrowSquareOut className="size-4" aria-hidden />
+        </Button>
+      </PreviewDialogFooter>}
+    >
+      {item && <GithubProjectContent item={item} categoryLabel={categoryLabel} />}
+    </PreviewDialogFrame>
   )
 }

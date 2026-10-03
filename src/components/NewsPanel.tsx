@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 TanStack Virtual、新闻纯规则、i18n 与新闻摘要对话框
- * [OUTPUT]: 对外提供 NewsPanel 的本地检索与有界分日时间线
+ * [OUTPUT]: 对外提供 NewsPanel 的本地检索、有界分日时间线与完整卡片预览来源标记
  * [POS]: components 的新闻索引阅读层，路由交付快照而不抓取原文
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -59,7 +59,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
       <time dateTime={date} className="hidden pt-5 text-right font-mono text-xs tabular-nums text-muted-foreground sm:block">
         {formatTime(new Date(date), locale)}
       </time>
-      <a href={localizedPath(newsPath(item.id) ?? '/news', locale)} aria-haspopup="dialog"
+      <a data-preview-origin href={localizedPath(newsPath(item.id) ?? '/news', locale)} aria-haspopup="dialog"
         aria-label={t('newsPreview', { title: item.title })}
         onClick={(event) => onPreview(item, event)}
         className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">

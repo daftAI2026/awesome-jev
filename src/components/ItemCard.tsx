@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 目录条目、排名、路由身份、收藏与特色边框
- * [OUTPUT]: 对外提供 ItemCard 的有界项目卡片及独立详情/收藏动作
+ * [OUTPUT]: 对外提供 ItemCard 的有界项目卡片、完整预览来源标记及独立详情/收藏动作
  * [POS]: components 的项目阅读单元，由 CardMasonry 和收藏视图复用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -49,7 +49,7 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
   const featured = meta.stars != null && meta.stars > 1000
 
   const card = (
-      <Card size="sm" className={cn('transition-colors group-hover:bg-muted/60', featured && 'ring-0')}>
+      <Card data-preview-origin size="sm" className={cn('transition-colors group-hover:bg-muted/60', featured && 'ring-0')}>
         <CardHeader className="gap-y-3">
           <CardTitle className="flex min-w-0 items-start gap-2 text-sm tracking-tight">
             {rank != null ? (
