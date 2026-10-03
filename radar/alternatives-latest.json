@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T00:43:39.960Z",
+  "at": "2026-10-03T09:25:43.612Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 92,
-      "total": 92,
+      "fetched": 91,
+      "total": 91,
       "status": "complete"
     }
   ],
@@ -27,19 +27,19 @@
   "evicted": 0,
   "receipts": [
     {
-      "repo": "donliggett/julius",
+      "repo": "talex-touch/flint",
       "status": "review",
       "score": {
-        "jevAbout": 0.89,
+        "jevAbout": 0.56,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.49,
+        "jevKeepConfidence": 0.37,
         "category": "alternatives"
       },
-      "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
-      "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
-      "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
+      "sha": "683ba4f47294d777e90297ef24df929a3a772f41",
+      "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
+      "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
       "model": "jev-latest",
-      "checkedAt": "2026-10-03T00:43:39.960Z"
+      "checkedAt": "2026-10-03T09:25:43.612Z"
     }
   ],
   "totalProjects": 2199
