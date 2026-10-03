@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-03T14:24:54.800Z",
+  "at": "2026-10-03T18:49:22.218Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 86,
-      "total": 86,
+      "fetched": 87,
+      "total": 87,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 92,
-      "total": 92,
+      "fetched": 93,
+      "total": 93,
       "status": "complete"
     }
   ],
@@ -20,63 +20,48 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 5,
+  "reviewed": 3,
   "added": 0,
-  "pending": 107,
+  "pending": 108,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "pally-sai-tilak/primus-decision",
+      "repo": "lab-emi/chiplaya",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lakoreai/sev",
       "status": "review",
       "score": {
-        "jevAbout": 0.91,
+        "jevAbout": 0.89,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.89,
+        "jevKeepConfidence": 0.83,
+        "category": "alternatives"
+      },
+      "sha": "fefcfc33d01c08104dc3de0374ad4e5daf07f923",
+      "evidenceUrl": "https://github.com/lakoreai/sev/blob/fefcfc33d01c08104dc3de0374ad4e5daf07f923/README.md",
+      "evidenceSha256": "a292dc1d15402941d9467956c2749021635c988d017576d13a2ffdf2ac65ac64",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-03T18:49:22.218Z"
+    },
+    {
+      "repo": "yytbit/metajev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.53,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.77,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "0c00866a20602c0ff2c757e55b3b4d836a137611",
-      "evidenceUrl": "https://github.com/pally-sai-tilak/primus-decision/blob/0c00866a20602c0ff2c757e55b3b4d836a137611/README.md",
-      "evidenceSha256": "1e8739beb970639c11aee2f8f42da7b816c25159806453f62acb2370fa9b6ebe",
+      "sha": "f4246730b4cfedf5d61f1ce155ab52f96d93d3a0",
+      "evidenceUrl": "https://github.com/yytbit/metajev/blob/f4246730b4cfedf5d61f1ce155ab52f96d93d3a0/README.md",
+      "evidenceSha256": "f1639cb4edde965850632ad453841e271cb2389ca4144e6eabbb47267e6bc0ed",
       "model": "jev-latest",
-      "checkedAt": "2026-10-03T14:24:54.800Z"
-    },
-    {
-      "repo": "thegovind/blink",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.87,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.96,
-        "category": "alternatives"
-      },
-      "sha": "b726d6588d63db3ae94c46ee724b3e555334ee0d",
-      "evidenceUrl": "https://github.com/thegovind/blink/blob/b726d6588d63db3ae94c46ee724b3e555334ee0d/README.md",
-      "evidenceSha256": "3c63768ac8b2990a3349a5f2874818912b0227754ffc618c1f4bc7ccc78ddb1e",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-03T14:24:54.800Z"
-    },
-    {
-      "repo": "novaleolin/jev-evolve",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "rotsl/layaagent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "laurentvv/compare-ia-decision",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "5757b28f40b1609a611f590bbcc92aa5cb545393",
-      "evidenceUrl": "https://github.com/laurentvv/compare-ia-decision/blob/5757b28f40b1609a611f590bbcc92aa5cb545393/README.md",
-      "evidenceSha256": "ffbc5e4d62b60e36626adb1586727bc39760603c41aa68f38b40a58ef493ec85",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-03T14:24:54.800Z"
+      "checkedAt": "2026-10-03T18:49:22.218Z"
     }
   ],
   "identity": {
