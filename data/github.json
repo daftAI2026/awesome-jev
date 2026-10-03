@@ -3925,28 +3925,6 @@
     "category": "agents"
   },
   {
-    "id": "gh-typesafe-ai-overwatch",
-    "type": "github",
-    "title": "Overwatch",
-    "summary": "TypeSafe AI Overwatch — System One / Jev related tooling from the official org.",
-    "tags": [
-      "jev",
-      "official"
-    ],
-    "url": "https://github.com/typesafe-ai/Overwatch",
-    "sourceMeta": {
-      "stars": 5,
-      "forks": 5,
-      "language": "Python",
-      "author": "typesafe-ai",
-      "repo": "typesafe-ai/Overwatch",
-      "jevAbout": 0.78,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.45
-    },
-    "category": "developer"
-  },
-  {
     "id": "gh-hawxy-typesafeai-net",
     "type": "github",
     "title": "TypeSafeAI.Net",
@@ -5424,28 +5402,6 @@
       }
     },
     "category": "research"
-  },
-  {
-    "id": "gh-eriestra-almond-fastloop",
-    "type": "github",
-    "title": "almond-fastloop",
-    "summary": "Almond-fastloop: Almond's browser computer-use rig (Chrome DevTools + TypeSafe Jev), and the Browser Use Olympics benchmark it is measured on.",
-    "tags": [
-      "jev",
-      "html"
-    ],
-    "url": "https://github.com/eriestra/almond-fastloop",
-    "sourceMeta": {
-      "stars": 1,
-      "forks": 0,
-      "language": "HTML",
-      "author": "eriestra",
-      "repo": "eriestra/almond-fastloop",
-      "jevAbout": 0.38,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.5
-    },
-    "category": "browser"
   },
   {
     "id": "gh-omni-ask-jev",
@@ -7119,49 +7075,6 @@
     "category": "sdk"
   },
   {
-    "id": "gh-zoidsh-tenet",
-    "type": "github",
-    "title": "tenet",
-    "summary": "The review gate for code that agents write: rules in plain language, judged on every commit (TypeSafe Jev community).",
-    "tags": [
-      "jev",
-      "agent",
-      "code-review",
-      "demo"
-    ],
-    "url": "https://github.com/zoidsh/tenet",
-    "sourceMeta": {
-      "stars": 5,
-      "forks": 0,
-      "language": "Go",
-      "author": "zoidsh",
-      "repo": "zoidsh/tenet",
-      "jevAbout": 0.18,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.5,
-      "inclusion": {
-        "text": {
-          "en": "tenet is an agent-code review gate that uses TypeSafe Jev probabilities to assess each declared rule.",
-          "zh": "tenet 是面向代理代码变更的审查门禁，使用 TypeSafe Jev 的概率判断评估每条已声明规则。",
-          "ja": "tenetはエージェントのコード変更を確認するゲートで、宣言された規則をTypeSafe Jevの確率判断で評価する。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/zoidsh/tenet/blob/f8808442e0cf98e15eca051f61966b7dea5888ca/README.md",
-            "quote": "tenet is the review gate for code that agents write."
-          },
-          {
-            "url": "https://github.com/zoidsh/tenet/blob/f8808442e0cf98e15eca051f61966b7dea5888ca/README.md",
-            "quote": "TypeSafe's jev model answers each rule with a calibrated probability"
-          }
-        ],
-        "checkedAt": "2026-09-26T10:09:59Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "developer"
-  },
-  {
     "id": "gh-maker-kk-todo-jev",
     "type": "github",
     "title": "todo-jev",
@@ -7822,45 +7735,6 @@
       }
     },
     "category": "research"
-  },
-  {
-    "id": "gh-itsaslamopenclawdata-growthcompany-jevoutputs",
-    "type": "github",
-    "title": "GrowthCompany_JevOutputs",
-    "summary": "Jev (TypeSafe System One) x Hermes Agent - the calibrated decision-layer playbook: 5 end-to-end use cases, reference implementation, and a Hermes skill for 100x-cheaper structured AI judgments",
-    "tags": [
-      "jev",
-      "skill",
-      "system-one"
-    ],
-    "url": "https://github.com/itsaslamopenclawdata/GrowthCompany_JevOutputs",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "author": "itsaslamopenclawdata",
-      "repo": "itsaslamopenclawdata/GrowthCompany_JevOutputs",
-      "inclusion": {
-        "text": {
-          "en": "The Hermes-oriented reference includes a jev_ask() helper with confidence gates, offline tests, and an opt-in live smoke test.",
-          "zh": "面向 Hermes 的参考集成包含带置信度门槛的 jev_ask() 助手、离线测试和可选的在线冒烟测试。",
-          "ja": "Hermes 向け参考実装には信頼度ゲート付き jev_ask() ヘルパー、オフラインテスト、任意の実 API 確認があります。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/itsaslamopenclawdata/GrowthCompany_JevOutputs/blob/214cbde5b376bf1e3410a9f0434f3749eb22b96a/README.md",
-            "quote": "`jev_ask()` one-call helper + confidence gates"
-          },
-          {
-            "url": "https://github.com/itsaslamopenclawdata/GrowthCompany_JevOutputs/blob/214cbde5b376bf1e3410a9f0434f3749eb22b96a/README.md",
-            "quote": "Offline tests (schema, normalization math, gate logic) + opt-in live smoke test"
-          }
-        ],
-        "checkedAt": "2026-09-26T13:43:56Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "resources"
   },
   {
     "id": "gh-hiwoniu-jev-case",
@@ -9694,27 +9568,6 @@
     "category": "research"
   },
   {
-    "id": "gh-altregubov-jev-antigravity-decider",
-    "type": "github",
-    "title": "jev-antigravity-decider",
-    "summary": "TypeSafe / Jev community project: altregubov/jev-antigravity-decider.",
-    "tags": [
-      "jev"
-    ],
-    "url": "https://github.com/altregubov/jev-antigravity-decider",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "author": "altregubov",
-      "repo": "altregubov/jev-antigravity-decider",
-      "jevAbout": 0.49,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.61
-    },
-    "category": "other"
-  },
-  {
     "id": "gh-danielgshea-jev-as-a-judge",
     "type": "github",
     "title": "jev-as-a-judge",
@@ -9885,27 +9738,6 @@
       }
     },
     "category": "applications"
-  },
-  {
-    "id": "gh-thomasschafer-jev-bench",
-    "type": "github",
-    "title": "jev-bench",
-    "summary": "TypeSafe / Jev community project: thomasschafer/jev-bench.",
-    "tags": [
-      "jev"
-    ],
-    "url": "https://github.com/thomasschafer/jev-bench",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "author": "thomasschafer",
-      "repo": "thomasschafer/jev-bench",
-      "jevAbout": 0.57,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.42
-    },
-    "category": "research"
   },
   {
     "id": "gh-komikat-jev-bfs",
@@ -10397,27 +10229,6 @@
       }
     },
     "category": "agents"
-  },
-  {
-    "id": "gh-adhamelhayek-lab-jev-connector",
-    "type": "github",
-    "title": "jev-connector",
-    "summary": "TypeSafe / Jev community project: adhamelhayek-lab/jev-connector.",
-    "tags": [
-      "jev"
-    ],
-    "url": "https://github.com/adhamelhayek-lab/jev-connector",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "JavaScript",
-      "author": "adhamelhayek-lab",
-      "repo": "adhamelhayek-lab/jev-connector",
-      "jevAbout": 0.48,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.35
-    },
-    "category": "sdk"
   },
   {
     "id": "gh-dnakhoa-jev-deferred-crispification",
@@ -11320,25 +11131,6 @@
       }
     },
     "category": "research"
-  },
-  {
-    "id": "gh-thumay9700-jev-plays",
-    "type": "github",
-    "title": "jev-plays",
-    "summary": "Autonomous game agent powered by TypeSafe AI's Jev (System One decision engine)",
-    "tags": [
-      "jev",
-      "system-one"
-    ],
-    "url": "https://github.com/thumay9700/jev-plays",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": null,
-      "author": "thumay9700",
-      "repo": "thumay9700/jev-plays"
-    },
-    "category": "agents"
   },
   {
     "id": "gh-zbloss-jev-plays-pokemon",
@@ -12558,27 +12350,6 @@
     "category": "developer"
   },
   {
-    "id": "gh-sarems-jevscan",
-    "type": "github",
-    "title": "jevscan",
-    "summary": "TypeSafe / Jev community project: SaremS/jevscan.",
-    "tags": [
-      "jev"
-    ],
-    "url": "https://github.com/SaremS/jevscan",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "Go",
-      "author": "SaremS",
-      "repo": "SaremS/jevscan",
-      "jevAbout": 0.35,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.37
-    },
-    "category": "other"
-  },
-  {
     "id": "gh-thesekyi-jevusecases",
     "type": "github",
     "title": "jevusecases",
@@ -13464,29 +13235,6 @@
     "category": "agents"
   },
   {
-    "id": "gh-gloridifice-pi-jev-router",
-    "type": "github",
-    "title": "pi-jev-router",
-    "summary": "Jev model integration for pi coding agent.",
-    "tags": [
-      "jev",
-      "agent",
-      "router"
-    ],
-    "url": "https://github.com/gloridifice/pi-jev-router",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "author": "gloridifice",
-      "repo": "gloridifice/pi-jev-router",
-      "jevAbout": 0.53,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.41
-    },
-    "category": "agents"
-  },
-  {
     "id": "gh-twilwa-pi-typesafe",
     "type": "github",
     "title": "pi-typesafe",
@@ -13753,27 +13501,6 @@
         "databaseId": 1374105380,
         "nodeId": "R_kgDOUecvJA"
       }
-    },
-    "category": "applications"
-  },
-  {
-    "id": "gh-bunsdev-river-oaks",
-    "type": "github",
-    "title": "river-oaks",
-    "summary": "NPCs of River Oaks Houston, Texas using Jev to power NPCs",
-    "tags": [
-      "jev"
-    ],
-    "url": "https://github.com/BunsDev/river-oaks",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "JavaScript",
-      "author": "BunsDev",
-      "repo": "BunsDev/river-oaks",
-      "jevAbout": 0.41,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.3
     },
     "category": "applications"
   },
@@ -15379,28 +15106,6 @@
     "category": "applications"
   },
   {
-    "id": "gh-trophee-bot-typesafe-oracles",
-    "type": "github",
-    "title": "typesafe-oracles",
-    "summary": "Evaluating TypeSafe's System One primitives (Choice/Score/Noul) — where a typed oracle beats an LLM call",
-    "tags": [
-      "jev",
-      "javascript"
-    ],
-    "url": "https://github.com/trophee-bot/typesafe-oracles",
-    "sourceMeta": {
-      "stars": 0,
-      "forks": 0,
-      "language": "JavaScript",
-      "author": "trophee-bot",
-      "repo": "trophee-bot/typesafe-oracles",
-      "jevAbout": 0.59,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.46
-    },
-    "category": "research"
-  },
-  {
     "id": "gh-kavehmz-typesafe-playground",
     "type": "github",
     "title": "typesafe-playground",
@@ -16909,28 +16614,6 @@
       }
     },
     "category": "developer"
-  },
-  {
-    "id": "gh-xubqpanda-jevrepo",
-    "type": "github",
-    "title": "JevRepo",
-    "summary": "JevRepo — Jev / TypeSafe related project",
-    "tags": [
-      "jev",
-      "python"
-    ],
-    "url": "https://github.com/Xubqpanda/JevRepo",
-    "sourceMeta": {
-      "stars": 4,
-      "forks": 1,
-      "language": "Python",
-      "author": "Xubqpanda",
-      "repo": "Xubqpanda/JevRepo",
-      "jevAbout": 0.55,
-      "jevKeep": "review",
-      "jevKeepConfidence": 0.78
-    },
-    "category": "other"
   },
   {
     "id": "gh-455-diao-windows-save-token-jev-setup",
@@ -22065,44 +21748,6 @@
     "category": "resources"
   },
   {
-    "id": "gh-12-codewitheren-jev-openrouter-demo",
-    "type": "github",
-    "title": "jev-openrouter-demo",
-    "summary": "TypeSafe Jev support-ticket triage demo via OpenRouter",
-    "tags": [
-      "jev",
-      "typescript"
-    ],
-    "url": "https://github.com/codewitheren/jev-openrouter-demo",
-    "sourceMeta": {
-      "repo": "codewitheren/jev-openrouter-demo",
-      "author": "codewitheren",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-21",
-      "jevAbout": 0.95,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.98,
-      "jevEvidence": {
-        "repo": "codewitheren/jev-openrouter-demo",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.95,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.98
-        },
-        "sha": "60e28089a6990f8632dfac45d819fd3bba713b09",
-        "evidenceUrl": "https://github.com/codewitheren/jev-openrouter-demo/blob/60e28089a6990f8632dfac45d819fd3bba713b09/README.md",
-        "evidenceSha256": "dc30e00cd41ac4fcd2b1b00f5e0a7d1a564382d521b704fb374233f0450d1970",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
-    },
-    "category": "applications"
-  },
-  {
     "id": "gh-15-completedottech-jev-factorio-agent",
     "type": "github",
     "title": "jev-factorio-agent",
@@ -26742,52 +26387,6 @@
     "category": "developer"
   },
   {
-    "id": "gh-16-generallymatthew-factlabel",
-    "type": "github",
-    "title": "factlabel",
-    "summary": "A nutrition label for AI-written content: audits what AI agents say about data, blocks what doesn't hold up, and shows readers why. Powered by Jev.",
-    "tags": [
-      "jev",
-      "ai-agents",
-      "data-integrity",
-      "fact-checking",
-      "guardrails",
-      "llm",
-      "media-literacy",
-      "python"
-    ],
-    "url": "https://github.com/generallymatthew/factlabel",
-    "sourceMeta": {
-      "repo": "generallymatthew/factlabel",
-      "author": "generallymatthew",
-      "stars": 1,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-21",
-      "jevAbout": 0.93,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.97,
-      "jevEvidence": {
-        "repo": "generallymatthew/factlabel",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.93,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.97
-        },
-        "sha": "4a698d010f2688bb4dd22be4f477ca0f30739a60",
-        "evidenceUrl": "https://github.com/generallymatthew/factlabel/blob/4a698d010f2688bb4dd22be4f477ca0f30739a60/README.md",
-        "evidenceSha256": "0f2dcde96f695bf021823dab4102de96e010fdf0b7106409ae97b078cf867d7e",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T04:56:17.783Z"
-      },
-      "categoryEvidenceSha": "4a698d010f2688bb4dd22be4f477ca0f30739a60",
-      "categoryEvidenceUrl": "https://github.com/generallymatthew/factlabel/blob/4a698d010f2688bb4dd22be4f477ca0f30739a60/README.md"
-    },
-    "category": "developer"
-  },
-  {
     "id": "gh-16-gexiuzhen-sketch-jev-chinese-console",
     "type": "github",
     "title": "jev-chinese-console",
@@ -29188,134 +28787,6 @@
     "category": "research"
   },
   {
-    "id": "gh-9-jiawei686-jev-review-mcp",
-    "type": "github",
-    "title": "jev-review-mcp",
-    "summary": "Single-purpose MCP server (one tool, one job): a code-review gate powered by TypeSafe Jev (System One decision model).",
-    "tags": [
-      "jev",
-      "code-review",
-      "decision-model",
-      "mcp",
-      "single-purpose",
-      "system-one",
-      "typesafe",
-      "typescript"
-    ],
-    "url": "https://github.com/jiawei686/jev-review-mcp",
-    "sourceMeta": {
-      "repo": "jiawei686/jev-review-mcp",
-      "author": "jiawei686",
-      "stars": 1,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-21",
-      "jevAbout": 0.95,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.97,
-      "jevEvidence": {
-        "repo": "jiawei686/jev-review-mcp",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.95,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.97
-        },
-        "sha": "9b7587739878d6a2403975a04b5e654abbb52256",
-        "evidenceUrl": "https://github.com/jiawei686/jev-review-mcp/blob/9b7587739878d6a2403975a04b5e654abbb52256/README.md",
-        "evidenceSha256": "f1cd56c50345e958a0aa37450c0a9f620b32c2d151f4c12581acabc593b3577c",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T04:56:17.783Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "A single-purpose MCP code-review gate turns a git diff into a typed Jev decision; without an API key, it runs in offline mock mode.",
-          "zh": "单一用途的 MCP 代码审查门禁将 git diff 转为 Jev 类型化判定；没有 API 密钥时会运行离线模拟模式。",
-          "ja": "単機能のMCPコードレビューゲートがgit diffをJevの型付き判定に変換します。APIキーがない場合はオフラインの模擬モードで動きます。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/jiawei686/jev-review-mcp/blob/9b7587739878d6a2403975a04b5e654abbb52256/README.md",
-            "quote": "Code-review gate as a **single-purpose** MCP tool, powered by **Jev**"
-          },
-          {
-            "url": "https://github.com/jiawei686/jev-review-mcp/blob/9b7587739878d6a2403975a04b5e654abbb52256/README.md",
-            "quote": "No key? It still runs in **mock mode**"
-          }
-        ],
-        "checkedAt": "2026-09-26T10:34:42Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "developer"
-  },
-  {
-    "id": "gh-9-jiawei686-jev-screen-mcp",
-    "type": "github",
-    "title": "jev-screen-mcp",
-    "summary": "Single-purpose MCP server (one tool, one job): a content-moderation gate powered by TypeSafe Jev (System One decision model).",
-    "tags": [
-      "jev",
-      "content-safety",
-      "decision-model",
-      "mcp",
-      "moderation",
-      "single-purpose",
-      "system-one",
-      "typesafe"
-    ],
-    "url": "https://github.com/jiawei686/jev-screen-mcp",
-    "sourceMeta": {
-      "repo": "jiawei686/jev-screen-mcp",
-      "author": "jiawei686",
-      "stars": 1,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-21",
-      "jevAbout": 0.94,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.96,
-      "jevEvidence": {
-        "repo": "jiawei686/jev-screen-mcp",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.94,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.96
-        },
-        "sha": "e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27",
-        "evidenceUrl": "https://github.com/jiawei686/jev-screen-mcp/blob/e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27/README.md",
-        "evidenceSha256": "2fbc3e9a2fc2099a1a60e4ffd38b2c9f981c867ffa3111c5911e5475582d5900",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T04:56:17.783Z"
-      },
-      "categoryEvidenceSha": "e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27",
-      "categoryEvidenceUrl": "https://github.com/jiawei686/jev-screen-mcp/blob/e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27/README.md",
-      "inclusion": {
-        "text": {
-          "en": "This single-purpose MCP moderation tool uses Jev for typed text decisions; without a key it returns deterministic mock answers, not live Jev judgments.",
-          "zh": "这个单用途 MCP 内容审核工具用 Jev 输出类型化文本判断；没有密钥时返回确定性的模拟结果，而非线上 Jev 判断。",
-          "ja": "単機能のMCPモデレーションツールでJevの型付き判断を使う。キーがない場合はJevではなく決定的な模擬応答を返す。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/jiawei686/jev-screen-mcp/blob/e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27/README.md",
-            "quote": "Content-moderation gate as a **single-purpose** MCP tool, powered by **Jev**"
-          },
-          {
-            "url": "https://github.com/jiawei686/jev-screen-mcp/blob/e7a7f951a0df1bf37a39e435a6ac72d0a7c66c27/README.md",
-            "quote": "With no key (or `JEV_MCP_MOCK=1`) the server answers **deterministically**"
-          }
-        ],
-        "checkedAt": "2026-09-26T11:14:22Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "sdk"
-  },
-  {
     "id": "gh-9-jiaweixie-jev-enhanced-plugin",
     "type": "github",
     "title": "jev-enhanced-plugin",
@@ -29633,44 +29104,6 @@
       }
     },
     "category": "agents"
-  },
-  {
-    "id": "gh-10-johnsonran-pi-jev",
-    "type": "github",
-    "title": "pi-jev",
-    "summary": "Claude-style auto-mode classifier for Pi, powered by TypeSafe Jev",
-    "tags": [
-      "jev",
-      "typescript"
-    ],
-    "url": "https://github.com/JohnsonRan/pi-jev",
-    "sourceMeta": {
-      "repo": "JohnsonRan/pi-jev",
-      "author": "JohnsonRan",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-20",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.97,
-      "jevEvidence": {
-        "repo": "johnsonran/pi-jev",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.97
-        },
-        "sha": "625f9a2752a30ba970798e79023089489039423e",
-        "evidenceUrl": "https://github.com/johnsonran/pi-jev/blob/625f9a2752a30ba970798e79023089489039423e/README.md",
-        "evidenceSha256": "a364e99167b77f351a7684078629602f517ba36292a5475f255cd582e958580e",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T04:56:17.783Z"
-      }
-    },
-    "category": "developer"
   },
   {
     "id": "gh-13-jorgediamanto-jev-playground",
@@ -37487,65 +36920,6 @@
     "category": "directories"
   },
   {
-    "id": "gh-10-ryan-sunny-dbt-assay",
-    "type": "github",
-    "title": "dbt-assay",
-    "summary": "Your dbt project has types nobody declared. assay infers them and finds where they contradict each other. sqlglot for structure, Jev for meaning.",
-    "tags": [
-      "jev",
-      "analytics-engineering",
-      "data-contracts",
-      "data-engineering",
-      "data-observability",
-      "data-quality",
-      "dbt",
-      "dbt-core"
-    ],
-    "url": "https://github.com/ryan-sunny/dbt-assay",
-    "sourceMeta": {
-      "repo": "ryan-sunny/dbt-assay",
-      "author": "ryan-sunny",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-20",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.93,
-      "jevEvidence": {
-        "repo": "ryan-sunny/dbt-assay",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.93
-        },
-        "sha": "00b0b1eb25669b3c1040f7868f2b127bbc25755c",
-        "evidenceUrl": "https://github.com/ryan-sunny/dbt-assay/blob/00b0b1eb25669b3c1040f7868f2b127bbc25755c/README.md",
-        "evidenceSha256": "5ae3bca9e619d5b0f47be2064804b57ace88d97fcef13be1c5b94c5049d612d8",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "dbt-assay combines SQL parsing with Jev judgments about semantic questions that a parser cannot settle in dbt models.",
-          "zh": "dbt-assay 将 SQL 解析与 Jev 判断结合，用于处理解析器无法确定的 dbt 模型语义问题。",
-          "ja": "dbt-assayはSQL解析とJevの意味判断を組み合わせ、パーサーだけでは決められないdbtモデルの問いを扱う。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/ryan-sunny/dbt-assay/blob/00b0b1eb25669b3c1040f7868f2b127bbc25755c/README.md",
-            "quote": "if a parser can answer it, Jev is never asked."
-          }
-        ],
-        "checkedAt": "2026-09-26T11:32:09Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "developer"
-  },
-  {
     "id": "gh-10-sagnik2503-blink-duel",
     "type": "github",
     "title": "blink-duel",
@@ -40867,44 +40241,6 @@
     "category": "applications"
   },
   {
-    "id": "gh-10-v60samurai-jev-atlas",
-    "type": "github",
-    "title": "jev-atlas",
-    "summary": "Map where Jev and System One models actually belong in your project, test the strongest ideas, then implement them. A skill for Claude Code and Codex.",
-    "tags": [
-      "jev",
-      "python"
-    ],
-    "url": "https://github.com/v60samurai/jev-atlas",
-    "sourceMeta": {
-      "repo": "v60samurai/jev-atlas",
-      "author": "v60samurai",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-21",
-      "jevAbout": 0.92,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.91,
-      "jevEvidence": {
-        "repo": "v60samurai/jev-atlas",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.92,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.91
-        },
-        "sha": "e780e4d6f2f4eb72f6c7f6d5b92e7ab0041e8e10",
-        "evidenceUrl": "https://github.com/v60samurai/jev-atlas/blob/e780e4d6f2f4eb72f6c7f6d5b92e7ab0041e8e10/README.md",
-        "evidenceSha256": "2de502d2ab25858e22856a1afe1ef8e4b7f459be8cbec773aeda2b8496af25cc",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
-    },
-    "category": "resources"
-  },
-  {
     "id": "gh-16-vamsikrishna2421-jev-usecases",
     "type": "github",
     "title": "jev-usecases",
@@ -42689,50 +42025,6 @@
       }
     },
     "category": "sdk"
-  },
-  {
-    "id": "gh-7-zhlei07-open-system-one",
-    "type": "github",
-    "title": "open-system-one",
-    "summary": "An independent, reproducible benchmark of TypeSafe's Jev against open, CPU-only alternatives — 10,000 decisions, all raw results published.",
-    "tags": [
-      "jev",
-      "benchmark",
-      "cpu-inference",
-      "cross-encoder",
-      "embeddings",
-      "text-classification",
-      "typesafe",
-      "zero-shot-classification"
-    ],
-    "url": "https://github.com/zhlei07/open-system-one",
-    "sourceMeta": {
-      "repo": "zhlei07/open-system-one",
-      "author": "zhlei07",
-      "stars": 0,
-      "forks": 1,
-      "language": "Python",
-      "date": "2026-09-21",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.98,
-      "jevEvidence": {
-        "repo": "zhlei07/open-system-one",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.98
-        },
-        "sha": "e2f50d0e6101dfa0f86c44d8060d2e4b120fe40f",
-        "evidenceUrl": "https://github.com/zhlei07/open-system-one/blob/e2f50d0e6101dfa0f86c44d8060d2e4b120fe40f/README.md",
-        "evidenceSha256": "63b726690eb5d479b56d6bfd0c9479051a74924475ca5c3a184b51ed9754d8b0",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      }
-    },
-    "category": "research"
   },
   {
     "id": "gh-6-zjunlp-jevloop",
@@ -51668,63 +50960,6 @@
     "category": "developer"
   },
   {
-    "id": "gh-10-mjyoke1111-jev-lab",
-    "type": "github",
-    "title": "jev-lab",
-    "summary": "Real browser-agent safety evaluation: Jev versus a baseline on benign and injected tasks",
-    "tags": [
-      "jev",
-      "typescript"
-    ],
-    "url": "https://github.com/mjyoke1111/jev-lab",
-    "sourceMeta": {
-      "repo": "mjyoke1111/jev-lab",
-      "author": "mjyoke1111",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-18",
-      "jevAbout": 0.97,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.96,
-      "jevEvidence": {
-        "repo": "mjyoke1111/jev-lab",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.97,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.96
-        },
-        "sha": "df9a02d35d3dafa433bcdd8d0d219e26d07a22ac",
-        "evidenceUrl": "https://github.com/mjyoke1111/jev-lab/blob/df9a02d35d3dafa433bcdd8d0d219e26d07a22ac/README.md",
-        "evidenceSha256": "5ec87d5a1174c813508dc2d5ba03a36de3ad8c052a63b851dc0296ef9e5b9f93",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "This browser-agent safety harness describes a generative model proposing actions and Jev selecting the next action with a separate typed safety judgment; it ships no benchmark numbers.",
-          "zh": "该浏览器代理安全测试框架描述由生成模型提出动作、Jev 选择下一步并另作类型化安全判断；仓库未附带基准数值。",
-          "ja": "ブラウザーエージェントの安全検証用ハーネスで、生成モデルが操作を提案し、Jevが次の操作と型付き安全判断を選びます。ベンチマーク数値は同梱していません。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/mjyoke1111/jev-lab/blob/df9a02d35d3dafa433bcdd8d0d219e26d07a22ac/README.md",
-            "quote": "Jev (`typesafe-ai/jev` through Vercel AI Gateway) selects the next action and makes a separate typed safety judgment."
-          },
-          {
-            "url": "https://github.com/mjyoke1111/jev-lab/blob/df9a02d35d3dafa433bcdd8d0d219e26d07a22ac/README.md",
-            "quote": "does not ship sample benchmark numbers."
-          }
-        ],
-        "checkedAt": "2026-09-26T14:37:13Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "research"
-  },
-  {
     "id": "gh-10-morinokami-hunk-triage",
     "type": "github",
     "title": "hunk-triage",
@@ -58757,124 +57992,6 @@
       }
     },
     "category": "resources"
-  },
-  {
-    "id": "gh-8-ajmeese7-hdd-analyzer",
-    "type": "github",
-    "title": "hdd-analyzer",
-    "summary": "Use Jev to quickly search your old hard drives and identify anything of value.",
-    "tags": [
-      "jev",
-      "disk-utility",
-      "forensics",
-      "forensics-tools",
-      "hdd",
-      "semantic-search",
-      "python"
-    ],
-    "url": "https://github.com/ajmeese7/hdd-analyzer",
-    "sourceMeta": {
-      "repo": "ajmeese7/hdd-analyzer",
-      "author": "ajmeese7",
-      "stars": 1,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-19",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.98,
-      "jevEvidence": {
-        "repo": "ajmeese7/hdd-analyzer",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.98
-        },
-        "sha": "96416c8c34952127c5aad0f003435c3a0c8eb91c",
-        "evidenceUrl": "https://github.com/ajmeese7/hdd-analyzer/blob/96416c8c34952127c5aad0f003435c3a0c8eb91c/README.md",
-        "evidenceSha256": "200d7883b34cdf93984529726f2d3dd3e9bbb8af48caa16240a989e1e08d1bda",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "The local drive scanner can send one Jev classification request per file after estimating the scan budget.",
-          "zh": "本地硬盘扫描器可先估算扫描预算，再为每个文件发送一次 Jev 分类请求。",
-          "ja": "ローカルドライブのスキャナーは、費用を見積もったうえで各ファイルをJevに1回ずつ分類させます。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/ajmeese7/hdd-analyzer/blob/96416c8c34952127c5aad0f003435c3a0c8eb91c/README.md",
-            "quote": "`scan` extracts local content and sends one classification call per file to Jev"
-          }
-        ],
-        "checkedAt": "2026-09-26T15:22:45Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "applications"
-  },
-  {
-    "id": "gh-8-ajmeese7-jev-chess",
-    "type": "github",
-    "title": "jev-chess",
-    "summary": "Using Jev as a chess engine",
-    "tags": [
-      "jev",
-      "chess",
-      "chess-ai",
-      "chess-engine",
-      "typescript"
-    ],
-    "url": "https://github.com/ajmeese7/jev-chess",
-    "sourceMeta": {
-      "repo": "ajmeese7/jev-chess",
-      "author": "ajmeese7",
-      "stars": 1,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-21",
-      "jevAbout": 0.95,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.93,
-      "jevEvidence": {
-        "repo": "ajmeese7/jev-chess",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.95,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.93
-        },
-        "sha": "4f056f34c64feb12d6277612ea72e00b05967e0e",
-        "evidenceUrl": "https://github.com/ajmeese7/jev-chess/blob/4f056f34c64feb12d6277612ea72e00b05967e0e/README.md",
-        "evidenceSha256": "44db1fb7ffa504256ce115a2d0c5561acf5f0471d77dcd2d85a2bf6bf14a1cd6",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-22T16:57:22.408Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "A chess app lets Jev choose among legal moves; `chess.js` enforces rules, and it skips a Jev request when only one legal move remains.",
-          "zh": "国际象棋应用让 Jev 从合法着法中选步，规则由 `chess.js` 执行；只剩一步时会跳过 Jev 请求。",
-          "ja": "チェスアプリでJevが合法手から選び、規則は`chess.js`が処理します。合法手が一つだけならJevへの問い合わせを省きます。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/ajmeese7/jev-chess/blob/4f056f34c64feb12d6277612ea72e00b05967e0e/README.md",
-            "quote": "chess.js` enforces the rules, Jev picks the move."
-          },
-          {
-            "url": "https://github.com/ajmeese7/jev-chess/blob/4f056f34c64feb12d6277612ea72e00b05967e0e/README.md",
-            "quote": "when there is exactly one legal move we skip the call"
-          }
-        ],
-        "checkedAt": "2026-09-26T10:10:58Z",
-        "reviewer": "gpt-6-luna"
-      }
-    },
-    "category": "applications"
   },
   {
     "id": "gh-5-ak2k2-liljevduel",
@@ -79989,64 +79106,6 @@
     }
   },
   {
-    "id": "gh-6-p3lera-jev-computer-use",
-    "type": "github",
-    "title": "jev-computer-use",
-    "summary": "jev-computer-use: TypeSafe Jev ecosystem repository.",
-    "tags": [
-      "jev",
-      "python"
-    ],
-    "category": "browser",
-    "url": "https://github.com/P3lerA/jev-computer-use",
-    "sourceMeta": {
-      "repo": "P3lerA/jev-computer-use",
-      "author": "P3lerA",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-22",
-      "jevAbout": 0.94,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.97,
-      "jevEvidence": {
-        "repo": "p3lera/jev-computer-use",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.94,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.97,
-          "category": "browser"
-        },
-        "sha": "c39e871a5aae1f2bddf51abb79cd434ed08ddb12",
-        "evidenceUrl": "https://github.com/p3lera/jev-computer-use/blob/c39e871a5aae1f2bddf51abb79cd434ed08ddb12/README.md",
-        "evidenceSha256": "d92d36ea62ac649f90a0460262ce662a6b7a393fdd36d68031d99ab4e8cb05e1",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-25T17:11:29.590Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "A Claude Code plugin describes Claude planning/verifying browser work while Jev performs short DOM-based tasks in a dedicated Chrome.",
-          "zh": "Claude Code 插件描述了浏览器任务分工：Claude 负责规划和核验，Jev 在专用 Chrome 中执行短 DOM 操作。",
-          "ja": "Claude Code向けプラグインで、Claudeがブラウザー作業を計画・確認し、Jevが専用Chromeで短いDOM操作を行います。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/P3lerA/jev-computer-use/blob/c39e871a5aae1f2bddf51abb79cd434ed08ddb12/README.md",
-            "quote": "Claude plans and verifies; [Jev](https://typesafe.ai), a decision model, executes short DOM-based sub-tasks"
-          },
-          {
-            "url": "https://github.com/P3lerA/jev-computer-use/blob/c39e871a5aae1f2bddf51abb79cd434ed08ddb12/README.md",
-            "quote": "`computer_task` (Jev runs one sub-task)"
-          }
-        ],
-        "checkedAt": "2026-09-26T11:52:06Z",
-        "reviewer": "gpt-6-luna"
-      }
-    }
-  },
-  {
     "id": "gh-11-peach-zhang-typesafe-go",
     "type": "github",
     "title": "typesafe-go",
@@ -92177,45 +91236,6 @@
       "githubIdentity": {
         "databaseId": 1382366184,
         "nodeId": "R_kgDOUmU76A"
-      }
-    }
-  },
-  {
-    "id": "gh-13-dperezcabrera-system-one-poker",
-    "type": "github",
-    "title": "system-one-poker",
-    "summary": "How good is Jev AI at Texas Hold'em? TypeSafe AI's System One model plays poker through Vercel AI Gateway or OpenRouter, measured against expected value. Built with the pico framework.",
-    "tags": [
-      "jev",
-      "python"
-    ],
-    "category": "research",
-    "url": "https://github.com/dperezcabrera/system-one-poker",
-    "sourceMeta": {
-      "repo": "dperezcabrera/system-one-poker",
-      "author": "dperezcabrera",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-22",
-      "jevAbout": 0.97,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.99,
-      "jevEvidence": {
-        "repo": "dperezcabrera/system-one-poker",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.97,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.99,
-          "category": "research"
-        },
-        "sha": "f3b17165707bb68341d38c2b1dd1961d2cc3360f",
-        "evidenceUrl": "https://github.com/dperezcabrera/system-one-poker/blob/f3b17165707bb68341d38c2b1dd1961d2cc3360f/README.md",
-        "evidenceSha256": "ed2886c6c541cbed8e85b1721ff2a9992a8cbd8a3798e70c510316e5530b7800",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-26T04:58:02.853Z"
       }
     }
   },
@@ -105010,64 +104030,6 @@
     }
   },
   {
-    "id": "gh-7-lab-emi-chipjev",
-    "type": "github",
-    "title": "ChipJev",
-    "summary": "ChipJev: TypeSafe Jev ecosystem repository.",
-    "tags": [
-      "jev",
-      "python"
-    ],
-    "category": "agents",
-    "url": "https://github.com/lab-emi/ChipJev",
-    "sourceMeta": {
-      "repo": "lab-emi/ChipJev",
-      "author": "lab-emi",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "date": "2026-09-25",
-      "jevAbout": 0.94,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.94,
-      "jevEvidence": {
-        "repo": "lab-emi/chipjev",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.94,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.94,
-          "category": "agents"
-        },
-        "sha": "ce6aa2e920831c0c2edd4f06b3fb203e272efd0c",
-        "evidenceUrl": "https://github.com/lab-emi/chipjev/blob/ce6aa2e920831c0c2edd4f06b3fb203e272efd0c/README.md",
-        "evidenceSha256": "e1c87a7cdcbc3f3aa2da19a8f2b9774271af6a73121d0e4b24fc4bb0c9903e94",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-26T21:10:43.236Z"
-      },
-      "inclusion": {
-        "text": {
-          "en": "Circuit-design agent applies Jev's System One approach using ChipLaya, a Laya fine-tune, to seed topology/sizing search and open-source EDA checks; it is not a hosted Jev client.",
-          "zh": "电路设计代理用 Laya 微调模型 ChipLaya 实践 Jev 的 System One 思路，为拓扑/尺寸搜索及开源 EDA 检查提供决策；不是托管 Jev 客户端。",
-          "ja": "Laya の微調整モデル ChipLaya で Jev の System One 発想を回路設計に適用し、構成・寸法探索とオープン EDA 検査につなぐ。ホスト型 Jev クライアントではない。"
-        },
-        "evidence": [
-          {
-            "url": "https://github.com/lab-emi/ChipJev/blob/ce6aa2e920831c0c2edd4f06b3fb203e272efd0c/README.md",
-            "quote": "ChipJev applies the *System One* paradigm of TypeSafe's"
-          },
-          {
-            "url": "https://github.com/lab-emi/ChipJev/blob/ce6aa2e920831c0c2edd4f06b3fb203e272efd0c/README.md",
-            "quote": "ChipLaya, an open System One decision model (Laya fine-tuned on"
-          }
-        ],
-        "checkedAt": "2026-10-01T16:01:24.564Z",
-        "reviewer": "codex"
-      }
-    }
-  },
-  {
     "id": "gh-10-loopgridio-loopgrid-jev",
     "type": "github",
     "title": "loopgrid-jev",
@@ -105596,49 +104558,6 @@
       "githubIdentity": {
         "databaseId": 1387930028,
         "nodeId": "R_kgDOUrohrA"
-      }
-    }
-  },
-  {
-    "id": "gh-10-sudorandom-protoc-gen-jev",
-    "type": "github",
-    "title": "protoc-gen-jev",
-    "summary": "Experimental plugin to convert protobuf into Jev code",
-    "tags": [
-      "jev",
-      "jev-ai",
-      "plugin",
-      "protobuf",
-      "protoc",
-      "go"
-    ],
-    "category": "sdk",
-    "url": "https://github.com/sudorandom/protoc-gen-jev",
-    "sourceMeta": {
-      "repo": "sudorandom/protoc-gen-jev",
-      "author": "sudorandom",
-      "stars": 1,
-      "forks": 0,
-      "language": "Go",
-      "date": "2026-09-25",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.97,
-      "jevEvidence": {
-        "repo": "sudorandom/protoc-gen-jev",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.97,
-          "category": "sdk"
-        },
-        "sha": "0ede106c68a2bba5c3fe1a6dec61d80c08580702",
-        "evidenceUrl": "https://github.com/sudorandom/protoc-gen-jev/blob/0ede106c68a2bba5c3fe1a6dec61d80c08580702/README.md",
-        "evidenceSha256": "b296bb2921f710b09576785af3a36a65f609e76119f3770b06062094d3a6657e",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-26T21:10:43.236Z"
       }
     }
   },
@@ -111806,50 +110725,6 @@
       "githubIdentity": {
         "databaseId": 1375689575,
         "nodeId": "R_kgDOUf9bZw"
-      }
-    }
-  },
-  {
-    "id": "gh-8-itani404-jev-explained",
-    "type": "github",
-    "title": "jev-explained",
-    "summary": "Hands-on explainer for TypeSafe AI's Jev decision model: examples, playground, and independent benchmark results",
-    "tags": [
-      "jev",
-      "ai-sdk",
-      "llm",
-      "nextjs",
-      "typesafe-ai",
-      "vercel",
-      "typescript"
-    ],
-    "category": "resources",
-    "url": "https://github.com/itani404/jev-explained",
-    "sourceMeta": {
-      "repo": "itani404/jev-explained",
-      "author": "itani404",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-24",
-      "jevAbout": 0.97,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.98,
-      "jevEvidence": {
-        "repo": "itani404/jev-explained",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.97,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.98,
-          "category": "resources"
-        },
-        "sha": "7937c5f4c85d7b3efe5261c52e1510a03c0b9e57",
-        "evidenceUrl": "https://github.com/itani404/jev-explained/blob/7937c5f4c85d7b3efe5261c52e1510a03c0b9e57/README.md",
-        "evidenceSha256": "dbc7cb1fced774fe6a78e17c0b01250a69c44a2340ca1c392de0e54436e4c784",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-26T21:10:43.236Z"
       }
     }
   },
@@ -130055,48 +128930,6 @@
       "githubIdentity": {
         "databaseId": 1397854805,
         "nodeId": "R_kgDOU1GSVQ"
-      }
-    }
-  },
-  {
-    "id": "gh-10-deadczarvc-jev-factkeep-compaction",
-    "type": "github",
-    "title": "jev-factkeep-compaction",
-    "summary": "Fact-keeping Jev compaction for Claude Code: a maintained fork of tamaratran/fast-jev-compaction where dropped tool calls keep their facts instead of being erased",
-    "tags": [
-      "jev",
-      "claude-code",
-      "claude-code-plugin",
-      "context-compaction",
-      "typescript"
-    ],
-    "category": "developer",
-    "url": "https://github.com/deadczarvc/jev-factkeep-compaction",
-    "sourceMeta": {
-      "repo": "deadczarvc/jev-factkeep-compaction",
-      "author": "deadczarvc",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "date": "2026-09-30",
-      "jevAbout": 0.96,
-      "jevKeep": "keep",
-      "jevKeepConfidence": 0.98,
-      "jevEvidence": {
-        "repo": "deadczarvc/jev-factkeep-compaction",
-        "status": "keep",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.98,
-          "category": "developer"
-        },
-        "sha": "5cae8b76e691bb1555d2d228fef7233472a42c86",
-        "evidenceUrl": "https://github.com/deadczarvc/jev-factkeep-compaction/blob/5cae8b76e691bb1555d2d228fef7233472a42c86/README.md",
-        "evidenceSha256": "7a2a340e76186b4b846e7db385dc252a9e004c1c0c45f159aebbaa75f1ce2e4b",
-        "evidenceLinks": [],
-        "model": "jev-latest",
-        "checkedAt": "2026-09-30T12:34:31.273Z"
       }
     }
   },

@@ -8,7 +8,7 @@ data-model.md: 持久化目录、GH CLI 全量清洗、唯一 GitHub 身份基�
 design.md: 稳定视觉契约、白底黑字代码分享图和统一工作台；现有 CSS token 是页面实现权威
 directory-ui.md: 目录布局、手机控制栏固定分行、分类说明、详情内链与检索/预览/本机收藏行为
 reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
-inclusion-follow-up.md: 全量依据复核后的 27 项待补证清单，区分不可达、空仓、占位与跨仓范围；禁止编造依据或自动移除
+inclusion-follow-up.md: 全量依据复核后当前 7 项待补证与已授权移除的 404 来源记录，区分空仓、占位及跨仓范围，禁止编造依据或自动删除
 news.md: AIHOT 新闻来源、摘要边界及独立同步流程，区分历史 HTTP 误拒绝与由共享发布器自动恢复的 main 竞争
 performance.md: 双端 PageSpeed 基线、警告取舍、数据交付边界与复测方法，不把入口缩小冒充整页收益
 
