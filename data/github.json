@@ -131607,5 +131607,42 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       }
     }
+  },
+  {
+    "id": "gh-19-samratduttaofficial-watersheep",
+    "type": "github",
+    "title": "WaterSheep",
+    "summary": "A decision model that returns calibrated answers to yes/no, choice, score and multi-label questions.",
+    "tags": [
+      "browser",
+      "calibration",
+      "decision-model",
+      "huggingface",
+      "javascript",
+      "jev",
+      "jev-alternative",
+      "local-first"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/SamratDuttaOfficial/WaterSheep",
+    "sourceMeta": {
+      "repo": "SamratDuttaOfficial/WaterSheep",
+      "author": "SamratDuttaOfficial",
+      "stars": 6,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1395162600,
+        "nodeId": "R_kgDOUyh96A"
+      },
+      "date": "2026-09-29",
+      "jevEvidence": {
+        "repo": "samratduttaofficial/watersheep",
+        "sha": "3ccf02b3839fd2d72e6fb29750488010c7d76360",
+        "evidenceUrl": "https://github.com/samratduttaofficial/watersheep/tree/3ccf02b3839fd2d72e6fb29750488010c7d76360",
+        "checkedAt": "2026-10-03T21:15:17.387Z",
+        "status": "review"
+      }
+    }
   }
 ]
