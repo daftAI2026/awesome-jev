@@ -2926,14 +2926,14 @@
   },
   {
     "id": "jzoqeqrxi6h81opcvei6el6kv",
-    "title": "Sebastian Raschka 解析文本分类技术史：从 Bag-of-Words 到 Jev",
+    "title": "从 Bag-of-Words 到 Jev：Sebastian Raschka 解读语言模型文本分类与 Jev 热潮",
     "originalTitle": "Language Models for Text Classification: From Bag-of-Words to Jev",
-    "summary": "Sebastian Raschka 从 bag-of-words、RNN、CNN 到 BERT/GPT 梳理文本分类技术史，并用 Choice、Noul、Score 三种 API 实测 TypeSafe AI 新发布的 Jev 模型。",
+    "summary": "Sebastian Raschka 长文梳理从 bag-of-words、RNN、CNN 到 BERT/GPT 的文本分类技术史，解读 TypeSafe AI 新发布的 Jev 为何走红。",
     "sourceName": "Ahead of AI（RSS）",
     "publishedAt": "2026-09-29T10:50:25.000Z",
     "discoveredAt": "2026-09-29T10:53:09.475Z",
     "category": "tip",
-    "score": 71,
+    "score": 74,
     "selected": false,
     "reason": null,
     "originalUrl": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
@@ -3688,5 +3688,35 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/03/meta-openai-and-uber-just-taught-ai-agents-to-talk-first-what-about-when-to-stay-quiet/",
     "aihotUrl": "https://aihot.news/items/dwisfgfbgkllh4uvsjgqia3uw"
+  },
+  {
+    "id": "xseqbyh071p3ve74ogno96fbn",
+    "title": "BestBlogs 早报：VS Code 周更、Google 托管智能体与递归语言模型",
+    "originalTitle": "BestBlogs 早报｜VS Code 依靠反馈闭环周更，Google Interactions API 托管智能体，Alex 拆解递归语言模型",
+    "summary": "BestBlogs 早报精讲三篇：VS Code 团队借 AI 从月更转向周更，智能体生成代码存活率从 GPT-4.1 时的 55% 升至 86%，切到 TypeScript Go 后构建速度提升约 10 倍。",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-10-03T23:59:30.000Z",
+    "discoveredAt": "2026-10-04T00:19:28.388Z",
+    "category": "tip",
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/hongming731/status/2106534639485714701",
+    "aihotUrl": "https://aihot.news/items/xseqbyh071p3ve74ogno96fbn"
+  },
+  {
+    "id": "ea8951um0rh81a5o9w1v64npw",
+    "title": "BestBlogs 早报：VS Code 周更与递归语言模型等十则",
+    "originalTitle": "BestBlogs 早报 · 10-04",
+    "summary": "BestBlogs 早报汇总十则 AI 动态：VS Code 团队将发布节奏从月更改为周更，代码存活率由 55% 升至 86%；Google DeepMind 的 Interactions API 用交互标识保存上下文与思维签名，并以环境标识复用托管智能体沙箱；DatologyAI 将预训练合成数据生成规模扩大到 12 万亿 token。",
+    "sourceName": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-10-03T23:59:45.000Z",
+    "discoveredAt": "2026-10-04T00:19:28.379Z",
+    "category": null,
+    "score": 28,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/hongming731/status/2106534702387773741",
+    "aihotUrl": "https://aihot.news/items/ea8951um0rh81a5o9w1v64npw"
   }
 ]
