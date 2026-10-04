@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-04T00:01:21.411Z",
+  "at": "2026-10-04T10:04:54.176Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 87,
-      "total": 87,
+      "fetched": 88,
+      "total": 88,
       "status": "complete"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 93,
-      "total": 93,
+      "fetched": 94,
+      "total": 94,
       "status": "complete"
     }
   ],
@@ -20,12 +20,90 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 7,
   "added": 0,
-  "pending": 108,
+  "pending": 109,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "manjunathshiva/opendecider",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "19bfbf86bf07c6da734e4712a9195ff2b9173c16",
+      "evidenceUrl": "https://github.com/manjunathshiva/opendecider/blob/19bfbf86bf07c6da734e4712a9195ff2b9173c16/README.md",
+      "evidenceSha256": "219a3ca86509721d3bb69676c725279c8e1e79b17a3b761329f016301f0f4c2c",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    },
+    {
+      "repo": "eastriverlee/julia.swift",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.9,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.71,
+        "category": "alternatives"
+      },
+      "sha": "647589a10933d6f1b7380c2b54b8857f7e27fbde",
+      "evidenceUrl": "https://github.com/eastriverlee/julia.swift/blob/647589a10933d6f1b7380c2b54b8857f7e27fbde/README.md",
+      "evidenceSha256": "09502e4085f76032da0aad46cb8f9cae97a4857dba3e1c6eb5ef51f7f4aa6e1d",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    },
+    {
+      "repo": "gbesse/typed-locale-invariants",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "0ed37ac396fe8ec3ced8956fee836a97bdd04fff",
+      "evidenceUrl": "https://github.com/gbesse/typed-locale-invariants/blob/0ed37ac396fe8ec3ced8956fee836a97bdd04fff/README.md",
+      "evidenceSha256": "72c66573c3cf39b57974a47cb959f59c5c4a05e4fca6ee558f5563b623951464",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    },
+    {
+      "repo": "mr-ds-ml-85/syfox",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.9,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.59,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "8ba3951968292aa93e073b7846f879b3ef2c4d8c",
+      "evidenceUrl": "https://github.com/mr-ds-ml-85/syfox/blob/8ba3951968292aa93e073b7846f879b3ef2c4d8c/README.md",
+      "evidenceSha256": "01bf6ab7e243272a9039679ba3b5f420702ae0adabec3df22b74b764149ae69b",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    },
+    {
+      "repo": "rudransh2004/carve-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "apixly-ai/jev-filter",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "69e319987465cf28134e22cef70d409dcea4b280",
+      "evidenceUrl": "https://github.com/apixly-ai/jev-filter/blob/69e319987465cf28134e22cef70d409dcea4b280/README.md",
+      "evidenceSha256": "f8c7aa6cb41ea925ec0f91a8af084ca14b239395343418b6d4e8fc6e26fb85df",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    },
+    {
+      "repo": "wuchengwei1996/jev-zh-tw-eval",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "fe49a4a8a24004ec13b0d30de1d71322621ef1dc",
+      "evidenceUrl": "https://github.com/wuchengwei1996/jev-zh-tw-eval/blob/fe49a4a8a24004ec13b0d30de1d71322621ef1dc/README.md",
+      "evidenceSha256": "137da928906507c62aaa3bf6cda0a4f397972adfe35af1914b73f6a88b0a2707",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-04T10:04:54.176Z"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
@@ -33,5 +111,5 @@
     "cost": 0,
     "resolved": []
   },
-  "totalProjects": 2159
+  "totalProjects": 2186
 }
