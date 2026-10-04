@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖公开收录控制器、真实目录生成器与 GitHub REST 形状的离线状态机
- * [OUTPUT]: 对外提供 Issue 到 PR/CI/合并/关闭，以及批准失效、篡改拒绝和中断恢复的回归验证
+ * [OUTPUT]: 验证 Issue 到 PR/CI/合并/关闭、批准失效、篡改拒绝及交接/写入中断后的恢复
  * [POS]: scripts 的条件收录集成测试；读写替身保留 Git 对象不可变性，不调用模型或执行外部代码
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -768,4 +768,18 @@ test('closed native recovery trusts only an actual bot merge into this repositor
     assert.equal(await h.process(), 'not-open-catalog-pr')
     assert.equal(h.state.writes.length, attempts)
   }
+})
+
+test('an optional notification failure preserves exact successful CI for a later intake sweep', async () => {
+  const h = harness()
+  assert.equal(await h.process(), `validating-pr-${PR_NUMBER}`)
+  const { run, jobs } = h.ready()
+  jobs.push({ id: 602, name: 'resume-intake', run_id: run.id, run_attempt: run.run_attempt,
+    status: 'completed', conclusion: 'failure', steps: [] })
+  run.status = 'in_progress'; run.conclusion = null
+  assert.equal(await h.process(), `validating-pr-${PR_NUMBER}`)
+  noMergeOrClose(h)
+  run.status = 'completed'; run.conclusion = 'success'
+  assert.equal(await h.process(), 'merged-and-closed')
+  assert.equal(writesTo(h, `/pulls/${PR_NUMBER}/merge`).length, 1)
 })

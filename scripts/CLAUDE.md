@@ -63,7 +63,8 @@ submission-review.ts: 可信投稿提取、共享输入指纹/固定版本目录
 submission-intake-policy.ts: 纯准入门，完整真实报告/当前输入与人工批准对应；只允许目录追加及生成资产
 submission-intake-policy.test.ts: Node test 虚假/过期报告、完整覆盖、命令语法及纯数据改动边界
 submission-intake.ts: 无模型调用的可信收录控制器，GitHub API 创建数据 PR、精确 attempt CI 门、普通合并、来源 Issue 幂等关闭与已合并原生 PR 的主干校验恢复
-submission-intake.test.ts: Node test 模拟 GitHub 状态转换、CI 来源、批准失效与写入恢复，不产生线上操作
+submission-intake.test.ts: Node test 模拟 GitHub 状态转换、CI 来源、批准失效、交接失败后的重扫与写入恢复，不产生线上操作
+submission-intake-workflow.test.ts: Node test 执行隔离 Bash/gh 交接命令，约束成功 CI、自建分支编号、可信 main 与 Actions-only 权限
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理

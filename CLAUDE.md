@@ -8,7 +8,7 @@ docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为�
 scripts/ - 自动 GitHub 身份建基线/按 ID 刷新、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
 public/ - 静态 favicon、robots、sitemap、llms 与 OG 运行时字库 (1 子目录: og-fonts)
 radar/ - 生态与替代实现的状态及发布报告
-.github/ - 投稿模板、隔离的建议性审核、条件收录与可信数据发布工作流
+.github/ - 投稿模板、隔离的建议性审核、条件收录与可信数据发布；收录 CI 显式唤醒 main 控制器
 </directory>
 <config>
 package.json - Node 24 与构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
