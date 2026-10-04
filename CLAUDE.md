@@ -17,6 +17,8 @@ wrangler.toml - awesome-jev-project Worker 与 Static Assets 字库绑定配置
 src/index.css - 唯一语义主题、字体与视觉 token
 </config>
 
+仓库开启 `delete_branch_on_merge`，本仓已合并 PR 的来源分支统一由 GitHub 原生回收，不区分人工或机器人；不在收录控制器另建删除链路，不管理外部 fork。权限与安全边界见 docs/collector.md。
+
 分享图在 /api/og/site 与 /api/og/projects/{owner}/{repo} 按请求生成白底 PNG，使用 @cf-wasm/resvg 0.4.0。完整已发布目录决定计数与项目文字，内容版本地址驱动 Workers Cache；构建不生成/存储项目 PNG。字库通过 ASSETS 绑定读取，WASM 和规范快照不进入浏览器启动包。/og.png 兼容地址也读取当前快照；失败返回 no-store 503，不复用旧图。
 
 数据 → 纯工具/页面 loader → 组件。目录交互共享构建期展示投影，规范 JSON 保留富审计；详情与新闻 loader 使用 Start 同源服务端函数；项目详情额外交付最多三条具有共同具体主题的同分类摘要，完整快照不进入全站启动包。路由语言驱动文案；有效详情可预渲染，未知地址保留 HTTP 404。404 由 NotFoundPage 共用恢复布局，不建立第二套主题或目录数据。
