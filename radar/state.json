@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 7,
-    "\"typesafe.ai\" in:readme fork:false": 7,
-    "\"Jev\" \"System One\" in:readme fork:false": 7,
-    "topic:typesafe-ai fork:false": 5,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
-    "\"TypeSafe\" \"Jev\" fork:false": 7,
+    "topic:jev fork:false": 9,
+    "\"typesafe.ai\" in:readme fork:false": 9,
+    "\"Jev\" \"System One\" in:readme fork:false": 9,
+    "topic:typesafe-ai fork:false": 1,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
+    "\"TypeSafe\" \"Jev\" fork:false": 9,
     "code:\"api.typesafe.ai\" in:file": 7,
     "code:\"@typesafe-ai/sdk\" in:file": 7,
     "code:\"TYPESAFE_API_KEY\" in:file": 9,
     "code:\"jev-latest\" in:file": 1
   },
-  "metadataCursor": 2011,
+  "metadataCursor": 882,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -1292,7 +1292,7 @@
       "attempts": 2,
       "checkedAt": "2026-09-28T23:16:35.221Z",
       "retryAt": "2026-10-05T23:16:35.221Z",
-      "stars": 8,
+      "stars": 9,
       "lastReview": {
         "repo": "allenporter/home-assistant-laya",
         "status": "review",
@@ -4392,7 +4392,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 0
     },
     "croit/aiplane": {
       "status": "review",
@@ -5112,7 +5113,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 0
+      "stars": 1
     },
     "radrebelsam/awesome-jev": {
       "status": "error",
@@ -5306,7 +5307,7 @@
       "attempts": 2,
       "checkedAt": "2026-09-28T23:16:35.221Z",
       "retryAt": "2026-10-05T23:16:35.221Z",
-      "stars": 2,
+      "stars": 3,
       "lastReview": {
         "repo": "abhishekmamdapure/jev-information-extraction",
         "status": "review",
@@ -6228,7 +6229,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 1
+      "stars": 2
     },
     "jaibhasin/jev-flappy-bird": {
       "status": "review",
@@ -30908,7 +30909,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 215
+      "stars": 216
     },
     "psmon/agentzerolite": {
       "status": "review",
@@ -40810,7 +40811,7 @@
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 147,
+      "stars": 148,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "retryAt": "2026-10-01T12:52:50.716Z"
     },
@@ -44589,7 +44590,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T12:52:50.716Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "soniamehta14/paved-gate",
@@ -46424,7 +46425,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 19,
+      "stars": 21,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "protocol-lattice/harness-router",
@@ -46507,7 +46508,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 3,
+      "stars": 5,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "rusharlabs/house-party-protocol",
@@ -46595,7 +46596,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "123wwwa/jevtrace",
@@ -47167,5 +47168,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "hamzaahmadaslam/commit-changelog"
+  "metadataNext": "frankied003/fraud-jev"
 }

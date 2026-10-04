@@ -1,42 +1,42 @@
 {
-  "at": "2026-10-04T12:21:47.810Z",
+  "at": "2026-10-04T21:24:55.421Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2364,
+      "total": 2414,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 7856,
+      "total": 7917,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 6571,
+      "total": 6638,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 200,
-      "total": 537,
+      "fetched": 154,
+      "total": 554,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 200,
-      "total": 574,
+      "fetched": 180,
+      "total": 580,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3476,
+      "total": 3506,
       "status": "search-cap"
     },
     {
@@ -52,7 +52,7 @@
     "batches": 22,
     "cost": 22,
     "other": 1000,
-    "remaining": 1086,
+    "remaining": 1087,
     "top100": {
       "ok": 100,
       "total": 100,
@@ -76,36 +76,81 @@
         "databaseId": 1376671563
       },
       {
-        "from": "stephenlb/truetype.ai-open",
-        "to": "stephenlb/system-one-model",
-        "databaseId": 1376388571
+        "from": "bunsdev/typesafe-ai-playground",
+        "to": "typesafeai/typesafe-playground",
+        "databaseId": 1373324760
       },
       {
-        "from": "dperezcabrera/system-one-chess",
-        "to": "dperezcabrera/ai-chess-lab",
-        "databaseId": 1380374177
+        "from": "huntedman/jevlint",
+        "to": "iamtoomas/jevlint",
+        "databaseId": 1374372746
       },
       {
-        "from": "tayaee/typesafe-ai-jev-demo",
-        "to": "tayaee/classifier-benchmark-results",
-        "databaseId": 1376777707
+        "from": "phureewat29/got-jev",
+        "to": "phureewat29/jev-got",
+        "databaseId": 1374274889
       },
       {
-        "from": "faizullah9181/esketcher",
-        "to": "faizullah9181/jev-esketcher",
-        "databaseId": 1383974102
+        "from": "zavocc/ground-zero",
+        "to": "wmcbtech30/ground-zero",
+        "databaseId": 1375280181
       },
       {
-        "from": "monotykamary/jev-fabric",
-        "to": "fabric-runtime/jev-fabric",
-        "databaseId": 1387099307
+        "from": "kunobi-ninja/kunobi-jev",
+        "to": "kunobi-ninja/kunobi-decision",
+        "databaseId": 1374093481
+      },
+      {
+        "from": "tinyhumansai/tinyjevclient",
+        "to": "tinyhumansai/tinydecisionmodels",
+        "databaseId": 1374366286
+      },
+      {
+        "from": "bunsdev/typesafe-ui",
+        "to": "typesafeai/typesafe-ui",
+        "databaseId": 1373757159
+      },
+      {
+        "from": "fruitymcdoo/jevchat",
+        "to": "sonofsaris/jevchat",
+        "databaseId": 1378948439
+      },
+      {
+        "from": "church-of-lane/csharp-jef-sdk",
+        "to": "church-of-lane/csharp-typesafe-sdk",
+        "databaseId": 1378876381
+      },
+      {
+        "from": "completedottech/jev-factorio-agent",
+        "to": "jevplays-games/jev-factorio-agent",
+        "databaseId": 1379060982
+      },
+      {
+        "from": "navidkashani/jev-guard",
+        "to": "veronalabs/spamlens",
+        "databaseId": 1380305332
+      },
+      {
+        "from": "peterfriese/jev-foundation-models",
+        "to": "peterfriese/system-one-foundation-models",
+        "databaseId": 1380219642
+      },
+      {
+        "from": "zchee/typesafe-sdk-rust",
+        "to": "zchee/decision-model-sdk-rust",
+        "databaseId": 1376458463
+      },
+      {
+        "from": "carlaiau/readwithjev",
+        "to": "carlaiau/read-with-jev",
+        "databaseId": 1375767462
       }
     ]
   },
   "reviewed": 0,
   "added": 0,
   "pending": 2000,
-  "overflow": 664,
+  "overflow": 533,
   "evicted": 0,
   "receipts": [],
   "identity": {
@@ -119,5 +164,5 @@
     "phase": "discovery",
     "reason": "github-rate-limited"
   },
-  "totalProjects": 2186
+  "totalProjects": 2187
 }
