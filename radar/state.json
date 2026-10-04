@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 5,
-    "\"typesafe.ai\" in:readme fork:false": 5,
-    "\"Jev\" \"System One\" in:readme fork:false": 5,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 5,
+    "topic:jev fork:false": 7,
+    "\"typesafe.ai\" in:readme fork:false": 7,
+    "\"Jev\" \"System One\" in:readme fork:false": 7,
+    "topic:typesafe-ai fork:false": 5,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
+    "\"TypeSafe\" \"Jev\" fork:false": 7,
     "code:\"api.typesafe.ai\" in:file": 7,
     "code:\"@typesafe-ai/sdk\" in:file": 7,
     "code:\"TYPESAFE_API_KEY\" in:file": 9,
     "code:\"jev-latest\" in:file": 1
   },
-  "metadataCursor": 973,
+  "metadataCursor": 2011,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -196,7 +196,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 914
+      "stars": 919
     },
     "inso1337/revl": {
       "status": "review",
@@ -2978,7 +2978,7 @@
       "attempts": 3,
       "checkedAt": "2026-09-28T05:23:57.119Z",
       "retryAt": "2026-10-02T05:23:57.119Z",
-      "stars": 129
+      "stars": 130
     },
     "devvgwardo/ghost-route": {
       "status": "review",
@@ -4638,7 +4638,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
-      "retryAt": "2026-10-06T12:52:50.716Z"
+      "retryAt": "2026-10-06T12:52:50.716Z",
+      "stars": 338
     },
     "datamonsterr/jev_auto_select_skills": {
       "status": "review",
@@ -5743,7 +5744,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 109
+      "stars": 111
     },
     "raniellimontagna/jev-guard-mcp": {
       "status": "review",
@@ -11703,7 +11704,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 1985
     },
     "mikelninh/commons": {
       "status": "review",
@@ -13524,7 +13526,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 0
     },
     "vgabriel45/polymarket-btc5m-jev-trading": {
       "status": "review",
@@ -16120,7 +16123,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 0
     },
     "merijjeyn/jive": {
       "status": "review",
@@ -28410,7 +28414,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 26,
+      "stars": 27,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "ankit-aglawe/tinyjev",
@@ -30846,7 +30850,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 93,
+      "stars": 94,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "godefroy/micdrop",
@@ -30903,7 +30907,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 215
     },
     "psmon/agentzerolite": {
       "status": "review",
@@ -33682,7 +33687,7 @@
       "status": "review",
       "discoveredAt": "2026-09-24T21:31:04.130Z",
       "attempts": 2,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "metalagman/layajev",
@@ -35692,7 +35697,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 2,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "coo-quack/jev-pii-checker",
@@ -37702,7 +37707,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T04:58:02.853Z",
       "attempts": 2,
-      "stars": 1,
+      "stars": 4,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "muriel-gasparini/ban4life",
@@ -39725,7 +39730,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T16:23:47.558Z",
       "attempts": 2,
-      "stars": 5,
+      "stars": 6,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "npipeline/npipeline",
@@ -40805,7 +40810,7 @@
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 146,
+      "stars": 147,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "retryAt": "2026-10-01T12:52:50.716Z"
     },
@@ -46816,7 +46821,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "zie1ony/jev-talks",
@@ -46859,7 +46864,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 74,
+      "stars": 77,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "thinkany-ai/autojev",
@@ -46998,7 +47003,169 @@
       "discoveredAt": "2026-10-01T13:14:43.978Z",
       "attempts": 0,
       "stars": 0
+    },
+    "gbesse/jev-objet-seconde-vie": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-inclusion-service-fit": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-joafe-purpose-shift": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-minimis-watch": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-georisques-preflight": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-fonds-vert-analogue": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-dotation-locale-proof": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-dpe-travaux-map": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-datagouv-schema-drift": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-bodacc-reprise": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-patrimoine-travaux-scope": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-medicament-doc-shift": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-jurisprudence-shift": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-mediation-numerique-fit": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-insersup-claim-check": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-ift-record-review": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-dvf-comparable": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-essms-proof": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-france-services-router": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-cuivre-transition": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-debat-trace": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-concurrence-precedent-map": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-carbone-factor-fit": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-cada-desk": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-avant-boamp": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-bocc-impact": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/jev-association-dossier-proof": {
+      "status": "pending",
+      "discoveredAt": "2026-10-04T12:21:47.810Z",
+      "attempts": 0,
+      "stars": 0
     }
   },
-  "metadataNext": "rashedint32/jury.nvim"
+  "metadataNext": "hamzaahmadaslam/commit-changelog"
 }
