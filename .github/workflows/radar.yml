@@ -1,6 +1,6 @@
-# [INPUT]: 依赖 GitHub 只读批量元数据/搜索、PR 明确 head 与已有目录校验/共享发布脚本
-# [OUTPUT]: 执行核心采集、PR 校验与经过验证的数据发布
-# [POS]: workflows 的核心采集链路；扫描、验证与发布权限分离
+# [INPUT]: 依赖 GitHub 只读元数据、明确 head 校验、共享发布器与可信 main 收录入口
+# [OUTPUT]: 执行核心采集/校验/发布；自建收录分支校验后显式唤醒 main 控制器
+# [POS]: workflows 的核心采集链路；扫描、验证、收录交接与发布权限分离
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev ecosystem radar
 run-name: >-
@@ -59,6 +59,29 @@ jobs:
           INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       - name: Verify catalog and delivery
         run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+  resume-intake:
+    needs: verify
+    # 通知失败不污染已成功的验证；失败 job 仍可见，后续 sweep 可读取完整 CI 恢复。
+    continue-on-error: true
+    if: >-
+      needs.verify.result == 'success' &&
+      github.repository == 'daftAI2026/awesome-jev' &&
+      github.event_name == 'workflow_dispatch' && inputs.mode == 'validate' &&
+      startsWith(github.ref_name, 'jev-intake/issue-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      actions: write
+    steps:
+      # 只传导航编号，不授予批准；不 checkout 分支代码，不把写入 token 交给验证 job。
+      - name: Resume trusted-main intake
+        run: |
+          if [[ "$INTAKE_REF" =~ ^jev-intake/issue-([1-9][0-9]*)$ ]]; then
+            gh workflow run submission-intake.yml --repo "$GITHUB_REPOSITORY" --ref main -f "number=${BASH_REMATCH[1]}"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INTAKE_REF: ${{ github.ref_name }}
   scan:
     permissions:
       contents: read
