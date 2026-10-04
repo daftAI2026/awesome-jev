@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 输入属性、Base UI Input 与 cn 类名组合
+ * [OUTPUT]: 对外提供 Input 的统一输入样式、焦点、禁用和无效状态
+ * [POS]: ui 的文本输入适配器，保持 Base UI 行为，不持有业务值或检索状态
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { Input as InputPrimitive } from "@base-ui/react/input"
 import { cn } from "cn"

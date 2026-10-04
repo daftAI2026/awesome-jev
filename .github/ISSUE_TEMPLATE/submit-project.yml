@@ -11,8 +11,8 @@ body:
       value: |
         Recommend one public GitHub repository per issue. A GitHub account is required.
         每个申请请推荐一个公开 GitHub 仓库，需要登录 GitHub。
-        The existing bot reviews relevance; maintainers decide inclusion. Submission does not automatically add a project.
-        机器人提供关联性审查建议，维护者最终确认收录；提交后不会自动上架。
+        The review bot checks relevance. A separate intake bot can merge a catalog PR after a verified recommendation or maintainer approval and successful validation.
+        审核机器人检查关联性；独立收录机器人在有效审核建议或维护者批准及校验通过后，才会合并目录 PR。
         Do not include API keys, credentials or private material. 请勿填写密钥、凭据或私有资料。
   - type: input
     id: repository
@@ -49,5 +49,5 @@ body:
           required: true
         - label: This is a public, non-fork, non-archived repository with verifiable evidence. 仓库公开、非 fork、未归档，关联证据可核验。
           required: true
-        - label: I understand review is advisory, not automatic inclusion or a security certification. 我理解审核建议不代表自动收录或安全认证。
+        - label: I understand submission is not approval, and listing does not certify security or Jev compatibility. 我理解提交不等于批准，收录不代表安全性或 Jev 兼容性认证。
           required: true

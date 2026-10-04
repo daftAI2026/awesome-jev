@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 /**
+ * [INPUT]: 依赖规范目录、jev-client 评分/分类、GitHub 固定来源及环境或 .env.local 服务端凭据
+ * [OUTPUT]: 对外提供本地评分、分类补全和 categories:check 命令，按参数预览或写入规范数据
+ * [POS]: scripts 的人工采集维护入口，模型调用与目录写入仅发生在 Node，不进入 Vite 前端请求链
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+/**
  * Score directory rows with TypeSafe Jev (collector-only).
  * Reads TYPESAFE_API_KEY from the environment or `.env.local`.
  * Never import this from the Vite app.

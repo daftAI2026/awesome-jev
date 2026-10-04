@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 categories 的项目/新闻白名单与调用方提供的浏览器收藏 JSON
+ * [OUTPUT]: 对外提供收藏类型、存储键、纯解析/切换及 savedRouteSearch 搜索校验
+ * [POS]: lib 的本地收藏数据边界，仅保存来源 ID/时间；持久化归 hook，内容仍来自规范快照
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { CATEGORIES, NEWS_CATEGORIES, type Category } from './categories.ts'
 
 export type SavedKind = 'github' | 'news'

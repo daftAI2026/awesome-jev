@@ -28,5 +28,5 @@
 - [ ] Added/edited inclusion rationale: `npm run inclusion:verify -- <base-commit-sha>`
 - [ ] Code/UI changes: `npm run typecheck`, `npm test`, `npm run lint`, `npm run build`
 
-The review bot does not merge PRs or approve inclusion. Maintainers make the final decision.
-机器人不会自动合并或批准收录，最终由维护者确认。请勿提交密钥或私有资料。
+The reviewer only advises. A separate intake bot may merge addition-only catalog PRs after a current recommendation or explicit maintainer approval and exact-version CI.
+审核与合并由隔离链路处理；仅新增目录的 PR 在有效审核建议或维护者明确批准及对应版本 CI 通过后，才可能自动合并。请勿提交密钥或私有资料。

@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert 与 lib/catalog-updated-at 的时间规范化和格式化
+ * [OUTPUT]: 对外提供缺失/无效历史隐藏及 Asia/Shanghai 展示的离线回归
+ * [POS]: scripts 的数据更新时间契约测试，保护构建历史到页脚展示的真实性
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { formatCatalogUpdatedAt, normalizeCatalogUpdatedAt } from '../src/lib/catalog-updated-at.ts'

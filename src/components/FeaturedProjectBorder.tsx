@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 生命周期、StarBorder、项目边框样式及浏览器可见性观察
+ * [OUTPUT]: 对外提供 FeaturedProjectBorder，将子卡片包装为离屏/后台暂停的装饰边框
+ * [POS]: components 的高星卡片适配器，由 ItemCard 决定启用，不在上游装饰组件中混入目录业务
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { useEffect, useRef, type ReactNode } from 'react'
 import StarBorder from '@/components/StarBorder'
 import '@/components/StarBorderProject.css'

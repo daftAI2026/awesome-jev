@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node timers 的等待与 model-types 的 GitHubApi / FetchImpl 契约
- * [OUTPUT]: 对外提供受限 GitHub REST / GraphQL 只读客户端与运行暂停错误分类
+ * [OUTPUT]: 对外提供受限 REST/GraphQL 只读客户端、无重试的显式写入客户端与暂停错误分类
  * [POS]: scripts 的共享网络边界，被发现、取证与投稿审核调用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -122,4 +122,27 @@ export function createGitHubClient(token: string | undefined, {
 
 export function isGitHubRunDeferred(error: unknown): boolean {
   return error instanceof Error && ['github-deadline', 'github-rate-limited', 'github-request-budget'].includes(error.message)
+}
+
+export type GitHubWriter = (path: string, method: 'POST' | 'PUT' | 'PATCH', body: Record<string, unknown>) => Promise<unknown>
+
+// --- 写操作不自动重试：响应丢失后由调用方重读远端事实恢复，不能重复建 PR 或合并 ---
+export function createGitHubWriter(token: string | undefined, fetchImpl: FetchImpl = fetch): GitHubWriter {
+  if (!token?.trim()) throw new Error('github-missing-token')
+  return async (path, method, body) => {
+    if (!/^\/repos\/[\w.-]+\/[\w.-]+\/[\w./-]+$/.test(path) ||
+      path.split('/').some((part) => part === '.' || part === '..') ||
+      !['POST', 'PUT', 'PATCH'].includes(method)) throw new Error('github-invalid-write')
+    let response: Response
+    try {
+      response = await fetchImpl(`https://api.github.com${path}`, {
+        method, body: JSON.stringify(body), redirect: 'error', signal: AbortSignal.timeout(30000),
+        headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json',
+          'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'awesome-jev-intake' },
+      })
+    } catch { throw new Error('github-write-outcome-unknown') }
+    if (!response.ok) { await response.body?.cancel(); throw new Error(`github-write-http-${response.status}`) }
+    if (response.status === 204) return null
+    try { return await response.json() } catch { throw new Error('github-write-outcome-unknown') }
+  }
 }

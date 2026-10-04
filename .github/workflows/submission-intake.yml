@@ -1,0 +1,48 @@
+# [INPUT]: 依赖既有审核完成事件、维护者批准评论与可信 main 的收录控制器
+# [OUTPUT]: 建立纯数据 PR，精确版本 CI 成功后合并并关闭来源 Issue
+# [POS]: workflows 的独立条件写入链路；不消费外部产物、不 checkout PR head、不调用 Jev
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+name: Jev submission intake
+on:
+  workflow_run:
+    workflows: [Jev submission review, Jev ecosystem radar]
+    types: [completed]
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '53 * * * *'
+  workflow_dispatch:
+    inputs:
+      number:
+        description: Issue or pull request number to process (does not grant approval)
+        required: true
+        type: string
+permissions: {}
+concurrency:
+  group: jev-submission-intake
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: >-
+      github.repository == 'daftAI2026/awesome-jev' &&
+      (github.event_name != 'issue_comment' || startsWith(github.event.comment.body, '/jev include '))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
+    steps:
+      # 凭据只交给 API 控制器；工作树和所有导入固定为可信 main。
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - name: Process approved submissions
+        run: node --experimental-strip-types scripts/submission-intake.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

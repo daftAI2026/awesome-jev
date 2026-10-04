@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Node 文件系统/路径与 review-types 的任务存储契约
+ * [OUTPUT]: 对外提供 createReviewStore 的有界原子检查点及 memoryReviewStore 的隔离测试替身
+ * [POS]: scripts 的审查持久化边界，防止符号链接/损坏状态进入续审并清理三十日未使用任务
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { mkdirSync, lstatSync, readdirSync, readFileSync, writeFileSync, renameSync, unlinkSync } from 'node:fs'
 import { resolve, join } from 'node:path'
 import type { ReviewStore, ReviewStoreOptions, ReviewTask } from './review-types.ts'

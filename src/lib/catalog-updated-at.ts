@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖调用方传入的真实 Git 历史时间及标准 Date/Intl 格式化能力
+ * [OUTPUT]: 对外提供时间规范化、固定 Asia/Shanghai 展示和 CATALOG_TIME_ZONE
+ * [POS]: lib 的目录更新时间纯边界，被 Vite 构建和 App 页脚共用，缺失/无效历史返回空值而不造时间
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 
 export const CATALOG_TIME_ZONE = 'Asia/Shanghai'
 

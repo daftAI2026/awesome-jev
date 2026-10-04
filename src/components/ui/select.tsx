@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Base UI Select、React 属性、cn 与 Phosphor 状态图标
+ * [OUTPUT]: 对外提供 Select 根、触发器、值、弹出内容、条目、分组及滚动/分隔组合原语
+ * [POS]: ui 的选择控件适配层，交互状态归 Base UI，选项含义和受控值归业务调用方
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { Select as SelectPrimitive } from "@base-ui/react/select"
 import { cn } from "cn"

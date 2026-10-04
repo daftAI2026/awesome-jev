@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert 与 lib/saved 的收藏解析、切换和搜索校验
+ * [OUTPUT]: 对外提供来源隔离、无内容复制、损坏/重复数据过滤及路由白名单的离线回归
+ * [POS]: scripts 的本地收藏契约测试，保护浏览器存储与收藏页筛选之间的纯数据边界
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { parseSaved, savedRouteSearch, toggleSaved } from '../src/lib/saved.ts'

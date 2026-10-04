@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 GitHub 事件/来源读取、既有整仓审查与可信检查点存储
- * [OUTPUT]: 对外提供投稿识别、候选提取、建议性审查和机器人评论的动态 UTC 预算/缓存边界
+ * [OUTPUT]: 对外提供投稿识别、候选提取、共享输入指纹、真实审查收据和评论的 UTC 预算/缓存边界
  * [POS]: scripts 的 Issue/PR 审查编排；仅运行可信代码，不写目录或合并申请
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -50,6 +50,8 @@ const base64CharactersPattern = /^[A-Za-z0-9+/]*={0,2}$/
 const BOT = 'github-actions[bot]'
 const safeError = (error: unknown) => error instanceof Error && /^(github|jev|submission)-[a-z0-9-]+$/.test(error.message) ? error.message : 'submission-invalid-data'
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
+export const submissionFingerprint = (input: { version: string; keys: string[] }, known: Set<string>, language: Language) =>
+  digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
 const validNumber = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value > 0
 
 // 只判断申请正文，不把代码、链接、模板标题和复审命令当作自然语言。
@@ -143,7 +145,7 @@ function decodeSubmissionBase64(content: string): Buffer {
   return bytes
 }
 
-async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<DirectoryItem[]> {
+export async function jsonAt(api: Api, path: string, sha: string, optional = false): Promise<DirectoryItem[]> {
   try {
     const file = await api(`/repos/${REPOSITORY}/contents/${path}?ref=${sha}`) as { encoding?: string; content?: string; sha?: string; size?: number }
     let data = file
@@ -269,7 +271,7 @@ export async function processSubmission({ api, writeComment, review, number, man
     retryInput = !(error instanceof Error && error.message === 'submission-catalog-too-large')
     input = { keys: [], version: digest([issue.number, issue.title, issue.body]), notes: [!retryInput ? (language === 'zh' ? '目录文件超过审查读取的安全上限，需要维护者调整数据交付边界；自动重试无法解决。' : 'The catalog exceeds the bounded review input limit. A maintainer must adjust catalog delivery; automatic retries cannot resolve this.') : (language === 'zh' ? '暂时无法读取收录数据；机器人稍后会重试。' : 'Could not read the submission data; the reviewer will retry later.')] }
   }
-  const fingerprint = digest([input.version, input.keys, input.keys.filter((key) => known.has(key)), language, REVIEW_POLICY])
+  const fingerprint = submissionFingerprint(input, known, language)
   const comments = await pages<BotComment>(api, `/repos/${REPOSITORY}/issues/${number}/comments`)
   const previous = comments.filter((comment) => reviewMeta(comment)).at(-1)
   const oldMeta = reviewMeta(previous)
@@ -309,8 +311,8 @@ export async function processSubmission({ api, writeComment, review, number, man
   const comment = await writeComment(number, previous?.id, renderReport(meta, [], notes, true, language))
   const results: SubmissionResult[] = []
   const checkpoint = () => {
-    meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, progress, evidence, evidenceLinks }) => ({
-      repo, status, reason, deep, filesRead, progress, evidence: evidence && evidence.length <= 600 ? evidence : undefined,
+    meta.completed = [...results, ...[...cached.values()].filter((r) => !results.some((done) => done.repo === r.repo))].map(({ repo, status, reason, deep, filesRead, progress, evidence, evidenceLinks, score }) => ({
+      repo, status, reason, deep, filesRead, progress, score, evidence: evidence && evidence.length <= 600 ? evidence : undefined,
       evidenceLinks: (evidenceLinks ?? []).filter((url) => url.length <= 600).slice(0, 2),
     }))
   }

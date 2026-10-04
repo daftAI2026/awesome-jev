@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 容器属性、cva 视觉变体及 cn 类名组合
+ * [OUTPUT]: 对外提供 Alert、AlertTitle、AlertDescription 和 AlertAction 的警告语义组合
+ * [POS]: ui 的基础反馈原语，只承载样式与可访问语义，业务错误和文案由调用方决定
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
