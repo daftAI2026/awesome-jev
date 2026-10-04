@@ -3718,5 +3718,20 @@
     "reason": null,
     "originalUrl": "https://x.com/hongming731/status/2106534702387773741",
     "aihotUrl": "https://aihot.news/items/ea8951um0rh81a5o9w1v64npw"
+  },
+  {
+    "id": "cmujufpjc0xddro9hypacbclr",
+    "title": "Every 团队实测 Opus 5.5、GPT-6 Sol 和 Grok 4.7，团队成员各归其位",
+    "originalTitle": "Opus 5.5 and Sol Split the Team",
+    "summary": "Every 团队对本周发布的三款模型做了 Vibe Check。团队实测发现 Opus 5.5 在产品和设计工作上的表现持平或超过 Fable 5.1，且每 token 成本低 60%。",
+    "sourceName": "Every：最新文章（网页）",
+    "publishedAt": "2026-09-27T13:17:32.963Z",
+    "discoveredAt": "2026-09-27T13:17:32.963Z",
+    "category": "tip",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://every.to/context-window/opus-5-5-and-sol-split-the-team",
+    "aihotUrl": "https://aihot.news/items/cmujufpjc0xddro9hypacbclr"
   }
 ]
