@@ -24,8 +24,8 @@ og-delivery.test.ts: 实际 Worker PNG、缓存/条件请求、三语言项目�
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
 generate-sitemap.test.ts: Node test generate-sitemap 的契约与回归验证，运行 npm test
 generate-sitemap.ts: 生成三种语言的有限索引，排除收藏和不足摘要
-github-client.test.ts: Node test 实际响应头、限流等待、截止与权限错误的离线回归
-github-client.ts: 共享 GitHub 读取、响应头驱动限流及整轮暂停分类，截止覆盖发现/刷新/取证
+github-client.test.ts: Node test 响应头/限流/截止、读写隔离与未知写入不重试的离线回归
+github-client.ts: 共享只读 REST/GraphQL、响应头驱动限流及独立无重试写入；未知写入由调用方重读，截止覆盖取证
 github-identity.ts: 数字 ID/不透明 Node ID 的统一读取校验，供目录验证、首次身份建基线、统计刷新与双队列去重共用
 github-metadata-aliases.ts: 28 条历史核验的数字 ID 种子；旧数据建基线时防止身份替换，后续改名不再追加人工例外
 github-metadata.test.ts: Node test 首次自动改名、后续 ID 查询/迁移、防重占、Top100 固定点与历史种子、目录增删续点和实际额度暂停回归
@@ -59,7 +59,11 @@ scroll-restoration.test.ts: Node test 首次水合、迟到滚动、导航与 ha
 score-sources.ts: 离线来源打分/分类入口，不进入前端包
 submission-entry.test.ts: Node test 页头链接、表单标题与单仓库候选提取，离线验证投稿接入而不创建真实申请
 submission-review.test.ts: Node test submission-review 的契约与回归验证，运行 npm test
-submission-review.ts: 可信投稿提取、带输入版本的可失效报告与串行节流的请求前预算评论
+submission-review.ts: 可信投稿提取、共享输入指纹/固定版本目录读取、保留真实评分的可失效报告与请求前预算评论
+submission-intake-policy.ts: 纯准入门，完整真实报告/当前输入与人工批准对应；只允许目录追加及生成资产
+submission-intake-policy.test.ts: Node test 虚假/过期报告、完整覆盖、命令语法及纯数据改动边界
+submission-intake.ts: 无模型调用的可信收录控制器，GitHub API 创建数据 PR、精确 attempt CI 门、普通合并、来源 Issue 幂等关闭与已合并原生 PR 的主干校验恢复
+submission-intake.test.ts: Node test 模拟 GitHub 状态转换、CI 来源、批准失效与写入恢复，不产生线上操作
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理

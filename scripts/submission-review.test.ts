@@ -291,6 +291,7 @@ test('one comment is reserved then updated; global budget is reserved before pai
   assert.equal(h.paid.length, 1); assert.equal(h.writes.length, 2)
   assert.equal(h.writes[0].id, undefined); assert.equal(h.writes[1].id, 8)
   assert.equal(parsedMeta({ ...botComment(), body: h.writes[0]!.body }).used, 1)
+  assert.deepEqual(parsedMeta({ ...botComment(), body: lastWrite(h).body }).completed?.[0]?.score, score)
 })
 test('daily budget exhaustion makes no paid calls or new comments', async () => {
   const h = harness({ recent: [botComment({ ...meta, used: 100 })] })

@@ -6,9 +6,9 @@ Thanks for helping curate **Awesome JEV** — a GitHub-first directory of **Jev 
 
 Open the [Submit a project Issue form](https://github.com/daftAI2026/awesome-jev/issues/new?template=submit-project.yml), also linked beside the source-repository button in the website header. Sign in to GitHub and provide one repository URL, its purpose, and concrete Jev / System One evidence in that repository. Independent typed-decision alternatives should include their license evidence. Check existing entries and open submissions first; do not post credentials or private material.
 
-The form keeps the `[Submission]` title prefix so the existing review bot recognizes the request without requiring a label. The bot reads repository sources and posts advisory findings; it does not add entries, merge PRs or certify security. Maintainers make the final inclusion decision. Keep evidence links within the submitted repository: the current Issue parser treats other GitHub repository links in the body as additional candidates. See [the review boundary](docs/collector.md#submission-review-bot-issues-and-pull-requests).
+The form keeps the `[Submission]` title prefix so the existing reviewer recognizes the request without requiring a label. Review and writing remain separate: the reviewer posts findings; the intake bot can create and merge an addition-only catalog PR after a current recommendation or explicit maintainer approval and exact-version CI. Listing is not a security or compatibility certification. Keep evidence links within the submitted repository: the Issue parser treats other GitHub repository links in the body as additional candidates. See [the review boundary](docs/collector.md#submission-review-bot-issues-and-pull-requests) and [conditional intake](docs/collector.md#conditional-submission-intake).
 
-无需修改代码：点击网站页头“提交项目”，登录 GitHub 后填写仓库地址、项目用途及同仓库内的关联证据。每个申请推荐一个项目，维护者最终确认收录；机器人不会自动上架。
+无需修改代码：点击网站页头“提交项目”，登录 GitHub 后填写仓库地址、用途及同仓库证据。每个申请推荐一个项目；有效审核建议或维护者明确批准后，收录机器人生成目录 PR，校验通过才合并。待复核不会自动批准。
 
 ## Add items via pull request
 

@@ -46,6 +46,8 @@ This identity is machine audit, excluded from the build-time browser display pro
 
 ### Inclusion rationale and review scores
 
+The separate submission intake may accept a complete machine `review` after an explicit authorized human command. It retains the original `jevEvidence.status` and any genuine scores, not synthesized passing confidence; approved category and human/report comment IDs remain in the intake PR audit. API-derived identity is mandatory for these additions. This does not replace localized editorial `inclusion`: a missing rationale remains pending until source-reviewed prose is imported.
+
 The author-provided `summary` is not rewritten to explain our admission decision. The optional `sourceMeta.inclusion` is a separate, source-reviewed editorial record:
 
 ```ts

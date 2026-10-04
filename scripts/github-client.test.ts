@@ -1,12 +1,12 @@
 /**
  * [INPUT]: 依赖 Node test 与 GitHub 客户端的注入网络、时钟和等待接口
- * [OUTPUT]: 对外提供限流分类、完整等待、请求预算和截止时间的离线回归断言
- * [POS]: scripts 的共享 REST / GraphQL 只读请求边界验收，不连接真实 GitHub
+ * [OUTPUT]: 对外提供限流/预算/截止与显式写入不重试、不跨域和空响应的回归断言
+ * [POS]: scripts 的共享 REST/GraphQL 读取及条件收录写入边界验收，不连接真实 GitHub
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { createGitHubClient } from './github-client.ts'
+import { createGitHubClient, createGitHubWriter } from './github-client.ts'
 
 function fixture(responses: (Response | Error)[], extra = {}) {
   let time = 1_000_000
@@ -127,4 +127,34 @@ test('GraphQL HTTP 200 limit beyond deadline halts every resource', async () => 
   await assert.rejects(f.api('/graphql', { query: 'query X { rateLimit { cost } }' }), /github-deadline/)
   await assert.rejects(f.api('/repos/test/repo'), /github-deadline/)
   assert.equal(f.calls(), 1)
+})
+
+// --- 已发生的远端写入不能因响应丢失自动重发 ---
+test('explicit writer preserves method/body and accepts dispatch 204 without JSON', async () => {
+  let request: RequestInit | undefined
+  const write = createGitHubWriter('test-only', async (_url, init) => {
+    request = init
+    return new Response(null, { status: 204 })
+  })
+  assert.equal(await write('/repos/test/repo/actions/workflows/radar.yml/dispatches', 'POST', { ref: 'main' }), null)
+  assert.equal(request?.method, 'POST')
+  assert.equal(request?.redirect, 'error')
+  assert.deepEqual(JSON.parse(String(request?.body)), { ref: 'main' })
+})
+test('writer never retries network errors, invalid success or HTTP failures', async () => {
+  for (const result of [new Error('lost'), new Response('not-json'), new Response('', { status: 503 })]) {
+    let calls = 0
+    const write = createGitHubWriter('test-only', async () => { calls++; if (result instanceof Error) throw result; return result })
+    await assert.rejects(write('/repos/test/repo/pulls', 'POST', {}), /github-write-(outcome-unknown|http-503)/)
+    assert.equal(calls, 1)
+  }
+})
+test('writer refuses absolute URLs, traversal and query paths without sending credentials', async () => {
+  let calls = 0
+  const write = createGitHubWriter('test-only', async () => { calls++; return ok() })
+  for (const path of ['https://example.com/repos/test/repo', '//example.com', '/repos/test/repo/../pulls', '/repos/test/repo/pulls?x=1']) {
+    await assert.rejects(write(path, 'POST', {}), /github-invalid-write/)
+  }
+  assert.equal(calls, 0)
+  assert.throws(() => createGitHubWriter(''), /github-missing-token/)
 })
