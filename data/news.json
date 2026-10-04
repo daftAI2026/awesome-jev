@@ -3733,5 +3733,35 @@
     "reason": null,
     "originalUrl": "https://every.to/context-window/opus-5-5-and-sol-split-the-team",
     "aihotUrl": "https://aihot.news/items/cmujufpjc0xddro9hypacbclr"
+  },
+  {
+    "id": "tzi9tbjk38i07bf4np38x2o0z",
+    "title": "Meta 等提出 Context Language Models，模型自管上下文",
+    "originalTitle": "🥇Top AI Papers of the Week",
+    "summary": "Meta 及合作者提出 Context Language Models（CLMs），把实时上下文当作模型可自由编辑的文件，无需训练即可零样本使用。在 BrowseComp-Plus 上比 SOTA 上下文管理策略准确率高 11.4%、FLOPs 少 21.5%；12 小时 EdgeBench 上分数高 5%、FLOPs 少 59%。",
+    "sourceName": "X：DAIR.AI (@dair_ai)",
+    "publishedAt": "2026-10-04T15:37:51.000Z",
+    "discoveredAt": "2026-10-04T15:40:21.516Z",
+    "category": "paper",
+    "score": 38,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/dair_ai/status/2106770783607373994",
+    "aihotUrl": "https://aihot.news/items/tzi9tbjk38i07bf4np38x2o0z"
+  },
+  {
+    "id": "wxv737emy0o7657qwtavt4s9v",
+    "title": "DAIR.AI 本周 AI 论文精选",
+    "originalTitle": "The Top AI Papers of the Week (Sep 28 - Oct 4):",
+    "summary": "本周顶级 AI 论文（9月28日 - 10月4日）：\n\n- JAZ\n- CASD\n- Agensh\n- Jev-Mem\n- AutoGym\n- Taste-Bench\n- Context Language Models\n\n继续阅读了解更多：",
+    "sourceName": "X：DAIR.AI (@dair_ai)",
+    "publishedAt": "2026-10-04T15:38:16.000Z",
+    "discoveredAt": "2026-10-04T15:40:21.510Z",
+    "category": "paper",
+    "score": 17,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/dair_ai/status/2106770888054182374",
+    "aihotUrl": "https://aihot.news/items/wxv737emy0o7657qwtavt4s9v"
   }
 ]
