@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 React 多态元素能力与 StarBorder.css 的通用渐变动画
+ * [OUTPUT]: 对外提供默认 StarBorder 组件，接收元素、边框颜色、速度及内容样式参数
+ * [POS]: components 的上游装饰实现，保留原始许可；目录阈值和可见性控制归 FeaturedProjectBorder
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 /*
  * React Bits StarBorder, TS + CSS source:
  * https://github.com/DavidHDev/react-bits/tree/main/src/ts-default/Animations/StarBorder

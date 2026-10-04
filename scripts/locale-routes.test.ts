@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert 与 lib/locale-routes 的语言路径和 alternates 规则
+ * [OUTPUT]: 对外提供三语言路径转换及 hreflang 对同一项目身份的离线回归
+ * [POS]: scripts 的语言路由契约测试，保护页面导航与搜索元数据共用的纯规则
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { localeAlternates, localeFromPath, localizedPath, stripLocalePrefix } from '../src/lib/locale-routes.ts'

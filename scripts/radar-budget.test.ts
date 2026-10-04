@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert、临时账本及 radar-budget/runRadar 的预请求预算边界
+ * [OUTPUT]: 对外提供持久化预约、UTC 换日、额度耗尽与候选续点的离线回归
+ * [POS]: scripts 的采集计费护栏测试，确认失败和跨日不能绕过真实请求预约
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'

@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 TanStack 文件路由及共享语言/页面元数据工具
+ * [OUTPUT]: 对外提供三语言 Top100 Route 的规范路径、标题和说明
+ * [POS]: routes 的全目录星标排名页面身份，结果筛选由父级目录布局承担而不新建数据快照
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { createFileRoute } from '@tanstack/react-router'
 import { localizedHead } from '@/lib/locale-head'
 import { localeFromParam } from '@/lib/locale-routes'

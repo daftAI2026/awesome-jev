@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 StarBorder 层级/类名、主题语义 token 与 FeaturedProjectBorder 的 data-star-active 状态
+ * [OUTPUT]: 对外提供项目卡片专用边框尺寸、环绕动画、离屏暂停及减少动态效果规则
+ * [POS]: components 的站点边框适配层，不改写上游 StarBorder，动画状态由可见性包装器驱动
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 .star-border-container.project-star-border {
   display: block;
   width: 100%;

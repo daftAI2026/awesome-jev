@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert、临时文件系统与 generate-sitemap 的纯生成/落盘入口
+ * [OUTPUT]: 对外提供三语言索引、摘要门槛、身份去重与文件生成的离线回归
+ * [POS]: scripts 的有限索引契约测试，确保规范快照与 sitemap 生成结果同源
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'

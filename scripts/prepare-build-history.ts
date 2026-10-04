@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 Node 子进程和可注入 GitExecutor 检测 Git 浅仓库并读取 origin 历史
+ * [OUTPUT]: 对外提供 prepareBuildHistory、执行契约和构建前历史准备命令
+ * [POS]: scripts 的构建前置门，仅补齐缺失历史，失败时阻止不可靠的目录更新时间发布
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { execFileSync } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
 import { resolve } from 'node:path'

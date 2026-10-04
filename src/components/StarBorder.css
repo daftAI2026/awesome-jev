@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 StarBorder 输出的容器、渐变层和内容层类名
+ * [OUTPUT]: 对外提供上游通用边框布局、上下渐变运动及基础内容样式
+ * [POS]: components 的装饰基础样式，由 StarBorder 引入，站点语义适配另由 StarBorderProject.css 覆盖
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 .star-border-container {
   display: inline-block;
   position: relative;

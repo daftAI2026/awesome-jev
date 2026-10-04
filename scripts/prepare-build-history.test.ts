@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert 与 prepare-build-history 的可注入 GitExecutor
+ * [OUTPUT]: 对外提供浅历史补全、完整仓库免请求及异常阻断的离线回归
+ * [POS]: scripts 的构建历史门测试，不访问真实远端，防止失败后伪造数据更新时间
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { prepareBuildHistory, type GitExecutor } from './prepare-build-history.ts'

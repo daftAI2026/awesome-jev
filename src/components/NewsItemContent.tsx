@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖新闻展示类型/时间工具、i18n、语言地区映射及 Button/来源图标
+ * [OUTPUT]: 对外提供 NewsItemMeta、NewsItemContent 与 NewsSourceLinks 的共享新闻展示
+ * [POS]: components 的新闻内容边界，被预览与独立页共用，只展示已有摘要和来源而不生成文章正文
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import { ArrowSquareOut } from '@phosphor-icons/react'
 import { useI18n } from '@/i18n'
 import { newsTime, type NewsItem } from '@/lib/news'

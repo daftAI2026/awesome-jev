@@ -1,3 +1,9 @@
+/**
+ * [INPUT]: 依赖 node:test/assert、内存检查点与 github-evidence/jev-client/repository-review 的可注入读取和审查
+ * [OUTPUT]: 对外提供证据无损分段、整仓覆盖、模型结果与中断续审的离线回归
+ * [POS]: scripts 的整仓审查契约测试，以模拟客户端验证付费前预约及不完整证据不能批准
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { memoryReviewStore } from './review-store.ts'
