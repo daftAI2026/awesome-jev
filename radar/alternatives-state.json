@@ -1459,24 +1459,24 @@
     "omnijev/onejev": {
       "status": "review",
       "discoveredAt": "2026-09-27T14:49:16.442Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-27T14:49:16.442Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-04T18:47:08.647Z",
       "lastReview": {
         "repo": "omnijev/onejev",
         "status": "review",
         "score": {
           "jevAbout": 0.88,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.46,
+          "jevKeepConfidence": 0.92,
           "category": "alternatives"
         },
-        "sha": "d5da9cba606a8f395aa3c16b8dcdf42015b272e8",
-        "evidenceUrl": "https://github.com/omnijev/onejev/blob/d5da9cba606a8f395aa3c16b8dcdf42015b272e8/README.md",
-        "evidenceSha256": "8c654d6abe3c9268a0923f18b0008b09b6f3f640ba5b7f03600b2fe5eb137990",
+        "sha": "81ce62f1597c91e46767d4d02d6ac2e18534fe94",
+        "evidenceUrl": "https://github.com/omnijev/onejev/blob/81ce62f1597c91e46767d4d02d6ac2e18534fe94/README.md",
+        "evidenceSha256": "7689d7238f52ce50269ed91f8922078b3dbf4a2989b7cac231b0b77643e2e7f7",
         "model": "jev-latest",
-        "checkedAt": "2026-09-27T14:49:16.442Z"
+        "checkedAt": "2026-10-04T18:47:08.647Z"
       },
-      "retryAt": "2026-10-04T14:49:16.442Z"
+      "retryAt": "2026-10-11T18:47:08.647Z"
     },
     "lakoreai/pholaya": {
       "status": "review",
@@ -2280,6 +2280,54 @@
         "checkedAt": "2026-10-04T10:04:54.176Z"
       },
       "retryAt": "2026-10-11T10:04:54.176Z"
+    },
+    "bojansandhaus/jev-home-assistant-sentinel": {
+      "status": "review",
+      "discoveredAt": "2026-10-04T18:47:08.647Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-04T18:47:08.647Z",
+      "lastReview": {
+        "repo": "bojansandhaus/jev-home-assistant-sentinel",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.08,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.45,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "32e8915acf2540125e86b63036feb78673498213",
+        "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/32e8915acf2540125e86b63036feb78673498213/README.md",
+        "evidenceSha256": "6e652f68fa620a0dcadd3b0b11dfdaf1216a2a51de42878815ff14f78366960e",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-04T18:47:08.647Z"
+      },
+      "retryAt": "2026-10-11T18:47:08.647Z"
+    },
+    "bojansandhaus/jev-lcm-hermes-compaction": {
+      "status": "review",
+      "discoveredAt": "2026-10-04T18:47:08.647Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-04T18:47:08.647Z",
+      "lastReview": {
+        "repo": "bojansandhaus/jev-lcm-hermes-compaction",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.07,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.53,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "115c543fbf6d0a1974f2364c1169bf7193c396ab",
+        "evidenceUrl": "https://github.com/bojansandhaus/jev-lcm-hermes-compaction/blob/115c543fbf6d0a1974f2364c1169bf7193c396ab/README.md",
+        "evidenceSha256": "d2a56010a8aa3b273c0cc1c3e55941469f20f488c497a0895b10649c55937c3e",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-04T18:47:08.647Z"
+      },
+      "retryAt": "2026-10-11T18:47:08.647Z"
     }
   }
 }
