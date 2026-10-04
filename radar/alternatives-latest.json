@@ -1,12 +1,12 @@
 {
-  "at": "2026-10-04T10:04:54.176Z",
+  "at": "2026-10-04T18:47:08.647Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 88,
-      "total": 88,
+      "fetched": 91,
+      "total": 91,
       "status": "complete"
     },
     {
@@ -20,88 +20,60 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 7,
+  "reviewed": 3,
   "added": 0,
-  "pending": 109,
+  "pending": 111,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "manjunathshiva/opendecider",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "19bfbf86bf07c6da734e4712a9195ff2b9173c16",
-      "evidenceUrl": "https://github.com/manjunathshiva/opendecider/blob/19bfbf86bf07c6da734e4712a9195ff2b9173c16/README.md",
-      "evidenceSha256": "219a3ca86509721d3bb69676c725279c8e1e79b17a3b761329f016301f0f4c2c",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
-    },
-    {
-      "repo": "eastriverlee/julia.swift",
+      "repo": "omnijev/onejev",
       "status": "review",
       "score": {
-        "jevAbout": 0.9,
+        "jevAbout": 0.88,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.71,
+        "jevKeepConfidence": 0.92,
         "category": "alternatives"
       },
-      "sha": "647589a10933d6f1b7380c2b54b8857f7e27fbde",
-      "evidenceUrl": "https://github.com/eastriverlee/julia.swift/blob/647589a10933d6f1b7380c2b54b8857f7e27fbde/README.md",
-      "evidenceSha256": "09502e4085f76032da0aad46cb8f9cae97a4857dba3e1c6eb5ef51f7f4aa6e1d",
+      "sha": "81ce62f1597c91e46767d4d02d6ac2e18534fe94",
+      "evidenceUrl": "https://github.com/omnijev/onejev/blob/81ce62f1597c91e46767d4d02d6ac2e18534fe94/README.md",
+      "evidenceSha256": "7689d7238f52ce50269ed91f8922078b3dbf4a2989b7cac231b0b77643e2e7f7",
       "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
+      "checkedAt": "2026-10-04T18:47:08.647Z"
     },
     {
-      "repo": "gbesse/typed-locale-invariants",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "0ed37ac396fe8ec3ced8956fee836a97bdd04fff",
-      "evidenceUrl": "https://github.com/gbesse/typed-locale-invariants/blob/0ed37ac396fe8ec3ced8956fee836a97bdd04fff/README.md",
-      "evidenceSha256": "72c66573c3cf39b57974a47cb959f59c5c4a05e4fca6ee558f5563b623951464",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
-    },
-    {
-      "repo": "mr-ds-ml-85/syfox",
+      "repo": "bojansandhaus/jev-home-assistant-sentinel",
       "status": "review",
       "score": {
-        "jevAbout": 0.9,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.59,
+        "jevAbout": 0.08,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.45,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "8ba3951968292aa93e073b7846f879b3ef2c4d8c",
-      "evidenceUrl": "https://github.com/mr-ds-ml-85/syfox/blob/8ba3951968292aa93e073b7846f879b3ef2c4d8c/README.md",
-      "evidenceSha256": "01bf6ab7e243272a9039679ba3b5f420702ae0adabec3df22b74b764149ae69b",
+      "sha": "32e8915acf2540125e86b63036feb78673498213",
+      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/32e8915acf2540125e86b63036feb78673498213/README.md",
+      "evidenceSha256": "6e652f68fa620a0dcadd3b0b11dfdaf1216a2a51de42878815ff14f78366960e",
       "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
+      "checkedAt": "2026-10-04T18:47:08.647Z"
     },
     {
-      "repo": "rudransh2004/carve-jev",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "apixly-ai/jev-filter",
+      "repo": "bojansandhaus/jev-lcm-hermes-compaction",
       "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "69e319987465cf28134e22cef70d409dcea4b280",
-      "evidenceUrl": "https://github.com/apixly-ai/jev-filter/blob/69e319987465cf28134e22cef70d409dcea4b280/README.md",
-      "evidenceSha256": "f8c7aa6cb41ea925ec0f91a8af084ca14b239395343418b6d4e8fc6e26fb85df",
+      "score": {
+        "jevAbout": 0.07,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.53,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "115c543fbf6d0a1974f2364c1169bf7193c396ab",
+      "evidenceUrl": "https://github.com/bojansandhaus/jev-lcm-hermes-compaction/blob/115c543fbf6d0a1974f2364c1169bf7193c396ab/README.md",
+      "evidenceSha256": "d2a56010a8aa3b273c0cc1c3e55941469f20f488c497a0895b10649c55937c3e",
       "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
-    },
-    {
-      "repo": "wuchengwei1996/jev-zh-tw-eval",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "fe49a4a8a24004ec13b0d30de1d71322621ef1dc",
-      "evidenceUrl": "https://github.com/wuchengwei1996/jev-zh-tw-eval/blob/fe49a4a8a24004ec13b0d30de1d71322621ef1dc/README.md",
-      "evidenceSha256": "137da928906507c62aaa3bf6cda0a4f397972adfe35af1914b73f6a88b0a2707",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-04T10:04:54.176Z"
+      "checkedAt": "2026-10-04T18:47:08.647Z"
     }
   ],
   "identity": {
