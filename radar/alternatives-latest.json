@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-03T18:49:22.218Z",
+  "at": "2026-10-04T00:01:21.411Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,50 +20,12 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
+  "reviewed": 0,
   "added": 0,
   "pending": 108,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [
-    {
-      "repo": "lab-emi/chiplaya",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lakoreai/sev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.89,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.83,
-        "category": "alternatives"
-      },
-      "sha": "fefcfc33d01c08104dc3de0374ad4e5daf07f923",
-      "evidenceUrl": "https://github.com/lakoreai/sev/blob/fefcfc33d01c08104dc3de0374ad4e5daf07f923/README.md",
-      "evidenceSha256": "a292dc1d15402941d9467956c2749021635c988d017576d13a2ffdf2ac65ac64",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-03T18:49:22.218Z"
-    },
-    {
-      "repo": "yytbit/metajev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.53,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.77,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "f4246730b4cfedf5d61f1ce155ab52f96d93d3a0",
-      "evidenceUrl": "https://github.com/yytbit/metajev/blob/f4246730b4cfedf5d61f1ce155ab52f96d93d3a0/README.md",
-      "evidenceSha256": "f1639cb4edde965850632ad453841e271cb2389ca4144e6eabbb47267e6bc0ed",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-03T18:49:22.218Z"
-    }
-  ],
+  "receipts": [],
   "identity": {
     "ok": 0,
     "failed": 0,
