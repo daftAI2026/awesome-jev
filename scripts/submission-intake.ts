@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖可信投稿报告、维护者权限、规范目录生成器与分离的 GitHub 读写客户端
- * [OUTPUT]: 对外提供收录编排和精确版本 CI 门；Issue 生成数据 PR，合并后幂等关闭与主干校验恢复
+ * [OUTPUT]: 对外提供分类复核收录、精确 CI/合并、明确不匹配拒收与已关闭请求的恢复
  * [POS]: scripts 的条件写入边界；只运行 main 代码，不执行 PR 或投稿仓库代码、不调用 Jev
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,11 +10,16 @@ import { pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
 import { isDeepStrictEqual as equal } from 'node:util'
 import { createGitHubClient, createGitHubWriter, type GitHubWriter } from './github-client.ts'
-import { candidateRow, renderReadme, repoKey, validateRows, MAX_CATALOG_FILE_BYTES } from './catalog.ts'
+import { candidateRow, renderReadme, repoKey, validateRows } from './catalog.ts'
 import { buildSitemap } from './generate-sitemap.ts'
 import { isRecord, type GitHubApi, type DirectoryItem, type GitHubRepository } from './model-types.ts'
 import { REPOSITORY, MARKER, isSubmission, jsonAt, submissionInput, reportLanguage } from './submission-review.ts'
-import { parseIncludeCommand, intakeApprovals, intakeAdditions, assertIntakeFiles, type IntakeApproval } from './submission-intake-policy.ts'
+import { pages, mainSha, textAt, record } from './submission-github.ts'
+import { parseIncludeCommand, intakeApprovals, assertIntakeFiles, type IntakeApproval } from './submission-intake-policy.ts'
+import { catalogPrAdditions, assertCatalogPrFiles } from './submission-catalog-pr.ts'
+import { rejectSubmissionPr } from './submission-rejection.ts'
+import { createBranchDeleter, type BranchDeleter } from './github-ref-cleanup.ts'
+import { AGENT_REVIEW_MARKER, isOkCommand, parseAgentReviewComment, type AgentReview } from './submission-agent-review.ts'
 
 const PREFIX = `/repos/${REPOSITORY}`
 export const INTAKE_MARKER = '<!-- awesome-jev-intake:v1 -->'
@@ -24,45 +29,13 @@ const SHA = /^[a-f0-9]{40}$/
 const BOT = 'github-actions[bot]'
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
 const positive = (value: unknown): value is number => Number.isSafeInteger(value) && Number(value) > 0
-const record = (value: unknown): Record<string, any> => {
-  if (!isRecord(value)) throw new Error('intake-invalid-response')
-  return value
-}
+
 
 interface Comment { id: number; body: string; created_at: string; updated_at: string; user: { login: string; type: string } }
 interface Issue { number: number; title: string; body: string | null; state: string; pull_request?: unknown; user: { login: string }; labels?: { name?: string }[] }
 interface ApprovalContext { version: string; approvals: IntakeApproval[]; signature: string }
 interface IntakeMeta { issue: number; version: string; signature: string; baseSha: string; approvals: IntakeApproval[] }
-export interface IntakeOptions { api: GitHubApi; write: GitHubWriter }
-
-async function pages<T>(api: GitHubApi, path: string): Promise<T[]> {
-  const all: T[] = []
-  for (let page = 1; page <= 10; page++) {
-    const rows = await api(`${path}${path.includes('?') ? '&' : '?'}per_page=100&page=${page}`)
-    if (!Array.isArray(rows)) throw new Error('intake-invalid-response')
-    all.push(...rows)
-    if (rows.length < 100) return all
-  }
-  throw new Error('intake-pagination-limit')
-}
-
-async function mainSha(api: GitHubApi): Promise<string> {
-  const sha = record(record(await api(`${PREFIX}/git/ref/heads/main`)).object).sha
-  if (typeof sha !== 'string' || !SHA.test(sha)) throw new Error('intake-invalid-sha')
-  return sha
-}
-
-async function textAt(api: GitHubApi, path: string, sha: string): Promise<string> {
-  if (!SHA.test(sha)) throw new Error('intake-invalid-sha')
-  let file = record(await api(`${PREFIX}/contents/${path}?ref=${sha}`))
-  if (file.encoding === 'none' && SHA.test(file.sha)) file = record(await api(`${PREFIX}/git/blobs/${file.sha}`))
-  if (file.encoding !== 'base64' || typeof file.content !== 'string' ||
-    !Number.isSafeInteger(file.size) || file.size < 0 || file.size > MAX_CATALOG_FILE_BYTES ||
-    file.content.length > MAX_CATALOG_FILE_BYTES * 2) throw new Error('intake-invalid-file')
-  const bytes = Buffer.from(file.content, 'base64')
-  if (bytes.length !== file.size) throw new Error('intake-invalid-file')
-  return new TextDecoder('utf-8', { fatal: true }).decode(bytes)
-}
+export interface IntakeOptions { api: GitHubApi; write: GitHubWriter; deleteBranch?: BranchDeleter }
 
 // --- 人工批准锁定既有完整报告；晚到的旧命令不能批准后来修改的材料 ---
 async function consent(api: GitHubApi, issue: Issue, known: Set<string>): Promise<ApprovalContext | null> {
@@ -70,34 +43,65 @@ async function consent(api: GitHubApi, issue: Issue, known: Set<string>): Promis
   const comments = await pages<Comment>(api, `${PREFIX}/issues/${issue.number}/comments`)
   const report = comments.filter((c) => c.user?.login === BOT && c.user.type === 'Bot' && c.body?.startsWith(MARKER)).at(-1)
   if (!report || !positive(report.id)) return null
-  const commands = comments.filter((c) => c.user?.type !== 'Bot' && parseIncludeCommand(c.body)).reverse()
+  const commands = comments.filter((c) => c.user?.type === 'User' && (parseIncludeCommand(c.body) || isOkCommand(c.body))).reverse()
   const permissions = new Map<string, string>()
   let command: Comment | undefined
-  let manual: { category: NonNullable<ReturnType<typeof parseIncludeCommand>>; login: string; commentId: number } | undefined
-  for (const candidate of commands) {
-    if (!positive(candidate.id) || !/^[\w-]+$/.test(candidate.user.login) ||
-      !Number.isFinite(Date.parse(candidate.created_at)) || !Number.isFinite(Date.parse(report.updated_at)) ||
-      Date.parse(candidate.created_at) < Date.parse(report.updated_at)) continue
-    let permission = permissions.get(candidate.user.login)
+  let agentComment: Comment | undefined
+  let manual: NonNullable<Parameters<typeof intakeApprovals>[4]> | undefined
+  const permitted = async (candidate: Comment) => {
+    const login = candidate.user?.login
+    if (candidate.user?.type !== 'User' || !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}$/.test(login ?? '')) return false
+    let permission = permissions.get(login)
     if (permission === undefined) {
-      try { permission = record(await api(`${PREFIX}/collaborators/${candidate.user.login}/permission`)).permission }
+      try { permission = record(await api(`${PREFIX}/collaborators/${login}/permission`)).permission }
       catch (error) {
         if (!(error instanceof Error) || error.message !== 'github-http-404') throw error
         permission = 'none'
       }
       if (typeof permission !== 'string') throw new Error('intake-invalid-response')
-      permissions.set(candidate.user.login, permission)
+      permissions.set(login, permission)
     }
-    if (['admin', 'maintain', 'write'].includes(permission)) {
+    return ['admin', 'maintain', 'write'].includes(permission)
+  }
+  for (const candidate of commands) {
+    if (!positive(candidate.id) || !/^[\w-]+$/.test(candidate.user.login) ||
+      !Number.isFinite(Date.parse(candidate.created_at)) || !Number.isFinite(Date.parse(report.updated_at)) ||
+      Date.parse(candidate.created_at) < Date.parse(report.updated_at)) continue
+    if (await permitted(candidate)) {
+      let category = parseIncludeCommand(candidate.body)
+      let agentReview: AgentReview | null = null
+      let receiptComment = candidate
+      if (!category) {
+        agentReview = parseAgentReviewComment(candidate.body)
+        if (candidate.body === '/ok') {
+          for (const receipt of [...comments].reverse()) {
+            if (!receipt.body?.startsWith(AGENT_REVIEW_MARKER) || !positive(receipt.id) ||
+              comments.indexOf(receipt) > comments.indexOf(candidate) ||
+              !Number.isFinite(Date.parse(receipt.created_at)) || Date.parse(receipt.created_at) < Date.parse(report.updated_at) ||
+              Date.parse(receipt.created_at) > Date.parse(candidate.created_at) || !await permitted(receipt)) continue
+            // 最新可信收据失效即停，不从更早 OK 或 Other 默认类别偷取许可。
+            if (Number.isFinite(Date.parse(receipt.updated_at)) && Date.parse(receipt.updated_at) <= Date.parse(candidate.created_at)) {
+              agentReview = parseAgentReviewComment(receipt.body)
+              receiptComment = receipt
+            }
+            break
+          }
+        }
+        if (!agentReview) continue
+        category = agentReview.category
+      }
       command = candidate
-      manual = { category: parseIncludeCommand(command.body)!, login: command.user.login, commentId: command.id }
+      agentComment = agentReview ? receiptComment : undefined
+      manual = { category, login: command.user.login, commentId: command.id, ...(agentReview ? { agentReview,
+        agentReviewCommentId: receiptComment.id, agentReviewedBy: receiptComment.user.login } : {}) }
       break
     }
   }
   const approvals = intakeApprovals(issue, input, comments, known, manual)
   if (!approvals) return null
   return { version: input.version, approvals,
-    signature: digest([input.version, report.id, report.body, report.updated_at, manual ? [command!.id, command!.body, command!.updated_at, manual.login] : null]) }
+    signature: digest([input.version, report.id, report.body, report.updated_at, manual ? [command!.id, command!.body, command!.updated_at, manual.login,
+      ...(agentComment ? [[agentComment.id, agentComment.body, agentComment.updated_at, agentComment.user.login]] : [])] : null]) }
 }
 
 async function approvedRows(api: GitHubApi, approvals: IntakeApproval[]): Promise<DirectoryItem[]> {
@@ -211,17 +215,8 @@ async function validation({ api, write }: IntakeOptions, pr: Record<string, any>
   return verifiedRun(run, workflow.id, sourceId, pr.head.sha, pr.head.ref, jobResponse.jobs, botPr ? undefined : pr.number)
 }
 
-async function prFiles(api: GitHubApi, pr: Record<string, any>): Promise<void> {
-  const files = await pages<Record<string, any>>(api, `${PREFIX}/pulls/${pr.number}/files`)
-  assertIntakeFiles(files.map((f) => f.filename))
-  if (files.some((f) => f.status === 'removed' || f.status === 'renamed')) throw new Error('intake-file-deletion')
-}
-
 async function verifyData(api: GitHubApi, pr: Record<string, any>, approvals: IntakeApproval[], base: string, scopeChecked = false): Promise<DirectoryItem[]> {
-  if (!scopeChecked) await prFiles(api, pr)
-  const before = await jsonAt(api, 'data/github.json', base)
-  const after = await jsonAt(api, 'data/github.json', pr.head.sha)
-  const additions = intakeAdditions(before, after)
+  const additions = await catalogPrAdditions(api, pr as { number?: number; head: { sha: string } }, base, scopeChecked)
   if (additions.length !== approvals.length) throw new Error('intake-unapproved-addition')
   const expected = await approvedRows(api, approvals)
   for (const addition of additions) {
@@ -236,9 +231,6 @@ async function verifyData(api: GitHubApi, pr: Record<string, any>, approvals: In
     }
     if (addition.id !== trusted.id) throw new Error('intake-id-changed')
   }
-  if (await textAt(api, 'README.md', pr.head.sha) !== renderReadme(await textAt(api, 'README.md', base), after)) throw new Error('intake-readme-modified')
-  const news = JSON.parse(await textAt(api, 'data/news.json', base))
-  if (await textAt(api, 'public/sitemap.xml', pr.head.sha) !== buildSitemap(after, 'https://awesomejev.cc', news).xml) throw new Error('intake-sitemap-modified')
   return additions
 }
 
@@ -288,6 +280,8 @@ async function issueIntake(options: IntakeOptions, issue: Issue): Promise<string
     const meta = parseIntakeMeta(pr.body)
     if (!meta || meta.issue !== issue.number || pr.head.repo?.full_name !== REPOSITORY) return 'untrusted-existing-pr'
     if (pr.merged) return closeSource(options, pr, meta)
+    const rejected = await rejectSubmissionPr(options, pr.number, { number: issue.number, version: meta.version })
+    if (rejected) return rejected
     if (pr.state !== 'open' || pr.draft || pr.base.ref !== 'main') return 'intake-pr-withdrawn'
   }
   const base = await mainSha(api)
@@ -303,7 +297,7 @@ async function issueIntake(options: IntakeOptions, issue: Issue): Promise<string
     pr = record(await api(`${PREFIX}/pulls/${existing.number}`))
     const old = parseIntakeMeta(pr.body)!
     // 未授权代码混入旧分支时停止，而不是通过重新生成把它偷偷抹掉。
-    await prFiles(api, pr)
+    await assertCatalogPrFiles(api, pr.number)
     const generated = await Promise.all(Object.entries(files).map(async ([path, content]) => await textAt(api, path, pr.head.sha) === content))
     const ancestry = record(await api(`${PREFIX}/compare/${base}...${pr.head.sha}`))
     const exactGenerated = generated.every(Boolean) && ancestry.merge_base_commit?.sha === base
@@ -378,6 +372,8 @@ async function submittedPr(options: IntakeOptions, issue: Issue): Promise<string
     await ensureMainValidation(options)
     return 'recovered-main-validation'
   }
+  const rejected = await rejectSubmissionPr(options, issue.number)
+  if (rejected) return rejected
   if (pr.state !== 'open' || pr.draft || pr.base.ref !== 'main') return 'not-open-catalog-pr'
   const base = await mainSha(api)
   const current = await jsonAt(api, 'data/github.json', base)
@@ -423,25 +419,30 @@ export async function runIntakeTargets(options: IntakeOptions, numbers: number[]
   return results
 }
 
+export function recentClosedTargets(closed: unknown[], now: number): number[] {
+  return closed.filter((pr) => isRecord(pr) && positive(pr.number) &&
+    typeof pr.updated_at === 'string' && Date.parse(pr.updated_at) >= now - 24 * 60 * 60 * 1000)
+    .map((pr) => (pr as { number: number }).number)
+}
+
 async function main(): Promise<void> {
   if (process.env.GITHUB_REPOSITORY !== REPOSITORY) throw new Error('intake-wrong-repository')
   const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH!, 'utf8'))
   const api = createGitHubClient(process.env.GITHUB_TOKEN, { deadline: Date.now() + 8 * 60 * 1000, maxRequests: 2000 })
-  const options = { api, write: createGitHubWriter(process.env.GITHUB_TOKEN) }
+  const options = { api, write: createGitHubWriter(process.env.GITHUB_TOKEN), deleteBranch: createBranchDeleter(process.env.GITHUB_TOKEN) }
   let numbers: number[]
   if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
     if (!/^[1-9]\d*$/.test(String(event.inputs?.number))) throw new Error('intake-invalid-number')
     numbers = [Number(event.inputs.number)]
   } else if (process.env.GITHUB_EVENT_NAME === 'issue_comment') {
-    if (!parseIncludeCommand(event.comment?.body) || event.comment?.user?.type === 'Bot') return
+    if (!(parseIncludeCommand(event.comment?.body) || isOkCommand(event.comment?.body)) || event.comment?.user?.type === 'Bot') return
     // 事件正文与当前正文不同会由已绑定的 report inputVersion 拒绝。
     numbers = [event.issue?.number]
   } else {
     const issues = await pages<Issue>(api, `${PREFIX}/issues?state=open&sort=updated&direction=desc`)
     const closed = await api(`${PREFIX}/pulls?state=closed&base=main&sort=updated&direction=desc&per_page=20`)
     if (!Array.isArray(closed)) throw new Error('intake-invalid-response')
-    const recent = closed.filter((pr) => isRecord(pr) && typeof pr.merged_at === 'string' &&
-      Date.parse(pr.merged_at) >= Date.now() - 24 * 60 * 60 * 1000).map((pr) => pr.number)
+    const recent = recentClosedTargets(closed, Date.now())
     const linked = Array.isArray(event.workflow_run?.pull_requests) ? event.workflow_run.pull_requests.map((pr: Record<string, any>) => pr.number).filter(positive) : []
     // run 关联仅作导航；权限仍由当前本仓 PR、合并者身份和 main 校验边界决定。
     numbers = [...new Set([...linked, ...issues.filter((i) => i.pull_request || isSubmission(i)).map((i) => i.number).slice(0, 40), ...recent])]

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖投稿版本/机器人报告、共享评分与固定证据边界，以及规范目录校验
- * [OUTPUT]: 对外提供精确收录命令、全批审核授权和仅追加目录/文件的纯安全门
+ * [OUTPUT]: 对外提供共用报告绑定、分类复核准入、完整不匹配拒收和仅追加目录/文件的纯安全门
  * [POS]: scripts 的收录政策边界；控制器负责维护者权限、评论时序与合并前再次锁定输入
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,6 +10,7 @@ import { repoKey, validateRows, validateRepositoryIdentityChanges } from './cata
 import { isProjectCategory, reviewDecision } from './jev-client.ts'
 import { isRecord, type DirectoryItem, type JevScore, type ProjectCategory } from './model-types.ts'
 import { MARKER, REPOSITORY, reportLanguage, reviewMeta, submissionFingerprint, type SubmissionResult } from './submission-review.ts'
+import { matchesAgentReview, type AgentReview } from './submission-agent-review.ts'
 
 export interface IntakeApproval {
   repo: string
@@ -20,12 +21,16 @@ export interface IntakeApproval {
   approvedBy?: string
   review: SubmissionResult
   checkedAt: string
+  agentReview?: AgentReview
+  agentReviewCommentId?: number
+  agentReviewedBy?: string
 }
 
-type IntakeComment = { id?: number; body?: string; user?: { login?: string; type?: string } }
+type IntakeComment = { updated_at?: string; id?: number; body?: string; user?: { login?: string; type?: string } }
 type IntakeIssue = { title?: string; body?: string | null }
 type IntakeInput = { keys: string[]; version: string }
-type ManualApproval = { category: ProjectCategory; login: string; commentId: number }
+type ManualApproval = { category: ProjectCategory; login: string; commentId: number; agentReview?: AgentReview;
+  agentReviewCommentId?: number; agentReviewedBy?: string }
 const validId = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value > 0
 const validCount = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value >= 0
 const probability = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 1
@@ -38,7 +43,7 @@ export function parseIncludeCommand(body: unknown): ProjectCategory | null {
   return match && match[0] === body && isProjectCategory(match[1]) ? match[1] : null
 }
 
-function genuineReport(value: unknown): value is IntakeComment {
+export function genuineReport(value: unknown): value is IntakeComment {
   return isRecord(value) && isRecord(value.user) && value.user.login === 'github-actions[bot]' &&
     value.user.type === 'Bot' && typeof value.body === 'string' && value.body.startsWith(MARKER)
 }
@@ -83,15 +88,10 @@ function evidenceSha(value: unknown, repo: string): string | null {
   return new URL(value as string).pathname.split('/')[4]!
 }
 
-export function intakeApprovals(
-  issue: IntakeIssue, input: IntakeInput, comments: IntakeComment[], known: Set<string>, manual?: ManualApproval,
-): IntakeApproval[] | null {
+export function currentSubmissionReport(issue: IntakeIssue, input: IntakeInput, comments: IntakeComment[], known: Set<string>) {
   if (!input || typeof input.version !== 'string' || !input.version || !Array.isArray(input.keys) || !input.keys.length ||
     new Set(input.keys).size !== input.keys.length || input.keys.some((key) => typeof key !== 'string' ||
       key === REPOSITORY.toLowerCase() || repoKey(`https://github.com/${key}`) !== key) || !Array.isArray(comments)) return null
-  if (manual && (input.keys.length !== 1 || known.has(input.keys[0]!) || !isProjectCategory(manual.category) ||
-    !validId(manual.commentId) || typeof manual.login !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}$/.test(manual.login))) return null
-
   // --- 最新真实报告失效即撤销授权；不能回退到更早的一次绿灯 ---
   const comment = comments.findLast(genuineReport)
   const meta = reviewMeta(comment)
@@ -104,6 +104,16 @@ export function intakeApprovals(
     if (!isRecord(result) || typeof result.repo !== 'string' || !input.keys.includes(result.repo) || byRepo.has(result.repo)) return null
     byRepo.set(result.repo, result)
   }
+  return { comment: { ...comment, id: comment.id }, meta, byRepo }
+}
+
+export function intakeApprovals(
+  issue: IntakeIssue, input: IntakeInput, comments: IntakeComment[], known: Set<string>, manual?: ManualApproval,
+): IntakeApproval[] | null {
+  const report = currentSubmissionReport(issue, input, comments, known)
+  if (!report || manual && (input.keys.length !== 1 || known.has(input.keys[0]!) || !isProjectCategory(manual.category) ||
+    !validId(manual.commentId) || typeof manual.login !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}$/.test(manual.login))) return null
+  const { comment, meta, byRepo } = report
   const approvals: IntakeApproval[] = []
   for (const repo of input.keys) {
     const result = byRepo.get(repo)!
@@ -115,11 +125,33 @@ export function intakeApprovals(
     const sha = evidenceSha(result.evidence, repo)
     if (!sha || (result.evidenceLinks !== undefined && (!Array.isArray(result.evidenceLinks) ||
       result.evidenceLinks.some((url) => evidenceSha(url, repo) !== sha)))) return null
+    if (manual?.agentReview && (!validId(manual.agentReviewCommentId) || typeof manual.agentReviewedBy !== 'string' ||
+      !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}$/.test(manual.agentReviewedBy) || manual.category !== manual.agentReview.category ||
+      !matchesAgentReview(manual.agentReview, comment, input.version, repo, sha))) return null
     approvals.push({ repo, sha, category: manual?.category ?? result.score?.category ?? 'other',
       reviewCommentId: comment.id, ...(manual ? { approvalCommentId: manual.commentId, approvedBy: manual.login } : {}),
-      review: result, checkedAt: meta.at })
+      review: result, checkedAt: meta.at, ...(manual?.agentReview ? { agentReview: manual.agentReview,
+        agentReviewCommentId: manual.agentReviewCommentId, agentReviewedBy: manual.agentReviewedBy } : {}) })
   }
   return approvals.length ? approvals : null
+}
+
+// --- 明确“不匹配”只接受完整整仓 unrelated；浅审 drop/混合结果不等于整单拒收 ---
+export function submissionRejections(issue: IntakeIssue, input: IntakeInput, comments: IntakeComment[], known: Set<string>) {
+  const report = currentSubmissionReport(issue, input, comments, known)
+  if (!report || input.keys.some((repo) => known.has(repo))) return null
+  const rejections = []
+  for (const repo of input.keys) {
+    const result = report.byRepo.get(repo)!
+    if (result.status !== 'drop' || result.reason !== 'unrelated-evidence' || result.deep !== true ||
+      !completeCoverage(result.progress) || result.score !== undefined &&
+      (!validScore(result.score) || reviewDecision(result.score) !== 'drop')) return null
+    const sha = evidenceSha(result.evidence, repo)
+    if (!sha || result.evidenceLinks !== undefined && (!Array.isArray(result.evidenceLinks) ||
+      result.evidenceLinks.some((url) => evidenceSha(url, repo) !== sha))) return null
+    rejections.push({ repo, sha, reviewCommentId: report.comment.id })
+  }
+  return rejections.length ? rejections : null
 }
 
 // --- 提交面只容许规范目录和它的两份派生资产，不放行 workflow 或源码 ---
