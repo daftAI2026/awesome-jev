@@ -131644,5 +131644,53 @@
         "status": "review"
       }
     }
+  },
+  {
+    "id": "gh-7-ruhalis-davout",
+    "type": "github",
+    "title": "Davout",
+    "summary": "Jev-style typed decisions (yes/no, choice, score with calibrated probabilities) on HRM-Text-1B, with benchmarks against OpenJev and teacher distillation",
+    "tags": [
+      "calibration",
+      "hrm",
+      "jev",
+      "knowledge-distillation",
+      "llm",
+      "text-classification",
+      "typed-decisions",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/ruhalis/Davout",
+    "sourceMeta": {
+      "repo": "ruhalis/Davout",
+      "author": "ruhalis",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1399525234,
+        "nodeId": "R_kgDOU2sPcg"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "ruhalis/davout",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "alternatives"
+        },
+        "sha": "3b1b6a9a0adc244a1ce88e89d28166fb183c0e12",
+        "evidenceUrl": "https://github.com/ruhalis/davout/blob/3b1b6a9a0adc244a1ce88e89d28166fb183c0e12/README.md",
+        "evidenceSha256": "0517b8215f357068f48edc699919d23df7fdc05ab1a85bceb4283972981cb0c6",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-05T00:09:18.641Z"
+      }
+    }
   }
 ]

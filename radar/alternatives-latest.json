@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-04T18:47:08.647Z",
+  "at": "2026-10-05T00:09:18.641Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 94,
-      "total": 94,
+      "fetched": 95,
+      "total": 95,
       "status": "complete"
     }
   ],
@@ -20,60 +20,51 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
-  "added": 0,
-  "pending": 111,
+  "reviewed": 4,
+  "added": 1,
+  "pending": 110,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "omnijev/onejev",
+      "repo": "foxl-ai/bobcat",
       "status": "review",
       "score": {
-        "jevAbout": 0.88,
+        "jevAbout": 0.96,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
+        "jevKeepConfidence": 0.89,
         "category": "alternatives"
       },
-      "sha": "81ce62f1597c91e46767d4d02d6ac2e18534fe94",
-      "evidenceUrl": "https://github.com/omnijev/onejev/blob/81ce62f1597c91e46767d4d02d6ac2e18534fe94/README.md",
-      "evidenceSha256": "7689d7238f52ce50269ed91f8922078b3dbf4a2989b7cac231b0b77643e2e7f7",
+      "sha": "10f760ed97256921582d3b6f0c35a0311985a7e0",
+      "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/10f760ed97256921582d3b6f0c35a0311985a7e0/README.md",
+      "evidenceSha256": "396b36d5725acc7080d4001203948e15ee85e6009075a0f76615c190b77927c6",
       "model": "jev-latest",
-      "checkedAt": "2026-10-04T18:47:08.647Z"
+      "checkedAt": "2026-10-05T00:09:18.641Z"
     },
     {
-      "repo": "bojansandhaus/jev-home-assistant-sentinel",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.08,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.45,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "32e8915acf2540125e86b63036feb78673498213",
-      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/32e8915acf2540125e86b63036feb78673498213/README.md",
-      "evidenceSha256": "6e652f68fa620a0dcadd3b0b11dfdaf1216a2a51de42878815ff14f78366960e",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-04T18:47:08.647Z"
+      "repo": "lakoreai/pholaya",
+      "status": "error",
+      "reason": "github-http-404"
     },
     {
-      "repo": "bojansandhaus/jev-lcm-hermes-compaction",
-      "status": "review",
+      "repo": "momen-devv/multitenant-ecommerce",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "ruhalis/davout",
+      "status": "keep",
       "score": {
-        "jevAbout": 0.07,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.53,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevAbout": 0.9,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.96,
+        "category": "alternatives"
       },
-      "sha": "115c543fbf6d0a1974f2364c1169bf7193c396ab",
-      "evidenceUrl": "https://github.com/bojansandhaus/jev-lcm-hermes-compaction/blob/115c543fbf6d0a1974f2364c1169bf7193c396ab/README.md",
-      "evidenceSha256": "d2a56010a8aa3b273c0cc1c3e55941469f20f488c497a0895b10649c55937c3e",
+      "sha": "3b1b6a9a0adc244a1ce88e89d28166fb183c0e12",
+      "evidenceUrl": "https://github.com/ruhalis/davout/blob/3b1b6a9a0adc244a1ce88e89d28166fb183c0e12/README.md",
+      "evidenceSha256": "0517b8215f357068f48edc699919d23df7fdc05ab1a85bceb4283972981cb0c6",
       "model": "jev-latest",
-      "checkedAt": "2026-10-04T18:47:08.647Z"
+      "checkedAt": "2026-10-05T00:09:18.641Z"
     }
   ],
   "identity": {
@@ -83,5 +74,5 @@
     "cost": 0,
     "resolved": []
   },
-  "totalProjects": 2186
+  "totalProjects": 2188
 }
