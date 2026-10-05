@@ -42,4 +42,3 @@ export async function textAt(api: GitHubApi, path: string, sha: string): Promise
   if (bytes.length !== file.size) throw new Error('intake-invalid-file')
   return new TextDecoder('utf-8', { fatal: true }).decode(bytes)
 }
-
