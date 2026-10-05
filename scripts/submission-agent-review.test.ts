@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Agent 分类收据、真实报告编码与共享离线收录状态机
- * [OUTPUT]: 验证别名 CLI 与 stdin/eval/print 安全导入、短口令、分类版本绑定及原有权限/CI/许可证门
+ * [OUTPUT]: 验证路径/URL 别名 CLI 与 stdin/eval/print 导入、短口令、分类版本绑定及原有权限/CI/许可证门
  * [POS]: scripts 的 Agent 到维护者授权回归；只生成离线评论，不使用真实账号
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto'
 import { mkdtempSync, writeFileSync, symlinkSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { spawnSync } from 'node:child_process'
 import { createAgentReviewComment, parseAgentReviewComment, AGENT_REVIEW_MARKER } from './submission-agent-review.ts'
 import { harness, SOURCE, PR_NUMBER, ISSUE_NUMBER, initialKeep, deepReview } from './submission-intake-fixtures.ts'
@@ -62,6 +62,23 @@ test('direct CLI through a symlinked directory produces a nonempty valid draft, 
     const run = spawnSync(process.execPath, ['--experimental-strip-types', join(alias, 'submission-agent-review.ts'), report, input], { encoding: 'utf8' })
     assert.equal(run.status, 0, run.stderr)
     assert.ok(parseAgentReviewComment(run.stdout), 'The stdout itself must be a consumable receipt')
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
+test('direct file-URL CLI preserves module query and fragment identity and always produces a draft', () => {
+  const root = mkdtempSync(join(tmpdir(), 'jev-review-url-'))
+  try {
+    const alias = join(root, 'scripts alias'), h = harness()
+    symlinkSync(dirname(fileURLToPath(import.meta.url)), alias, 'dir')
+    const report = join(root, 'report.json'), input = join(root, 'assessment.json')
+    writeFileSync(report, JSON.stringify(h.state.comments[0])); writeFileSync(input, JSON.stringify(assessment()))
+    const entry = pathToFileURL(join(alias, 'submission-agent-review.ts')).href
+    for (const suffix of ['', '?review=fixture', '#review', '?review=fixture#review']) {
+      const run = spawnSync(process.execPath, ['--experimental-strip-types', '--entry-url', entry + suffix, report, input],
+        { encoding: 'utf8', timeout: 10000 })
+      assert.equal(run.status, 0, run.stderr)
+      assert.ok(parseAgentReviewComment(run.stdout), 'A successful direct invocation must emit its receipt')
+    }
   } finally { rmSync(root, { recursive: true, force: true }) }
 })
 

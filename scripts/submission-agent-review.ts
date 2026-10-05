@@ -1,13 +1,13 @@
 /**
- * [INPUT]: 依赖真实投稿报告、现有分类白名单与固定提交证据 URL
- * [OUTPUT]: 提供可安全导入的 Agent OK 分类收据解析、报告摘要绑定及别名兼容的只读草稿 CLI
+ * [INPUT]: 依赖真实投稿报告、分类白名单、固定提交证据与 Node 文件/URL 规范化
+ * [OUTPUT]: 提供可安全导入的 Agent OK 分类收据解析、报告摘要绑定及路径/URL 别名兼容的只读草稿 CLI
  * [POS]: scripts 的人工复核交接契约；不提交评论、不授予权限，也不改写 Jev 原始决定
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createHash } from 'node:crypto'
 import { readFileSync, realpathSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { pathToFileURL } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { isPinnedEvidenceUrl } from '../src/lib/inclusion.ts'
 import { repoKey } from './catalog.ts'
 import { isProjectCategory } from './jev-client.ts'
@@ -82,7 +82,12 @@ function isDirectCli(): boolean {
   const evaluated = process.execArgv.some((arg) => /^(?:-[ep]+$|--(?:eval|print)(?:=|$))/.test(arg))
   if (!entry || entry === '-' || evaluated) return false
   // eval/print 的应用参数即使指向本文件也不是入口；其余路径别名只为直接 CLI 规范化。
-  try { return import.meta.url === pathToFileURL(realpathSync(resolve(entry))).href }
+  try {
+    const url = entry.startsWith('file:') ? new URL(entry) : pathToFileURL(resolve(entry))
+    const canonical = pathToFileURL(realpathSync(fileURLToPath(url)))
+    canonical.search = url.search; canonical.hash = url.hash
+    return import.meta.url === canonical.href
+  }
   catch { return false }
 }
 
