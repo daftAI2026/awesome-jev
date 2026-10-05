@@ -3763,5 +3763,20 @@
     "reason": null,
     "originalUrl": "https://x.com/dair_ai/status/2106770888054182374",
     "aihotUrl": "https://aihot.news/items/wxv737emy0o7657qwtavt4s9v"
+  },
+  {
+    "id": "im7v0rfruaoz3f9j50iiwrnus",
+    "title": "TypeSafe AI 决策模型 Jev 日处理量达 1 万亿 Token，OpenAI 等巨头跟进推出同类工具",
+    "originalTitle": "TypeSafe AI 决策模型 Jev 日处理量达 1 万亿 Token，硅谷巨头火速跟进复刻",
+    "summary": "据《华尔街日报》报道，TypeSafe AI 于 9 月 15 日发布的决策模型 Jev 不生成文本，而是用“面向校准决策的强化学习”把输入归类到预设输出，日均处理 token 已达一万亿，约 25% 的财富世界 500 强企业在用。",
+    "sourceName": "IT之家（RSS）",
+    "publishedAt": "2026-10-05T00:06:48.000Z",
+    "discoveredAt": "2026-10-05T00:16:29.825Z",
+    "category": "industry",
+    "score": 64,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/009/744.htm",
+    "aihotUrl": "https://aihot.news/items/im7v0rfruaoz3f9j50iiwrnus"
   }
 ]
