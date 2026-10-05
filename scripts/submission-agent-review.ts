@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖真实投稿报告、现有分类白名单与固定提交证据 URL
- * [OUTPUT]: 提供独立 Agent OK 分类收据的严格解析、报告摘要绑定及只输出草稿的 CLI
+ * [OUTPUT]: 提供可安全导入的 Agent OK 分类收据解析、报告摘要绑定及别名兼容的只读草稿 CLI
  * [POS]: scripts 的人工复核交接契约；不提交评论、不授予权限，也不改写 Jev 原始决定
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -77,7 +77,15 @@ export function createAgentReviewComment(report: ReviewComment, assessment: Asse
   return `/ok\n${AGENT_REVIEW_MARKER}\n\`\`\`json\n${JSON.stringify(value, null, 2)}\n\`\`\``
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(resolve(process.argv[1]))).href) {
+function isDirectCli(): boolean {
+  const entry = process.argv[1]
+  if (!entry || entry === '-') return false
+  // stdin/eval 的 argv 不是文件契约；导入库时不让调用方入口的路径错误触发 CLI。
+  try { return import.meta.url === pathToFileURL(realpathSync(resolve(entry))).href }
+  catch { return false }
+}
+
+if (isDirectCli()) {
   if (process.argv.length !== 4) throw new Error('intake-agent-review-usage')
   // 输入文件是审核材料；输出只是草稿。发布它可能授权合并，必须另有明确用户授权。
   process.stdout.write(createAgentReviewComment(JSON.parse(readFileSync(process.argv[2]!, 'utf8')),

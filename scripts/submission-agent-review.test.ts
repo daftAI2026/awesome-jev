@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Agent 分类收据、真实报告编码与共享离线收录状态机
- * [OUTPUT]: 验证短口令、分类与版本绑定、访客拒绝、完整复核及原有 CI/许可证门
+ * [OUTPUT]: 验证别名 CLI 与非文件入口的安全导入、短口令、分类版本绑定及原有权限/CI/许可证门
  * [POS]: scripts 的 Agent 到维护者授权回归；只生成离线评论，不使用真实账号
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -21,6 +21,23 @@ const assessment = () => ({ repo: 'test/new', sha: SOURCE, category: 'alternativ
 function approve(h: ReturnType<typeof harness>) {
   h.state.comments[1]!.body = createAgentReviewComment(h.state.comments[0]!, assessment())
 }
+
+test('library imports from stdin or eval never treat a non-file argv entry as the CLI', () => {
+  const root = mkdtempSync(join(tmpdir(), 'jev-review-import-'))
+  try {
+    const code = `const m = await import(${JSON.stringify(new URL('./submission-agent-review.ts', import.meta.url).href)}); ` +
+      "process.stdout.write(typeof m.createAgentReviewComment === 'function' ? 'library-import-ok' : 'missing-export')"
+    for (const args of [
+      ['--input-type=module', '-'],
+      ['--input-type=module', '--eval', code],
+      ['--input-type=module', '--eval', code, join(root, 'nonexistent-entry.ts')],
+    ]) {
+      const run = spawnSync(process.execPath, ['--experimental-strip-types', ...args], { input: code, encoding: 'utf8', timeout: 10000 })
+      assert.equal(run.status, 0, run.stderr)
+      assert.equal(run.stdout, 'library-import-ok', 'Importing the library must not run the approval CLI')
+    }
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
 
 test('direct CLI through a symlinked directory produces a nonempty valid draft, not a silent success', () => {
   const root = mkdtempSync(join(tmpdir(), 'jev-review-cli-'))
