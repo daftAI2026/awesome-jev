@@ -1,48 +1,48 @@
 {
-  "at": "2026-10-04T21:24:55.421Z",
+  "at": "2026-10-05T05:42:31.403Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2414,
+      "total": 2420,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 7917,
+      "total": 7984,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 6638,
+      "total": 6683,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 154,
-      "total": 554,
+      "fetched": 200,
+      "total": 555,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 180,
-      "total": 580,
+      "fetched": 200,
+      "total": 583,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3506,
+      "total": 3514,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 0,
-      "total": 0,
+      "fetched": 100,
+      "total": 28928,
       "status": "github-rate-limited"
     }
   ],
@@ -52,7 +52,7 @@
     "batches": 22,
     "cost": 22,
     "other": 1000,
-    "remaining": 1087,
+    "remaining": 1088,
     "top100": {
       "ok": 100,
       "total": 100,
@@ -76,81 +76,46 @@
         "databaseId": 1376671563
       },
       {
-        "from": "bunsdev/typesafe-ai-playground",
-        "to": "typesafeai/typesafe-playground",
-        "databaseId": 1373324760
+        "from": "chenjingdev/jev",
+        "to": "chenjingdev-archive/jev",
+        "databaseId": 1378914323
       },
       {
-        "from": "huntedman/jevlint",
-        "to": "iamtoomas/jevlint",
-        "databaseId": 1374372746
+        "from": "stephenlb/truetype.ai-open",
+        "to": "stephenlb/system-one-model",
+        "databaseId": 1376388571
       },
       {
-        "from": "phureewat29/got-jev",
-        "to": "phureewat29/jev-got",
-        "databaseId": 1374274889
+        "from": "dperezcabrera/system-one-chess",
+        "to": "dperezcabrera/ai-chess-lab",
+        "databaseId": 1380374177
       },
       {
-        "from": "zavocc/ground-zero",
-        "to": "wmcbtech30/ground-zero",
-        "databaseId": 1375280181
+        "from": "devonance/doomsat",
+        "to": "doom-satellite/doomsat",
+        "databaseId": 1381009481
       },
       {
-        "from": "kunobi-ninja/kunobi-jev",
-        "to": "kunobi-ninja/kunobi-decision",
-        "databaseId": 1374093481
+        "from": "tayaee/typesafe-ai-jev-demo",
+        "to": "tayaee/classifier-benchmark-results",
+        "databaseId": 1376777707
       },
       {
-        "from": "tinyhumansai/tinyjevclient",
-        "to": "tinyhumansai/tinydecisionmodels",
-        "databaseId": 1374366286
+        "from": "faizullah9181/esketcher",
+        "to": "faizullah9181/jev-esketcher",
+        "databaseId": 1383974102
       },
       {
-        "from": "bunsdev/typesafe-ui",
-        "to": "typesafeai/typesafe-ui",
-        "databaseId": 1373757159
-      },
-      {
-        "from": "fruitymcdoo/jevchat",
-        "to": "sonofsaris/jevchat",
-        "databaseId": 1378948439
-      },
-      {
-        "from": "church-of-lane/csharp-jef-sdk",
-        "to": "church-of-lane/csharp-typesafe-sdk",
-        "databaseId": 1378876381
-      },
-      {
-        "from": "completedottech/jev-factorio-agent",
-        "to": "jevplays-games/jev-factorio-agent",
-        "databaseId": 1379060982
-      },
-      {
-        "from": "navidkashani/jev-guard",
-        "to": "veronalabs/spamlens",
-        "databaseId": 1380305332
-      },
-      {
-        "from": "peterfriese/jev-foundation-models",
-        "to": "peterfriese/system-one-foundation-models",
-        "databaseId": 1380219642
-      },
-      {
-        "from": "zchee/typesafe-sdk-rust",
-        "to": "zchee/decision-model-sdk-rust",
-        "databaseId": 1376458463
-      },
-      {
-        "from": "carlaiau/readwithjev",
-        "to": "carlaiau/read-with-jev",
-        "databaseId": 1375767462
+        "from": "monotykamary/jev-fabric",
+        "to": "fabric-runtime/jev-fabric",
+        "databaseId": 1387099307
       }
     ]
   },
   "reviewed": 0,
   "added": 0,
   "pending": 2000,
-  "overflow": 533,
+  "overflow": 799,
   "evicted": 0,
   "receipts": [],
   "identity": {
@@ -164,5 +129,5 @@
     "phase": "discovery",
     "reason": "github-rate-limited"
   },
-  "totalProjects": 2187
+  "totalProjects": 2188
 }
