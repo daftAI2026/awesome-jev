@@ -73,11 +73,13 @@ test('direct file-URL CLI preserves module query and fragment identity and alway
     const report = join(root, 'report.json'), input = join(root, 'assessment.json')
     writeFileSync(report, JSON.stringify(h.state.comments[0])); writeFileSync(input, JSON.stringify(assessment()))
     const entry = pathToFileURL(join(alias, 'submission-agent-review.ts')).href
-    for (const suffix of ['', '?review=fixture', '#review', '?review=fixture#review']) {
-      const run = spawnSync(process.execPath, ['--experimental-strip-types', '--entry-url', entry + suffix, report, input],
-        { encoding: 'utf8', timeout: 10000 })
-      assert.equal(run.status, 0, run.stderr)
-      assert.ok(parseAgentReviewComment(run.stdout), 'A successful direct invocation must emit its receipt')
+    for (const url of [entry, entry.replace('file:', 'FILE:'), entry.replace('file:', 'File:'), entry.replace('file:///', 'file://localhost/')]) {
+      for (const suffix of ['', '?review=fixture', '#review', '?review=fixture#review']) {
+        const run = spawnSync(process.execPath, ['--experimental-strip-types', '--entry-url', url + suffix, report, input],
+          { encoding: 'utf8', timeout: 10000 })
+        assert.equal(run.status, 0, run.stderr)
+        assert.ok(parseAgentReviewComment(run.stdout), 'A successful direct invocation must emit its receipt')
+      }
     }
   } finally { rmSync(root, { recursive: true, force: true }) }
 })

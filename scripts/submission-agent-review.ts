@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖真实投稿报告、分类白名单、固定提交证据与 Node 文件/URL 规范化
+ * [INPUT]: 依赖真实投稿报告、分类白名单、固定提交证据与 Node 文件/URL 协议解析
  * [OUTPUT]: 提供可安全导入的 Agent OK 分类收据解析、报告摘要绑定及路径/URL 别名兼容的只读草稿 CLI
  * [POS]: scripts 的人工复核交接契约；不提交评论、不授予权限，也不改写 Jev 原始决定
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -83,7 +83,8 @@ function isDirectCli(): boolean {
   if (!entry || entry === '-' || evaluated) return false
   // eval/print 的应用参数即使指向本文件也不是入口；其余路径别名只为直接 CLI 规范化。
   try {
-    const url = entry.startsWith('file:') ? new URL(entry) : pathToFileURL(resolve(entry))
+    const parsed = URL.canParse(entry) ? new URL(entry) : undefined
+    const url = parsed?.protocol === 'file:' ? parsed : pathToFileURL(resolve(entry))
     const canonical = pathToFileURL(realpathSync(fileURLToPath(url)))
     canonical.search = url.search; canonical.hash = url.hash
     return import.meta.url === canonical.href
