@@ -79,8 +79,9 @@ export function createAgentReviewComment(report: ReviewComment, assessment: Asse
 
 function isDirectCli(): boolean {
   const entry = process.argv[1]
-  if (!entry || entry === '-') return false
-  // stdin/eval 的 argv 不是文件契约；导入库时不让调用方入口的路径错误触发 CLI。
+  const evaluated = process.execArgv.some((arg) => /^(?:-[ep]+$|--(?:eval|print)(?:=|$))/.test(arg))
+  if (!entry || entry === '-' || evaluated) return false
+  // eval/print 的应用参数即使指向本文件也不是入口；其余路径别名只为直接 CLI 规范化。
   try { return import.meta.url === pathToFileURL(realpathSync(resolve(entry))).href }
   catch { return false }
 }

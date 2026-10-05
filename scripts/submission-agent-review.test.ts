@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Agent 分类收据、真实报告编码与共享离线收录状态机
- * [OUTPUT]: 验证别名 CLI 与非文件入口的安全导入、短口令、分类版本绑定及原有权限/CI/许可证门
+ * [OUTPUT]: 验证别名 CLI 与 stdin/eval/print 安全导入、短口令、分类版本绑定及原有权限/CI/许可证门
  * [POS]: scripts 的 Agent 到维护者授权回归；只生成离线评论，不使用真实账号
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -22,19 +22,32 @@ function approve(h: ReturnType<typeof harness>) {
   h.state.comments[1]!.body = createAgentReviewComment(h.state.comments[0]!, assessment())
 }
 
-test('library imports from stdin or eval never treat a non-file argv entry as the CLI', () => {
+test('library imports from stdin, eval and print never mistake application arguments for the CLI', () => {
   const root = mkdtempSync(join(tmpdir(), 'jev-review-import-'))
   try {
-    const code = `const m = await import(${JSON.stringify(new URL('./submission-agent-review.ts', import.meta.url).href)}); ` +
+    const moduleUrl = new URL('./submission-agent-review.ts', import.meta.url)
+    const entry = fileURLToPath(moduleUrl), alias = join(root, 'entry-alias.ts')
+    symlinkSync(entry, alias, 'file')
+    const code = `const m = await import(${JSON.stringify(moduleUrl.href)}); ` +
       "process.stdout.write(typeof m.createAgentReviewComment === 'function' ? 'library-import-ok' : 'missing-export')"
+    const printCode = `import(${JSON.stringify(moduleUrl.href)}).then(m => ` +
+      "process.stdout.write(typeof m.createAgentReviewComment === 'function' ? 'library-import-ok' : 'missing-export'))"
     for (const args of [
       ['--input-type=module', '-'],
       ['--input-type=module', '--eval', code],
       ['--input-type=module', '--eval', code, join(root, 'nonexistent-entry.ts')],
+      ['--input-type=module', '--eval', code, entry],
+      ['--input-type=module', '--eval', code, entry, join(root, 'report.json'), join(root, 'assessment.json')],
+      ['--input-type=module', '-e', code, alias],
+      ['--input-type=module', `--eval=${code}`, entry],
+      ['--input-type=commonjs', '--print', printCode, entry],
+      ['--input-type=commonjs', '-p', printCode, alias],
+      ['--input-type=commonjs', '-pe', printCode, entry],
     ]) {
       const run = spawnSync(process.execPath, ['--experimental-strip-types', ...args], { input: code, encoding: 'utf8', timeout: 10000 })
       assert.equal(run.status, 0, run.stderr)
-      assert.equal(run.stdout, 'library-import-ok', 'Importing the library must not run the approval CLI')
+      assert.ok(run.stdout.includes('library-import-ok'), run.stdout)
+      assert.ok(!run.stdout.includes(AGENT_REVIEW_MARKER), 'Importing the library must not run the approval CLI')
     }
   } finally { rmSync(root, { recursive: true, force: true }) }
 })
