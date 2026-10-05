@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Agent 分类收据、真实报告编码与共享离线收录状态机
- * [OUTPUT]: 验证短口令、分类与版本绑定、访客拒绝、完整复核及原有 CI/许可证门
+ * [OUTPUT]: 验证路径/URL 别名 CLI 与 stdin/eval/print 导入、短口令、分类版本绑定及原有权限/CI/许可证门
  * [POS]: scripts 的 Agent 到维护者授权回归；只生成离线评论，不使用真实账号
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto'
 import { mkdtempSync, writeFileSync, symlinkSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { spawnSync } from 'node:child_process'
 import { createAgentReviewComment, parseAgentReviewComment, AGENT_REVIEW_MARKER } from './submission-agent-review.ts'
 import { harness, SOURCE, PR_NUMBER, ISSUE_NUMBER, initialKeep, deepReview } from './submission-intake-fixtures.ts'
@@ -22,6 +22,36 @@ function approve(h: ReturnType<typeof harness>) {
   h.state.comments[1]!.body = createAgentReviewComment(h.state.comments[0]!, assessment())
 }
 
+test('library imports from stdin, eval and print never mistake application arguments for the CLI', () => {
+  const root = mkdtempSync(join(tmpdir(), 'jev-review-import-'))
+  try {
+    const moduleUrl = new URL('./submission-agent-review.ts', import.meta.url)
+    const entry = fileURLToPath(moduleUrl), alias = join(root, 'entry-alias.ts')
+    symlinkSync(entry, alias, 'file')
+    const code = `const m = await import(${JSON.stringify(moduleUrl.href)}); ` +
+      "process.stdout.write(typeof m.createAgentReviewComment === 'function' ? 'library-import-ok' : 'missing-export')"
+    const printCode = `import(${JSON.stringify(moduleUrl.href)}).then(m => ` +
+      "process.stdout.write(typeof m.createAgentReviewComment === 'function' ? 'library-import-ok' : 'missing-export'))"
+    for (const args of [
+      ['--input-type=module', '-'],
+      ['--input-type=module', '--eval', code],
+      ['--input-type=module', '--eval', code, join(root, 'nonexistent-entry.ts')],
+      ['--input-type=module', '--eval', code, entry],
+      ['--input-type=module', '--eval', code, entry, join(root, 'report.json'), join(root, 'assessment.json')],
+      ['--input-type=module', '-e', code, alias],
+      ['--input-type=module', `--eval=${code}`, entry],
+      ['--input-type=commonjs', '--print', printCode, entry],
+      ['--input-type=commonjs', '-p', printCode, alias],
+      ['--input-type=commonjs', '-pe', printCode, entry],
+    ]) {
+      const run = spawnSync(process.execPath, ['--experimental-strip-types', ...args], { input: code, encoding: 'utf8', timeout: 10000 })
+      assert.equal(run.status, 0, run.stderr)
+      assert.ok(run.stdout.includes('library-import-ok'), run.stdout)
+      assert.ok(!run.stdout.includes(AGENT_REVIEW_MARKER), 'Importing the library must not run the approval CLI')
+    }
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
 test('direct CLI through a symlinked directory produces a nonempty valid draft, not a silent success', () => {
   const root = mkdtempSync(join(tmpdir(), 'jev-review-cli-'))
   try {
@@ -32,6 +62,25 @@ test('direct CLI through a symlinked directory produces a nonempty valid draft, 
     const run = spawnSync(process.execPath, ['--experimental-strip-types', join(alias, 'submission-agent-review.ts'), report, input], { encoding: 'utf8' })
     assert.equal(run.status, 0, run.stderr)
     assert.ok(parseAgentReviewComment(run.stdout), 'The stdout itself must be a consumable receipt')
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
+test('direct file-URL CLI preserves module query and fragment identity and always produces a draft', () => {
+  const root = mkdtempSync(join(tmpdir(), 'jev-review-url-'))
+  try {
+    const alias = join(root, 'scripts alias'), h = harness()
+    symlinkSync(dirname(fileURLToPath(import.meta.url)), alias, 'dir')
+    const report = join(root, 'report.json'), input = join(root, 'assessment.json')
+    writeFileSync(report, JSON.stringify(h.state.comments[0])); writeFileSync(input, JSON.stringify(assessment()))
+    const entry = pathToFileURL(join(alias, 'submission-agent-review.ts')).href
+    for (const url of [entry, entry.replace('file:', 'FILE:'), entry.replace('file:', 'File:'), entry.replace('file:///', 'file://localhost/')]) {
+      for (const suffix of ['', '?review=fixture', '#review', '?review=fixture#review']) {
+        const run = spawnSync(process.execPath, ['--experimental-strip-types', '--entry-url', url + suffix, report, input],
+          { encoding: 'utf8', timeout: 10000 })
+        assert.equal(run.status, 0, run.stderr)
+        assert.ok(parseAgentReviewComment(run.stdout), 'A successful direct invocation must emit its receipt')
+      }
+    }
   } finally { rmSync(root, { recursive: true, force: true }) }
 })
 

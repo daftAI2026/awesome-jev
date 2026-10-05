@@ -1,13 +1,13 @@
 /**
- * [INPUT]: 依赖真实投稿报告、现有分类白名单与固定提交证据 URL
- * [OUTPUT]: 提供独立 Agent OK 分类收据的严格解析、报告摘要绑定及只输出草稿的 CLI
+ * [INPUT]: 依赖真实投稿报告、分类白名单、固定提交证据与 Node 文件/URL 协议解析
+ * [OUTPUT]: 提供可安全导入的 Agent OK 分类收据解析、报告摘要绑定及路径/URL 别名兼容的只读草稿 CLI
  * [POS]: scripts 的人工复核交接契约；不提交评论、不授予权限，也不改写 Jev 原始决定
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createHash } from 'node:crypto'
 import { readFileSync, realpathSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { pathToFileURL } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { isPinnedEvidenceUrl } from '../src/lib/inclusion.ts'
 import { repoKey } from './catalog.ts'
 import { isProjectCategory } from './jev-client.ts'
@@ -77,7 +77,22 @@ export function createAgentReviewComment(report: ReviewComment, assessment: Asse
   return `/ok\n${AGENT_REVIEW_MARKER}\n\`\`\`json\n${JSON.stringify(value, null, 2)}\n\`\`\``
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(resolve(process.argv[1]))).href) {
+function isDirectCli(): boolean {
+  const entry = process.argv[1]
+  const evaluated = process.execArgv.some((arg) => /^(?:-[ep]+$|--(?:eval|print)(?:=|$))/.test(arg))
+  if (!entry || entry === '-' || evaluated) return false
+  // eval/print 的应用参数即使指向本文件也不是入口；其余路径别名只为直接 CLI 规范化。
+  try {
+    const parsed = URL.canParse(entry) ? new URL(entry) : undefined
+    const url = parsed?.protocol === 'file:' ? parsed : pathToFileURL(resolve(entry))
+    const canonical = pathToFileURL(realpathSync(fileURLToPath(url)))
+    canonical.search = url.search; canonical.hash = url.hash
+    return import.meta.url === canonical.href
+  }
+  catch { return false }
+}
+
+if (isDirectCli()) {
   if (process.argv.length !== 4) throw new Error('intake-agent-review-usage')
   // 输入文件是审核材料；输出只是草稿。发布它可能授权合并，必须另有明确用户授权。
   process.stdout.write(createAgentReviewComment(JSON.parse(readFileSync(process.argv[2]!, 'utf8')),

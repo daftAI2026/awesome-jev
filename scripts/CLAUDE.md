@@ -62,8 +62,8 @@ score-sources.ts: 离线来源打分/分类入口，不进入前端包
 submission-entry.test.ts: Node test 页头链接、表单标题与单仓库候选提取，离线验证投稿接入而不创建真实申请
 submission-review.test.ts: Node test submission-review 的契约与回归验证，运行 npm test
 submission-review.ts: 可信投稿提取、共享输入指纹/固定版本目录读取、保留真实评分的可失效报告与请求前预算评论
-submission-agent-review.ts: 独立 OK 分类收据/报告摘要绑定与只输出草稿的 CLI，不替 Agent 授权
-submission-agent-review.test.ts: Agent 分类收据、短口令/权限、输入版本与原有 CI/许可证门的离线回归
+submission-agent-review.ts: 独立 OK 分类收据/报告摘要绑定与按协议解析的路径/URL 别名 CLI，安全支持 stdin/eval/print 导入，不替 Agent 授权
+submission-agent-review.test.ts: CLI 路径/URL 别名与求值模式、分类收据、短口令/权限、输入版本与原有 CI/许可证门的离线回归
 submission-catalog-pr.ts: 固定 merge-base 上的纯追加目录与完整 README/sitemap 共用验证，正负向自动处理均拒绝夹带改动
 submission-rejection.ts: 最终整仓不匹配的拒收意图/真实关闭事件与本仓 expected SHA 清理；单次尝试/终态持久化，未知删除结果保留分支转人工
 submission-github.ts: 正负向投稿共用的有界分页、固定 SHA 文件与 main 读取
