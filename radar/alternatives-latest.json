@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-05T00:09:18.641Z",
+  "at": "2026-10-05T10:50:20.344Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,51 +20,73 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
-  "added": 1,
+  "reviewed": 5,
+  "added": 0,
   "pending": 110,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "foxl-ai/bobcat",
+      "repo": "omnijev/awesome-jev-papers",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "a3339e373d10398073d8ca4c3dd5d8c936cff50b",
+      "evidenceUrl": "https://github.com/omnijev/awesome-jev-papers/blob/a3339e373d10398073d8ca4c3dd5d8c936cff50b/README.md",
+      "evidenceSha256": "d1a1469300dcc8b78c29e16a1499021ad6dec6744e5d968574f48327e7b14402",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-05T10:50:20.344Z"
+    },
+    {
+      "repo": "yeyan00/jev-decision",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "811bf5083a12622b0e63a98084312a91ac119b80",
+      "evidenceUrl": "https://github.com/yeyan00/jev-decision/blob/811bf5083a12622b0e63a98084312a91ac119b80/README.md",
+      "evidenceSha256": "85206fb32c24069bf97323b07221f257e03e1efc5ce97ff1e56dac961781d0f9",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-05T10:50:20.344Z"
+    },
+    {
+      "repo": "donthash/laya-nepali",
       "status": "review",
       "score": {
-        "jevAbout": 0.96,
+        "jevAbout": 0.86,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.89,
-        "category": "alternatives"
+        "jevKeepConfidence": 0.53,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "10f760ed97256921582d3b6f0c35a0311985a7e0",
-      "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/10f760ed97256921582d3b6f0c35a0311985a7e0/README.md",
-      "evidenceSha256": "396b36d5725acc7080d4001203948e15ee85e6009075a0f76615c190b77927c6",
+      "sha": "fb76d43728a8d63a8e39b622f789709308345d8b",
+      "evidenceUrl": "https://github.com/donthash/laya-nepali/blob/fb76d43728a8d63a8e39b622f789709308345d8b/README.md",
+      "evidenceSha256": "87b91265fa7e0b6558dc4294cf7532b8f6006704304f3838d163d6901acac86a",
       "model": "jev-latest",
-      "checkedAt": "2026-10-05T00:09:18.641Z"
+      "checkedAt": "2026-10-05T10:50:20.344Z"
     },
     {
-      "repo": "lakoreai/pholaya",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "muthuishere/openjevx",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "70c759a2e241bca2431c4e696f5629b689f5bb87",
+      "evidenceUrl": "https://github.com/muthuishere/openjevx/blob/70c759a2e241bca2431c4e696f5629b689f5bb87/README.md",
+      "evidenceSha256": "4faf7cf5e357ae22656146cef1be93b192ce3679d07244f8730fede80e272ce0",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-05T10:50:20.344Z"
     },
     {
-      "repo": "momen-devv/multitenant-ecommerce",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ruhalis/davout",
-      "status": "keep",
+      "repo": "rosariodibartolo/jev-agent-skill",
+      "status": "review",
       "score": {
-        "jevAbout": 0.9,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.96,
-        "category": "alternatives"
+        "jevAbout": 0.1,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.43,
+        "category": "other"
       },
-      "sha": "3b1b6a9a0adc244a1ce88e89d28166fb183c0e12",
-      "evidenceUrl": "https://github.com/ruhalis/davout/blob/3b1b6a9a0adc244a1ce88e89d28166fb183c0e12/README.md",
-      "evidenceSha256": "0517b8215f357068f48edc699919d23df7fdc05ab1a85bceb4283972981cb0c6",
+      "sha": "8054f9a7c6f595ea074ae819cc78df05b7146fda",
+      "evidenceUrl": "https://github.com/rosariodibartolo/jev-agent-skill/blob/8054f9a7c6f595ea074ae819cc78df05b7146fda/README.md",
+      "evidenceSha256": "f28b9691ac065aa80a59782c5d19377aad19548f658672ca7714a6af1b726b91",
       "model": "jev-latest",
-      "checkedAt": "2026-10-05T00:09:18.641Z"
+      "checkedAt": "2026-10-05T10:50:20.344Z"
     }
   ],
   "identity": {
