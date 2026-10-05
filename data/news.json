@@ -3152,7 +3152,7 @@
   {
     "id": "ipj744kb2bbev4v7nrkw8lclm",
     "title": "OpenClaw Enterprise 推出 ClawCast 第12期",
-    "originalTitle": "The ClawCast — Jev &amp; OpenClaw Enterprise (Episode 12) https://x.com/i/broadcasts/1mxPaZewLAmKN",
+    "originalTitle": "The ClawCast — Jev & OpenClaw Enterprise (Episode 12) https://x.com/i/broadcasts/1mxPaZewLAmKN",
     "summary": "The ClawCast — Jev & OpenClaw Enterprise（第12期）https://x.com/i/broadcasts/1mxPaZewLAmKN",
     "sourceName": "X：OpenClaw (@openclaw)",
     "publishedAt": "2026-09-30T18:30:05.000Z",
@@ -3182,7 +3182,7 @@
   {
     "id": "mwjpf3tb5hxgs7xgjd9ec80jq",
     "title": "OpenClaw 播客聊 Jev 与企业版",
-    "originalTitle": "Today on Clawcast we're talking all things Jev with @allietheicon and OpenClaw Enterprise with @kevins8 &amp; @jlehman_",
+    "originalTitle": "Today on Clawcast we're talking all things Jev with @allietheicon and OpenClaw Enterprise with @kevins8 & @jlehman_",
     "summary": "今天的 Clawcast 我们和 @allietheicon 聊 Jev 的一切，和 @kevins8 &amp; @jlehman_ 聊 OpenClaw Enterprise\n\n我们将在多个平台同步直播，点击这里在你选择的平台加入我们：https://openclaw.ai/podcast/episode-12",
     "sourceName": "X：OpenClaw (@openclaw)",
     "publishedAt": "2026-09-30T17:31:48.000Z",
@@ -3242,7 +3242,7 @@
   {
     "id": "ytx2eh7sl54lo6owh2pvjnvpt",
     "title": "OpenClaw 播客第12期谈决策模型与智能体",
-    "originalTitle": "Jev &amp; OpenClaw Enterprise",
+    "originalTitle": "Jev & OpenClaw Enterprise",
     "summary": "Jev & OpenClaw Enterprise\n\n@hrudolph 和 @Pat_Erichsen 与来自 @typesafeai 的 @allietheicon 以及 @jlehman_ 讨论决策模型。来自 @OpenAI 的 @kevins8 稍后加入，讨论工作中的智能体。\n\n观看或收听 The ClawCast 第 12 期：\nhttps://openclaw.ai/podcast/episode-12",
     "sourceName": "X：OpenClaw (@openclaw)",
     "publishedAt": "2026-10-01T01:50:28.000Z",
@@ -3778,5 +3778,20 @@
     "reason": null,
     "originalUrl": "https://www.ithome.com/1/009/744.htm",
     "aihotUrl": "https://aihot.news/items/im7v0rfruaoz3f9j50iiwrnus"
+  },
+  {
+    "id": "xnpgytx3xm59vpq5kxu2y49x4",
+    "title": "Replit 上周更新：GPT-6.1 Sol 与 Claude Sonnet 5.5",
+    "originalTitle": "In case you missed it, here's what shipped last week:",
+    "summary": "如果你错过了，以下是上周发布的内容：\n\n- 使用新模型构建：GPT-6.1 Sol 和 Claude Sonnet 5.5\n- 通过 AI 集成让 agent 使用 Jev\n- 更新了 Settings 中的 UI\n- 企业版：通过公司级规则或受控例外设置高级 Workplace 设置。\n\n更多内容请查看我们的 changelog：\nhttps://docs.replit.com/updates/2026/10/02/changelog",
+    "sourceName": "X：Replit (@Replit)",
+    "publishedAt": "2026-10-05T15:30:01.000Z",
+    "discoveredAt": "2026-10-05T15:46:28.250Z",
+    "category": "ai-products",
+    "score": 32,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/Replit/status/2107131199307063778",
+    "aihotUrl": "https://aihot.news/items/xnpgytx3xm59vpq5kxu2y49x4"
   }
 ]
