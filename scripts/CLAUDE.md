@@ -62,6 +62,7 @@ submission-entry.test.ts: Node test 页头链接、表单标题与单仓库候�
 submission-review.test.ts: Node test submission-review 的契约与回归验证，运行 npm test
 submission-review.ts: 可信投稿提取、共享输入指纹/固定版本目录读取、保留真实评分的可失效报告与请求前预算评论
 submission-agent-review.test.ts: Agent 分类收据、短口令/权限、输入版本与原有 CI/许可证门的离线回归
+submission-rejection.test.ts: 关闭事件/拒收收据、分支 CAS、fork/共享/保护保留及未知写入恢复的离线状态机
 submission-rejection-policy.test.ts: 完整最终不匹配、混合结果及报告失效的负向纯政策回归
 submission-intake-policy.ts: 纯准入门，完整真实报告/当前输入与人工批准对应；只允许目录追加及生成资产
 submission-intake-policy.test.ts: Node test 虚假/过期报告、完整覆盖、命令语法及纯数据改动边界
