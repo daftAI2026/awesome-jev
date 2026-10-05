@@ -1,3 +1,9 @@
+<!--
+[INPUT]: 依赖 GitHub Actions 工作流、scripts 采集/审核/发布契约及仓库权限与分支配置
+[OUTPUT]: 提供采集、建议性审核、条件收录、可信发布与分支生命周期的运行边界
+[POS]: docs 的自动化运维契约，连接工作流权限隔离与目录数据发布，不作为运行时代码依赖
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
 # Collector (JEV 资讯收集)
 
 ## Scope and data contract
@@ -203,7 +209,9 @@ The homepage uses the newest Git commit touching `data/github.json` or `data/new
 
 ### Intake configuration
 
-Use built-in `github-actions[bot]` and `GITHUB_TOKEN`; no new bot account, GitHub App, PAT, service or Jev subscription is needed. Enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** for PR creation. Default permissions remain read-only; only the isolated intake job has `contents: write`, `pull-requests: write`, `issues: write` and `actions: write` (validation dispatch). Radar's separate handoff job has only `actions: write`, never a catalog-writing token. Although the setting permits approving reviews, this implementation never submits them. Native auto-merge and global branch protection are not changed.
+Use built-in `github-actions[bot]` and `GITHUB_TOKEN`; no new bot account, GitHub App, PAT, service or Jev subscription is needed. Enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** for PR creation. Default permissions remain read-only; only the isolated intake job has `contents: write`, `pull-requests: write`, `issues: write` and `actions: write` (validation dispatch). Radar's separate handoff job has only `actions: write`, never a catalog-writing token. Although the setting permits approving reviews, this implementation never submits them. Native auto-merge remains disabled; the controller performs an ordinary squash merge after its own gates pass.
+
+Protect only `main` against force pushes and deletion, including administrators (`enforce_admins=true`, `allow_force_pushes=false`, `allow_deletions=false`). Keep the branch unlocked, push restrictions unset, and required PR reviews/status checks unset. This preserves normal fast-forward data publishing and intake PR merges without granting the bot a bypass. Basic protection does not enforce review or CI for every writer; intake's exact-version CI gate remains independent. Before adding required PR/CI rules, adapt the direct-to-main collectors and bot-created PR validation: GitHub does not count `workflow_dispatch` job checks toward a ruleset's required PR checks. See [branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) and [required-check event eligibility](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks).
 
 An owning organization can prohibit this setting. A repository update returning HTTP 409 does not enable intake: an organization administrator must explicitly authorize and enable the corresponding organization policy first, while retaining read-only defaults, then enable PR creation for this repository. Organization API management needs `admin:org` or the appropriate Actions-policy permission; the intake token itself never needs organization administration. Do not copy a maintainer's credential into workflow secrets to bypass this policy.
 
