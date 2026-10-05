@@ -8,6 +8,7 @@ docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为�
 scripts/ - 自动 GitHub 身份建基线/按 ID 刷新、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
 public/ - 静态 favicon、robots、sitemap、llms 与 OG 运行时字库 (1 子目录: og-fonts)
 radar/ - 生态与替代实现的状态及发布报告
+.agents/ - 项目专用 Agent 复核 skill 与独立分类收据交接 (1 子目录: skills)，不部署云端 Agent
 .github/ - 投稿模板、隔离的建议性审核、条件收录与可信数据发布；收录 CI 显式唤醒 main 控制器
 </directory>
 <config>
@@ -17,7 +18,7 @@ wrangler.toml - awesome-jev-project Worker 与 Static Assets 字库绑定配置
 src/index.css - 唯一语义主题、字体与视觉 token
 </config>
 
-仓库开启 `delete_branch_on_merge`，本仓已合并 PR 的来源分支统一由 GitHub 原生回收，不区分人工或机器人；不在收录控制器另建删除链路，不管理外部 fork。权限与安全边界见 docs/collector.md。
+仓库开启 `delete_branch_on_merge`，本仓已合并 PR 的来源分支统一由 GitHub 原生回收，不区分人工或机器人；合并后的清理不另建链路；未合并的明确不匹配纯投稿 PR 由独立拒收门关闭，本仓合格分支以原审核 head 做 CAS 回收并记终态，不管理外部 fork。权限与安全边界见 docs/collector.md。
 
 仅 `main` 启用基础分支保护：禁止强推和删除，管理员同样受约束；不锁分支、不限制普通推送、不新增 PR 审批或必需 CI 门禁，保留可信采集器的普通推送与收录机器人的 squash 合并。此保护不替代收录控制器的精确版本 CI 校验。
 

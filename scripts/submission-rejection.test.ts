@@ -6,26 +6,32 @@
  */
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { harness, SOURCE, PREFIX, BOT, REPOSITORY_ID, deepReview, type Comment } from './submission-intake-fixtures.ts'
+import { harness, PREFIX, BOT, REPOSITORY_ID, deepReview } from './submission-intake-fixtures.ts'
 import { processIntake, recentClosedTargets } from './submission-intake.ts'
 import { REPOSITORY } from './submission-review.ts'
 import type { BranchDeletion } from './github-ref-cleanup.ts'
 
-function rejectedFixture(fork = false) {
-  const h = harness(); h.contributor()
+function rejectedFixture(fork = false, h = harness()) {
+  if (!h.state.pr) h.contributor()
   if (!fork) h.state.pr!.head.repo = { id: REPOSITORY_ID, full_name: REPOSITORY }
   h.setReport([{ ...deepReview(), status: 'drop', reason: 'unrelated-evidence' }])
   h.state.comments = h.state.comments.slice(0, 1)
   h.state.ref = h.state.pr!.head.sha
   const state = { protected: false, siblings: [] as any[], events: [] as any[], deletes: [] as BranchDeletion[],
     failComment: false, failClose: false, failDelete: false, raceClose: false, raceDelete: false,
-    failedEnumeration: false, afterReceipt: undefined as (() => void) | undefined }
+    failDeleteBefore: false, failFinish: false, failAttempt: false,
+    failedEnumeration: false, afterReceipt: undefined as (() => void) | undefined, prComments: [] as typeof h.state.comments }
   const refPath = `${PREFIX}/git/ref/heads/${h.state.pr!.head.ref}`
   const api = h.options.api, write = h.options.write
   h.options.api = async (path, request) => {
     if (path === PREFIX) return { id: REPOSITORY_ID, node_id: 'R_current', full_name: REPOSITORY, default_branch: 'main' }
+    if (h.state.pr!.number !== h.state.issue.number && path === `${PREFIX}/issues/${h.state.pr!.number}`) {
+      return { ...h.state.issue, number: h.state.pr!.number, body: h.state.pr!.body,
+        state: h.state.pr!.state, pull_request: { url: `${PREFIX}/pulls/${h.state.pr!.number}` } }
+    }
     if (path.startsWith(`${PREFIX}/branches/`)) return { name: h.state.pr!.head.ref, protected: state.protected, commit: { sha: h.state.ref } }
     if (path.startsWith(`${PREFIX}/issues/${h.state.pr!.number}/events?`)) return structuredClone(state.events)
+    if (h.state.pr!.number !== h.state.issue.number && path.startsWith(`${PREFIX}/issues/${h.state.pr!.number}/comments?`)) return structuredClone(state.prComments)
     if (path.startsWith(`${PREFIX}/pulls?state=open`)) {
       if (state.failedEnumeration) throw new Error('github-http-503')
       return [...(h.state.pr!.state === 'open' ? [structuredClone(h.state.pr!)] : []), ...state.siblings]
@@ -40,28 +46,43 @@ function rejectedFixture(fork = false) {
     if (method === 'PATCH' && path === `${PREFIX}/pulls/${h.state.pr!.number}` && body.state === 'closed') {
       h.state.writes.push({ path, method, body })
       if (state.raceClose) { h.state.pr!.head.sha = 'd'.repeat(40); h.state.ref = h.state.pr!.head.sha }
-      h.state.pr!.state = h.state.issue.state = 'closed'
+      h.state.pr!.state = 'closed'
+      if (h.state.issue.pull_request) h.state.issue.state = 'closed'
       state.events.push({ event: 'closed', actor: { ...BOT }, created_at: '2026-10-04T10:06:00Z' })
       if (state.failClose) { state.failClose = false; throw new Error('github-write-outcome-unknown') }
       return structuredClone(h.state.pr)
     }
     if (method === 'POST' && path.endsWith('/comments')) {
-      const result = await write(path, method, body)
+      let result: unknown
+      if (h.state.pr!.number !== h.state.issue.number && path === `${PREFIX}/issues/${h.state.pr!.number}/comments`) {
+        const comment = { id: 200 + state.prComments.length, body: String(body.body), user: { ...BOT },
+          created_at: '2026-10-04T10:05:00Z', updated_at: '2026-10-04T10:05:00Z' }
+        state.prComments.push(comment); h.state.writes.push({ path, method, body }); result = comment
+      } else result = await write(path, method, body)
       state.afterReceipt?.(); state.afterReceipt = undefined
       if (state.failComment) { state.failComment = false; throw new Error('github-write-outcome-unknown') }
       return result
+    }
+    if (method === 'PATCH' && path.startsWith(`${PREFIX}/issues/comments/`)) {
+      const id = Number(path.split('/').at(-1)), comment = [...h.state.comments, ...state.prComments].find((c) => c.id === id)!
+      assert.ok(comment)
+      if (state.failFinish && String(body.body).includes('rejection-cleaned:')) { state.failFinish = false; throw new Error('github-write-outcome-unknown') }
+      comment.body = String(body.body)
+      if (state.failAttempt && comment.body.includes('rejection-delete-attempt:')) { state.failAttempt = false; throw new Error('github-write-outcome-unknown') }
+      h.state.writes.push({ path, method, body }); return structuredClone(comment)
     }
     return write(path, method, body)
   }
   const options = { ...h.options, deleteBranch: async (input: BranchDeletion) => {
     state.deletes.push(input)
+    if (state.failDeleteBefore) { state.failDeleteBefore = false; throw new Error('github-write-outcome-unknown') }
     if (state.raceDelete) h.state.ref = 'd'.repeat(40)
     if (input.beforeOid !== h.state.ref) throw new Error('github-ref-delete-unconfirmed')
     h.state.ref = undefined
     if (state.failDelete) { state.failDelete = false; throw new Error('github-write-outcome-unknown') }
   } }
   return { h, state, options, process: () => processIntake(options, h.state.issue.number),
-    receipt: () => h.state.comments.filter((c) => c.body.startsWith('<!-- awesome-jev-rejection:v1 -->')) }
+    receipt: () => [...h.state.comments, ...state.prComments].filter((c) => c.body.startsWith('<!-- awesome-jev-rejection:v1 -->')) }
 }
 
 test('current whole-project unrelated catalog PR closes before same-repo expected-SHA deletion', async () => {
@@ -72,6 +93,38 @@ test('current whole-project unrelated catalog PR closes before same-repo expecte
   assert.equal(f.h.state.ref, undefined)
   assert.equal(f.receipt().length, 1); assert.deepEqual(f.h.state.comments[0], oldReport)
   assert.equal(await f.process(), 'rejected-and-cleaned')
+  assert.equal(f.state.deletes.length, 1)
+})
+
+test('a completed cleanup never reclaims a branch somebody later restores at the same SHA', async () => {
+  const f = rejectedFixture(), original = f.h.state.ref
+  assert.equal(await f.process(), 'rejected-and-cleaned')
+  f.h.state.ref = original
+  assert.equal(await f.process(), 'rejected-and-cleaned')
+  assert.equal(f.h.state.ref, original)
+  assert.equal(f.state.deletes.length, 1)
+})
+
+test('unknown deletion or crash after durable attempt is not authority to retry an indistinguishable ref lifecycle', async () => {
+  for (const fault of ['failDeleteBefore', 'failFinish', 'failAttempt'] as const) {
+    const f = rejectedFixture(), old = f.h.state.ref
+    f.state[fault] = true
+    await f.process().catch(() => {})
+    const attempts = f.state.deletes.length
+    f.h.state.ref = old
+    assert.equal(await f.process(), 'rejected-cleanup-needs-maintainer', fault)
+    assert.equal(f.state.deletes.length, attempts)
+    assert.equal(f.h.state.ref, old)
+  }
+})
+
+test('a source Issue verdict can reject its pending generated PR, without fabricating a PR or closing the source Issue', async () => {
+  const h = harness(); await h.process()
+  const f = rejectedFixture(false, h), number = h.state.pr!.number
+  assert.equal(await f.process(), 'rejected-and-cleaned')
+  assert.equal(h.state.pr!.state, 'closed'); assert.equal(h.state.issue.state, 'open')
+  assert.equal(h.state.writes.filter((w) => w.path === `${PREFIX}/pulls` && w.method === 'POST').length, 1)
+  assert.equal(await processIntake(f.options, number), 'rejected-and-cleaned')
   assert.equal(f.state.deletes.length, 1)
 })
 

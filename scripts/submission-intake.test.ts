@@ -10,7 +10,7 @@ import { repoKey } from './catalog.ts'
 import { verifiedRun, parseIntakeMeta } from './submission-intake.ts'
 import type { DirectoryItem } from './model-types.ts'
 import { harness, PREFIX, BOT, BRANCH, ISSUE_NUMBER, PR_NUMBER, MAIN, SOURCE, SOURCE_ID, REPOSITORY_ID,
-  WORKFLOW_ID, STEPS, original, score, initialKeep, sha, catalogFiles, successCI, type Issue, type Pull, type Run, type Job,
+  WORKFLOW_ID, STEPS, original, score, initialKeep, sha, catalogFiles, successCI, type Pull, type Run, type Job,
 } from './submission-intake-fixtures.ts'
 
 type Harness = ReturnType<typeof harness>
