@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 7,
-    "\"typesafe.ai\" in:readme fork:false": 7,
-    "\"Jev\" \"System One\" in:readme fork:false": 7,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 7,
-    "code:\"api.typesafe.ai\" in:file": 1,
-    "code:\"@typesafe-ai/sdk\" in:file": 10,
-    "code:\"TYPESAFE_API_KEY\" in:file": 1,
-    "code:\"jev-latest\" in:file": 3
+    "topic:jev fork:false": 9,
+    "\"typesafe.ai\" in:readme fork:false": 9,
+    "\"Jev\" \"System One\" in:readme fork:false": 9,
+    "topic:typesafe-ai fork:false": 5,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
+    "\"TypeSafe\" \"Jev\" fork:false": 9,
+    "code:\"api.typesafe.ai\" in:file": 3,
+    "code:\"@typesafe-ai/sdk\" in:file": 1,
+    "code:\"TYPESAFE_API_KEY\" in:file": 3,
+    "code:\"jev-latest\" in:file": 5
   },
-  "metadataCursor": 693,
+  "metadataCursor": 1731,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -471,7 +471,6 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 2,
       "checkedAt": "2026-09-28T23:16:35.221Z",
-      "retryAt": "2026-10-05T23:16:35.221Z",
       "stars": 6,
       "lastReview": {
         "repo": "alexei-led/pi-model-router",
@@ -488,7 +487,13 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-09-28T23:16:35.221Z"
-      }
+      },
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "docs/jev-advisor.md"
+        }
+      ]
     },
     "akashpriyadarshii/jev-scout": {
       "status": "review",
@@ -2981,9 +2986,9 @@
     "nowork-studio/awesome-ai-startups": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
-      "checkedAt": "2026-09-28T05:23:57.119Z",
-      "retryAt": "2026-10-02T05:23:57.119Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z",
       "stars": 131
     },
     "devvgwardo/ghost-route": {
@@ -3761,7 +3766,7 @@
       "attempts": 4,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 3
+      "stars": 4
     },
     "yueyuhoshizora/trackradar": {
       "status": "review",
@@ -4647,7 +4652,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 338
+      "stars": 341
     },
     "datamonsterr/jev_auto_select_skills": {
       "status": "review",
@@ -5298,7 +5303,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
-      "stars": 10,
+      "stars": 11,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5367,7 +5372,7 @@
           "path": "journey_evals/evaluators.py"
         }
       ],
-      "stars": 1,
+      "stars": 2,
       "retryAt": "2026-10-07T22:16:19.563Z"
     },
     "luantak/is-malicious": {
@@ -5408,7 +5413,7 @@
         "checkedAt": "2026-10-01T05:53:38.417Z"
       },
       "retryAt": "2026-10-08T05:53:38.417Z",
-      "stars": 33
+      "stars": 36
     },
     "ashishakkumar/jev-checkpoint": {
       "status": "error",
@@ -6382,9 +6387,9 @@
     "omrigotlieb/awesome-jev": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
-      "checkedAt": "2026-09-28T05:23:57.119Z",
-      "retryAt": "2026-10-02T05:23:57.119Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z",
       "stars": 1
     },
     "perrydunnit/strudel-jev-jam": {
@@ -6674,9 +6679,9 @@
     "ljnchn/rps-game-jev": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
-      "checkedAt": "2026-09-28T05:23:57.119Z",
-      "retryAt": "2026-10-02T05:23:57.119Z"
+      "attempts": 4,
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z"
     },
     "monotykamary/is-jrecord": {
       "status": "review",
@@ -7005,9 +7010,9 @@
     "mabodx/awesome-jev": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
-      "checkedAt": "2026-09-28T05:23:57.119Z",
-      "retryAt": "2026-10-02T05:23:57.119Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z",
       "stars": 1
     },
     "rahulthakore16/n8n-nodes-jev": {
@@ -7479,9 +7484,9 @@
     "makiisthenes/jevaiexperimentation": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 3,
-      "checkedAt": "2026-09-28T05:23:57.119Z",
-      "retryAt": "2026-10-02T05:23:57.119Z"
+      "attempts": 4,
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z"
     },
     "sathwikkuncham/laya-snake-arena": {
       "status": "review",
@@ -10332,7 +10337,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1575
+      "stars": 1578
     },
     "anxiety471/idle-mmo-bot": {
       "status": "review",
@@ -15878,7 +15883,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
       "attempts": 2,
-      "stars": 101,
+      "stars": 102,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "timrogers/formanator",
@@ -16317,7 +16322,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 0
     },
     "sinsniwal/hey-cli": {
       "status": "review",
@@ -18186,6 +18192,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "baml_language/crates/baml_builtins2/baml_std/typesafeai/client.baml"
+        },
+        {
+          "query": "\"jev-latest\" in:file",
+          "path": "typescript2/app-website/blog-articles/2026-09-17-typesafe-ai-jev.mdx"
         }
       ],
       "checkedAt": "2026-09-29T22:15:08.398Z",
@@ -18210,8 +18220,7 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
-      },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      }
     },
     "thinkinaixyz/deepchat": {
       "status": "review",
@@ -20651,6 +20660,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "README.md"
         }
       ],
       "checkedAt": "2026-10-04T05:52:14.397Z",
@@ -20682,8 +20695,7 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
-      },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      }
     },
     "hello-wy/sub2api": {
       "status": "review",
@@ -23410,7 +23422,7 @@
     "jzkk720/cubecloud-skills-bundle-kit": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -23418,8 +23430,8 @@
         }
       ],
       "stars": 4,
-      "checkedAt": "2026-09-28T13:54:40.964Z",
-      "retryAt": "2026-10-02T13:54:40.964Z"
+      "checkedAt": "2026-10-06T18:22:09.696Z",
+      "retryAt": "2026-10-13T18:22:09.696Z"
     },
     "sqhh99/personal-site": {
       "status": "review",
@@ -24105,7 +24117,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 69
     },
     "kavbad/potion": {
       "status": "review",
@@ -26815,7 +26828,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 638
+      "stars": 640
     },
     "hedronite/hedrondb": {
       "status": "review",
@@ -28802,7 +28815,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 18,
+      "stars": 19,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "yushen100/wechat-jev-assistant",
@@ -31330,7 +31343,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 0
     },
     "confident-ai/deepeval": {
       "status": "review",
@@ -32628,7 +32642,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-28T23:16:35.221Z"
       },
-      "stars": 3,
+      "stars": 4,
       "retryAt": "2026-10-05T23:16:35.221Z"
     },
     "charlypoly/jev-fetch-webpage": {
@@ -36753,7 +36767,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 2,
-      "stars": 25,
+      "stars": 26,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "eas4ai/sudus",
@@ -38980,7 +38994,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "backmeupplz/plainwallet",
@@ -39246,7 +39260,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 1976,
+      "stars": 1977,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -39279,7 +39293,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 35,
+      "stars": 36,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "kikeven/zerikai_memory",
@@ -40343,7 +40357,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-12T14:38:34.294Z"
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "docs/reference.md"
+        }
+      ]
     },
     "manish-9245/wayfinder": {
       "status": "review",
@@ -40726,7 +40745,7 @@
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 148,
+      "stars": 150,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "retryAt": "2026-10-01T12:52:50.716Z"
     },
@@ -46493,7 +46512,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "yctimlin/jevscout",
@@ -46650,7 +46669,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 77,
+      "stars": 79,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "thinkany-ai/autojev",
@@ -47007,5 +47026,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "proshunsuke/jev-tab-order"
+  "metadataNext": "ctaxnagomi/instruct-jev"
 }
