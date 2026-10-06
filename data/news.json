@@ -3928,5 +3928,35 @@
     "reason": null,
     "originalUrl": "https://x.com/omarsar0/status/2107273821824622885",
     "aihotUrl": "https://aihot.news/items/o0547uzw4bdme530dsv5cq6jv"
+  },
+  {
+    "id": "krivwcmcv6qloa3az7f5j0jip",
+    "title": "Reflection 发布 501B-A23B 开源编码模型 Beam",
+    "originalTitle": "[AINews] Reflection Beam - 501B-A23B American Open Model",
+    "summary": "Reflection 发布文本-only 的 501B 总参数 / 23B 激活 MoE 模型 Beam，面向编码、智能体和科学任务，从零训练，完整权重将在本月以 Apache 2.0 发布。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-10-06T06:28:43.000Z",
+    "discoveredAt": "2026-10-06T07:13:24.126Z",
+    "category": "industry",
+    "score": 66,
+    "selected": true,
+    "reason": "汇总了 Reflection Beam 的训练规模、基准成绩与第三方独立评价，读者可借此了解美国开源模型与中文模型的实际差距。",
+    "originalUrl": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+    "aihotUrl": "https://aihot.news/items/krivwcmcv6qloa3az7f5j0jip"
+  },
+  {
+    "id": "d3uk2i5c0lcqqb2flkf9lcr5y",
+    "title": "SearchJev：面向搜索智能体的快速校准 System-1 模型",
+    "originalTitle": "SearchJev: A Fast and Calibrated System-1 Model for Search Agents",
+    "summary": "SearchJev 是一款面向搜索智能体的快速校准 System-1 模型，通过直接对合法选项打分而非自回归生成来做搜索决策，并提出 SLCD 方法从不确定监督中学习并校准决策置信度。",
+    "sourceName": "HuggingFace Daily Papers（社区热门论文）",
+    "publishedAt": "2026-10-04T00:00:00.000Z",
+    "discoveredAt": "2026-10-06T08:33:11.273Z",
+    "category": "paper",
+    "score": 46,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://arxiv.org/abs/2610.05107",
+    "aihotUrl": "https://aihot.news/items/d3uk2i5c0lcqqb2flkf9lcr5y"
   }
 ]
