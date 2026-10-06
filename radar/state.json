@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 5,
-    "\"typesafe.ai\" in:readme fork:false": 5,
-    "\"Jev\" \"System One\" in:readme fork:false": 5,
-    "topic:typesafe-ai fork:false": 1,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
-    "\"TypeSafe\" \"Jev\" fork:false": 5,
-    "code:\"api.typesafe.ai\" in:file": 10,
-    "code:\"@typesafe-ai/sdk\" in:file": 9,
+    "topic:jev fork:false": 7,
+    "\"typesafe.ai\" in:readme fork:false": 7,
+    "\"Jev\" \"System One\" in:readme fork:false": 7,
+    "topic:typesafe-ai fork:false": 3,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
+    "\"TypeSafe\" \"Jev\" fork:false": 7,
+    "code:\"api.typesafe.ai\" in:file": 1,
+    "code:\"@typesafe-ai/sdk\" in:file": 10,
     "code:\"TYPESAFE_API_KEY\" in:file": 1,
     "code:\"jev-latest\" in:file": 3
   },
-  "metadataCursor": 1830,
+  "metadataCursor": 693,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -1408,7 +1408,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1168
+      "stars": 1169
     },
     "manifoldor/xtags": {
       "status": "review",
@@ -4139,7 +4139,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 30968,
+      "stars": 31028,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5470,7 +5470,7 @@
       ],
       "checkedAt": "2026-10-01T13:14:43.978Z",
       "retryAt": "2026-10-08T13:14:43.978Z",
-      "stars": 12457
+      "stars": 12477
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -6321,7 +6321,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1253
+      "stars": 1254
     },
     "reactive-skills/reactive-skills": {
       "status": "review",
@@ -14298,7 +14298,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 1
+      "stars": 2
     },
     "russfranky/jev-crawlers": {
       "status": "error",
@@ -15878,7 +15878,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
       "attempts": 2,
-      "stars": 100,
+      "stars": 101,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "timrogers/formanator",
@@ -18049,7 +18049,7 @@
       ],
       "checkedAt": "2026-09-29T05:43:59.256Z",
       "retryAt": "2026-10-03T05:43:59.256Z",
-      "stars": 43319
+      "stars": 43329
     },
     "lioensky/vcptoolbox": {
       "status": "review",
@@ -35735,7 +35735,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "codeHints": [
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "package.json"
+        }
+      ]
     },
     "timmikeladze/jevlang": {
       "status": "review",
@@ -40683,7 +40688,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 2186,
+      "stars": 2318,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "dzhng/jevgrep",
@@ -47002,5 +47007,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "acifani/actual-jev"
+  "metadataNext": "proshunsuke/jev-tab-order"
 }
