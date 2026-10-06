@@ -3898,5 +3898,35 @@
     "reason": "官方宣布本地运行决策模型，给出延迟数据和 API 用法，可帮助读者评估本地快速决策场景的可行性。",
     "originalUrl": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
     "aihotUrl": "https://aihot.news/items/pxpre8jnvupr5x5k3nwpm2cbh"
+  },
+  {
+    "id": "tfuj58rvo46hvh8l2nzcbpf7n",
+    "title": "卡兹克解读 A16Z 两份 AI 报告：AI 使用很广但用得还浅，头部 1% 用户月均花 903 美元",
+    "originalTitle": "聊聊A16Z这两份AI报告，以及一些反常识的真相。",
+    "summary": "作者解读 A16Z 第七版《Top 100 消费级 AI 应用》和 90 多页的《市场状况 II》报告，指出反常识数据。美国近一半人用过 AI 但只有 25% 每天在用，截至 2026 年 8 月仅 4.5% 有 ChatGPT、Gemini 或 Claude 个人付费订阅；付费用户中头部 1% 月均消费 903 美元、贡献 19.5% 的全部消费。",
+    "sourceName": "X：卡兹克 (@Khazix0918)",
+    "publishedAt": "2026-10-06T02:31:56.000Z",
+    "discoveredAt": "2026-10-06T02:48:38.090Z",
+    "category": "tip",
+    "score": 72,
+    "selected": true,
+    "reason": "作者逐条拆解 A16Z 两份报告的关键数据，把付费渗透率、重度用户和杰文斯悖论串成一套可对照的现状判断。",
+    "originalUrl": "https://x.com/Khazix0918/status/2107297777583825359",
+    "aihotUrl": "https://aihot.news/items/tfuj58rvo46hvh8l2nzcbpf7n"
+  },
+  {
+    "id": "o0547uzw4bdme530dsv5cq6jv",
+    "title": "flow-1：RL 训练找 agent 错误",
+    "originalTitle": "Like Jev, I believe RL will unlock several more like this, slashing the cost of critical agent operations.",
+    "summary": "和 Jev 一样，我相信 RL 会解锁更多类似的成果，大幅削减关键智能体操作的成本。\n\nflow-1 在性能上有竞争力，但在发现 agent trace 中的失败方面能大幅节省成本。\n\nRSI 不只适用于通用智能。它同样会加速专用智能。",
+    "sourceName": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "publishedAt": "2026-10-06T00:56:45.000Z",
+    "discoveredAt": "2026-10-06T01:04:38.697Z",
+    "category": "tip",
+    "score": 48,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/omarsar0/status/2107273821824622885",
+    "aihotUrl": "https://aihot.news/items/o0547uzw4bdme530dsv5cq6jv"
   }
 ]
