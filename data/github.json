@@ -132100,5 +132100,101 @@
         "checkedAt": "2026-10-05T14:38:34.294Z"
       }
     }
+  },
+  {
+    "id": "gh-12-alanhuangyoo-openjev",
+    "type": "github",
+    "title": "OpenJev",
+    "summary": "OpenJev: open-source, local alternative to Jev. System-One decision models: typed questions in, calibrated probabilities out; general decisions and browser-agent steps.",
+    "tags": [
+      "browser-agent",
+      "decision-model",
+      "distillation",
+      "jev",
+      "jev-alternative",
+      "llm",
+      "local-llm",
+      "openjev"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/alanhuangyoo/OpenJev",
+    "sourceMeta": {
+      "repo": "alanhuangyoo/OpenJev",
+      "author": "alanhuangyoo",
+      "stars": 56,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1382217118,
+        "nodeId": "R_kgDOUmL1ng"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "alanhuangyoo/openjev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "e23a44ac3c5289d5a91802d9b7fd8961850ea960",
+        "evidenceUrl": "https://github.com/alanhuangyoo/openjev/blob/e23a44ac3c5289d5a91802d9b7fd8961850ea960/README.md",
+        "evidenceSha256": "c6dc7b46296ae5af9f3ad1ee6e73ac976ab743b4ebf188d7766f4ceb4d7c2ff7",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-06T20:33:11.317Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-everettjf-ezjev",
+    "type": "github",
+    "title": "ezjev",
+    "summary": "Open 4B typed-decision model (Jev-style /v1/systemone): calibrated per-option probabilities from one prefill. Training, data generation and eval pipeline on HF Jobs.",
+    "tags": [
+      "benchmark",
+      "calibration",
+      "decision-model",
+      "fine-tuning",
+      "huggingface",
+      "jev",
+      "llm",
+      "lora"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/everettjf/ezjev",
+    "sourceMeta": {
+      "repo": "everettjf/ezjev",
+      "author": "everettjf",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1402792129,
+        "nodeId": "R_kgDOU5zowQ"
+      },
+      "date": "2026-10-03",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "everettjf/ezjev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "163e4647bccd2b7c3d6db9e22e4d1d38adba1cef",
+        "evidenceUrl": "https://github.com/everettjf/ezjev/blob/163e4647bccd2b7c3d6db9e22e4d1d38adba1cef/README.md",
+        "evidenceSha256": "7420a45a0b4f90263d0b5d41ace3c8b6cb3cc8290900b1a7e14024c0ea130c73",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-06T20:33:11.317Z"
+      }
+    }
   }
 ]

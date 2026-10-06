@@ -1831,30 +1831,30 @@
     "opendecisions/opendecisions": {
       "status": "review",
       "discoveredAt": "2026-09-29T20:12:32.881Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-29T20:12:32.881Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-06T20:33:11.317Z",
       "lastReview": {
         "repo": "opendecisions/opendecisions",
         "status": "review",
         "score": {
-          "jevAbout": 0.86,
+          "jevAbout": 0.85,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.95,
+          "jevKeepConfidence": 0.96,
           "category": "alternatives"
         },
         "sha": "c9fb35b2d859170cc830815c8fee199eac3fba0f",
         "evidenceUrl": "https://github.com/opendecisions/opendecisions/blob/c9fb35b2d859170cc830815c8fee199eac3fba0f/README.md",
         "evidenceSha256": "e65128d8f6be66a508305bff5b8fbd64e0a6449c925d416ed5106bfaac0d7363",
         "model": "jev-latest",
-        "checkedAt": "2026-09-29T20:12:32.881Z"
+        "checkedAt": "2026-10-06T20:33:11.317Z"
       },
-      "retryAt": "2026-10-06T20:12:32.881Z"
+      "retryAt": "2026-10-13T20:33:11.317Z"
     },
     "ken-jo/veyra": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-09-29T20:12:32.881Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-29T20:12:32.881Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-06T20:33:11.317Z",
       "lastReview": {
         "repo": "ken-jo/veyra",
         "status": "review",
@@ -1870,7 +1870,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T20:12:32.881Z"
       },
-      "retryAt": "2026-10-06T20:12:32.881Z"
+      "retryAt": "2026-10-08T20:33:11.317Z"
     },
     "algorythm-canada/openjevswift": {
       "status": "review",
@@ -2423,6 +2423,52 @@
         "checkedAt": "2026-10-06T10:46:01.839Z"
       },
       "retryAt": "2026-10-13T10:46:01.839Z"
+    },
+    "jev-engineering/typewright": {
+      "status": "review",
+      "discoveredAt": "2026-10-06T20:33:11.317Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-06T20:33:11.317Z",
+      "lastReview": {
+        "repo": "jev-engineering/typewright",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.49,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.66,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "6532cc86ba5554b8288f32629cf49ff5f7fe080a",
+        "evidenceUrl": "https://github.com/jev-engineering/typewright/blob/6532cc86ba5554b8288f32629cf49ff5f7fe080a/README.md",
+        "evidenceSha256": "e0347533deea5611b88b486299c3985fa9c3c02682fce97abbee6a823796cf64",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-06T20:33:11.317Z"
+      },
+      "retryAt": "2026-10-13T20:33:11.317Z"
+    },
+    "algorythm-canada/openjev-models": {
+      "status": "review",
+      "discoveredAt": "2026-10-06T20:33:11.317Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-06T20:33:11.317Z",
+      "lastReview": {
+        "repo": "algorythm-canada/openjev-models",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.13,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.28,
+          "category": "other"
+        },
+        "sha": "ddf248ba27b47cd624114fae04447727504470bb",
+        "evidenceUrl": "https://github.com/algorythm-canada/openjev-models/blob/ddf248ba27b47cd624114fae04447727504470bb/README.md",
+        "evidenceSha256": "1f230344f6ed2117039c793bf6b13212fd12028562527923302fed8fa4e3d821",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-06T20:33:11.317Z"
+      },
+      "retryAt": "2026-10-13T20:33:11.317Z"
     }
   }
 }
