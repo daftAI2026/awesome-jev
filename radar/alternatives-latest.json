@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-06T20:33:11.317Z",
+  "at": "2026-10-07T01:00:52.757Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,93 +20,31 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 6,
-  "added": 2,
+  "reviewed": 2,
+  "added": 0,
   "pending": 117,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "ken-jo/veyra",
+      "repo": "algorythm-canada/openjevswift",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.96,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.84,
+        "category": "alternatives"
+      },
+      "sha": "e5787ea3b93320e7ebad7cdde191020ec58914e9",
+      "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/e5787ea3b93320e7ebad7cdde191020ec58914e9/README.md",
+      "evidenceSha256": "f9c38d2b023fe6cce80e9eb5fe742fba63d0b7a660d9dc88906d0613320cc4b4",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-07T01:00:52.757Z"
+    },
+    {
+      "repo": "lakoreai/pholaya",
       "status": "error",
       "reason": "github-http-404"
-    },
-    {
-      "repo": "opendecisions/opendecisions",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.85,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.96,
-        "category": "alternatives"
-      },
-      "sha": "c9fb35b2d859170cc830815c8fee199eac3fba0f",
-      "evidenceUrl": "https://github.com/opendecisions/opendecisions/blob/c9fb35b2d859170cc830815c8fee199eac3fba0f/README.md",
-      "evidenceSha256": "e65128d8f6be66a508305bff5b8fbd64e0a6449c925d416ed5106bfaac0d7363",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-06T20:33:11.317Z"
-    },
-    {
-      "repo": "alanhuangyoo/openjev",
-      "status": "keep",
-      "score": {
-        "jevAbout": 0.93,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
-        "category": "alternatives"
-      },
-      "sha": "e23a44ac3c5289d5a91802d9b7fd8961850ea960",
-      "evidenceUrl": "https://github.com/alanhuangyoo/openjev/blob/e23a44ac3c5289d5a91802d9b7fd8961850ea960/README.md",
-      "evidenceSha256": "c6dc7b46296ae5af9f3ad1ee6e73ac976ab743b4ebf188d7766f4ceb4d7c2ff7",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-06T20:33:11.317Z"
-    },
-    {
-      "repo": "jev-engineering/typewright",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.49,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.66,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "6532cc86ba5554b8288f32629cf49ff5f7fe080a",
-      "evidenceUrl": "https://github.com/jev-engineering/typewright/blob/6532cc86ba5554b8288f32629cf49ff5f7fe080a/README.md",
-      "evidenceSha256": "e0347533deea5611b88b486299c3985fa9c3c02682fce97abbee6a823796cf64",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-06T20:33:11.317Z"
-    },
-    {
-      "repo": "algorythm-canada/openjev-models",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.13,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.28,
-        "category": "other"
-      },
-      "sha": "ddf248ba27b47cd624114fae04447727504470bb",
-      "evidenceUrl": "https://github.com/algorythm-canada/openjev-models/blob/ddf248ba27b47cd624114fae04447727504470bb/README.md",
-      "evidenceSha256": "1f230344f6ed2117039c793bf6b13212fd12028562527923302fed8fa4e3d821",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-06T20:33:11.317Z"
-    },
-    {
-      "repo": "everettjf/ezjev",
-      "status": "keep",
-      "score": {
-        "jevAbout": 0.9,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
-        "category": "alternatives"
-      },
-      "sha": "163e4647bccd2b7c3d6db9e22e4d1d38adba1cef",
-      "evidenceUrl": "https://github.com/everettjf/ezjev/blob/163e4647bccd2b7c3d6db9e22e4d1d38adba1cef/README.md",
-      "evidenceSha256": "7420a45a0b4f90263d0b5d41ace3c8b6cb3cc8290900b1a7e14024c0ea130c73",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-06T20:33:11.317Z"
     }
   ],
   "identity": {

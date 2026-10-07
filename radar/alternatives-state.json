@@ -1481,8 +1481,8 @@
     "lakoreai/pholaya": {
       "status": "error",
       "discoveredAt": "2026-09-27T19:15:22.688Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-05T00:09:18.641Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-07T01:00:52.757Z",
       "lastReview": {
         "repo": "lakoreai/pholaya",
         "status": "review",
@@ -1498,7 +1498,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-27T19:15:22.688Z"
       },
-      "retryAt": "2026-10-07T00:09:18.641Z"
+      "retryAt": "2026-10-11T01:00:52.757Z"
     },
     "foxl-ai/bobcat": {
       "status": "review",
@@ -1875,24 +1875,24 @@
     "algorythm-canada/openjevswift": {
       "status": "review",
       "discoveredAt": "2026-09-30T00:45:18.800Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-30T00:45:18.800Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-07T01:00:52.757Z",
       "lastReview": {
         "repo": "algorythm-canada/openjevswift",
         "status": "review",
         "score": {
-          "jevAbout": 0.91,
-          "jevKeep": "drop",
-          "jevKeepConfidence": 0.59,
-          "category": "other"
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.84,
+          "category": "alternatives"
         },
-        "sha": "5cbe1156d32819c5ea20b2c5f43c68c1ebcfe3d7",
-        "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/5cbe1156d32819c5ea20b2c5f43c68c1ebcfe3d7/README.md",
-        "evidenceSha256": "62270fe9702232df302bdb05e43ee520588c5441aa87f0f557feae5f295f4524",
+        "sha": "e5787ea3b93320e7ebad7cdde191020ec58914e9",
+        "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/e5787ea3b93320e7ebad7cdde191020ec58914e9/README.md",
+        "evidenceSha256": "f9c38d2b023fe6cce80e9eb5fe742fba63d0b7a660d9dc88906d0613320cc4b4",
         "model": "jev-latest",
-        "checkedAt": "2026-09-30T00:45:18.800Z"
+        "checkedAt": "2026-10-07T01:00:52.757Z"
       },
-      "retryAt": "2026-10-07T00:45:18.800Z"
+      "retryAt": "2026-10-14T01:00:52.757Z"
     },
     "computational-social-science/jevrsi": {
       "status": "review",
