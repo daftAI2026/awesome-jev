@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 TanStack Virtual、新闻/分页纯规则、Router、i18n 与新闻摘要对话框
- * [OUTPUT]: 对外提供 NewsPanel 的本地检索、每页 50 条分日时间线与完整卡片预览来源标记
+ * [OUTPUT]: 提供每页 50 条新闻时间线；手机评分独占左对齐行，完整卡片标记预览来源
  * [POS]: components 的新闻索引阅读层，路由交付快照而不抓取原文
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -72,7 +72,7 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
               <span className="min-w-0 font-medium text-foreground">{item.sourceName}</span>
               <time dateTime={date} className="font-mono tabular-nums sm:hidden">{formatTime(new Date(date), locale)}</time>
               {item.selected && <span>{t('newsSelected')}</span>}
-              {item.score != null && <span className="ml-auto shrink-0 tabular-nums">{t('newsScore', { score: item.score })}</span>}
+              {item.score != null && <span className="basis-full tabular-nums sm:ml-auto sm:basis-auto sm:shrink-0">{t('newsScore', { score: item.score })}</span>}
             </div>
             <CardTitle className="text-lg leading-snug group-hover:underline group-hover:underline-offset-2">
               {item.title}

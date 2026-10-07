@@ -17,7 +17,7 @@ ItemRow.tsx: 简式项目外链阅读单元，不参与 GithubList 的站内预�
 LanguageMenu.tsx: 路由语言选择，保持页面身份并持久化显式偏好
 NewsDialog.tsx: 新闻摘要预览，委托 PreviewDialogFrame 管理呈现与退出，复用独立页内容而非伪造正文
 NewsItemContent.tsx: 新闻摘要、元数据及原始来源链接的共享展示
-NewsPanel.tsx: 新闻全量检索后每页 50 条与虚拟时间线，完整新闻卡片标记预览来源
+NewsPanel.tsx: 新闻全量检索后每页 50 条与虚拟时间线，手机评分独占左对齐行，完整新闻卡片标记预览来源
 NotFoundPage.tsx: 全局/项目/新闻共享 404，独立语言边界和同语言恢复入口
 PreviewDialogFooter.tsx: 预览对话框底部来源动作的共享容器
 PreviewDialogFrame.tsx: Base UI/Motion 共享外壳，打开/复开捕获来源、退出重测归位，Effect Event 隔离完成回调变化避免飞行重启，来源失效焦点回主内容，减少动态效果实时生效
