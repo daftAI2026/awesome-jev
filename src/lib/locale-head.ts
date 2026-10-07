@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 locale-routes 的规范地址/语言 alternates 与 share-image 的图片元数据
- * [OUTPUT]: 对外提供 localizedHead 元数据构造器
- * [POS]: lib 的有效页面 SEO 适配器，缺失页面不生成规范地址
+ * [OUTPUT]: 对外提供 localizedHead 元数据构造器与逐页规范地址
+ * [POS]: lib 的有效页面 SEO 与分页身份适配器，缺失页面不生成规范地址
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { localeAlternates, localizedPath, type Locale } from './locale-routes.ts'
@@ -14,11 +14,13 @@ interface LocalizedHeadOptions {
   description: string
   robots?: string
   type?: 'article' | 'website'
+  page?: number
   image?: ShareImage
 }
 
-export function localizedHead({ path, locale, title, description, robots, type = 'website', image }: LocalizedHeadOptions) {
-  const url = `${SITE_ORIGIN}${localizedPath(path, locale)}`
+export function localizedHead({ path, locale, title, description, robots, type = 'website', image, page = 1 }: LocalizedHeadOptions) {
+  const suffix = page > 1 ? `?page=${page}` : ''
+  const url = `${SITE_ORIGIN}${localizedPath(path, locale)}${suffix}`
   return {
     meta: [
       { title },
@@ -33,6 +35,6 @@ export function localizedHead({ path, locale, title, description, robots, type =
       { name: 'twitter:description', content: description },
       ...(image ? shareImageMeta(image) : []),
     ],
-    links: [{ rel: 'canonical', href: url }, ...localeAlternates(path)],
+    links: [{ rel: 'canonical', href: url }, ...localeAlternates(path).map((link) => ({ ...link, href: link.href + suffix }))],
   }
 }

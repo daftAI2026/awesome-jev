@@ -1,10 +1,13 @@
 /**
  * [INPUT]: 依赖浏览器收藏身份、项目/新闻快照和现有搜索与卡片组件
- * [OUTPUT]: 对外提供 SavedPanel 的本地收藏筛选、展示和打开动作
+ * [OUTPUT]: 对外提供 SavedPanel 的本地收藏筛选、每页 50 条展示和打开动作
  * [POS]: components 的收藏组合层，复用目录呈现而不维护第二份富数据
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useEffect, useMemo, type MouseEvent } from 'react'
+import { useRouterState } from '@tanstack/react-router'
+import { paginate } from '@/lib/pagination'
+import { DirectoryPagination } from '@/components/DirectoryPagination'
 import { CardMasonry } from '@/components/CardMasonry'
 import { NewsPanel } from '@/components/NewsPanel'
 import { Button } from '@/components/ui/button'
@@ -77,6 +80,7 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
   onNewsCategoryChange: (category: string) => void
 }) {
   const { t } = useI18n()
+  const requestedPage = useRouterState({ select: (state) => state.location.search.page })
   useEffect(() => {
     if (section === 'news' && entries.some((entry) => entry.kind === 'news')) onNewsSelect()
   }, [section, entries, onNewsSelect])
@@ -99,6 +103,7 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
   const activeNewsCategory = newsCategory === 'all' || availableNewsCategories.some((category) => category === newsCategory) ? newsCategory : 'all'
   const filteredProjects = activeProjectCategory === 'all' ? projectMatches
     : projectMatches.filter((item) => (item.category ?? 'other') === activeProjectCategory)
+  const page = paginate(filteredProjects, requestedPage)
   const filteredNews = activeNewsCategory === 'all' ? savedNews
     : savedNews.filter((item) => item.category === activeNewsCategory)
 
@@ -119,9 +124,10 @@ export function SavedPanel({ entries, projects, news, newsLoadFailed, query, ran
           <CategoryFilters options={availableProjectCategories.map((category) => ({ id: category, label: t(CATEGORY_LABEL[category]) }))}
             selected={activeProjectCategory} onSelect={onProjectCategoryChange} />
           {filteredProjects.length > 0
-            ? <CardMasonry items={filteredProjects} ranks={ranks} onPreview={onProjectPreview}
+            ? <CardMasonry key={`${query}:${activeProjectCategory}:${page.page}`} items={page.items} ranks={ranks} onPreview={onProjectPreview}
                 savedIds={projectIds} onToggleSaved={onToggleProject} />
             : <p className="py-10 text-sm text-muted-foreground">{t(query ? 'emptySearch' : 'savedEmpty')}</p>}
+          <DirectoryPagination total={filteredProjects.length} page={page.page} />
           <UnavailableSaved entries={missingProjects} kind="github" onRemove={onRemoveMissing} />
         </>
       ) : newsLoadFailed ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoadFailed')}</p>

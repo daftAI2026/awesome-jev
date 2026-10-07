@@ -1,3 +1,9 @@
+<!--
+[INPUT]: 现有路由、公开投影与 Workers 交付边界
+[OUTPUT]: 模块依赖、分页 SSR 与静态详情的架构契约
+[POS]: docs 的交付地图；目录交互归 directory-ui.md
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
 # Architecture
 
 ## Theme
@@ -43,7 +49,7 @@ Mobile
 
 ## Workers auto-deploy
 
-[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English, Chinese, and Japanese variants of the homepage, Top 100, ten categories and every valid GitHub project detail into route-specific HTML; Cloudflare serves those files as Static Assets before invoking the Worker. The Worker handles non-prerendered routes and returns real 404 responses for unknown addresses, invalid categories, missing projects, and missing news IDs. These states reuse `src/components/NotFoundPage.tsx` with route-localized recovery links and noindex metadata. This is not an SPA fallback or per-request SSR for the catalog.
+[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English, Chinese, and Japanese variants of the homepage, Top 100, ten categories and every valid GitHub project detail into route-specific HTML; Cloudflare keeps detail HTML and static assets asset-first. Directory head loaders receive only total/category counts from getDirectoryCounts, not the browser projection; standalone startup must stay snapshot-free. The homepage, Top 100, category indexes and aggregate news paths use selective Worker-first routing to SSR their validated `page` query. Their build-time first-page HTML remains available for build verification; Static Assets must not override a second-page request with first-page HTML. The Worker handles non-prerendered routes and returns real 404 responses for unknown addresses, invalid categories, missing projects, and missing news IDs. These states reuse `src/components/NotFoundPage.tsx` with route-localized recovery links and noindex metadata. This is not an SPA fallback. Directory indexes use request-specific SSR for pagination; independent detail routes retain static delivery.
 
 The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and Cloudflare Workers Builds; `package.json` declares the same supported major. English, Chinese, and Japanese news-item HTML pages are prerendered for stable `/news/{id}` URLs; the aggregate `/news` page prerenders its initial news cards, while browser-local `/saved` remains `noindex` and outside the sitemap.
 

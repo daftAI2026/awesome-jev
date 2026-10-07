@@ -2,6 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+pagination.test.ts: Node 全量筛选后每页 50 条、边界、排名和规范地址回归
+pagination-delivery.test.ts: Node 三语言真实 HTTP 全分类/Top100/新闻的逐页内容与规范地址回归
 generate-llms.ts: Node 构建期公开文档生成器，分类/排名/路径复用规范规则，展示字段白名单隔离审计
 agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG 安全/授权回归
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
@@ -82,7 +84,7 @@ submission-intake-workflow.test.ts: Node test 执行隔离 Bash/gh 交接命令�
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理
-verify-delivery.ts: 构建后零跳过页面/OG/Agents HTTP 与模块图验收，只拥有自有预览生命周期
+verify-delivery.ts: 构建后零跳过页面/OG/Agents/分页 HTTP 与模块图验收，只拥有自有预览生命周期
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

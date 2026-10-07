@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 目录公共类型与来源星标/日期
- * [OUTPUT]: 对外提供 项目排序与稳定的全目录星标排名
+ * [OUTPUT]: 提供确定性项目排序与全目录星标排名；星标并列共用标题/ID 次序
  * [POS]: lib 的排序权威，App、列表及收藏共享排名身份
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -20,20 +20,18 @@ function dateKey(item: DirectoryItem): string | null {
 /** 1-based star rank among GitHub rows. Ties break by title, then id. */
 export function githubStarRanks(items: DirectoryItem[]): Map<string, number> {
   const github = items.filter((item) => item.type === 'github')
-  github.sort((a, b) => {
-    const stars = numOrZero(b.sourceMeta.stars) - numOrZero(a.sourceMeta.stars)
-    if (stars !== 0) return stars
-    const name = a.title.localeCompare(b.title, 'en', {
-      sensitivity: 'base',
-    })
-    if (name !== 0) return name
-    return a.id.localeCompare(b.id)
-  })
+  github.sort(compareStars)
   const ranks = new Map<string, number>()
   github.forEach((item, i) => {
     ranks.set(item.id, i + 1)
   })
   return ranks
+}
+
+function compareStars(a: DirectoryItem, b: DirectoryItem): number {
+  return numOrZero(b.sourceMeta.stars) - numOrZero(a.sourceMeta.stars)
+    || a.title.localeCompare(b.title, 'en', { sensitivity: 'base' })
+    || a.id.localeCompare(b.id)
 }
 
 export function sortGithubItems(
@@ -42,9 +40,7 @@ export function sortGithubItems(
 ): DirectoryItem[] {
   const copy = [...items]
   if (sort === 'stars') {
-    copy.sort(
-      (a, b) => numOrZero(b.sourceMeta.stars) - numOrZero(a.sourceMeta.stars),
-    )
+    copy.sort(compareStars)
   } else if (sort === 'name') {
     copy.sort((a, b) =>
       a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }),

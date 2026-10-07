@@ -1,16 +1,16 @@
 /**
- * [INPUT]: 依赖目录展示投影、搜索/排序与项目/新闻/收藏/Agents 组件
- * [OUTPUT]: 提供目录布局、手机固定两行控制栏、分类说明、筛选、投稿与 Agents 页脚
+ * [INPUT]: 依赖目录展示投影、搜索/排序/分页与项目/新闻/收藏/Agents 组件
+ * [OUTPUT]: 提供目录布局、手机固定两行控制栏、分类说明、每页 50 条、投稿与 Agents 页脚
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
-import githubData from 'virtual:directory-catalog'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
 import { AgentsFooter } from '@/components/AgentsFooter'
 import { CardMasonry } from '@/components/CardMasonry'
+import { DirectoryPagination } from '@/components/DirectoryPagination'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
 import { GithubList } from '@/components/GithubList'
 import { GithubProjectDialog } from '@/components/GithubProjectDialog'
@@ -31,19 +31,21 @@ import { CATEGORIES, CATEGORY_LABEL, CATEGORY_DESCRIPTION, NEWS_CATEGORIES, type
 import { useSaved } from '@/hooks/useSaved'
 import { savedRouteSearch, type SavedRouteSearch, type SavedSection } from '@/lib/saved'
 import { searchItems } from '@/lib/search'
-import { githubStarRanks, sortGithubItems } from '@/lib/sort'
+import { sortGithubItems } from '@/lib/sort'
 import { newsPath, type NewsItem } from '@/lib/news'
+import { directoryProjects, directoryRanks, directoryCategoryCounts } from '@/lib/directory-projects'
+import { directorySearch, paginate } from '@/lib/pagination'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath, stripLocalePrefix } from '@/lib/locale-routes'
 
 type DirectoryFilter = 'all' | 'top100' | 'news' | 'saved' | Category
 type GithubItem = DirectoryItem & { category?: Category }
-const items = githubData as GithubItem[]
+const items = directoryProjects
 const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
 const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
-const githubRanks = githubStarRanks(items)
-const categoryCounts = Object.fromEntries(CATEGORIES.map((category) => [category, items.filter((item) => item.category === category).length])) as Record<Category, number>
+const githubRanks = directoryRanks
+const categoryCounts = directoryCategoryCounts
 const FILTER_LABEL = {
   all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', saved: 'categorySaved',
   ...CATEGORY_LABEL,
@@ -96,7 +98,9 @@ export default function App() {
   } })
   const newsPreviewIsMasked = useRouterState({ select: (state) => Boolean(state.location.maskedLocation) })
   const [query, setQuery] = useState('')
-  const [sort, setSort] = useState<GithubSort>('stars')
+  const [preferredSort, setPreferredSort] = useState<GithubSort>('stars')
+  const directoryState = directorySearch(routeSearch)
+  const sort = directoryState.sort ?? (directoryState.page ? 'stars' : preferredSort)
   const [view, setView] = useState<GithubView>('cards')
   const [preferencesReady, setPreferencesReady] = useState(false)
   const [filter, setFilter] = useState<DirectoryFilter>(() => filterFromPath(pathname) ?? 'all')
@@ -116,7 +120,7 @@ export default function App() {
   const detailTriggerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    setSort(readStoredSort())
+    setPreferredSort(readStoredSort())
     setView(readStoredView())
     setPreferencesReady(true)
   }, [])
@@ -189,9 +193,10 @@ export default function App() {
       to: '/{-$locale}/preview/$owner/$repo',
       params: { locale: locale === 'en' ? undefined : locale, owner, repo },
       mask: { to: '/{-$locale}/projects/$owner/$repo', params: { locale: locale === 'en' ? undefined : locale, owner, repo } },
+      search: { ...routeSearch, sort },
       resetScroll: false,
     })
-  }, [filter, locale, navigate, savedSearch])
+  }, [filter, locale, navigate, routeSearch, savedSearch, sort])
   const onDetailOpenChange = useCallback((open: boolean) => {
     if (!open && basePath.startsWith('/preview/')) {
       window.history.back()
@@ -205,28 +210,28 @@ export default function App() {
     if (!path) return
     const publicPath = localizedPath(path, locale)
     if (filter === 'saved') {
-      const background = { ...savedSearch, section: 'news' as const, preview: undefined }
+      const background = { ...routeSearch, ...savedSearch, section: 'news' as const, preview: undefined }
       const to = localizedPath('/saved', locale)
       void navigate({ to, search: { ...background, preview: item.id }, mask: { to: publicPath }, resetScroll: false })
     } else {
       const to = localizedPath('/news', locale)
-      void navigate({ to, search: { preview: item.id }, mask: { to: publicPath }, resetScroll: false })
+      void navigate({ to, search: { ...routeSearch, preview: item.id }, mask: { to: publicPath }, resetScroll: false })
     }
-  }, [filter, locale, navigate, savedSearch])
+  }, [filter, locale, navigate, routeSearch, savedSearch])
   const closeNewsPreview = useCallback(() => {
     if (!newsPreviewId) return
     if (newsPreviewIsMasked) {
       window.history.back()
     } else {
-      if (filter === 'saved') void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, preview: undefined }, replace: true })
-      else void navigate({ to: localizedPath('/news', locale), search: {}, replace: true })
+      if (filter === 'saved') void navigate({ to: localizedPath('/saved', locale), search: { ...routeSearch, ...savedSearch, preview: undefined }, replace: true })
+      else void navigate({ to: localizedPath('/news', locale), search: { ...routeSearch, preview: undefined }, replace: true })
     }
-  }, [filter, locale, navigate, newsPreviewId, newsPreviewIsMasked, savedSearch])
+  }, [filter, locale, navigate, newsPreviewId, newsPreviewIsMasked, routeSearch, savedSearch])
   const selectSavedSection = useCallback((section: SavedSection) => {
-    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, section } })
+    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, section, page: undefined } })
   }, [locale, navigate, savedSearch])
   const selectSavedProjectCategory = useCallback((category: Category | 'all') => {
-    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, projectCategory: category === 'all' ? undefined : category } })
+    void navigate({ to: localizedPath('/saved', locale), search: { ...savedSearch, projectCategory: category === 'all' ? undefined : category, page: undefined } })
   }, [locale, navigate, savedSearch])
   const selectSavedNewsCategory = useCallback((category: string) => {
     const newsCategory = NEWS_CATEGORIES.find((entry) => entry === category)
@@ -294,6 +299,11 @@ export default function App() {
     return searched.filter((item) => (item.category ?? 'other') === filter)
   }, [query, filter])
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
+  const projectPage = paginate(sorted, directoryState.page)
+  const changeQuery = (next: string) => {
+    setQuery(next)
+    if (directoryState.page) void navigate({ to: pathname, search: { ...routeSearch, page: undefined }, replace: true, resetScroll: false })
+  }
   const hasQuery = query.trim().length > 0
   const resultLabel = t(matched.length === 1 ? 'resultCount' : 'resultCountPlural', { count: matched.length })
   const activeCategory = CATEGORIES.find((category) => category === filter)
@@ -347,7 +357,7 @@ export default function App() {
             <div className="relative">
               <MagnifyingGlass className="pointer-events-none absolute top-1/2 left-0 size-4 -translate-y-1/2 text-muted-foreground" weight="regular" aria-hidden />
               <label htmlFor="directory-search" className="sr-only">{t(filter === 'news' ? 'searchNewsPlaceholder' : filter === 'saved' ? 'searchSavedPlaceholder' : 'searchLabel')}</label>
-              <Input ref={searchRef} id="directory-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)}
+              <Input ref={searchRef} id="directory-search" type="search" value={query} onChange={(event) => changeQuery(event.target.value)}
                 placeholder={t(filter === 'news' ? 'searchNewsPlaceholder' : filter === 'saved' ? 'searchSavedPlaceholder' : 'searchPlaceholder')} autoComplete="off"
                 className="h-12 rounded-none border-0 border-b border-border bg-transparent px-8 py-3 text-base shadow-none appearance-none focus-visible:border-foreground focus-visible:ring-0 md:text-sm dark:bg-transparent [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden" />
               <kbd className="pointer-events-none absolute inset-y-0 right-0 hidden items-center sm:flex" title={t('searchHint')}>
@@ -378,7 +388,10 @@ export default function App() {
               </Sheet>
               {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[sort]} onValueChange={(values) => {
                 const next = values[0]
-                if (next === 'stars' || next === 'date' || next === 'name') setSort(next)
+                if (next === 'stars' || next === 'date' || next === 'name') {
+                  setPreferredSort(next)
+                  void navigate({ to: pathname, search: { ...routeSearch, sort: next, page: undefined }, replace: true, resetScroll: false })
+                }
               }} variant="outline" size="sm" aria-label={t('rankLabel')} className="rounded-lg">
                 <ToggleGroupItem value="stars">{t('sortStars')}</ToggleGroupItem>
                 <ToggleGroupItem value="date">{t('sortDate')}</ToggleGroupItem>
@@ -416,12 +429,13 @@ export default function App() {
             ) : sorted.length === 0 ? (
               <p className="py-10 text-sm text-muted-foreground">{t(hasQuery ? 'emptySearch' : 'emptySection')}</p>
             ) : view === 'list' ? (
-              <GithubList items={sorted} ranks={githubRanks} onPreview={openProjectPreview}
+              <GithubList key={`${filter}:${query}:${sort}:${projectPage.page}`} items={projectPage.items} ranks={githubRanks} onPreview={openProjectPreview}
                 savedIds={savedProjectIds} onToggleSaved={toggleProjectSavedRaw} />
             ) : (
-              <CardMasonry items={sorted} ranks={githubRanks} onPreview={openProjectPreview}
+              <CardMasonry key={`${filter}:${query}:${sort}:${projectPage.page}`} items={projectPage.items} ranks={githubRanks} onPreview={openProjectPreview}
                 savedIds={savedProjectIds} onToggleSaved={toggleProjectSavedRaw} />
             )}
+            {filter !== 'news' && filter !== 'saved' && <DirectoryPagination total={sorted.length} page={projectPage.page} sort={sort} />}
           </main>
         </div>
       </div>

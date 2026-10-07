@@ -7,6 +7,11 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  paginationLabel: '分页导航',
+  paginationPrevious: '上一页',
+  paginationNext: '下一页',
+  paginationPage: '第 {page} 页',
+  paginationRange: '第 {start}–{end} 条，共 {total} 条',
   agentDocuments: '公开机器文档',
   agentDescription: '看看 ChatGPT、Claude、Perplexity、Gemini 或 Grok 如何评价 Awesome JEV。',
   agentAsk: '了解 Awesome JEV',

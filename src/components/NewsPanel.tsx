@@ -1,10 +1,13 @@
 /**
- * [INPUT]: 依赖 TanStack Virtual、新闻纯规则、i18n 与新闻摘要对话框
- * [OUTPUT]: 对外提供 NewsPanel 的本地检索、有界分日时间线与完整卡片预览来源标记
+ * [INPUT]: 依赖 TanStack Virtual、新闻/分页纯规则、Router、i18n 与新闻摘要对话框
+ * [OUTPUT]: 对外提供 NewsPanel 的本地检索、每页 50 条分日时间线与完整卡片预览来源标记
  * [POS]: components 的新闻索引阅读层，路由交付快照而不抓取原文
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
+import { useRouterState } from '@tanstack/react-router'
+import { paginate } from '@/lib/pagination'
+import { DirectoryPagination } from '@/components/DirectoryPagination'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import { useI18n, type Locale } from '@/i18n'
 import { newsPath, newsTime, sortNews, type NewsItem } from '@/lib/news'
@@ -110,6 +113,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
   onPreviewClose: () => void
 }) {
   const { locale, t } = useI18n()
+  const requestedPage = useRouterState({ select: (state) => state.location.search.page })
   const detailTriggerRef = useRef<HTMLElement | null>(null)
   const initialListRef = useRef<HTMLOListElement>(null)
   const virtualListRef = useRef<HTMLOListElement>(null)
@@ -122,10 +126,11 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
       `${item.title} ${item.originalTitle ?? ''} ${item.summary ?? ''} ${item.sourceName}`.toLocaleLowerCase().includes(term)) : items
     return sortNews(filtered)
   }, [items, query])
+  const page = useMemo(() => paginate(matched, requestedPage), [matched, requestedPage])
   const rows = useMemo(() => {
     const result: NewsRow[] = []
     let previousDay = ''
-    for (const item of matched) {
+    for (const item of page.items) {
       const date = new Date(newsTime(item))
       const key = dayKey(date)
       if (previousDay !== key) {
@@ -135,7 +140,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
       result.push({ kind: 'item', item })
     }
     return result
-  }, [matched, locale])
+  }, [page.items, locale])
   const [initialRows, virtualRows] = useMemo(() => {
     const first: NewsRow[] = []
     const rest: NewsRow[] = []
@@ -239,6 +244,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
           </ol>}
         </>
       )}
+      <DirectoryPagination total={matched.length} page={page.page} />
       <NewsDialog item={detailItem} open={detailOpen} onOpenChange={(open) => { if (!open) onPreviewClose() }} triggerRef={detailTriggerRef}
         saved={detailItem ? savedIds.has(detailItem.id) : false}
         onToggleSaved={detailItem ? () => toggleItemSaved(detailItem) : undefined} />

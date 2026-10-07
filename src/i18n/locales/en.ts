@@ -5,6 +5,11 @@
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  paginationLabel: 'Pagination',
+  paginationPrevious: 'Previous',
+  paginationNext: 'Next',
+  paginationPage: 'Page {page}',
+  paginationRange: '{start}–{end} of {total}',
   agentDocuments: 'Public machine-readable documents',
   agentDescription: 'See what ChatGPT, Claude, Perplexity, Gemini or Grok say about Awesome JEV.',
   agentAsk: 'Ask about Awesome JEV',

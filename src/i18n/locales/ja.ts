@@ -7,6 +7,11 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  paginationLabel: 'ページナビゲーション',
+  paginationPrevious: '前へ',
+  paginationNext: '次へ',
+  paginationPage: '{page} ページ',
+  paginationRange: '{total} 件中 {start}–{end} 件',
   agentDocuments: '公開機械可読ドキュメント',
   agentDescription: 'ChatGPT、Claude、Perplexity、Gemini、Grok が Awesome JEV をどう評価するか見てみましょう。',
   agentAsk: 'Awesome JEV について質問',

@@ -1,6 +1,6 @@
 # [INPUT]: 依赖 TanStack Start 构建入口与 Cloudflare Workers Static Assets
 # [OUTPUT]: 对外提供 Worker 兼容配置及 ASSETS 字库绑定
-# [POS]: 根级部署边界；静态页面由 Assets 交付，动态 OG 由同一 Worker 渲染
+# [POS]: 根级部署边界；目录查询页由 Worker SSR，详情与机器文档由 Assets 交付，动态 OG 由同一 Worker 渲染
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 # Cloudflare Workers — TanStack Start 预渲染与路由回退
 # Workers Builds (Git): push to main → npm run build → npx wrangler deploy
@@ -13,6 +13,8 @@ compatibility_flags = ["nodejs_compat"]
 [assets]
 binding = "ASSETS"
 html_handling = "drop-trailing-slash"
+# --- 目录页按查询参数 SSR；避免 Static Assets 用第一页 HTML 覆盖 ?page=2 ---
+run_worker_first = ["/", "/zh", "/ja", "/top100", "/zh/top100", "/ja/top100", "/news", "/zh/news", "/ja/news", "/category/*", "/zh/category/*", "/ja/category/*"]
 
 [secrets]
 required = []
