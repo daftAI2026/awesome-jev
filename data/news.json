@@ -4123,5 +4123,35 @@
     "reason": null,
     "originalUrl": "https://arxiv.org/abs/2610.02586",
     "aihotUrl": "https://aihot.news/items/t9u0xjc7crcjbnlw28wy99sqd"
+  },
+  {
+    "id": "n9yheyt20g958eyaqgb7yuxf5",
+    "title": "Simon Willison 发布 llm-openai-decisions 0.1a0 插件接入 OpenAI Decisions API",
+    "originalTitle": "llm-openai-decisions 0.1a0",
+    "summary": "Simon Willison 发布 llm-openai-decisions 0.1a0 插件，用于调用 OpenAI 上周 DevDay 预告的 Jev 风格 Decisions API，并让 GPT-6 Astra 参照其 llm-typesafe 插件生成代码。",
+    "sourceName": "Simon Willison 博客",
+    "publishedAt": "2026-10-06T23:04:13.000Z",
+    "discoveredAt": "2026-10-07T01:04:40.307Z",
+    "category": "ai-products",
+    "score": 57,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+    "aihotUrl": "https://aihot.news/items/n9yheyt20g958eyaqgb7yuxf5"
+  },
+  {
+    "id": "hjekicue5z8u9zo2kqf54j5eq",
+    "title": "TypeSafe AI 在 Modal 上三天内将 Jev 扩展至超万亿 token",
+    "originalTitle": "TypeSafe AI scales Jev to trillions of tokens in three days on Modal",
+    "summary": "TypeSafe AI 的首个模型 Jev 在 Modal 上于发布后三天内处理超 1 万亿 token，并在 OpenRouter 1K-10K token 上下文榜单登顶，承接 15.1% 的请求。Jev 并非大语言模型，而是非自回归的 System One Model，以状态和问题为输入，并行输出带概率的结构化类型值，训练采用自研的 RLCD 方法。",
+    "sourceName": "Modal 官方工程博客（RSS）",
+    "publishedAt": "2026-10-05T00:00:00.000Z",
+    "discoveredAt": "2026-10-07T01:26:40.632Z",
+    "category": "industry",
+    "score": 43,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://modal.com/blog/typesafeai-case-study",
+    "aihotUrl": "https://aihot.news/items/hjekicue5z8u9zo2kqf54j5eq"
   }
 ]
