@@ -1,58 +1,70 @@
 {
-  "at": "2026-10-07T05:59:42.922Z",
+  "at": "2026-10-07T13:23:27.343Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2501,
+      "total": 2516,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 8319,
+      "total": 8373,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 6957,
+      "total": 6994,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 172,
-      "total": 572,
+      "fetched": 200,
+      "total": 576,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 198,
-      "total": 598,
+      "fetched": 200,
+      "total": 601,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3595,
+      "total": 3618,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 0,
-      "total": 0,
+      "fetched": 200,
+      "total": 30336,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"@typesafe-ai/sdk\" in:file",
+      "fetched": 200,
+      "total": 8384,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"TYPESAFE_API_KEY\" in:file",
+      "fetched": 100,
+      "total": 61056,
       "status": "github-rate-limited"
     }
   ],
   "metadata": {
-    "ok": 1098,
-    "failed": 2,
+    "ok": 1095,
+    "failed": 5,
     "batches": 22,
     "cost": 22,
     "other": 1000,
-    "remaining": 1101,
+    "remaining": 1104,
     "top100": {
       "ok": 100,
       "total": 100,
@@ -76,85 +88,85 @@
         "databaseId": 1376671563
       },
       {
-        "from": "faizullah9181/esketcher",
-        "to": "faizullah9181/jev-esketcher",
-        "databaseId": 1383974102
+        "from": "navidkashani/jev-guard",
+        "to": "veronalabs/spamlens",
+        "databaseId": 1380305332
       },
       {
-        "from": "monotykamary/jev-fabric",
-        "to": "fabric-runtime/jev-fabric",
-        "databaseId": 1387099307
+        "from": "peterfriese/jev-foundation-models",
+        "to": "peterfriese/system-one-foundation-models",
+        "databaseId": 1380219642
       },
       {
-        "from": "iammrduncan/typesafe-ai-benchmark",
-        "to": "iammrduncan/inference-benchmarks",
-        "databaseId": 1373664881
+        "from": "zchee/typesafe-sdk-rust",
+        "to": "zchee/decision-model-sdk-rust",
+        "databaseId": 1376458463
       },
       {
-        "from": "bunsdev/typesafe-ai-playground",
-        "to": "typesafeai/typesafe-playground",
-        "databaseId": 1373324760
+        "from": "andyhorn/jev",
+        "to": "andyhorn/system_one_dart",
+        "databaseId": 1378008435
       },
       {
-        "from": "huntedman/jevlint",
-        "to": "iamtoomas/jevlint",
-        "databaseId": 1374372746
+        "from": "carlaiau/readwithjev",
+        "to": "carlaiau/read-with-jev",
+        "databaseId": 1375767462
       },
       {
-        "from": "phureewat29/got-jev",
-        "to": "phureewat29/jev-got",
-        "databaseId": 1374274889
+        "from": "chenjingdev/jev",
+        "to": "chenjingdev-archive/jev",
+        "databaseId": 1378914323
       },
       {
-        "from": "zavocc/ground-zero",
-        "to": "wmcbtech30/ground-zero",
-        "databaseId": 1375280181
+        "from": "stephenlb/truetype.ai-open",
+        "to": "stephenlb/system-one-model",
+        "databaseId": 1376388571
       },
       {
-        "from": "kunobi-ninja/kunobi-jev",
-        "to": "kunobi-ninja/kunobi-decision",
-        "databaseId": 1374093481
+        "from": "dperezcabrera/system-one-chess",
+        "to": "dperezcabrera/ai-chess-lab",
+        "databaseId": 1380374177
       },
       {
-        "from": "tinyhumansai/tinyjevclient",
-        "to": "tinyhumansai/tinydecisionmodels",
-        "databaseId": 1374366286
+        "from": "devonance/doomsat",
+        "to": "doom-satellite/doomsat",
+        "databaseId": 1381009481
       },
       {
-        "from": "bunsdev/typesafe-ui",
-        "to": "typesafeai/typesafe-ui",
-        "databaseId": 1373757159
-      },
-      {
-        "from": "fruitymcdoo/jevchat",
-        "to": "sonofsaris/jevchat",
-        "databaseId": 1378948439
-      },
-      {
-        "from": "church-of-lane/csharp-jef-sdk",
-        "to": "church-of-lane/csharp-typesafe-sdk",
-        "databaseId": 1378876381
-      },
-      {
-        "from": "completedottech/jev-factorio-agent",
-        "to": "jevplays-games/jev-factorio-agent",
-        "databaseId": 1379060982
+        "from": "tayaee/typesafe-ai-jev-demo",
+        "to": "tayaee/classifier-benchmark-results",
+        "databaseId": 1376777707
       }
     ]
   },
   "reviewed": 0,
   "added": 0,
   "pending": 2000,
-  "overflow": 536,
+  "overflow": 999,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "ivorpad/skillranker",
+      "repo": "rezastd/living-npc-world",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "rdk16/jevudio",
+      "repo": "wanlanglin/jev-skills",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "x96x64/ctxjev",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "paulsonnentag/scrap",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "aviletek/jev-flow-harness",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     }

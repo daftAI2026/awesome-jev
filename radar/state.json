@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 1,
-    "\"typesafe.ai\" in:readme fork:false": 1,
-    "\"Jev\" \"System One\" in:readme fork:false": 1,
-    "topic:typesafe-ai fork:false": 1,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
-    "\"TypeSafe\" \"Jev\" fork:false": 1,
-    "code:\"api.typesafe.ai\" in:file": 3,
-    "code:\"@typesafe-ai/sdk\" in:file": 1,
-    "code:\"TYPESAFE_API_KEY\" in:file": 3,
+    "topic:jev fork:false": 3,
+    "\"typesafe.ai\" in:readme fork:false": 3,
+    "\"Jev\" \"System One\" in:readme fork:false": 3,
+    "topic:typesafe-ai fork:false": 3,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
+    "\"TypeSafe\" \"Jev\" fork:false": 3,
+    "code:\"api.typesafe.ai\" in:file": 5,
+    "code:\"@typesafe-ai/sdk\" in:file": 3,
+    "code:\"TYPESAFE_API_KEY\" in:file": 4,
     "code:\"jev-latest\" in:file": 5
   },
-  "metadataCursor": 592,
+  "metadataCursor": 1628,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -196,7 +196,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 927
+      "stars": 933
     },
     "inso1337/revl": {
       "status": "review",
@@ -366,7 +366,7 @@
       "attempts": 3,
       "checkedAt": "2026-09-28T13:54:40.964Z",
       "retryAt": "2026-10-02T13:54:40.964Z",
-      "stars": 215
+      "stars": 240
     },
     "muratcanberber/jev-thefishgame": {
       "status": "review",
@@ -1413,7 +1413,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1169
+      "stars": 1184
     },
     "manifoldor/xtags": {
       "status": "review",
@@ -1518,7 +1518,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 1768
+      "stars": 1789
     },
     "tinystruct/tinystruct": {
       "status": "review",
@@ -2830,7 +2830,7 @@
         "checkedAt": "2026-09-30T05:32:45.421Z"
       },
       "retryAt": "2026-10-07T05:32:45.421Z",
-      "stars": 22386
+      "stars": 22423
     },
     "dhanushnehru/dhanushnehru": {
       "status": "review",
@@ -3411,7 +3411,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 11714
+      "stars": 11741
     },
     "k3ntaw/orchestrator": {
       "status": "review",
@@ -3823,7 +3823,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 5
+      "stars": 6
     },
     "linny006/llm-agents-radar": {
       "status": "review",
@@ -4144,7 +4144,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 31260,
+      "stars": 31325,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5475,7 +5475,7 @@
       ],
       "checkedAt": "2026-10-01T13:14:43.978Z",
       "retryAt": "2026-10-08T13:14:43.978Z",
-      "stars": 12477
+      "stars": 12519
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -5533,7 +5533,7 @@
         }
       ],
       "checkedAt": "2026-09-30T22:16:19.563Z",
-      "stars": 142,
+      "stars": 143,
       "lastReview": {
         "repo": "juspay/neurolink",
         "status": "review",
@@ -6202,7 +6202,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-30T22:16:19.563Z"
       },
-      "stars": 39,
+      "stars": 40,
       "retryAt": "2026-10-07T22:16:19.563Z"
     },
     "ufec/jev-block-android-ad": {
@@ -6326,7 +6326,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1254
+      "stars": 1255
     },
     "reactive-skills/reactive-skills": {
       "status": "review",
@@ -6820,7 +6820,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 189,
+      "stars": 190,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -11016,7 +11016,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1218
+      "stars": 1236
     },
     "zephyrdeng/pi-review": {
       "status": "review",
@@ -12393,7 +12393,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1
+      "stars": 2
     },
     "thecnfor/shizurak": {
       "status": "review",
@@ -13144,7 +13144,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 0
+      "stars": 1
     },
     "joe325132514132636-svg/jev-100-benchmark": {
       "status": "review",
@@ -13717,7 +13717,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 0
+      "stars": 1
     },
     "nixz0824/rag-jev": {
       "status": "review",
@@ -19691,7 +19691,8 @@
         }
       ],
       "checkedAt": "2026-09-28T23:16:35.221Z",
-      "retryAt": "2026-10-02T23:16:35.221Z"
+      "retryAt": "2026-10-02T23:16:35.221Z",
+      "stars": 11
     },
     "piyush97/piyushmehta.com": {
       "status": "review",
@@ -22768,7 +22769,7 @@
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
       "retryAt": "2026-10-12T14:38:34.294Z",
-      "stars": 40502
+      "stars": 41540
     },
     "daveebbelaar/ai-cookbook": {
       "status": "review",
@@ -22915,7 +22916,7 @@
           "path": "benchmarks/decisions-calibration/pairlevel_run.py"
         }
       ],
-      "stars": 2657,
+      "stars": 2938,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "xerj-org/xerj",
@@ -30942,7 +30943,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 216
+      "stars": 220
     },
     "psmon/agentzerolite": {
       "status": "review",
@@ -36289,7 +36290,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 3,
-      "stars": 1445,
+      "stars": 1448,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
@@ -41974,7 +41975,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "gist-rs/riir-reflex",
@@ -45180,7 +45181,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T22:15:08.398Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 4,
       "checkedAt": "2026-09-29T22:15:08.398Z",
       "lastReview": {
         "repo": "bevalz/eisenhower-matrix",
@@ -46268,7 +46269,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 9,
+      "stars": 10,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "caiovicentino/jev-risk-check-provider",
@@ -46976,7 +46977,7 @@
       "status": "pending",
       "discoveredAt": "2026-10-06T00:03:23.802Z",
       "attempts": 0,
-      "stars": 4
+      "stars": 5
     },
     "deruichen258/unitree_low-level_balance": {
       "status": "pending",
@@ -47027,5 +47028,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "jjd-lab/jev-synthetic-survey"
+  "metadataNext": "shanehull/go-jev"
 }
