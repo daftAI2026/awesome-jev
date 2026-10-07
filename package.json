@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && vite build && tsc -b",
+    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && npm run agents:generate && vite build && tsc -b",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
@@ -26,7 +26,8 @@
     "news:sync": "node --experimental-strip-types scripts/news-sync.ts",
     "typecheck": "tsc -b",
     "build:history": "node --experimental-strip-types scripts/prepare-build-history.ts",
-    "test:delivery": "node --experimental-strip-types scripts/verify-delivery.ts"
+    "test:delivery": "node --experimental-strip-types scripts/verify-delivery.ts",
+    "agents:generate": "node --experimental-strip-types scripts/generate-llms.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+AgentsFooter.tsx: React 公开文档与五个聊天品牌入口，复用本站主题/路由语言与 OpenFree 原版按钮布局
 AsciiWordmark.tsx: 原始字符字标，CSS 容器宽度适配
 CardMasonry.tsx: 有序项目虚拟瀑布流，预就绪保持 SSR 前缀与阅读位置，就绪提交同步接管有界窗口
 DecryptedBrand.tsx: 品牌链接与悬停解码适配，遵循减少动态效果偏好

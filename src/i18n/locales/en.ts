@@ -5,6 +5,9 @@
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  agentDocuments: 'Public machine-readable documents',
+  agentDescription: 'See what ChatGPT, Claude, Perplexity, Gemini or Grok say about Awesome JEV.',
+  agentAsk: 'Ask about Awesome JEV',
   projectCategoryLink: 'Browse this category',
   relatedProjects: 'Related projects',
   relatedSharedTopics: 'Shared topics',

@@ -7,6 +7,9 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  agentDocuments: '公开机器文档',
+  agentDescription: '看看 ChatGPT、Claude、Perplexity、Gemini 或 Grok 如何评价 Awesome JEV。',
+  agentAsk: '了解 Awesome JEV',
   projectCategoryLink: '浏览所属分类',
   relatedProjects: '相关项目',
   relatedSharedTopics: '共同主题',

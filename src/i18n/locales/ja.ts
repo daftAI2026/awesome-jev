@@ -7,6 +7,9 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  agentDocuments: '公開機械可読ドキュメント',
+  agentDescription: 'ChatGPT、Claude、Perplexity、Gemini、Grok が Awesome JEV をどう評価するか見てみましょう。',
+  agentAsk: 'Awesome JEV について質問',
   projectCategoryLink: 'このカテゴリを見る',
   relatedProjects: '関連プロジェクト',
   relatedSharedTopics: '共通トピック',

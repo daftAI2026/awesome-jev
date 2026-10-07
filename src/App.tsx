@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖规范目录的展示虚拟模块、搜索/排序工具及项目/新闻/收藏组件
- * [OUTPUT]: 对外提供 App 目录布局、手机固定两行控制栏、分类说明、筛选交互及 GitHub 投稿入口
+ * [INPUT]: 依赖目录展示投影、搜索/排序与项目/新闻/收藏/Agents 组件
+ * [OUTPUT]: 提供目录布局、手机固定两行控制栏、分类说明、筛选、投稿与 Agents 页脚
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -9,6 +9,7 @@ import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
 import { GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
 import githubData from 'virtual:directory-catalog'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
+import { AgentsFooter } from '@/components/AgentsFooter'
 import { CardMasonry } from '@/components/CardMasonry'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
 import { GithubList } from '@/components/GithubList'
@@ -427,6 +428,7 @@ export default function App() {
       <footer className="mx-auto w-full max-w-[72.5rem] px-4 pt-8 pb-20 sm:px-8">
         <Separator className="mb-8" />
         <Alert><Info weight="fill" aria-hidden /><AlertTitle>{t('footerTitle')}</AlertTitle><AlertDescription>{t('footerDescription')}</AlertDescription></Alert>
+        <AgentsFooter />
       </footer>
       <GithubProjectDialog
         item={detailItem}

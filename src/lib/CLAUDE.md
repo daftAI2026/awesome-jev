@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+agent-links.ts: 纯公开提示词、品牌端点和机器文档清单，正式 origin 与 Footer/生成器共用
 analytics.ts: 可选 Umami 非阻塞项目动作统计，不记录搜索/收藏且 DEV 不发送
 local-inspection.ts: OG/SEO 共用的可取消同源读取和流式容量边界
 related-projects.ts: 每个快照弱键索引一次分类/主题，交付最多三条稳定相关摘要，重复身份排除

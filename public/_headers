@@ -1,0 +1,13 @@
+# [INPUT]: Cloudflare Workers Static Assets 的响应头规则
+# [OUTPUT]: TXT 与公开 Markdown 的正确媒体类型
+# [POS]: public 的静态交付边界，不改变 HTML 或 API
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Content-Type-Options: nosniff
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Content-Type-Options: nosniff
+/agents/*
+  Content-Type: text/markdown; charset=utf-8
+  X-Content-Type-Options: nosniff

@@ -1,3 +1,9 @@
+<!--
+[INPUT]: 现有语义主题、组件原语与已验收交互
+[OUTPUT]: 页面、分享图、工作台与 Agents 页脚的视觉契约
+[POS]: docs 的视觉权威；实现 token 仍归 src/index.css
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
 # Awesome JEV visual system
 
 This is the stable visual contract for [awesomejev.cc](https://awesomejev.cc). It adapts the visual judgment in [Vercel's design guidance](https://vercel.com/design.md) to our product without importing Vercel branding, report components, or `vbg-*` CSS. Directory-specific layout and behavior belong in [directory-ui.md](directory-ui.md).
@@ -81,3 +87,11 @@ Share images use the white canvas, black/grayscale foreground, ASCII wordmark, G
 Target selection precedes tools. OG preserves two aligned site/project PNG panels and explicit HTML/PNG inspection. SEO uses readable status/value rows and distinguishes failures, manual review and expected exclusions, not a decorative score or invented chart. Page preview uses actual same-origin pages at 390px/1280px with horizontal overflow when necessary and adjacent change-location notes; source page UI stays authoritative. Focusable controls and three language variants are required. OG and this iteration's SEO/preview do not inspect news.
 
 All tools stay outside prerender enumeration and sitemap. Production GET/HEAD, including tool/query variants, return 404 before catalog access. Public OG image endpoints remain accessible.
+
+## Agents footer
+
+Keep the community-directory notice. Copy the Agents region from the live [OpenFree Footer](https://openfree.tools/), not the intermediate Billflare adaptation. Change only site-specific document links, name and public question. Retain the project’s Geist and semantic theme tokens.
+
+Match the source layout: 40px top spacing, 28px border-to-heading padding, 14px heading/document/explanation text, 12px heading-to-links spacing, document gaps of 24px horizontally and 12px vertically. The chat row has 28px vertical padding and 20px between explanation and buttons. Below `sm`, stack the explanation and the complete button row; above it, place text left and buttons right. Five buttons stay in one row, with 36px squares, 6px corners, 8px gaps and 20px contained icons. Preserve ChatGPT, Claude, Perplexity, Gemini, Grok in that order and the source provider endpoints.
+
+Use the actual source SVGs, including the four-color Gemini star and Grok app mark. OpenAI/Grok invert in dark mode, matching the source. Do not append Google AI Mode to the Gemini button label, and do not add a disclaimer paragraph. Safe new-window links and keyboard focus remain. Source provenance and machine-document boundaries belong in [agents.md](agents.md).
