@@ -4153,5 +4153,50 @@
     "reason": null,
     "originalUrl": "https://modal.com/blog/typesafeai-case-study",
     "aihotUrl": "https://aihot.news/items/hjekicue5z8u9zo2kqf54j5eq"
+  },
+  {
+    "id": "yzqy6x4npmqcmfkh4l2y4pvh6",
+    "title": "Strands 发布开源决策模型 Strands Decider 2B",
+    "originalTitle": "Strands Decider 2B：一个小型开源决策模型",
+    "summary": "Strands labs 发布开源决策模型 strands-decider-2b，基于 Qwen3.5-2B 去掉 LM head 换成约百万参数的 pointer head，只能在给定选项中做选择和打分，适合本地 CPU 或 GPU 运行。",
+    "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-10-07T05:49:51.293Z",
+    "discoveredAt": "2026-10-07T06:04:44.169Z",
+    "category": "ai-models",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://strandsagents.com/blog/introducing-strands-decider/",
+    "aihotUrl": "https://aihot.news/items/yzqy6x4npmqcmfkh4l2y4pvh6"
+  },
+  {
+    "id": "t2hejmd7b9emfl60v7mvcm7v9",
+    "title": "Laya 开发者指南：用 CLINC150 实测零样本决策与校准",
+    "originalTitle": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+    "summary": "教程实测 Convai Innovations 开源决策引擎 Laya 0.3.27，一个 4.21 亿参数的非自回归 System 1 模型，单次前向返回类型化问题的概率且零输出 token。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-07T00:53:03.000Z",
+    "discoveredAt": "2026-10-07T03:07:42.113Z",
+    "category": "tip",
+    "score": 70,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+    "aihotUrl": "https://aihot.news/items/t2hejmd7b9emfl60v7mvcm7v9"
+  },
+  {
+    "id": "c1svybwl2956ap2ekjm5vjpam",
+    "title": "Jev 重排序模型提升搜索匹配率",
+    "originalTitle": "Jev is a phenomenal reranker, you heard that right.",
+    "summary": "Jev 是一款出色的重排序模型，你没听错。",
+    "sourceName": "@typesafeai",
+    "publishedAt": "2026-10-01T19:28:27.000Z",
+    "discoveredAt": "2026-10-01T19:45:22.770Z",
+    "category": "ai-products",
+    "score": 25,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2105741653701242938",
+    "aihotUrl": "https://aihot.news/items/c1svybwl2956ap2ekjm5vjpam"
   }
 ]
