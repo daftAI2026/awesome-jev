@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-07T01:00:52.757Z",
+  "at": "2026-10-07T10:34:03.631Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,31 +20,50 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
+  "reviewed": 3,
   "added": 0,
   "pending": 117,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "algorythm-canada/openjevswift",
+      "repo": "hitsz-tmg/jevembed",
       "status": "review",
       "score": {
-        "jevAbout": 0.96,
+        "jevAbout": 0.81,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.84,
-        "category": "alternatives"
+        "jevKeepConfidence": 0.88,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "e5787ea3b93320e7ebad7cdde191020ec58914e9",
-      "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/e5787ea3b93320e7ebad7cdde191020ec58914e9/README.md",
-      "evidenceSha256": "f9c38d2b023fe6cce80e9eb5fe742fba63d0b7a660d9dc88906d0613320cc4b4",
+      "sha": "bc7e6bfad78b2971fe11fa13942af5a189f5a8d9",
+      "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/bc7e6bfad78b2971fe11fa13942af5a189f5a8d9/README.md",
+      "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
       "model": "jev-latest",
-      "checkedAt": "2026-10-07T01:00:52.757Z"
+      "checkedAt": "2026-10-07T10:34:03.631Z"
     },
     {
-      "repo": "lakoreai/pholaya",
+      "repo": "computational-social-science/jevrsi",
       "status": "error",
-      "reason": "github-http-404"
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "timiku/v1-decisions-vllm",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.93,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.37,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "96ecffdd614b772f9d49d4c0609569ea8b522ca2",
+      "evidenceUrl": "https://github.com/timiku/v1-decisions-vllm/blob/96ecffdd614b772f9d49d4c0609569ea8b522ca2/README.md",
+      "evidenceSha256": "579935429b5741c1db5fea3fd3e6838a8918b65153e1e445e5ec588b319d6ef6",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-07T10:34:03.631Z"
     }
   ],
   "identity": {
