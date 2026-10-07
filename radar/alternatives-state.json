@@ -383,19 +383,19 @@
     "nandhakishorm/laya": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 2,
-      "checkedAt": "2026-09-30T20:17:38.263Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
       "lastReview": {
         "repo": "nandhakishorm/laya",
         "status": "review",
         "reason": "suspicious-review-instructions",
-        "sha": "6d942c92081fbc139e736bbd9ac0023223c29b7f",
-        "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/6d942c92081fbc139e736bbd9ac0023223c29b7f/README.md",
-        "evidenceSha256": "b7613f94b485a25f3fbd191bcdbca304049a8ff0dfb24dc0be81251b4b0d5a1d",
+        "sha": "3cf26cbcb18725dbc2d127bb8bb2c4c43243ae63",
+        "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/3cf26cbcb18725dbc2d127bb8bb2c4c43243ae63/README.md",
+        "evidenceSha256": "4f5486699e5f007d686e094cee605b9c3b2f5779de107df11650937965a54713",
         "model": "jev-latest",
-        "checkedAt": "2026-09-30T20:17:38.263Z"
+        "checkedAt": "2026-10-07T20:46:27.091Z"
       },
-      "retryAt": "2026-10-07T20:17:38.263Z"
+      "retryAt": "2026-10-14T20:46:27.091Z"
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -708,24 +708,24 @@
     "mizorewww/laya-coreml": {
       "status": "review",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 2,
-      "checkedAt": "2026-09-30T20:17:38.263Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
       "lastReview": {
         "repo": "mizorewww/laya-coreml",
         "status": "review",
         "score": {
-          "jevAbout": 0.86,
+          "jevAbout": 0.85,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.51,
+          "jevKeepConfidence": 0.59,
           "category": "alternatives"
         },
-        "sha": "4619e0483f07adf39068532e85b42ec2347edb83",
-        "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/4619e0483f07adf39068532e85b42ec2347edb83/README.md",
-        "evidenceSha256": "fa1888e4329ba5eda01b674813120ffba94a1d587af94c607aba545d0184cdb5",
+        "sha": "d8557640a928e14f6af0141747f09672c1ff2866",
+        "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/d8557640a928e14f6af0141747f09672c1ff2866/README.md",
+        "evidenceSha256": "12a1312746c92af672547e4c15ce0772979d6574ca02331e3c7cec45780cf532",
         "model": "jev-latest",
-        "checkedAt": "2026-09-30T20:17:38.263Z"
+        "checkedAt": "2026-10-07T20:46:27.091Z"
       },
-      "retryAt": "2026-10-07T20:17:38.263Z"
+      "retryAt": "2026-10-14T20:46:27.091Z"
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -854,8 +854,8 @@
     "novaleolin/jev-evolve": {
       "status": "error",
       "discoveredAt": "2026-09-23T18:17:17.528Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-03T14:24:54.800Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
       "lastReview": {
         "repo": "novaleolin/jev-evolve",
         "status": "review",
@@ -873,7 +873,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-23T23:56:45.683Z"
       },
-      "retryAt": "2026-10-07T14:24:54.800Z"
+      "retryAt": "2026-10-14T20:46:27.091Z"
     },
     "ishesatoshi/smalljev": {
       "status": "review",
@@ -1085,8 +1085,8 @@
     "rotsl/layaagent": {
       "status": "error",
       "discoveredAt": "2026-09-24T08:44:49.897Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-03T14:24:54.800Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
       "lastReview": {
         "repo": "rotsl/layaagent",
         "status": "review",
@@ -1097,7 +1097,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-24T08:44:49.897Z"
       },
-      "retryAt": "2026-10-07T14:24:54.800Z"
+      "retryAt": "2026-10-14T20:46:27.091Z"
     },
     "bhushankinge/jev-laya-classification-bench": {
       "status": "review",
@@ -1967,19 +1967,19 @@
     "dfm88/toolhunch": {
       "status": "review",
       "discoveredAt": "2026-09-30T20:17:38.263Z",
-      "attempts": 1,
-      "checkedAt": "2026-09-30T20:17:38.263Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
       "lastReview": {
         "repo": "dfm88/toolhunch",
         "status": "review",
         "reason": "insufficient-alternative-context",
-        "sha": "0998a5a6ec288ef350e463b217ba14e08f88e9ab",
-        "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/0998a5a6ec288ef350e463b217ba14e08f88e9ab/README.md",
-        "evidenceSha256": "e4a85dd96906870b60317f21c9b4a24f5427e8c7b45f3aabc65b5687d31d5234",
+        "sha": "8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e",
+        "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e/README.md",
+        "evidenceSha256": "d93b160e92c8e23124643d37b9daeaa488afec3204e5144b0cf44a3870884a33",
         "model": "jev-latest",
-        "checkedAt": "2026-09-30T20:17:38.263Z"
+        "checkedAt": "2026-10-07T20:46:27.091Z"
       },
-      "retryAt": "2026-10-07T20:17:38.263Z"
+      "retryAt": "2026-10-14T20:46:27.091Z"
     },
     "suharvest/laya-on-rk3588-jetson": {
       "status": "review",
@@ -2469,6 +2469,45 @@
         "checkedAt": "2026-10-06T20:33:11.317Z"
       },
       "retryAt": "2026-10-13T20:33:11.317Z"
+    },
+    "vicfei/jev-pipeline-skill": {
+      "status": "review",
+      "discoveredAt": "2026-10-07T20:46:27.091Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
+      "lastReview": {
+        "repo": "vicfei/jev-pipeline-skill",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "f981bec77dee7e29abd40fb97774b433a7e418b7",
+        "evidenceUrl": "https://github.com/vicfei/jev-pipeline-skill/blob/f981bec77dee7e29abd40fb97774b433a7e418b7/README.md",
+        "evidenceSha256": "3f2a32d9cf77bde0f3409e9bd8d218a26dcfb13513bdd715c46f14090cde46e6",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-07T20:46:27.091Z"
+      },
+      "retryAt": "2026-10-14T20:46:27.091Z"
+    },
+    "kelsonthony/laya-springboot-starter": {
+      "status": "review",
+      "discoveredAt": "2026-10-07T20:46:27.091Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-07T20:46:27.091Z",
+      "lastReview": {
+        "repo": "kelsonthony/laya-springboot-starter",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.4,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.66,
+          "category": "alternatives"
+        },
+        "sha": "b37cf09dab1177299c5a34e29c8a095581eb773c",
+        "evidenceUrl": "https://github.com/kelsonthony/laya-springboot-starter/blob/b37cf09dab1177299c5a34e29c8a095581eb773c/README.md",
+        "evidenceSha256": "469fd88df4e68dea02eac0e425641b8aa17b55b4ad8b4821f73a5495e0d5317e",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-07T20:46:27.091Z"
+      },
+      "retryAt": "2026-10-14T20:46:27.091Z"
     }
   }
 }
