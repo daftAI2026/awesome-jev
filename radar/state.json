@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 3,
-    "\"typesafe.ai\" in:readme fork:false": 3,
-    "\"Jev\" \"System One\" in:readme fork:false": 3,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 3,
+    "topic:jev fork:false": 5,
+    "\"typesafe.ai\" in:readme fork:false": 5,
+    "\"Jev\" \"System One\" in:readme fork:false": 5,
+    "topic:typesafe-ai fork:false": 5,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
+    "\"TypeSafe\" \"Jev\" fork:false": 5,
     "code:\"api.typesafe.ai\" in:file": 5,
     "code:\"@typesafe-ai/sdk\" in:file": 3,
     "code:\"TYPESAFE_API_KEY\" in:file": 4,
     "code:\"jev-latest\" in:file": 5
   },
-  "metadataCursor": 1628,
+  "metadataCursor": 487,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -196,7 +196,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 933
+      "stars": 935
     },
     "inso1337/revl": {
       "status": "review",
@@ -351,7 +351,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 145,
+      "stars": 150,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -366,7 +366,7 @@
       "attempts": 3,
       "checkedAt": "2026-09-28T13:54:40.964Z",
       "retryAt": "2026-10-02T13:54:40.964Z",
-      "stars": 240
+      "stars": 243
     },
     "muratcanberber/jev-thefishgame": {
       "status": "review",
@@ -560,7 +560,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 25
+      "stars": 36
     },
     "nabsku/pi-follow-through": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-09-30T22:16:19.563Z"
       },
       "retryAt": "2026-10-07T22:16:19.563Z",
-      "stars": 1
+      "stars": 2
     },
     "54k41/darkforest-swordholder": {
       "status": "error",
@@ -1563,7 +1563,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 26
+      "stars": 27
     },
     "jerryxff26-alt/session-top": {
       "status": "review",
@@ -1601,7 +1601,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 14
+      "stars": 15
     },
     "jexp/watfile": {
       "status": "review",
@@ -2989,7 +2989,7 @@
       "attempts": 4,
       "checkedAt": "2026-10-06T18:22:09.696Z",
       "retryAt": "2026-10-13T18:22:09.696Z",
-      "stars": 131
+      "stars": 132
     },
     "devvgwardo/ghost-route": {
       "status": "review",
@@ -4282,7 +4282,7 @@
       "attempts": 4,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 6
+      "stars": 7
     },
     "liyucheng1997/332_lab-jev-chat": {
       "status": "review",
@@ -5413,7 +5413,7 @@
         "checkedAt": "2026-10-01T05:53:38.417Z"
       },
       "retryAt": "2026-10-08T05:53:38.417Z",
-      "stars": 36
+      "stars": 37
     },
     "ashishakkumar/jev-checkpoint": {
       "status": "error",
@@ -5475,7 +5475,7 @@
       ],
       "checkedAt": "2026-10-01T13:14:43.978Z",
       "retryAt": "2026-10-08T13:14:43.978Z",
-      "stars": 12519
+      "stars": 12530
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -7930,7 +7930,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 490
+      "stars": 492
     },
     "omnijev/playjev": {
       "status": "review",
@@ -8570,7 +8570,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 133
+      "stars": 139
     },
     "rodert/jevplayer": {
       "status": "review",
@@ -10943,7 +10943,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 2
     },
     "viguru24/youtube": {
       "status": "review",
@@ -18055,7 +18056,7 @@
       ],
       "checkedAt": "2026-09-29T05:43:59.256Z",
       "retryAt": "2026-10-03T05:43:59.256Z",
-      "stars": 43329
+      "stars": 43403
     },
     "lioensky/vcptoolbox": {
       "status": "review",
@@ -20742,7 +20743,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 1
     },
     "billshoap/hermesfixes": {
       "status": "review",
@@ -26865,7 +26867,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 37
     },
     "sac-y/jev-cu": {
       "status": "review",
@@ -28570,7 +28573,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 6,
+      "stars": 8,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "rcarmo/go-system-one",
@@ -28924,7 +28927,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 48,
+      "stars": 49,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "alvarobartt/sys1",
@@ -31264,7 +31267,7 @@
           "path": "docs/providers/jev.mdx"
         }
       ],
-      "stars": 1201,
+      "stars": 1222,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "enterpilot/gomodel",
@@ -31401,7 +31404,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 18684
     },
     "janampatel/multi-agent-rag-lit-review": {
       "status": "review",
@@ -35458,7 +35462,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 2,
-      "stars": 1199,
+      "stars": 1234,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -39262,7 +39266,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 1979,
+      "stars": 1982,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -40289,7 +40293,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 1,
+      "stars": 2,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "itsadrianxv/jev-quant",
@@ -40453,7 +40457,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 4,
+      "stars": 5,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "umstek/zero-shot-ie-bench",
@@ -42255,7 +42259,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 19,
+      "stars": 24,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "tsukhani/jclaw",
@@ -44159,7 +44163,7 @@
       "status": "error",
       "discoveredAt": "2026-09-27T21:20:54.542Z",
       "attempts": 2,
-      "stars": 386,
+      "stars": 387,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "retryAt": "2026-10-02T22:16:19.563Z"
     },
@@ -46609,7 +46613,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 48,
+      "stars": 49,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "777genius/social-monitor",
@@ -47028,5 +47032,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "shanehull/go-jev"
+  "metadataNext": "daud4653/jev-model-router"
 }
