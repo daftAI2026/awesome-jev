@@ -4288,5 +4288,35 @@
     "reason": null,
     "originalUrl": "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/",
     "aihotUrl": "https://aihot.news/items/qzsk5mfkbv4fkn7qy4rotta9d"
+  },
+  {
+    "id": "gts9bpic82zpoxxx4l53hovjd",
+    "title": "Arena 评测 Jev Router：成本高 38%、延迟 1.7 倍",
+    "originalTitle": "We evaluated Jev Router by @typesafeai on Agent Arena.",
+    "summary": "Arena 在 Agent Arena 上用超 4700 个真实智能体会话评测了 typesafeai 的 Jev Router，结果显示其未推进当前帕累托前沿：达到与 DeepSeek V4.1 Flash（Max）相近性能时成本高 38%，模型请求延迟中位数高 1.7 倍。",
+    "sourceName": "X：Arena (@arena)",
+    "publishedAt": "2026-10-07T22:29:33.000Z",
+    "discoveredAt": "2026-10-07T22:35:25.315Z",
+    "category": "ai-models",
+    "score": 37,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/arena/status/2107961555363213482",
+    "aihotUrl": "https://aihot.news/items/gts9bpic82zpoxxx4l53hovjd"
+  },
+  {
+    "id": "uqulrilfq8v3jehn9rkpfacjk",
+    "title": "TypeSafe AI 回应\"死亡\"传闻",
+    "originalTitle": "The rumors of our death have been greatly exaggerated",
+    "summary": "关于我们已死的传闻被大大夸大了",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-07T22:19:04.000Z",
+    "discoveredAt": "2026-10-07T22:25:26.266Z",
+    "category": "tip",
+    "score": 41,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2107958916684632396",
+    "aihotUrl": "https://aihot.news/items/uqulrilfq8v3jehn9rkpfacjk"
   }
 ]
