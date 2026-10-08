@@ -2508,6 +2508,23 @@
         "checkedAt": "2026-10-07T20:46:27.091Z"
       },
       "retryAt": "2026-10-14T20:46:27.091Z"
+    },
+    "phocinae/phocinae-largha-150m-v1": {
+      "status": "review",
+      "discoveredAt": "2026-10-08T01:17:50.849Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-08T01:17:50.849Z",
+      "lastReview": {
+        "repo": "phocinae/phocinae-largha-150m-v1",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "d190db066d3526f8f3ef322c802cd824fd9dde4b",
+        "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/d190db066d3526f8f3ef322c802cd824fd9dde4b/README.md",
+        "evidenceSha256": "3b70e97ec22631453a00df282634befd11c2ffa5505f26eb394ca28d4b70caa1",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-08T01:17:50.849Z"
+      },
+      "retryAt": "2026-10-15T01:17:50.849Z"
     }
   }
 }

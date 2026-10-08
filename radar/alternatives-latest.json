@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-07T20:46:27.091Z",
+  "at": "2026-10-08T01:17:50.849Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 104,
-      "total": 104,
+      "fetched": 105,
+      "total": 105,
       "status": "bounded"
     }
   ],
@@ -20,81 +20,21 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 7,
+  "reviewed": 1,
   "added": 0,
-  "pending": 119,
+  "pending": 120,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "nandhakishorm/laya",
-      "status": "review",
-      "reason": "suspicious-review-instructions",
-      "sha": "3cf26cbcb18725dbc2d127bb8bb2c4c43243ae63",
-      "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/3cf26cbcb18725dbc2d127bb8bb2c4c43243ae63/README.md",
-      "evidenceSha256": "4f5486699e5f007d686e094cee605b9c3b2f5779de107df11650937965a54713",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-07T20:46:27.091Z"
-    },
-    {
-      "repo": "mizorewww/laya-coreml",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.85,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.59,
-        "category": "alternatives"
-      },
-      "sha": "d8557640a928e14f6af0141747f09672c1ff2866",
-      "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/d8557640a928e14f6af0141747f09672c1ff2866/README.md",
-      "evidenceSha256": "12a1312746c92af672547e4c15ce0772979d6574ca02331e3c7cec45780cf532",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-07T20:46:27.091Z"
-    },
-    {
-      "repo": "dfm88/toolhunch",
+      "repo": "phocinae/phocinae-largha-150m-v1",
       "status": "review",
       "reason": "insufficient-alternative-context",
-      "sha": "8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e",
-      "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e/README.md",
-      "evidenceSha256": "d93b160e92c8e23124643d37b9daeaa488afec3204e5144b0cf44a3870884a33",
+      "sha": "d190db066d3526f8f3ef322c802cd824fd9dde4b",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/d190db066d3526f8f3ef322c802cd824fd9dde4b/README.md",
+      "evidenceSha256": "3b70e97ec22631453a00df282634befd11c2ffa5505f26eb394ca28d4b70caa1",
       "model": "jev-latest",
-      "checkedAt": "2026-10-07T20:46:27.091Z"
-    },
-    {
-      "repo": "novaleolin/jev-evolve",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "rotsl/layaagent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kelsonthony/laya-springboot-starter",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.4,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.66,
-        "category": "alternatives"
-      },
-      "sha": "b37cf09dab1177299c5a34e29c8a095581eb773c",
-      "evidenceUrl": "https://github.com/kelsonthony/laya-springboot-starter/blob/b37cf09dab1177299c5a34e29c8a095581eb773c/README.md",
-      "evidenceSha256": "469fd88df4e68dea02eac0e425641b8aa17b55b4ad8b4821f73a5495e0d5317e",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-07T20:46:27.091Z"
-    },
-    {
-      "repo": "vicfei/jev-pipeline-skill",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "f981bec77dee7e29abd40fb97774b433a7e418b7",
-      "evidenceUrl": "https://github.com/vicfei/jev-pipeline-skill/blob/f981bec77dee7e29abd40fb97774b433a7e418b7/README.md",
-      "evidenceSha256": "3f2a32d9cf77bde0f3409e9bd8d218a26dcfb13513bdd715c46f14090cde46e6",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-07T20:46:27.091Z"
+      "checkedAt": "2026-10-08T01:17:50.849Z"
     }
   ],
   "identity": {
