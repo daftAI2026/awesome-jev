@@ -1853,8 +1853,8 @@
     "ken-jo/veyra": {
       "status": "error",
       "discoveredAt": "2026-09-29T20:12:32.881Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-06T20:33:11.317Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-08T20:48:36.864Z",
       "lastReview": {
         "repo": "ken-jo/veyra",
         "status": "review",
@@ -1870,7 +1870,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T20:12:32.881Z"
       },
-      "retryAt": "2026-10-08T20:33:11.317Z"
+      "retryAt": "2026-10-12T20:48:36.864Z"
     },
     "algorythm-canada/openjevswift": {
       "status": "review",
@@ -2563,6 +2563,76 @@
         "checkedAt": "2026-10-08T10:55:10.988Z"
       },
       "retryAt": "2026-10-15T10:55:10.988Z"
+    },
+    "amantux/mcp-router": {
+      "status": "review",
+      "discoveredAt": "2026-10-08T20:48:36.864Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-08T20:48:36.864Z",
+      "lastReview": {
+        "repo": "amantux/mcp-router",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.66,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.38,
+          "category": "alternatives"
+        },
+        "sha": "ddfa3b0b66980bb7f3c2b3e19880a0e71cd3ecf9",
+        "evidenceUrl": "https://github.com/amantux/mcp-router/blob/ddfa3b0b66980bb7f3c2b3e19880a0e71cd3ecf9/README.md",
+        "evidenceSha256": "57310a596a1c59f1601ea6a61f47c293910780c80abde5803f1c6e52a179a6cb",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-08T20:48:36.864Z"
+      },
+      "retryAt": "2026-10-15T20:48:36.864Z"
+    },
+    "itsodeleo/jev-mlx": {
+      "status": "review",
+      "discoveredAt": "2026-10-08T20:48:36.864Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-08T20:48:36.864Z",
+      "lastReview": {
+        "repo": "itsodeleo/jev-mlx",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.6,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.72,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "f8f2464eea14da53511d40fe49876f926c49ceee",
+        "evidenceUrl": "https://github.com/itsodeleo/jev-mlx/blob/f8f2464eea14da53511d40fe49876f926c49ceee/README.md",
+        "evidenceSha256": "e03b3483d27e30c8ee74c55fab00249c4cea2aef12a3d74125b456dec84afad9",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-08T20:48:36.864Z"
+      },
+      "retryAt": "2026-10-15T20:48:36.864Z"
+    },
+    "jev-engineering/cookbook": {
+      "status": "review",
+      "discoveredAt": "2026-10-08T20:48:36.864Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-08T20:48:36.864Z",
+      "lastReview": {
+        "repo": "jev-engineering/cookbook",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.12,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.52,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "67a23342c5ec10c7fae01622f130cb5af8bb8eb9",
+        "evidenceUrl": "https://github.com/jev-engineering/cookbook/blob/67a23342c5ec10c7fae01622f130cb5af8bb8eb9/README.md",
+        "evidenceSha256": "6e9edfd18b2a6a04444fd247364c9352c304ccdfae68b0724d0e057b6156eab8",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-08T20:48:36.864Z"
+      },
+      "retryAt": "2026-10-15T20:48:36.864Z"
     }
   }
 }
