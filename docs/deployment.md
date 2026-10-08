@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 依赖 radar 工作流、production 环境与 Workers 构建触发器
-[OUTPUT]: 提供同版本产物部署、切换验收与恢复步骤
+[OUTPUT]: 提供同版本部署、项目构建断开、切换实证与恢复步骤
 [POS]: docs 的站点发布契约；采集准入归 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -61,22 +61,26 @@ PR 校验、机器人分支和采集器不读取部署 Secret。
 3. 发布工作流并打开部署开关。
 4. 等待 `verify` 与 `deploy` 都成功。
 5. 检查生产页面、分页、机器文档与 OG。
-6. 将本站 Cloudflare 触发器 `branch_excludes` 设为 `["*"]`。
-7. 重读触发器，确认排除全部 Git 分支。
+6. 备份本站不含凭据的构建配置。
+7. 断开本站 Worker 的 Git 构建连接。
+8. 重读触发器，确认列表为空。
+9. 确认原 Worker 与生产 HTTP 仍有效。
 
-此过滤停止 Git 自动构建，不删除 Worker。
-保留仓库连接、原构建命令与触发器，便于恢复。
+断开操作移除本站构建配置，不删除 Worker。
+生产版本、域名、ASSETS 与站点保持有效。
+保存原仓库、分支、构建命令与缓存设置。
 不修改账户的 GitHub App 或其他项目。
-手工 Cloudflare 重试仍能消耗构建分钟。
 新路径失败时，保留旧触发器，先修复故障。
 
 ## 恢复
 
 1. 将 GitHub 部署开关设为 `false`。
-2. 将本站触发器 `branch_excludes` 恢复为 `[]`。
-3. 确认包含分支仍为 `["main"]`。
-4. 在 Cloudflare 对当前 `main` 发起构建。
-5. 检查部署成功及生产 HTTP。
+2. 在本站 Worker 的 Settings → Builds 选择 Connect。
+3. 重新选择 `daftAI2026/awesome-jev` 与 `main`。
+4. 恢复根目录 `/`、构建命令 `npm run build`。
+5. 恢复 `npx wrangler deploy`、缓存并关闭预览构建。
+6. 在 Cloudflare 对当前 `main` 发起构建。
+7. 检查部署成功及生产 HTTP。
 
 只重跑部署 job 时，必须保留同次运行的产物。
 产物过期后，在当前 `main` 派发完整校验。
@@ -86,10 +90,33 @@ GitHub 校验成功不等于生产部署成功。
 ## 官方依据
 
 - [Cloudflare GitHub Actions](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/)
-- [Cloudflare 构建分支过滤](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/)
+- [Cloudflare 构建连接与断开](https://developers.cloudflare.com/workers/ci-cd/builds/#disconnecting-builds)
 - [GitHub 事件触发边界](https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow)
 - [GitHub Actions 计费](https://docs.github.com/en/billing/concepts/product-billing/github-actions)
 
 仓库公开且使用标准 `ubuntu-latest` runner。
 此路径不消耗 Cloudflare Workers Builds 分钟。
 仓库改为私有或使用付费 runner 时，重新核对额度。
+
+## 2026-10-08 切换实证
+
+- 首次提交：`e89e6d4b183c11fc5a59c057e3edb630cfee5f55`。
+- [首次 GitHub 发布运行](https://github.com/daftAI2026/awesome-jev/actions/runs/37761942924) 校验与部署均成功。
+- 校验耗时 3 分 48 秒；部署耗时 49 秒。
+- 首次 GitHub Worker 版本：`96cc6fe6-9cfa-4b9f-8f02-897c3a9a9f6d`。
+- 版本说明包含完整 GitHub 提交 SHA。
+- 本机离线检查通过 504 项；真实交付检查通过 46 项。
+- 交付检查零跳过；异目录产物 dry-run 通过。
+- 生产首页、Top100/新闻第二页均返回 200。
+- 生产 TXT/Markdown 媒体类型与 OG PNG 均有效。
+
+分支排除尝试返回 400，未采用该配置。
+最终通过 `cf builds workers delete` 断开本站构建。
+操作后触发器列表为空，原 Worker 仍存在。
+仅本站构建配置被移除，账户 GitHub App 保留。
+
+不含凭据的原设置备份：
+`deployment-backup.local/cloudflare-build-before-cutover-2026-10-08.json`。
+备份包含仓库、分支、构建命令和缓存设置。
+备份不包含 Token、Secret 或环境变量。
+`*.local` 忽略此目录，备份不进入仓库或产物。

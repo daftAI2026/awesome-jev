@@ -58,7 +58,7 @@ Trusted GitHub Actions deployment flow (see [deployment.md](deployment.md) for t
 1. A human push or explicit robot dispatch validates the exact `main` commit.
 2. `verify` runs the full existing checks, `npm run build` and zero-skip `test:delivery`, then packages `dist` with its commit SHA.
 3. The isolated `production` job restores that run's artifact ID, checks the Worker config and current main SHA, then runs `npx --no-install wrangler deploy --config dist/server/wrangler.json` without rebuilding.
-4. After the first verified production deployment, exclude all Git branches from this Worker's Cloudflare build trigger. Keep the original trigger configuration for recovery; do not disconnect the account-wide GitHub App.
+4. After the first verified production deployment, back up non-secret build settings and disconnect this Worker's Cloudflare Git build connection. The Worker, domain and existing deployment remain intact; do not disconnect the account-wide GitHub App.
 
 This reuses a verified build, not incremental compilation. Cloudflare asset upload skips unchanged files. Production HTML, RPC and Worker code remain one artifact. The repository deployment flag stages the migration; a green validation alone does not authorize disabling the old path.
 
