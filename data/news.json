@@ -4408,5 +4408,20 @@
     "reason": null,
     "originalUrl": "https://www.understandingai.org/p/understanding-jev-the-new-model-everyone",
     "aihotUrl": "https://aihot.news/items/dqelvwbsyncp0e515g1ironxf"
+  },
+  {
+    "id": "iprvps9iocs0xvyg8mdbfm07d",
+    "title": "TypeSafe AI 决策模型校准表现更优",
+    "originalTitle": "Stay calibrated out there!",
+    "summary": "保持校准！\n\n（引用推文概括：正如预期，@typesafeai 的 jev 在邮件分类任务上，校准表现优于我们测试的另外 40 个决策模型。）",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-08T18:21:09.000Z",
+    "discoveredAt": "2026-10-08T18:33:40.151Z",
+    "category": "tip",
+    "score": 19,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2108261430265029085",
+    "aihotUrl": "https://aihot.news/items/iprvps9iocs0xvyg8mdbfm07d"
   }
 ]
