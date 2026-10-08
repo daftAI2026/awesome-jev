@@ -1,58 +1,76 @@
 {
-  "at": "2026-10-07T23:05:24.877Z",
+  "at": "2026-10-08T06:03:55.139Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2539,
+      "total": 2548,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 8432,
+      "total": 8470,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 7054,
+      "total": 7079,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 200,
-      "total": 581,
+      "fetched": 180,
+      "total": 580,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
       "fetched": 200,
-      "total": 604,
+      "total": 606,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3631,
+      "total": 3637,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 0,
-      "total": 0,
-      "status": "github-rate-limited"
+      "fetched": 200,
+      "total": 30336,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"@typesafe-ai/sdk\" in:file",
+      "fetched": 200,
+      "total": 8480,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"TYPESAFE_API_KEY\" in:file",
+      "fetched": 200,
+      "total": 61440,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"jev-latest\" in:file",
+      "fetched": 200,
+      "total": 71040,
+      "status": "search-cap"
     }
   ],
   "metadata": {
-    "ok": 1098,
-    "failed": 2,
+    "ok": 1095,
+    "failed": 5,
     "batches": 22,
     "cost": 22,
     "other": 1000,
-    "remaining": 1101,
+    "remaining": 1104,
     "top100": {
       "ok": 100,
       "total": 100,
@@ -76,92 +94,197 @@
         "databaseId": 1376671563
       },
       {
-        "from": "faizullah9181/esketcher",
-        "to": "faizullah9181/jev-esketcher",
-        "databaseId": 1383974102
+        "from": "navidkashani/jev-guard",
+        "to": "veronalabs/spamlens",
+        "databaseId": 1380305332
       },
       {
-        "from": "monotykamary/jev-fabric",
-        "to": "fabric-runtime/jev-fabric",
-        "databaseId": 1387099307
+        "from": "peterfriese/jev-foundation-models",
+        "to": "peterfriese/system-one-foundation-models",
+        "databaseId": 1380219642
       },
       {
-        "from": "philippelhaus/codex-jev",
-        "to": "philippelhaus/codex-decision",
-        "databaseId": 1389646078
+        "from": "zchee/typesafe-sdk-rust",
+        "to": "zchee/decision-model-sdk-rust",
+        "databaseId": 1376458463
       },
       {
-        "from": "iammrduncan/typesafe-ai-benchmark",
-        "to": "iammrduncan/inference-benchmarks",
-        "databaseId": 1373664881
+        "from": "andyhorn/jev",
+        "to": "andyhorn/system_one_dart",
+        "databaseId": 1378008435
       },
       {
-        "from": "bunsdev/typesafe-ai-playground",
-        "to": "typesafeai/typesafe-playground",
-        "databaseId": 1373324760
+        "from": "carlaiau/readwithjev",
+        "to": "carlaiau/read-with-jev",
+        "databaseId": 1375767462
       },
       {
-        "from": "huntedman/jevlint",
-        "to": "iamtoomas/jevlint",
-        "databaseId": 1374372746
+        "from": "chenjingdev/jev",
+        "to": "chenjingdev-archive/jev",
+        "databaseId": 1378914323
       },
       {
-        "from": "phureewat29/got-jev",
-        "to": "phureewat29/jev-got",
-        "databaseId": 1374274889
+        "from": "stephenlb/truetype.ai-open",
+        "to": "stephenlb/system-one-model",
+        "databaseId": 1376388571
       },
       {
-        "from": "zavocc/ground-zero",
-        "to": "wmcbtech30/ground-zero",
-        "databaseId": 1375280181
+        "from": "dperezcabrera/system-one-chess",
+        "to": "dperezcabrera/ai-chess-lab",
+        "databaseId": 1380374177
       },
       {
-        "from": "kunobi-ninja/kunobi-jev",
-        "to": "kunobi-ninja/kunobi-decision",
-        "databaseId": 1374093481
-      },
-      {
-        "from": "tinyhumansai/tinyjevclient",
-        "to": "tinyhumansai/tinydecisionmodels",
-        "databaseId": 1374366286
-      },
-      {
-        "from": "bunsdev/typesafe-ui",
-        "to": "typesafeai/typesafe-ui",
-        "databaseId": 1373757159
-      },
-      {
-        "from": "fruitymcdoo/jevchat",
-        "to": "sonofsaris/jevchat",
-        "databaseId": 1378948439
-      },
-      {
-        "from": "church-of-lane/csharp-jef-sdk",
-        "to": "church-of-lane/csharp-typesafe-sdk",
-        "databaseId": 1378876381
-      },
-      {
-        "from": "completedottech/jev-factorio-agent",
-        "to": "jevplays-games/jev-factorio-agent",
-        "databaseId": 1379060982
+        "from": "devonance/doomsat",
+        "to": "doom-satellite/doomsat",
+        "databaseId": 1381009481
       }
     ]
   },
-  "reviewed": 0,
+  "reviewed": 23,
   "added": 0,
   "pending": 2000,
-  "overflow": 724,
+  "overflow": 1088,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "ivorpad/skillranker",
+      "repo": "rezastd/living-npc-world",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "rdk16/jevudio",
+      "repo": "wanlanglin/jev-skills",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
+    },
+    {
+      "repo": "x96x64/ctxjev",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "paulsonnentag/scrap",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "aviletek/jev-flow-harness",
+      "reason": "github-invalid-metadata",
+      "status": "metadata-error"
+    },
+    {
+      "repo": "wh000wh000/awesome-jev-live",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "stephenmcconnachie/starred",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "ege-bulut/jevcraft",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "pygarap/my-awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "radrebelsam/awesome-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "thevibeworks/awesome-typesafe-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "altstack/dj-set-curator",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "b0mbxstic/jev-chatgpt",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "baltzparra/jev-study",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "bokuweb/grande",
+      "status": "error",
+      "reason": "github-http-409"
+    },
+    {
+      "repo": "nsillik/jevvin-off",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "pomodorozhong/exp-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "ryder-mhumble/awsome-jev-router",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "satangel2222/superego",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "shikaizhong-design/jego",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "tomcat7707/jev-tetris-player",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "unnati-23/jev-typesafe-guide",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "virtualmachinist/omapi-overlay",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "wallstreetpete/awesome-open-source-trading",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "wanlanglin/jev-wikirace",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "waxmell114514/awesome-jev-compaction",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "waxmell114514/jev-fps",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "tickernelz/sub2api",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
     }
   ],
   "identity": {
@@ -170,10 +293,6 @@
     "batches": 0,
     "cost": 0,
     "resolved": []
-  },
-  "deferred": {
-    "phase": "discovery",
-    "reason": "github-rate-limited"
   },
   "totalProjects": 2199
 }
