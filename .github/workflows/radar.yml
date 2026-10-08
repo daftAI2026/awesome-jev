@@ -1,6 +1,6 @@
 # [INPUT]: 依赖 GitHub 只读元数据、明确 head 校验、共享发布器与可信 main 收录入口
-# [OUTPUT]: 执行核心采集/校验/发布；自建收录分支校验后显式唤醒 main 控制器
-# [POS]: workflows 的核心采集链路；扫描、验证、收录交接与发布权限分离
+# [OUTPUT]: 校验并封装同版本产物；可信 main 部署该产物，采集发布与收录交接保持隔离
+# [POS]: workflows 的核心采集与站点发布入口；部署凭据只进入 main 的 production job
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev ecosystem radar
 run-name: >-
@@ -35,6 +35,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   verify:
+    outputs:
+      artifact_id: ${{ steps.worker-artifact.outputs.artifact-id }}
     if: github.event_name != 'schedule' && (github.event_name != 'workflow_dispatch' || inputs.mode == 'validate')
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -47,6 +49,7 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: .node-version
+          cache: npm
       - name: Install locked dependencies
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Verify new or edited rationale quotes at pinned sources
@@ -59,6 +62,82 @@ jobs:
           INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       - name: Verify catalog and delivery
         run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+      - name: Package verified Worker output
+        id: package
+        if: >-
+          github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+          (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'validate'))
+        run: |
+          printf '%s\n' "$GITHUB_SHA" > dist/.build-sha
+          tar -czf "$RUNNER_TEMP/worker-build.tar.gz" dist
+      - name: Save verified Worker output
+        id: worker-artifact
+        if: steps.package.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: worker-${{ github.sha }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/worker-build.tar.gz
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+  deploy:
+    name: Deploy verified main artifact
+    needs: verify
+    if: >-
+      needs.verify.result == 'success' && needs.verify.outputs.artifact_id != '' &&
+      github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+      vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true' &&
+      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'validate'))
+    permissions:
+      contents: read
+    environment: production
+    concurrency:
+      group: jev-production-deploy
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.verify.outputs.artifact_id }}
+          path: ${{ runner.temp }}/worker-build
+          merge-multiple: true
+      - name: Restore exact verified output
+        run: |
+          tar -xzf "$RUNNER_TEMP/worker-build/worker-build.tar.gz"
+          test "$(cat dist/.build-sha)" = "$GITHUB_SHA"
+          node -e 'const c=require("./dist/server/wrangler.json"); if(c.name!=="awesome-jev-project" || c.no_bundle!==true || c.assets?.directory!=="../client") process.exit(1)'
+      - name: Install locked deploy tool without running build
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Refuse superseded main deployment
+        id: freshness
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          if [ "$latest" = "$GITHUB_SHA" ]; then
+            echo 'current=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'current=false' >> "$GITHUB_OUTPUT"
+            echo 'Skip superseded main artifact.'
+          fi
+      - name: Deploy the verified output without rebuilding
+        if: steps.freshness.outputs.current == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo 'Missing production Cloudflare token.'; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'Missing Cloudflare account ID.'; exit 1; }
+          npx --no-install wrangler deploy --config dist/server/wrangler.json --message "GitHub $GITHUB_SHA"
   resume-intake:
     needs: verify
     # 通知失败不污染已成功的验证；失败 job 仍可见，后续 sweep 可读取完整 CI 恢复。
@@ -183,6 +262,7 @@ jobs:
     if: github.event_name == 'schedule' || inputs.publish == true
     permissions:
       contents: write
+      actions: write
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -201,6 +281,12 @@ jobs:
           merge-multiple: true
       - run: node --experimental-strip-types scripts/radar.ts --apply "$RUNNER_TEMP/snapshot"
       - name: Publish on latest main with bounded conflict recovery
+        id: publication
         env:
           GH_TOKEN: ${{ github.token }}
         run: node --experimental-strip-types scripts/publish-data.ts radar
+      - name: Request verified main deployment after data publication
+        if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run radar.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

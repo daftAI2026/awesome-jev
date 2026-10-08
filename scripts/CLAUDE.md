@@ -9,7 +9,8 @@ agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG �
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
 agent-delivery.test.ts: Node 真实 HTTP 机器文档媒体类型、互链/实体地址与页脚入口回归
 publication-merge.ts: 三方纯数据增量合并，保留最新 main 顺序/人工字段/撤回，禁止旧快照整体覆盖
-publish-data.ts: 三采集器共享发布器，先 fetch main，再叠加本轮结果/重建验证/普通 push；仅竞争重试三次，不重跑模型
+publish-data.ts: 三采集器共享发布器，叠加最新 main 并普通推送；输出 published/unchanged，工作流据此派发 main，不重跑模型
+deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝与三采集器派发；无线上写入
 publish-data.test.ts: Node test 真实本地 Git 竞争、三采集器叠加、验证失败不推送和临时工作树清理
 onsite-seo.test.ts: Node test 相关项目、工作台输入、SEO 诊断与有界流读取的离线边界验证
 alternative-audit.test.ts: Node test alternative-audit 的契约与回归验证，运行 npm test

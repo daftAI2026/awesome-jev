@@ -1,5 +1,5 @@
 # [INPUT]: 依赖 AIHOT 同步、新闻验证、构建和共享最新 main 发布脚本
-# [OUTPUT]: 执行独立新闻同步并发布快照及站点地图
+# [OUTPUT]: 发布新闻快照与站点地图；实际发布后派发可信 main 构建和部署
 # [POS]: workflows 的新闻链路；不修改 GitHub 项目数据
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev news sync
@@ -20,6 +20,7 @@ jobs:
       vars.AIHOT_NEWS_ENABLED == 'true'
     permissions:
       contents: write
+      actions: write
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -38,6 +39,12 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run typecheck && npm test && npm run news:check && npm run build && npm run test:delivery
       - name: Publish news and sitemap on latest main
+        id: publication
         env:
           GH_TOKEN: ${{ github.token }}
         run: node --experimental-strip-types scripts/publish-data.ts news
+      - name: Request verified main deployment after data publication
+        if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run radar.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

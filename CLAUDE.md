@@ -9,7 +9,7 @@ scripts/ - 自动 GitHub 身份建基线/按 ID 刷新、服务端采集/审核�
 public/ - 静态 favicon、索引、机器文档、原版品牌与许可完备字库 (3 子目录: agents, agent-logos, og-fonts)
 radar/ - 生态与替代实现的状态及发布报告
 .agents/ - 项目专用 Agent 复核 skill 与独立分类收据交接 (1 子目录: skills)，不部署云端 Agent
-.github/ - 投稿模板、隔离的建议性审核、条件收录与可信数据发布；收录 CI 显式唤醒 main 控制器
+.github/ - 投稿/审核/收录、可信数据发布与 main 已验产物部署；机器人发布显式派发 main 校验
 </directory>
 <config>
 package.json - Node 24 与构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
@@ -38,5 +38,7 @@ Agents 页脚复用三语言与本站主题，布局/品牌资产/按钮名称�
 
 访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
 验证: npm run typecheck、npm run lint、npm test、npm run build、npm run test:delivery（构建后真实 HTTP/模块图，零跳过）。使用 Node 24；不将 .env 或采集凭据写入文档。
+
+可信 main 校验封装同版本 dist，production job 按 artifact ID 部署，不重复构建。部署凭据仅存 production Secret，环境仅允许 main；PR/采集器不持有此凭据。实际数据推送显式派发 main 校验。部署开关与 Cloudflare Git 构建切换/恢复见 docs/deployment.md。
 
 法则: 极简·稳定·导航·版本精确；修改后按文件头部 → 局部地图 → 全局地图检查。

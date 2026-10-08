@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 依赖 GitHub Actions、采集/审核/正负向处理契约、Agent 分类 skill 与仓库权限/分支配置
-[OUTPUT]: 提供采集、建议性审核、Agent 复核交接、条件收录/拒收、可信发布与分支生命周期边界
+[OUTPUT]: 提供采集、审核、条件收录/拒收、可信发布与 main 部署派发边界
 [POS]: docs 的自动化运维契约，连接工作流权限隔离与目录数据发布，不作为运行时代码依赖
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -64,7 +64,7 @@ Radar permits **2,000 actual Jev HTTP attempts per UTC day**, including retries;
 
 - **scan**: read-only GitHub permissions; TypeSafe secret exists only in the collection step. No dependency installation and no remote repository execution.
 - **validate**: read-only permissions, no TypeSafe secret. Dependencies install with `--ignore-scripts`; tests and build run against the exact collected snapshot.
-- **publish**: sole job with `contents: write`; no TypeSafe key. Revalidates the data-only snapshot before committing; if main advanced, installs dependencies in an isolated worktree and fully verifies the merged result before a normal push.
+- **publish**: sole job with `contents: write`; `actions: write` only dispatches main validation after a published snapshot; no TypeSafe key or Cloudflare deployment token. Revalidates the data-only snapshot before committing; if main advanced, installs dependencies in an isolated worktree and fully verifies the merged result before a normal push.
 - Actions are pinned to commit SHAs. A concurrent maintainer/collector commit causes a safe non-fast-forward push rejection; never force-push or overwrite it. Try the retained snapshot on current `main` using the no-paid-call recovery below before starting another scan.
 - Snapshots are retained as Actions artifacts for **14 days**. `radar/state.json` stores cursors and pending/rejected candidates; `radar/latest.json` stores the latest run's outcomes. These files are not imported into the website.
 - A missing key fails the scan before discovery or file changes. Mid-run Jev errors cannot admit candidates; metadata updates and queued outcomes can still publish with `status=partial`.
@@ -186,7 +186,7 @@ The workflow keeps `contents: read`; `actions: read` is for restoring verified c
 
 ### TypeScript scripts and tests
 
-All collector/reviewer scripts and offline tests use `.ts`. Run `npm run typecheck` for strict TypeScript checks and `npm test` for offline regression tests. CI runs both. Node 24 executes erasable TypeScript directly with `--experimental-strip-types`; no emitted JavaScript or new runtime dependency is needed. Runtime execution does not replace static type checking ([Node documentation](https://nodejs.org/api/typescript.html)). The root `.node-version` selects the same LTS major for GitHub Actions and Cloudflare Workers Builds.
+All collector/reviewer scripts and offline tests use `.ts`. Run `npm run typecheck` for strict TypeScript checks and `npm test` for offline regression tests. CI runs both. Node 24 executes erasable TypeScript directly with `--experimental-strip-types`; no emitted JavaScript or new runtime dependency is needed. Runtime execution does not replace static type checking ([Node documentation](https://nodejs.org/api/typescript.html)). The root `.node-version` selects the same LTS major for GitHub Actions and local builds.
 
 Discovery receipts retain the reviewed commit, model, timestamp, typed scores and evidence hash. Code-match evidence also records pinned file links and per-file hashes. Accepted entries keep their receipt under `sourceMeta.jevEvidence`; unaccepted candidates keep `lastReview` in `radar/state.json`, so the next `radar/latest.json` does not erase the last basis. No secret values or downloaded source text are persisted. Code search is bounded and subject to GitHub indexing and API limits, not exhaustive coverage ([GitHub search API](https://docs.github.com/en/rest/search/search#search-code)).
 
@@ -230,3 +230,7 @@ An owning organization can prohibit this setting. A repository update returning 
 Enable **Settings → General → Pull Requests → Automatically delete head branches** (`delete_branch_on_merge=true`) for this repository. GitHub owns branch cleanup after every eligible merged PR, whether merged by a maintainer or the bot; the merged path needs no separate deletion job or credentials. This setting does not reclaim closed-but-unmerged branches; the strict negative path above handles eligible rejected submissions with the same isolated built-in token. This does not delete `main`, contributors' fork branches, local copies, or the PR record. Branch protection and repository rules can prevent deletion. When clearing older merged branches, verify repository ownership, no remaining open PR use, and an unchanged merged head; use an atomic expected-SHA deletion rather than an unconditional delete. This setting is separate from Actions PR creation permission and native auto-merge. See [GitHub automatic branch deletion](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches).
 
 Disable **Jev submission intake** in Actions to stop this writer while preserving review/discovery and pending PRs. Revert an unwanted inclusion instead of rewriting history. See [GitHub token events](https://docs.github.com/en/actions/concepts/security/github_token) and [the Actions PR creation setting](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository).
+
+### Production deployment handoff
+
+Three collectors consume `scripts/publish-data.ts` Actions output. Only `status=published` with `CLOUDFLARE_ACTIONS_DEPLOY_ENABLED=true` dispatches `radar.yml` on trusted `main` in `mode=validate`. Token-authored pushes do not trigger ordinary push Actions. Unchanged data does not dispatch; dispatch failure is visible, and maintainers can dispatch main validation again without rerunning paid collection. The main production job deploys its own verified artifact, never a collector artifact. The submission controller keeps its existing explicit main dispatch. See [deployment.md](deployment.md) for credential boundaries and Cloudflare trigger cutover.

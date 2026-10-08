@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: 模块依赖、分页 SSR 与静态详情的架构契约
+[OUTPUT]: 模块依赖、同版本部署、分页 SSR 与静态详情契约
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -51,15 +51,16 @@ Mobile
 
 [`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English, Chinese, and Japanese variants of the homepage, Top 100, ten categories and every valid GitHub project detail into route-specific HTML; Cloudflare keeps detail HTML and static assets asset-first. Directory head loaders receive only total/category counts from getDirectoryCounts, not the browser projection; standalone startup must stay snapshot-free. The homepage, Top 100, category indexes and aggregate news paths use selective Worker-first routing to SSR their validated `page` query. Their build-time first-page HTML remains available for build verification; Static Assets must not override a second-page request with first-page HTML. The Worker handles non-prerendered routes and returns real 404 responses for unknown addresses, invalid categories, missing projects, and missing news IDs. These states reuse `src/components/NotFoundPage.tsx` with route-localized recovery links and noindex metadata. This is not an SPA fallback. Directory indexes use request-specific SSR for pagination; independent detail routes retain static delivery.
 
-The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and Cloudflare Workers Builds; `package.json` declares the same supported major. English, Chinese, and Japanese news-item HTML pages are prerendered for stable `/news/{id}` URLs; the aggregate `/news` page prerenders its initial news cards, while browser-local `/saved` remains `noindex` and outside the sitemap.
+The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and local builds; `package.json` declares the same supported major. English, Chinese, and Japanese news-item HTML pages are prerendered for stable `/news/{id}` URLs; the aggregate `/news` page prerenders its initial news cards, while browser-local `/saved` remains `noindex` and outside the sitemap.
 
-Typical Git-connected Workers Builds flow:
+Trusted GitHub Actions deployment flow (see [deployment.md](deployment.md) for the cutover and recovery procedure):
 
-1. Push to `main`
-2. `npm run build` validates catalog capacity/structure, reports rationale coverage, validates news, generates the sitemap (OG images are runtime responses), prerenders catalog HTML and builds the client/server bundles with TypeScript checks → `dist/`
-3. `npx wrangler deploy`
+1. A human push or explicit robot dispatch validates the exact `main` commit.
+2. `verify` runs the full existing checks, `npm run build` and zero-skip `test:delivery`, then packages `dist` with its commit SHA.
+3. The isolated `production` job restores that run's artifact ID, checks the Worker config and current main SHA, then runs `npx --no-install wrangler deploy --config dist/server/wrangler.json` without rebuilding.
+4. After the first verified production deployment, exclude all Git branches from this Worker's Cloudflare build trigger. Keep the original trigger configuration for recovery; do not disconnect the account-wide GitHub App.
 
-Every data commit triggers a full application build; it is not incremental compilation. Cloudflare's asset upload can skip unchanged files. Keep the current finite catalog as static HTML, and measure actual Workers Builds time before adding a more complex incremental publishing system.
+This reuses a verified build, not incremental compilation. Cloudflare asset upload skips unchanged files. Production HTML, RPC and Worker code remain one artifact. The repository deployment flag stages the migration; a green validation alone does not authorize disabling the old path.
 
 Local:
 
@@ -93,7 +94,7 @@ TanStack Start owns the generated client/document entry. The root icon link serv
 
 ## Search discoverability
 
-TanStack Start prerenders each finite catalog route in English at its original path, Chinese at `/zh`, and Japanese at `/ja`. A project has one lower-case identity, with one self-canonical URL per language and reciprocal `hreflang` alternates; the original repository title and summary remain untranslated source data. In-app card clicks use TanStack route masking: the browser shows the language-matched public URL while retaining the directory beneath the preview; Back or backdrop dismissal returns to the prior filter, and Forward reopens the preview. A reload or copied URL resolves to that language's standalone HTML. News previews use the same behavior with a stable AIHOT-ID-based `/news/{id}` path; the item page contains the API summary and outbound source links, not the original article. Saved source and category filters stay in validated search state. A synchronous head script redirects unprefixed HTML requests to the stored locale, or, without a saved choice, to `/zh` or `/ja` according to the browser's primary language; an explicit English choice wins over browser language. IP geolocation is not used. The URL determines the server-rendered locale, so the static HTML and first React render match without a language flash. Language switching performs a full navigation to the equivalent static path; it intentionally keeps category/project identity and query state, but does not preserve an open preview's transient background. Three variants triple prerendered page count relative to English alone and should be watched in Workers Builds.
+TanStack Start prerenders each finite catalog route in English at its original path, Chinese at `/zh`, and Japanese at `/ja`. A project has one lower-case identity, with one self-canonical URL per language and reciprocal `hreflang` alternates; the original repository title and summary remain untranslated source data. In-app card clicks use TanStack route masking: the browser shows the language-matched public URL while retaining the directory beneath the preview; Back or backdrop dismissal returns to the prior filter, and Forward reopens the preview. A reload or copied URL resolves to that language's standalone HTML. News previews use the same behavior with a stable AIHOT-ID-based `/news/{id}` path; the item page contains the API summary and outbound source links, not the original article. Saved source and category filters stay in validated search state. A synchronous head script redirects unprefixed HTML requests to the stored locale, or, without a saved choice, to `/zh` or `/ja` according to the browser's primary language; an explicit English choice wins over browser language. IP geolocation is not used. The URL determines the server-rendered locale, so the static HTML and first React render match without a language flash. Language switching performs a full navigation to the equivalent static path; it intentionally keeps category/project identity and query state, but does not preserve an open preview's transient background. Three variants triple prerendered page count relative to English alone and should be watched in the main validation job.
 
 `public/robots.txt` permits crawling and points to the generated `public/sitemap.xml`. The generator lists all three language variants of the homepage, Top 100, the prerendered News index, populated categories, projects with non-empty summaries, and source-attributed news items whose stored summaries have at least 60 characters, with reciprocal `hreflang` entries; it rejects invalid/duplicate identities and invents no `lastmod`. Short news notes keep direct HTML but are `noindex`. Search/sort state, browser-local Saved, and transient preview state are not sitemap entries. `public/llms.txt` is a short agent-facing guide, not an indexing directive.
 
@@ -109,7 +110,7 @@ GitHub Actions runs the server-side ecosystem radar through read-only collection
 
 The independent [news integration](news.md) uses AIHOT's public API in a separate hourly Action and commits `data/news.json` and the regenerated sitemap when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 
-The production build itself runs `data:check`, including catalog capacity and README validation, so a separate Workers build cannot silently skip these code-level checks. This is not a branch-protection rule or a semantic/security admission certificate. An Actions success proves the snapshot passed validation, not that the Cloudflare deployment completed. Check Workers Builds separately after a published data commit.
+The production build runs `data:check`, including catalog capacity and README validation. The deployment job reuses that verified artifact rather than running a separate build. This is not a branch-protection rule or a semantic/security admission certificate. Validation success proves the snapshot passed checks, not that production deployment completed. Check the deployment job and actual production HTTP separately.
 
 ## Search Console report triage (2026-10-01)
 

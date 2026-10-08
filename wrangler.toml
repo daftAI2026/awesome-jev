@@ -3,7 +3,7 @@
 # [POS]: 根级部署边界；目录查询页由 Worker SSR，详情与机器文档由 Assets 交付，动态 OG 由同一 Worker 渲染
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 # Cloudflare Workers — TanStack Start 预渲染与路由回退
-# Workers Builds (Git): push to main → npm run build → npx wrangler deploy
+# GitHub main verify → 同版本 dist 产物 → production job 直接部署；切换步骤见 docs/deployment.md
 
 name = "awesome-jev-project"
 main = "@tanstack/react-start/server-entry"

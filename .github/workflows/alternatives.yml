@@ -1,5 +1,5 @@
 # [INPUT]: 依赖替代实现采集与可信快照校验与共享最新 main 发布脚本
-# [OUTPUT]: 执行独立开源替代实现的发现、验证与发布
+# [OUTPUT]: 发布独立替代实现快照；实际发布后派发可信 main 构建和部署
 # [POS]: workflows 的替代实现链路；独立开关、预算和状态
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Open-source alternatives radar
@@ -125,6 +125,7 @@ jobs:
     if: github.event_name == 'schedule' || inputs.publish == true
     permissions:
       contents: write
+      actions: write
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -143,6 +144,12 @@ jobs:
           merge-multiple: true
       - run: node --experimental-strip-types scripts/alternatives-radar.ts --apply "$RUNNER_TEMP/snapshot"
       - name: Publish on latest main with bounded conflict recovery
+        id: publication
         env:
           GH_TOKEN: ${{ github.token }}
         run: node --experimental-strip-types scripts/publish-data.ts alternatives
+      - name: Request verified main deployment after data publication
+        if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run radar.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

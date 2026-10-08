@@ -1,11 +1,11 @@
 /**
  * [INPUT]: 依赖可信已验证的采集结果、Git main、三方合并及既有构建/交付验证
- * [OUTPUT]: 对外提供 publishData；Actions 中拉取最新 main、叠加结果、验证并有界重试普通推送
+ * [OUTPUT]: 提供 publishData 与 Actions 发布状态输出；实际推送后由工作流派发 main 构建
  * [POS]: scripts 的三采集器共享发布边界；不重跑付费审核、不强推、不重置调用方工作区
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { execFileSync, spawnSync } from 'node:child_process'
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { appendFileSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -20,6 +20,9 @@ import { validateState } from './radar.ts'
 import type { GitHubApi } from './model-types.ts'
 
 type Mode = 'news' | 'radar' | 'alternatives'
+export function writePublicationOutput(status: 'published' | 'unchanged', outputFile?: string): void {
+  if (outputFile) appendFileSync(outputFile, `status=${status}\n`)
+}
 const ownedFiles = (mode: Mode) => mode === 'news' ? ['data/news.json', 'public/sitemap.xml'] :
   ['data/github.json', 'README.md', 'public/sitemap.xml', `radar/${mode === 'radar' ? 'state' : 'alternatives-state'}.json`, `radar/${mode === 'radar' ? 'latest' : 'alternatives-latest'}.json`]
 const git = (root: string, args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trim()
@@ -124,6 +127,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   // --- 真实推送只在可信 Actions 入口执行；本机不意外触发发布 ---
   if (process.env.GITHUB_ACTIONS !== 'true') throw new Error('publication-actions-only')
   publishData({ root: process.cwd(), mode: process.argv[2] as Mode })
-    .then((result) => process.stdout.write(`Data publication: ${JSON.stringify(result)}\n`))
+    .then((result) => {
+      process.stdout.write(`Data publication: ${JSON.stringify(result)}\n`)
+      writePublicationOutput(result.status, process.env.GITHUB_OUTPUT)
+    })
     .catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : 'publication-failed'}\n`); process.exitCode = 1 })
 }

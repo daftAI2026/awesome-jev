@@ -4,6 +4,7 @@
 成员清单
 agents.md: Agents 页脚、构建生成文档、公开字段白名单与五品牌外链的真实能力边界
 architecture.md: 技术栈/交付边界、目录分页 SSR、站内推荐与统计契约、单一工作台白名单/生产隔离及同源探针边界
+deployment.md: GitHub 同版本已验产物发布、production 凭据/分支隔离、机器人显式派发及 Cloudflare 触发器切换/恢复
 collector.md: 采集、审核、限流与可信发布规则，Agent 分类收据/短口令、正负向权限/CI/关闭事件与 CAS 恢复边界、main 基础保护与原生已合并分支回收、ID 基线及最新 main 增量发布
 data-model.md: 持久化目录、GH CLI 全量清洗、唯一 GitHub 身份基线/旧地址 301 与编辑/证据保护，区分审计字段和浏览器投影
 design.md: 稳定视觉契约、共享预览 arc/presence 动效、白底黑字代码分享图和统一工作台；现有 CSS token 是页面实现权威
