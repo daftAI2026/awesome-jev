@@ -4318,5 +4318,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2107958916684632396",
     "aihotUrl": "https://aihot.news/items/uqulrilfq8v3jehn9rkpfacjk"
+  },
+  {
+    "id": "cvgs62cjzr5lcgltqu2wf0sig",
+    "title": "TypeSafe AI 称增长最快",
+    "originalTitle": "> fastest growing",
+    "summary": "增长最快",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-08T03:00:44.000Z",
+    "discoveredAt": "2026-10-08T03:04:25.880Z",
+    "category": "tip",
+    "score": 29,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2108029801324072965",
+    "aihotUrl": "https://aihot.news/items/cvgs62cjzr5lcgltqu2wf0sig"
+  },
+  {
+    "id": "au6bynrxfxz4s37uetmwmdpku",
+    "title": "Unsloth Studio 如何在模型仓库变更后重新校验再运行",
+    "originalTitle": "What Happens When a Trusted Model Repo Changes? Unsloth Studio Re-Checks Before It Runs",
+    "summary": "Unsloth 发布 Unsloth Studio 与 Unsloth Desktop 安全概览，说明其在下载到执行之间设置四道检查点：代码指纹绑定审批、独立权重文件闸门、探测式 OS 沙箱与包内容扫描。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-08T01:49:11.000Z",
+    "discoveredAt": "2026-10-08T02:28:25.046Z",
+    "category": "tip",
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/07/what-happens-when-a-trusted-model-repo-changes-unsloth-studio-re-checks-before-it-runs/",
+    "aihotUrl": "https://aihot.news/items/au6bynrxfxz4s37uetmwmdpku"
   }
 ]
