@@ -4423,5 +4423,50 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2108261430265029085",
     "aihotUrl": "https://aihot.news/items/iprvps9iocs0xvyg8mdbfm07d"
+  },
+  {
+    "id": "u9pxdufnzttci43x7kaczsl7t",
+    "title": "Liquid AI 开源 d1 系列决策模型：d1-3B 单次判断仅 8 毫秒，支持图像输入",
+    "originalTitle": "Liquid AI 开源 d1 系列决策模型：单次判断仅 8 毫秒，支持图像输入",
+    "summary": "Liquid AI 于 10 月 7 日发布博文，推出开放权重决策模型 d1-3B（31.2 亿参数，支持文本与图像输入）和 d1-omni-600M（5.87 亿参数，支持文本、图像及语音输入），已在 Hugging Face 公开，可下载、微调并部署。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-10-09T06:29:07.520Z",
+    "discoveredAt": "2026-10-09T06:46:29.178Z",
+    "category": "ai-models",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/010/946.htm",
+    "aihotUrl": "https://aihot.news/items/u9pxdufnzttci43x7kaczsl7t"
+  },
+  {
+    "id": "txya4w1mb1bdf31ga8jfbfz0f",
+    "title": "TypeSafe AI 将出席 AI Builders 活动",
+    "originalTitle": "@usekernel @modal @braintrust yes, the Jev illuminati will be present",
+    "summary": "@usekernel @modal @braintrust 是的，Jev 精英团将到场\n\nhttps://luma.com/aibuilders_techcrunch",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-09T03:13:03.000Z",
+    "discoveredAt": "2026-10-09T03:18:32.820Z",
+    "category": null,
+    "score": 12,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2108395288272765208",
+    "aihotUrl": "https://aihot.news/items/txya4w1mb1bdf31ga8jfbfz0f"
+  },
+  {
+    "id": "sn8jgfp4rhujuoecfmclsbnxi",
+    "title": "密歇根大学 EECS 498 AASE 课程解读：把 AI 编程方法论做成五个 Skill",
+    "originalTitle": "密歇根大学最新 AI 编程课把方法论做成了五个 Skill：「Applied Agentic Software Engineering」深度解读",
+    "summary": "密歇根大学 2026 年秋季开设 EECS 498-016「Applied Agentic Software Engineering」，无教材无考试、总花费零美元，由 Marcus Darden 主讲，全部讲义 L01–L11 已在 GitHub 公开。",
+    "sourceName": "X：邵猛 (@shao__meng)",
+    "publishedAt": "2026-10-09T02:28:27.000Z",
+    "discoveredAt": "2026-10-09T02:47:32.712Z",
+    "category": "tip",
+    "score": 71,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/shao__meng/status/2108384062796873888",
+    "aihotUrl": "https://aihot.news/items/sn8jgfp4rhujuoecfmclsbnxi"
   }
 ]
