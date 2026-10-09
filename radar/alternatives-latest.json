@@ -1,12 +1,12 @@
 {
-  "at": "2026-10-09T01:26:12.589Z",
+  "at": "2026-10-09T10:54:03.719Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 95,
-      "total": 95,
+      "fetched": 98,
+      "total": 98,
       "status": "complete"
     },
     {
@@ -20,80 +20,97 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 5,
+  "reviewed": 7,
   "added": 0,
-  "pending": 125,
+  "pending": 127,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "nvkudva/ollajev",
+      "repo": "arish096/awesome-jev-use-cases",
       "status": "review",
       "score": {
-        "jevAbout": 0.89,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.83,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "ab85e8795aff7603c718d5001da27953f59141a7",
-      "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/ab85e8795aff7603c718d5001da27953f59141a7/README.md",
-      "evidenceSha256": "4ae426419a83c7b70f420904b8784282704c07abab11839aa54f58438e85a5de",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T01:26:12.589Z"
-    },
-    {
-      "repo": "bhushankinge/jev-laya-classification-bench",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.17,
+        "jevAbout": 0.04,
         "jevKeep": "review",
-        "jevKeepConfidence": 0.18,
-        "category": "alternatives",
+        "jevKeepConfidence": 0.73,
+        "category": "other",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "728f2eba42871fa5bbe13c09ccfcb07943366cd9",
-      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
-      "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
+      "sha": "bdbaee23b08c15d03a7c456aa777a023cb0da54a",
+      "evidenceUrl": "https://github.com/arish096/awesome-jev-use-cases/blob/bdbaee23b08c15d03a7c456aa777a023cb0da54a/README.md",
+      "evidenceSha256": "b37d86a7d0482b37020e7b8eec8fce13384bd05ca2919f4a368e65fda6bba13c",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T01:26:12.589Z"
+      "checkedAt": "2026-10-09T10:54:03.719Z"
     },
     {
-      "repo": "senna-lang/qwen3-4b-system-one",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.82,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.25,
-        "category": "other"
-      },
-      "sha": "043f7642d2b69dcb54f20d46edd3d54c49d11a7b",
-      "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/043f7642d2b69dcb54f20d46edd3d54c49d11a7b/README.md",
-      "evidenceSha256": "2a448c2e2091f976fa5aa6bd84972c5e2930d1396b57794397da7161f146cad3",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T01:26:12.589Z"
-    },
-    {
-      "repo": "threelightstudio/jev-laya-local-daemon",
+      "repo": "luminousyyh/laya-decide",
       "status": "review",
       "reason": "missing-open-source-license",
-      "sha": "0c9a266cac632890abddac7e66f2ed68d649abe5",
-      "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
-      "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
+      "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
+      "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
+      "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T01:26:12.589Z"
+      "checkedAt": "2026-10-09T10:54:03.719Z"
     },
     {
-      "repo": "momen-devv/multitenant-ecommerce",
+      "repo": "sidneeuncharged29/jev-visual",
       "status": "review",
       "reason": "insufficient-alternative-context",
-      "sha": "9e71bdcbbbc96d4bc587c36997055225dda13732",
-      "evidenceUrl": "https://github.com/momen-devv/multitenant-ecommerce/blob/9e71bdcbbbc96d4bc587c36997055225dda13732/README.md",
-      "evidenceSha256": "2a576046050f5d90950dddfcad4b768329dc73dfb9270c925d07d22a8a944487",
+      "sha": "c386c5dde490eb5c12b925e3bb08b0bebaa71dd3",
+      "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/c386c5dde490eb5c12b925e3bb08b0bebaa71dd3/README.md",
+      "evidenceSha256": "34a41b3caf4147109d5dd39cdf6d1f53b0fe6d9a4ac73daae5eec1897c6456da",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T01:26:12.589Z"
+      "checkedAt": "2026-10-09T10:54:03.719Z"
+    },
+    {
+      "repo": "computational-social-science/jevrsi",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "futurixai-and-quantum-works/carve-jev",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "3cf81961a8a0539dd68bce04e519902b2f6b93e4",
+      "evidenceUrl": "https://github.com/futurixai-and-quantum-works/carve-jev/blob/3cf81961a8a0539dd68bce04e519902b2f6b93e4/README.md",
+      "evidenceSha256": "5f60943c1ecbeafbe6a576d8987c6786a816164212d0a3cc9f3951e8c2da6333",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T10:54:03.719Z"
+    },
+    {
+      "repo": "xi029/nocap",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.69,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.64,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "a356d63a065a18c6b01184fcd8221c2ae5cfe4b6",
+      "evidenceUrl": "https://github.com/xi029/nocap/blob/a356d63a065a18c6b01184fcd8221c2ae5cfe4b6/README.md",
+      "evidenceSha256": "e238df4c3004a9978804838dd7db710483a60068cc0260ee242b7a12dfd37387",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T10:54:03.719Z"
+    },
+    {
+      "repo": "ease-my-work/jev-step-by-step",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.06,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.33,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "aa0c02fa3ccd692e052d7149d2bc2c8a7299ec3d",
+      "evidenceUrl": "https://github.com/ease-my-work/jev-step-by-step/blob/aa0c02fa3ccd692e052d7149d2bc2c8a7299ec3d/README.md",
+      "evidenceSha256": "be3f1bcb8ba6fea854bd8dbed74bf0d77d360056dac30e18b177894615d18215",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T10:54:03.719Z"
     }
   ],
   "identity": {
