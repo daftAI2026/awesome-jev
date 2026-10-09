@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-09T10:54:03.719Z",
+  "at": "2026-10-09T20:19:18.547Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 109,
-      "total": 109,
+      "fetched": 110,
+      "total": 110,
       "status": "bounded"
     }
   ],
@@ -20,97 +20,66 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 7,
+  "reviewed": 4,
   "added": 0,
-  "pending": 127,
+  "pending": 128,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "arish096/awesome-jev-use-cases",
+      "repo": "name0x0/jevlet",
       "status": "review",
       "score": {
-        "jevAbout": 0.04,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.73,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevAbout": 0.94,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.86,
+        "category": "alternatives"
       },
-      "sha": "bdbaee23b08c15d03a7c456aa777a023cb0da54a",
-      "evidenceUrl": "https://github.com/arish096/awesome-jev-use-cases/blob/bdbaee23b08c15d03a7c456aa777a023cb0da54a/README.md",
-      "evidenceSha256": "b37d86a7d0482b37020e7b8eec8fce13384bd05ca2919f4a368e65fda6bba13c",
+      "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
+      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
+      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
+      "checkedAt": "2026-10-09T20:19:18.547Z"
     },
     {
-      "repo": "luminousyyh/laya-decide",
+      "repo": "dexmac221/doomgemma",
       "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
-      "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
-      "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
+      "score": {
+        "jevAbout": 0.13,
+        "jevKeep": "drop",
+        "jevKeepConfidence": 0.31,
+        "category": "other"
+      },
+      "sha": "a6253bf5524827a2ab5f4e764ca6feef046f8927",
+      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/a6253bf5524827a2ab5f4e764ca6feef046f8927/README.md",
+      "evidenceSha256": "0c7347872e7669f29a47b6d63335cba4d382e74f77c6ea39e9d2c7184d84fbcb",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
+      "checkedAt": "2026-10-09T20:19:18.547Z"
     },
     {
-      "repo": "sidneeuncharged29/jev-visual",
+      "repo": "teilomillet/kayak",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.81,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.85,
+        "category": "alternatives"
+      },
+      "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
+      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
+      "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T20:19:18.547Z"
+    },
+    {
+      "repo": "humanity-forever/decision-luna-browse-control",
       "status": "review",
       "reason": "insufficient-alternative-context",
-      "sha": "c386c5dde490eb5c12b925e3bb08b0bebaa71dd3",
-      "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/c386c5dde490eb5c12b925e3bb08b0bebaa71dd3/README.md",
-      "evidenceSha256": "34a41b3caf4147109d5dd39cdf6d1f53b0fe6d9a4ac73daae5eec1897c6456da",
+      "sha": "e95a9373ed38e7b18b7daa258038a91e6f625b2c",
+      "evidenceUrl": "https://github.com/humanity-forever/decision-luna-browse-control/blob/e95a9373ed38e7b18b7daa258038a91e6f625b2c/README.md",
+      "evidenceSha256": "4cba2611cf35dbc4688ce7ba479d5bea9b9e895a3b27e3c2ea70f749923abf3d",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
-    },
-    {
-      "repo": "computational-social-science/jevrsi",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "futurixai-and-quantum-works/carve-jev",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "3cf81961a8a0539dd68bce04e519902b2f6b93e4",
-      "evidenceUrl": "https://github.com/futurixai-and-quantum-works/carve-jev/blob/3cf81961a8a0539dd68bce04e519902b2f6b93e4/README.md",
-      "evidenceSha256": "5f60943c1ecbeafbe6a576d8987c6786a816164212d0a3cc9f3951e8c2da6333",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
-    },
-    {
-      "repo": "xi029/nocap",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.69,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.64,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "a356d63a065a18c6b01184fcd8221c2ae5cfe4b6",
-      "evidenceUrl": "https://github.com/xi029/nocap/blob/a356d63a065a18c6b01184fcd8221c2ae5cfe4b6/README.md",
-      "evidenceSha256": "e238df4c3004a9978804838dd7db710483a60068cc0260ee242b7a12dfd37387",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
-    },
-    {
-      "repo": "ease-my-work/jev-step-by-step",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.06,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.33,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "aa0c02fa3ccd692e052d7149d2bc2c8a7299ec3d",
-      "evidenceUrl": "https://github.com/ease-my-work/jev-step-by-step/blob/aa0c02fa3ccd692e052d7149d2bc2c8a7299ec3d/README.md",
-      "evidenceSha256": "be3f1bcb8ba6fea854bd8dbed74bf0d77d360056dac30e18b177894615d18215",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T10:54:03.719Z"
+      "checkedAt": "2026-10-09T20:19:18.547Z"
     }
   ],
   "identity": {
