@@ -1102,15 +1102,15 @@
     "bhushankinge/jev-laya-classification-bench": {
       "status": "review",
       "discoveredAt": "2026-09-24T19:29:42.525Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-09T01:26:12.589Z",
       "lastReview": {
         "repo": "bhushankinge/jev-laya-classification-bench",
         "status": "review",
         "score": {
-          "jevAbout": 0.15,
+          "jevAbout": 0.17,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.21,
+          "jevKeepConfidence": 0.18,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
@@ -1119,9 +1119,9 @@
         "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
         "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
         "model": "jev-latest",
-        "checkedAt": "2026-10-02T01:04:44.302Z"
+        "checkedAt": "2026-10-09T01:26:12.589Z"
       },
-      "retryAt": "2026-10-09T01:04:44.302Z"
+      "retryAt": "2026-10-16T01:26:12.589Z"
     },
     "rudransh2004/carve-jev": {
       "status": "error",
@@ -2076,63 +2076,73 @@
       "retryAt": "2026-10-15T10:55:10.988Z"
     },
     "momen-devv/multitenant-ecommerce": {
-      "status": "error",
+      "status": "review",
       "discoveredAt": "2026-10-01T10:26:55.519Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-05T00:09:18.641Z",
-      "retryAt": "2026-10-09T00:09:18.641Z"
+      "attempts": 4,
+      "checkedAt": "2026-10-09T01:26:12.589Z",
+      "retryAt": "2026-10-16T01:26:12.589Z",
+      "lastReview": {
+        "repo": "momen-devv/multitenant-ecommerce",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "9e71bdcbbbc96d4bc587c36997055225dda13732",
+        "evidenceUrl": "https://github.com/momen-devv/multitenant-ecommerce/blob/9e71bdcbbbc96d4bc587c36997055225dda13732/README.md",
+        "evidenceSha256": "2a576046050f5d90950dddfcad4b768329dc73dfb9270c925d07d22a8a944487",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-09T01:26:12.589Z"
+      }
     },
     "nvkudva/ollajev": {
       "status": "review",
       "discoveredAt": "2026-10-02T01:04:44.302Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-09T01:26:12.589Z",
       "lastReview": {
         "repo": "nvkudva/ollajev",
         "status": "review",
         "score": {
-          "jevAbout": 0.91,
+          "jevAbout": 0.89,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.82,
+          "jevKeepConfidence": 0.83,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "351f0f7f7a12bf0b88ff1bc56cda73f49cbdd9fb",
-        "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/351f0f7f7a12bf0b88ff1bc56cda73f49cbdd9fb/README.md",
-        "evidenceSha256": "9b4044de0f0cc1e09c8bcd6e2cf0169ffff30d541b42b3a2eb0ab27fdc040dc0",
+        "sha": "ab85e8795aff7603c718d5001da27953f59141a7",
+        "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/ab85e8795aff7603c718d5001da27953f59141a7/README.md",
+        "evidenceSha256": "4ae426419a83c7b70f420904b8784282704c07abab11839aa54f58438e85a5de",
         "model": "jev-latest",
-        "checkedAt": "2026-10-02T01:04:44.302Z"
+        "checkedAt": "2026-10-09T01:26:12.589Z"
       },
-      "retryAt": "2026-10-09T01:04:44.302Z"
+      "retryAt": "2026-10-16T01:26:12.589Z"
     },
     "senna-lang/qwen3-4b-system-one": {
       "status": "review",
       "discoveredAt": "2026-10-02T01:04:44.302Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-09T01:26:12.589Z",
       "lastReview": {
         "repo": "senna-lang/qwen3-4b-system-one",
         "status": "review",
         "score": {
-          "jevAbout": 0.81,
+          "jevAbout": 0.82,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.21,
+          "jevKeepConfidence": 0.25,
           "category": "other"
         },
-        "sha": "5bb0a8728c925f49ff00f70161d593aa16ea215f",
-        "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/5bb0a8728c925f49ff00f70161d593aa16ea215f/README.md",
-        "evidenceSha256": "500844d066ddb74dd631de916a8b2bbd1ae71e53fc62326f19e9767eeed759c6",
+        "sha": "043f7642d2b69dcb54f20d46edd3d54c49d11a7b",
+        "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/043f7642d2b69dcb54f20d46edd3d54c49d11a7b/README.md",
+        "evidenceSha256": "2a448c2e2091f976fa5aa6bd84972c5e2930d1396b57794397da7161f146cad3",
         "model": "jev-latest",
-        "checkedAt": "2026-10-02T01:04:44.302Z"
+        "checkedAt": "2026-10-09T01:26:12.589Z"
       },
-      "retryAt": "2026-10-09T01:04:44.302Z"
+      "retryAt": "2026-10-16T01:26:12.589Z"
     },
     "threelightstudio/jev-laya-local-daemon": {
       "status": "review",
       "discoveredAt": "2026-10-02T01:04:44.302Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-02T01:04:44.302Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-09T01:26:12.589Z",
       "lastReview": {
         "repo": "threelightstudio/jev-laya-local-daemon",
         "status": "review",
@@ -2141,9 +2151,9 @@
         "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
         "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
         "model": "jev-latest",
-        "checkedAt": "2026-10-02T01:04:44.302Z"
+        "checkedAt": "2026-10-09T01:26:12.589Z"
       },
-      "retryAt": "2026-10-09T01:04:44.302Z"
+      "retryAt": "2026-10-16T01:26:12.589Z"
     },
     "arish096/awesome-jev-use-cases": {
       "status": "review",

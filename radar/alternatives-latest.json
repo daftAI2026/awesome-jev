@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-08T20:48:36.864Z",
+  "at": "2026-10-09T01:26:12.589Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,65 +20,80 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
+  "reviewed": 5,
   "added": 0,
   "pending": 125,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "ken-jo/veyra",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "itsodeleo/jev-mlx",
+      "repo": "nvkudva/ollajev",
       "status": "review",
       "score": {
-        "jevAbout": 0.6,
+        "jevAbout": 0.89,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.72,
+        "jevKeepConfidence": 0.83,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "f8f2464eea14da53511d40fe49876f926c49ceee",
-      "evidenceUrl": "https://github.com/itsodeleo/jev-mlx/blob/f8f2464eea14da53511d40fe49876f926c49ceee/README.md",
-      "evidenceSha256": "e03b3483d27e30c8ee74c55fab00249c4cea2aef12a3d74125b456dec84afad9",
+      "sha": "ab85e8795aff7603c718d5001da27953f59141a7",
+      "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/ab85e8795aff7603c718d5001da27953f59141a7/README.md",
+      "evidenceSha256": "4ae426419a83c7b70f420904b8784282704c07abab11839aa54f58438e85a5de",
       "model": "jev-latest",
-      "checkedAt": "2026-10-08T20:48:36.864Z"
+      "checkedAt": "2026-10-09T01:26:12.589Z"
     },
     {
-      "repo": "jev-engineering/cookbook",
+      "repo": "bhushankinge/jev-laya-classification-bench",
       "status": "review",
       "score": {
-        "jevAbout": 0.12,
+        "jevAbout": 0.17,
         "jevKeep": "review",
-        "jevKeepConfidence": 0.52,
-        "category": "other",
+        "jevKeepConfidence": 0.18,
+        "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "67a23342c5ec10c7fae01622f130cb5af8bb8eb9",
-      "evidenceUrl": "https://github.com/jev-engineering/cookbook/blob/67a23342c5ec10c7fae01622f130cb5af8bb8eb9/README.md",
-      "evidenceSha256": "6e9edfd18b2a6a04444fd247364c9352c304ccdfae68b0724d0e057b6156eab8",
+      "sha": "728f2eba42871fa5bbe13c09ccfcb07943366cd9",
+      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
+      "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
       "model": "jev-latest",
-      "checkedAt": "2026-10-08T20:48:36.864Z"
+      "checkedAt": "2026-10-09T01:26:12.589Z"
     },
     {
-      "repo": "amantux/mcp-router",
+      "repo": "senna-lang/qwen3-4b-system-one",
       "status": "review",
       "score": {
-        "jevAbout": 0.66,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.38,
-        "category": "alternatives"
+        "jevAbout": 0.82,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.25,
+        "category": "other"
       },
-      "sha": "ddfa3b0b66980bb7f3c2b3e19880a0e71cd3ecf9",
-      "evidenceUrl": "https://github.com/amantux/mcp-router/blob/ddfa3b0b66980bb7f3c2b3e19880a0e71cd3ecf9/README.md",
-      "evidenceSha256": "57310a596a1c59f1601ea6a61f47c293910780c80abde5803f1c6e52a179a6cb",
+      "sha": "043f7642d2b69dcb54f20d46edd3d54c49d11a7b",
+      "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/043f7642d2b69dcb54f20d46edd3d54c49d11a7b/README.md",
+      "evidenceSha256": "2a448c2e2091f976fa5aa6bd84972c5e2930d1396b57794397da7161f146cad3",
       "model": "jev-latest",
-      "checkedAt": "2026-10-08T20:48:36.864Z"
+      "checkedAt": "2026-10-09T01:26:12.589Z"
+    },
+    {
+      "repo": "threelightstudio/jev-laya-local-daemon",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "0c9a266cac632890abddac7e66f2ed68d649abe5",
+      "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
+      "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T01:26:12.589Z"
+    },
+    {
+      "repo": "momen-devv/multitenant-ecommerce",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "9e71bdcbbbc96d4bc587c36997055225dda13732",
+      "evidenceUrl": "https://github.com/momen-devv/multitenant-ecommerce/blob/9e71bdcbbbc96d4bc587c36997055225dda13732/README.md",
+      "evidenceSha256": "2a576046050f5d90950dddfcad4b768329dc73dfb9270c925d07d22a8a944487",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-09T01:26:12.589Z"
     }
   ],
   "identity": {
