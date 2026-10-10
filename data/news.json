@@ -4678,5 +4678,20 @@
     "reason": null,
     "originalUrl": "https://www.latent.space/p/standard-bots",
     "aihotUrl": "https://aihot.news/items/p8zbc4wt4p2alcx2ik10cjx91"
+  },
+  {
+    "id": "b2p5q0fcdxo2gy7drxhseo2g0",
+    "title": "Microsoft 发布 Decision-1 决策模型，基于 Qwen3.5-9B",
+    "originalTitle": "Microsoft's Decision-1 model enters the fast-growing AI decision model race",
+    "summary": "Microsoft 发布决策模型 Decision-1，用于分类、评估和路由决策，基于 Qwen3.5-9B，据称可引导智能体在复杂环境中行动。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-10-10T14:57:33.000Z",
+    "discoveredAt": "2026-10-10T15:07:43.389Z",
+    "category": "ai-models",
+    "score": 55,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/",
+    "aihotUrl": "https://aihot.news/items/b2p5q0fcdxo2gy7drxhseo2g0"
   }
 ]
