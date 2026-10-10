@@ -4663,5 +4663,20 @@
     "reason": null,
     "originalUrl": "https://www.ithome.com/1/011/347.htm",
     "aihotUrl": "https://aihot.news/items/uyj1nct0n4u1mw332xg97xvay"
+  },
+  {
+    "id": "p8zbc4wt4p2alcx2ik10cjx91",
+    "title": "Standard Bots 访谈：工业机器人的 AI 可靠执行之道",
+    "originalTitle": "Building AI for Reliable Execution: Lessons From Industrial Robotics",
+    "summary": "Latent Space 采访 Standard Bots CEO Evan Beard 与 AI 负责人 Leif Jentoft，介绍其工业机械臂的 AI 技术栈。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-10-10T14:04:11.000Z",
+    "discoveredAt": "2026-10-10T14:20:44.396Z",
+    "category": "opinion",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.latent.space/p/standard-bots",
+    "aihotUrl": "https://aihot.news/items/p8zbc4wt4p2alcx2ik10cjx91"
   }
 ]
