@@ -1243,24 +1243,24 @@
     "donliggett/julius": {
       "status": "review",
       "discoveredAt": "2026-09-26T00:08:50.699Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-03T00:43:39.960Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-10T01:14:07.107Z",
       "lastReview": {
         "repo": "donliggett/julius",
         "status": "review",
         "score": {
-          "jevAbout": 0.89,
+          "jevAbout": 0.88,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.49,
+          "jevKeepConfidence": 0.55,
           "category": "alternatives"
         },
         "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
         "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
         "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
         "model": "jev-latest",
-        "checkedAt": "2026-10-03T00:43:39.960Z"
+        "checkedAt": "2026-10-10T01:14:07.107Z"
       },
-      "retryAt": "2026-10-10T00:43:39.960Z"
+      "retryAt": "2026-10-17T01:14:07.107Z"
     },
     "talex-touch/flint": {
       "status": "review",
@@ -1331,17 +1331,17 @@
       "retryAt": "2026-10-10T14:24:54.800Z"
     },
     "lab-emi/chiplaya": {
-      "status": "error",
+      "status": "review",
       "discoveredAt": "2026-09-26T18:42:48.900Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-05T22:10:36.313Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-10T01:14:07.107Z",
       "lastReview": {
         "repo": "lab-emi/chiplaya",
         "status": "review",
         "score": {
-          "jevAbout": 0.84,
+          "jevAbout": 0.81,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.93,
+          "jevKeepConfidence": 0.91,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
@@ -1350,9 +1350,9 @@
         "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
         "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
         "model": "jev-latest",
-        "checkedAt": "2026-09-26T18:42:48.900Z"
+        "checkedAt": "2026-10-10T01:14:07.107Z"
       },
-      "retryAt": "2026-10-09T22:10:36.313Z"
+      "retryAt": "2026-10-17T01:14:07.107Z"
     },
     "lakoreai/sev": {
       "status": "review",
@@ -2701,6 +2701,28 @@
         "checkedAt": "2026-10-09T20:19:18.547Z"
       },
       "retryAt": "2026-10-16T20:19:18.547Z"
+    },
+    "final-bench/s1mb": {
+      "status": "review",
+      "discoveredAt": "2026-10-10T01:14:07.107Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-10T01:14:07.107Z",
+      "lastReview": {
+        "repo": "final-bench/s1mb",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.75,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.58,
+          "category": "other"
+        },
+        "sha": "74eb773ac955d139df2e970b4b9a235a0700933a",
+        "evidenceUrl": "https://github.com/final-bench/s1mb/blob/74eb773ac955d139df2e970b4b9a235a0700933a/README.md",
+        "evidenceSha256": "9f94ed21bbc8673d01355e99c960653b273ba7111a29356ad8221be4573e14f4",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-10T01:14:07.107Z"
+      },
+      "retryAt": "2026-10-17T01:14:07.107Z"
     }
   }
 }

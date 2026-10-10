@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-09T20:19:18.547Z",
+  "at": "2026-10-10T01:14:07.107Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 110,
-      "total": 110,
+      "fetched": 111,
+      "total": 111,
       "status": "bounded"
     }
   ],
@@ -20,66 +20,58 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
+  "reviewed": 3,
   "added": 0,
-  "pending": 128,
+  "pending": 129,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "name0x0/jevlet",
+      "repo": "donliggett/julius",
       "status": "review",
       "score": {
-        "jevAbout": 0.94,
+        "jevAbout": 0.88,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.86,
+        "jevKeepConfidence": 0.55,
         "category": "alternatives"
       },
-      "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
-      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
-      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
+      "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
+      "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
+      "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T20:19:18.547Z"
+      "checkedAt": "2026-10-10T01:14:07.107Z"
     },
     {
-      "repo": "dexmac221/doomgemma",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.13,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.31,
-        "category": "other"
-      },
-      "sha": "a6253bf5524827a2ab5f4e764ca6feef046f8927",
-      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/a6253bf5524827a2ab5f4e764ca6feef046f8927/README.md",
-      "evidenceSha256": "0c7347872e7669f29a47b6d63335cba4d382e74f77c6ea39e9d2c7184d84fbcb",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-09T20:19:18.547Z"
-    },
-    {
-      "repo": "teilomillet/kayak",
+      "repo": "lab-emi/chiplaya",
       "status": "review",
       "score": {
         "jevAbout": 0.81,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.85,
-        "category": "alternatives"
+        "jevKeepConfidence": 0.91,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
-      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
-      "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
+      "sha": "700988637f9429d180dcda50757504d41060d2bd",
+      "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
+      "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T20:19:18.547Z"
+      "checkedAt": "2026-10-10T01:14:07.107Z"
     },
     {
-      "repo": "humanity-forever/decision-luna-browse-control",
+      "repo": "final-bench/s1mb",
       "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "e95a9373ed38e7b18b7daa258038a91e6f625b2c",
-      "evidenceUrl": "https://github.com/humanity-forever/decision-luna-browse-control/blob/e95a9373ed38e7b18b7daa258038a91e6f625b2c/README.md",
-      "evidenceSha256": "4cba2611cf35dbc4688ce7ba479d5bea9b9e895a3b27e3c2ea70f749923abf3d",
+      "score": {
+        "jevAbout": 0.75,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.58,
+        "category": "other"
+      },
+      "sha": "74eb773ac955d139df2e970b4b9a235a0700933a",
+      "evidenceUrl": "https://github.com/final-bench/s1mb/blob/74eb773ac955d139df2e970b4b9a235a0700933a/README.md",
+      "evidenceSha256": "9f94ed21bbc8673d01355e99c960653b273ba7111a29356ad8221be4573e14f4",
       "model": "jev-latest",
-      "checkedAt": "2026-10-09T20:19:18.547Z"
+      "checkedAt": "2026-10-10T01:14:07.107Z"
     }
   ],
   "identity": {
