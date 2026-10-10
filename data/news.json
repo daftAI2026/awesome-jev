@@ -4558,5 +4558,50 @@
     "reason": null,
     "originalUrl": "https://www.langchain.com/blog/slack-sdk-managed-deep-agents",
     "aihotUrl": "https://aihot.news/items/f0iyt9wctsxq05go21eeua6d3"
+  },
+  {
+    "id": "azlep00nvmv4ok0l4c7rmq2ub",
+    "title": "TypeSafe AI 决策模型 Jev 走红，完成约 8.7 亿美元融资，估值达 75 亿美元",
+    "originalTitle": "决策模型 Jev 爆火，开发商 TypeSafe AI 估值已达 75 亿美元",
+    "summary": "据彭博社 10 月 9 日报道，TypeSafe AI 旗下决策模型 Jev 推出数周走红，完成约 8.7 亿美元融资，由 a16z 领投，估值达 75 亿美元。Jev 已被约三分之一的财富 500 强企业采用，上线数天内用户突破 100 万，平台每天处理数万亿 token，扣除运营成本后已实现盈利。公司团队刚满 20 人，计划用新资金扩充员工、推进大规模部署并采购更多算力。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-10-09T23:28:29.367Z",
+    "discoveredAt": "2026-10-09T23:46:19.682Z",
+    "category": "industry",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/011/170.htm",
+    "aihotUrl": "https://aihot.news/items/azlep00nvmv4ok0l4c7rmq2ub"
+  },
+  {
+    "id": "b8c356snnq00hlq3djeibs2ub",
+    "title": "Nathan Lambert：AI 将快速进步，但不会走向通用超级智能",
+    "originalTitle": "I expect rapid progress but not towards general superintelligence",
+    "summary": "Nathan Lambert 撰文认为 AI 将在基础设施和工程能力上快速进步，未来几年模型会成为超人的分布式 GPU 工程师，但这不会让模型在本质上发生巨变，也不指向通用超级智能。",
+    "sourceName": "Nathan Lambert：Interconnects（RSS）",
+    "publishedAt": "2026-10-09T21:33:47.000Z",
+    "discoveredAt": "2026-10-09T22:16:20.954Z",
+    "category": "opinion",
+    "score": 53,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
+    "aihotUrl": "https://aihot.news/items/b8c356snnq00hlq3djeibs2ub"
+  },
+  {
+    "id": "umplkifk2t8q1srgz2yopa6w0",
+    "title": "Jev 模型开发商 TypeSafe AI 融资 8.7 亿美元，估值达 75 亿美元",
+    "originalTitle": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+    "summary": "非文本 AI 模型 Jev 的开发商 TypeSafe AI 完成 8.7 亿美元融资，估值 75 亿美元，由 Andreessen Horowitz 领投，Sequoia 和既有投资者 DCVC 参投。",
+    "sourceName": "TechCrunch：AI（RSS）",
+    "publishedAt": "2026-10-09T21:41:29.000Z",
+    "discoveredAt": "2026-10-09T22:12:49.419Z",
+    "category": "industry",
+    "score": 64,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+    "aihotUrl": "https://aihot.news/items/umplkifk2t8q1srgz2yopa6w0"
   }
 ]
