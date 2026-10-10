@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-10T01:14:07.107Z",
+  "at": "2026-10-10T10:07:20.118Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 111,
-      "total": 111,
+      "fetched": 112,
+      "total": 112,
       "status": "bounded"
     }
   ],
@@ -20,58 +20,43 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
+  "reviewed": 2,
   "added": 0,
-  "pending": 129,
+  "pending": 130,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "donliggett/julius",
+      "repo": "talex-touch/flint",
       "status": "review",
       "score": {
-        "jevAbout": 0.88,
+        "jevAbout": 0.57,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.55,
+        "jevKeepConfidence": 0.25,
         "category": "alternatives"
       },
-      "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
-      "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
-      "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
+      "sha": "683ba4f47294d777e90297ef24df929a3a772f41",
+      "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
+      "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
       "model": "jev-latest",
-      "checkedAt": "2026-10-10T01:14:07.107Z"
+      "checkedAt": "2026-10-10T10:07:20.118Z"
     },
     {
-      "repo": "lab-emi/chiplaya",
+      "repo": "eileenes/decidelint",
       "status": "review",
       "score": {
-        "jevAbout": 0.81,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.91,
-        "category": "alternatives",
+        "jevAbout": 0.29,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.09,
+        "category": "other",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "700988637f9429d180dcda50757504d41060d2bd",
-      "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
-      "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
+      "sha": "95239f62bfb7ce1bdf8bf49eb18ac5db611b153e",
+      "evidenceUrl": "https://github.com/eileenes/decidelint/blob/95239f62bfb7ce1bdf8bf49eb18ac5db611b153e/README.md",
+      "evidenceSha256": "76ec87868b4ef77cbacdb03c2fd26b3161a1973b1944304ea01070a00c64bf44",
       "model": "jev-latest",
-      "checkedAt": "2026-10-10T01:14:07.107Z"
-    },
-    {
-      "repo": "final-bench/s1mb",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.75,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.58,
-        "category": "other"
-      },
-      "sha": "74eb773ac955d139df2e970b4b9a235a0700933a",
-      "evidenceUrl": "https://github.com/final-bench/s1mb/blob/74eb773ac955d139df2e970b4b9a235a0700933a/README.md",
-      "evidenceSha256": "9f94ed21bbc8673d01355e99c960653b273ba7111a29356ad8221be4573e14f4",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-10T01:14:07.107Z"
+      "checkedAt": "2026-10-10T10:07:20.118Z"
     }
   ],
   "identity": {
