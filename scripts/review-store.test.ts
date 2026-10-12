@@ -1,12 +1,12 @@
 /**
- * [INPUT]: 依赖 真实 review-store 与 review-checkpoint 模块
- * [OUTPUT]: 对外提供 状态持久化和可信恢复的离线回归
+ * [INPUT]: 依赖 review-store/review-checkpoint 与 radar 工作流的部署 job 名称
+ * [OUTPUT]: 提供状态持久化、部署阶段识别和预算恢复安全边界的离线回归
  * [POS]: scripts 的恢复边界测试，不调用外部服务
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import test, { type TestContext } from 'node:test'
 import assert from 'node:assert/strict'
-import { mkdtempSync, rmSync, writeFileSync, symlinkSync, existsSync } from 'node:fs'
+import { mkdtempSync, rmSync, writeFileSync, symlinkSync, existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { createReviewStore } from './review-store.ts'
@@ -173,6 +173,43 @@ test('verify-only jobs and ordinary push runs do not create a budget gap', async
   const api = checkpointApi([{ ...budgetRun(7), event: 'push' }, budgetRun(6), budgetRun(5)], { 5: [budgetArtifact(5, 1)] },
     { '6-1': verify, '5-1': budgetJobs(5) })
   assert.deepEqual(await latestCheckpoint(api, 20, 'radar', recoveryOptions), { runId: 5, artifactId: 51 })
+})
+
+function deploymentJob(conclusion = 'success') {
+  // --- 从真实工作流取名称，让部署改名触发恢复契约回归 ---
+  const workflow = readFileSync(new URL('../.github/workflows/radar.yml', import.meta.url), 'utf8')
+  const name = workflow.match(/^  deploy:\n    name: (.+)$/m)?.[1]
+  assert.ok(name, 'radar workflow must expose its deployment job name')
+  return { run_id: 6, head_sha: 'a'.repeat(40), name, status: 'completed', conclusion, steps: [] as Record<string, unknown>[] }
+}
+
+test('deployment jobs do not create a budget gap or erase a previous paid checkpoint', async () => {
+  for (const conclusion of ['success', 'failure', 'cancelled', 'skipped']) {
+    const jobs = { jobs: [
+      { ...deploymentJob(), name: 'verify' },
+      ...budgetJobs(6, undefined, true).jobs,
+      deploymentJob(conclusion),
+      ...['validate', 'publish', 'resume-intake'].map((name) => ({ ...deploymentJob('skipped'), name })),
+    ] }
+    const empty = checkpointApi([budgetRun(6)], {}, { '6-1': jobs })
+    assert.equal(await latestCheckpoint(empty, 20, 'radar', recoveryOptions), null)
+    const paid = checkpointApi([budgetRun(6), budgetRun(5)], { 5: [budgetArtifact(5, 1)] },
+      { '6-1': jobs, '5-1': budgetJobs(5, '2026-10-01T08:00:00Z') })
+    assert.deepEqual(await latestCheckpoint(paid, 20, 'radar', recoveryOptions), { runId: 5, artifactId: 51 })
+  }
+})
+
+test('deployment jobs cannot hide paid collection or missing execution evidence', async () => {
+  const deploy = deploymentJob()
+  const incomplete = checkpointApi([budgetRun(6)], {}, { '6-1': { jobs: [{ ...deploy, steps: undefined }] } })
+  await assert.rejects(latestCheckpoint(incomplete, 20, 'radar', recoveryOptions), /budget-execution-unknown/)
+  deploy.steps = budgetJobs(6).jobs[0].steps
+  const missing = checkpointApi([budgetRun(6)], {}, { '6-1': { jobs: [deploy] } })
+  await assert.rejects(latestCheckpoint(missing, 20, 'radar', recoveryOptions), /budget-checkpoint-missing/)
+  const paid = checkpointApi([budgetRun(6)], { 6: [budgetArtifact(6, 1)] }, { '6-1': { jobs: [deploy] } })
+  assert.deepEqual(await latestCheckpoint(paid, 20, 'radar', recoveryOptions), { runId: 6, artifactId: 61 })
+  const duplicate = checkpointApi([budgetRun(6)], {}, { '6-1': { jobs: [deploy, ...budgetJobs(6).jobs] } })
+  await assert.rejects(latestCheckpoint(duplicate, 20, 'radar', recoveryOptions), /budget-execution-unknown/)
 })
 test('missing earlier execution also blocks recovery even when a later artifact exists', async () => {
   const api = checkpointApi([budgetRun(6), budgetRun(5)], { 6: [budgetArtifact(6, 1)] },

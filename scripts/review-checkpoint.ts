@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 GitHub Actions 工作流、attempt、jobs 与 artifact API
- * [OUTPUT]: 对外提供 可信审核状态与独立预算的恢复定位
+ * [OUTPUT]: 提供可信审核状态与独立预算恢复；识别 verify/部署为非采集阶段
  * [POS]: 服务端采集的跨运行恢复边界，不消费 PR artifact
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -129,14 +129,14 @@ async function collectionTime(api: ReviewApi, run: WorkflowRun & { id: number; r
   if (executed.length > 1) throw new Error('submission-budget-execution-unknown')
   if (executed.length === 1) return timestamp(executed[0].completed_at)
   const scan = jobs.find((job) => job.name === 'scan')
-  const otherJobsAreVerification = jobs.every((job) => job.conclusion === 'skipped' ||
-    (job.name === 'verify' && Array.isArray(job.steps)) || job === scan)
-  if (!otherJobsAreVerification) throw new Error('submission-budget-execution-unknown')
+  const otherJobsAreNonCollecting = jobs.every((job) => job.conclusion === 'skipped' ||
+    ((job.name === 'verify' || job.name === 'Deploy verified main artifact') && Array.isArray(job.steps)) || job === scan)
+  if (!otherJobsAreNonCollecting) throw new Error('submission-budget-execution-unknown')
   if (scan) {
     if (scan.conclusion === 'skipped' || collects.some((step) => step.conclusion === 'skipped')) return null
     throw new Error('submission-budget-execution-unknown')
   }
-  // 完整 jobs 只包含明确的 verify/跳过任务才证明没有付费；未知名称不能作为空账本。
+  // 完整 jobs 只接受明确的校验/部署/跳过任务；未知名称不能作为空账本。
   return null
 }
 

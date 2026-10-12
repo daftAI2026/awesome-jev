@@ -59,8 +59,8 @@ radar.test.ts: Node test radar 的契约与回归验证，运行 npm test
 radar.ts: Top100 优先刷新、其它项续点、发现前补旧项身份/ID 去重的核心生态发现与可信快照发布；Top 不完整先存诊断并非零退出，完整 Top 的部分轮转允许发布
 repository-review.test.ts: Node test repository-review 的契约与回归验证，运行 npm test
 repository-review.ts: 固定提交的整仓审核与文件排除策略
-review-checkpoint.ts: 核对可信 workflow/attempt/jobs，按 collect 时序定位预算；当日缺失账本拒绝回退
-review-store.test.ts: Node test review-store 的契约与回归验证，运行 npm test
+review-checkpoint.ts: 核对可信 workflow/attempt/jobs，按 collect 时序定位预算；已知 verify/部署无采集，未知任务与当日缺失账本拒绝回退
+review-store.test.ts: Node 状态持久化与可信预算恢复回归；部署 job 名称跟随真实工作流，未知任务和缺失付费账本仍拒绝
 review-store.ts: 有界本地审核状态存储与失效清理
 review-types.ts: 整仓审核任务、队列与存储的接口契约
 saved.test.ts: Node test saved 的契约与回归验证，运行 npm test
