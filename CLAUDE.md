@@ -40,6 +40,7 @@ src/start.ts - Start 服务端错误公开序列化边界
 Agents 页脚复用三语言与本站主题，布局/品牌资产/按钮名称沿用 OpenFree 原版。构建从规范项目/新闻快照生成 llms.txt、llms-full.txt 和八份互链 Markdown，不输出审核分数、本机收藏或凭据。Static Assets 的 _headers 明确 TXT/Markdown 媒体类型。聊天入口仅传同一公开问题，不调用 API；五品牌端点沿用原版；只替换本站公开问题与文档地址，不增加免责声明段落。
 
 访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
+本站区域已开启免费的 Cloudflare Crawler Hints。缓存信号驱动 IndexNow 通知，不额外创建 Action 或密钥，不保证每次 Worker SSR 更新都被通知；以 Bing 接收报告另行验证，不把启用等同收录。配置依据见 docs/deployment.md。
 验证: npm run typecheck、npm run lint、npm test、npm run build、npm run test:delivery（构建后真实 HTTP/模块图，零跳过）。使用 Node 24；不将 .env 或采集凭据写入文档。
 
 可信 main 校验封装同版本 dist，production job 按 artifact ID 部署，不重复构建。部署凭据仅存 production Secret，环境仅允许 main；PR/采集器不持有此凭据。实际数据推送显式派发 main 校验。部署开关与 Cloudflare Git 构建切换/恢复见 docs/deployment.md。

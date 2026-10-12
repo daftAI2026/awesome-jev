@@ -1,6 +1,6 @@
 <!--
-[INPUT]: 依赖 radar 工作流、production 环境与 Workers 构建触发器
-[OUTPUT]: 提供同版本部署、项目构建断开、切换实证与恢复步骤
+[INPUT]: 依赖 radar 工作流、production 环境、Workers 构建触发器与站点缓存设置
+[OUTPUT]: 提供同版本部署、构建切换与 Crawler Hints 接入边界
 [POS]: docs 的站点发布契约；采集准入归 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -120,3 +120,26 @@ GitHub 校验成功不等于生产部署成功。
 备份包含仓库、分支、构建命令和缓存设置。
 备份不包含 Token、Secret 或环境变量。
 `*.local` 忽略此目录，备份不进入仓库或产物。
+
+
+## IndexNow：Cloudflare Crawler Hints
+
+2026-10-12 已为 `awesomejev.cc` 开启 Crawler Hints。
+控制台路径：Caching → Configuration → Crawler Hints。
+启用后开关显示开启；使用现有 Free 套餐。
+用户确认免费条件后同意启用与补充条款。
+只修改本站，不修改其他域名。
+
+[Bing 官方接入页](https://www.bing.com/indexnow/getstarted)支持此方式。
+Cloudflare 依据缓存 MISS 信号发送 IndexNow 通知。
+不在仓库新建密钥文件或重复提交 Action。
+不增加 CI 凭据权限，不为通知改动缓存规则。
+保持错误页与长尾标签的 noindex。
+
+开关开启不等于 Bing 已收到通知或完成收录。
+首次核对时，Bing IndexNow 仍显示接入介绍页。
+后续在本站 IndexNow 报告查看 Cloudflare 来源。
+Worker 动态 SSR 不保证产生每次更新的缓存信号。
+此机制不替代 sitemap，也不承诺 Google 接收。
+
+依据：[Cloudflare Crawler Hints 文档](https://developers.cloudflare.com/cache/advanced-configuration/crawler-hints/)。
