@@ -1,5 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
+ * 公开标签页与页脚导航共用语言契约
  * [OUTPUT]: 对外提供 ja 文案
  * [POS]: i18n/locales 的日文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -7,6 +8,11 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  offlineErrorTitle: 'ネットワークに接続されていません',
+  offlineErrorDescription: '接続を確認してから、ページを再読み込みしてください。',
+  serverErrorTitle: 'ページを読み込めませんでした',
+  serverErrorDescription: 'もう一度お試しいただくか、ディレクトリに戻ってください。',
+  errorRetry: '再読み込み',
   paginationLabel: 'ページナビゲーション',
   paginationPrevious: '前へ',
   paginationNext: '次へ',
@@ -53,6 +59,13 @@ export const ja: Messages = {
   themeSystem: 'システム設定に合わせる',
   themeLight: 'ライト',
   themeDark: 'ダーク',
+  tagsTitle: 'タグ',
+  tagPageTitle: 'タグ：{tag}',
+  tagPageDescription: '{tag} タグの付いた Jev GitHub プロジェクトを検索・並べ替えし、元のリポジトリを確認できます。',
+  tagsDescription: '共通のテーマから Jev プロジェクトを探せます。明確な同義語を統合し、一般的なエコシステム名を省きます。この索引には 3 件以上で使われるタグを表示します。',
+  allTags: 'すべてのタグ',
+  popularTags: '人気のタグ',
+  browseDirectory: 'プロジェクト集を探す',
   categoryLabel: 'カテゴリー',
   categoryAll: 'すべてのプロジェクト',
   categoryTop100: 'スター数トップ 100',
@@ -125,7 +138,7 @@ export const ja: Messages = {
   projectClose: 'プロジェクトの概要を閉じる',
   projectStars: 'スター',
   projectForks: 'フォーク',
-  projectTags: 'トピック',
+  projectTags: 'タグ',
   projectInclusionBasis: '掲載理由',
   projectInclusionPending: '掲載理由は準備中です',
   projectViewEvidence: '参照元を見る',

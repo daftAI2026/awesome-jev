@@ -13,6 +13,376 @@
 
 News pages contain source-attributed summaries, not full articles. Publication time is taken from the source when available. Items without summaries are excluded from this document.
 
+## Cloudflare 发布 Clef-omni：30B-A3B 多模态决策模型，单次调用评分文本、图像、音频和视频
+
+[Summary page \(en\)](https://awesomejev.cc/news/rc16kc7la6wib4t4nqdosjglp) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rc16kc7la6wib4t4nqdosjglp) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rc16kc7la6wib4t4nqdosjglp)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/11/cloudflare-clef-omni-multimodal-decision-model/) · [AIHOT](https://aihot.news/items/rc16kc7la6wib4t4nqdosjglp)
+
+Source publication: 2026-10-11T23:15:52.000Z
+
+Cloudflare 于 2026 年 10 月 9 日发布开放权重决策模型 Clef-omni，可在一次调用中对文本、图像、音频和视频打分。
+
+## vLLM Semantic Router 发布开源多模态决策模型 Decision 3.0，共 5 个尺寸
+
+[Summary page \(en\)](https://awesomejev.cc/news/u8tmvx1eocao3k7c81h6vse2r) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/u8tmvx1eocao3k7c81h6vse2r) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/u8tmvx1eocao3k7c81h6vse2r)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/) · [AIHOT](https://aihot.news/items/u8tmvx1eocao3k7c81h6vse2r)
+
+Source publication: 2026-10-11T21:43:41.000Z
+
+vLLM Semantic Router 团队发布 Decision 3.0 系列开源决策模型，读取文本、JSON 和图片，返回概率而非生成文本，全部采用 Apache-2.0 许可。
+
+## 更便宜的 AI token 正在推高需求，这正是黄仁勋最想看到的局面
+
+[Summary page \(en\)](https://awesomejev.cc/news/lebojwqo8pa9m2cc9nj4y96ty) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/lebojwqo8pa9m2cc9nj4y96ty) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/lebojwqo8pa9m2cc9nj4y96ty)
+
+[The Decoder：AI News（RSS）](https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/) · [AIHOT](https://aihot.news/items/lebojwqo8pa9m2cc9nj4y96ty)
+
+Source publication: 2026-10-11T09:49:59.000Z
+
+Ornn、Silicon Data 与 Bloomberg 截至 2026 年 8 月的数据显示，AI token 价格持续下跌而 H100 GPU 租赁价格持平或上涨，a16z 称之为 AI 市场的教科书式杰文斯悖论。
+
+## TypeSafe AI 打造 Jev 智能体体验
+
+[Summary page \(en\)](https://awesomejev.cc/news/ozhvo6f3qekb83pi0rletx0p5) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ozhvo6f3qekb83pi0rletx0p5) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ozhvo6f3qekb83pi0rletx0p5)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2109098676664861033) · [AIHOT](https://aihot.news/items/ozhvo6f3qekb83pi0rletx0p5)
+
+Source publication: 2026-10-11T01:48:04.000Z
+
+我的首要目标是让用户觉得这很神奇。就像本不可能做到一样 有了 Jev，一切皆有可能！✨
+
+## Microsoft 发布 Decision-1 决策模型，基于 Qwen3.5-9B
+
+[Summary page \(en\)](https://awesomejev.cc/news/b2p5q0fcdxo2gy7drxhseo2g0) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/b2p5q0fcdxo2gy7drxhseo2g0) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/b2p5q0fcdxo2gy7drxhseo2g0)
+
+[The Decoder：AI News（RSS）](https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/) · [AIHOT](https://aihot.news/items/b2p5q0fcdxo2gy7drxhseo2g0)
+
+Source publication: 2026-10-10T14:57:33.000Z
+
+Microsoft 发布决策模型 Decision-1，用于分类、评估和路由决策，基于 Qwen3.5-9B，据称可引导智能体在复杂环境中行动。
+
+## Standard Bots 访谈：工业机器人的 AI 可靠执行之道
+
+[Summary page \(en\)](https://awesomejev.cc/news/p8zbc4wt4p2alcx2ik10cjx91) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/p8zbc4wt4p2alcx2ik10cjx91) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/p8zbc4wt4p2alcx2ik10cjx91)
+
+[Latent Space（RSS）](https://www.latent.space/p/standard-bots) · [AIHOT](https://aihot.news/items/p8zbc4wt4p2alcx2ik10cjx91)
+
+Source publication: 2026-10-10T14:04:11.000Z
+
+Latent Space 采访 Standard Bots CEO Evan Beard 与 AI 负责人 Leif Jentoft，介绍其工业机械臂的 AI 技术栈。
+
+## 每日AI简报：微软发布决策模型，谷歌测试Gemini 4
+
+[Summary page \(en\)](https://awesomejev.cc/news/s4ha597r3t3wvvrho01mxxant) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/s4ha597r3t3wvvrho01mxxant) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/s4ha597r3t3wvvrho01mxxant)
+
+[X：Testing Catalog \(@testingcatalog\)](https://x.com/testingcatalog/status/2108818845460844904) · [AIHOT](https://aihot.news/items/s4ha597r3t3wvvrho01mxxant)
+
+Source publication: 2026-10-10T07:16:07.000Z
+
+微软在Foundry推出Microsoft-Decision-1，基于Qwen3.5-9B后训练的快速决策评分模型，即将支持OpenRouter。谷歌为Gemini应用全量用户提供低中高思考等级，免费用户被迁移至Auto模式；Antigravity CLI 1.3.3发布，新增/plugin命令，内部正测试代号Carbon的Gemini 4检查点。
+
+## Nace AI 开源 9B 决策模型 Drex 1.5，为选项打分而非生成文本
+
+[Summary page \(en\)](https://awesomejev.cc/news/nyib2tr4awnqy6hr52i6huena) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/nyib2tr4awnqy6hr52i6huena) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/nyib2tr4awnqy6hr52i6huena)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/09/nace-ai-open-sources-drex-1-5-a-9b-decision-model-that-scores-options-not-text/) · [AIHOT](https://aihot.news/items/nyib2tr4awnqy6hr52i6huena)
+
+Source publication: 2026-10-10T04:51:34.000Z
+
+Nace AI 开源 9B 决策模型 Drex 1.5，读取状态和类型化问题后为每个选项输出概率，不生成文本。其在公开 Decision Index 0.3.1 上得分 58.08，与闭源模型 Jev 1.13.0（57.96）处于并列区间，权重已上架 Hugging Face，托管版在 OpenRouter 上按每 1M 输入 token 收费 $0.04、输出 $0。
+
+## Microsoft 发布 Microsoft-Decision-1：基于 Qwen3.5-9B 的决策评分模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/x1upix3ug5q2zpo4ojrzcfjcb) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/x1upix3ug5q2zpo4ojrzcfjcb) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/x1upix3ug5q2zpo4ojrzcfjcb)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/) · [AIHOT](https://aihot.news/items/x1upix3ug5q2zpo4ojrzcfjcb)
+
+Source publication: 2026-10-10T06:03:09.000Z
+
+Microsoft 发布 Microsoft-Decision-1，一个由 Qwen3.5-9B 后训练的决策评分模型，对固定选项输出校准概率而非生成文本，已上线 Microsoft Foundry 和 OpenRouter。
+
+## Cloudflare 推出开放权重决策模型 Clef-omni，新增音频和视频输入
+
+[Summary page \(en\)](https://awesomejev.cc/news/uyj1nct0n4u1mw332xg97xvay) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uyj1nct0n4u1mw332xg97xvay) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uyj1nct0n4u1mw332xg97xvay)
+
+[IT之家·人工智能](https://www.ithome.com/1/011/347.htm) · [AIHOT](https://aihot.news/items/uyj1nct0n4u1mw332xg97xvay)
+
+Source publication: 2026-10-10T06:26:25.377Z
+
+Cloudflare 于 10 月 9 日发布开放权重决策模型 Clef-omni，在 Clef 系列基础上新增音频和完整视频输入，支持 wav、mp3、mp4 和 webm 格式，可单次 API 调用处理文本、图像、音频和视频，模型权重已在 Hugging Face 开放。
+
+## TypeSafe AI 决策模型 Jev 走红，完成约 8.7 亿美元融资，估值达 75 亿美元
+
+[Summary page \(en\)](https://awesomejev.cc/news/azlep00nvmv4ok0l4c7rmq2ub) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/azlep00nvmv4ok0l4c7rmq2ub) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/azlep00nvmv4ok0l4c7rmq2ub)
+
+[IT之家·人工智能](https://www.ithome.com/1/011/170.htm) · [AIHOT](https://aihot.news/items/azlep00nvmv4ok0l4c7rmq2ub)
+
+Source publication: 2026-10-09T23:28:29.367Z
+
+据彭博社 10 月 9 日报道，TypeSafe AI 旗下决策模型 Jev 推出数周走红，完成约 8.7 亿美元融资，由 a16z 领投，估值达 75 亿美元。Jev 已被约三分之一的财富 500 强企业采用，上线数天内用户突破 100 万，平台每天处理数万亿 token，扣除运营成本后已实现盈利。公司团队刚满 20 人，计划用新资金扩充员工、推进大规模部署并采购更多算力。
+
+## Nathan Lambert：AI 将快速进步，但不会走向通用超级智能
+
+[Summary page \(en\)](https://awesomejev.cc/news/b8c356snnq00hlq3djeibs2ub) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/b8c356snnq00hlq3djeibs2ub) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/b8c356snnq00hlq3djeibs2ub)
+
+[Nathan Lambert：Interconnects（RSS）](https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards) · [AIHOT](https://aihot.news/items/b8c356snnq00hlq3djeibs2ub)
+
+Source publication: 2026-10-09T21:33:47.000Z
+
+Nathan Lambert 撰文认为 AI 将在基础设施和工程能力上快速进步，未来几年模型会成为超人的分布式 GPU 工程师，但这不会让模型在本质上发生巨变，也不指向通用超级智能。
+
+## Jev 模型开发商 TypeSafe AI 融资 8.7 亿美元，估值达 75 亿美元
+
+[Summary page \(en\)](https://awesomejev.cc/news/umplkifk2t8q1srgz2yopa6w0) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/umplkifk2t8q1srgz2yopa6w0) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/umplkifk2t8q1srgz2yopa6w0)
+
+[TechCrunch：AI（RSS）](https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/) · [AIHOT](https://aihot.news/items/umplkifk2t8q1srgz2yopa6w0)
+
+Source publication: 2026-10-09T21:41:29.000Z
+
+非文本 AI 模型 Jev 的开发商 TypeSafe AI 完成 8.7 亿美元融资，估值 75 亿美元，由 Andreessen Horowitz 领投，Sequoia 和既有投资者 DCVC 参投。
+
+## OpenAI Decisions API 进入公测，类型化答案比 Responses API 快约 10 倍
+
+[Summary page \(en\)](https://awesomejev.cc/news/i6oc09qj5qdhmhlw1sh5kpy1r) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/i6oc09qj5qdhmhlw1sh5kpy1r) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/i6oc09qj5qdhmhlw1sh5kpy1r)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/09/openai-decisions-api-hits-public-beta-with-10x-faster-typed-answers/) · [AIHOT](https://aihot.news/items/i6oc09qj5qdhmhlw1sh5kpy1r)
+
+Source publication: 2026-10-09T20:05:07.000Z
+
+OpenAI 发布 Decisions API 公开测试版，端点为 POST /v1/decisions，可将文本和图像转为概率、选项或评分等类型化答案，官方称比 Responses API 快约 10 倍，DevDay 报道称单次决策约 150 ms。
+
+## Typesafe AI 完成 8.7 亿美元 A 轮融资，估值 75 亿美元
+
+[Summary page \(en\)](https://awesomejev.cc/news/tr4mxi1t8a4y3qmitwr0ragn8) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/tr4mxi1t8a4y3qmitwr0ragn8) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/tr4mxi1t8a4y3qmitwr0ragn8)
+
+[Hacker News：AI 热帖](https://typesafe.ai/blog/series-ai) · [AIHOT](https://aihot.news/items/tr4mxi1t8a4y3qmitwr0ragn8)
+
+Source publication: 2026-10-09T17:02:31.000Z
+
+Typesafe AI 宣布完成 8.7 亿美元 A 轮融资，估值 75 亿美元，由 Andreessen Horowitz 领投，Sequoia Capital、现有投资方 DCVC 及多位天使投资人参投，Martin Casado 加入董事会。公司称三分之一 Fortune 500 企业在使用其产品 Jev，资金将用于推出更多 machine-native 模型和企业级功能。
+
+## a16z 领投 TypeSafe AI，其 Jev 模型 3 天生成 1 万亿 tokens
+
+[Summary page \(en\)](https://awesomejev.cc/news/nop1nw81y2obkwa9apzdu3176) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/nop1nw81y2obkwa9apzdu3176) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/nop1nw81y2obkwa9apzdu3176)
+
+[a16z：News（RSS）](https://www.a16z.news/p/investing-in-typesafe) · [AIHOT](https://aihot.news/items/nop1nw81y2obkwa9apzdu3176)
+
+Source publication: 2026-10-09T16:28:52.000Z
+
+a16z 宣布领投 TypeSafe AI，其模型 Jev 上线 3 天即生成 1 万亿 tokens，成为其见过增长最快的模型。Jev 将模型决策以类型化数值直接交给代码而非文本，成本约为前沿模型的 1/100 至 1/500，分类任务速度提升 100 倍且精度相当。上线首周已有 25% 的财富 500 强企业接入 Jev。
+
+## a16z 本周图表：预测市场存在政治偏见吗？
+
+[Summary page \(en\)](https://awesomejev.cc/news/dxmocslm8bbb3s7tt3n157l8n) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/dxmocslm8bbb3s7tt3n157l8n) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/dxmocslm8bbb3s7tt3n157l8n)
+
+[a16z：News（RSS）](https://www.a16z.news/p/this-week-in-charts-are-prediction) · [AIHOT](https://aihot.news/items/dxmocslm8bbb3s7tt3n157l8n)
+
+Source publication: 2026-10-09T16:31:10.000Z
+
+a16z 援引 Zitzewitz 的 NBER 工作论文指出，汇总逾百年预测市场数据后，政治倾向、性别、肤色、年龄等维度均未出现超过标准误的收益系数，仅非美国选举样本显示市场略微高估右倾候选人，但 95% 置信区间表明该偏差不具统计显著性。文章还以巴西总统选举首轮为例，称预测市场比市场反应提前约 3 周押中结果。
+
+## LangChain 如何用 Managed Deep Agents 打造开箱即用的智能体用户体验
+
+[Summary page \(en\)](https://awesomejev.cc/news/f0iyt9wctsxq05go21eeua6d3) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/f0iyt9wctsxq05go21eeua6d3) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/f0iyt9wctsxq05go21eeua6d3)
+
+[LangChain：Blog（RSS）](https://www.langchain.com/blog/slack-sdk-managed-deep-agents) · [AIHOT](https://aihot.news/items/f0iyt9wctsxq05go21eeua6d3)
+
+Source publication: 2026-10-09T16:52:14.000Z
+
+LangChain 在 Managed Deep Agents v0.9 中新增 reactions API，可为 Slack 等渠道的分布式智能体动态分配 emoji 回应，支持字符串或返回 emoji 的可调用对象。该功能可接入 Jev 等决策模型，Jev 最多支持 255 个选项，并可用置信度阈值（低于 0.25 时回退到 👀）控制回应。
+
+## Unsloth 发布免费 notebook，可将 Qwen3.5-4B 本地训练成决策模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/jgwl5kwbth7ulxmbkovklyyd6) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/jgwl5kwbth7ulxmbkovklyyd6) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/jgwl5kwbth7ulxmbkovklyyd6)
+
+[X：Unsloth \(@UnslothAI\)](https://x.com/UnslothAI/status/2108568667449618930) · [AIHOT](https://aihot.news/items/jgwl5kwbth7ulxmbkovklyyd6)
+
+Source publication: 2026-10-09T14:42:00.000Z
+
+Unsloth 发布免费 notebook，教用户把 Qwen3.5-4B 训练成生成决策而非文本的决策模型，本地仅需 8GB VRAM。内容涵盖数据准备（state、questions、gold answers）、训练与服务；配套指南见 unsloth.ai/docs。其引用帖提到用 Clef head 加 LoRA（r=64）微调一 epoch，把 Qwen3.5 0.8B 在 3 个决策基准上的总体准确率从 20.7% 提到 74.3%，仅需 4GB VRAM。Notebook：https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Qwen3\_5\_\(4B\)-Decision.ipynb
+
+## Liquid AI 开源 d1 系列决策模型：d1-3B 单次判断仅 8 毫秒，支持图像输入
+
+[Summary page \(en\)](https://awesomejev.cc/news/u9pxdufnzttci43x7kaczsl7t) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/u9pxdufnzttci43x7kaczsl7t) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/u9pxdufnzttci43x7kaczsl7t)
+
+[IT之家·人工智能](https://www.ithome.com/1/010/946.htm) · [AIHOT](https://aihot.news/items/u9pxdufnzttci43x7kaczsl7t)
+
+Source publication: 2026-10-09T06:29:07.520Z
+
+Liquid AI 于 10 月 7 日发布博文，推出开放权重决策模型 d1-3B（31.2 亿参数，支持文本与图像输入）和 d1-omni-600M（5.87 亿参数，支持文本、图像及语音输入），已在 Hugging Face 公开，可下载、微调并部署。
+
+## TypeSafe AI 将出席 AI Builders 活动
+
+[Summary page \(en\)](https://awesomejev.cc/news/txya4w1mb1bdf31ga8jfbfz0f) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/txya4w1mb1bdf31ga8jfbfz0f) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/txya4w1mb1bdf31ga8jfbfz0f)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2108395288272765208) · [AIHOT](https://aihot.news/items/txya4w1mb1bdf31ga8jfbfz0f)
+
+Source publication: 2026-10-09T03:13:03.000Z
+
+@usekernel @modal @braintrust 是的，Jev 精英团将到场 https://luma.com/aibuilders\_techcrunch
+
+## 密歇根大学 EECS 498 AASE 课程解读：把 AI 编程方法论做成五个 Skill
+
+[Summary page \(en\)](https://awesomejev.cc/news/sn8jgfp4rhujuoecfmclsbnxi) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/sn8jgfp4rhujuoecfmclsbnxi) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/sn8jgfp4rhujuoecfmclsbnxi)
+
+[X：邵猛 \(@shao\_\_meng\)](https://x.com/shao__meng/status/2108384062796873888) · [AIHOT](https://aihot.news/items/sn8jgfp4rhujuoecfmclsbnxi)
+
+Source publication: 2026-10-09T02:28:27.000Z
+
+密歇根大学 2026 年秋季开设 EECS 498-016「Applied Agentic Software Engineering」，无教材无考试、总花费零美元，由 Marcus Darden 主讲，全部讲义 L01–L11 已在 GitHub 公开。
+
+## TypeSafe AI 决策模型校准表现更优
+
+[Summary page \(en\)](https://awesomejev.cc/news/iprvps9iocs0xvyg8mdbfm07d) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/iprvps9iocs0xvyg8mdbfm07d) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/iprvps9iocs0xvyg8mdbfm07d)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2108261430265029085) · [AIHOT](https://aihot.news/items/iprvps9iocs0xvyg8mdbfm07d)
+
+Source publication: 2026-10-08T18:21:09.000Z
+
+保持校准！ （引用推文概括：正如预期，@typesafeai 的 jev 在邮件分类任务上，校准表现优于我们测试的另外 40 个决策模型。）
+
+## Perplexity 开源临床决策模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/fdwh0mnigjt1p634p5pfvgro0) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/fdwh0mnigjt1p634p5pfvgro0) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/fdwh0mnigjt1p634p5pfvgro0)
+
+[X：Aravind Srinivas（Perplexity CEO） \(@AravSrinivas\)](https://x.com/AravSrinivas/status/2108211672028704842) · [AIHOT](https://aihot.news/items/fdwh0mnigjt1p634p5pfvgro0)
+
+Source publication: 2026-10-08T15:03:25.000Z
+
+perplexity 的开源权重决策模型，临床决策质量最佳、成本最低
+
+## OpenRouter 测 GPT-6 Luna 决策速度
+
+[Summary page \(en\)](https://awesomejev.cc/news/pot1vnbo50qjz1gkhr7eawgmb) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/pot1vnbo50qjz1gkhr7eawgmb) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/pot1vnbo50qjz1gkhr7eawgmb)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2108206463755944219) · [AIHOT](https://aihot.news/items/pot1vnbo50qjz1gkhr7eawgmb)
+
+Source publication: 2026-10-08T14:42:44.000Z
+
+GPT-6 Luna 是当下最快的 Decisions 模型，全球请求延迟 180ms 🏁 紧随其后的是 Jev 和 Perplexity Decider：
+
+## 面壁 MiniCPM5-2B 微调做智能体决策，准确率升至 80.5%
+
+[Summary page \(en\)](https://awesomejev.cc/news/pt26eoipuec2qwredpd89arhi) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/pt26eoipuec2qwredpd89arhi) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/pt26eoipuec2qwredpd89arhi)
+
+[X：面壁智能 OpenBMB \(@OpenBMB\)](https://x.com/OpenBMB/status/2108188162677944478) · [AIHOT](https://aihot.news/items/pt26eoipuec2qwredpd89arhi)
+
+Source publication: 2026-10-08T13:30:00.000Z
+
+社区项目 ReJev 用 LoRA 后训练将面壁开源 2B 模型 MiniCPM5-2B 适配为决策模型，输入状态、问题与候选选项后直接输出一个决策。在其 1,892 条密封留出集上，准确率从 51.11% 提升至 80.50%（+29.39 个百分点），报告评测中无效输出为 0%，累计 Modal 账单约 5.31 美元。
+
+## Understanding AI 解读新模型 Jev：只输出概率的新形态 AI 为何爆红
+
+[Summary page \(en\)](https://awesomejev.cc/news/dqelvwbsyncp0e515g1ironxf) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/dqelvwbsyncp0e515g1ironxf) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/dqelvwbsyncp0e515g1ironxf)
+
+[Timothy B. Lee：Understanding AI（RSS）](https://www.understandingai.org/p/understanding-jev-the-new-model-everyone) · [AIHOT](https://aihot.news/items/dqelvwbsyncp0e515g1ironxf)
+
+Source publication: 2026-10-08T13:14:53.000Z
+
+TypeSafe AI 于 9 月 15 日发布的模型 Jev 走红，公告获近 4000 万浏览，一周内超 10 万人加入其 Discord，GitHub 上约 2000 个项目使用。
+
+## TypeSafe AI 称增长最快
+
+[Summary page \(en\)](https://awesomejev.cc/news/cvgs62cjzr5lcgltqu2wf0sig) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/cvgs62cjzr5lcgltqu2wf0sig) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/cvgs62cjzr5lcgltqu2wf0sig)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2108029801324072965) · [AIHOT](https://aihot.news/items/cvgs62cjzr5lcgltqu2wf0sig)
+
+Source publication: 2026-10-08T03:00:44.000Z
+
+增长最快
+
+## Unsloth Studio 如何在模型仓库变更后重新校验再运行
+
+[Summary page \(en\)](https://awesomejev.cc/news/au6bynrxfxz4s37uetmwmdpku) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/au6bynrxfxz4s37uetmwmdpku) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/au6bynrxfxz4s37uetmwmdpku)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/07/what-happens-when-a-trusted-model-repo-changes-unsloth-studio-re-checks-before-it-runs/) · [AIHOT](https://aihot.news/items/au6bynrxfxz4s37uetmwmdpku)
+
+Source publication: 2026-10-08T01:49:11.000Z
+
+Unsloth 发布 Unsloth Studio 与 Unsloth Desktop 安全概览，说明其在下载到执行之间设置四道检查点：代码指纹绑定审批、独立权重文件闸门、探测式 OS 沙箱与包内容扫描。
+
+## Arena 评测 Jev Router：成本高 38%、延迟 1.7 倍
+
+[Summary page \(en\)](https://awesomejev.cc/news/gts9bpic82zpoxxx4l53hovjd) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/gts9bpic82zpoxxx4l53hovjd) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/gts9bpic82zpoxxx4l53hovjd)
+
+[X：Arena \(@arena\)](https://x.com/arena/status/2107961555363213482) · [AIHOT](https://aihot.news/items/gts9bpic82zpoxxx4l53hovjd)
+
+Source publication: 2026-10-07T22:29:33.000Z
+
+Arena 在 Agent Arena 上用超 4700 个真实智能体会话评测了 typesafeai 的 Jev Router，结果显示其未推进当前帕累托前沿：达到与 DeepSeek V4.1 Flash（Max）相近性能时成本高 38%，模型请求延迟中位数高 1.7 倍。
+
+## TypeSafe AI 回应"死亡"传闻
+
+[Summary page \(en\)](https://awesomejev.cc/news/uqulrilfq8v3jehn9rkpfacjk) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uqulrilfq8v3jehn9rkpfacjk) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uqulrilfq8v3jehn9rkpfacjk)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2107958916684632396) · [AIHOT](https://aihot.news/items/uqulrilfq8v3jehn9rkpfacjk)
+
+Source publication: 2026-10-07T22:19:04.000Z
+
+关于我们已死的传闻被大大夸大了
+
+## Perplexity Decider v1.1 上线 OpenRouter
+
+[Summary page \(en\)](https://awesomejev.cc/news/fskwttz3y1d6nal918zxuyztq) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/fskwttz3y1d6nal918zxuyztq) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/fskwttz3y1d6nal918zxuyztq)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2107938516080722327) · [AIHOT](https://aihot.news/items/fskwttz3y1d6nal918zxuyztq)
+
+Source publication: 2026-10-07T20:58:00.000Z
+
+Perplexity Decider v1.1 现已上线 OpenRouter @perplexity\_ai 的开源权重多模态决策模型，接受文本、JSON 或图像输入，返回带概率的类型化答案 $0.02/M 输入。输出免费 https://openrouter.ai/perplexity/pplx-decider-v1.1-27b
+
+## OpenRouter 决策模型排名发布
+
+[Summary page \(en\)](https://awesomejev.cc/news/uad2megbn1s8gs9mq7togbsjt) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uad2megbn1s8gs9mq7togbsjt) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uad2megbn1s8gs9mq7togbsjt)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2107908382569189762) · [AIHOT](https://aihot.news/items/uad2megbn1s8gs9mq7togbsjt)
+
+Source publication: 2026-10-07T18:58:16.000Z
+
+嘿 Jev，根据 @OpenRouter 的决策模型排名，我该用哪个模型？
+
+## LangChain 发布 Managed Deep Agents v0.9：Schedules、按 run 配置和 Slack 表情回应
+
+[Summary page \(en\)](https://awesomejev.cc/news/cdztx6nilprlemoyuf1mfrssb) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/cdztx6nilprlemoyuf1mfrssb) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/cdztx6nilprlemoyuf1mfrssb)
+
+[LangChain：Blog（RSS）](https://www.langchain.com/blog/managed-deep-agents-schedules-per-run-configuration-slack) · [AIHOT](https://aihot.news/items/cdztx6nilprlemoyuf1mfrssb)
+
+Source publication: 2026-10-07T18:09:51.000Z
+
+LangChain 发布 Managed Deep Agents v0.9 公测版，新增让智能体在对话中自行创建 cron 或一次性日程的 Schedules SDK、每次运行动态选择模型、指令、技能和 MCP 服务器的 per-run 配置，以及默认开启（👀）可自定义的 Slack 表情回应。
+
+## Unsloth 开源教程：本地训练 Qwen3.5 0.8B 决策模型，准确率从 20.7% 提升至 74.3%
+
+[Summary page \(en\)](https://awesomejev.cc/news/y7db2ly158hip5dw1evmjw5kv) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/y7db2ly158hip5dw1evmjw5kv) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/y7db2ly158hip5dw1evmjw5kv)
+
+[X：Unsloth \(@UnslothAI\)](https://x.com/UnslothAI/status/2107868866361930236) · [AIHOT](https://aihot.news/items/y7db2ly158hip5dw1evmjw5kv)
+
+Source publication: 2026-10-07T16:21:14.000Z
+
+Unsloth 发布教程与开源仓库，可将 Qwen3.8、Gemma 4 等 LLM 微调为输出选项概率的决策模型，Qwen3.5 0.8B 在 3 个决策基准上的合计准确率从 20.7% 提到 74.3%，仅需 4GB 显存。
+
+## Tomasz Tunguz：当 AI 模型趋于商品化，战略应如何调整
+
+[Summary page \(en\)](https://awesomejev.cc/news/jopz2c0ofgn0rcwc88ug4997o) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/jopz2c0ofgn0rcwc88ug4997o) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/jopz2c0ofgn0rcwc88ug4997o)
+
+[Tomasz Tunguz 博客（VC 分析）](https://tomtunguz.com/what-if-the-models-are-commoditized/) · [AIHOT](https://aihot.news/items/jopz2c0ofgn0rcwc88ug4997o)
+
+Source publication: 2026-10-07T00:00:00.000Z
+
+Tomasz Tunguz 分析认为 AI 模型正走向商品化，并提出三条应对策略：转售合作、控制用户界面、沉淀用户数据用于智能路由和训练。
+
+## OpenAI 发布 Decisions API，将复杂评估简化为是/否或单选，并精简付费 API 分层
+
+[Summary page \(en\)](https://awesomejev.cc/news/qzsk5mfkbv4fkn7qy4rotta9d) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/qzsk5mfkbv4fkn7qy4rotta9d) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/qzsk5mfkbv4fkn7qy4rotta9d)
+
+[The Decoder：AI News（RSS）](https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/) · [AIHOT](https://aihot.news/items/qzsk5mfkbv4fkn7qy4rotta9d)
+
+Source publication: 2026-10-07T15:36:39.000Z
+
+OpenAI 推出 Decisions API 公测版，可评估文本、图像或两者，速度约为 Responses API 的十倍，目前仅支持 gpt-6-luna，价格为每百万输入 token $0.10，输出 token 免费。
+
 ## Strands 发布开源决策模型 Strands Decider 2B
 
 [Summary page \(en\)](https://awesomejev.cc/news/yzqy6x4npmqcmfkh4l2y4pvh6) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/yzqy6x4npmqcmfkh4l2y4pvh6) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/yzqy6x4npmqcmfkh4l2y4pvh6)
@@ -187,7 +557,7 @@ Source publication: 2026-10-06T00:56:45.000Z
 
 [Summary page \(en\)](https://awesomejev.cc/news/ctsuo4u6rnyjmg2jvu7dhjt9y) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ctsuo4u6rnyjmg2jvu7dhjt9y) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ctsuo4u6rnyjmg2jvu7dhjt9y)
 
-[X：Sky Computing Lab \(@haoailab\)](https://x.com/haoailab/status/2107227312911716584) · [AIHOT](https://aihot.news/items/ctsuo4u6rnyjmg2jvu7dhjt9y)
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2107227312911716584) · [AIHOT](https://aihot.news/items/ctsuo4u6rnyjmg2jvu7dhjt9y)
 
 Source publication: 2026-10-05T21:51:56.000Z
 
@@ -217,7 +587,7 @@ Source publication: 2026-10-05T15:30:01.000Z
 
 [Summary page \(en\)](https://awesomejev.cc/news/im7v0rfruaoz3f9j50iiwrnus) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/im7v0rfruaoz3f9j50iiwrnus) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/im7v0rfruaoz3f9j50iiwrnus)
 
-[IT之家（RSS）](https://www.ithome.com/1/009/744.htm) · [AIHOT](https://aihot.news/items/im7v0rfruaoz3f9j50iiwrnus)
+[IT之家·人工智能](https://www.ithome.com/1/009/744.htm) · [AIHOT](https://aihot.news/items/im7v0rfruaoz3f9j50iiwrnus)
 
 Source publication: 2026-10-05T00:06:48.000Z
 
@@ -277,7 +647,7 @@ Latent Space 发布 10/1-10/2 的 AINews 日报，汇总了 GPT-6.1 Sol 定价 $
 
 [Summary page \(en\)](https://awesomejev.cc/news/jlcw6a57l3eemfz10bzfm5zjz) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/jlcw6a57l3eemfz10bzfm5zjz) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/jlcw6a57l3eemfz10bzfm5zjz)
 
-[IT之家（RSS）](https://www.ithome.com/1/009/509.htm) · [AIHOT](https://aihot.news/items/jlcw6a57l3eemfz10bzfm5zjz)
+[IT之家·人工智能](https://www.ithome.com/1/009/509.htm) · [AIHOT](https://aihot.news/items/jlcw6a57l3eemfz10bzfm5zjz)
 
 Source publication: 2026-10-03T08:50:25.000Z
 
@@ -387,7 +757,7 @@ Source publication: 2026-10-02T22:09:01.000Z
 
 [Summary page \(en\)](https://awesomejev.cc/news/ssock8csml24jiwmm4do1fryp) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ssock8csml24jiwmm4do1fryp) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ssock8csml24jiwmm4do1fryp)
 
-[@typesafeai](https://x.com/typesafeai/status/2106135928918208713) · [AIHOT](https://aihot.news/items/ssock8csml24jiwmm4do1fryp)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2106135928918208713) · [AIHOT](https://aihot.news/items/ssock8csml24jiwmm4do1fryp)
 
 Source publication: 2026-10-02T21:35:10.000Z
 
@@ -427,7 +797,7 @@ Cloudflare 发布面向 AI 智能体的决策模型 Clef 和 Clef-flash，输出
 
 [Summary page \(en\)](https://awesomejev.cc/news/mb26uw50pn1n1f3xxi97iwwo9) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/mb26uw50pn1n1f3xxi97iwwo9) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/mb26uw50pn1n1f3xxi97iwwo9)
 
-[@typesafeai](https://x.com/typesafeai/status/2106071115915550786) · [AIHOT](https://aihot.news/items/mb26uw50pn1n1f3xxi97iwwo9)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2106071115915550786) · [AIHOT](https://aihot.news/items/mb26uw50pn1n1f3xxi97iwwo9)
 
 Source publication: 2026-10-02T17:17:37.000Z
 
@@ -467,7 +837,7 @@ AWS Strands Labs 开源决策模型 Strands Decider 2B（1.9B 参数），不生
 
 [Summary page \(en\)](https://awesomejev.cc/news/hecloufmmayhnvll62l69d6h4) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/hecloufmmayhnvll62l69d6h4) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/hecloufmmayhnvll62l69d6h4)
 
-[IT之家（RSS）](https://www.ithome.com/1/009/262.htm) · [AIHOT](https://aihot.news/items/hecloufmmayhnvll62l69d6h4)
+[IT之家·人工智能](https://www.ithome.com/1/009/262.htm) · [AIHOT](https://aihot.news/items/hecloufmmayhnvll62l69d6h4)
 
 Source publication: 2026-10-02T04:45:28.000Z
 
@@ -487,7 +857,7 @@ Cloudflare Workers AI 团队发布首批自训模型 Clef（27B，基于 Qwen3.8
 
 [Summary page \(en\)](https://awesomejev.cc/news/dxqwoencgcj9we267cjiy7gok) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/dxqwoencgcj9we267cjiy7gok) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/dxqwoencgcj9we267cjiy7gok)
 
-[@typesafeai](https://x.com/typesafeai/status/2105809232738283853) · [AIHOT](https://aihot.news/items/dxqwoencgcj9we267cjiy7gok)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2105809232738283853) · [AIHOT](https://aihot.news/items/dxqwoencgcj9we267cjiy7gok)
 
 Source publication: 2026-10-01T23:56:59.000Z
 
@@ -517,7 +887,7 @@ Earendil 发布 Pi 1.0，一个稳定、极简、可扩展的智能体编码框�
 
 [Summary page \(en\)](https://awesomejev.cc/news/c1svybwl2956ap2ekjm5vjpam) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/c1svybwl2956ap2ekjm5vjpam) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/c1svybwl2956ap2ekjm5vjpam)
 
-[@typesafeai](https://x.com/typesafeai/status/2105741653701242938) · [AIHOT](https://aihot.news/items/c1svybwl2956ap2ekjm5vjpam)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2105741653701242938) · [AIHOT](https://aihot.news/items/c1svybwl2956ap2ekjm5vjpam)
 
 Source publication: 2026-10-01T19:28:27.000Z
 
@@ -527,7 +897,7 @@ Jev 是一款出色的重排序模型，你没听错。
 
 [Summary page \(en\)](https://awesomejev.cc/news/y9pw0j2qxta0tbn3abu7g79w1) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/y9pw0j2qxta0tbn3abu7g79w1) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/y9pw0j2qxta0tbn3abu7g79w1)
 
-[@typesafeai](https://x.com/typesafeai/status/2105733977147617750) · [AIHOT](https://aihot.news/items/y9pw0j2qxta0tbn3abu7g79w1)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2105733977147617750) · [AIHOT](https://aihot.news/items/y9pw0j2qxta0tbn3abu7g79w1)
 
 Source publication: 2026-10-01T18:57:57.000Z
 
@@ -537,7 +907,7 @@ Jev 对研究智能体来说是一个巨大的增强！ @edwardirby 构建了一
 
 [Summary page \(en\)](https://awesomejev.cc/news/yhq0ps172icdchqufk33lwmsg) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/yhq0ps172icdchqufk33lwmsg) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/yhq0ps172icdchqufk33lwmsg)
 
-[@typesafeai](https://x.com/typesafeai/status/2105735351570755814) · [AIHOT](https://aihot.news/items/yhq0ps172icdchqufk33lwmsg)
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2105735351570755814) · [AIHOT](https://aihot.news/items/yhq0ps172icdchqufk33lwmsg)
 
 Source publication: 2026-10-01T19:03:25.000Z
 

@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖规范项目/新闻校验、共享分类/排名/路径与 Agents 文档契约
+ * [INPUT]: 依赖规范项目/新闻校验、共享公开标签/分类/排名/路径与 Agents 文档契约
  * [OUTPUT]: 提供 buildAgentDocuments 与 generateLlms，生成互链 Markdown 和两份 TXT
  * [POS]: scripts 的构建期公开出口；只投影展示字段，不输出审计或本机数据
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -11,6 +11,7 @@ import { readCatalog } from './catalog.ts'
 import { validateNews } from './news-sync.ts'
 import type { GitHubDirectoryItem } from './model-types.ts'
 import { AGENT_DOCUMENTS, AGENT_SITE_NAME } from '../src/lib/agent-links.ts'
+import { projectTagIndex, TAG_INDEX_MIN_PROJECTS } from '../src/lib/project-tags.ts'
 import { CATEGORIES, CATEGORY_LABEL, CATEGORY_DESCRIPTION } from '../src/lib/categories.ts'
 import { en } from '../src/i18n/locales/en.ts'
 import { LOCALES, localizedPath } from '../src/lib/locale-routes.ts'
@@ -82,7 +83,9 @@ export function buildAgentDocuments(projects: readonly GitHubDirectoryItem[], ne
         ...entries.map((item) => `- ${link(item.title, `${SITE_ORIGIN}${projectPathFromUrl(item.url)}`)} · ${link('Repository', item.url)}`),
       ].join('\n\n')
     }).join('\n\n'),
-    'tags.md': ['Tags are repository topics, not independently curated classifications. The site searches topics; there is no standalone tag route.',
+    'tags.md': ['Raw tags combine repository topics, programming languages and collector ecosystem labels. Public navigation merges explicit synonyms and omits generic ecosystem terms without changing source records. Tags shared by at least 3 projects enter the public index; other tag pages use noindex.',
+      link('Browse public tags', `${SITE_ORIGIN}/tags`),
+      ...projectTagIndex(projects).filter((entry) => entry.count >= TAG_INDEX_MIN_PROJECTS).map((entry) => `- ${link(entry.tag, `${SITE_ORIGIN}${entry.path}`)} (${entry.count})`),
       ...[...topics].sort(([a], [b]) => a.localeCompare(b, 'en')).map(([tag, entries]) =>
         `## ${text(tag)} (${entries.length})\n\n${entries.map((item) => `- ${link(item.title, `${SITE_ORIGIN}${projectPathFromUrl(item.url)}`)}`).join('\n')}`),
     ].join('\n\n'),

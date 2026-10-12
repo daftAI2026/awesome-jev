@@ -7,7 +7,7 @@ llms.txt: 构建生成的 AI 阅读导览与规范来源链接
 llms-full.txt: 构建生成的全部公开 Markdown 文本，不输出私有审计
 _headers: Workers Static Assets 的 TXT/Markdown 媒体类型与 nosniff 规则
 robots.txt: 搜索引擎抓取与 sitemap 入口，允许 OG 图片 API
-sitemap.xml: 三语言有效页面索引，生成器不收录 OG 工作台或图片 API
+sitemap.xml: 三语言有效页面与共用标签索引，排除长尾标签、OG 工作台和图片 API
 
 子模块
 agents/: 见 agents/CLAUDE.md，规范快照生成的互链机器文档

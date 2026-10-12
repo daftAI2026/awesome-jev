@@ -20,6 +20,8 @@ import { Route as DirectoryChar123LocaleChar125Top100RouteImport } from './route
 import { Route as ApiOgSiteRouteImport } from './routes/api.og.site'
 import { Route as Char123LocaleChar125NewsIdRouteImport } from './routes/{-$locale}.news.$id'
 import { Route as DirectoryChar123LocaleChar125CategoryCategoryRouteImport } from './routes/_directory.{-$locale}.category.$category'
+import { Route as DirectoryChar123LocaleChar125TagsIndexRouteImport } from './routes/_directory.{-$locale}.tags.index'
+import { Route as DirectoryChar123LocaleChar125TagsTagRouteImport } from './routes/_directory.{-$locale}.tags.$tag'
 import { Route as Char123LocaleChar125ProjectsOwnerRepoRouteImport } from './routes/{-$locale}.projects.$owner.$repo'
 import { Route as DirectoryChar123LocaleChar125PreviewOwnerRepoRouteImport } from './routes/_directory.{-$locale}.preview.$owner.$repo'
 import { Route as ApiOgProjectsOwnerRepoRouteImport } from './routes/api.og.projects.$owner.$repo'
@@ -86,6 +88,18 @@ const DirectoryChar123LocaleChar125CategoryCategoryRoute =
     path: '/category/$category',
     getParentRoute: () => DirectoryChar123LocaleChar125Route,
   } as any)
+const DirectoryChar123LocaleChar125TagsIndexRoute =
+  DirectoryChar123LocaleChar125TagsIndexRouteImport.update({
+    id: '/tags/',
+    path: '/tags/',
+    getParentRoute: () => DirectoryChar123LocaleChar125Route,
+  } as any)
+const DirectoryChar123LocaleChar125TagsTagRoute =
+  DirectoryChar123LocaleChar125TagsTagRouteImport.update({
+    id: '/tags/$tag',
+    path: '/tags/$tag',
+    getParentRoute: () => DirectoryChar123LocaleChar125Route,
+  } as any)
 const Char123LocaleChar125ProjectsOwnerRepoRoute =
   Char123LocaleChar125ProjectsOwnerRepoRouteImport.update({
     id: '/{-$locale}/projects/$owner/$repo',
@@ -116,7 +130,9 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
+  '/{-$locale}/tags/$tag': typeof DirectoryChar123LocaleChar125TagsTagRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
+  '/{-$locale}/tags/': typeof DirectoryChar123LocaleChar125TagsIndexRoute
   '/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
   '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
@@ -131,7 +147,9 @@ export interface FileRoutesByTo {
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/{-$locale}': typeof DirectoryChar123LocaleChar125IndexRoute
   '/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
+  '/{-$locale}/tags/$tag': typeof DirectoryChar123LocaleChar125TagsTagRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
+  '/{-$locale}/tags': typeof DirectoryChar123LocaleChar125TagsIndexRoute
   '/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
   '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
@@ -148,7 +166,9 @@ export interface FileRoutesById {
   '/{-$locale}/news/$id': typeof Char123LocaleChar125NewsIdRoute
   '/_directory/{-$locale}/': typeof DirectoryChar123LocaleChar125IndexRoute
   '/_directory/{-$locale}/category/$category': typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
+  '/_directory/{-$locale}/tags/$tag': typeof DirectoryChar123LocaleChar125TagsTagRoute
   '/{-$locale}/projects/$owner/$repo': typeof Char123LocaleChar125ProjectsOwnerRepoRoute
+  '/_directory/{-$locale}/tags/': typeof DirectoryChar123LocaleChar125TagsIndexRoute
   '/_directory/{-$locale}/preview/$owner/$repo': typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
   '/api/og/projects/$owner/$repo': typeof ApiOgProjectsOwnerRepoRoute
 }
@@ -166,7 +186,9 @@ export interface FileRouteTypes {
     | '/{-$locale}/news/$id'
     | '/{-$locale}/'
     | '/{-$locale}/category/$category'
+    | '/{-$locale}/tags/$tag'
     | '/{-$locale}/projects/$owner/$repo'
+    | '/{-$locale}/tags/'
     | '/{-$locale}/preview/$owner/$repo'
     | '/api/og/projects/$owner/$repo'
   fileRoutesByTo: FileRoutesByTo
@@ -181,7 +203,9 @@ export interface FileRouteTypes {
     | '/{-$locale}/news/$id'
     | '/{-$locale}'
     | '/{-$locale}/category/$category'
+    | '/{-$locale}/tags/$tag'
     | '/{-$locale}/projects/$owner/$repo'
+    | '/{-$locale}/tags'
     | '/{-$locale}/preview/$owner/$repo'
     | '/api/og/projects/$owner/$repo'
   id:
@@ -197,7 +221,9 @@ export interface FileRouteTypes {
     | '/{-$locale}/news/$id'
     | '/_directory/{-$locale}/'
     | '/_directory/{-$locale}/category/$category'
+    | '/_directory/{-$locale}/tags/$tag'
     | '/{-$locale}/projects/$owner/$repo'
+    | '/_directory/{-$locale}/tags/'
     | '/_directory/{-$locale}/preview/$owner/$repo'
     | '/api/og/projects/$owner/$repo'
   fileRoutesById: FileRoutesById
@@ -291,6 +317,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DirectoryChar123LocaleChar125CategoryCategoryRouteImport
       parentRoute: typeof DirectoryChar123LocaleChar125Route
     }
+    '/_directory/{-$locale}/tags/': {
+      id: '/_directory/{-$locale}/tags/'
+      path: '/tags'
+      fullPath: '/{-$locale}/tags/'
+      preLoaderRoute: typeof DirectoryChar123LocaleChar125TagsIndexRouteImport
+      parentRoute: typeof DirectoryChar123LocaleChar125Route
+    }
+    '/_directory/{-$locale}/tags/$tag': {
+      id: '/_directory/{-$locale}/tags/$tag'
+      path: '/tags/$tag'
+      fullPath: '/{-$locale}/tags/$tag'
+      preLoaderRoute: typeof DirectoryChar123LocaleChar125TagsTagRouteImport
+      parentRoute: typeof DirectoryChar123LocaleChar125Route
+    }
     '/{-$locale}/projects/$owner/$repo': {
       id: '/{-$locale}/projects/$owner/$repo'
       path: '/{-$locale}/projects/$owner/$repo'
@@ -321,6 +361,8 @@ interface DirectoryChar123LocaleChar125RouteChildren {
   DirectoryChar123LocaleChar125Top100Route: typeof DirectoryChar123LocaleChar125Top100Route
   DirectoryChar123LocaleChar125IndexRoute: typeof DirectoryChar123LocaleChar125IndexRoute
   DirectoryChar123LocaleChar125CategoryCategoryRoute: typeof DirectoryChar123LocaleChar125CategoryCategoryRoute
+  DirectoryChar123LocaleChar125TagsTagRoute: typeof DirectoryChar123LocaleChar125TagsTagRoute
+  DirectoryChar123LocaleChar125TagsIndexRoute: typeof DirectoryChar123LocaleChar125TagsIndexRoute
   DirectoryChar123LocaleChar125PreviewOwnerRepoRoute: typeof DirectoryChar123LocaleChar125PreviewOwnerRepoRoute
 }
 
@@ -336,6 +378,10 @@ const DirectoryChar123LocaleChar125RouteChildren: DirectoryChar123LocaleChar125R
       DirectoryChar123LocaleChar125IndexRoute,
     DirectoryChar123LocaleChar125CategoryCategoryRoute:
       DirectoryChar123LocaleChar125CategoryCategoryRoute,
+    DirectoryChar123LocaleChar125TagsTagRoute:
+      DirectoryChar123LocaleChar125TagsTagRoute,
+    DirectoryChar123LocaleChar125TagsIndexRoute:
+      DirectoryChar123LocaleChar125TagsIndexRoute,
     DirectoryChar123LocaleChar125PreviewOwnerRepoRoute:
       DirectoryChar123LocaleChar125PreviewOwnerRepoRoute,
   }

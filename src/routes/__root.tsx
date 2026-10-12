@@ -1,18 +1,23 @@
 /**
- * [INPUT]: 依赖 TanStack 文档壳、i18n、共享 404、构建期全站图片地址及分享图契约
+ * [INPUT]: 依赖 TanStack 文档壳、i18n、共享错误恢复、构建期全站图片地址及分享图契约
  * [OUTPUT]: 对外提供 根 Route、首屏语言/主题初始化及文档 head；开发预览不发送 Umami 数据
- * [POS]: routes 的根边界，承接未知地址而不重定向成成功页面
+ * [POS]: routes 的根边界，缺失与加载失败保留各自状态，不重定向成成功页面
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import type { ReactNode } from 'react'
 import {
+  Asset,
   createRootRoute,
   HeadContent,
   Outlet,
   Scripts,
   useRouterState,
+  useRouter,
+  useTags,
 } from '@tanstack/react-router'
 import { I18nProvider } from '@/i18n'
+import { RouteErrorPage } from '@/components/RouteErrorPage'
+import { hasRouteError } from '@/lib/error-policy'
 import { NotFoundPage } from '@/components/NotFoundPage'
 import { LANGUAGE_TAG, LOCALE_STORAGE_KEY, localeFromPath } from '@/lib/locale-routes'
 import { shareImageMeta } from '@/lib/share-image'
@@ -39,15 +44,16 @@ const LOCALE_BOOTSTRAP = `(() => {
 
 export const Route = createRootRoute({
   head: ({ matches }) => {
+    const failed = hasRouteError(matches)
     const missing = matches.some((match) => match.status === 'notFound' || match._notFound)
     return {
       meta: [
         { charSet: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { title: missing
+        { title: failed ? '500 · Awesome JEV' : missing
           ? '404 · Awesome JEV'
           : 'Awesome JEV · free TypeSafe Jev / System One AI directory' },
-        ...(missing
+        ...((missing || failed)
           ? [{ name: 'robots', content: 'noindex, follow' }]
           : []),
         { name: 'description', content: SITE_DESCRIPTION },
@@ -58,23 +64,43 @@ export const Route = createRootRoute({
       links: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     }
   },
+  headers: ({ matches }) => hasRouteError(matches)
+    ? { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' }
+    : undefined,
+  errorComponent: RouteErrorPage,
   notFoundComponent: () => <NotFoundPage />,
   shellComponent: RootDocument,
   component: RootComponent,
 })
 
 function RootComponent() {
-  return <I18nProvider><Outlet /></I18nProvider>
+  const failed = useRouterState({ select: (state) => hasRouteError(state.matches) })
+  return failed ? <RouteErrorPage /> : <I18nProvider><Outlet /></I18nProvider>
+}
+
+// --- 失败响应保留样式与脚本资源，移除成功页面的 SEO 身份 ---
+function ErrorHeadContent() {
+  const tags = useTags()
+  const nonce = useRouter().options.ssr?.nonce
+  return <>
+    {tags.filter((tag) => tag.tag !== 'title' &&
+      (tag.tag !== 'meta' || 'charSet' in (tag.attrs ?? {}) || tag.attrs?.name === 'viewport') &&
+      (tag.tag !== 'link' || !['canonical', 'alternate'].includes(String(tag.attrs?.rel))))
+      .map((tag) => <Asset {...tag} key={JSON.stringify(tag)} nonce={nonce} />)}
+    <title>500 · Awesome JEV</title>
+    <meta name="robots" content="noindex, follow" />
+  </>
 }
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  const failed = useRouterState({ select: (state) => hasRouteError(state.matches) })
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   return (
     <html lang={LANGUAGE_TAG[localeFromPath(pathname)]} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOTSTRAP }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
-        <HeadContent />
+        {failed ? <ErrorHeadContent /> : <HeadContent />}
         {!import.meta.env.DEV && <script defer src="https://umami.sofxcking.cool/script.js" data-website-id="2c5691f6-1473-43cf-8dce-5311d9e9c085" />}
       </head>
       <body>

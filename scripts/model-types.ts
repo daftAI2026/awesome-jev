@@ -41,6 +41,7 @@ export interface GitHubDirectoryItem {
   type: 'github'
   title: string
   summary: string
+  /** 原始来源标签；公开名称和索引门槛由 project-tags 投影，不回写此数组。 */
   tags?: string[]
   category?: ProjectCategory
   url: string

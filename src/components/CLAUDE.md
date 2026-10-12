@@ -2,6 +2,9 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+RecoveryPage.tsx: 404/500 共用主题与同语言原生恢复链接，不读取目录或异常正文
+RouteErrorPage.tsx: 根路由错误/断网适配器，重载当前地址重试，不输出内部异常
+DirectoryBrowseFooter.tsx: 三语言分类与十二个热门标签内链，目录和独立详情共用
 DirectoryPagination.tsx: Router 真实页码链接、范围与翻页焦点，项目/新闻/收藏共用
 AgentsFooter.tsx: React 公开文档与五个聊天品牌入口，复用本站主题/路由语言与 OpenFree 原版按钮布局
 AsciiWordmark.tsx: 原始字符字标，CSS 容器宽度适配
@@ -10,9 +13,9 @@ DecryptedBrand.tsx: 品牌链接与悬停解码适配，遵循减少动态效果
 DecryptedText.tsx: React Bits 字符解码实现，被品牌适配器消费
 FeaturedProjectBorder.tsx: 星标阈值边框适配，按可见性控制装饰动画
 GithubList.tsx: 项目排名列表，虚拟化并保留详情/收藏动作，完整行标记预览来源
-GithubProjectDialog.tsx: 项目预览与独立页共享证据正文，预览生命周期委托 PreviewDialogFrame，独立页分类可导航，GitHub 出站统计不阻塞点击
+GithubProjectDialog.tsx: 项目预览与独立页共享证据正文，预览生命周期委托 PreviewDialogFrame，单列分类/公开标签可导航，GitHub 出站统计不阻塞点击
 HeaderChoiceMenu.tsx: Base UI 单选菜单组合，主题/语言共用
-ItemCard.tsx: 项目卡片的来源、证据、排名和收藏入口，完整卡片标记预览来源
+ItemCard.tsx: 项目卡片的公开标签投影、来源、证据、排名和收藏入口，完整卡片标记预览来源
 ItemRow.tsx: 简式项目外链阅读单元，不参与 GithubList 的站内预览和收藏
 LanguageMenu.tsx: 路由语言选择，保持页面身份并持久化显式偏好
 NewsDialog.tsx: 新闻摘要预览，委托 PreviewDialogFrame 管理呈现与退出，复用独立页内容而非伪造正文

@@ -1,12 +1,13 @@
 /**
  * [INPUT]: 依赖规范项目/新闻快照、路径身份与语言 alternates
  * [OUTPUT]: 对外提供 buildSitemap、generateSitemap 与离线生成命令
- * [POS]: scripts 的有限索引资产边界；不收录收藏、工作台或图片 API，不伪造 lastmod
+ * [POS]: scripts 的有限索引资产边界；标签共用公开投影；不收录长尾、收藏、工作台或图片 API，不伪造 lastmod
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { projectTagIndex, TAG_INDEX_MIN_PROJECTS, type TaggedProject } from '../src/lib/project-tags.ts'
 import { CATEGORIES } from '../src/lib/categories.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { hasIndexableNewsSummary, newsPath } from '../src/lib/news.ts'
@@ -22,6 +23,7 @@ interface SitemapItem {
   url?: unknown
   summary?: unknown
   category?: unknown
+  tags?: unknown
 }
 
 export interface SitemapResult {
@@ -48,6 +50,7 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
   const projectPaths: string[] = []
   const pathSet = new Set<string>()
   const categorySet = new Set<string>()
+  const taggedProjects: TaggedProject[] = []
 
   for (const value of items) {
     if (!isSitemapItem(value) || value.type !== 'github') continue
@@ -61,6 +64,7 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
     if (pathSet.has(path)) throw new Error(`Duplicate canonical project route: ${path}`)
     pathSet.add(path)
     projectPaths.push(path)
+    if (Array.isArray(value.tags) && value.tags.every((tag) => typeof tag === 'string')) taggedProjects.push({ tags: value.tags })
 
     if (typeof value.category === 'string' && (CATEGORIES as readonly string[]).includes(value.category)) {
       categorySet.add(value.category)
@@ -83,7 +87,10 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
   const categoryPaths = CATEGORIES
     .filter((category) => categorySet.has(category))
     .map((category) => `/category/${category}`)
-  const englishPaths = ['/', '/top100', '/news', ...categoryPaths, ...projectPaths, ...newsPaths]
+  const tagPaths = projectTagIndex(taggedProjects)
+    .filter((entry) => entry.count >= TAG_INDEX_MIN_PROJECTS)
+    .map((entry) => entry.path)
+  const englishPaths = ['/', '/top100', '/news', ...categoryPaths, ...projectPaths, ...newsPaths, '/tags', ...tagPaths]
   const paths = LOCALES.flatMap((locale) => englishPaths.map((path) => localizedPath(path, locale)))
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',

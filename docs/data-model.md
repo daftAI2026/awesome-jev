@@ -106,3 +106,12 @@ The ten removed public addresses are recorded in the retained row's `sourceMeta.
 ### Authorized 404 follow-up
 
 On 2026-10-03 the maintainer explicitly requested another check and removal of still-unavailable sources. Official `gh api repos/{owner}/{repo}` rechecked all 30 unanchored entries; every one again returned HTTP 404, while a known public repository was readable with the same authentication. This establishes public unavailability, not deleted versus private. All 30 were removed under that explicit authorization. The current canonical catalog contains **2,159 records, all with unique verified GitHub identities**; retained records are byte-for-byte equivalent as parsed JSON, and README/sitemap are regenerated from that same snapshot. The seven remaining rationale cases are listed in [inclusion-follow-up.md](inclusion-follow-up.md). Removed records remain recoverable from Git history; no blacklist, archive dataset or automatic-404 deletion mechanism is added.
+
+
+## Raw tags and public tags
+
+Raw `tags` can contain GitHub topics, a programming-language label and a collector-added `jev` label. They are not Jev about-probability scores and are not independently reviewed use-case classifications. Existing records keep their raw arrays; metadata refresh continues to preserve them.
+
+`src/lib/project-tags.ts` is the sole public projection. It lowercases/trims names, merges an explicit synonym table, removes generic ecosystem labels, deduplicates within each project and counts across the current snapshot. It never reads descriptions to invent tags. Distinct concepts such as C/C++/C#, SDK/MCP and MCP/MCP Server remain distinct. At least three projects must share a tag for the public index and sitemap. Sparse topics remain available in project details. This threshold governs navigation/indexing only, not project inclusion or source retention.
+
+New Action bot candidates already obtain repository topics through `candidateRow`; the same projection makes their public names consistent without extra model calls. No schema migration, paid backfill or forced one-tag classification is introduced. Projects with only generic source tags receive no fabricated public topic.

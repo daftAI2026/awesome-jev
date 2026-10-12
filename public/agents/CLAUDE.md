@@ -4,7 +4,7 @@
 成员清单
 index.md: Markdown 阅读导览，声明快照数量和三语言入口
 categories.md: Markdown 分类用途与项目索引，复用共享分类文案
-tags.md: Markdown 仓库主题索引，不伪造独立标签路由
+tags.md: Markdown 公开标签导航与原始主题索引，复用同义投影和三项目门槛
 collections.md: Markdown 星标 Top 100，不输出本机收藏
 projects.md: Markdown 全项目作者简介与原仓库地址，不输出审核分数
 news.md: Markdown 新闻摘要与双来源地址，不转载完整文章

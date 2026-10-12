@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 node:test/assert、临时文件系统与 generate-sitemap 的纯生成/落盘入口
- * [OUTPUT]: 对外提供三语言索引、摘要门槛、身份去重与文件生成的离线回归
+ * [OUTPUT]: 对外提供三语言索引、公开标签门槛、摘要门槛、身份去重与文件生成的离线回归
  * [POS]: scripts 的有限索引契约测试，确保规范快照与 sitemap 生成结果同源
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -30,7 +30,7 @@ test('sitemap contains the home page, populated category pages, and only describ
   assert.equal(result.projectCount, 3)
   assert.equal(result.newsCount, 0)
   assert.deepEqual(result.categories, ['agents', 'research'])
-  assert.equal(result.urlCount, 24)
+  assert.equal(result.urlCount, 27)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\//)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/top100/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/news/)
@@ -61,7 +61,7 @@ test('sitemap adds only news with a stable ID and summary in all locales', () =>
   ]
   const result = buildSitemap([], 'https://awesomejev.cc', news)
   assert.equal(result.newsCount, 1)
-  assert.equal(result.urlCount, 12)
+  assert.equal(result.urlCount, 15)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/news\/cmu123/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/zh\/news\/cmu123/)
   assert.match(result.xml, /https:\/\/awesomejev\.cc\/ja\/news\/cmu123/)
@@ -103,9 +103,23 @@ test('generator writes the deterministic sitemap to the requested project root',
     writeFileSync(join(root, 'data', 'github.json'), JSON.stringify(items))
     writeFileSync(join(root, 'data', 'news.json'), '[]')
     const result = generateSitemap(root)
-    assert.equal(result.urlCount, 15)
+    assert.equal(result.urlCount, 18)
     assert.equal(readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8'), result.xml)
   } finally {
     rmSync(root, { recursive: true, force: true })
   }
+})
+
+
+test('sitemap indexes normalized shared tags but omits generic and thin tag pages', () => {
+  const result = buildSitemap([
+    { ...row('first', 'one'), tags: ['jev', 'agent', 'agents', 'c++', 'rare'] },
+    { ...row('second', 'two'), tags: ['ai-agent', 'c++'] },
+    { ...row('third', 'three'), tags: ['ai-agents', 'c++'] },
+  ])
+  assert.ok(result.xml.includes('https://awesomejev.cc/tags/ai-agents'))
+  assert.ok(result.xml.includes('https://awesomejev.cc/zh/tags/c%2B%2B'))
+  assert.ok(!result.xml.includes('/tags/agent<'))
+  assert.ok(!result.xml.includes('/tags/rare'))
+  assert.ok(!result.xml.includes('/tags/jev'))
 })

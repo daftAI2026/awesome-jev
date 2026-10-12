@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖 getProject、项目/分享图身份工具、详情组件和共享 404 页面
- * [OUTPUT]: 对外提供 项目详情 Route、最多三条相关项目内链、预渲染元数据、旧地址 301 及缺失项目边界
+ * [INPUT]: 依赖 getProject、项目/分享图身份工具、详情/浏览页脚/Agents 组件和共享 404 页面
+ * [OUTPUT]: 对外提供 项目详情 Route、单列分类/标签与有界页脚内链、最多三条相关项目内链、预渲染元数据、旧地址 301 及缺失项目边界
  * [POS]: routes 的独立项目页，与目录内的遮罩预览共享项目身份；相关摘要只随独立详情交付
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -8,6 +8,8 @@ import { createFileRoute, Link, notFound, redirect } from '@tanstack/react-route
 import { ArrowLeft, ArrowSquareOut, GithubLogo } from '@phosphor-icons/react'
 import { getProject } from '@/lib/catalog.functions'
 import { DecryptedBrand } from '@/components/DecryptedBrand'
+import { AgentsFooter } from '@/components/AgentsFooter'
+import { DirectoryBrowseFooter } from '@/components/DirectoryBrowseFooter'
 import { GithubProjectContent } from '@/components/GithubProjectDialog'
 import { LanguageMenu } from '@/components/LanguageMenu'
 import { NotFoundPage } from '@/components/NotFoundPage'
@@ -33,7 +35,7 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
     if (!item) throw notFound()
     if ('redirectTo' in item && item.redirectTo) throw redirect({ href: localizedPath(item.redirectTo, localeFromParam(params.locale)), statusCode: 301 })
     if (!item.item) throw notFound()
-    return { item: item.item, related: item.related }
+    return { item: item.item, related: item.related, tags: item.tags }
   },
   head: ({ loaderData, params }) => {
     const item = loaderData?.item
@@ -48,7 +50,7 @@ export const Route = createFileRoute('/{-$locale}/projects/$owner/$repo')({
 })
 
 function ProjectPage() {
-  const { item, related } = Route.useLoaderData()
+  const { item, related, tags } = Route.useLoaderData()
   const { locale, t } = useI18n()
   const { entries, toggle } = useSaved()
   const saved = entries.some((entry) => entry.kind === 'github' && entry.id === item.id)
@@ -104,6 +106,7 @@ function ProjectPage() {
           </ul>
         </section>}
       </main>
+      <footer className="mx-auto w-full max-w-[72.5rem] px-4 pb-12 sm:px-8"><DirectoryBrowseFooter tags={tags} /><AgentsFooter /></footer>
     </div>
   )
 }

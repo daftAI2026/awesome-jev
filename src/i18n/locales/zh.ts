@@ -1,5 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
+ * 公开标签页与页脚导航共用语言契约
  * [OUTPUT]: 对外提供 zh 文案
  * [POS]: i18n/locales 的简体中文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -7,6 +8,11 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  offlineErrorTitle: '网络连接已断开',
+  offlineErrorDescription: '请检查网络连接，恢复后重新加载当前页面。',
+  serverErrorTitle: '页面暂时无法加载',
+  serverErrorDescription: '请重试当前页面，或返回目录继续浏览。',
+  errorRetry: '重新加载',
   paginationLabel: '分页导航',
   paginationPrevious: '上一页',
   paginationNext: '下一页',
@@ -54,6 +60,13 @@ export const zh: Messages = {
   themeSystem: '跟随系统',
   themeLight: '浅色',
   themeDark: '深色',
+  tagsTitle: '标签',
+  tagPageTitle: '标签：{tag}',
+  tagPageDescription: '查找带有 {tag} 标签的 Jev GitHub 项目，筛选、排序并查看原始仓库。',
+  tagsDescription: '按共同主题浏览 Jev 项目。明确同义名称共用一个标签，省略泛生态词。此索引展示至少 3 个项目共用的标签。',
+  allTags: '全部标签',
+  popularTags: '热门标签',
+  browseDirectory: '浏览项目目录',
   categoryLabel: '项目分类',
   categoryAll: '全部项目',
   categoryTop100: '星标 Top 100',
@@ -127,7 +140,7 @@ export const zh: Messages = {
   projectClose: '关闭项目预览',
   projectStars: '星标',
   projectForks: '派生',
-  projectTags: '主题',
+  projectTags: '标签',
   projectInclusionBasis: '收录依据',
   projectInclusionPending: '暂无收录依据',
   projectViewEvidence: '查看引用来源',

@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 目录/新闻公开快照、路由状态与已验收组件
-[OUTPUT]: 目录布局、每页 50 条及预览/收藏的行为契约
+[OUTPUT]: 公开标签投影与站内导航契约； 目录布局、每页 50 条及预览/收藏的行为契约
 [POS]: docs 的目录交互权威；视觉 token 归 design.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -78,3 +78,12 @@ The preview has a dim backdrop and one restrained surface. Project and news dial
 Only recorded URLs belong to their sources. Do not invent entries, repository URLs, screenshots, or claims. Do not add analytics, remote icon kits, or an unrelated visual theme. Keep the full JSON and generated README available for audit without making them the first-read UI.
 
 Verify both view modes, filtering, empty search, modified-click fallback, preview dismissal and focus return, desktop and narrow reflow, and light/dark parity. Check the real rendered page rather than assuming that a build alone validates composition.
+
+
+## Public tag navigation
+
+Cards and detail links use the same public tag names; search still accepts stored source terms. Project details place Categories, then Tags, in one vertical stack after inclusion evidence. The shared content uses existing Phosphor SquaresFour, Tag and Hash icons. Neither section becomes a desktop side-by-side column. The original primary category stays singular; a project can have several tags.
+
+`/tags` lists normalized topics shared by at least three projects and supports local text filtering and exact synonym lookup. Moving between tag-name search and project search clears the previous query; category-to-category project search keeps the existing behavior. `/tags/:tag` reuses directory search, sort, cards/list and bottom-only 50-item pagination. Each tag counts a project once. Detail tags remain navigable even below the index threshold; those pages use `noindex,follow`. Unknown tags return 404; explicit synonym addresses redirect with 301. Encoded C++ and C# paths remain distinct.
+
+Directory and standalone detail footers list all ten existing categories, twelve popular tags and All tags before the unchanged Agents block. This is site navigation, not a copy of OpenFree's general AI taxonomy. Responsive wrapping, language, theme and keyboard focus use existing tokens.

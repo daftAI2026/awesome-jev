@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 目录条目、排名、路由身份、收藏与特色边框
+ * [INPUT]: 依赖 公开标签投影、目录条目、排名、路由身份、收藏与特色边框
  * [OUTPUT]: 对外提供 ItemCard 的有界项目卡片、完整预览来源标记及独立详情/收藏动作
  * [POS]: components 的项目阅读单元，由 CardMasonry 和收藏视图复用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,7 @@ import { memo, type MouseEvent } from 'react'
 import { GitFork, GithubLogo, Star } from '@phosphor-icons/react'
 import { cn } from 'cn'
 import type { DirectoryItem } from '@/lib/types'
+import { projectTags } from '@/lib/project-tags'
 import { projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath } from '@/lib/locale-routes'
 import { SaveButton } from '@/components/SaveButton'
@@ -37,6 +38,7 @@ function formatCount(n: number): string {
 
 function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: ItemCardProps) {
   const { locale, t } = useI18n()
+  const tags = projectTags(item)
   const meta = item.sourceMeta
   const metaBits: string[] = []
 
@@ -84,7 +86,7 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
             {item.summary}
           </CardDescription>
         </CardHeader>
-        {(metaBits.length > 0 || hasMetrics || (item.tags ?? []).length > 0) && (
+        {(metaBits.length > 0 || hasMetrics || tags.length > 0) && (
           <CardContent className="space-y-3">
             {metaBits.length > 0 && (
               <p className="font-mono text-xs tabular-nums leading-relaxed text-muted-foreground">
@@ -107,9 +109,9 @@ function GithubCard({ item, rank, onPreview, saved = false, onToggleSaved }: Ite
                 )}
               </div>
             )}
-            {(item.tags ?? []).length > 0 && (
+            {tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
-                {(item.tags ?? []).map((tag) => (
+                {tags.map((tag) => (
                   <Badge key={tag} variant="outline" className="font-normal">
                     {tag}
                   </Badge>

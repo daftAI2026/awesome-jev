@@ -1,11 +1,17 @@
 /**
  * [INPUT]: 依赖站点界面语义
+ * 公开标签页与页脚导航共用语言契约
  * [OUTPUT]: 对外提供 en 文案、MessageKey 和 Messages 类型
  * [POS]: i18n/locales 的英文基准，定义所有语言必须满足的文案键
  * 首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  offlineErrorTitle: 'You appear to be offline',
+  offlineErrorDescription: 'Check your connection, then try loading this page again.',
+  serverErrorTitle: 'Something went wrong',
+  serverErrorDescription: 'We could not load this page. Try again, or return to the directory.',
+  errorRetry: 'Try again',
   paginationLabel: 'Pagination',
   paginationPrevious: 'Previous',
   paginationNext: 'Next',
@@ -53,6 +59,13 @@ export const en = {
   themeSystem: 'System',
   themeLight: 'Light',
   themeDark: 'Dark',
+  tagsTitle: 'Tags',
+  tagPageTitle: 'Projects tagged with “{tag}”',
+  tagPageDescription: 'Browse Jev GitHub projects tagged with {tag}. Filter, sort and explore their source repositories.',
+  tagsDescription: 'Browse shared topics across Jev projects. Clear synonyms share one name; generic ecosystem labels are omitted. This index includes tags shared by at least 3 projects.',
+  allTags: 'All tags',
+  popularTags: 'Popular tags',
+  browseDirectory: 'Browse the directory',
   categoryLabel: 'Categories',
   categoryAll: 'All projects',
   categoryTop100: 'Top 100 Starred',
@@ -126,7 +139,7 @@ export const en = {
   projectClose: 'Close project preview',
   projectStars: 'Stars',
   projectForks: 'Forks',
-  projectTags: 'Topics',
+  projectTags: 'Tags',
   projectInclusionBasis: 'Why it is listed',
   projectInclusionPending: 'No inclusion rationale available yet',
   projectViewEvidence: 'View cited source',

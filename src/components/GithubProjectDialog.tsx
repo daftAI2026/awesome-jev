@@ -1,14 +1,14 @@
 /**
- * [INPUT]: 依赖目录条目/收录证据、共享预览外壳与头尾、语言分类路由和可选统计适配器
- * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent；独立页分类链接与非阻塞出站统计
+ * [INPUT]: 依赖公开标签投影、目录条目/收录证据、共享预览外壳与头尾、语言分类路由和可选统计适配器
+ * [OUTPUT]: 对外提供 GithubProjectDialog 与独立页共用的 GithubProjectContent；单列分类/标签内链与非阻塞出站统计
  * [POS]: components 的项目证据阅读层，目录预览与直接详情不复制内容
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
-import { ArrowSquareOut } from '@phosphor-icons/react'
+import { ArrowSquareOut, Hash, SquaresFour, Tag } from '@phosphor-icons/react'
 import type { RefObject } from 'react'
 import type { DirectoryItem } from '@/lib/types'
 import { useI18n } from '@/i18n'
-import { Badge } from '@/components/ui/badge'
+import { projectTags, projectTagPath } from '@/lib/project-tags'
 import { Button } from '@/components/ui/button'
 import { PreviewDialogHeader } from '@/components/PreviewDialogHeader'
 import { PreviewDialogFooter } from '@/components/PreviewDialogFooter'
@@ -42,11 +42,8 @@ export function GithubProjectContent({ item, categoryLabel, category, standalone
   return (
     <>
       <p className="break-words text-base leading-relaxed text-foreground">{item.summary}</p>
-      {(categoryLabel || meta.language) && (
+      {meta.language && (
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-          {categoryLabel && (standalone && category ? <Link data-project-category to={localizedPath(`/category/${category}`, locale)}
-            onClick={() => trackProjectAction('project-category-open', locale, 'detail', category)}
-            className="underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring">{categoryLabel}</Link> : <span>{categoryLabel}</span>)}
           {meta.language && <span>{meta.language}</span>}
         </div>
       )}
@@ -80,14 +77,23 @@ export function GithubProjectContent({ item, categoryLabel, category, standalone
           </a>
         ) : null}
       </section>
-      {(item.tags ?? []).length > 0 && (
-        <section className="mt-6" aria-label={t('projectTags')}>
-          <SectionHeading className="text-sm font-medium">{t('projectTags')}</SectionHeading>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {item.tags?.map((tag) => <Badge key={tag} variant="outline" className="h-auto min-h-5 max-w-full break-all py-1 font-normal whitespace-normal text-muted-foreground">{tag}</Badge>)}
+      <div data-project-taxonomy className="mt-8 grid gap-6 border-t border-border pt-6">
+        {categoryLabel && <section aria-label={t('categoryLabel')}>
+          <SectionHeading className="flex items-center gap-2 text-sm font-medium"><SquaresFour className="size-4" aria-hidden />{t('categoryLabel')}</SectionHeading>
+          <div className="mt-2 text-sm text-muted-foreground">
+            {standalone && category ? <Link data-project-category to={localizedPath(`/category/${category}`, locale)}
+              onClick={() => trackProjectAction('project-category-open', locale, 'detail', category)}
+              className="rounded-sm hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring active:translate-y-px">{categoryLabel}</Link> : <span>{categoryLabel}</span>}
           </div>
-        </section>
-      )}
+        </section>}
+        {projectTags(item).length > 0 && <section aria-label={t('projectTags')}>
+          <SectionHeading className="flex items-center gap-2 text-sm font-medium"><Tag className="size-4" aria-hidden />{t('projectTags')}</SectionHeading>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-3">
+            {projectTags(item).map((tag) => <Link key={tag} data-project-tag to={localizedPath(projectTagPath(tag), locale)}
+              className="inline-flex max-w-full items-center gap-1 rounded-sm text-sm text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring active:translate-y-px"><Hash className="size-3 shrink-0" aria-hidden /><span className="break-all">{tag}</span></Link>)}
+          </div>
+        </section>}
+      </div>
     </>
   )
 }

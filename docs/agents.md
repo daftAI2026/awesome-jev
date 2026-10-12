@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 规范项目/新闻快照、路由语言与 Workers 静态资产
-[OUTPUT]: Agents 页脚与构建期机器文档的公开边界
+[OUTPUT]: 公开标签投影与站内导航契约； Agents 页脚与构建期机器文档的公开边界
 [POS]: docs 的机器阅读契约；视觉规则仍归 design.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -71,3 +71,8 @@ OpenAI 与 Grok 暗色反相，彩色品牌保留原色。
 线上完成以实际远端 SHA 和部署结果为准。
 
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+
+
+## Public tags
+
+Generated `tags.md` distinguishes raw repository topics from the normalized public navigation and links `/tags` plus shared tag pages. Raw topic evidence remains in the document. The source no longer claims the site has no tag route. The same explicit aliases and count threshold power HTML and generated navigation.

@@ -27,21 +27,21 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [hermes-jev-skills](https://awesomejev.cc/projects/kerpopule/hermes-jev-skills) · [Repository](https://github.com/kerpopule/hermes-jev-skills)
 
-- [JevRev](https://awesomejev.cc/projects/alex314618-create/jevrev) · [Repository](https://github.com/Alex314618-create/JevRev)
-
 - [foreman](https://awesomejev.cc/projects/thruwire/foreman) · [Repository](https://github.com/thruwire/foreman)
 
 - [pi-extensions](https://awesomejev.cc/projects/narumiruna/pi-extensions) · [Repository](https://github.com/narumiruna/pi-extensions)
 
 - [jev-router](https://awesomejev.cc/projects/gargpratyush/jev-router) · [Repository](https://github.com/gargpratyush/jev-router)
 
-- [typesafe-mario](https://awesomejev.cc/projects/fhshaik/typesafe-mario) · [Repository](https://github.com/fhshaik/typesafe-mario)
+- [JevRev](https://awesomejev.cc/projects/alex314618-create/jevrev) · [Repository](https://github.com/Alex314618-create/JevRev)
 
 - [JevRouter](https://awesomejev.cc/projects/billionsbobby/jevrouter) · [Repository](https://github.com/BillionsBobby/JevRouter)
 
-- [deepdoc](https://awesomejev.cc/projects/oqura-ai/deepdoc) · [Repository](https://github.com/Oqura-ai/deepdoc)
+- [typesafe-mario](https://awesomejev.cc/projects/fhshaik/typesafe-mario) · [Repository](https://github.com/fhshaik/typesafe-mario)
 
 - [jev-gateway](https://awesomejev.cc/projects/vinilana/jev-gateway) · [Repository](https://github.com/vinilana/jev-gateway)
+
+- [deepdoc](https://awesomejev.cc/projects/oqura-ai/deepdoc) · [Repository](https://github.com/Oqura-ai/deepdoc)
 
 - [jev-codex-router](https://awesomejev.cc/projects/0xnatoshi/jev-codex-router) · [Repository](https://github.com/0xNatoshi/jev-codex-router)
 
@@ -53,21 +53,21 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [pi-warden](https://awesomejev.cc/projects/devmortimer/pi-warden) · [Repository](https://github.com/DevMortimer/pi-warden)
 
+- [jev-social](https://awesomejev.cc/projects/socai-io/jev-social) · [Repository](https://github.com/socai-io/jev-social)
+
 - [pi-jev](https://awesomejev.cc/projects/y0usaf/pi-jev) · [Repository](https://github.com/y0usaf/pi-jev)
 
-- [jev-social](https://awesomejev.cc/projects/socai-io/jev-social) · [Repository](https://github.com/socai-io/jev-social)
+- [system1-agents](https://awesomejev.cc/projects/thinkflowlab/system1-agents) · [Repository](https://github.com/ThinkFlowLab/system1-agents)
 
 - [skillranker](https://awesomejev.cc/projects/dicklesworthstone/skillranker) · [Repository](https://github.com/Dicklesworthstone/skillranker)
 
 - [jev-pokemon](https://awesomejev.cc/projects/christianmat/jev-pokemon) · [Repository](https://github.com/christianmat/jev-pokemon)
 
-- [system1-agents](https://awesomejev.cc/projects/thinkflowlab/system1-agents) · [Repository](https://github.com/ThinkFlowLab/system1-agents)
-
 - [stanley-code](https://awesomejev.cc/projects/devagrawal09/stanley-code) · [Repository](https://github.com/devagrawal09/stanley-code)
 
-- [jev-voice](https://awesomejev.cc/projects/kevinbadi/jev-voice) · [Repository](https://github.com/kevinbadi/jev-voice)
-
 - [agent-router](https://awesomejev.cc/projects/nidhi-singh02/agent-router) · [Repository](https://github.com/nidhi-singh02/agent-router)
+
+- [jev-voice](https://awesomejev.cc/projects/kevinbadi/jev-voice) · [Repository](https://github.com/kevinbadi/jev-voice)
 
 - [winnow](https://awesomejev.cc/projects/ghalebdweikat/winnow) · [Repository](https://github.com/GhalebDweikat/winnow)
 
@@ -87,11 +87,11 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jevify](https://awesomejev.cc/projects/altryne/jevify) · [Repository](https://github.com/altryne/jevify)
 
+- [hermes-nerve](https://awesomejev.cc/projects/keeltrace/hermes-nerve) · [Repository](https://github.com/keeltrace/hermes-nerve)
+
 - [jev-superpowers](https://awesomejev.cc/projects/akashpriyadarshii/jev-superpowers) · [Repository](https://github.com/AkashPriyadarshii/jev-superpowers)
 
 - [pi-jev-skill-picker](https://awesomejev.cc/projects/safzanpirani/pi-jev-skill-picker) · [Repository](https://github.com/safzanpirani/pi-jev-skill-picker)
-
-- [hermes-nerve](https://awesomejev.cc/projects/keeltrace/hermes-nerve) · [Repository](https://github.com/keeltrace/hermes-nerve)
 
 - [pi-jev-auto-mode](https://awesomejev.cc/projects/jomatsu/pi-jev-auto-mode) · [Repository](https://github.com/jomatsu/pi-jev-auto-mode)
 
@@ -105,15 +105,17 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [dsh-jev-interceptor](https://awesomejev.cc/projects/asktheway/dsh-jev-interceptor) · [Repository](https://github.com/AskTheWay/dsh-jev-interceptor)
 
+- [jevwire](https://awesomejev.cc/projects/brainwires/jevwire) · [Repository](https://github.com/Brainwires/jevwire)
+
 - [agent-chaperone](https://awesomejev.cc/projects/agent-chaperone/agent-chaperone) · [Repository](https://github.com/agent-chaperone/agent-chaperone)
 
 - [evoke](https://awesomejev.cc/projects/evoke-build/evoke) · [Repository](https://github.com/evoke-build/evoke)
 
 - [JevLoop](https://awesomejev.cc/projects/zjunlp/jevloop) · [Repository](https://github.com/zjunlp/JevLoop)
 
-- [jevwire](https://awesomejev.cc/projects/brainwires/jevwire) · [Repository](https://github.com/Brainwires/jevwire)
-
 - [jev-usecases](https://awesomejev.cc/projects/kenhuangus/jev-usecases) · [Repository](https://github.com/kenhuangus/jev-usecases)
+
+- [jev-recipes](https://awesomejev.cc/projects/agencyenterprise/jev-recipes) · [Repository](https://github.com/agencyenterprise/jev-recipes)
 
 - [jevvy](https://awesomejev.cc/projects/panachy/jevvy) · [Repository](https://github.com/PanAchy/jevvy)
 
@@ -121,21 +123,29 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [kibu](https://awesomejev.cc/projects/madhurjyadc/kibu) · [Repository](https://github.com/madhurjyadc/kibu)
 
+- [claude-router](https://awesomejev.cc/projects/alexei-led/claude-router) · [Repository](https://github.com/alexei-led/claude-router)
+
 - [laya-browser-agent](https://awesomejev.cc/projects/chenneyzhuang/laya-browser-agent) · [Repository](https://github.com/ChenneyZhuang/laya-browser-agent)
 
-- [jev-recipes](https://awesomejev.cc/projects/agencyenterprise/jev-recipes) · [Repository](https://github.com/agencyenterprise/jev-recipes)
+- [edgejev](https://awesomejev.cc/projects/yzfly/edgejev) · [Repository](https://github.com/yzfly/edgejev)
 
 - [Helm](https://awesomejev.cc/projects/jimuelle07/helm) · [Repository](https://github.com/Jimuelle07/Helm)
 
+- [switchboard](https://awesomejev.cc/projects/ruban-24/switchboard) · [Repository](https://github.com/ruban-24/switchboard)
+
 - [duomind](https://awesomejev.cc/projects/j1s4nn/duomind) · [Repository](https://github.com/j1s4nn/duomind)
 
-- [edgejev](https://awesomejev.cc/projects/yzfly/edgejev) · [Repository](https://github.com/yzfly/edgejev)
+- [Jev\_steer\_or\_queue](https://awesomejev.cc/projects/larkspur-wang/jev_steer_or_queue) · [Repository](https://github.com/Larkspur-Wang/Jev_steer_or_queue)
+
+- [jev-skill-router](https://awesomejev.cc/projects/shimo4228/jev-skill-router) · [Repository](https://github.com/shimo4228/jev-skill-router)
 
 - [pi-jev-router](https://awesomejev.cc/projects/mejiasd3v/pi-jev-router) · [Repository](https://github.com/mejiasd3v/pi-jev-router)
 
 - [jev-harness](https://awesomejev.cc/projects/antoniocoppe/jev-harness) · [Repository](https://github.com/AntonioCoppe/jev-harness)
 
-- [switchboard](https://awesomejev.cc/projects/ruban-24/switchboard) · [Repository](https://github.com/ruban-24/switchboard)
+- [jev-me](https://awesomejev.cc/projects/jon-devlapaz/jev-me) · [Repository](https://github.com/jon-devlapaz/jev-me)
+
+- [jev-router](https://awesomejev.cc/projects/dirien/jev-router) · [Repository](https://github.com/dirien/jev-router)
 
 - [jev-router](https://awesomejev.cc/projects/prismhq/jev-router) · [Repository](https://github.com/prismhq/jev-router)
 
@@ -145,15 +155,13 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-apply](https://awesomejev.cc/projects/theadaply/jev-apply) · [Repository](https://github.com/TheAdaply/jev-apply)
 
-- [jev-me](https://awesomejev.cc/projects/jon-devlapaz/jev-me) · [Repository](https://github.com/jon-devlapaz/jev-me)
-
-- [openvons](https://awesomejev.cc/projects/genai-craft/openvons) · [Repository](https://github.com/genai-craft/openvons)
+- [jev-askable-arm](https://awesomejev.cc/projects/taruntomar122/jev-askable-arm) · [Repository](https://github.com/TarunTomar122/jev-askable-arm)
 
 - [jev-bot](https://awesomejev.cc/projects/bl888m/jev-bot) · [Repository](https://github.com/bl888m/jev-bot)
 
-- [jev-router](https://awesomejev.cc/projects/dirien/jev-router) · [Repository](https://github.com/dirien/jev-router)
+- [openvons](https://awesomejev.cc/projects/genai-craft/openvons) · [Repository](https://github.com/genai-craft/openvons)
 
-- [jev-skill-router](https://awesomejev.cc/projects/shimo4228/jev-skill-router) · [Repository](https://github.com/shimo4228/jev-skill-router)
+- [omp-jev-compaction](https://awesomejev.cc/projects/jerryfane/omp-jev-compaction) · [Repository](https://github.com/jerryfane/omp-jev-compaction)
 
 - [pi-quiet-ask](https://awesomejev.cc/projects/hyunjunjeon/pi-quiet-ask) · [Repository](https://github.com/HyunjunJeon/pi-quiet-ask)
 
@@ -161,21 +169,19 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [ego-jev](https://awesomejev.cc/projects/zephyrdeng/ego-jev) · [Repository](https://github.com/ZephyrDeng/ego-jev)
 
-- [jev-askable-arm](https://awesomejev.cc/projects/taruntomar122/jev-askable-arm) · [Repository](https://github.com/TarunTomar122/jev-askable-arm)
-
 - [jev-harness](https://awesomejev.cc/projects/ismaelsoilet/jev-harness) · [Repository](https://github.com/ismaelsoilet/jev-harness)
 
 - [jevelry](https://awesomejev.cc/projects/backant-io/jevelry) · [Repository](https://github.com/backant-io/jevelry)
 
 - [jevmory](https://awesomejev.cc/projects/romiluz13/jevmory) · [Repository](https://github.com/romiluz13/jevmory)
 
-- [omp-jev-compaction](https://awesomejev.cc/projects/jerryfane/omp-jev-compaction) · [Repository](https://github.com/jerryfane/omp-jev-compaction)
-
 - [fable-jev](https://awesomejev.cc/projects/immamdouhaboammar/fable-jev) · [Repository](https://github.com/imMamdouhaboammar/fable-jev)
 
 - [jev-ai-sdk-form-router](https://awesomejev.cc/projects/vercel-labs/jev-ai-sdk-form-router) · [Repository](https://github.com/vercel-labs/jev-ai-sdk-form-router)
 
 - [jev-router](https://awesomejev.cc/projects/rajdhakad9826/jev-router) · [Repository](https://github.com/rajdhakad9826/jev-router)
+
+- [opencode-jev-router](https://awesomejev.cc/projects/robertn702/opencode-jev-router) · [Repository](https://github.com/robertn702/opencode-jev-router)
 
 - [pi-jev](https://awesomejev.cc/projects/iefnaf/pi-jev) · [Repository](https://github.com/iefnaf/pi-jev)
 
@@ -185,7 +191,7 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-tool-router](https://awesomejev.cc/projects/jackbarunz/jev-tool-router) · [Repository](https://github.com/jackbarunz/jev-tool-router)
 
-- [opencode-jev-router](https://awesomejev.cc/projects/robertn702/opencode-jev-router) · [Repository](https://github.com/robertn702/opencode-jev-router)
+- [JevFlow](https://awesomejev.cc/projects/parth1811/jevflow) · [Repository](https://github.com/Parth1811/JevFlow)
 
 - [bicameral](https://awesomejev.cc/projects/abdelstark/bicameral) · [Repository](https://github.com/AbdelStark/bicameral)
 
@@ -193,7 +199,7 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-codex-bridge](https://awesomejev.cc/projects/ansidium/jev-codex-bridge) · [Repository](https://github.com/ansidium/jev-codex-bridge)
 
-- [JevFlow](https://awesomejev.cc/projects/parth1811/jevflow) · [Repository](https://github.com/Parth1811/JevFlow)
+- [jev-state](https://awesomejev.cc/projects/priyankark/jev-state) · [Repository](https://github.com/priyankark/jev-state)
 
 - [typesafe-jev-incident-router](https://awesomejev.cc/projects/kyle-chalmers/typesafe-jev-incident-router) · [Repository](https://github.com/kyle-chalmers/typesafe-jev-incident-router)
 
@@ -201,7 +207,7 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-architect](https://awesomejev.cc/projects/karanb192/jev-architect) · [Repository](https://github.com/karanb192/jev-architect)
 
-- [jev-state](https://awesomejev.cc/projects/priyankark/jev-state) · [Repository](https://github.com/priyankark/jev-state)
+- [jev-skillful](https://awesomejev.cc/projects/bestagentkits/jev-skillful) · [Repository](https://github.com/bestagentkits/jev-skillful)
 
 - [jevloop](https://awesomejev.cc/projects/parkavenue9639/jevloop) · [Repository](https://github.com/parkavenue9639/jevloop)
 
@@ -209,17 +215,17 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [mcts-agent](https://awesomejev.cc/projects/lhemerly/mcts-agent) · [Repository](https://github.com/lhemerly/mcts-agent)
 
+- [system-one-gemma](https://awesomejev.cc/projects/akash-kamat/system-one-gemma) · [Repository](https://github.com/akash-kamat/system-one-gemma)
+
 - [agent-fastpath](https://awesomejev.cc/projects/abhishekswe/agent-fastpath) · [Repository](https://github.com/abhishekswe/agent-fastpath)
 
 - [beadsort](https://awesomejev.cc/projects/harrymunro/beadsort) · [Repository](https://github.com/harrymunro/beadsort)
 
-- [claude-router](https://awesomejev.cc/projects/alexei-led/claude-router) · [Repository](https://github.com/alexei-led/claude-router)
-
 - [hermes-switchyard](https://awesomejev.cc/projects/bgrablin/hermes-switchyard) · [Repository](https://github.com/bgrablin/hermes-switchyard)
 
-- [jev-judgment](https://awesomejev.cc/projects/hyunjunjeon/jev-judgment) · [Repository](https://github.com/HyunjunJeon/jev-judgment)
+- [jev-decision-layer](https://awesomejev.cc/projects/qualixar/jev-decision-layer) · [Repository](https://github.com/qualixar/jev-decision-layer)
 
-- [jev-skillful](https://awesomejev.cc/projects/bestagentkits/jev-skillful) · [Repository](https://github.com/bestagentkits/jev-skillful)
+- [jev-judgment](https://awesomejev.cc/projects/hyunjunjeon/jev-judgment) · [Repository](https://github.com/HyunjunJeon/jev-judgment)
 
 - [jev-skills](https://awesomejev.cc/projects/eran-broder/jev-skills) · [Repository](https://github.com/eran-broder/jev-skills)
 
@@ -229,9 +235,9 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [limpet](https://awesomejev.cc/projects/noplan-inc/limpet) · [Repository](https://github.com/noplan-inc/limpet)
 
-- [system-one-gemma](https://awesomejev.cc/projects/akash-kamat/system-one-gemma) · [Repository](https://github.com/akash-kamat/system-one-gemma)
-
 - [a0-typesafe-ai](https://awesomejev.cc/projects/3clyp50/a0-typesafe-ai) · [Repository](https://github.com/3clyp50/a0-typesafe-ai)
+
+- [coding-orchestrator](https://awesomejev.cc/projects/davesheffer/coding-orchestrator) · [Repository](https://github.com/davesheffer/coding-orchestrator)
 
 - [decisions-judge-mcp](https://awesomejev.cc/projects/clouatre-labs/decisions-judge-mcp) · [Repository](https://github.com/clouatre-labs/decisions-judge-mcp)
 
@@ -253,6 +259,8 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [reflex](https://awesomejev.cc/projects/kaustav1996/reflex) · [Repository](https://github.com/kaustav1996/reflex)
 
+- [typesafe-mod](https://awesomejev.cc/projects/belazy167/typesafe-mod) · [Repository](https://github.com/BeLazy167/typesafe-mod)
+
 - [typesafe-on-neon](https://awesomejev.cc/projects/andrelandgraf/safer-with-jev) · [Repository](https://github.com/andrelandgraf/safer-with-jev)
 
 - [docsignals](https://awesomejev.cc/projects/pspdfkit-labs/docsignals) · [Repository](https://github.com/PSPDFKit-labs/docsignals)
@@ -262,8 +270,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 - [jev-claw](https://awesomejev.cc/projects/trietphan/jev-claw) · [Repository](https://github.com/trietphan/jev-claw)
 
 - [jev-compaction](https://awesomejev.cc/projects/waxmell114514/jev-compaction) · [Repository](https://github.com/Waxmell114514/jev-compaction)
-
-- [jev-decision-layer](https://awesomejev.cc/projects/qualixar/jev-decision-layer) · [Repository](https://github.com/qualixar/jev-decision-layer)
 
 - [jev-harness-router](https://awesomejev.cc/projects/joacomarc/jev-harness-router) · [Repository](https://github.com/JoacoMarc/jev-harness-router)
 
@@ -276,8 +282,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 - [mnemon-memory-agent](https://awesomejev.cc/projects/grivn/mnemon-memory-agent) · [Repository](https://github.com/Grivn/mnemon-memory-agent)
 
 - [paseo-spacedock](https://awesomejev.cc/projects/audreyt/paseo-spacedock) · [Repository](https://github.com/audreyt/paseo-spacedock)
-
-- [typesafe-mod](https://awesomejev.cc/projects/belazy167/typesafe-mod) · [Repository](https://github.com/BeLazy167/typesafe-mod)
 
 - [astra-jev-harness](https://awesomejev.cc/projects/oranquelui/astra-jev-harness) · [Repository](https://github.com/Oranquelui/astra-jev-harness)
 
@@ -321,6 +325,8 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [pi-jev-task-router](https://awesomejev.cc/projects/rizafahmi/pi-jev-task-router) · [Repository](https://github.com/rizafahmi/pi-jev-task-router)
 
+- [reflex](https://awesomejev.cc/projects/ursuciprian/reflex) · [Repository](https://github.com/ursuciprian/reflex)
+
 - [risk-analysis-server](https://awesomejev.cc/projects/youdotcom-oss/risk-analysis-server) · [Repository](https://github.com/youdotcom-oss/risk-analysis-server)
 
 - [tiershift](https://awesomejev.cc/projects/iamvatsalpatel/tiershift) · [Repository](https://github.com/iamvatsalpatel/tiershift)
@@ -335,6 +341,8 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [ailerix](https://awesomejev.cc/projects/tylerjharden/ailerix) · [Repository](https://github.com/tylerjharden/ailerix)
 
+- [ask-jev](https://awesomejev.cc/projects/logicrw/ask-jev) · [Repository](https://github.com/logicrw/ask-jev)
+
 - [astrbot\_plugin\_reply\_gate](https://awesomejev.cc/projects/astrbotdevs/astrbot_plugin_reply_gate) · [Repository](https://github.com/AstrBotDevs/astrbot_plugin_reply_gate)
 
 - [dgui-hypermem](https://awesomejev.cc/projects/ctaxnagomi/dgui-hypermem) · [Repository](https://github.com/ctaxnagomi/dgui-hypermem)
@@ -346,8 +354,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 - [home-assistant-typesafe](https://awesomejev.cc/projects/allenporter/home-assistant-typesafe) · [Repository](https://github.com/allenporter/home-assistant-typesafe)
 
 - [jeffrey](https://awesomejev.cc/projects/thomasbrueggemann/jeffrey) · [Repository](https://github.com/thomasbrueggemann/jeffrey)
-
-- [Jev\_steer\_or\_queue](https://awesomejev.cc/projects/larkspur-wang/jev_steer_or_queue) · [Repository](https://github.com/Larkspur-Wang/Jev_steer_or_queue)
 
 - [jev-agent-hooks](https://awesomejev.cc/projects/onlyjq04/jev-agent-hooks) · [Repository](https://github.com/onlyjq04/jev-agent-hooks)
 
@@ -371,7 +377,9 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [openclaw-jev-plugin](https://awesomejev.cc/projects/herval/openclaw-jev-plugin) · [Repository](https://github.com/herval/openclaw-jev-plugin)
 
-- [reflex](https://awesomejev.cc/projects/ursuciprian/reflex) · [Repository](https://github.com/ursuciprian/reflex)
+- [pi-auto](https://awesomejev.cc/projects/ekil1100/pi-auto) · [Repository](https://github.com/ekil1100/pi-auto)
+
+- [siege](https://awesomejev.cc/projects/vnmoorthy/siege) · [Repository](https://github.com/vnmoorthy/siege)
 
 - [skillpick](https://awesomejev.cc/projects/govindup63/skillpick) · [Repository](https://github.com/govindup63/skillpick)
 
@@ -391,13 +399,9 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [android-jev](https://awesomejev.cc/projects/fz2000/android-jev) · [Repository](https://github.com/FZ2000/android-jev)
 
-- [ask-jev](https://awesomejev.cc/projects/logicrw/ask-jev) · [Repository](https://github.com/logicrw/ask-jev)
-
 - [backoffice-agents](https://awesomejev.cc/projects/lucianoon/backoffice-agents) · [Repository](https://github.com/lucianoon/backoffice-agents)
 
 - [codex-jev](https://awesomejev.cc/projects/nomper/codex-jev) · [Repository](https://github.com/nomper/codex-jev)
-
-- [coding-orchestrator](https://awesomejev.cc/projects/davesheffer/coding-orchestrator) · [Repository](https://github.com/davesheffer/coding-orchestrator)
 
 - [cribrix](https://awesomejev.cc/projects/david96182/cribrix) · [Repository](https://github.com/david96182/cribrix)
 
@@ -435,6 +439,8 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-loop-detector](https://awesomejev.cc/projects/codaaiteam/jev-loop-detector) · [Repository](https://github.com/codaaiteam/jev-loop-detector)
 
+- [jev-pi-skills](https://awesomejev.cc/projects/damian87x/jev-pi-skills) · [Repository](https://github.com/damian87x/jev-pi-skills)
+
 - [jev-plays-pokemon](https://awesomejev.cc/projects/zbloss/jev-plays-pokemon) · [Repository](https://github.com/zbloss/jev-plays-pokemon)
 
 - [jev-routing](https://awesomejev.cc/projects/nekowasabi/jev-routing) · [Repository](https://github.com/nekowasabi/jev-routing)
@@ -465,6 +471,8 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [judging-with-typesafe](https://awesomejev.cc/projects/carlsonchik/judging-with-typesafe) · [Repository](https://github.com/carlsonchik/judging-with-typesafe)
 
+- [karnak](https://awesomejev.cc/projects/kjmagnan1s/karnak) · [Repository](https://github.com/kjmagnan1s/karnak)
+
 - [kz-harness](https://awesomejev.cc/projects/kz-95/kz-harness) · [Repository](https://github.com/kz-95/kz-harness)
 
 - [laya-jev](https://awesomejev.cc/projects/konghayao/laya-jev) · [Repository](https://github.com/KonghaYao/laya-jev)
@@ -479,8 +487,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [permit-mcp](https://awesomejev.cc/projects/qinpei-dev/permit-mcp) · [Repository](https://github.com/qinpei-dev/permit-mcp)
 
-- [pi-auto](https://awesomejev.cc/projects/ekil1100/pi-auto) · [Repository](https://github.com/ekil1100/pi-auto)
-
 - [pi-jev](https://awesomejev.cc/projects/riposta/pi-jev) · [Repository](https://github.com/riposta/pi-jev)
 
 - [pi-jev-compaction](https://awesomejev.cc/projects/wang-auspicious/pi-jev-compaction) · [Repository](https://github.com/Wang-auspicious/pi-jev-compaction)
@@ -492,8 +498,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 - [pi-jev-permit](https://awesomejev.cc/projects/kurihada/pi-jev-permit) · [Repository](https://github.com/kurihada/pi-jev-permit)
 
 - [pi-software-factory](https://awesomejev.cc/projects/kieran-a-egan/pi-software-factory) · [Repository](https://github.com/kieran-a-egan/pi-software-factory)
-
-- [siege](https://awesomejev.cc/projects/vnmoorthy/siege) · [Repository](https://github.com/vnmoorthy/siege)
 
 - [skillranker](https://awesomejev.cc/projects/ivorpad/skillranker) · [Repository](https://github.com/ivorpad/skillranker)
 
@@ -669,8 +673,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 
 - [jev-pi-model-router](https://awesomejev.cc/projects/damian87x/jev-pi-model-router) · [Repository](https://github.com/damian87x/jev-pi-model-router)
 
-- [jev-pi-skills](https://awesomejev.cc/projects/damian87x/jev-pi-skills) · [Repository](https://github.com/damian87x/jev-pi-skills)
-
 - [jev-playground](https://awesomejev.cc/projects/avirooppaul/jev-playground) · [Repository](https://github.com/AviroopPaul/jev-playground)
 
 - [jev-playground](https://awesomejev.cc/projects/fol2/jev-playground) · [Repository](https://github.com/fol2/jev-playground)
@@ -728,8 +730,6 @@ Find agents and automation projects that use Jev to make typed decisions within 
 - [jevymarket-direct](https://awesomejev.cc/projects/wangyu0611/jevymarket-direct) · [Repository](https://github.com/WangYu0611/jevymarket-direct)
 
 - [JudgeJev](https://awesomejev.cc/projects/bingelsworth/judgejev) · [Repository](https://github.com/BingelsWorth/JudgeJev)
-
-- [karnak](https://awesomejev.cc/projects/kjmagnan1s/karnak) · [Repository](https://github.com/kjmagnan1s/karnak)
 
 - [laya-computer-use](https://awesomejev.cc/projects/chenneyzhuang/laya-computer-use) · [Repository](https://github.com/ChenneyZhuang/laya-computer-use)
 
@@ -855,9 +855,9 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [killmyidea](https://awesomejev.cc/projects/monteduro/killmyidea) · [Repository](https://github.com/monteduro/killmyidea)
 
-- [jev-trade](https://awesomejev.cc/projects/aowang-ai/jev-trade) · [Repository](https://github.com/aowang-ai/jev-trade)
-
 - [Jev-X-Sentiment-Analysis](https://awesomejev.cc/projects/brainstormity/jev-x-sentiment-analysis) · [Repository](https://github.com/brainstormity/Jev-X-Sentiment-Analysis)
+
+- [jev-trade](https://awesomejev.cc/projects/aowang-ai/jev-trade) · [Repository](https://github.com/aowang-ai/jev-trade)
 
 - [jevmeter](https://awesomejev.cc/projects/chetaslua/jevmeter) · [Repository](https://github.com/ChetasLua/jevmeter)
 
@@ -883,13 +883,13 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [tsai-sc](https://awesomejev.cc/projects/phyous/tsai-sc) · [Repository](https://github.com/phyous/tsai-sc)
 
+- [typesafe-ai-playground](https://awesomejev.cc/projects/bunsdev/typesafe-ai-playground) · [Repository](https://github.com/BunsDev/typesafe-ai-playground)
+
 - [jev-gmail-ai-spam-filter-and-labeling](https://awesomejev.cc/projects/ilyamk/jev-gmail-ai-spam-filter-and-labeling) · [Repository](https://github.com/ilyamk/jev-gmail-ai-spam-filter-and-labeling)
 
 - [slop-filter](https://awesomejev.cc/projects/adamnroman/slop-filter) · [Repository](https://github.com/adamnroman/slop-filter)
 
 - [typesafe-snake](https://awesomejev.cc/projects/sorrycc/typesafe-snake) · [Repository](https://github.com/sorrycc/typesafe-snake)
-
-- [typesafe-ai-playground](https://awesomejev.cc/projects/bunsdev/typesafe-ai-playground) · [Repository](https://github.com/BunsDev/typesafe-ai-playground)
 
 - [jevframe](https://awesomejev.cc/projects/ktaletsk/jevframe) · [Repository](https://github.com/ktaletsk/jevframe)
 
@@ -897,9 +897,9 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [jev-to-answer](https://awesomejev.cc/projects/csskrtao/jev-to-answer) · [Repository](https://github.com/csskrtao/jev-to-answer)
 
-- [jev\_antispam\_bot](https://awesomejev.cc/projects/backmeupplz/jev_antispam_bot) · [Repository](https://github.com/backmeupplz/jev_antispam_bot)
-
 - [jev-safety-gateway](https://awesomejev.cc/projects/dark-hxx/jev-safety-gateway) · [Repository](https://github.com/dark-hxx/jev-safety-gateway)
+
+- [jev\_antispam\_bot](https://awesomejev.cc/projects/backmeupplz/jev_antispam_bot) · [Repository](https://github.com/backmeupplz/jev_antispam_bot)
 
 - [JevBystander](https://awesomejev.cc/projects/nisaka520/jevbystander) · [Repository](https://github.com/Nisaka520/JevBystander)
 
@@ -913,13 +913,19 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [citation-verifier](https://awesomejev.cc/projects/marissafamularo/citation-verifier) · [Repository](https://github.com/MarissaFamularo/citation-verifier)
 
-- [typesafe-jev](https://awesomejev.cc/projects/gtaras7/typesafe-jev) · [Repository](https://github.com/gtaras7/typesafe-jev)
+- [jev-rag](https://awesomejev.cc/projects/aifabrice/jev-rag) · [Repository](https://github.com/aifabrice/jev-rag)
 
 - [nl-logic-interpreter](https://awesomejev.cc/projects/narphorium/nl-logic-interpreter) · [Repository](https://github.com/narphorium/nl-logic-interpreter)
 
-- [twitter-jev-guard](https://awesomejev.cc/projects/qs-lll/twitter-jev-guard) · [Repository](https://github.com/qs-lll/twitter-jev-guard)
-
 - [typesafe-chess](https://awesomejev.cc/projects/tholeg/typesafe-chess) · [Repository](https://github.com/TholeG/typesafe-chess)
+
+- [typesafe-jev](https://awesomejev.cc/projects/gtaras7/typesafe-jev) · [Repository](https://github.com/gtaras7/typesafe-jev)
+
+- [jev-adblock](https://awesomejev.cc/projects/fazlerocks/jev-adblock) · [Repository](https://github.com/fazlerocks/jev-adblock)
+
+- [soupbase](https://awesomejev.cc/projects/spoonnotfound/soupbase) · [Repository](https://github.com/spoonnotfound/soupbase)
+
+- [twitter-jev-guard](https://awesomejev.cc/projects/qs-lll/twitter-jev-guard) · [Repository](https://github.com/qs-lll/twitter-jev-guard)
 
 - [vox-arcana](https://awesomejev.cc/projects/izumisatoshi/vox-arcana) · [Repository](https://github.com/IzumiSatoshi/vox-arcana)
 
@@ -927,33 +933,29 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [jev-minesweeper](https://awesomejev.cc/projects/comoc/jev-minesweeper) · [Repository](https://github.com/comoc/jev-minesweeper)
 
-- [jev-rag](https://awesomejev.cc/projects/aifabrice/jev-rag) · [Repository](https://github.com/aifabrice/jev-rag)
+- [jevpdf](https://awesomejev.cc/projects/kylemclaren/jevpdf) · [Repository](https://github.com/kylemclaren/jevpdf)
 
 - [jevsearch](https://awesomejev.cc/projects/kylemclaren/jevsearch) · [Repository](https://github.com/kylemclaren/jevsearch)
 
 - [paperfocus](https://awesomejev.cc/projects/yilight0/paperfocus) · [Repository](https://github.com/YiLight0/paperfocus)
 
-- [soupbase](https://awesomejev.cc/projects/spoonnotfound/soupbase) · [Repository](https://github.com/spoonnotfound/soupbase)
+- [doom-or-bloom](https://awesomejev.cc/projects/transitive-bullshit/doom-or-bloom) · [Repository](https://github.com/transitive-bullshit/doom-or-bloom)
 
 - [gg-friggin-ez](https://awesomejev.cc/projects/itisshikhar/gg-friggin-ez) · [Repository](https://github.com/ItisShikhar/gg-friggin-ez)
 
 - [hundred](https://awesomejev.cc/projects/jammaru/jev-lab) · [Repository](https://github.com/jammaru/jev-lab)
 
-- [jev-adblock](https://awesomejev.cc/projects/fazlerocks/jev-adblock) · [Repository](https://github.com/fazlerocks/jev-adblock)
-
 - [jev-t-rex-runner](https://awesomejev.cc/projects/joshlarsen/jev-t-rex-runner) · [Repository](https://github.com/joshlarsen/jev-t-rex-runner)
-
-- [jevpdf](https://awesomejev.cc/projects/kylemclaren/jevpdf) · [Repository](https://github.com/kylemclaren/jevpdf)
 
 - [jevseo](https://awesomejev.cc/projects/epergaboni/jevseo) · [Repository](https://github.com/epergaboni/jevseo)
 
 - [docket](https://awesomejev.cc/projects/glamboyosa/docket) · [Repository](https://github.com/glamboyosa/docket)
 
-- [doom-or-bloom](https://awesomejev.cc/projects/transitive-bullshit/doom-or-bloom) · [Repository](https://github.com/transitive-bullshit/doom-or-bloom)
-
 - [jev-voice-control](https://awesomejev.cc/projects/chris-wozniczek/jev-voice-control) · [Repository](https://github.com/chris-wozniczek/jev-voice-control)
 
 - [jevmoji](https://awesomejev.cc/projects/cheeaun/jevmoji) · [Repository](https://github.com/cheeaun/jevmoji)
+
+- [JevSceneMiner](https://awesomejev.cc/projects/bskkimm/jevsceneminer) · [Repository](https://github.com/bskkimm/JevSceneMiner)
 
 - [jlink](https://awesomejev.cc/projects/keltokhy/jlink) · [Repository](https://github.com/keltokhy/jlink)
 
@@ -969,6 +971,8 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [jeveryword](https://awesomejev.cc/projects/jkrup/jeveryword) · [Repository](https://github.com/jkrup/jeveryword)
 
+- [story-orchestrator](https://awesomejev.cc/projects/maxipawlowski/story-orchestrator) · [Repository](https://github.com/MaxiPawlowski/story-orchestrator)
+
 - [tab-bouncer](https://awesomejev.cc/projects/manish007700/tab-bouncer) · [Repository](https://github.com/MANISH007700/tab-bouncer)
 
 - [your-signal](https://awesomejev.cc/projects/mithrilman/your-signal) · [Repository](https://github.com/MithrilMan/your-signal)
@@ -982,8 +986,6 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [JevEmon](https://awesomejev.cc/projects/daniel4x/jevemon) · [Repository](https://github.com/daniel4x/JevEmon)
 
 - [jevseek](https://awesomejev.cc/projects/blingdivinity/jevseek) · [Repository](https://github.com/blingdivinity/jevseek)
-
-- [story-orchestrator](https://awesomejev.cc/projects/maxipawlowski/story-orchestrator) · [Repository](https://github.com/MaxiPawlowski/story-orchestrator)
 
 - [system-one-chess](https://awesomejev.cc/projects/dperezcabrera/system-one-chess) · [Repository](https://github.com/dperezcabrera/system-one-chess)
 
@@ -1043,13 +1045,19 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [jev-fill-pdf](https://awesomejev.cc/projects/takumi-golf/jev-fill-pdf) · [Repository](https://github.com/takumi-golf/jev-fill-pdf)
 
+- [jev-games](https://awesomejev.cc/projects/shantanugoel/jev-games) · [Repository](https://github.com/shantanugoel/jev-games)
+
 - [jev-guard](https://awesomejev.cc/projects/navidkashani/jev-guard) · [Repository](https://github.com/navidkashani/jev-guard)
 
 - [jev-organize](https://awesomejev.cc/projects/nexibeo/jev-organize) · [Repository](https://github.com/nexibeo/jev-organize)
 
+- [jev-paper](https://awesomejev.cc/projects/srjoeee/jev-paper) · [Repository](https://github.com/SRjoeee/jev-paper)
+
 - [jev-x-blocker](https://awesomejev.cc/projects/h1code2/jev-x-blocker) · [Repository](https://github.com/h1code2/jev-x-blocker)
 
 - [jevibe-check](https://awesomejev.cc/projects/sriganesh/jevibe-check) · [Repository](https://github.com/sriganesh/jevibe-check)
+
+- [jevit](https://awesomejev.cc/projects/xvectorio/jevit) · [Repository](https://github.com/Xvectorio/jevit)
 
 - [LinguaTrace](https://awesomejev.cc/projects/husdev/linguatrace) · [Repository](https://github.com/HusDev/LinguaTrace)
 
@@ -1072,6 +1080,8 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [tally](https://awesomejev.cc/projects/adlternative/tally) · [Repository](https://github.com/adlternative/tally)
 
 - [tierjev](https://awesomejev.cc/projects/roprgm/tierjev) · [Repository](https://github.com/roprgm/tierjev)
+
+- [actual-jev](https://awesomejev.cc/projects/acifani/actual-jev) · [Repository](https://github.com/acifani/actual-jev)
 
 - [adaptmypage](https://awesomejev.cc/projects/bvicsay/adaptmypage) · [Repository](https://github.com/bvicsay/adaptmypage)
 
@@ -1109,6 +1119,8 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [human-compiler](https://awesomejev.cc/projects/asfarsadewa/human-compiler) · [Repository](https://github.com/asfarsadewa/human-compiler)
 
+- [icloud-google-calendar-sync](https://awesomejev.cc/projects/jdubba1/icloud-google-calendar-sync) · [Repository](https://github.com/jdubba1/icloud-google-calendar-sync)
+
 - [jev](https://awesomejev.cc/projects/haibt163/jev) · [Repository](https://github.com/haibt163/jev)
 
 - [jev-aituber-tension-sample](https://awesomejev.cc/projects/shinshin86/jev-aituber-tension-sample) · [Repository](https://github.com/shinshin86/jev-aituber-tension-sample)
@@ -1135,13 +1147,9 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 
 - [jev-estados-brasileiros](https://awesomejev.cc/projects/daniel-dia/jev-estados-brasileiros) · [Repository](https://github.com/daniel-dia/jev-estados-brasileiros)
 
-- [jev-games](https://awesomejev.cc/projects/shantanugoel/jev-games) · [Repository](https://github.com/shantanugoel/jev-games)
-
 - [jev-go](https://awesomejev.cc/projects/beingcognitive/jev-go) · [Repository](https://github.com/beingcognitive/jev-go)
 
 - [jev-lead-scorer](https://awesomejev.cc/projects/liamsherline/jev-lead-scorer) · [Repository](https://github.com/LiamSherline/jev-lead-scorer)
-
-- [jev-paper](https://awesomejev.cc/projects/srjoeee/jev-paper) · [Repository](https://github.com/SRjoeee/jev-paper)
 
 - [jev-play-games](https://awesomejev.cc/projects/ege-bulut/jev-play-games) · [Repository](https://github.com/Ege-BULUT/jev-play-games)
 
@@ -1172,8 +1180,6 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [jev2048](https://awesomejev.cc/projects/kylekreuter/jev2048) · [Repository](https://github.com/KyleKreuter/jev2048)
 
 - [Jevflix](https://awesomejev.cc/projects/arielbubis/jevflix) · [Repository](https://github.com/ArielBubis/Jevflix)
-
-- [jevit](https://awesomejev.cc/projects/xvectorio/jevit) · [Repository](https://github.com/Xvectorio/jevit)
 
 - [jevkenpo](https://awesomejev.cc/projects/joaovaleri/jevkenpo) · [Repository](https://github.com/joaovaleri/jevkenpo)
 
@@ -1224,8 +1230,6 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [1-million-emojis](https://awesomejev.cc/projects/cwdx/1-million-emojis) · [Repository](https://github.com/cwdx/1-million-emojis)
 
 - [Acervo](https://awesomejev.cc/projects/joshirod/acervo) · [Repository](https://github.com/Joshirod/Acervo)
-
-- [actual-jev](https://awesomejev.cc/projects/acifani/actual-jev) · [Repository](https://github.com/acifani/actual-jev)
 
 - [aether-hold](https://awesomejev.cc/projects/ferxalbs/aether-hold) · [Repository](https://github.com/ferxalbs/aether-hold)
 
@@ -1358,8 +1362,6 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [hori\_checker](https://awesomejev.cc/projects/harukishimo/hori_checker) · [Repository](https://github.com/harukishimo/hori_checker)
 
 - [human-exe-jev](https://awesomejev.cc/projects/gyozameronpanofficial/human-exe-jev) · [Repository](https://github.com/gyozameronpanofficial/human-exe-jev)
-
-- [icloud-google-calendar-sync](https://awesomejev.cc/projects/jdubba1/icloud-google-calendar-sync) · [Repository](https://github.com/jdubba1/icloud-google-calendar-sync)
 
 - [infra-guardian](https://awesomejev.cc/projects/bharath-ramaprasad/infra-guardian) · [Repository](https://github.com/bharath-ramaprasad/infra-guardian)
 
@@ -1596,8 +1598,6 @@ Explore apps and demos showing how Jev is used in concrete products and experime
 - [JevPip](https://awesomejev.cc/projects/yo4e/jevpip) · [Repository](https://github.com/yo4e/JevPip)
 
 - [jevs-kitchen](https://awesomejev.cc/projects/photon-collider/jevs-kitchen) · [Repository](https://github.com/photon-collider/jevs-kitchen)
-
-- [JevSceneMiner](https://awesomejev.cc/projects/bskkimm/jevsceneminer) · [Repository](https://github.com/bskkimm/JevSceneMiner)
 
 - [jevtetris](https://awesomejev.cc/projects/kouyamacreate/jevtetris) · [Repository](https://github.com/KouyamaCreate/jevtetris)
 
@@ -1849,6 +1849,8 @@ Find browser and computer-use projects that use Jev for decisions and action sel
 
 - [otto](https://awesomejev.cc/projects/noblespartan6/otto) · [Repository](https://github.com/NobleSpartan6/otto)
 
+- [system-one-browser-agent](https://awesomejev.cc/projects/adnanahmaddev/system-one-browser-agent) · [Repository](https://github.com/adnanahmaddev/system-one-browser-agent)
+
 - [ego-jev-ultrafast](https://awesomejev.cc/projects/shikaizhong-design/ego-jev-ultrafast) · [Repository](https://github.com/shikaizhong-design/ego-jev-ultrafast)
 
 - [jev-browser-local](https://awesomejev.cc/projects/rorshopping/jev-browser-local) · [Repository](https://github.com/rorshopping/jev-browser-local)
@@ -1867,11 +1869,11 @@ Find browser and computer-use projects that use Jev for decisions and action sel
 
 - [jev-browser-skill](https://awesomejev.cc/projects/chenycl/jev-browser-skill) · [Repository](https://github.com/ChenYCL/jev-browser-skill)
 
+- [jev-browser-use](https://awesomejev.cc/projects/aurorapixel/jev-browser-use) · [Repository](https://github.com/AuroraPixel/jev-browser-use)
+
 - [jev-play-ping-pong](https://awesomejev.cc/projects/icohen007/jev-play-ping-pong) · [Repository](https://github.com/Icohen007/jev-play-ping-pong)
 
 - [playwright-jev](https://awesomejev.cc/projects/dingw530/playwright-jev) · [Repository](https://github.com/dingw530/playwright-jev)
-
-- [system-one-browser-agent](https://awesomejev.cc/projects/adnanahmaddev/system-one-browser-agent) · [Repository](https://github.com/adnanahmaddev/system-one-browser-agent)
 
 - [turbo](https://awesomejev.cc/projects/sightmap/jev-turbo) · [Repository](https://github.com/sightmap/jev-turbo)
 
@@ -1882,8 +1884,6 @@ Find browser and computer-use projects that use Jev for decisions and action sel
 - [jev-browser](https://awesomejev.cc/projects/wendaoheri/jev-browser) · [Repository](https://github.com/wendaoheri/jev-browser)
 
 - [jev-browser](https://awesomejev.cc/projects/dennisonbertram/jev-browser) · [Repository](https://github.com/dennisonbertram/jev-browser)
-
-- [jev-browser-use](https://awesomejev.cc/projects/aurorapixel/jev-browser-use) · [Repository](https://github.com/AuroraPixel/jev-browser-use)
 
 - [jev-chrome-extension](https://awesomejev.cc/projects/gavansmyth-arch/jev-chrome-extension) · [Repository](https://github.com/gavansmyth-arch/jev-chrome-extension)
 
@@ -1977,9 +1977,9 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [jev-webmcp-extension](https://awesomejev.cc/projects/sdras/jev-webmcp-extension) · [Repository](https://github.com/sdras/jev-webmcp-extension)
 
-- [jevmem](https://awesomejev.cc/projects/avinash-jetwani/jevmem) · [Repository](https://github.com/Avinash-jetwani/jevmem)
-
 - [Canny](https://awesomejev.cc/projects/qkal/canny) · [Repository](https://github.com/qkal/Canny)
+
+- [jevmem](https://awesomejev.cc/projects/avinash-jetwani/jevmem) · [Repository](https://github.com/Avinash-jetwani/jevmem)
 
 - [jev-lint](https://awesomejev.cc/projects/mizchi/jev-lint) · [Repository](https://github.com/mizchi/jev-lint)
 
@@ -2005,9 +2005,9 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [commit-miner](https://awesomejev.cc/projects/devanshbatham/commit-miner) · [Repository](https://github.com/devanshbatham/commit-miner)
 
-- [jev-cli](https://awesomejev.cc/projects/shaharia-lab/jev-cli) · [Repository](https://github.com/shaharia-lab/jev-cli)
-
 - [jev-test-filter](https://awesomejev.cc/projects/mizchi/jev-test-filter) · [Repository](https://github.com/mizchi/jev-test-filter)
+
+- [jev-cli](https://awesomejev.cc/projects/shaharia-lab/jev-cli) · [Repository](https://github.com/shaharia-lab/jev-cli)
 
 - [jev-design-test](https://awesomejev.cc/projects/bhaig-de/jev-design-test) · [Repository](https://github.com/bhaiG-de/jev-design-test)
 
@@ -2015,17 +2015,17 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [Buggo](https://awesomejev.cc/projects/moraxh/buggo) · [Repository](https://github.com/moraxh/Buggo)
 
-- [jev-axi](https://awesomejev.cc/projects/shiftynick/jev-axi) · [Repository](https://github.com/shiftynick/jev-axi)
+- [jev-belay](https://awesomejev.cc/projects/valentynkit/jev-belay) · [Repository](https://github.com/valentynkit/jev-belay)
 
-- [jsort](https://awesomejev.cc/projects/keltokhy/jsort) · [Repository](https://github.com/keltokhy/jsort)
+- [jev-axi](https://awesomejev.cc/projects/shiftynick/jev-axi) · [Repository](https://github.com/shiftynick/jev-axi)
 
 - [daggerverse](https://awesomejev.cc/projects/typesafe-ai/daggerverse) · [Repository](https://github.com/typesafe-ai/daggerverse)
 
-- [jev-belay](https://awesomejev.cc/projects/valentynkit/jev-belay) · [Repository](https://github.com/valentynkit/jev-belay)
-
-- [jev-cli](https://awesomejev.cc/projects/nasrallah-al/jev-cli) · [Repository](https://github.com/Nasrallah-AL/jev-cli)
+- [jsort](https://awesomejev.cc/projects/keltokhy/jsort) · [Repository](https://github.com/keltokhy/jsort)
 
 - [claude-jev](https://awesomejev.cc/projects/0x7067/claude-jev) · [Repository](https://github.com/0x7067/claude-jev)
+
+- [jev-cli](https://awesomejev.cc/projects/nasrallah-al/jev-cli) · [Repository](https://github.com/Nasrallah-AL/jev-cli)
 
 - [jev-code](https://awesomejev.cc/projects/rhighs/jev-code) · [Repository](https://github.com/rhighs/jev-code)
 
@@ -2039,11 +2039,11 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [jev-graph-search](https://awesomejev.cc/projects/emlembow/jev-graph-search) · [Repository](https://github.com/Emlembow/jev-graph-search)
 
-- [jev-lint](https://awesomejev.cc/projects/ckorhonen/jev-lint) · [Repository](https://github.com/ckorhonen/jev-lint)
-
 - [JevLint](https://awesomejev.cc/projects/huntedman/jevlint) · [Repository](https://github.com/huntedman/JevLint)
 
 - [jevotron](https://awesomejev.cc/projects/cmungall/jevotron) · [Repository](https://github.com/cmungall/jevotron)
+
+- [jev-lint](https://awesomejev.cc/projects/ckorhonen/jev-lint) · [Repository](https://github.com/ckorhonen/jev-lint)
 
 - [jeq](https://awesomejev.cc/projects/cristianoliveira/jeq) · [Repository](https://github.com/cristianoliveira/jeq)
 
@@ -2077,6 +2077,8 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [Convoy](https://awesomejev.cc/projects/gokulnair2001/convoy) · [Repository](https://github.com/gokulnair2001/Convoy)
 
+- [fast-compact](https://awesomejev.cc/projects/nodardavituri/fast-compact) · [Repository](https://github.com/NodarDavituri/fast-compact)
+
 - [hekajev](https://awesomejev.cc/projects/zurk/hekajev) · [Repository](https://github.com/zurk/hekajev)
 
 - [jev-playwright](https://awesomejev.cc/projects/arthurfiorette/jev-playwright) · [Repository](https://github.com/arthurfiorette/jev-playwright)
@@ -2084,8 +2086,6 @@ Explore development tools and utilities for building and working with Jev projec
 - [prompt2jev](https://awesomejev.cc/projects/sumleo/prompt2jev) · [Repository](https://github.com/sumleo/prompt2jev)
 
 - [stingray](https://awesomejev.cc/projects/nanako0129/stingray) · [Repository](https://github.com/Nanako0129/stingray)
-
-- [fast-compact](https://awesomejev.cc/projects/nodardavituri/fast-compact) · [Repository](https://github.com/NodarDavituri/fast-compact)
 
 - [jev-codes](https://awesomejev.cc/projects/kushwho/jev-codes) · [Repository](https://github.com/Kushwho/jev-codes)
 
@@ -2185,6 +2185,8 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [jfind](https://awesomejev.cc/projects/religa/jfind) · [Repository](https://github.com/religa/jfind)
 
+- [lossless-compact](https://awesomejev.cc/projects/musicstudionyc/lossless-compact) · [Repository](https://github.com/MusicStudioNYC/lossless-compact)
+
 - [nvim-jev-plugin](https://awesomejev.cc/projects/balazsorban44/nvim-jev-plugin) · [Repository](https://github.com/balazsorban44/nvim-jev-plugin)
 
 - [opencode-jev-guard](https://awesomejev.cc/projects/cogflux/opencode-jev-guard) · [Repository](https://github.com/CogFlux/opencode-jev-guard)
@@ -2214,6 +2216,8 @@ Explore development tools and utilities for building and working with Jev projec
 - [docfriction](https://awesomejev.cc/projects/cyvid7-darus10/docfriction) · [Repository](https://github.com/Cyvid7-Darus10/docfriction)
 
 - [dsh-auto-review-jev](https://awesomejev.cc/projects/sperictao/dsh-auto-review-jev) · [Repository](https://github.com/sperictao/dsh-auto-review-jev)
+
+- [dsh-jev-advisor](https://awesomejev.cc/projects/gordan-code/dsh-jev-advisor) · [Repository](https://github.com/gordan-code/dsh-jev-advisor)
 
 - [fast-jev-compaction-codex](https://awesomejev.cc/projects/designnotdrum/fast-jev-compaction-codex) · [Repository](https://github.com/designnotdrum/fast-jev-compaction-codex)
 
@@ -2283,8 +2287,6 @@ Explore development tools and utilities for building and working with Jev projec
 
 - [lisa](https://awesomejev.cc/projects/turenlabs/lisa) · [Repository](https://github.com/turenlabs/lisa)
 
-- [lossless-compact](https://awesomejev.cc/projects/musicstudionyc/lossless-compact) · [Repository](https://github.com/MusicStudioNYC/lossless-compact)
-
 - [neuralint](https://awesomejev.cc/projects/jpowersdev/neuralint) · [Repository](https://github.com/jpowersdev/neuralint)
 
 - [omp-typesafe](https://awesomejev.cc/projects/siddicky/omp-typesafe) · [Repository](https://github.com/siddicky/omp-typesafe)
@@ -2346,8 +2348,6 @@ Explore development tools and utilities for building and working with Jev projec
 - [dev-tab-autopilot](https://awesomejev.cc/projects/neerajvipparla/dev-tab-autopilot) · [Repository](https://github.com/neerajvipparla/dev-tab-autopilot)
 
 - [drift-guard](https://awesomejev.cc/projects/benpchandler/drift-guard) · [Repository](https://github.com/benpchandler/drift-guard)
-
-- [dsh-jev-advisor](https://awesomejev.cc/projects/gordan-code/dsh-jev-advisor) · [Repository](https://github.com/gordan-code/dsh-jev-advisor)
 
 - [dsh-jev-auto](https://awesomejev.cc/projects/jackma5477001/dsh-jev-auto) · [Repository](https://github.com/jackma5477001/dsh-jev-auto)
 
@@ -2603,9 +2603,9 @@ Find learning materials, examples and reference resources about Jev and System O
 
 - [Robotics\_Notebooks](https://awesomejev.cc/projects/imchong/robotics_notebooks) · [Repository](https://github.com/ImChong/Robotics_Notebooks)
 
-- [skillbox](https://awesomejev.cc/projects/kitze/skillbox) · [Repository](https://github.com/kitze/skillbox)
-
 - [jev-cookbook](https://awesomejev.cc/projects/datawhalechina/jev-cookbook) · [Repository](https://github.com/datawhalechina/jev-cookbook)
+
+- [skillbox](https://awesomejev.cc/projects/kitze/skillbox) · [Repository](https://github.com/kitze/skillbox)
 
 - [building-with-jev-skill](https://awesomejev.cc/projects/dbreunig/building-with-jev-skill) · [Repository](https://github.com/dbreunig/building-with-jev-skill)
 
@@ -2615,17 +2615,17 @@ Find learning materials, examples and reference resources about Jev and System O
 
 - [jev-cookbook](https://awesomejev.cc/projects/nexibeo/jev-cookbook) · [Repository](https://github.com/nexibeo/jev-cookbook)
 
-- [awesome-jev-usecases](https://awesomejev.cc/projects/aliaihub/awesome-jev-usecases) · [Repository](https://github.com/aliaihub/awesome-jev-usecases)
-
 - [jev-anything](https://awesomejev.cc/projects/grandamenium/jev-anything) · [Repository](https://github.com/grandamenium/jev-anything)
+
+- [awesome-jev-usecases](https://awesomejev.cc/projects/aliaihub/awesome-jev-usecases) · [Repository](https://github.com/aliaihub/awesome-jev-usecases)
 
 - [jev-demo](https://awesomejev.cc/projects/gopinav/jev-demo) · [Repository](https://github.com/gopinav/jev-demo)
 
 - [awesome-jev-use-cases](https://awesomejev.cc/projects/whyashthakker/awesome-jev-use-cases) · [Repository](https://github.com/whyashthakker/awesome-jev-use-cases)
 
-- [jev-cookbook](https://awesomejev.cc/projects/paramjeetn/jev-cookbook) · [Repository](https://github.com/paramjeetn/jev-cookbook)
-
 - [jev-gtm-cookbook](https://awesomejev.cc/projects/bcharleson/jev-gtm-cookbook) · [Repository](https://github.com/bcharleson/jev-gtm-cookbook)
+
+- [jev-cookbook](https://awesomejev.cc/projects/paramjeetn/jev-cookbook) · [Repository](https://github.com/paramjeetn/jev-cookbook)
 
 - [tryjev](https://awesomejev.cc/projects/sugarforever/tryjev) · [Repository](https://github.com/sugarforever/tryjev)
 
@@ -2639,6 +2639,8 @@ Find learning materials, examples and reference resources about Jev and System O
 
 - [jev-web-analyzer](https://awesomejev.cc/projects/replynodes/jev-web-analyzer) · [Repository](https://github.com/replynodes/jev-web-analyzer)
 
+- [awesome-jev-prompts](https://awesomejev.cc/projects/vicfei/awesome-jev-prompts) · [Repository](https://github.com/vicfei/awesome-jev-prompts)
+
 - [pydantic-jev-examples](https://awesomejev.cc/projects/adtyavrdhn/pydantic-jev-examples) · [Repository](https://github.com/adtyavrdhn/pydantic-jev-examples)
 
 - [windows-save-token-jev-setup](https://awesomejev.cc/projects/455-diao/windows-save-token-jev-setup) · [Repository](https://github.com/455-dIAO/windows-save-token-jev-setup)
@@ -2648,8 +2650,6 @@ Find learning materials, examples and reference resources about Jev and System O
 - [jev-skills](https://awesomejev.cc/projects/laguagu/jev-skills) · [Repository](https://github.com/laguagu/jev-skills)
 
 - [jev-storyboard-lab](https://awesomejev.cc/projects/jimmyliao/jev-storyboard-lab) · [Repository](https://github.com/jimmyliao/jev-storyboard-lab)
-
-- [awesome-jev-prompts](https://awesomejev.cc/projects/vicfei/awesome-jev-prompts) · [Repository](https://github.com/vicfei/awesome-jev-prompts)
 
 - [jev-awesome-skills](https://awesomejev.cc/projects/aitofy-dev/jev-awesome-skills) · [Repository](https://github.com/aitofy-dev/jev-awesome-skills)
 
@@ -2825,9 +2825,9 @@ Explore independent open-source alternatives and implementations, with recorded 
 
 - [jevos](https://awesomejev.cc/projects/feder-cr/jev) · [Repository](https://github.com/feder-cr/jev)
 
-- [decider](https://awesomejev.cc/projects/mapika/decider) · [Repository](https://github.com/Mapika/decider)
-
 - [AnyJev](https://awesomejev.cc/projects/nokia-applied-research/anyjev) · [Repository](https://github.com/nokia-applied-research/AnyJev)
+
+- [decider](https://awesomejev.cc/projects/mapika/decider) · [Repository](https://github.com/Mapika/decider)
 
 - [von](https://awesomejev.cc/projects/wfzyx/von) · [Repository](https://github.com/wfzyx/von)
 
@@ -2835,9 +2835,9 @@ Explore independent open-source alternatives and implementations, with recorded 
 
 - [Open-Jev](https://awesomejev.cc/projects/zefan-cai/open-jev) · [Repository](https://github.com/Zefan-Cai/Open-Jev)
 
-- [openjev-sglang](https://awesomejev.cc/projects/ekzhang/openjev-sglang) · [Repository](https://github.com/ekzhang/openjev-sglang)
-
 - [imajev](https://awesomejev.cc/projects/mohit67890/imajev) · [Repository](https://github.com/mohit67890/imajev)
+
+- [openjev-sglang](https://awesomejev.cc/projects/ekzhang/openjev-sglang) · [Repository](https://github.com/ekzhang/openjev-sglang)
 
 - [jevk5](https://awesomejev.cc/projects/allebee/jevk5) · [Repository](https://github.com/allebee/jevk5)
 
@@ -2849,9 +2849,9 @@ Explore independent open-source alternatives and implementations, with recorded 
 
 - [open-alternative-jev](https://awesomejev.cc/projects/ikermoel/open-alternative-jev) · [Repository](https://github.com/ikermoel/open-alternative-jev)
 
-- [OpenDecision](https://awesomejev.cc/projects/deepanwadhwa/opendecision) · [Repository](https://github.com/deepanwadhwa/OpenDecision)
-
 - [OpenJev](https://awesomejev.cc/projects/alanhuangyoo/openjev) · [Repository](https://github.com/alanhuangyoo/OpenJev)
+
+- [OpenDecision](https://awesomejev.cc/projects/deepanwadhwa/opendecision) · [Repository](https://github.com/deepanwadhwa/OpenDecision)
 
 - [lev](https://awesomejev.cc/projects/abhinavexists/lev) · [Repository](https://github.com/Abhinavexists/lev)
 
@@ -2865,39 +2865,43 @@ Explore independent open-source alternatives and implementations, with recorded 
 
 - [usejev](https://awesomejev.cc/projects/ali-master/usejev) · [Repository](https://github.com/ali-master/usejev)
 
+- [WaterSheep](https://awesomejev.cc/projects/samratduttaofficial/watersheep) · [Repository](https://github.com/SamratDuttaOfficial/WaterSheep)
+
 - [lev](https://awesomejev.cc/projects/franckverrot/lev) · [Repository](https://github.com/franckverrot/lev)
+
+- [ruling](https://awesomejev.cc/projects/bradagi/ruling) · [Repository](https://github.com/bradAGI/ruling)
 
 - [typed-lm](https://awesomejev.cc/projects/neurono-ml/typed-lm) · [Repository](https://github.com/neurono-ml/typed-lm)
 
 - [Decis](https://awesomejev.cc/projects/chaitin/decis) · [Repository](https://github.com/chaitin/Decis)
 
-- [ruling](https://awesomejev.cc/projects/bradagi/ruling) · [Repository](https://github.com/bradAGI/ruling)
-
 - [jev-vllm](https://awesomejev.cc/projects/umianta/jev-vllm) · [Repository](https://github.com/umianta/jev-vllm)
-
-- [WaterSheep](https://awesomejev.cc/projects/samratduttaofficial/watersheep) · [Repository](https://github.com/SamratDuttaOfficial/WaterSheep)
 
 - [LCT](https://awesomejev.cc/projects/gitchw/lct) · [Repository](https://github.com/gitchw/LCT)
 
 - [jevtpp](https://awesomejev.cc/projects/wiatrm/jevtpp) · [Repository](https://github.com/wiatrM/jevtpp)
 
+- [openjev](https://awesomejev.cc/projects/lookski/openjev) · [Repository](https://github.com/lookski/openjev)
+
 - [cu-Jev](https://awesomejev.cc/projects/dtunai/cu-jev) · [Repository](https://github.com/dtunai/cu-Jev)
 
 - [Qwen3.5-OneForward](https://awesomejev.cc/projects/embodied-ai-system/qwen3.5-oneforward) · [Repository](https://github.com/Embodied-AI-System/Qwen3.5-OneForward)
 
+- [Hinge-Jev](https://awesomejev.cc/projects/satiricalguru/hinge-jev) · [Repository](https://github.com/satiricalguru/Hinge-Jev)
+
 - [omg](https://awesomejev.cc/projects/bokuweb/omg) · [Repository](https://github.com/bokuweb/omg)
 
-- [openjev](https://awesomejev.cc/projects/lookski/openjev) · [Repository](https://github.com/lookski/openjev)
-
 - [truetype.ai-open](https://awesomejev.cc/projects/stephenlb/truetype.ai-open) · [Repository](https://github.com/stephenlb/truetype.ai-open)
-
-- [Hinge-Jev](https://awesomejev.cc/projects/satiricalguru/hinge-jev) · [Repository](https://github.com/satiricalguru/Hinge-Jev)
 
 - [rev](https://awesomejev.cc/projects/54yyyu/rev) · [Repository](https://github.com/54yyyu/rev)
 
 - [tacet](https://awesomejev.cc/projects/codepawl/tacet) · [Repository](https://github.com/codepawl/tacet)
 
+- [tamev](https://awesomejev.cc/projects/tamkimd/tamev) · [Repository](https://github.com/tamkimd/tamev)
+
 - [browser-jev](https://awesomejev.cc/projects/daidr/browser-jev) · [Repository](https://github.com/daidr/browser-jev)
+
+- [decima](https://awesomejev.cc/projects/amyrmahdy/decima) · [Repository](https://github.com/amyrmahdy/decima)
 
 - [ezjev](https://awesomejev.cc/projects/everettjf/ezjev) · [Repository](https://github.com/everettjf/ezjev)
 
@@ -2913,8 +2917,6 @@ Explore independent open-source alternatives and implementations, with recorded 
 
 - [systemone](https://awesomejev.cc/projects/infinitylogesh/systemone) · [Repository](https://github.com/infinitylogesh/systemone)
 
-- [tamev](https://awesomejev.cc/projects/tamkimd/tamev) · [Repository](https://github.com/tamkimd/tamev)
-
 - [Tez](https://awesomejev.cc/projects/jibalmi/tez) · [Repository](https://github.com/Jibalmi/Tez)
 
 - [bivio](https://awesomejev.cc/projects/therealf/bivio) · [Repository](https://github.com/TheRealF/bivio)
@@ -2922,8 +2924,6 @@ Explore independent open-source alternatives and implementations, with recorded 
 - [Davout](https://awesomejev.cc/projects/ruhalis/davout) · [Repository](https://github.com/ruhalis/Davout)
 
 - [decida](https://awesomejev.cc/projects/heldernoid/decida) · [Repository](https://github.com/heldernoid/decida)
-
-- [decima](https://awesomejev.cc/projects/amyrmahdy/decima) · [Repository](https://github.com/amyrmahdy/decima)
 
 - [jeff-ink](https://awesomejev.cc/projects/saembit/jeff-ink) · [Repository](https://github.com/saembit/jeff-ink)
 
@@ -3009,9 +3009,9 @@ Explore directories that index multiple Jev projects, tools and ecosystem resour
 
 - [awesome-jev-usecases](https://awesomejev.cc/projects/anandi1989/awesome-jev-usecases) · [Repository](https://github.com/anandi1989/awesome-jev-usecases)
 
-- [awesome-jev](https://awesomejev.cc/projects/ckaraca/awesome-jev) · [Repository](https://github.com/ckaraca/awesome-jev)
-
 - [awesome-jev](https://awesomejev.cc/projects/mrjev/awesome-jev) · [Repository](https://github.com/MrJev/awesome-jev)
+
+- [awesome-jev](https://awesomejev.cc/projects/ckaraca/awesome-jev) · [Repository](https://github.com/ckaraca/awesome-jev)
 
 - [awesome-one](https://awesomejev.cc/projects/withoneai/awesome-one) · [Repository](https://github.com/withoneai/awesome-one)
 
@@ -3019,11 +3019,11 @@ Explore directories that index multiple Jev projects, tools and ecosystem resour
 
 - [awesome-jev](https://awesomejev.cc/projects/onmyway133/awesome-jev) · [Repository](https://github.com/onmyway133/awesome-jev)
 
+- [awesome-jev-robustness](https://awesomejev.cc/projects/yifan-lan/awesome-jev-robustness) · [Repository](https://github.com/Yifan-Lan/awesome-jev-robustness)
+
 - [jev-in-the-wild](https://awesomejev.cc/projects/jessie-qingyu/jev-in-the-wild) · [Repository](https://github.com/Jessie-QingYu/jev-in-the-wild)
 
 - [JevHub](https://awesomejev.cc/projects/frontierlabai/jevhub) · [Repository](https://github.com/frontierlabai/JevHub)
-
-- [awesome-jev-robustness](https://awesomejev.cc/projects/yifan-lan/awesome-jev-robustness) · [Repository](https://github.com/Yifan-Lan/awesome-jev-robustness)
 
 - [Awesome-jev-use](https://awesomejev.cc/projects/aipersonacademy/awesome-jev-use) · [Repository](https://github.com/AiPersonacademy/Awesome-jev-use)
 
@@ -3037,7 +3037,13 @@ Explore directories that index multiple Jev projects, tools and ecosystem resour
 
 - [awesome-jev-apps](https://awesomejev.cc/projects/justmalhar/awesome-jev-apps) · [Repository](https://github.com/Justmalhar/awesome-jev-apps)
 
+- [awesome-jev-hub](https://awesomejev.cc/projects/supermanc417-alt/awesome-jev-hub) · [Repository](https://github.com/supermanc417-alt/awesome-jev-hub)
+
 - [awesome-jev-use-cases](https://awesomejev.cc/projects/seeapi/awesome-jev-use-cases) · [Repository](https://github.com/SeeAPI/awesome-jev-use-cases)
+
+- [Jev-Research-Index](https://awesomejev.cc/projects/agenticapp-web/jev-research-index) · [Repository](https://github.com/AgenticAPP-Web/Jev-Research-Index)
+
+- [awesome-decision-models](https://awesomejev.cc/projects/sfmqrb/awesome-decision-models) · [Repository](https://github.com/sfmqrb/awesome-decision-models)
 
 - [awesome-jev](https://awesomejev.cc/projects/robokrunch/awesome-jev) · [Repository](https://github.com/robokrunch/awesome-jev)
 
@@ -3049,13 +3055,9 @@ Explore directories that index multiple Jev projects, tools and ecosystem resour
 
 - [jev\_info\_site](https://awesomejev.cc/projects/wizicer/jev_info_site) · [Repository](https://github.com/wizicer/jev_info_site)
 
-- [Jev-Research-Index](https://awesomejev.cc/projects/agenticapp-web/jev-research-index) · [Repository](https://github.com/AgenticAPP-Web/Jev-Research-Index)
-
 - [jev.aitools.fyi](https://awesomejev.cc/projects/imrishit98/jev.aitools.fyi) · [Repository](https://github.com/imrishit98/jev.aitools.fyi)
 
 - [jevusecases](https://awesomejev.cc/projects/thesekyi/jevusecases) · [Repository](https://github.com/theSekyi/jevusecases)
-
-- [awesome-decision-models](https://awesomejev.cc/projects/sfmqrb/awesome-decision-models) · [Repository](https://github.com/sfmqrb/awesome-decision-models)
 
 - [awesome-jev](https://awesomejev.cc/projects/majiayu000/awesome-jev) · [Repository](https://github.com/majiayu000/awesome-jev)
 
@@ -3068,8 +3070,6 @@ Explore directories that index multiple Jev projects, tools and ecosystem resour
 - [awesome-jev](https://awesomejev.cc/projects/dog-last/awesome-jev) · [Repository](https://github.com/dog-last/awesome-jev)
 
 - [awesome-jev-essentials](https://awesomejev.cc/projects/charetterat/awesome-jev-essentials) · [Repository](https://github.com/charetterat/awesome-jev-essentials)
-
-- [awesome-jev-hub](https://awesomejev.cc/projects/supermanc417-alt/awesome-jev-hub) · [Repository](https://github.com/supermanc417-alt/awesome-jev-hub)
 
 - [Jev-awesome](https://awesomejev.cc/projects/fanly/jev-awesome) · [Repository](https://github.com/fanly/Jev-awesome)
 
@@ -3125,13 +3125,13 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jevbench](https://awesomejev.cc/projects/fstandhartinger/jevbench) · [Repository](https://github.com/fstandhartinger/jevbench)
 
-- [jevals](https://awesomejev.cc/projects/openlayer-ai/jevals) · [Repository](https://github.com/openlayer-ai/jevals)
+- [RSI-Jev](https://awesomejev.cc/projects/shanghua-gao/rsi-jev) · [Repository](https://github.com/Shanghua-Gao/RSI-Jev)
 
 - [jev-as-a-judge](https://awesomejev.cc/projects/danielgshea/jev-as-a-judge) · [Repository](https://github.com/danielgshea/jev-as-a-judge)
 
-- [jevfire](https://awesomejev.cc/projects/kikoncuo/jevfire) · [Repository](https://github.com/kikoncuo/jevfire)
+- [jevals](https://awesomejev.cc/projects/openlayer-ai/jevals) · [Repository](https://github.com/openlayer-ai/jevals)
 
-- [RSI-Jev](https://awesomejev.cc/projects/shanghua-gao/rsi-jev) · [Repository](https://github.com/Shanghua-Gao/RSI-Jev)
+- [jevfire](https://awesomejev.cc/projects/kikoncuo/jevfire) · [Repository](https://github.com/kikoncuo/jevfire)
 
 - [Jev-as-Policy](https://awesomejev.cc/projects/yuankjing/jev-as-policy) · [Repository](https://github.com/YuanKJing/Jev-as-Policy)
 
@@ -3147,11 +3147,13 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [pix-golpe](https://awesomejev.cc/projects/sandeco/pix-golpe) · [Repository](https://github.com/sandeco/pix-golpe)
 
+- [jev-playground](https://awesomejev.cc/projects/deepdave98/jev-playground) · [Repository](https://github.com/deepdave98/jev-playground)
+
 - [jev-capability-atlas](https://awesomejev.cc/projects/zaious/jev-capability-atlas) · [Repository](https://github.com/Zaious/jev-capability-atlas)
 
-- [jev-on-a-laptop](https://awesomejev.cc/projects/rorshopping/jev-on-a-laptop) · [Repository](https://github.com/rorshopping/jev-on-a-laptop)
-
 - [jev-benchmarks](https://awesomejev.cc/projects/abdelstark/jev-benchmarks) · [Repository](https://github.com/AbdelStark/jev-benchmarks)
+
+- [jev-on-a-laptop](https://awesomejev.cc/projects/rorshopping/jev-on-a-laptop) · [Repository](https://github.com/rorshopping/jev-on-a-laptop)
 
 - [jev-column-race](https://awesomejev.cc/projects/goodrahstar/jev-column-race) · [Repository](https://github.com/goodrahstar/jev-column-race)
 
@@ -3159,9 +3161,9 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jeval](https://awesomejev.cc/projects/rlaope/jeval) · [Repository](https://github.com/rlaope/jeval)
 
-- [jevbetter](https://awesomejev.cc/projects/olanotolu/jevbetter) · [Repository](https://github.com/olanotolu/jevbetter)
-
 - [jev\_stock](https://awesomejev.cc/projects/sosopop/jev_stock) · [Repository](https://github.com/sosopop/jev_stock)
+
+- [jevbetter](https://awesomejev.cc/projects/olanotolu/jevbetter) · [Repository](https://github.com/olanotolu/jevbetter)
 
 - [typed\_evals](https://awesomejev.cc/projects/trustifai/typed_evals) · [Repository](https://github.com/TrustifAI/typed_evals)
 
@@ -3179,17 +3181,25 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [typed-decisions](https://awesomejev.cc/projects/kotoba-lang/typed-decisions) · [Repository](https://github.com/kotoba-lang/typed-decisions)
 
+- [jev-phishing-bench](https://awesomejev.cc/projects/anisselbd/jev-phishing-bench) · [Repository](https://github.com/anisselbd/jev-phishing-bench)
+
+- [JevNext](https://awesomejev.cc/projects/bring-ai/jevnext) · [Repository](https://github.com/Bring-AI/JevNext)
+
+- [jev-mcp](https://awesomejev.cc/projects/arunav25/jev-mcp) · [Repository](https://github.com/arunav25/jev-mcp)
+
+- [what-the-jev](https://awesomejev.cc/projects/keta1930/what-the-jev) · [Repository](https://github.com/keta1930/what-the-jev)
+
 - [ai-elo-ranker](https://awesomejev.cc/projects/opaielsheikh/ai-elo-ranker) · [Repository](https://github.com/opaielsheikh/ai-elo-ranker)
 
 - [jev-benchmark](https://awesomejev.cc/projects/wondertwins/jev-benchmark) · [Repository](https://github.com/wondertwins/jev-benchmark)
 
 - [jev-lm](https://awesomejev.cc/projects/y0usaf/jev-lm) · [Repository](https://github.com/y0usaf/jev-lm)
 
-- [jev-mcp](https://awesomejev.cc/projects/arunav25/jev-mcp) · [Repository](https://github.com/arunav25/jev-mcp)
-
-- [jev-phishing-bench](https://awesomejev.cc/projects/anisselbd/jev-phishing-bench) · [Repository](https://github.com/anisselbd/jev-phishing-bench)
+- [rubikjev](https://awesomejev.cc/projects/0xtrou/rubikjev) · [Repository](https://github.com/0xtrou/rubikjev)
 
 - [ui-generator-instinct-jev](https://awesomejev.cc/projects/joevidev/ui-generator-instinct-jev) · [Repository](https://github.com/joevidev/ui-generator-instinct-jev)
+
+- [jev-baselines-eval](https://awesomejev.cc/projects/ickma2311/jev-baselines-eval) · [Repository](https://github.com/ickma2311/jev-baselines-eval)
 
 - [jev-korean-benchmark](https://awesomejev.cc/projects/mahlernim/jev-korean-benchmark) · [Repository](https://github.com/mahlernim/jev-korean-benchmark)
 
@@ -3197,21 +3207,13 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [sysone-bench](https://awesomejev.cc/projects/instax-dutta/sysone-bench) · [Repository](https://github.com/instax-dutta/sysone-bench)
 
-- [what-the-jev](https://awesomejev.cc/projects/keta1930/what-the-jev) · [Repository](https://github.com/keta1930/what-the-jev)
+- [btc-jev-signal](https://awesomejev.cc/projects/webgrga/btc-jev-signal) · [Repository](https://github.com/WebGrga/btc-jev-signal)
 
 - [jev-2048](https://awesomejev.cc/projects/arcj137442/jev-2048) · [Repository](https://github.com/ARCJ137442/jev-2048)
-
-- [jev-baselines-eval](https://awesomejev.cc/projects/ickma2311/jev-baselines-eval) · [Repository](https://github.com/ickma2311/jev-baselines-eval)
-
-- [JevNext](https://awesomejev.cc/projects/bring-ai/jevnext) · [Repository](https://github.com/Bring-AI/JevNext)
 
 - [JevRanker](https://awesomejev.cc/projects/hgqimo/jevranker) · [Repository](https://github.com/hgqimo/JevRanker)
 
 - [qwen-rlcd](https://awesomejev.cc/projects/shamazharikh/qwen-rlcd) · [Repository](https://github.com/shamazharikh/qwen-rlcd)
-
-- [rubikjev](https://awesomejev.cc/projects/0xtrou/rubikjev) · [Repository](https://github.com/0xtrou/rubikjev)
-
-- [btc-jev-signal](https://awesomejev.cc/projects/webgrga/btc-jev-signal) · [Repository](https://github.com/WebGrga/btc-jev-signal)
 
 - [jev-plays](https://awesomejev.cc/projects/mansicer/jev-plays) · [Repository](https://github.com/mansicer/jev-plays)
 
@@ -3237,9 +3239,13 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-sec-bench](https://awesomejev.cc/projects/gaurav-gosain/jev-sec-bench) · [Repository](https://github.com/Gaurav-Gosain/jev-sec-bench)
 
+- [jev-spam-eval](https://awesomejev.cc/projects/bitnovus/jev-spam-eval) · [Repository](https://github.com/bitnovus/jev-spam-eval)
+
 - [jevalyzer](https://awesomejev.cc/projects/killerz3/jevalyzer) · [Repository](https://github.com/killerz3/jevalyzer)
 
 - [no-hallucination](https://awesomejev.cc/projects/aryanchauhanoffical/no-hallucination) · [Repository](https://github.com/aryanchauhanoffical/no-hallucination)
+
+- [trading-bot-jev](https://awesomejev.cc/projects/spykoninho/trading-bot-jev) · [Repository](https://github.com/Spykoninho/trading-bot-jev)
 
 - [typesafe-arena](https://awesomejev.cc/projects/deepbluedynamics/typesafe-arena) · [Repository](https://github.com/DeepBlueDynamics/typesafe-arena)
 
@@ -3259,9 +3265,13 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-doom](https://awesomejev.cc/projects/olivier-motium/jev-doom) · [Repository](https://github.com/olivier-motium/jev-doom)
 
+- [jev-guardbench](https://awesomejev.cc/projects/dfranco-projects/jev-guardbench) · [Repository](https://github.com/dfranco-projects/jev-guardbench)
+
 - [jev-music-theory-1](https://awesomejev.cc/projects/adammichaelwood/jev-music-theory-1) · [Repository](https://github.com/adammichaelwood/jev-music-theory-1)
 
 - [jev-playground](https://awesomejev.cc/projects/wustep/jev-playground) · [Repository](https://github.com/wustep/jev-playground)
+
+- [jev-rag-benchmark](https://awesomejev.cc/projects/emretheus/jev-rag-benchmark) · [Repository](https://github.com/emretheus/jev-rag-benchmark)
 
 - [jev-research-eval](https://awesomejev.cc/projects/jgridifier/jev-research-eval) · [Repository](https://github.com/jgridifier/jev-research-eval)
 
@@ -3269,19 +3279,17 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-secret-detection](https://awesomejev.cc/projects/teyhouse/jev-secret-detection) · [Repository](https://github.com/teyhouse/jev-secret-detection)
 
-- [jev-spam-eval](https://awesomejev.cc/projects/bitnovus/jev-spam-eval) · [Repository](https://github.com/bitnovus/jev-spam-eval)
-
 - [jev-synergy-screening](https://awesomejev.cc/projects/pistachioaihq/jev-synergy-screening) · [Repository](https://github.com/PistachioAIHQ/jev-synergy-screening)
 
 - [jev-synthetic-survey](https://awesomejev.cc/projects/jjd-lab/jev-synthetic-survey) · [Repository](https://github.com/jjd-lab/jev-synthetic-survey)
+
+- [jev-tool-search](https://awesomejev.cc/projects/kachar/jev-tool-search) · [Repository](https://github.com/kachar/jev-tool-search)
 
 - [jev-writer](https://awesomejev.cc/projects/kaos599/jev-writer) · [Repository](https://github.com/Kaos599/jev-writer)
 
 - [jevcheck](https://awesomejev.cc/projects/sathariels/jevcheck) · [Repository](https://github.com/sathariels/jevcheck)
 
 - [let-jev-speak](https://awesomejev.cc/projects/suidouble/let-jev-speak) · [Repository](https://github.com/suidouble/let-jev-speak)
-
-- [trading-bot-jev](https://awesomejev.cc/projects/spykoninho/trading-bot-jev) · [Repository](https://github.com/Spykoninho/trading-bot-jev)
 
 - [agentic-jev](https://awesomejev.cc/projects/fbddcz/agentic-jev) · [Repository](https://github.com/FBddcz/agentic-jev)
 
@@ -3323,8 +3331,6 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-graphrag](https://awesomejev.cc/projects/neo4j-field/jev-graphrag) · [Repository](https://github.com/neo4j-field/jev-graphrag)
 
-- [jev-guardbench](https://awesomejev.cc/projects/dfranco-projects/jev-guardbench) · [Repository](https://github.com/dfranco-projects/jev-guardbench)
-
 - [jev-jp-address](https://awesomejev.cc/projects/smasato/jev-jp-address) · [Repository](https://github.com/smasato/jev-jp-address)
 
 - [jev-lab](https://awesomejev.cc/projects/llt22/jev-lab) · [Repository](https://github.com/llt22/jev-lab)
@@ -3347,8 +3353,6 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-prompt-optimization](https://awesomejev.cc/projects/j341nono/jev-prompt-optimization) · [Repository](https://github.com/j341nono/jev-prompt-optimization)
 
-- [jev-rag-benchmark](https://awesomejev.cc/projects/emretheus/jev-rag-benchmark) · [Repository](https://github.com/emretheus/jev-rag-benchmark)
-
 - [jev-report](https://awesomejev.cc/projects/hacksing/jev-report) · [Repository](https://github.com/HackSing/jev-report)
 
 - [jev-sandbox](https://awesomejev.cc/projects/amr05008/jev-sandbox) · [Repository](https://github.com/amr05008/jev-sandbox)
@@ -3357,9 +3361,9 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-test](https://awesomejev.cc/projects/clduab11/jev-test) · [Repository](https://github.com/clduab11/jev-test)
 
-- [jev-tool-search](https://awesomejev.cc/projects/kachar/jev-tool-search) · [Repository](https://github.com/kachar/jev-tool-search)
-
 - [jev-trade](https://awesomejev.cc/projects/waxmell114514/jev-trade) · [Repository](https://github.com/Waxmell114514/jev-trade)
+
+- [jev-typesafe-real-financial-use-cases](https://awesomejev.cc/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Repository](https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases)
 
 - [jevals-data](https://awesomejev.cc/projects/jevals/jevals-data) · [Repository](https://github.com/Jevals/jevals-data)
 
@@ -3551,8 +3555,6 @@ Find research and evaluation projects exploring decision models and Jev-related 
 
 - [jev-packs](https://awesomejev.cc/projects/dtduc-git/jev-packs) · [Repository](https://github.com/dtduc-git/jev-packs)
 
-- [jev-playground](https://awesomejev.cc/projects/deepdave98/jev-playground) · [Repository](https://github.com/deepdave98/jev-playground)
-
 - [jev-playground](https://awesomejev.cc/projects/imom39a/jev-playground) · [Repository](https://github.com/imom39a/jev-playground)
 
 - [jev-poc](https://awesomejev.cc/projects/tatsuo48/jev-poc) · [Repository](https://github.com/tatsuo48/jev-poc)
@@ -3608,8 +3610,6 @@ Find research and evaluation projects exploring decision models and Jev-related 
 - [jev-traffic-race](https://awesomejev.cc/projects/yshraj/jev-traffic-race) · [Repository](https://github.com/yshraj/jev-traffic-race)
 
 - [jev-translation-checker](https://awesomejev.cc/projects/mshk/jev-translation-checker) · [Repository](https://github.com/mshk/jev-translation-checker)
-
-- [jev-typesafe-real-financial-use-cases](https://awesomejev.cc/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Repository](https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases)
 
 - [jev-typesafe-spike](https://awesomejev.cc/projects/frquintero/jev-typesafe-spike) · [Repository](https://github.com/frquintero/jev-typesafe-spike)
 
@@ -3709,13 +3709,13 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [typesafe-mcp](https://awesomejev.cc/projects/itsmostafa/typesafe-mcp) · [Repository](https://github.com/itsmostafa/typesafe-mcp)
 
-- [JEV\_sees](https://awesomejev.cc/projects/charlesfeng0314/jev_sees) · [Repository](https://github.com/CharlesFeng0314/JEV_sees)
-
 - [typesafe-sdk-python](https://awesomejev.cc/projects/typesafe-ai/typesafe-sdk-python) · [Repository](https://github.com/typesafe-ai/typesafe-sdk-python)
 
 - [typesafe-sdk-js](https://awesomejev.cc/projects/typesafe-ai/typesafe-sdk-js) · [Repository](https://github.com/typesafe-ai/typesafe-sdk-js)
 
 - [openai-scala-client](https://awesomejev.cc/projects/cequence-io/openai-scala-client) · [Repository](https://github.com/cequence-io/openai-scala-client)
+
+- [JEV\_sees](https://awesomejev.cc/projects/charlesfeng0314/jev_sees) · [Repository](https://github.com/CharlesFeng0314/JEV_sees)
 
 - [jevcore](https://awesomejev.cc/projects/perrylink/jevcore) · [Repository](https://github.com/PerryLink/jevcore)
 
@@ -3737,13 +3737,13 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [spring-ai-typesafe](https://awesomejev.cc/projects/spring-ai-community/spring-ai-typesafe) · [Repository](https://github.com/spring-ai-community/spring-ai-typesafe)
 
-- [pi-typesafe](https://awesomejev.cc/projects/devmortimer/pi-typesafe) · [Repository](https://github.com/DevMortimer/pi-typesafe)
-
 - [Jevbridge](https://awesomejev.cc/projects/tacticocc/jevbridge) · [Repository](https://github.com/tacticocc/Jevbridge)
 
-- [jev-code](https://awesomejev.cc/projects/francoischastel/jev-code) · [Repository](https://github.com/FrancoisChastel/jev-code)
+- [pi-typesafe](https://awesomejev.cc/projects/devmortimer/pi-typesafe) · [Repository](https://github.com/DevMortimer/pi-typesafe)
 
 - [go-jev](https://awesomejev.cc/projects/mattn/go-jev) · [Repository](https://github.com/mattn/go-jev)
+
+- [jev-code](https://awesomejev.cc/projects/francoischastel/jev-code) · [Repository](https://github.com/FrancoisChastel/jev-code)
 
 - [vibecheck](https://awesomejev.cc/projects/jlowin/vibecheck) · [Repository](https://github.com/jlowin/vibecheck)
 
@@ -3757,9 +3757,9 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [jev-mcp](https://awesomejev.cc/projects/blakestone-x/jev-mcp) · [Repository](https://github.com/blakestone-x/jev-mcp)
 
-- [fastjev](https://awesomejev.cc/projects/chengyongru/fastjev) · [Repository](https://github.com/chengyongru/fastjev)
-
 - [llm-typesafe](https://awesomejev.cc/projects/simonw/llm-typesafe) · [Repository](https://github.com/simonw/llm-typesafe)
+
+- [fastjev](https://awesomejev.cc/projects/chengyongru/fastjev) · [Repository](https://github.com/chengyongru/fastjev)
 
 - [hunch](https://awesomejev.cc/projects/carldaws/hunch) · [Repository](https://github.com/carldaws/hunch)
 
@@ -3775,6 +3775,8 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [jev-rs](https://awesomejev.cc/projects/yijunyu/jev-rs) · [Repository](https://github.com/yijunyu/jev-rs)
 
+- [AnyDecisionModel](https://awesomejev.cc/projects/mattt/anydecisionmodel) · [Repository](https://github.com/mattt/AnyDecisionModel)
+
 - [jev-studio](https://awesomejev.cc/projects/utk2103/jev-studio) · [Repository](https://github.com/utk2103/jev-studio)
 
 - [jevonian](https://awesomejev.cc/projects/xinyao27/jevonian) · [Repository](https://github.com/xinyao27/jevonian)
@@ -3783,23 +3785,21 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [jev-rerank](https://awesomejev.cc/projects/hev/reranker) · [Repository](https://github.com/hev/reranker)
 
-- [AnyDecisionModel](https://awesomejev.cc/projects/mattt/anydecisionmodel) · [Repository](https://github.com/mattt/AnyDecisionModel)
-
-- [jevql](https://awesomejev.cc/projects/kylemclaren/jevql) · [Repository](https://github.com/kylemclaren/jevql)
-
 - [typesafe-ai](https://awesomejev.cc/projects/twister915/typesafe-ai) · [Repository](https://github.com/Twister915/typesafe-ai)
 
 - [typesafe-ai-php](https://awesomejev.cc/projects/sanmai/typesafe-ai-php) · [Repository](https://github.com/sanmai/typesafe-ai-php)
 
-- [jev](https://awesomejev.cc/projects/stefafafan/jev) · [Repository](https://github.com/stefafafan/jev)
+- [jevql](https://awesomejev.cc/projects/kylemclaren/jevql) · [Repository](https://github.com/kylemclaren/jevql)
 
-- [typesafe-dotnet-sdk](https://awesomejev.cc/projects/saibimajdi/typesafeai-dotnet-sdk) · [Repository](https://github.com/saibimajdi/typesafeai-dotnet-sdk)
+- [jev](https://awesomejev.cc/projects/stefafafan/jev) · [Repository](https://github.com/stefafafan/jev)
 
 - [typesafe-sdk-go](https://awesomejev.cc/projects/atharvamhaske/typesafe-sdk-go) · [Repository](https://github.com/atharvamhaske/typesafe-sdk-go)
 
 - [jev-ultralightspeed](https://awesomejev.cc/projects/collapseindex/jev-ultralightspeed) · [Repository](https://github.com/collapseindex/jev-ultralightspeed)
 
 - [jev4k](https://awesomejev.cc/projects/pambrose/jev4k) · [Repository](https://github.com/pambrose/jev4k)
+
+- [typesafe-dotnet-sdk](https://awesomejev.cc/projects/saibimajdi/typesafeai-dotnet-sdk) · [Repository](https://github.com/saibimajdi/typesafeai-dotnet-sdk)
 
 - [typesafe-sdk-java](https://awesomejev.cc/projects/premo-cloud/typesafe-sdk-java) · [Repository](https://github.com/Premo-Cloud/typesafe-sdk-java)
 
@@ -3869,6 +3869,8 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [dsh-jev-adapter](https://awesomejev.cc/projects/betterzflyee/dsh-jev-adapter) · [Repository](https://github.com/BetterZflyee/dsh-jev-adapter)
 
+- [dsh-jev-decide](https://awesomejev.cc/projects/nanami-0713/dsh-jev-decide) · [Repository](https://github.com/nanami-0713/dsh-jev-decide)
+
 - [hunch](https://awesomejev.cc/projects/steven-shoemaker/hunch) · [Repository](https://github.com/steven-shoemaker/hunch)
 
 - [jevshield](https://awesomejev.cc/projects/lgy1027/jevshield) · [Repository](https://github.com/lgy1027/jevshield)
@@ -3883,11 +3885,11 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [typesafe-ai-java](https://awesomejev.cc/projects/jamilxt/typesafe-ai-java) · [Repository](https://github.com/jamilxt/typesafe-ai-java)
 
+- [typesafe-sdk-swift](https://awesomejev.cc/projects/insanearts/typesafe-sdk-swift) · [Repository](https://github.com/InsaneArts/typesafe-sdk-swift)
+
 - [dbt\_jev](https://awesomejev.cc/projects/smithclay/dbt_jev) · [Repository](https://github.com/smithclay/dbt_jev)
 
 - [dsh-jev](https://awesomejev.cc/projects/noetion/dsh-jev) · [Repository](https://github.com/noetion/dsh-jev)
-
-- [dsh-jev-decide](https://awesomejev.cc/projects/nanami-0713/dsh-jev-decide) · [Repository](https://github.com/nanami-0713/dsh-jev-decide)
 
 - [ElBruno.AI.Jev](https://awesomejev.cc/projects/elbruno/elbruno.ai.jev) · [Repository](https://github.com/elbruno/ElBruno.AI.Jev)
 
@@ -3945,7 +3947,7 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [typesafe-sdk-rust](https://awesomejev.cc/projects/codeitlikemiley/typesafe-sdk-rust) · [Repository](https://github.com/codeitlikemiley/typesafe-sdk-rust)
 
-- [typesafe-sdk-swift](https://awesomejev.cc/projects/insanearts/typesafe-sdk-swift) · [Repository](https://github.com/InsaneArts/typesafe-sdk-swift)
+- [vellum](https://awesomejev.cc/projects/sanity-labs/vellum) · [Repository](https://github.com/sanity-labs/vellum)
 
 - [adk-go-typesafe](https://awesomejev.cc/projects/craigh33/adk-go-typesafe) · [Repository](https://github.com/craigh33/adk-go-typesafe)
 
@@ -4013,8 +4015,6 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 
 - [typesafe-sdk-php](https://awesomejev.cc/projects/butochnikov/typesafe-sdk-php) · [Repository](https://github.com/Butochnikov/typesafe-sdk-php)
 
-- [vellum](https://awesomejev.cc/projects/sanity-labs/vellum) · [Repository](https://github.com/sanity-labs/vellum)
-
 - [clojev](https://awesomejev.cc/projects/antlobach/clojev) · [Repository](https://github.com/antlobach/clojev)
 
 - [composable-jev](https://awesomejev.cc/projects/fox-islam/composable-jev) · [Repository](https://github.com/Fox-Islam/composable-jev)
@@ -4034,6 +4034,8 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 - [gram-render](https://awesomejev.cc/projects/wei-b0/gram-render) · [Repository](https://github.com/wei-b0/gram-render)
 
 - [guideme-rust](https://awesomejev.cc/projects/pedro-pscunha/guideme-rust) · [Repository](https://github.com/pedro-pscunha/guideme-rust)
+
+- [honeytongue](https://awesomejev.cc/projects/tbrought/honeytongue) · [Repository](https://github.com/tbrought/honeytongue)
 
 - [hunch-ts](https://awesomejev.cc/projects/carldaws/hunch-ts) · [Repository](https://github.com/carldaws/hunch-ts)
 
@@ -4198,8 +4200,6 @@ Find SDKs, client libraries and integrations for connecting Jev to your applicat
 - [guideme-python](https://awesomejev.cc/projects/pedro-pscunha/guideme-python) · [Repository](https://github.com/pedro-pscunha/guideme-python)
 
 - [guideme-typescript](https://awesomejev.cc/projects/pedro-pscunha/guideme-typescript) · [Repository](https://github.com/pedro-pscunha/guideme-typescript)
-
-- [honeytongue](https://awesomejev.cc/projects/tbrought/honeytongue) · [Repository](https://github.com/tbrought/honeytongue)
 
 - [jev](https://awesomejev.cc/projects/taifoon-io/jev) · [Repository](https://github.com/taifoon-io/jev)
 

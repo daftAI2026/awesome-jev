@@ -2,9 +2,14 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+error-policy.test.ts: 错误状态与缺失分离、Error message/stack/cause 脱敏离线回归
+error-page-fixture.ts: 当前源码临时复制与测试专用故障路由，生产构建不含触发入口
+error-delivery.test.ts: 隔离产物十条真实错误/恢复回归，检查脱敏/状态/索引/恢复入口
+tag-delivery.test.ts: 真实 HTTP 三语言标签索引/详情内链、分页、同义 301、特殊字符/长尾 noindex 与未知 404
+project-tags.test.ts: 公开标签同义/按项目去重、特殊字符/注入路径、原始快照和 Action bot 候选不变回归
 pagination.test.ts: Node 全量筛选后每页 50 条、边界、排名和规范地址回归
 pagination-delivery.test.ts: Node 三语言真实 HTTP 全分类/Top100/新闻的逐页内容与规范地址回归
-generate-llms.ts: Node 构建期公开文档生成器，分类/排名/路径复用规范规则，展示字段白名单隔离审计
+generate-llms.ts: Node 构建期公开文档生成器，公开标签路由/原始主题边界同步，分类/排名/路径复用规范规则，展示字段白名单隔离审计
 agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG 安全/授权回归
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
 agent-delivery.test.ts: Node 真实 HTTP 机器文档媒体类型、互链/实体地址与页脚入口回归
@@ -29,8 +34,8 @@ directory-catalog.ts: 构建期展示白名单与虚拟模块，规范快照保�
 og-image.test.ts: 真实 WASM PNG、白底排版、动态计数及 HTTP 版本/缓存/失败边界回归
 og-delivery.test.ts: 实际 Worker PNG、缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
-generate-sitemap.test.ts: Node test generate-sitemap 的契约与回归验证，运行 npm test
-generate-sitemap.ts: 生成三种语言的有限索引，排除收藏和不足摘要
+generate-sitemap.test.ts: Node 三语言有限索引、摘要门槛、同义标签/长尾排除与身份唯一回归
+generate-sitemap.ts: 生成三种语言的有限索引与至少三项目共用的公开标签页，排除收藏和不足摘要
 github-client.test.ts: Node test 响应头/限流/截止、读写隔离与未知写入不重试的离线回归
 github-ref-cleanup.ts: 专用单 ref updateRefs expected SHA 删除能力，无通用 GraphQL 写入口或自动重试
 github-ref-cleanup.test.ts: 专用 CAS 删除能力的固定 mutation、expected SHA 与未知写入不重试回归
@@ -45,7 +50,7 @@ inclusion.ts: 采集侧收录证据校验与改动验证
 jev-client.ts: 仅服务端的 Jev 审核请求和决策契约
 locale-routes.test.ts: Node test 三语言路径、hreflang 与首页 GitHub 目录搜索/分享文案契约
 masonry.test.ts: Node test 通道/间距和水合前滚动的窗口/位置契约，避免自然流丢失虚拟前缀
-model-types.ts: 采集、GitHub 来源与模型审核的共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubQuery 仅声明只读 GraphQL
+model-types.ts: 原始 tags 与公开投影分界，采集、GitHub 来源与模型审核共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubQuery 仅声明只读 GraphQL
 news-sync.test.ts: Node test news-sync 的契约与回归验证，运行 npm test
 not-found.test.ts: Node test 真实 HTTP 404/三语言/恢复链接与正常页索引回归，需 TEST_SITE_ORIGIN
 page-delivery.test.ts: Node test favicon 真实 SVG、三语言旧地址 301、启动模块总依赖、有界推荐/分类内链与三语言 H1/摘要一致性，使用 TEST_BUILD_OUTPUT/TEST_SITE_ORIGIN
@@ -85,7 +90,7 @@ submission-intake-workflow.test.ts: Node test 执行隔离 Bash/gh 交接命令�
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理
-verify-delivery.ts: 构建后零跳过页面/OG/Agents/分页 HTTP 与模块图验收，只拥有自有预览生命周期
+verify-delivery.ts: 构建后零跳过页面/OG/Agents/分页/标签 HTTP 与模块图验收，只拥有自有预览生命周期
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

@@ -1,13 +1,15 @@
 /**
  * [INPUT]: 依赖目录展示投影、搜索/排序/分页与项目/新闻/收藏/Agents 组件
- * [OUTPUT]: 提供目录布局、手机固定两行控制栏、分类说明、每页 50 条、投稿与 Agents 页脚
+ * [OUTPUT]: 提供标签聚合/索引与页脚内链、目录布局、手机固定两行控制栏、分类说明、每页 50 条、投稿与 Agents 页脚
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
-import { useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
-import { GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
+import { Link, useMatches, useNavigate, useRouterState } from '@tanstack/react-router'
+import { Hash, GithubLogo, Info, List, MagnifyingGlass, Plus, SquaresFour, X } from '@phosphor-icons/react'
 import { AsciiWordmark } from '@/components/AsciiWordmark'
+import { DirectoryBrowseFooter } from '@/components/DirectoryBrowseFooter'
+import { projectTagIndex, projectTagFromPath, projectTagPath, hasProjectTag, normalizeProjectTag, TAG_INDEX_MIN_PROJECTS } from '@/lib/project-tags'
 import { AgentsFooter } from '@/components/AgentsFooter'
 import { CardMasonry } from '@/components/CardMasonry'
 import { DirectoryPagination } from '@/components/DirectoryPagination'
@@ -39,15 +41,16 @@ import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
 import { findGitHubProject, projectPathFromUrl } from '@/lib/project-routes'
 import { localizedPath, stripLocalePrefix } from '@/lib/locale-routes'
 
-type DirectoryFilter = 'all' | 'top100' | 'news' | 'saved' | Category
+type DirectoryFilter = 'all' | 'top100' | 'news' | 'saved' | 'tags' | Category | `tag:${string}`
 type GithubItem = DirectoryItem & { category?: Category }
 const items = directoryProjects
+const publicTags = projectTagIndex(items).filter((entry) => entry.count >= TAG_INDEX_MIN_PROJECTS)
 const catalogUpdatedAt = import.meta.env.VITE_CATALOG_UPDATED_AT
 const catalogUpdatedLabel = formatCatalogUpdatedAt(catalogUpdatedAt)
 const githubRanks = directoryRanks
 const categoryCounts = directoryCategoryCounts
 const FILTER_LABEL = {
-  all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', saved: 'categorySaved',
+  tags: 'tagsTitle', all: 'categoryAll', top100: 'categoryTop100', news: 'categoryNews', saved: 'categorySaved',
   ...CATEGORY_LABEL,
 } as const
 const GITHUB_SORT_KEY = 'awesome-jev-github-sort'
@@ -60,11 +63,16 @@ function filterFromPath(pathname: string): DirectoryFilter | null {
   if (pathname === '/top100') return 'top100'
   if (pathname === '/news') return 'news'
   if (pathname === '/saved') return 'saved'
+  if (pathname === '/tags' || pathname === '/tags/') return 'tags'
+  const tag = projectTagFromPath(pathname)
+  if (tag) return `tag:${tag}`
   const category = pathname.match(/^\/category\/([^/]+)\/?$/)?.[1]
   return CATEGORIES.find((entry) => entry === category) ?? null
 }
 
 function filterPath(filter: DirectoryFilter): string {
+  if (filter.startsWith('tag:')) return projectTagPath(filter.slice(4))
+  if (filter === 'tags') return '/tags'
   if (filter === 'all') return '/'
   if (filter === 'top100' || filter === 'news' || filter === 'saved') return `/${filter}`
   return `/category/${filter}`
@@ -136,10 +144,11 @@ export default function App() {
     }
     const next = filterFromPath(pathname)
     if (next) {
+      if ((next === 'tags') !== (filter === 'tags')) setQuery('')
       setFilter(next)
       setDetailOpen(false)
     }
-  }, [basePath])
+  }, [basePath, pathname, filter])
   useEffect(() => {
     if (basePath === '/saved') setLastSavedSearch(savedRouteSearch(routeSearch))
   }, [basePath, routeSearch])
@@ -254,11 +263,14 @@ export default function App() {
   }, [filter, savedProjectIds, detailOpen, toggleProjectSavedRaw, onDetailOpenChange])
   const toggleNewsSaved = useCallback((item: NewsItem) => toggleSaved('news', item.id), [toggleSaved])
   const requestSavedNews = useCallback(() => setSavedNewsRequested(true), [])
-  const filterButton = (id: DirectoryFilter) => {
+  const activeTag = filter.startsWith('tag:') ? filter.slice(4) : null
+  const activeFilterLabel = activeTag ? t('tagPageTitle', { tag: activeTag }) : t(FILTER_LABEL[filter as keyof typeof FILTER_LABEL])
+  const filterButton = (id: keyof typeof FILTER_LABEL) => {
     const count = id === 'top100' ? undefined
       : id === 'all' ? items.length
       : id === 'news' ? (routeNewsItems ?? newsItems)?.length
       : id === 'saved' ? savedEntries.length
+      : id === 'tags' ? publicTags.length
       : categoryCounts[id]
     return (
       <Button
@@ -289,15 +301,18 @@ export default function App() {
       <Separator className="my-1" />
       {filterButton('all')}
       {CATEGORIES.map(filterButton)}
+      <Separator className="my-1" />
+      {filterButton('tags')}
     </nav>
   )
   const matched = useMemo(() => {
-    if (filter === 'news' || filter === 'saved') return []
+    if (filter === 'news' || filter === 'saved' || filter === 'tags') return []
     const searched = searchItems(items, query, 'github', []) as GithubItem[]
+    if (activeTag) return searched.filter((item) => hasProjectTag(item, activeTag))
     if (filter === 'all') return searched
     if (filter === 'top100') return searched.filter((item) => (githubRanks.get(item.id) ?? Infinity) <= TOP_PROJECT_LIMIT)
     return searched.filter((item) => (item.category ?? 'other') === filter)
-  }, [query, filter])
+  }, [query, filter, activeTag])
   const sorted = useMemo(() => sortGithubItems(matched, sort), [matched, sort])
   const projectPage = paginate(sorted, directoryState.page)
   const changeQuery = (next: string) => {
@@ -305,9 +320,12 @@ export default function App() {
     if (directoryState.page) void navigate({ to: pathname, search: { ...routeSearch, page: undefined }, replace: true, resetScroll: false })
   }
   const hasQuery = query.trim().length > 0
+  const tagQuery = query.trim().toLowerCase()
+  const canonicalTagQuery = normalizeProjectTag(query)
+  const matchingTags = publicTags.filter(({ tag }) => tag.includes(tagQuery) || tag === canonicalTagQuery)
   const resultLabel = t(matched.length === 1 ? 'resultCount' : 'resultCountPlural', { count: matched.length })
   const activeCategory = CATEGORIES.find((category) => category === filter)
-  const BrandHeading = activeCategory ? 'div' : 'h1'
+  const BrandHeading = activeCategory || activeTag || filter === 'tags' ? 'div' : 'h1'
   const detailCategory = detailItem ? items.find((item) => item.id === detailItem.id)?.category : undefined
 
   return (
@@ -367,9 +385,9 @@ export default function App() {
             <div className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap">
               <Sheet open={categoryOpen} onOpenChange={setCategoryOpen}>
                 <SheetTrigger render={<Button variant="outline" size="sm" className="col-span-2 justify-self-start xl:hidden"
-                  aria-label={`${t(FILTER_LABEL[filter])} · ${t('openCategories')}`} />}>
+                  aria-label={`${activeFilterLabel} · ${t('openCategories')}`} />}>
                   <List className="size-4" weight="fill" aria-hidden />
-                  {t(FILTER_LABEL[filter])}
+                  {activeFilterLabel}
                 </SheetTrigger>
                 <SheetContent side="left" showCloseButton={false}
                   className="gap-0 p-0 shadow-none data-[side=left]:w-72 data-[side=left]:sm:max-w-72">
@@ -386,7 +404,7 @@ export default function App() {
                   <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pt-3 pb-4">{categoryNav}</div>
                 </SheetContent>
               </Sheet>
-              {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[sort]} onValueChange={(values) => {
+              {filter !== 'news' && filter !== 'saved' && filter !== 'tags' && <ToggleGroup value={[sort]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'stars' || next === 'date' || next === 'name') {
                   setPreferredSort(next)
@@ -397,7 +415,7 @@ export default function App() {
                 <ToggleGroupItem value="date">{t('sortDate')}</ToggleGroupItem>
                 <ToggleGroupItem value="name">{t('sortName')}</ToggleGroupItem>
               </ToggleGroup>}
-              {filter !== 'news' && filter !== 'saved' && <ToggleGroup value={[view]} onValueChange={(values) => {
+              {filter !== 'news' && filter !== 'saved' && filter !== 'tags' && <ToggleGroup value={[view]} onValueChange={(values) => {
                 const next = values[0]
                 if (next === 'cards' || next === 'list') setView(next)
               }} variant="outline" size="sm" aria-label={t('viewLabel')} className="ml-auto rounded-lg">
@@ -406,14 +424,23 @@ export default function App() {
               </ToggleGroup>}
             </div>
           </div>
-          {hasQuery && filter !== 'news' && filter !== 'saved' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
+          {hasQuery && filter !== 'news' && filter !== 'saved' && filter !== 'tags' && <p className="mb-6 text-sm text-muted-foreground tabular-nums">{resultLabel}</p>}
           {saveError && <p role="alert" className="mb-6 text-sm text-destructive">{t('savedStorageError')}</p>}
           <main id="main" tabIndex={-1}>
             {activeCategory && <section data-category-intro className="mb-6">
               <h1 className="text-xl font-medium">{t(CATEGORY_LABEL[activeCategory])}</h1>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t(CATEGORY_DESCRIPTION[activeCategory])}</p>
             </section>}
-            {filter === 'news' ? (
+            {activeTag && <section data-tag-intro className="mb-6"><Link to={localizedPath('/tags', locale)} className="mb-3 inline-block rounded-sm text-sm text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring">{t('allTags')}</Link><h1 className="text-xl font-medium">{t('tagPageTitle', { tag: activeTag })}</h1><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t('tagPageDescription', { tag: activeTag })}</p></section>}
+            {filter === 'tags' ? <section data-tag-index>
+              <h1 className="text-xl font-medium">{t('tagsTitle')}</h1>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t('tagsDescription')}</p>
+              <p className="mt-4 text-sm tabular-nums text-muted-foreground">{t('resultCountPlural', { count: matchingTags.length })}</p>
+              <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-4">
+                {matchingTags.map(({ tag, path, count }) => <li key={tag} className="max-w-full"><Link to={localizedPath(path, locale)} className="inline-flex max-w-full items-center gap-2 rounded-sm text-sm text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring active:translate-y-px"><Hash className="size-3 shrink-0" aria-hidden /><span className="break-all">{tag}</span><span className="tabular-nums">{count}</span></Link></li>)}
+              </ul>
+              {!matchingTags.length && <p className="mt-6 text-sm text-muted-foreground">{t('emptySearch')}</p>}
+            </section> : filter === 'news' ? (
               routeNewsItems === undefined ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
                   : <NewsPanel key={query} items={routeNewsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
                       previewId={newsPreviewId} onPreview={openNewsPreview} onPreviewClose={closeNewsPreview} />
@@ -435,13 +462,14 @@ export default function App() {
               <CardMasonry key={`${filter}:${query}:${sort}:${projectPage.page}`} items={projectPage.items} ranks={githubRanks} onPreview={openProjectPreview}
                 savedIds={savedProjectIds} onToggleSaved={toggleProjectSavedRaw} />
             )}
-            {filter !== 'news' && filter !== 'saved' && <DirectoryPagination total={sorted.length} page={projectPage.page} sort={sort} />}
+            {filter !== 'news' && filter !== 'saved' && filter !== 'tags' && <DirectoryPagination total={sorted.length} page={projectPage.page} sort={sort} />}
           </main>
         </div>
       </div>
       <footer className="mx-auto w-full max-w-[72.5rem] px-4 pt-8 pb-20 sm:px-8">
         <Separator className="mb-8" />
         <Alert><Info weight="fill" aria-hidden /><AlertTitle>{t('footerTitle')}</AlertTitle><AlertDescription>{t('footerDescription')}</AlertDescription></Alert>
+        <DirectoryBrowseFooter tags={publicTags} />
         <AgentsFooter />
       </footer>
       <GithubProjectDialog

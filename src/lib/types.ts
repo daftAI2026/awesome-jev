@@ -33,7 +33,7 @@ export interface DirectoryItem {
   type: ItemType
   title: string
   summary: string
-  /** GitHub repository topics. */
+  /** 原始标签含 GitHub topics、语言与采集器生态词；公开导航另作投影。 */
   tags?: string[]
   url: string
   sourceMeta: SourceMeta

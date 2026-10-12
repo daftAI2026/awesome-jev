@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 Vite 预览、构建产物和页面/OG/Agents/分页交付测试
+ * [INPUT]: 依赖 Vite 预览、构建产物和页面/OG/Agents/分页/标签交付测试
  * [OUTPUT]: 对外提供 runDelivery、可取消命令入口与零跳过集成验收
  * [POS]: scripts 的构建后验收编排器；只拥有并清理自己启动的进程组
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -75,7 +75,9 @@ export async function runDelivery(options: DeliveryOptions = {}): Promise<string
   const cwd = options.cwd ?? process.cwd()
   const port = await availablePort()
   const origin = `http://127.0.0.1:${port}`
-  const env = { ...process.env, DELIVERY_PREVIEW_PORT: String(port), TEST_BUILD_OUTPUT: path.join(cwd, 'dist/client'), TEST_SITE_ORIGIN: origin }
+  const env: NodeJS.ProcessEnv = { ...process.env, DELIVERY_PREVIEW_PORT: String(port), TEST_BUILD_OUTPUT: path.join(cwd, 'dist/client'), TEST_SITE_ORIGIN: origin }
+  // --- 子进程是独立测试运行器，不能继承父测试的递归标记 ---
+  delete env.NODE_TEST_CONTEXT
   const output = options.onOutput ?? (() => {})
   const preview = launch(options.previewCommand ?? [process.execPath, 'node_modules/vite/bin/vite.js', 'preview', '--host', '127.0.0.1', '--port', String(port), '--strictPort'], cwd, env, output)
   let tests: ReturnType<typeof launch> | undefined
@@ -96,13 +98,13 @@ export async function runDelivery(options: DeliveryOptions = {}): Promise<string
     }
     if (!ready) throw new Error(`Preview startup timeout: ${preview.output()}`)
     options.signal?.throwIfAborted()
-    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts', 'scripts/og-delivery.test.ts', 'scripts/agent-delivery.test.ts', 'scripts/pagination-delivery.test.ts'], cwd, env, output)
+    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts', 'scripts/og-delivery.test.ts', 'scripts/agent-delivery.test.ts', 'scripts/pagination-delivery.test.ts', 'scripts/tag-delivery.test.ts', 'scripts/error-delivery.test.ts'], cwd, env, output)
     let timer: ReturnType<typeof setTimeout> | undefined
     const cancelled = () => cancelReject?.(options.signal?.reason ?? new Error('Delivery cancelled'))
     let cancelReject: ((reason: unknown) => void) | undefined
     const code = await Promise.race([
       tests.done,
-      new Promise<never>((_, reject) => { timer = setTimeout(() => reject(new Error('Delivery test timeout')), options.testTimeoutMs ?? 180_000) }),
+      new Promise<never>((_, reject) => { timer = setTimeout(() => reject(new Error('Delivery test timeout')), options.testTimeoutMs ?? 360_000) }),
       new Promise<never>((_, reject) => {
         cancelReject = reject
         options.signal?.addEventListener('abort', cancelled, { once: true })

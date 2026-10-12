@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: 模块依赖、同版本部署、分页 SSR 与静态详情契约
+[OUTPUT]: 公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -157,3 +157,24 @@ Licensed fixed Geist/CJK fonts reside in `public/og-fonts` as Static Assets, rea
 Root metadata provides the runtime site image. Standalone and masked project routes override the complete image group together: HTTPS OG image/secure URL/type/dimensions/alt and Twitter large-image card/image/alt, alongside existing canonical, localized title, description and URL fields. Generic pages and news retain the site image; no news-level image generator is introduced. No unverifiable account handles or per-platform metadata are invented.
 
 The three-language `/og-workbench` route is a development-only, non-prerendered tool, excluded from the sitemap. Compile-time `import.meta.env.DEV` gates both beforeLoad and loader; production GET/HEAD requests return real 404s with no workbench data or page head. Query parameters and Host headers cannot enable it. Production preview is intentionally also denied; use `npm run dev -- --host 127.0.0.1` locally. `noindex` is only a local SEO hint, not access control. Public OG PNG endpoints remain available to social crawlers. Its own loader reads only the existing display projection and maps to title/URL/summary; it does not add catalog dependencies to unrelated route entry bundles. The browser-only `og-inspection` boundary reads actual same-origin HTML and PNG bytes on demand, checks required/duplicate tags and current expected image identity, verifies canonical and PNG MIME/dimensions, and exposes raw metadata. It neither executes inspected page scripts nor requests third-party preview services; external social-card caching cannot be guaranteed by these checks.
+
+
+## Public tag routes
+
+Raw snapshot tags → pure public-tag projection → detail links, directory filters and sitemap. These consumers share explicit aliases, per-project counts and the three-project index threshold. `/tags/:tag` reads only its count for head metadata; App reuses the existing display catalog. Standalone details receive only twelve footer tag summaries, not another full snapshot.
+
+Tag pages use Worker-first SSR so `?page=2` cannot receive page-one Static Assets. They are intentionally not added to Vite's prerender enumeration, avoiding thousands of additional builds. Canonical/hreflang use the normalized tag and bounded page; synonym 301 redirects retain page/sort. A low-count tag page remains navigable with noindex. `/tags` is the public index; no taxonomy database, model requests or new workflow is required.
+
+## Error recovery boundary
+
+- `NotFoundPage` keeps real HTTP 404 for unknown pages, projects and news.
+- `RecoveryPage` shares theme, language and native home/Top100/news links.
+- Root loader/beforeLoad failures replace the directory shell with HTTP 500.
+- Root client render failures show the same recovery UI. A delivered HTTP response cannot change its status afterwards.
+- Failed SSR uses `no-store`, `X-Robots-Tag: noindex` and a safe head without successful canonical/alternate metadata.
+- `start.ts` strips Error message/stack/cause from public serialization. Server logs retain diagnostics.
+- Retry reloads the current URL. Offline detection changes the explanation and updates on connection events; it does not cache pages or pretend to provide offline browsing.
+- Existing OG API 503/405 responses retain their media/protocol boundary. No HTML is substituted for PNG errors.
+- No authentication, rate limiter or maintenance mode exists in the app. Do not fabricate 401/403/429 routes or a fake `/500` page.
+- Cloudflare CPU termination, gateway 502/504 and server-render failure outside Router loading need platform/server-level recovery. React cannot catch them.
+- A temporary copy of current source injects failure routes for production-build HTTP tests. No fault route or switch enters deployment.
