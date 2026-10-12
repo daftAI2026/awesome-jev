@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 7,
-    "\"typesafe.ai\" in:readme fork:false": 7,
-    "\"Jev\" \"System One\" in:readme fork:false": 7,
-    "topic:typesafe-ai fork:false": 1,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 7,
-    "\"TypeSafe\" \"Jev\" fork:false": 7,
-    "code:\"api.typesafe.ai\" in:file": 7,
+    "topic:jev fork:false": 9,
+    "\"typesafe.ai\" in:readme fork:false": 9,
+    "\"Jev\" \"System One\" in:readme fork:false": 9,
+    "topic:typesafe-ai fork:false": 3,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
+    "\"TypeSafe\" \"Jev\" fork:false": 9,
+    "code:\"api.typesafe.ai\" in:file": 9,
     "code:\"@typesafe-ai/sdk\" in:file": 5,
     "code:\"TYPESAFE_API_KEY\" in:file": 6,
     "code:\"jev-latest\" in:file": 7
   },
-  "metadataCursor": 1528,
+  "metadataCursor": 385,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -196,7 +196,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 935
+      "stars": 944
     },
     "inso1337/revl": {
       "status": "review",
@@ -351,7 +351,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 150,
+      "stars": 153,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -2253,7 +2253,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 0
+      "stars": 1
     },
     "lbp97541135/repomesh_go_ver": {
       "status": "review",
@@ -2585,7 +2585,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
-      "retryAt": "2026-10-06T22:15:08.398Z"
+      "retryAt": "2026-10-06T22:15:08.398Z",
+      "stars": 3
     },
     "sunznx/skills": {
       "status": "review",
@@ -3013,7 +3014,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 0
+      "stars": 1
     },
     "diluteoxygen/jevname": {
       "status": "review",
@@ -5475,7 +5476,7 @@
       ],
       "checkedAt": "2026-10-01T13:14:43.978Z",
       "retryAt": "2026-10-08T13:14:43.978Z",
-      "stars": 12530
+      "stars": 12693
     },
     "akanthed/jev-migrate": {
       "status": "review",
@@ -5533,7 +5534,7 @@
         }
       ],
       "checkedAt": "2026-09-30T22:16:19.563Z",
-      "stars": 143,
+      "stars": 153,
       "lastReview": {
         "repo": "juspay/neurolink",
         "status": "review",
@@ -6202,7 +6203,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-30T22:16:19.563Z"
       },
-      "stars": 40,
+      "stars": 46,
       "retryAt": "2026-10-07T22:16:19.563Z"
     },
     "ufec/jev-block-android-ad": {
@@ -18985,6 +18986,10 @@
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "docs/typesafe-experiments.md"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "tests/test_typesafe_settings_messaging.py"
         }
       ],
       "checkedAt": "2026-09-30T22:16:19.563Z",
@@ -19004,8 +19009,7 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-09-30T22:16:19.563Z"
-      },
-      "retryAt": "2026-10-07T22:16:19.563Z"
+      }
     },
     "brokkai/mjolnir": {
       "status": "review",
@@ -26470,7 +26474,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T11:39:00.649Z",
       "attempts": 2,
-      "stars": 447,
+      "stars": 452,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "umputun/tg-spam",
@@ -27524,7 +27528,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 1
     },
     "harperreed/harperreed": {
       "status": "review",
@@ -28585,7 +28590,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 8,
+      "stars": 9,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "rcarmo/go-system-one",
@@ -29020,7 +29025,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "hanno-labs/decision-bench",
@@ -29066,7 +29071,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 21,
+      "stars": 22,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "9pings/notjev",
@@ -30824,7 +30829,7 @@
           "path": "repos/typia/tests/test-jev/src/features/test_jev_typesafe_sdk_contract.ts"
         }
       ],
-      "stars": 17,
+      "stars": 18,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "systemfsoftware/systemfsoftware",
@@ -38555,7 +38560,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 5,
+      "stars": 6,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "deyna256/langchain-skill-router",
@@ -39278,7 +39283,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 1983,
+      "stars": 1988,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -44127,7 +44132,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T21:20:54.542Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 4,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "andyqiuqiubo/andy-harness",
@@ -44286,7 +44291,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T05:43:59.256Z",
       "attempts": 1,
-      "stars": 30,
+      "stars": 32,
       "checkedAt": "2026-09-29T12:52:50.716Z",
       "lastReview": {
         "repo": "goldenloaf24h/browserpaw",
@@ -46285,7 +46290,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 10,
+      "stars": 11,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "caiovicentino/jev-risk-check-provider",
@@ -47050,5 +47055,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "sebastianbennis/jev-system-one-reference"
+  "metadataNext": "epergaboni/jevseo"
 }
