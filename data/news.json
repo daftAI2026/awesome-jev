@@ -4738,5 +4738,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
     "aihotUrl": "https://aihot.news/items/u8tmvx1eocao3k7c81h6vse2r"
+  },
+  {
+    "id": "rc16kc7la6wib4t4nqdosjglp",
+    "title": "Cloudflare 发布 Clef-omni：30B-A3B 多模态决策模型，单次调用评分文本、图像、音频和视频",
+    "originalTitle": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+    "summary": "Cloudflare 于 2026 年 10 月 9 日发布开放权重决策模型 Clef-omni，可在一次调用中对文本、图像、音频和视频打分。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-11T23:15:52.000Z",
+    "discoveredAt": "2026-10-12T00:48:41.770Z",
+    "category": "ai-models",
+    "score": 55,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/11/cloudflare-clef-omni-multimodal-decision-model/",
+    "aihotUrl": "https://aihot.news/items/rc16kc7la6wib4t4nqdosjglp"
   }
 ]
