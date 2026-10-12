@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-11T19:42:29.257Z",
+  "at": "2026-10-12T00:43:19.167Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,77 +20,26 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 4,
+  "reviewed": 1,
   "added": 0,
   "pending": 132,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "omnijev/onejev",
+      "repo": "foxl-ai/bobcat",
       "status": "review",
       "score": {
-        "jevAbout": 0.88,
+        "jevAbout": 0.96,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
+        "jevKeepConfidence": 0.89,
         "category": "alternatives"
       },
-      "sha": "474b50cabb325504dc0a4fb7622bd5a6f289c15d",
-      "evidenceUrl": "https://github.com/omnijev/onejev/blob/474b50cabb325504dc0a4fb7622bd5a6f289c15d/README.md",
-      "evidenceSha256": "0696aa502eda0a1663f3d20ab83a3913f1be53ca3d92ced3c858fd3842007a46",
+      "sha": "5268e01705c4059f3ba0a8d3de1811ccc167572c",
+      "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/5268e01705c4059f3ba0a8d3de1811ccc167572c/README.md",
+      "evidenceSha256": "485e2c43f91edebe3670de1ee47933b29c19c6a80c0beaefb201e75805a71986",
       "model": "jev-latest",
-      "checkedAt": "2026-10-11T19:42:29.257Z"
-    },
-    {
-      "repo": "bojansandhaus/jev-home-assistant-sentinel",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.07,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.43,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "b9de920be05360c6fac0db3e7186c7148cdb74d6",
-      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/b9de920be05360c6fac0db3e7186c7148cdb74d6/README.md",
-      "evidenceSha256": "5d7632d53137ef4a514d0d9f76724c8a62dce15321cc4620dab627bb47b30105",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-11T19:42:29.257Z"
-    },
-    {
-      "repo": "bojansandhaus/jev-lcm-hermes-compaction",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.06,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.46,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "10af053e7e0a12e91338a4d1ccebc2e587a79564",
-      "evidenceUrl": "https://github.com/bojansandhaus/jev-lcm-hermes-compaction/blob/10af053e7e0a12e91338a4d1ccebc2e587a79564/README.md",
-      "evidenceSha256": "7ba7c3208d17611a0bae159cd0f1d86dcddad5aeb743389125d7726fb71bb433",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-11T19:42:29.257Z"
-    },
-    {
-      "repo": "destroyerdarkness/turbojev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.8,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.92,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "59aad08ef2dd2290e2ce1bbe976e4ec2a48795cb",
-      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/59aad08ef2dd2290e2ce1bbe976e4ec2a48795cb/README.md",
-      "evidenceSha256": "e99778404da9639d93b915ec3b1fd5928b7969ba6170bd4464753f670c1e54b9",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-11T19:42:29.257Z"
+      "checkedAt": "2026-10-12T00:43:19.167Z"
     }
   ],
   "identity": {
