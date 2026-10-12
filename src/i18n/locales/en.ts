@@ -2,6 +2,7 @@
  * [INPUT]: 依赖站点界面语义
  * [OUTPUT]: 对外提供 en 文案、MessageKey 和 Messages 类型
  * [POS]: i18n/locales 的英文基准，定义所有语言必须满足的文案键
+ * 首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
@@ -27,10 +28,10 @@ export const en = {
   categorySdkDescription: 'Find SDKs, client libraries and integrations for connecting Jev to your applications.',
   categoryOtherDescription: 'Browse projects that do not fit the other categories, then inspect their original repositories.',
   githubCount: '{count} GitHub projects indexed',
-  documentTitle: 'Awesome JEV · free TypeSafe Jev / System One AI directory',
-  documentDescription: 'Awesome JEV is a free directory of TypeSafe Jev / System One GitHub projects. Find agents, SDKs, apps and developer tools, with source-backed inclusion notes and repository links.',
+  documentTitle: 'Awesome JEV · Jev GitHub Projects, SDKs & Tools',
+  documentDescription: 'Awesome JEV (awesome-jev): a free GitHub directory for the TypeSafe Jev / System One model. Explore official SDKs, agent tools, open-source alternatives and Jev news.',
   tagline:
-    'A free curated directory of TypeSafe Jev / System One AI projects.\nGitHub projects organized by what they build and how they use Jev.',
+    'A free GitHub project directory for the TypeSafe Jev / System One model.\nExplore official SDKs, agent tools, open-source alternatives and Jev news.',
   dataUpdated: 'Data updated',
   dataUpdatedTimezone: 'Time shown in Asia/Shanghai (UTC+8)',
   searchPlaceholder: 'Search GitHub…',

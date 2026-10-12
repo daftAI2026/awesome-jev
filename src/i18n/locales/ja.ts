@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
  * [OUTPUT]: 对外提供 ja 文案
- * [POS]: i18n/locales 的日文，与英文基准保持键契约一致
+ * [POS]: i18n/locales 的日文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import type { Messages } from './en.ts'
@@ -29,9 +29,9 @@ export const ja: Messages = {
   categorySdkDescription: 'Jev をアプリに接続する SDK、クライアントライブラリ、連携プロジェクトを探せます。',
   categoryOtherDescription: 'ほかのカテゴリに属さないプロジェクトの概要と元のリポジトリを確認できます。',
   githubCount: 'GitHub プロジェクト {count} 件を掲載',
-  documentTitle: 'Awesome JEV · TypeSafe Jev / System One の無料 AI プロジェクト集',
-  documentDescription: 'Awesome JEV は TypeSafe Jev / System One の無料 GitHub プロジェクト集です。エージェント、SDK、アプリ、開発ツールを用途別に探し、掲載根拠と元のリポジトリを確認できます。',
-  tagline: 'TypeSafe Jev / System One の無料 AI プロジェクト集\nGitHub のオープンソースプロジェクトを用途別に紹介',
+  documentTitle: 'Awesome JEV · Jev GitHub プロジェクト・SDK・ツール集',
+  documentDescription: 'Awesome JEV（awesome-jev）は TypeSafe Jev / System One モデルの無料 GitHub プロジェクト集です。公式 SDK、エージェントツール、オープンソースの代替実装を用途別に探し、Jev の最新ニュースと元のリポジトリを確認できます。',
+  tagline: 'TypeSafe Jev / System One モデルの無料 GitHub プロジェクト集\n公式 SDK、エージェントツール、オープンソースの代替実装と Jev の最新ニュースを紹介',
   dataUpdated: 'データ更新',
   dataUpdatedTimezone: '時刻は中国標準時（UTC+8）で表示',
   searchPlaceholder: 'GitHub を検索…',

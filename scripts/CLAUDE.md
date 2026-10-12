@@ -43,7 +43,7 @@ github-evidence.ts: 固定提交的 GitHub 来源与替代实现证据
 inclusion.test.ts: Node test inclusion 的契约与回归验证，运行 npm test
 inclusion.ts: 采集侧收录证据校验与改动验证
 jev-client.ts: 仅服务端的 Jev 审核请求和决策契约
-locale-routes.test.ts: Node test locale-routes 的契约与回归验证，运行 npm test
+locale-routes.test.ts: Node test 三语言路径、hreflang 与首页 GitHub 目录搜索/分享文案契约
 masonry.test.ts: Node test 通道/间距和水合前滚动的窗口/位置契约，避免自然流丢失虚拟前缀
 model-types.ts: 采集、GitHub 来源与模型审核的共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubQuery 仅声明只读 GraphQL
 news-sync.test.ts: Node test news-sync 的契约与回归验证，运行 npm test

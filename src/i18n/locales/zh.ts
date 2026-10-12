@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
  * [OUTPUT]: 对外提供 zh 文案
- * [POS]: i18n/locales 的简体中文，与英文基准保持键契约一致
+ * [POS]: i18n/locales 的简体中文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import type { Messages } from './en.ts'
@@ -29,10 +29,10 @@ export const zh: Messages = {
   categorySdkDescription: '查找用于将 Jev 接入应用的 SDK、客户端库与集成项目。',
   categoryOtherDescription: '浏览尚未归入其他分类的项目，查看简介和原始仓库。',
   githubCount: '已收录 {count} 个 GitHub 项目',
-  documentTitle: 'Awesome JEV · TypeSafe Jev / System One 免费 AI 目录',
-  documentDescription: 'Awesome JEV 是 TypeSafe Jev / System One 的免费 GitHub 项目目录。按用途查找智能体、SDK、应用与开发工具，查看收录依据及原始仓库。',
+  documentTitle: 'Awesome JEV · Jev GitHub 项目、SDK 与工具目录',
+  documentDescription: 'Awesome JEV（awesome-jev）是 TypeSafe Jev / System One 模型的免费 GitHub 项目目录。按用途查找官方 SDK、智能体工具与开源替代实现，阅读 Jev 最新资讯，直达原始仓库。',
   tagline:
-    'TypeSafe Jev / System One 的免费 AI 精选目录\n按用途分类的 GitHub 开源项目',
+    'TypeSafe Jev / System One 模型的免费 GitHub 项目目录\n按用途查找官方 SDK、智能体工具、开源替代实现与 Jev 最新资讯',
   dataUpdated: '数据更新',
   dataUpdatedTimezone: '时间为 Asia/Shanghai（UTC+8）',
   searchPlaceholder: '搜索 GitHub…',
