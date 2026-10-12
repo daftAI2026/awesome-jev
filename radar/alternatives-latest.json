@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-12T00:43:19.167Z",
+  "at": "2026-10-12T11:19:04.262Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 114,
-      "total": 114,
+      "fetched": 118,
+      "total": 118,
       "status": "bounded"
     }
   ],
@@ -20,26 +20,118 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 9,
   "added": 0,
-  "pending": 132,
+  "pending": 136,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "foxl-ai/bobcat",
+      "repo": "omnijev/awesome-jev-papers",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "a3339e373d10398073d8ca4c3dd5d8c936cff50b",
+      "evidenceUrl": "https://github.com/omnijev/awesome-jev-papers/blob/a3339e373d10398073d8ca4c3dd5d8c936cff50b/README.md",
+      "evidenceSha256": "d1a1469300dcc8b78c29e16a1499021ad6dec6744e5d968574f48327e7b14402",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "yeyan00/jev-decision",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "811bf5083a12622b0e63a98084312a91ac119b80",
+      "evidenceUrl": "https://github.com/yeyan00/jev-decision/blob/811bf5083a12622b0e63a98084312a91ac119b80/README.md",
+      "evidenceSha256": "85206fb32c24069bf97323b07221f257e03e1efc5ce97ff1e56dac961781d0f9",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "donthash/laya-nepali",
       "status": "review",
       "score": {
-        "jevAbout": 0.96,
+        "jevAbout": 0.87,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.89,
-        "category": "alternatives"
+        "jevKeepConfidence": 0.37,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "5268e01705c4059f3ba0a8d3de1811ccc167572c",
-      "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/5268e01705c4059f3ba0a8d3de1811ccc167572c/README.md",
-      "evidenceSha256": "485e2c43f91edebe3670de1ee47933b29c19c6a80c0beaefb201e75805a71986",
+      "sha": "df7668380cc607efe21a2cc25826d60021b9ebc5",
+      "evidenceUrl": "https://github.com/donthash/laya-nepali/blob/df7668380cc607efe21a2cc25826d60021b9ebc5/README.md",
+      "evidenceSha256": "9da685f4ad9518e64a17d1f7f6ae443c775314d2ef1cd4ba61a373c7225cf99c",
       "model": "jev-latest",
-      "checkedAt": "2026-10-12T00:43:19.167Z"
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "muthuishere/openjevx",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "ef92b8b2059c85e203e857d18cae55011555ed1f",
+      "evidenceUrl": "https://github.com/muthuishere/openjevx/blob/ef92b8b2059c85e203e857d18cae55011555ed1f/README.md",
+      "evidenceSha256": "120e682cb27b6d0f807fad30f3ce68382674e42846ed13467b3956c898333f16",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "rosariodibartolo/jev-agent-skill",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.1,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.41,
+        "category": "other"
+      },
+      "sha": "8054f9a7c6f595ea074ae819cc78df05b7146fda",
+      "evidenceUrl": "https://github.com/rosariodibartolo/jev-agent-skill/blob/8054f9a7c6f595ea074ae819cc78df05b7146fda/README.md",
+      "evidenceSha256": "f28b9691ac065aa80a59782c5d19377aad19548f658672ca7714a6af1b726b91",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "faycall1l/bouncer",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "0c32b11e0099d473d7e8c7131f0f85fe505000d1",
+      "evidenceUrl": "https://github.com/faycall1l/bouncer/blob/0c32b11e0099d473d7e8c7131f0f85fe505000d1/README.md",
+      "evidenceSha256": "0f0efd38b1b0fe95b7e5d445982535c7327562fe8189e9cb0a60d392b3f3c0cd",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "phocinae/phocinae-cli",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "c81fd1c9959e70ed32a76c4098b98bcb84e04bc3",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-cli/blob/c81fd1c9959e70ed32a76c4098b98bcb84e04bc3/README.md",
+      "evidenceSha256": "eed08ca7be92d7fb5ad066e21c228ae96392acc82f0922c1ef1e8cf0a9a45481",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "phocinae/phocinae-js",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.37,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.64,
+        "category": "other"
+      },
+      "sha": "294136b0d5c64532cd85080e5033af645a42cc57",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-js/blob/294136b0d5c64532cd85080e5033af645a42cc57/README.md",
+      "evidenceSha256": "d6da4282f4b48dbeb4b7a926ec27d593c5e0eb71af6ab84c9c9cc5a1a81e7327",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
+    },
+    {
+      "repo": "ponce8/typed-lm",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "05c6312e00327cbf10cee78079eb4495e9a0e429",
+      "evidenceUrl": "https://github.com/ponce8/typed-lm/blob/05c6312e00327cbf10cee78079eb4495e9a0e429/README.md",
+      "evidenceSha256": "86025bdd77e9b5be09d86b769773f537c333b87284c28e26df3085807cea3adc",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-12T11:19:04.262Z"
     }
   ],
   "identity": {
