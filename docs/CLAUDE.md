@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+jev-figure.md: Jev 事实与机械分选器隐喻、60 零件、项目级 skill 来源、减少动态效果与错误恢复边界
 agents.md: 公开标签导航/原始主题文档边界与 Agents 页脚、构建生成文档、公开字段白名单与五品牌外链的真实能力边界
 architecture.md: Vite 安全基线与开发/生产边界；404/500 恢复、脱敏与平台异常边界；标签 SSR/长尾 noindex 与有界页脚投影，技术栈/交付边界、目录分页 SSR、站内推荐与统计契约、单一工作台白名单/生产隔离及同源探针边界
 deployment.md: 本站免费 Crawler Hints / IndexNow 信号与收录边界；GitHub 同版本已验产物发布、production 凭据/分支隔离、机器人显式派发及本站构建连接断开/恢复与切换实证

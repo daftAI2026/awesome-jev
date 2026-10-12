@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
- * 公开标签页与页脚导航共用语言契约
+ * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
  * [OUTPUT]: 对外提供 ja 文案
  * [POS]: i18n/locales 的日文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,14 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  jevFigureTitle: 'Jev は素早く、型付きで判断します',
+  jevFigureDescription: '文脈と型付きの質問を渡します。Jev は Choice で選択し、Score で採点し、Noul で真偽を判定します。チャット文を解析せず、コードが結果を直接使います。',
+  jevDemoLabel: '仕組みの例',
+  jevDemoRouting: 'Choice がタスクを決められた処理先へ振り分けます：',
+  jevDemoPlay: 'アニメーションを再開',
+  jevDemoPause: 'アニメーションを一時停止',
+  jevDemoDisclaimer: 'Jev の固定ルーティング例です。実際の推論や速度測定ではありません。',
+  jevDemoSource: 'Jev の仕組み',
   offlineErrorTitle: 'ネットワークに接続されていません',
   offlineErrorDescription: '接続を確認してから、ページを再読み込みしてください。',
   serverErrorTitle: 'ページを読み込めませんでした',

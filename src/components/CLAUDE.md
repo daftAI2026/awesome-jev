@@ -2,7 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-RecoveryPage.tsx: 404/500 共用主题与同语言原生恢复链接，不读取目录或异常正文
+RecoveryPage.tsx: 404/500 共用恢复动作与 Jev 教学图；桌面 subgrid 共用分割线行，不读取目录或异常正文
 RouteErrorPage.tsx: 根路由错误/断网适配器，重载当前地址重试，不输出内部异常
 DirectoryBrowseFooter.tsx: 三语言分类与十二个热门标签内链，目录和独立详情共用
 DirectoryPagination.tsx: Router 真实页码链接、范围与翻页焦点，项目/新闻/收藏共用
@@ -34,6 +34,7 @@ ThemeMenu.tsx: 系统/明/暗主题偏好同步与现有主题类适配
 VideoMasonry.tsx: 视频内容的布局组件，非当前 GitHub 主结果来源
 
 子模块
+jev-figure/: 见 jev-figure/CLAUDE.md，Anatomy 离线 SVG 与本地决策示例播放器
 workbench/: 见 workbench/CLAUDE.md，单一 DEV 工作台壳与 OG/SEO/真实页面预览
 ui/: 见 ui/CLAUDE.md
 

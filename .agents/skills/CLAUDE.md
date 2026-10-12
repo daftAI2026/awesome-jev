@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 子模块
+anatomy/: 见 anatomy/CLAUDE.md，MIT 等轴测 SVG 教学图工具；仅项目级安装，不进入部署运行时
 awesome-jev-review/: 见 awesome-jev-review/CLAUDE.md，对当前 Needs review 给出证据与主分类，并生成独立 OK 草稿
 
 法则: 项目限定·可发现·不隐含发布授权

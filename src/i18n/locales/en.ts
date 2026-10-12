@@ -1,12 +1,20 @@
 /**
  * [INPUT]: 依赖站点界面语义
- * 公开标签页与页脚导航共用语言契约
+ * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
  * [OUTPUT]: 对外提供 en 文案、MessageKey 和 Messages 类型
  * [POS]: i18n/locales 的英文基准，定义所有语言必须满足的文案键
  * 首页摘要保留 Jev GitHub 目录身份；长度保持 25–160 字符
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  jevFigureTitle: 'Jev makes fast, typed decisions',
+  jevFigureDescription: 'Send state and typed questions. Jev selects with Choice, rates with Score, and judges truth with Noul. Your code uses the results directly, without parsing a chat reply.',
+  jevDemoLabel: 'Illustrative mechanism',
+  jevDemoRouting: 'Choice routes each task to a predefined handler:',
+  jevDemoPlay: 'Resume animation',
+  jevDemoPause: 'Pause animation',
+  jevDemoDisclaimer: 'Preset Jev routing illustration, not live inference or a speed measurement.',
+  jevDemoSource: 'How Jev works',
   offlineErrorTitle: 'You appear to be offline',
   offlineErrorDescription: 'Check your connection, then try loading this page again.',
   serverErrorTitle: 'Something went wrong',

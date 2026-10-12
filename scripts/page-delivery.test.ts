@@ -27,6 +27,32 @@ const projectPath = projectPathFromUrl(project.url)!
 const newsItemPath = newsPath(news.id)!
 const catalogs = { en, zh, ja }
 
+for (const locale of ['en', 'zh', 'ja'] as const) {
+  test(`404 ${locale} keeps recovery actions and a local Jev SVG explanation`, { skip: !origin }, async () => {
+    const response = await fetch(new URL(localizedPath('/missing-jev-demo', locale), origin))
+    assert.equal(response.status, 404)
+    const html = await response.text()
+    assert.match(html, /data-recovery-status="404"/)
+    assert.match(html, /data-jev-figure=""/)
+    assert.match(html, /data-packet=""/)
+    const figure = html.match(/<figure\b[^>]*data-jev-figure=""[^>]*>[\s\S]*?<\/figure>/)?.[0] ?? ''
+    assert.equal([...figure.matchAll(/<button\b/g)].length, 1, 'Only the drawing itself toggles pause; no choice or playback toolbar')
+    assert.ok(figure.includes(catalogs[locale].jevDemoRouting))
+    assert.doesNotMatch(figure, /role="group"|aria-live=/)
+    assert.equal([...html.matchAll(/lg:grid-rows-subgrid/g)].length, 2, 'Recovery and illustration must share desktop rows')
+    const routing = figure.match(/<div\b[^>]*data-jev-routing=""[^>]*>/)?.[0] ?? ''
+    const recoveryNav = html.match(/<nav\b[^>]*aria-label="[^"]*"[^>]*>/)?.[0] ?? ''
+    assert.match(routing, /lg:mt-8/)
+    assert.match(recoveryNav, /lg:mt-8/)
+    assert.ok(html.includes(catalogs[locale].jevFigureTitle))
+    assert.ok(html.includes(catalogs[locale].jevDemoDisclaimer))
+    assert.ok(html.includes(`href="${localizedPath('/', locale)}"`))
+    assert.equal([...html.matchAll(/<h1\b/g)].length, 1)
+    assert.match(html, /<meta name="robots" content="noindex, follow"/)
+    assert.doesNotMatch(html, /<link rel="canonical"/)
+  })
+}
+
 function assertNoSnapshot(source: string, marker: string) {
   assert.ok(!source.includes(marker), `Complete snapshot leaked into startup modules: ${marker}`)
 }

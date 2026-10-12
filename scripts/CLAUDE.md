@@ -2,6 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+generate-jev-figure.mjs: 项目级 Anatomy kit 离线投影 60 实体，生成可信路径和投影；--geometry 输出同源圆角实体与顺序，不在构建请求链运行
+jev-figure.test.ts: 本地 0.3 秒教学轨迹、自动出口轮换、真实圆角棱柱遮挡、产物重建、刻度线端与无可执行标记回归
 error-policy.test.ts: 错误状态与缺失分离、Error message/stack/cause 脱敏离线回归
 error-page-fixture.ts: 当前源码临时复制与测试专用故障路由，生产构建不含触发入口
 error-delivery.test.ts: 隔离产物十条真实错误/恢复回归，检查脱敏/状态/索引/恢复入口

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
- * 公开标签页与页脚导航共用语言契约
+ * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
  * [OUTPUT]: 对外提供 zh 文案
  * [POS]: i18n/locales 的简体中文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,14 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  jevFigureTitle: 'Jev，快速判断，直接交给代码',
+  jevFigureDescription: 'Jev 接收上下文与类型化问题。Choice 选项、Score 评分、Noul 判断真值，结果供代码直接使用。',
+  jevDemoLabel: '原理示意',
+  jevDemoRouting: 'Choice 路由示例：任务进入预设的不同出口',
+  jevDemoPlay: '继续动画',
+  jevDemoPause: '暂停动画',
+  jevDemoDisclaimer: 'Jev 预设路由示意，非实时推理或速度测量。',
+  jevDemoSource: '了解 Jev 原理',
   offlineErrorTitle: '网络连接已断开',
   offlineErrorDescription: '请检查网络连接，恢复后重新加载当前页面。',
   serverErrorTitle: '页面暂时无法加载',

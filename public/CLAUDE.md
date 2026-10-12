@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+anatomy-LICENSE.txt: Ryan 的 MIT 许可，交付 Jev 插图所用上游 kit 的版权声明
 favicon.svg: SVG 站点图标，用户提供的 J 矢量路径与透明底，不依赖字体
 llms.txt: 构建生成的 AI 阅读导览与规范来源链接
 llms-full.txt: 构建生成的全部公开 Markdown 文本，不输出私有审计

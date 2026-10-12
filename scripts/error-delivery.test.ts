@@ -34,6 +34,8 @@ if (process.env.TEST_ERROR_FIXTURE === '1') {
         assert.equal(response.headers.get('x-robots-tag'), 'noindex')
         const html = await response.text()
         assert.match(html, /data-recovery-status="500"/)
+        assert.match(html, /data-jev-figure=""/)
+        assert.ok(html.includes({ en, zh, ja }[locale].jevFigureTitle))
         assert.equal([...html.matchAll(/<h1\b/g)].length, 1)
         assert.ok(html.includes({ en, zh, ja }[locale].serverErrorTitle))
         assert.ok(html.includes(`<html lang="${LANGUAGE_TAG[locale]}"`))

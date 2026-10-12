@@ -1,0 +1,19 @@
+/**
+ * [INPUT]: 依赖本站 background/foreground/muted/border 语义 token
+ * [OUTPUT]: 提供分选器四面灰阶；播放偏好归组件控制
+ * [POS]: jev-figure 的局部样式；不引入 Anatomy 全站样式或新配色
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+.jev-figure .iso-fill { fill: var(--background); }
+.jev-figure .iso-top { fill: light-dark(color-mix(in oklab, var(--background) 94%, var(--foreground)), color-mix(in oklab, var(--background) 64%, var(--foreground))); }
+.jev-figure .iso-shade[data-shade="0"] { fill: light-dark(color-mix(in oklab, var(--background) 68%, var(--foreground)), color-mix(in oklab, var(--background) 90%, var(--foreground))); }
+.jev-figure .iso-shade[data-shade="1"] { fill: light-dark(color-mix(in oklab, var(--background) 76%, var(--foreground)), color-mix(in oklab, var(--background) 84%, var(--foreground))); }
+.jev-figure .iso-shade[data-shade="2"] { fill: light-dark(color-mix(in oklab, var(--background) 83%, var(--foreground)), color-mix(in oklab, var(--background) 78%, var(--foreground))); }
+.jev-figure .iso-shade[data-shade="3"] { fill: light-dark(color-mix(in oklab, var(--background) 88%, var(--foreground)), color-mix(in oklab, var(--background) 72%, var(--foreground))); }
+.jev-figure .iso-line { fill: none; stroke: var(--muted-foreground); stroke-width: 0.65; stroke-linejoin: round; stroke-linecap: round; }
+.jev-figure [data-tone="hi"] { stroke: var(--foreground); }
+.jev-figure [data-tone="lo"], .jev-figure [data-tone="faint"] { stroke: var(--border); }
+.jev-figure .iso-dots { fill: var(--muted-foreground); stroke: none; }
+.jev-figure [data-lit] .iso-fill, .jev-figure [data-lit] .iso-top { fill: var(--foreground); }
+.jev-figure [data-lit] .iso-shade { fill: var(--muted-foreground); }
+.jev-figure [data-lit] .iso-line { stroke: var(--background); }
