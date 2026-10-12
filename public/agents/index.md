@@ -9,7 +9,7 @@
 
 [llms.txt](https://awesomejev.cc/llms.txt) · [llms-full.txt](https://awesomejev.cc/llms-full.txt) · [Reading guide](https://awesomejev.cc/agents/index.md) · [Categories](https://awesomejev.cc/agents/categories.md) · [Repository topics](https://awesomejev.cc/agents/tags.md) · [Top 100 and local saved items](https://awesomejev.cc/agents/collections.md) · [GitHub projects](https://awesomejev.cc/agents/projects.md) · [Source-attributed news](https://awesomejev.cc/agents/news.md) · [Submit a project](https://awesomejev.cc/agents/submit.md) · [About and boundaries](https://awesomejev.cc/agents/about.md)
 
-Awesome JEV (awesome-jev): a free GitHub directory for the TypeSafe Jev / System One model. Explore official SDKs, agent tools, open-source alternatives and Jev news.
+Awesome JEV (awesome-jev): a free GitHub directory for TypeSafe Jev / System One. Find official SDKs, agent tools, open-source alternatives and Jev news.
 
 Snapshot: 2199 GitHub projects; 317 news summaries.
 

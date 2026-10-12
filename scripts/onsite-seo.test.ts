@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖 Node test、相关项目/工作台/SEO 纯契约及有界网络工具
- * [OUTPUT]: 对外提供确定性推荐、同源状态校验与 SEO 正常/异常/排除回归
+ * [INPUT]: 依赖 Node test、三语言文案、相关项目/工作台/SEO 纯契约及有界网络工具
+ * [OUTPUT]: 对外提供确定性推荐、同源状态校验、首页描述长度与 SEO 正常/异常/排除回归
  * [POS]: scripts 的站内优化单元护栏；离线运行，不请求统计或搜索服务
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -11,6 +11,9 @@ import { workbenchSearch, workbenchPage, selectWorkbenchProject } from '../src/l
 import { evaluateSeoFacts, type SeoFacts } from '../src/lib/seo-inspection.ts'
 import { boundedBytes, readLocal } from '../src/lib/local-inspection.ts'
 import { localeAlternates } from '../src/lib/locale-routes.ts'
+import { en } from '../src/i18n/locales/en.ts'
+import { zh } from '../src/i18n/locales/zh.ts'
+import { ja } from '../src/i18n/locales/ja.ts'
 import { SITE_ORIGIN } from '../src/lib/share-image.ts'
 
 function project(repo: string, tags: string[], category: CategorizedProject['category'] = 'agents'): CategorizedProject {
@@ -102,4 +105,14 @@ test('inspection reads bounded streams and rejects overflow', async () => {
   assert.deepEqual(await boundedBytes(new Response('abc'), 3), new TextEncoder().encode('abc'))
   await assert.rejects(boundedBytes(new Response('abcd'), 3), /budget/)
   assert.equal((await boundedBytes(new Response(null), 3)).length, 0)
+})
+
+// --- 首页描述遵守 Bing 提示范围，不给项目正文做机械截断 ---
+test('localized homepage descriptions stay within 25–160 characters and preserve product identity', () => {
+  for (const [locale, catalog] of Object.entries({ en, zh, ja })) {
+    const description = catalog.documentDescription
+    const length = [...description].length
+    assert.ok(length >= 25 && length <= 160, `${locale} homepage description has ${length} characters`)
+    for (const identity of ['Awesome JEV', 'awesome-jev', 'TypeSafe Jev', 'System One', 'GitHub', 'SDK']) assert.ok(description.includes(identity), `${locale} description lost ${identity}`)
+  }
 })

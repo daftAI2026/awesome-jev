@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、已构建静态 HTML/模块图及 TEST_SITE_ORIGIN 运行站点
- * [OUTPUT]: 对外提供启动包数据边界、favicon、清洗旧地址 301、详情交付与预渲染内容的回归检查
+ * [OUTPUT]: 对外提供首页描述真实 HTTP 交付、启动包数据边界、favicon、清洗旧地址 301、详情交付与预渲染内容的回归检查
  * [POS]: scripts 的性能交付护栏；检查总依赖而非仅检查变小的入口文件
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -128,6 +128,16 @@ const expectedRelated = relatedProjects(githubData as CategorizedProject[], proj
 const escapeHtml = (text: string) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;')
 
 for (const locale of ['en', 'zh', 'ja'] as Locale[]) {
+  test(`HTTP ${locale} homepage delivers one bounded localized description`, { skip: !origin }, async () => {
+    const response = await fetch(new URL(localizedPath('/', locale), origin), { signal: AbortSignal.timeout(30_000) })
+    assert.equal(response.status, 200)
+    const html = await response.text()
+    const descriptions = [...html.matchAll(/<meta\b[^>]*name="description"[^>]*content="([^"]*)"/g)]
+    assert.equal(descriptions.length, 1)
+    assert.equal(descriptions[0][1], escapeHtml(catalogs[locale].documentDescription))
+    assert.ok([...catalogs[locale].documentDescription].length <= 160)
+  })
+
   test(`built ${locale} project HTML has crawlable category and bounded topic-based recommendations`, { skip: !build }, () => {
     const route = localizedPath(projectPath, locale)
     const html = readFileSync(path.join(build!, route, 'index.html'), 'utf8')

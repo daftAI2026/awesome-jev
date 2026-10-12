@@ -17,7 +17,7 @@ publication-merge.ts: 三方纯数据增量合并，保留最新 main 顺序/人
 publish-data.ts: 三采集器共享发布器，叠加最新 main 并普通推送；输出 published/unchanged，工作流据此派发 main，不重跑模型
 deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝与三采集器派发；无线上写入
 publish-data.test.ts: Node test 真实本地 Git 竞争、三采集器叠加、验证失败不推送和临时工作树清理
-onsite-seo.test.ts: Node test 相关项目、工作台输入、SEO 诊断与有界流读取的离线边界验证
+onsite-seo.test.ts: Node 首页描述 25–160 字符/品牌身份、相关项目、工作台输入、SEO 诊断与有界流读取的离线边界验证
 alternative-audit.test.ts: Node test alternative-audit 的契约与回归验证，运行 npm test
 alternative-audit.ts: 既有目录的替代实现证据审计；运行暂停保留已完成检查点而不污染待审状态
 alternatives-radar.test.ts: Node test alternatives-radar 的契约与回归验证，运行 npm test
@@ -53,7 +53,7 @@ masonry.test.ts: Node test 通道/间距和水合前滚动的窗口/位置契约
 model-types.ts: 原始 tags 与公开投影分界，采集、GitHub 来源与模型审核共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubQuery 仅声明只读 GraphQL
 news-sync.test.ts: Node test news-sync 的契约与回归验证，运行 npm test
 not-found.test.ts: Node test 真实 HTTP 404/三语言/恢复链接与正常页索引回归，需 TEST_SITE_ORIGIN
-page-delivery.test.ts: Node test favicon 真实 SVG、三语言旧地址 301、启动模块总依赖、有界推荐/分类内链与三语言 H1/摘要一致性，使用 TEST_BUILD_OUTPUT/TEST_SITE_ORIGIN
+page-delivery.test.ts: Node 三语言首页唯一描述真实 HTTP、favicon 真实 SVG、三语言旧地址 301、启动模块总依赖、有界推荐/分类内链与三语言 H1/摘要一致性，使用 TEST_BUILD_OUTPUT/TEST_SITE_ORIGIN
 news-sync.ts: 独立 AIHOT 新闻快照同步与数据校验
 prepare-build-history.test.ts: Node test prepare-build-history 的契约与回归验证，运行 npm test
 prepare-build-history.ts: 构建前 Git 历史准备，保证更新时间来自真实数据
