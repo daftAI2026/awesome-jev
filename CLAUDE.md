@@ -1,5 +1,5 @@
 # Awesome JEV - TypeSafe Jev / System One 项目与新闻目录
-React 19 + TypeScript 6 + TanStack Start/Router + Vite 8 + Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24
+React 19 + TypeScript 6 + TanStack Start/Router + Vite 8（安全基线 8.3.4）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24
 
 <directory>
 src/ - 路由、目录界面、共享纯工具与 OG 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
@@ -12,7 +12,7 @@ radar/ - 生态与替代实现的状态及发布报告
 .github/ - 投稿/审核/收录、可信数据发布与 main 已验产物部署；机器人发布显式派发 main 校验
 </directory>
 <config>
-package.json - Node 24 与构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
+package.json - Node 24、Vite ^8.3.4 安全基线与构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
 vite.config.ts - Start 唯一入口（不保留旧 SPA index.html/main.tsx）、展示虚拟模块、有限目录的三语言预渲染与 Cloudflare 服务端构建
 wrangler.toml - awesome-jev-project Worker、目录分页 SSR 路径与 Static Assets 字库绑定配置
 src/index.css - 唯一语义主题、字体与视觉 token

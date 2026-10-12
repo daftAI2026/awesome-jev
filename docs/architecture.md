@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: 公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
+[OUTPUT]: Vite 安全基线、公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -14,11 +14,13 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start/Router + Vite + React 19 + TypeScript |
+| UI | TanStack Start/Router + Vite 8.3.4+ + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
 | Deploy | TanStack Start prerendered HTML via `@cloudflare/vite-plugin` and Cloudflare Workers Static Assets; Worker handles non-prerendered routes |
+
+Vite 8 uses security baseline 8.3.4. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code.
 
 Visual tokens and restraint are defined in [design.md](design.md); current page behavior is specified in [directory-ui.md](directory-ui.md).
 
