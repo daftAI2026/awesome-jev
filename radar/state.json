@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 9,
-    "\"typesafe.ai\" in:readme fork:false": 9,
-    "\"Jev\" \"System One\" in:readme fork:false": 9,
-    "topic:typesafe-ai fork:false": 3,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
-    "\"TypeSafe\" \"Jev\" fork:false": 9,
-    "code:\"api.typesafe.ai\" in:file": 9,
-    "code:\"@typesafe-ai/sdk\" in:file": 5,
-    "code:\"TYPESAFE_API_KEY\" in:file": 6,
+    "topic:jev fork:false": 1,
+    "\"typesafe.ai\" in:readme fork:false": 1,
+    "\"Jev\" \"System One\" in:readme fork:false": 1,
+    "topic:typesafe-ai fork:false": 5,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
+    "\"TypeSafe\" \"Jev\" fork:false": 1,
+    "code:\"api.typesafe.ai\" in:file": 1,
+    "code:\"@typesafe-ai/sdk\" in:file": 7,
+    "code:\"TYPESAFE_API_KEY\" in:file": 8,
     "code:\"jev-latest\" in:file": 7
   },
-  "metadataCursor": 385,
+  "metadataCursor": 1423,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -351,7 +351,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 153,
+      "stars": 154,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -1537,7 +1537,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 359
+      "stars": 360
     },
     "myc0576/smartmoney-cub": {
       "status": "review",
@@ -5763,7 +5763,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 111
+      "stars": 110
     },
     "raniellimontagna/jev-guard-mcp": {
       "status": "review",
@@ -6327,7 +6327,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1255
+      "stars": 1260
     },
     "reactive-skills/reactive-skills": {
       "status": "review",
@@ -8614,7 +8614,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1
+      "stars": 2
     },
     "yzyialy/crush-monitor": {
       "status": "review",
@@ -9612,6 +9612,10 @@
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "src/worker.ts"
+        },
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": ".agents/skills/jev-bench/SKILL.md"
         }
       ],
       "stars": 0
@@ -21371,6 +21375,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "plan/docs-review.md"
+        },
+        {
+          "query": "\"api.typesafe.ai\" in:file",
+          "path": "crates/codegen/distill-shell/src/jev.rs"
         }
       ],
       "stars": 691,
@@ -21398,8 +21406,7 @@
         ],
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
-      },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      }
     },
     "tenuo-ai/tenuo": {
       "status": "review",
@@ -28944,7 +28951,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 49,
+      "stars": 53,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "alvarobartt/sys1",
@@ -30918,7 +30925,12 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "codeHints": [
+        {
+          "query": "\"TYPESAFE_API_KEY\" in:file",
+          "path": "website/src/content/docs/ai-integration/provided-integrations/typesafe.mdx"
+        }
+      ]
     },
     "klauswg/jev-suite": {
       "status": "review",
@@ -31043,7 +31055,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 73,
+      "stars": 72,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "openrouterteam/go-sdk",
@@ -35658,7 +35670,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 2,
-      "stars": 14,
+      "stars": 19,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
@@ -37035,7 +37047,6 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-30T22:16:19.563Z"
       },
-      "retryAt": "2026-10-07T22:16:19.563Z",
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -37044,6 +37055,10 @@
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "tests/vet.test.ts"
+        },
+        {
+          "query": "\"@typesafe-ai/sdk\" in:file",
+          "path": "skills/color-picker/SKILL.md"
         }
       ]
     },
@@ -37346,7 +37361,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T04:58:02.853Z",
       "attempts": 2,
-      "stars": 9,
+      "stars": 10,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "emenowicz/jev-sap-commerce",
@@ -39212,7 +39227,7 @@
       "status": "review",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
       "attempts": 2,
-      "stars": 10,
+      "stars": 12,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "green-dalii/pi-shift-router",
@@ -40222,7 +40237,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 2,
+      "stars": 3,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "thesyedammar/tracky",
@@ -46290,7 +46305,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 11,
+      "stars": 12,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "caiovicentino/jev-risk-check-provider",
@@ -47055,5 +47070,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "epergaboni/jevseo"
+  "metadataNext": "fbddcz/agentic-jev"
 }
