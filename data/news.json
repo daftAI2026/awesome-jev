@@ -4723,5 +4723,20 @@
     "reason": null,
     "originalUrl": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
     "aihotUrl": "https://aihot.news/items/lebojwqo8pa9m2cc9nj4y96ty"
+  },
+  {
+    "id": "u8tmvx1eocao3k7c81h6vse2r",
+    "title": "vLLM Semantic Router 发布开源多模态决策模型 Decision 3.0，共 5 个尺寸",
+    "originalTitle": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+    "summary": "vLLM Semantic Router 团队发布 Decision 3.0 系列开源决策模型，读取文本、JSON 和图片，返回概率而非生成文本，全部采用 Apache-2.0 许可。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-11T21:43:41.000Z",
+    "discoveredAt": "2026-10-11T22:46:35.274Z",
+    "category": "ai-models",
+    "score": 50,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+    "aihotUrl": "https://aihot.news/items/u8tmvx1eocao3k7c81h6vse2r"
   }
 ]
