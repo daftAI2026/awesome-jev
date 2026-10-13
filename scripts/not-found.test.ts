@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、TEST_SITE_ORIGIN 指定的运行站点与三语言文案
- * [OUTPUT]: 对外提供真实 HTTP 404、索引边界和恢复入口的集成回归检查
+ * [OUTPUT]: 验证三语言畸形路径 400、真实 404、索引边界与恢复入口
  * [POS]: scripts 的运行时路由测试，不启动服务器，不访问采集 API
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -21,6 +21,16 @@ const cases = [
 ] as const
 
 for (const locale of LOCALES) {
+  // ---- Start 稳定版先拒绝非法编码，不进入 404/500 页面渲染 ----
+  test(`malformed ${locale} paths return 400 before page rendering`, { skip: !origin }, async () => {
+    for (const path of ['/%E0%A4%A', '/%FF']) {
+      const pathname = localizedPath(path, locale)
+      const response = await fetch(new URL(pathname, origin), { redirect: 'manual', signal: AbortSignal.timeout(30_000) })
+      assert.equal(response.status, 400, pathname)
+      const body = await response.text()
+      assert.doesNotMatch(body, /data-recovery-status=|<link rel="canonical"|<html\b/)
+    }
+  })
   for (const [path, titleKey] of cases) {
     const pathname = localizedPath(path, locale)
     test(`404 ${pathname} preserves language, noindex and recovery links`, { skip: !origin }, async () => {

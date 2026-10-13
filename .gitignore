@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 .wrangler/
+.tanstack/
+.playwright-mcp/
 *.local
 .env
 .env.*

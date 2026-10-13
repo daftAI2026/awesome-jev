@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: Vite 安全基线、公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
+[OUTPUT]: Start 稳定版迁移与 Vite 安全基线、公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -14,7 +14,7 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start/Router + Vite 8.3.4+ + React 19 + TypeScript |
+| UI | TanStack Start 1.169.1 / Router 1.170.44 + Vite 8.3.4+ + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
@@ -22,7 +22,42 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 Vite 8 uses security baseline 8.3.4. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code.
 
+## TanStack Start 稳定版基线
+
+2026-10-14 对齐 Start 1.169.1 与 Router 1.170.44。
+Start 的稳定版从 1.169 开始，不回退到包版本 1.0.0。
+Start 与 Router 独立编号，不强行使用相同版本号。
+配套 Router 以 Start 发布依赖为准。
+直接依赖声明最低版本，lockfile 固定完整依赖树。
+
+迁移检查：
+
+- Vite 构建要求 Vite 8；本站保持 8.3.4。
+- 服务端函数已用 `.validator()`，无 `.inputValidator()`。
+- 本站不使用内置 `useSession` 或响应流所有权旧 API。
+- 本站使用内置 server-entry，不自建 `createStartHandler`。
+- 非法编码路径在页面渲染前返回 400；三语言 HTTP 回归覆盖此边界。
+- 保留 Cloudflare → Start → React 插件顺序。
+- 保留预渲染、Worker-first 分页与异常脱敏边界。
+- 不为升级引入 RSC、Nitro、数据库或新的会话库。
+
+升级须通过类型、lint、离线测试、构建与交付验收。
+交付验收包含三语言分页、标签、404 与隔离 500。
+新版减少请求准备和 SSR 地址解析的重复工作。
+这不是本站 CPU 用量测量，也不保证消除平台超限。
+
+依据：[官方 RC 迁移说明](https://tanstack.com/start/latest/docs/framework/react/migrate-from-release-candidate)、[配套版本与 SSR 优化](https://github.com/TanStack/router/releases/tag/release-2026-10-12-2358)、[Cloudflare 适配](https://developers.cloudflare.com/workers/framework-guides/web-apps/tanstack-start/)。
+
 Visual tokens and restraint are defined in [design.md](design.md); current page behavior is specified in [directory-ui.md](directory-ui.md).
+
+## 本机产物生命周期
+
+`dist`、日志和浏览器快照是可再生产物。
+`.tanstack` 与 `.wrangler` 只服务本机运行。
+清理前检查活动进程、引用与保留价值。
+测试源码、采集检查点和回滚备份不属于缓存。
+可复用经验进入独立私人文档仓，不进入公开构建。
+正式导出视频与必要验收证据不按缓存删除。
 
 ## Information architecture
 
