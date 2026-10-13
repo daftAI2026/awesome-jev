@@ -4813,5 +4813,50 @@
     "reason": null,
     "originalUrl": "https://www.ithome.com/1/012/193.htm",
     "aihotUrl": "https://aihot.news/items/l6n00uey1dd0cutv6xxnels6h"
+  },
+  {
+    "id": "k7db3qco4nxghtyl1h6opiq7y",
+    "title": "DeepEval 发布 JevEval：用 Jev 替代生成式 LLM 当评估裁判",
+    "originalTitle": "DeepEval 团队发布 JevEval：用 Jev 替代生成式 LLM 来当评估裁判，把 LLM 评估从“生成判定”改为“结构化决策”",
+    "summary": "DeepEval 团队发布 JevEval，用 Jev 替代生成式 LLM 担任评估裁判，把 LLM 评估从\"生成判定\"改为\"结构化决策\"。它将评估逻辑、语义判断与分数计算三者分离：人定义显式可审查的评估逻辑，Jev 返回概率分布而非生成文本，DeepEval 用固定公式算出确定性分数，解决传统 LLM-as-a-judge 不可解释、同输入两次运行分数不稳定的问题。",
+    "sourceName": "X：邵猛 (@shao__meng)",
+    "publishedAt": "2026-10-13T10:01:01.000Z",
+    "discoveredAt": "2026-10-13T10:19:26.768Z",
+    "category": "ai-products",
+    "score": 50,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/shao__meng/status/2109947508424389075",
+    "aihotUrl": "https://aihot.news/items/k7db3qco4nxghtyl1h6opiq7y"
+  },
+  {
+    "id": "eugi5rnddiycpq0bjk6sorqd7",
+    "title": "Meta 发布首款前沿模型 Muse Wonder",
+    "originalTitle": "DAILY AI BRIEF 🗞 — Oct 13",
+    "summary": "Meta 发布首款前沿模型 Muse Wonder，上线 Meta Model API 和 Muse Code，定价每百万 input/output tokens 4 美元/20 美元；最高推理版本 Muse Wonder Full 仅面向 Muse Code 订阅用户，不在 API 提供。",
+    "sourceName": "X：Testing Catalog (@testingcatalog)",
+    "publishedAt": "2026-10-13T08:28:25.000Z",
+    "discoveredAt": "2026-10-13T08:46:27.198Z",
+    "category": "industry",
+    "score": 41,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/testingcatalog/status/2109924204468425145",
+    "aihotUrl": "https://aihot.news/items/eugi5rnddiycpq0bjk6sorqd7"
+  },
+  {
+    "id": "z968a5gjatexbngn6pn52nicm",
+    "title": "n8n 教程：用 You.com 和 Jev 搭建每天早上的 AI 新闻简报工作流",
+    "originalTitle": "Build a morning AI news brief with You.com, Jev, and n8n",
+    "summary": "n8n 博客发布一篇客座教程，介绍用 You.com 节点、TypeSafe AI 的 Jev 模型和 n8n 搭建每早 8 点的 AI 新闻简报工作流。",
+    "sourceName": "n8n Blog",
+    "publishedAt": "2026-10-13T05:45:04.000Z",
+    "discoveredAt": "2026-10-13T05:54:28.529Z",
+    "category": "tip",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://blog.n8n.io/spotlight-you-com/",
+    "aihotUrl": "https://aihot.news/items/z968a5gjatexbngn6pn52nicm"
   }
 ]
