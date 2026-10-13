@@ -5,7 +5,7 @@
 jev-figure.md: Jev 事实与机械分选器隐喻、60 零件、项目级 skill 来源、减少动态效果与错误恢复边界
 agents.md: 公开标签导航/原始主题文档边界与 Agents 页脚、构建生成文档、公开字段白名单与五品牌外链的真实能力边界
 architecture.md: Vite 安全基线与开发/生产边界；404/500 恢复、脱敏与平台异常边界；标签 SSR/长尾 noindex 与有界页脚投影，技术栈/交付边界、目录分页 SSR、站内推荐与统计契约、单一工作台白名单/生产隔离及同源探针边界
-deployment.md: 本站免费 Crawler Hints / IndexNow 信号与收录边界；GitHub 同版本已验产物发布、production 凭据/分支隔离、机器人显式派发及本站构建连接断开/恢复与切换实证
+deployment.md: 站点级 CPU 探测防护与按 ref 回滚；本站免费 Crawler Hints / IndexNow 信号与收录边界；GitHub 同版本已验产物发布、production 凭据/分支隔离、机器人显式派发及本站构建连接断开/恢复与切换实证
 collector.md: 采集、审核、限流与可信发布规则，Agent 分类收据/短口令、正负向权限/CI/关闭事件与 CAS 恢复边界、main 基础保护与原生已合并分支回收、ID 基线及最新 main 增量发布
 data-model.md: 原始 tags 与公开标签投影/同义/计数边界，持久化目录、GH CLI 全量清洗、唯一 GitHub 身份基线/旧地址 301 与编辑/证据保护，区分审计字段和浏览器投影
 design.md: 稳定视觉契约、共享预览 arc/presence 动效、白底黑字代码分享图和统一工作台；现有 CSS token 是页面实现权威

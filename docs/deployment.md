@@ -1,6 +1,6 @@
 <!--
-[INPUT]: 依赖 radar 工作流、production 环境、Workers 构建触发器与站点缓存设置
-[OUTPUT]: 提供同版本部署、构建切换与 Crawler Hints 接入边界
+[INPUT]: 依赖 radar 工作流、production 环境、Workers 构建触发器、缓存与站点级 WAF
+[OUTPUT]: 提供同版本部署、构建切换、CPU 探测防护与 Crawler Hints 接入边界
 [POS]: docs 的站点发布契约；采集准入归 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -121,6 +121,54 @@ GitHub 校验成功不等于生产部署成功。
 备份不包含 Token、Secret 或环境变量。
 `*.local` 忽略此目录，备份不进入仓库或产物。
 
+
+## CPU 探测防护
+
+站点级 WAF 在 Worker SSR 前执行。
+规则仅匹配 `awesomejev.cc` 与 `www.awesomejev.cc`。
+配置独立于 Wrangler 发布，不修改 Worker 制品。
+规则阶段为 `http_request_firewall_custom`。
+规则集 ID：`c0782cd8426f4053aa6306aad09a6e85`。
+
+| 规则 ref | 动作 | 边界 |
+| --- | --- | --- |
+| `awesome_jev_extreme_page_probe` | `block` | 仅目录根路径的精确 `page=999999` 探测 |
+| `awesome_jev_shapbot_tag_challenge` | `managed_challenge` | 仅未验证 ShapBot 的三语言标签路径 |
+
+超大页码规则表达式：
+
+```text
+(http.host in {"awesomejev.cc" "www.awesomejev.cc"} and http.request.uri.path in {"/" "/zh" "/ja"} and any(http.request.uri.args["page"][*] eq "999999"))
+```
+
+标签抓取规则表达式：
+
+```text
+(http.host in {"awesomejev.cc" "www.awesomejev.cc"} and not cf.client.bot and lower(http.user_agent) contains "shapbot/" and (http.request.uri.path in {"/tags" "/zh/tags" "/ja/tags"} or starts_with(http.request.uri.path, "/tags/") or starts_with(http.request.uri.path, "/zh/tags/") or starts_with(http.request.uri.path, "/ja/tags/")))
+```
+
+`cf.client.bot` 是 Cloudflare 的验证事实。
+User-Agent 自称 Googlebot 不等于通过验证。
+此防护不按国家、IP 或 ASN 封禁。
+此防护不修改全站 Bot Fight Mode。
+正常页码、普通标签访问和静态资产保持原路。
+
+规则变更先用 `cf cli search` 定位命令。
+搜索词只写动作与资源类型，不写账号信息。
+用 `cf schema` 核对 zone 范围。
+先执行 `--validate-only`，再发布并读回。
+更新时只操作对应 ref，保留其他规则。
+回滚时停用对应 ref，不清空规则集。
+验收探测拦截、标签挑战与正常页面。
+已验证机器人豁免另靠真实机器人事件核对。
+
+此防护不是 SSR CPU 优化。
+User-Agent 可伪装，不构成完整反爬边界。
+新请求模式与合法 SSR 仍须单独测量。
+关闭邮件不会修复资源超限。
+告警读取过去 24 小时，不承诺即时消失。
+
+依据：[Cloudflare 自定义规则](https://developers.cloudflare.com/waf/custom-rules/create-api/)、[机器人防护](https://developers.cloudflare.com/use-cases/solutions/stop-malicious-bots/)、[Workers CPU 限制](https://developers.cloudflare.com/workers/platform/limits/)。
 
 ## IndexNow：Cloudflare Crawler Hints
 

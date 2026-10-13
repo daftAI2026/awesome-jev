@@ -41,6 +41,7 @@ src/start.ts - Start 服务端错误公开序列化边界
 Agents 页脚复用三语言与本站主题，布局/品牌资产/按钮名称沿用 OpenFree 原版。构建从规范项目/新闻快照生成 llms.txt、llms-full.txt 和八份互链 Markdown，不输出审核分数、本机收藏或凭据。Static Assets 的 _headers 明确 TXT/Markdown 媒体类型。聊天入口仅传同一公开问题，不调用 API；五品牌端点沿用原版；只替换本站公开问题与文档地址，不增加免责声明段落。
 
 访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
+本站 WAF 拒绝目录根路径的精确 `page=999999` 探测。未验证 ShapBot 抓取三语言标签页时接受挑战。已验证机器人不受此标签规则约束。正常分页与静态资产保持原路。不封 IP、ASN 或国家。规则独立于 Worker 制品；边界与按 ref 回滚见 docs/deployment.md。此防护不等于 SSR CPU 优化。
 本站区域已开启免费的 Cloudflare Crawler Hints。缓存信号驱动 IndexNow 通知，不额外创建 Action 或密钥，不保证每次 Worker SSR 更新都被通知；以 Bing 接收报告另行验证，不把启用等同收录。配置依据见 docs/deployment.md。
 验证: npm run typecheck、npm run lint、npm test、npm run build、npm run test:delivery（构建后真实 HTTP/模块图，零跳过）。使用 Node 24；不将 .env 或采集凭据写入文档。
 
