@@ -1,18 +1,18 @@
 {
   "version": 1,
   "pages": {
-    "topic:jev fork:false": 1,
-    "\"typesafe.ai\" in:readme fork:false": 1,
-    "\"Jev\" \"System One\" in:readme fork:false": 1,
-    "topic:typesafe-ai fork:false": 5,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
-    "\"TypeSafe\" \"Jev\" fork:false": 1,
+    "topic:jev fork:false": 3,
+    "\"typesafe.ai\" in:readme fork:false": 3,
+    "\"Jev\" \"System One\" in:readme fork:false": 3,
+    "topic:typesafe-ai fork:false": 1,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
+    "\"TypeSafe\" \"Jev\" fork:false": 3,
     "code:\"api.typesafe.ai\" in:file": 1,
     "code:\"@typesafe-ai/sdk\" in:file": 7,
     "code:\"TYPESAFE_API_KEY\" in:file": 8,
     "code:\"jev-latest\" in:file": 7
   },
-  "metadataCursor": 1423,
+  "metadataCursor": 283,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -215,7 +215,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 8
+      "stars": 7
     },
     "24601/rh-guard": {
       "status": "error",
@@ -366,7 +366,7 @@
       "attempts": 4,
       "checkedAt": "2026-10-08T06:03:55.139Z",
       "retryAt": "2026-10-15T06:03:55.139Z",
-      "stars": 243
+      "stars": 292
     },
     "muratcanberber/jev-thefishgame": {
       "status": "review",
@@ -471,7 +471,7 @@
       "discoveredAt": "2026-09-21T18:30:35.157Z",
       "attempts": 2,
       "checkedAt": "2026-09-28T23:16:35.221Z",
-      "stars": 6,
+      "stars": 7,
       "lastReview": {
         "repo": "alexei-led/pi-model-router",
         "status": "review",
@@ -1000,7 +1000,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1019
+      "stars": 1028
     },
     "ethanalgox/aistock": {
       "status": "review",
@@ -1413,7 +1413,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 1184
+      "stars": 1215
     },
     "manifoldor/xtags": {
       "status": "review",
@@ -1518,7 +1518,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 1789
+      "stars": 1826
     },
     "tinystruct/tinystruct": {
       "status": "review",
@@ -1849,7 +1849,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 0
+      "stars": 1
     },
     "nipundavid/ai-experiments": {
       "status": "review",
@@ -2368,7 +2368,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 285,
+      "stars": 292,
       "retryAt": "2026-10-11T05:52:14.397Z"
     },
     "amimoacid/langchain-experiments": {
@@ -2831,7 +2831,7 @@
         "checkedAt": "2026-09-30T05:32:45.421Z"
       },
       "retryAt": "2026-10-07T05:32:45.421Z",
-      "stars": 22423
+      "stars": 22538
     },
     "dhanushnehru/dhanushnehru": {
       "status": "review",
@@ -3412,7 +3412,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 11741
+      "stars": 11812
     },
     "k3ntaw/orchestrator": {
       "status": "review",
@@ -3496,7 +3496,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
-      "retryAt": "2026-10-06T05:43:59.256Z"
+      "retryAt": "2026-10-06T05:43:59.256Z",
+      "stars": 29
     },
     "vitorepf/traco-ios": {
       "status": "error",
@@ -3786,7 +3787,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 0
+      "stars": 1
     },
     "linny006/agent-eval-harness": {
       "status": "review",
@@ -4017,7 +4018,7 @@
         "checkedAt": "2026-09-29T12:52:50.716Z"
       },
       "retryAt": "2026-10-06T12:52:50.716Z",
-      "stars": 455
+      "stars": 457
     },
     "who/naming-things": {
       "status": "review",
@@ -4145,7 +4146,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 31513,
+      "stars": 32576,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5102,7 +5103,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 3
+      "stars": 4
     },
     "wuhao19831214/classroom-signal-console": {
       "status": "review",
@@ -5373,7 +5374,7 @@
           "path": "journey_evals/evaluators.py"
         }
       ],
-      "stars": 2,
+      "stars": 3,
       "retryAt": "2026-10-07T22:16:19.563Z"
     },
     "luantak/is-malicious": {
@@ -5534,7 +5535,7 @@
         }
       ],
       "checkedAt": "2026-09-30T22:16:19.563Z",
-      "stars": 153,
+      "stars": 154,
       "lastReview": {
         "repo": "juspay/neurolink",
         "status": "review",
@@ -5737,7 +5738,7 @@
         "checkedAt": "2026-09-29T05:43:59.256Z"
       },
       "retryAt": "2026-10-06T05:43:59.256Z",
-      "stars": 293
+      "stars": 294
     },
     "heman10x-ngu/verdict-open-jev": {
       "status": "review",
@@ -6821,7 +6822,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "stars": 190,
+      "stars": 198,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -8074,7 +8075,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 9
+      "stars": 11
     },
     "tshmieldev/sharp": {
       "status": "review",
@@ -8312,7 +8313,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 106
+      "stars": 107
     },
     "jlov7/jev-decision-lab": {
       "status": "review",
@@ -8495,7 +8496,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 116
+      "stars": 124
     },
     "mdgchamomile/pi-jev": {
       "status": "error",
@@ -8724,7 +8725,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 524
+      "stars": 528
     },
     "joaoh82/coffee-under-fire": {
       "status": "review",
@@ -9375,7 +9376,7 @@
         "checkedAt": "2026-09-29T22:15:08.398Z"
       },
       "retryAt": "2026-10-06T22:15:08.398Z",
-      "stars": 232
+      "stars": 243
     },
     "gbesse/question-forge": {
       "status": "review",
@@ -11054,7 +11055,7 @@
       "attempts": 4,
       "checkedAt": "2026-10-08T06:03:55.139Z",
       "retryAt": "2026-10-15T06:03:55.139Z",
-      "stars": 8
+      "stars": 9
     },
     "lnyo-cly/ai4j": {
       "status": "review",
@@ -16272,7 +16273,8 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-11T05:52:14.397Z"
+      "retryAt": "2026-10-11T05:52:14.397Z",
+      "stars": 3
     },
     "kevinaaaquil/jev-rubix": {
       "status": "review",
@@ -18069,7 +18071,7 @@
       ],
       "checkedAt": "2026-09-29T05:43:59.256Z",
       "retryAt": "2026-10-03T05:43:59.256Z",
-      "stars": 43403
+      "stars": 43810
     },
     "lioensky/vcptoolbox": {
       "status": "review",
@@ -21381,7 +21383,7 @@
           "path": "crates/codegen/distill-shell/src/jev.rs"
         }
       ],
-      "stars": 691,
+      "stars": 694,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "samuelfaj/distill",
@@ -22940,7 +22942,7 @@
           "path": "benchmarks/decisions-calibration/pairlevel_run.py"
         }
       ],
-      "stars": 2938,
+      "stars": 3688,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "xerj-org/xerj",
@@ -23055,7 +23057,7 @@
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
       "retryAt": "2026-10-11T05:52:14.397Z",
-      "stars": 68
+      "stars": 93
     },
     "a-dev/quizbun": {
       "status": "review",
@@ -27260,7 +27262,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T11:39:00.649Z",
       "attempts": 2,
-      "stars": 3,
+      "stars": 4,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "juanlentino/signal-and-noise-tools",
@@ -28457,7 +28459,7 @@
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 2,
-      "stars": 0,
+      "stars": 70,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "chuloontop4-code/jev-instance-review",
@@ -30836,7 +30838,7 @@
           "path": "repos/typia/tests/test-jev/src/features/test_jev_typesafe_sdk_contract.ts"
         }
       ],
-      "stars": 18,
+      "stars": 19,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "systemfsoftware/systemfsoftware",
@@ -30987,7 +30989,7 @@
           "path": "Project/AgentOne/README.md"
         }
       ],
-      "stars": 10,
+      "stars": 11,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "psmon/agentzerolite",
@@ -31129,7 +31131,7 @@
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
       "attempts": 3,
-      "stars": 12,
+      "stars": 13,
       "checkedAt": "2026-09-29T22:15:08.398Z",
       "retryAt": "2026-10-03T22:15:08.398Z"
     },
@@ -31296,7 +31298,7 @@
           "path": "docs/providers/jev.mdx"
         }
       ],
-      "stars": 1222,
+      "stars": 1235,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "enterpilot/gomodel",
@@ -34297,7 +34299,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T17:11:29.590Z",
       "attempts": 2,
-      "stars": 5,
+      "stars": 4,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "arczhi/jet",
@@ -34366,7 +34368,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T17:11:29.590Z",
       "attempts": 2,
-      "stars": 5,
+      "stars": 8,
       "checkedAt": "2026-10-04T05:52:14.397Z",
       "lastReview": {
         "repo": "harshil1712/slidepilot",
@@ -36323,7 +36325,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 3,
-      "stars": 1448,
+      "stars": 1461,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
@@ -40745,7 +40747,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 2318,
+      "stars": 2636,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "dzhng/jevgrep",
@@ -40815,7 +40817,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 185,
+      "stars": 192,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "perpetualsoftware/pad",
@@ -42821,7 +42823,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 2,
-      "stars": 2,
+      "stars": 5,
       "checkedAt": "2026-10-05T14:38:34.294Z",
       "lastReview": {
         "repo": "mrciphersmith/keryx",
@@ -46419,7 +46421,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T12:34:31.273Z",
       "attempts": 1,
-      "stars": 58,
+      "stars": 59,
       "checkedAt": "2026-09-30T12:34:31.273Z",
       "lastReview": {
         "repo": "eullm/eullm",
@@ -46645,7 +46647,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 1,
-      "stars": 49,
+      "stars": 48,
       "checkedAt": "2026-09-30T22:16:19.563Z",
       "lastReview": {
         "repo": "777genius/social-monitor",
@@ -47070,5 +47072,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "fbddcz/agentic-jev"
+  "metadataNext": "kunobi-ninja/kunobi-jev"
 }

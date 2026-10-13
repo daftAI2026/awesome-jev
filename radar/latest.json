@@ -1,76 +1,58 @@
 {
-  "at": "2026-10-12T15:25:24.969Z",
+  "at": "2026-10-13T00:39:40.639Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2684,
+      "total": 2690,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 9044,
+      "total": 9080,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 7612,
+      "total": 7640,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 200,
+      "fetched": 186,
       "total": 586,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
       "fetched": 200,
-      "total": 634,
+      "total": 637,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3771,
+      "total": 3779,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 200,
-      "total": 33216,
-      "status": "search-cap"
-    },
-    {
-      "query": "code:\"@typesafe-ai/sdk\" in:file",
-      "fetched": 200,
-      "total": 9008,
-      "status": "search-cap"
-    },
-    {
-      "query": "code:\"TYPESAFE_API_KEY\" in:file",
-      "fetched": 200,
-      "total": 67840,
-      "status": "search-cap"
-    },
-    {
-      "query": "code:\"jev-latest\" in:file",
       "fetched": 0,
       "total": 0,
       "status": "github-rate-limited"
     }
   ],
   "metadata": {
-    "ok": 1093,
-    "failed": 7,
+    "ok": 1094,
+    "failed": 6,
     "batches": 22,
     "cost": 22,
     "other": 1000,
-    "remaining": 1106,
+    "remaining": 1105,
     "top100": {
       "ok": 100,
       "total": 100,
@@ -94,110 +76,110 @@
         "databaseId": 1376671563
       },
       {
-        "from": "fruitymcdoo/jevchat",
-        "to": "sonofsaris/jevchat",
-        "databaseId": 1378948439
+        "from": "mehdihadeli/typesafe-jev-dotnet-sdk",
+        "to": "mehdihadeli/typesafe-dotnet-sdk",
+        "databaseId": 1381987597
       },
       {
-        "from": "church-of-lane/csharp-jef-sdk",
-        "to": "church-of-lane/csharp-typesafe-sdk",
-        "databaseId": 1378876381
+        "from": "dperezcabrera/system-one-chess",
+        "to": "dperezcabrera/ai-chess-lab",
+        "databaseId": 1380374177
       },
       {
-        "from": "completedottech/jev-factorio-agent",
-        "to": "jevplays-games/jev-factorio-agent",
-        "databaseId": 1379060982
+        "from": "devonance/doomsat",
+        "to": "doom-satellite/doomsat",
+        "databaseId": 1381009481
       },
       {
-        "from": "navidkashani/jev-guard",
-        "to": "veronalabs/spamlens",
-        "databaseId": 1380305332
+        "from": "tayaee/typesafe-ai-jev-demo",
+        "to": "tayaee/classifier-benchmark-results",
+        "databaseId": 1376777707
       },
       {
-        "from": "peterfriese/jev-foundation-models",
-        "to": "peterfriese/system-one-foundation-models",
-        "databaseId": 1380219642
+        "from": "elbruno/elbruno.ai.jev",
+        "to": "elbruno/elbruno.ai.decisions",
+        "databaseId": 1381430542
       },
       {
-        "from": "zchee/typesafe-sdk-rust",
-        "to": "zchee/decision-model-sdk-rust",
-        "databaseId": 1376458463
+        "from": "faizullah9181/esketcher",
+        "to": "faizullah9181/jev-esketcher",
+        "databaseId": 1383974102
       },
       {
-        "from": "andyhorn/jev",
-        "to": "andyhorn/system_one_dart",
-        "databaseId": 1378008435
+        "from": "monotykamary/jev-fabric",
+        "to": "fabric-runtime/jev-fabric",
+        "databaseId": 1387099307
       },
       {
-        "from": "carlaiau/readwithjev",
-        "to": "carlaiau/read-with-jev",
-        "databaseId": 1375767462
+        "from": "philippelhaus/codex-jev",
+        "to": "philippelhaus/codex-decision",
+        "databaseId": 1389646078
       },
       {
-        "from": "andrewdeng318/paperclip-plugin-jev",
-        "to": "zczy318-products/paperclip-plugin-jev",
-        "databaseId": 1378476814
+        "from": "zeroalloc-net/zeroalloc.jev",
+        "to": "marcelroozekrans/minos.net",
+        "databaseId": 1390289994
       },
       {
-        "from": "chenjingdev/jev",
-        "to": "chenjingdev-archive/jev",
-        "databaseId": 1378914323
+        "from": "iammrduncan/typesafe-ai-benchmark",
+        "to": "iammrduncan/inference-benchmarks",
+        "databaseId": 1373664881
       },
       {
-        "from": "stephenlb/truetype.ai-open",
-        "to": "stephenlb/system-one-model",
-        "databaseId": 1376388571
+        "from": "bunsdev/typesafe-ai-playground",
+        "to": "typesafeai/typesafe-playground",
+        "databaseId": 1373324760
       },
       {
-        "from": "wjdjdakf17/jev-study",
-        "to": "wjdjdakf17/jev-vs-laya",
-        "databaseId": 1378040648
+        "from": "huntedman/jevlint",
+        "to": "iamtoomas/jevlint",
+        "databaseId": 1374372746
       },
       {
-        "from": "mant1ssa-smf3kt/chat_jev",
-        "to": "smf3kt/chat_jev",
-        "databaseId": 1380874750
+        "from": "phureewat29/got-jev",
+        "to": "phureewat29/jev-got",
+        "databaseId": 1374274889
+      },
+      {
+        "from": "zavocc/ground-zero",
+        "to": "wmcbtech30/ground-zero",
+        "databaseId": 1375280181
       }
     ]
   },
   "reviewed": 0,
   "added": 0,
   "pending": 2000,
-  "overflow": 1167,
+  "overflow": 641,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "rdk16/jevudio",
+      "repo": "akashpriyadarshii/jev-curate",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "rezastd/living-npc-world",
+      "repo": "207studio/jev-skills",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "wanlanglin/jev-skills",
+      "repo": "haxudev/jev-benchmark",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "x96x64/ctxjev",
+      "repo": "keysersoft/jev-mcp-server",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "paulsonnentag/scrap",
+      "repo": "akashpriyadarshii/jev-seo",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     },
     {
-      "repo": "akashpriyadarshii/jev-superpowers",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
-    },
-    {
-      "repo": "aviletek/jev-flow-harness",
+      "repo": "original0211/jev-perp-paper-trader",
       "reason": "github-invalid-metadata",
       "status": "metadata-error"
     }
