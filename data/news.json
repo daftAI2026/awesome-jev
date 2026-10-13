@@ -4798,5 +4798,20 @@
     "reason": null,
     "originalUrl": "https://x.com/dexhorthy/status/2109675757123350626",
     "aihotUrl": "https://aihot.news/items/e6sywxs5p9s6pliixc0c9oh2l"
+  },
+  {
+    "id": "l6n00uey1dd0cutv6xxnels6h",
+    "title": "TypeSafe Jev 引爆决策 AI 模型赛道，微软、OpenAI 等跟进并卷入原创争议",
+    "originalTitle": "Jev 引爆决策 AI 模型新赛道，爆红后被卷入原创争议",
+    "summary": "TypeSafe 发布决策 AI 模型 Jev 后，微软推出 Microsoft Decision，OpenAI 推出 Decisions API，Fastino 发布 Glide，Cloudflare Clef 与 Perplexity Decider 采用开放权重。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-10-13T02:27:08.673Z",
+    "discoveredAt": "2026-10-13T02:59:27.769Z",
+    "category": "industry",
+    "score": 57,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/012/193.htm",
+    "aihotUrl": "https://aihot.news/items/l6n00uey1dd0cutv6xxnels6h"
   }
 ]
