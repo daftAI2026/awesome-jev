@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-14T14:39:41.041Z",
+  "at": "2026-10-14T19:41:10.024Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 105,
-      "total": 105,
+      "fetched": 109,
+      "total": 109,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 124,
-      "total": 124,
+      "fetched": 126,
+      "total": 126,
       "status": "bounded"
     }
   ],
@@ -20,45 +20,71 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
+  "reviewed": 6,
   "added": 0,
-  "pending": 147,
+  "pending": 153,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "hitsz-tmg/jevembed",
+      "repo": "gul84571/coreai-kit",
       "status": "review",
-      "score": {
-        "jevAbout": 0.81,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.89,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "d331c4b0f5a0f69b92d94b8f5b2f82853ac83277",
-      "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/d331c4b0f5a0f69b92d94b8f5b2f82853ac83277/README.md",
-      "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
+      "reason": "missing-open-source-license",
+      "sha": "96b95ac2c260dcd63771a8ac5edc534140ed248e",
+      "evidenceUrl": "https://github.com/gul84571/coreai-kit/blob/96b95ac2c260dcd63771a8ac5edc534140ed248e/README.md",
+      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
       "model": "jev-latest",
-      "checkedAt": "2026-10-14T14:39:41.041Z"
+      "checkedAt": "2026-10-14T19:41:10.024Z"
     },
     {
-      "repo": "timiku/v1-decisions-vllm",
+      "repo": "jacquesli53093/jev-social",
       "status": "review",
-      "score": {
-        "jevAbout": 0.94,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.72,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "7f8944aeb91104cddc417a5180b85aaed6a80fb0",
-      "evidenceUrl": "https://github.com/timiku/v1-decisions-vllm/blob/7f8944aeb91104cddc417a5180b85aaed6a80fb0/README.md",
-      "evidenceSha256": "30cc0855a1992ca9d01c8c2dadb8532cfc18d05279c7c5ff21b055f64c5e33da",
+      "reason": "missing-open-source-license",
+      "sha": "ebbdbf4cd348cf2078fcae2ece8be373bb1ecc16",
+      "evidenceUrl": "https://github.com/jacquesli53093/jev-social/blob/ebbdbf4cd348cf2078fcae2ece8be373bb1ecc16/README.md",
+      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
       "model": "jev-latest",
-      "checkedAt": "2026-10-14T14:39:41.041Z"
+      "checkedAt": "2026-10-14T19:41:10.024Z"
+    },
+    {
+      "repo": "kanokwan89/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "2973c53a91f7ba9453c2ce7e3442ac49ce5549ae",
+      "evidenceUrl": "https://github.com/kanokwan89/jevcore/blob/2973c53a91f7ba9453c2ce7e3442ac49ce5549ae/README.md",
+      "evidenceSha256": "c396a4d585440eb6410d5116403836c4d77fb906c6832cf15bdcc83105ba78ac",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T19:41:10.024Z"
+    },
+    {
+      "repo": "leoniekarabacak542/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "5d88c9b56c6e9c25d3e8b10eb8edb798a60226d4",
+      "evidenceUrl": "https://github.com/leoniekarabacak542/jevcore/blob/5d88c9b56c6e9c25d3e8b10eb8edb798a60226d4/README.md",
+      "evidenceSha256": "c396a4d585440eb6410d5116403836c4d77fb906c6832cf15bdcc83105ba78ac",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T19:41:10.024Z"
+    },
+    {
+      "repo": "nathanm49/coreai-kit",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "158a7ee4b6b6b7a7f5baf406bcc90f6782055e92",
+      "evidenceUrl": "https://github.com/nathanm49/coreai-kit/blob/158a7ee4b6b6b7a7f5baf406bcc90f6782055e92/README.md",
+      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T19:41:10.024Z"
+    },
+    {
+      "repo": "omarfischer4315/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "f6a5915095c79a996097f3acca7745683d82650c",
+      "evidenceUrl": "https://github.com/omarfischer4315/jevcore/blob/f6a5915095c79a996097f3acca7745683d82650c/README.md",
+      "evidenceSha256": "c396a4d585440eb6410d5116403836c4d77fb906c6832cf15bdcc83105ba78ac",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T19:41:10.024Z"
     }
   ],
   "identity": {
