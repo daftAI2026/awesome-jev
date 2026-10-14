@@ -15,7 +15,7 @@ Author descriptions below remain separate from source-backed inclusion notes sho
 
 [Project \(en\)](https://awesomejev.cc/projects/composiohq/composio) · [Project \(zh\)](https://awesomejev.cc/zh/projects/composiohq/composio) · [Project \(ja\)](https://awesomejev.cc/ja/projects/composiohq/composio)
 
-[Repository](https://github.com/ComposioHQ/composio) · agents · TypeScript · 30503 snapshot stars
+[Repository](https://github.com/ComposioHQ/composio) · agents · TypeScript · 30509 snapshot stars
 
 Author description: Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.
 
@@ -25,7 +25,7 @@ Repository topics: jev, agentic-ai, agents, ai, ai-agents, aiagents, developer-t
 
 [Project \(en\)](https://awesomejev.cc/projects/trycua/cua) · [Project \(zh\)](https://awesomejev.cc/zh/projects/trycua/cua) · [Project \(ja\)](https://awesomejev.cc/ja/projects/trycua/cua)
 
-[Repository](https://github.com/trycua/cua) · agents · Rust · 29426 snapshot stars
+[Repository](https://github.com/trycua/cua) · agents · Rust · 29513 snapshot stars
 
 Author description: Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.
 
@@ -35,7 +35,7 @@ Repository topics: jev, agent, ai-agent, apple, computer-use, computer-use-agent
 
 [Project \(en\)](https://awesomejev.cc/projects/browser-use/jev-ultrafast) · [Project \(zh\)](https://awesomejev.cc/zh/projects/browser-use/jev-ultrafast) · [Project \(ja\)](https://awesomejev.cc/ja/projects/browser-use/jev-ultrafast)
 
-[Repository](https://github.com/browser-use/jev-ultrafast) · browser · Python · 22668 snapshot stars
+[Repository](https://github.com/browser-use/jev-ultrafast) · browser · Python · 22747 snapshot stars
 
 Author description: Browser Use × Jev Ultrafast — high-speed browser automation powered by TypeSafe Jev. i. am. speed.
 
@@ -45,7 +45,7 @@ Repository topics: jev, browser, ultrafast, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/pydantic/pydantic-ai) · [Project \(zh\)](https://awesomejev.cc/zh/projects/pydantic/pydantic-ai) · [Project \(ja\)](https://awesomejev.cc/ja/projects/pydantic/pydantic-ai)
 
-[Repository](https://github.com/pydantic/pydantic-ai) · agents · Python · 20565 snapshot stars
+[Repository](https://github.com/pydantic/pydantic-ai) · agents · Python · 20582 snapshot stars
 
 Author description: How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.
 
@@ -55,7 +55,7 @@ Repository topics: jev, agent-framework, genai, harness, harness-engineering, ll
 
 [Project \(en\)](https://awesomejev.cc/projects/langchain-ai/langchainjs) · [Project \(zh\)](https://awesomejev.cc/zh/projects/langchain-ai/langchainjs) · [Project \(ja\)](https://awesomejev.cc/ja/projects/langchain-ai/langchainjs)
 
-[Repository](https://github.com/langchain-ai/langchainjs) · sdk · TypeScript · 18255 snapshot stars
+[Repository](https://github.com/langchain-ai/langchainjs) · sdk · TypeScript · 18258 snapshot stars
 
 Author description: The agent engineering platform
 
@@ -65,7 +65,7 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/effect-ts/effect) · [Project \(zh\)](https://awesomejev.cc/zh/projects/effect-ts/effect) · [Project \(ja\)](https://awesomejev.cc/ja/projects/effect-ts/effect)
 
-[Repository](https://github.com/Effect-TS/effect) · sdk · TypeScript · 17237 snapshot stars
+[Repository](https://github.com/Effect-TS/effect) · sdk · TypeScript · 17253 snapshot stars
 
 Author description: Build production-ready applications in TypeScript
 
@@ -75,7 +75,7 @@ Repository topics: jev, cli, clustering, concurrency, dependency-injection, effe
 
 [Project \(en\)](https://awesomejev.cc/projects/jaredpalmer/kev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jaredpalmer/kev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jaredpalmer/kev)
 
-[Repository](https://github.com/jaredpalmer/kev) · alternatives · Python · 8964 snapshot stars
+[Repository](https://github.com/jaredpalmer/kev) · alternatives · Python · 9006 snapshot stars
 
 Author description: tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own
 
@@ -85,7 +85,7 @@ Repository topics: jev, decision-model, qwen3, python
 
 [Project \(en\)](https://awesomejev.cc/projects/jev-chat/jev-chat-jarvis) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jev-chat/jev-chat-jarvis) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jev-chat/jev-chat-jarvis)
 
-[Repository](https://github.com/jev-chat/jev-chat-jarvis) · applications · Kotlin · 7635 snapshot stars
+[Repository](https://github.com/jev-chat/jev-chat-jarvis) · applications · Kotlin · 7674 snapshot stars
 
 Author description: 装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。
 
@@ -95,7 +95,7 @@ Repository topics: jev, accessibility-service, android, chat-assistant, llm, qq,
 
 [Project \(en\)](https://awesomejev.cc/projects/tamaratran/fast-jev-compaction) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tamaratran/fast-jev-compaction) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tamaratran/fast-jev-compaction)
 
-[Repository](https://github.com/tamaratran/fast-jev-compaction) · developer · TypeScript · 7589 snapshot stars
+[Repository](https://github.com/tamaratran/fast-jev-compaction) · developer · TypeScript · 7605 snapshot stars
 
 Author description: Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.
 
@@ -105,7 +105,7 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/mizorewww/laya-mlx) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mizorewww/laya-mlx) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mizorewww/laya-mlx)
 
-[Repository](https://github.com/mizorewww/laya-mlx) · alternatives · Python · 6878 snapshot stars
+[Repository](https://github.com/mizorewww/laya-mlx) · alternatives · Python · 6891 snapshot stars
 
 Author description: Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.
 
@@ -115,7 +115,7 @@ Repository topics: apple-silicon, decision-model, inference, laya, local-ai, mac
 
 [Project \(en\)](https://awesomejev.cc/projects/theoleecj/semif-openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/theoleecj/semif-openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/theoleecj/semif-openjev)
 
-[Repository](https://github.com/TheoLeeCJ/SemIf-OpenJev) · alternatives · Python · 4786 snapshot stars
+[Repository](https://github.com/TheoLeeCJ/SemIf-OpenJev) · alternatives · Python · 4797 snapshot stars
 
 Author description: Semantic ifs from open models, on a 3090 at home. Independent; not affiliated with Jev or TypeSafe.
 
@@ -125,7 +125,7 @@ Repository topics: jev, demo, open-source, local
 
 [Project \(en\)](https://awesomejev.cc/projects/contrastive-lm/clm) · [Project \(zh\)](https://awesomejev.cc/zh/projects/contrastive-lm/clm) · [Project \(ja\)](https://awesomejev.cc/ja/projects/contrastive-lm/clm)
 
-[Repository](https://github.com/Contrastive-LM/CLM) · alternatives · Python · 2988 snapshot stars
+[Repository](https://github.com/Contrastive-LM/CLM) · alternatives · Python · 2998 snapshot stars
 
 Author description: Open-source contrastive System One decision model with a TypeSafe-compatible API for typed Noul, Choice, and Score judgments.
 
@@ -135,7 +135,7 @@ Repository topics: system-one, decision-model, contrastive-learning, typesafe-co
 
 [Project \(en\)](https://awesomejev.cc/projects/jarrodwatts/jev-trader) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jarrodwatts/jev-trader) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jarrodwatts/jev-trader)
 
-[Repository](https://github.com/jarrodwatts/jev-trader) · agents · TypeScript · 2951 snapshot stars
+[Repository](https://github.com/jarrodwatts/jev-trader) · agents · TypeScript · 2962 snapshot stars
 
 Author description: One AI trade decision every Monad block — Jev on Kuru MON-USDC.
 
@@ -145,7 +145,7 @@ Repository topics: jev, demo, trading, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/typesafe-ai/skills) · [Project \(zh\)](https://awesomejev.cc/zh/projects/typesafe-ai/skills) · [Project \(ja\)](https://awesomejev.cc/ja/projects/typesafe-ai/skills)
 
-[Repository](https://github.com/typesafe-ai/skills) · resources · 2666 snapshot stars
+[Repository](https://github.com/typesafe-ai/skills) · resources · 2672 snapshot stars
 
 Author description: Agent skills for building with TypeSafe's System One API.
 
@@ -155,7 +155,7 @@ Repository topics: jev, agent, skills, official
 
 [Project \(en\)](https://awesomejev.cc/projects/yibie/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yibie/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yibie/awesome-jev)
 
-[Repository](https://github.com/yibie/awesome-jev) · directories · Python · 2280 snapshot stars
+[Repository](https://github.com/yibie/awesome-jev) · directories · Python · 2301 snapshot stars
 
 Author description: Curated list of public projects, integrations, and discussions built on Jev — TypeSafe AI's System One model.
 
@@ -165,7 +165,7 @@ Repository topics: jev, awesome
 
 [Project \(en\)](https://awesomejev.cc/projects/vinnylarouge/jevlike) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vinnylarouge/jevlike) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vinnylarouge/jevlike)
 
-[Repository](https://github.com/vinnylarouge/jevlike) · research · Python · 1350 snapshot stars
+[Repository](https://github.com/vinnylarouge/jevlike) · research · Python · 1351 snapshot stars
 
 Author description: Community Jev-like model and tooling experiment inspired by TypeSafe System One.
 
@@ -175,7 +175,7 @@ Repository topics: jev, demo, model
 
 [Project \(en\)](https://awesomejev.cc/projects/feder-cr/jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/feder-cr/jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/feder-cr/jev)
 
-[Repository](https://github.com/feder-cr/jev) · alternatives · C++ · 1298 snapshot stars
+[Repository](https://github.com/feder-cr/jev) · alternatives · C++ · 1305 snapshot stars
 
 Author description: Open-source, CPU-only alternative to Jev for yes/no decisions: MiniCPM5-1B cut to 17 layers with a one-logit output head, quantized to a 619 MB GGUF, one forward pass on llama.cpp, no GPU.
 
@@ -185,59 +185,49 @@ Repository topics: jev, decision-model, gguf, llama-cpp, python
 
 [Project \(en\)](https://awesomejev.cc/projects/autonomous-ai/openharness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/autonomous-ai/openharness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/autonomous-ai/openharness)
 
-[Repository](https://github.com/autonomous-ai/openharness) · agents · TypeScript · 1227 snapshot stars
+[Repository](https://github.com/autonomous-ai/openharness) · agents · TypeScript · 1234 snapshot stars
 
 Author description: Follow your curiosity. Build across disciplines. Open-source software and hardware for polymaths in the making.
 
 Repository topics: jev, 3d-modeling, agent-framework, agent-harness, ai-agents, cad, claude-code, codex
 
-### typesafe-computer-use
-
-[Project \(en\)](https://awesomejev.cc/projects/awlevin/typesafe-computer-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/awlevin/typesafe-computer-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/awlevin/typesafe-computer-use)
-
-[Repository](https://github.com/awlevin/typesafe-computer-use) · browser · Python · 1225 snapshot stars
-
-Author description: Computer use for about $0.0002 a step: OCR the screen, classify the next action with TypeSafe, click \(macOS\).
-
-Repository topics: jev, agent, computer-use, browser
-
 ### AnyJev
 
 [Project \(en\)](https://awesomejev.cc/projects/nokia-applied-research/anyjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nokia-applied-research/anyjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nokia-applied-research/anyjev)
 
-[Repository](https://github.com/nokia-applied-research/AnyJev) · alternatives · Python · 1202 snapshot stars
+[Repository](https://github.com/nokia-applied-research/AnyJev) · alternatives · Python · 1229 snapshot stars
 
 Author description: Independent open-source Jev-style decision model that turns open LLMs into typed Choice, Noul, and Score judgments with probabilities.
 
 Repository topics: calibration, decision-model, jev, jev-model, llm, system-one, transformers, vllm
 
-### decider
+### typesafe-computer-use
 
-[Project \(en\)](https://awesomejev.cc/projects/mapika/decider) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mapika/decider) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mapika/decider)
+[Project \(en\)](https://awesomejev.cc/projects/awlevin/typesafe-computer-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/awlevin/typesafe-computer-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/awlevin/typesafe-computer-use)
 
-[Repository](https://github.com/Mapika/decider) · alternatives · Python · 1128 snapshot stars
+[Repository](https://github.com/awlevin/typesafe-computer-use) · browser · Python · 1227 snapshot stars
 
-Author description: One-pass typed decisions with calibrated probabilities \(System One style model\), fine-tuned from Qwen3.5-2B
+Author description: Computer use for about $0.0002 a step: OCR the screen, classify the next action with TypeSafe, click \(macOS\).
 
-Repository topics: jev, python
+Repository topics: jev, agent, computer-use, browser
 
 ### pg-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/realzachi/pg-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/realzachi/pg-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/realzachi/pg-jev)
 
-[Repository](https://github.com/realZachi/pg-jev) · sdk · Shell · 1125 snapshot stars
+[Repository](https://github.com/realZachi/pg-jev) · sdk · Shell · 1133 snapshot stars
 
 Author description: Ask your Postgres tables questions in plain language. A PostgreSQL extension powered by TypeSafe's Jev.
 
 Repository topics: jev
 
-### hermes-jev-skills
+### decider
 
-[Project \(en\)](https://awesomejev.cc/projects/kerpopule/hermes-jev-skills) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kerpopule/hermes-jev-skills) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kerpopule/hermes-jev-skills)
+[Project \(en\)](https://awesomejev.cc/projects/mapika/decider) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mapika/decider) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mapika/decider)
 
-[Repository](https://github.com/kerpopule/hermes-jev-skills) · agents · Python · 1092 snapshot stars
+[Repository](https://github.com/Mapika/decider) · alternatives · Python · 1132 snapshot stars
 
-Author description: Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents \(also Claude Code and Codex\)
+Author description: One-pass typed decisions with calibrated probabilities \(System One style model\), fine-tuned from Qwen3.5-2B
 
 Repository topics: jev, python
 
@@ -245,17 +235,27 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/wy-coliney/jev-browser-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/wy-coliney/jev-browser-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/wy-coliney/jev-browser-use)
 
-[Repository](https://github.com/wy-coliney/jev-browser-use) · browser · JavaScript · 1074 snapshot stars
+[Repository](https://github.com/wy-coliney/jev-browser-use) · browser · JavaScript · 1120 snapshot stars
 
 Author description: 5–10x faster browser operations: Jev clicks, Codex thinks and verifies.
 
 Repository topics: jev, browser, agent
 
+### hermes-jev-skills
+
+[Project \(en\)](https://awesomejev.cc/projects/kerpopule/hermes-jev-skills) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kerpopule/hermes-jev-skills) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kerpopule/hermes-jev-skills)
+
+[Repository](https://github.com/kerpopule/hermes-jev-skills) · agents · Python · 1102 snapshot stars
+
+Author description: Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents \(also Claude Code and Codex\)
+
+Repository topics: jev, python
+
 ### awesome-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/heyjunpenn/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/heyjunpenn/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/heyjunpenn/awesome-jev)
 
-[Repository](https://github.com/heyjunpenn/awesome-jev) · directories · Astro · 959 snapshot stars
+[Repository](https://github.com/heyjunpenn/awesome-jev) · directories · Astro · 961 snapshot stars
 
 Author description: A verified, community-maintained catalog of 503 open-source projects built with Jev.
 
@@ -265,7 +265,7 @@ Repository topics: jev, typescript, awesome
 
 [Project \(en\)](https://awesomejev.cc/projects/anil-matcha/awesome-jev-by-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/anil-matcha/awesome-jev-by-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/anil-matcha/awesome-jev-by-typesafe)
 
-[Repository](https://github.com/Anil-matcha/awesome-jev-by-typesafe) · resources · Python · 912 snapshot stars
+[Repository](https://github.com/Anil-matcha/awesome-jev-by-typesafe) · resources · Python · 913 snapshot stars
 
 Author description: Evidence-backed use cases, patterns, prompts, and starter code for TypeSafe Jev.
 
@@ -275,7 +275,7 @@ Repository topics: jev, awesome, patterns, prompts
 
 [Project \(en\)](https://awesomejev.cc/projects/wfzyx/von) · [Project \(zh\)](https://awesomejev.cc/zh/projects/wfzyx/von) · [Project \(ja\)](https://awesomejev.cc/ja/projects/wfzyx/von)
 
-[Repository](https://github.com/wfzyx/von) · alternatives · Python · 884 snapshot stars
+[Repository](https://github.com/wfzyx/von) · alternatives · Python · 889 snapshot stars
 
 Author description: The open-source System One decision model. Sub-15ms, non-autoregressive, local drop-in alternative to TypeSafe Jev.
 
@@ -295,7 +295,7 @@ Repository topics: jev, chat-assistant, llm, local-first, ocr, privacy, pyqt, py
 
 [Project \(en\)](https://awesomejev.cc/projects/v-modal/awesome-jev-tools) · [Project \(zh\)](https://awesomejev.cc/zh/projects/v-modal/awesome-jev-tools) · [Project \(ja\)](https://awesomejev.cc/ja/projects/v-modal/awesome-jev-tools)
 
-[Repository](https://github.com/v-modal/awesome-jev-tools) · directories · 745 snapshot stars
+[Repository](https://github.com/v-modal/awesome-jev-tools) · directories · 750 snapshot stars
 
 Author description: A curated list of tools built for Jev — TypeSafe AI's System One model for typed decisions.
 
@@ -305,17 +305,27 @@ Repository topics: jev, awesome, awesome-list, awesome-lists, llm, robotics, rob
 
 [Project \(en\)](https://awesomejev.cc/projects/thruwire/foreman) · [Project \(zh\)](https://awesomejev.cc/zh/projects/thruwire/foreman) · [Project \(ja\)](https://awesomejev.cc/ja/projects/thruwire/foreman)
 
-[Repository](https://github.com/thruwire/foreman) · agents · Python · 741 snapshot stars
+[Repository](https://github.com/thruwire/foreman) · agents · Python · 745 snapshot stars
 
 Author description: Software Factory Foreman based on TypeSafe Jev model.
 
 Repository topics: jev, agent, factory
 
+### openjev
+
+[Project \(en\)](https://awesomejev.cc/projects/razorback16/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/razorback16/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/razorback16/openjev)
+
+[Repository](https://github.com/razorback16/openjev) · alternatives · Python · 690 snapshot stars
+
+Author description: Open, Jev-compatible System One decision server on DiffusionGemma
+
+Repository topics: jev, python
+
 ### pi-extensions
 
 [Project \(en\)](https://awesomejev.cc/projects/narumiruna/pi-extensions) · [Project \(zh\)](https://awesomejev.cc/zh/projects/narumiruna/pi-extensions) · [Project \(ja\)](https://awesomejev.cc/ja/projects/narumiruna/pi-extensions)
 
-[Repository](https://github.com/narumiruna/pi-extensions) · agents · TypeScript · 685 snapshot stars
+[Repository](https://github.com/narumiruna/pi-extensions) · agents · TypeScript · 686 snapshot stars
 
 Author description: A monorepo of Pi Coding Agent extensions
 
@@ -341,21 +351,11 @@ Author description: Awesome Jev: source-backed open-source ecosystem radar, plai
 
 Repository topics: jev, awesome
 
-### openjev
-
-[Project \(en\)](https://awesomejev.cc/projects/razorback16/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/razorback16/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/razorback16/openjev)
-
-[Repository](https://github.com/razorback16/openjev) · alternatives · Python · 682 snapshot stars
-
-Author description: Open, Jev-compatible System One decision server on DiffusionGemma
-
-Repository topics: jev, python
-
 ### awesome-jev \(AnotiaWang\)
 
 [Project \(en\)](https://awesomejev.cc/projects/anotiawang/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/anotiawang/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/anotiawang/awesome-jev)
 
-[Repository](https://github.com/AnotiaWang/awesome-jev) · directories · Python · 640 snapshot stars
+[Repository](https://github.com/AnotiaWang/awesome-jev) · directories · Python · 641 snapshot stars
 
 Author description: Curated list of awesome Jev / TypeSafe System One applications, libraries, and resources.
 
@@ -365,7 +365,7 @@ Repository topics: jev, awesome
 
 [Project \(en\)](https://awesomejev.cc/projects/wuyoscar/jev-skill) · [Project \(zh\)](https://awesomejev.cc/zh/projects/wuyoscar/jev-skill) · [Project \(ja\)](https://awesomejev.cc/ja/projects/wuyoscar/jev-skill)
 
-[Repository](https://github.com/wuyoscar/jev-skill) · resources · Python · 602 snapshot stars
+[Repository](https://github.com/wuyoscar/jev-skill) · resources · Python · 606 snapshot stars
 
 Author description: An awesome collection of Jev use cases, workflows, and agent skills.
 
@@ -375,7 +375,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/kydlikebtc/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kydlikebtc/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kydlikebtc/awesome-jev)
 
-[Repository](https://github.com/kydlikebtc/awesome-jev) · directories · Python · 598 snapshot stars
+[Repository](https://github.com/kydlikebtc/awesome-jev) · directories · Python · 599 snapshot stars
 
 Author description: 1207 public resources for Jev, TypeSafe AI's System One decision model, indexed by decision pattern. Source citations, dated link checks and scheduled call-site text checks; runtime and performance are not independently tested here. EN/中文, JSON schema and platform compatibility.
 
@@ -385,7 +385,7 @@ Repository topics: jev, agent-tools, ai-agents, awesome, awesome-list, calibrati
 
 [Project \(en\)](https://awesomejev.cc/projects/gargpratyush/jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/gargpratyush/jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/gargpratyush/jev-router)
 
-[Repository](https://github.com/gargpratyush/jev-router) · agents · JavaScript · 585 snapshot stars
+[Repository](https://github.com/gargpratyush/jev-router) · agents · JavaScript · 591 snapshot stars
 
 Author description: Route to the cheapest model in Claude Code for your task using jev-router.
 
@@ -395,7 +395,7 @@ Repository topics: jev, router, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/abdelstark/awesome-typesafe-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/abdelstark/awesome-typesafe-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/abdelstark/awesome-typesafe-jev)
 
-[Repository](https://github.com/AbdelStark/awesome-typesafe-jev) · directories · HTML · 581 snapshot stars
+[Repository](https://github.com/AbdelStark/awesome-typesafe-jev) · directories · HTML · 584 snapshot stars
 
 Author description: Awesome Jev: a source-backed field guide to TypeSafe's System One model, with SDKs, live demos, agent tools, and independent evaluations.
 
@@ -405,7 +405,7 @@ Repository topics: jev, agent-skills, ai-agents, awesome, awesome-jev, awesome-l
 
 [Project \(en\)](https://awesomejev.cc/projects/agricidaniel/jev-seo) · [Project \(zh\)](https://awesomejev.cc/zh/projects/agricidaniel/jev-seo) · [Project \(ja\)](https://awesomejev.cc/ja/projects/agricidaniel/jev-seo)
 
-[Repository](https://github.com/AgriciDaniel/jev-seo) · applications · Python · 555 snapshot stars
+[Repository](https://github.com/AgriciDaniel/jev-seo) · applications · Python · 562 snapshot stars
 
 Author description: Live SEO audit for any website from one homepage URL, judged by Jev. PDF, XLSX and Markdown reports.
 
@@ -415,7 +415,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/cobanov/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cobanov/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cobanov/awesome-jev)
 
-[Repository](https://github.com/cobanov/awesome-jev) · directories · 541 snapshot stars
+[Repository](https://github.com/cobanov/awesome-jev) · directories · 546 snapshot stars
 
 Author description: A curated, source-backed list of projects built with Jev, TypeSafe AI's System One model for typed decisions.
 
@@ -425,7 +425,7 @@ Repository topics: jev, awesome
 
 [Project \(en\)](https://awesomejev.cc/projects/jerryjliu/docjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jerryjliu/docjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jerryjliu/docjev)
 
-[Repository](https://github.com/jerryjliu/docjev) · sdk · Python · 524 snapshot stars
+[Repository](https://github.com/jerryjliu/docjev) · sdk · Python · 525 snapshot stars
 
 Author description: Classifies and splits PDFs, DOCX, and PPTX with TypeSafe Jev. Provides a Python library, CLI, and local app with LiteParse extraction and optional LlamaParse OCR.
 
@@ -435,7 +435,7 @@ Repository topics: jev, document-classification, document-splitting, ocr, python
 
 [Project \(en\)](https://awesomejev.cc/projects/jkudish/jev-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jkudish/jev-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jkudish/jev-mcp)
 
-[Repository](https://github.com/jkudish/jev-mcp) · sdk · JavaScript · 519 snapshot stars
+[Repository](https://github.com/jkudish/jev-mcp) · sdk · JavaScript · 521 snapshot stars
 
 Author description: Proof of concept MCP for TypeSafe's Jev AI model.
 
@@ -445,7 +445,7 @@ Repository topics: jev, mcp, sdk
 
 [Project \(en\)](https://awesomejev.cc/projects/omnijev/awesome-jev-gallery) · [Project \(zh\)](https://awesomejev.cc/zh/projects/omnijev/awesome-jev-gallery) · [Project \(ja\)](https://awesomejev.cc/ja/projects/omnijev/awesome-jev-gallery)
 
-[Repository](https://github.com/OmniJev/awesome-jev-gallery) · directories · JavaScript · 502 snapshot stars
+[Repository](https://github.com/OmniJev/awesome-jev-gallery) · directories · JavaScript · 504 snapshot stars
 
 Author description: 🔥🔥 Papers, open reproductions and independent evaluations behind System One models and Jev.
 
@@ -455,27 +455,17 @@ Repository topics: jev, awesome, awesome-list, calibrated-probabilities, calibra
 
 [Project \(en\)](https://awesomejev.cc/projects/imchong/robotics_notebooks) · [Project \(zh\)](https://awesomejev.cc/zh/projects/imchong/robotics_notebooks) · [Project \(ja\)](https://awesomejev.cc/ja/projects/imchong/robotics_notebooks)
 
-[Repository](https://github.com/ImChong/Robotics_Notebooks) · resources · Python · 497 snapshot stars
+[Repository](https://github.com/ImChong/Robotics_Notebooks) · resources · Python · 504 snapshot stars
 
 Author description: 机器人技术栈资料汇总
 
 Repository topics: jev, python
 
-### JevRev
-
-[Project \(en\)](https://awesomejev.cc/projects/alex314618-create/jevrev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alex314618-create/jevrev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alex314618-create/jevrev)
-
-[Repository](https://github.com/Alex314618-create/JevRev) · agents · TypeScript · 486 snapshot stars
-
-Author description: Think 100. Run 5. Ship 1.
-
-Repository topics: jev, cheeeap, faaaaaaast, jev-archived-2026-09, workflow, typescript
-
 ### JevRouter
 
 [Project \(en\)](https://awesomejev.cc/projects/billionsbobby/jevrouter) · [Project \(zh\)](https://awesomejev.cc/zh/projects/billionsbobby/jevrouter) · [Project \(ja\)](https://awesomejev.cc/ja/projects/billionsbobby/jevrouter)
 
-[Repository](https://github.com/BillionsBobby/JevRouter) · agents · TypeScript · 459 snapshot stars
+[Repository](https://github.com/BillionsBobby/JevRouter) · agents · TypeScript · 460 snapshot stars
 
 Author description: A lightweight Jev-powered router for models, tools, and subagents
 
@@ -505,7 +495,7 @@ Repository topics: jev, api, classification, cli, cloudflare-workers, llm, mcp, 
 
 [Project \(en\)](https://awesomejev.cc/projects/walidboulanouar/awesome-jev-use-cases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/walidboulanouar/awesome-jev-use-cases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/walidboulanouar/awesome-jev-use-cases)
 
-[Repository](https://github.com/walidboulanouar/awesome-jev-use-cases) · directories · 420 snapshot stars
+[Repository](https://github.com/walidboulanouar/awesome-jev-use-cases) · directories · 423 snapshot stars
 
 Author description: Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0, sponsored by AY Automate.
 
@@ -515,7 +505,7 @@ Repository topics: jev, ai-guardrails, ai-router, awesome, awesome-list, classif
 
 [Project \(en\)](https://awesomejev.cc/projects/zefan-cai/open-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zefan-cai/open-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zefan-cai/open-jev)
 
-[Repository](https://github.com/Zefan-Cai/Open-Jev) · alternatives · Python · 404 snapshot stars
+[Repository](https://github.com/Zefan-Cai/Open-Jev) · alternatives · Python · 408 snapshot stars
 
 Author description: Open-Jev — Jev / TypeSafe related project
 
@@ -525,7 +515,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/dabit3/jev-experiments) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dabit3/jev-experiments) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dabit3/jev-experiments)
 
-[Repository](https://github.com/dabit3/jev-experiments) · research · TypeScript · 403 snapshot stars
+[Repository](https://github.com/dabit3/jev-experiments) · research · TypeScript · 402 snapshot stars
 
 Author description: jev-experiments: TypeSafe Jev ecosystem repository.
 
@@ -535,17 +525,27 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/moritzkremb/jev-voice-browser) · [Project \(zh\)](https://awesomejev.cc/zh/projects/moritzkremb/jev-voice-browser) · [Project \(ja\)](https://awesomejev.cc/ja/projects/moritzkremb/jev-voice-browser)
 
-[Repository](https://github.com/moritzkremb/jev-voice-browser) · browser · JavaScript · 401 snapshot stars
+[Repository](https://github.com/moritzkremb/jev-voice-browser) · browser · JavaScript · 402 snapshot stars
 
 Author description: Control a real browser by voice. Jev \(TypeSafe System One\) decides intent + target in ~300 ms per spoken word; Playwright acts — often before you finish the sentence.
 
 Repository topics: jev, javascript
 
+### JevRev
+
+[Project \(en\)](https://awesomejev.cc/projects/alex314618-create/jevrev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alex314618-create/jevrev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alex314618-create/jevrev)
+
+[Repository](https://github.com/Alex314618-create/JevRev) · agents · TypeScript · 399 snapshot stars
+
+Author description: Think 100. Run 5. Ship 1.
+
+Repository topics: jev, cheeeap, faaaaaaast, jev-archived-2026-09, workflow, typescript
+
 ### system-one-adapter-python
 
 [Project \(en\)](https://awesomejev.cc/projects/typesafe-ai/system-one-adapter-python) · [Project \(zh\)](https://awesomejev.cc/zh/projects/typesafe-ai/system-one-adapter-python) · [Project \(ja\)](https://awesomejev.cc/ja/projects/typesafe-ai/system-one-adapter-python)
 
-[Repository](https://github.com/typesafe-ai/system-one-adapter-python) · sdk · Python · 389 snapshot stars
+[Repository](https://github.com/typesafe-ai/system-one-adapter-python) · sdk · Python · 390 snapshot stars
 
 Author description: Drop-in TypeSafeClient replacement backed by LLM APIs — run System One / Jev-style calls against open models.
 
@@ -555,7 +555,7 @@ Repository topics: jev, sdk, adapter, python, system-one
 
 [Project \(en\)](https://awesomejev.cc/projects/mohit67890/imajev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mohit67890/imajev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mohit67890/imajev)
 
-[Repository](https://github.com/mohit67890/imajev) · alternatives · Python · 369 snapshot stars
+[Repository](https://github.com/mohit67890/imajev) · alternatives · Python · 371 snapshot stars
 
 Author description: Open Jev-style typed-decision model that also takes images: photo + app state + typed questions in, calibrated probabilities out, locally.
 
@@ -565,7 +565,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/kitze/unclutter) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kitze/unclutter) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kitze/unclutter)
 
-[Repository](https://github.com/kitze/unclutter) · browser · TypeScript · 369 snapshot stars
+[Repository](https://github.com/kitze/unclutter) · browser · TypeScript · 370 snapshot stars
 
 Author description: WXT browser extension: Jev-powered page clutter removal with reusable template rules.
 
@@ -575,7 +575,7 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/datawhalechina/jev-cookbook) · [Project \(zh\)](https://awesomejev.cc/zh/projects/datawhalechina/jev-cookbook) · [Project \(ja\)](https://awesomejev.cc/ja/projects/datawhalechina/jev-cookbook)
 
-[Repository](https://github.com/datawhalechina/jev-cookbook) · resources · Python · 356 snapshot stars
+[Repository](https://github.com/datawhalechina/jev-cookbook) · resources · Python · 369 snapshot stars
 
 Author description: ⚡ 适合中国宝宝的 Jev 入门教程｜手把手带你了解关于 Jev 的一切——Jupyter Notebook 轻松实验，从三种问题原语到 18 篇实战配方、语音智能家居、模型评测与本地微调，全面掌握 System One 判断模型的开发范式
 
@@ -595,7 +595,7 @@ Repository topics: jev, ai, cli, code-quality, code-review, devtools, linter, st
 
 [Project \(en\)](https://awesomejev.cc/projects/itsmostafa/typesafe-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/itsmostafa/typesafe-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/itsmostafa/typesafe-mcp)
 
-[Repository](https://github.com/itsmostafa/typesafe-mcp) · sdk · Go · 349 snapshot stars
+[Repository](https://github.com/itsmostafa/typesafe-mcp) · sdk · Go · 350 snapshot stars
 
 Author description: MCP connector giving AI agents direct access to TypeSafe AI's Jev model.
 
@@ -615,7 +615,7 @@ Repository topics: jev, llm, structured-generation, systemone, python
 
 [Project \(en\)](https://awesomejev.cc/projects/jkudish/jev-browser) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jkudish/jev-browser) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jkudish/jev-browser)
 
-[Repository](https://github.com/jkudish/jev-browser) · browser · JavaScript · 331 snapshot stars
+[Repository](https://github.com/jkudish/jev-browser) · browser · JavaScript · 332 snapshot stars
 
 Author description: Browser use using TypeSafe's Jev model.
 
@@ -625,7 +625,7 @@ Repository topics: jev, browser, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/vinilana/jev-gateway) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vinilana/jev-gateway) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vinilana/jev-gateway)
 
-[Repository](https://github.com/vinilana/jev-gateway) · agents · TypeScript · 314 snapshot stars
+[Repository](https://github.com/vinilana/jev-gateway) · agents · TypeScript · 313 snapshot stars
 
 Author description: An easy way to use jev with your coding agent for tool calling reasoning
 
@@ -655,7 +655,7 @@ Repository topics: jev, active-learning, classification, cli, gepa, human-in-the
 
 [Project \(en\)](https://awesomejev.cc/projects/typesafe-ai/typesafe-sdk-python) · [Project \(zh\)](https://awesomejev.cc/zh/projects/typesafe-ai/typesafe-sdk-python) · [Project \(ja\)](https://awesomejev.cc/ja/projects/typesafe-ai/typesafe-sdk-python)
 
-[Repository](https://github.com/typesafe-ai/typesafe-sdk-python) · sdk · Python · 283 snapshot stars
+[Repository](https://github.com/typesafe-ai/typesafe-sdk-python) · sdk · Python · 284 snapshot stars
 
 Author description: Official Python library for the TypeSafe API \(System One / Jev\).
 
@@ -665,7 +665,7 @@ Repository topics: jev, sdk, python, official
 
 [Project \(en\)](https://awesomejev.cc/projects/typesafe-ai/typesafe-sdk-js) · [Project \(zh\)](https://awesomejev.cc/zh/projects/typesafe-ai/typesafe-sdk-js) · [Project \(ja\)](https://awesomejev.cc/ja/projects/typesafe-ai/typesafe-sdk-js)
 
-[Repository](https://github.com/typesafe-ai/typesafe-sdk-js) · sdk · TypeScript · 275 snapshot stars
+[Repository](https://github.com/typesafe-ai/typesafe-sdk-js) · sdk · TypeScript · 276 snapshot stars
 
 Author description: Official TypeScript/JavaScript SDK for the TypeSafe API \(System One / Jev\).
 
@@ -685,7 +685,7 @@ Repository topics: jev, agent, router
 
 [Project \(en\)](https://awesomejev.cc/projects/romanslack/jev-drone) · [Project \(zh\)](https://awesomejev.cc/zh/projects/romanslack/jev-drone) · [Project \(ja\)](https://awesomejev.cc/ja/projects/romanslack/jev-drone)
 
-[Repository](https://github.com/RomanSlack/jev-drone) · research · Python · 268 snapshot stars
+[Repository](https://github.com/RomanSlack/jev-drone) · research · Python · 270 snapshot stars
 
 Author description: Camera-only autonomous drone in MuJoCo with a small judgment model \(TypeSafe Jev\) in the loop at 2.5Hz
 
@@ -695,11 +695,21 @@ Repository topics: jev, demo
 
 [Project \(en\)](https://awesomejev.cc/projects/kitze/skillbox) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kitze/skillbox) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kitze/skillbox)
 
-[Repository](https://github.com/kitze/skillbox) · resources · TypeScript · 268 snapshot stars
+[Repository](https://github.com/kitze/skillbox) · resources · TypeScript · 269 snapshot stars
 
 Author description: Self-hosted, versioned skills library for AI agents — MCP, scoped clients, optional Jev recommendations.
 
 Repository topics: jev, agent, skills, mcp
+
+### jevbench
+
+[Project \(en\)](https://awesomejev.cc/projects/fstandhartinger/jevbench) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fstandhartinger/jevbench) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fstandhartinger/jevbench)
+
+[Repository](https://github.com/fstandhartinger/jevbench) · research · Python · 263 snapshot stars
+
+Author description: JevBench v1 - a benchmark for Jev-class typed decision models: smart, cheap, fast, reliable, open.
+
+Repository topics: jev, python
 
 ### killmyidea
 
@@ -710,16 +720,6 @@ Repository topics: jev, agent, skills, mcp
 Author description: Describe your startup idea. Jev decides: kill it, fix it or ship it.
 
 Repository topics: jev, typescript
-
-### jevbench
-
-[Project \(en\)](https://awesomejev.cc/projects/fstandhartinger/jevbench) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fstandhartinger/jevbench) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fstandhartinger/jevbench)
-
-[Repository](https://github.com/fstandhartinger/jevbench) · research · Python · 257 snapshot stars
-
-Author description: JevBench v1 - a benchmark for Jev-class typed decision models: smart, cheap, fast, reliable, open.
-
-Repository topics: jev, python
 
 ### openai-scala-client
 
@@ -735,7 +735,7 @@ Repository topics: jev, anthropic, anthropic-api, aws-bedrock, chatgpt, gemini, 
 
 [Project \(en\)](https://awesomejev.cc/projects/devin-axis/jev-dsh-decision) · [Project \(zh\)](https://awesomejev.cc/zh/projects/devin-axis/jev-dsh-decision) · [Project \(ja\)](https://awesomejev.cc/ja/projects/devin-axis/jev-dsh-decision)
 
-[Repository](https://github.com/Devin-AXIS/jev-dsh-decision) · agents · JavaScript · 253 snapshot stars
+[Repository](https://github.com/Devin-AXIS/jev-dsh-decision) · agents · JavaScript · 254 snapshot stars
 
 Author description: Jev DSH 决策引擎｜面向 Agent Harness 的结构化决策插件。原生支持 DeepSeek Harness，通过 iPolloWork 支持 OpenCode、Codex Harness。
 
@@ -795,7 +795,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/kunchenguid/compact-adviser) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kunchenguid/compact-adviser) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kunchenguid/compact-adviser)
 
-[Repository](https://github.com/kunchenguid/compact-adviser) · developer · TypeScript · 213 snapshot stars
+[Repository](https://github.com/kunchenguid/compact-adviser) · developer · TypeScript · 214 snapshot stars
 
 Author description: "Work appears completed or recorded. Run /compact to save tokens."
 
@@ -805,7 +805,7 @@ Repository topics: jev, claude-code, claude-code-plugin, compaction, pi, pi-exte
 
 [Project \(en\)](https://awesomejev.cc/projects/aowang-ai/jev-trade) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aowang-ai/jev-trade) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aowang-ai/jev-trade)
 
-[Repository](https://github.com/aowang-ai/jev-trade) · applications · TypeScript · 206 snapshot stars
+[Repository](https://github.com/aowang-ai/jev-trade) · applications · TypeScript · 207 snapshot stars
 
 Author description: Live Jev trader on Hyperliquid
 
@@ -825,7 +825,7 @@ Repository topics: jev, awesome, awesome-lists, typesafe
 
 [Project \(en\)](https://awesomejev.cc/projects/kraayenjon/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kraayenjon/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kraayenjon/awesome-jev)
 
-[Repository](https://github.com/kraayenjon/awesome-jev) · directories · 184 snapshot stars
+[Repository](https://github.com/kraayenjon/awesome-jev) · directories · 185 snapshot stars
 
 Author description: A curated list of Jev use cases, projects, SDKs, and resources. Jev is TypeSafe AI's System One model for fast, typed decisions in software — Choice, Score, and Noul with calibrated probabilities.
 
@@ -851,21 +851,11 @@ Author description: Typesafe.ai System One Model Jev navigating a Neo4j graph by
 
 Repository topics: jev
 
-### JEV\_sees
-
-[Project \(en\)](https://awesomejev.cc/projects/charlesfeng0314/jev_sees) · [Project \(zh\)](https://awesomejev.cc/zh/projects/charlesfeng0314/jev_sees) · [Project \(ja\)](https://awesomejev.cc/ja/projects/charlesfeng0314/jev_sees)
-
-[Repository](https://github.com/CharlesFeng0314/JEV_sees) · sdk · Python · 167 snapshot stars
-
-Author description: Eyes are All JEV Needs - real time visual devisions from RGB, video and RGB-D cameras.
-
-Repository topics: jev, computer-vision, multimodal-ai, object-detection, object-tracking, python, real-time-ai, rgbd
-
 ### pi-warden
 
 [Project \(en\)](https://awesomejev.cc/projects/devmortimer/pi-warden) · [Project \(zh\)](https://awesomejev.cc/zh/projects/devmortimer/pi-warden) · [Project \(ja\)](https://awesomejev.cc/ja/projects/devmortimer/pi-warden)
 
-[Repository](https://github.com/DevMortimer/pi-warden) · agents · TypeScript · 167 snapshot stars
+[Repository](https://github.com/DevMortimer/pi-warden) · agents · TypeScript · 168 snapshot stars
 
 Author description: Guardrails for Pi built on pi-typesafe that steer the agent instead of interrupting you: Jev judges irreversible and off-task tool calls, detects stuck loops, checks unverified done claims, flags slop
 
@@ -875,7 +865,7 @@ Repository topics: jev, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/socai-io/jev-social) · [Project \(zh\)](https://awesomejev.cc/zh/projects/socai-io/jev-social) · [Project \(ja\)](https://awesomejev.cc/ja/projects/socai-io/jev-social)
 
-[Repository](https://github.com/socai-io/jev-social) · agents · JavaScript · 165 snapshot stars
+[Repository](https://github.com/socai-io/jev-social) · agents · JavaScript · 166 snapshot stars
 
 Author description: Jev-powered Instagram, TikTok, and LinkedIn research: typed routing, real browser evidence, streamed post cards, video capture, and cited socai reports.
 
@@ -885,7 +875,7 @@ Repository topics: jev, agent-skills, ai-agents, browser-agent, browser-automati
 
 [Project \(en\)](https://awesomejev.cc/projects/y0usaf/pi-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/y0usaf/pi-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/y0usaf/pi-jev)
 
-[Repository](https://github.com/y0usaf/pi-jev) · agents · TypeScript · 163 snapshot stars
+[Repository](https://github.com/y0usaf/pi-jev) · agents · TypeScript · 164 snapshot stars
 
 Author description: TypeSafe Jev as a decision layer for the Pi coding agent: a measured tool-call gate plus jev\_ask for typed, calibrated answers
 
@@ -895,7 +885,7 @@ Repository topics: jev, agent
 
 [Project \(en\)](https://awesomejev.cc/projects/dorkitude/webctl) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dorkitude/webctl) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dorkitude/webctl)
 
-[Repository](https://github.com/dorkitude/webctl) · developer · Go · 158 snapshot stars
+[Repository](https://github.com/dorkitude/webctl) · developer · Go · 159 snapshot stars
 
 Author description: Smart web search CLI for agents, backed by Jev. Saves a lot of tokens.
 
@@ -910,6 +900,16 @@ Repository topics: jev, go
 Author description: A skill for writing and improving programs that call Jev, TypeSafe's System One model
 
 Repository topics: jev, skills
+
+### JEV\_sees
+
+[Project \(en\)](https://awesomejev.cc/projects/charlesfeng0314/jev_sees) · [Project \(zh\)](https://awesomejev.cc/zh/projects/charlesfeng0314/jev_sees) · [Project \(ja\)](https://awesomejev.cc/ja/projects/charlesfeng0314/jev_sees)
+
+[Repository](https://github.com/CharlesFeng0314/JEV_sees) · sdk · Python · 153 snapshot stars
+
+Author description: Eyes are All JEV Needs - real time visual devisions from RGB, video and RGB-D cameras.
+
+Repository topics: jev, computer-vision, multimodal-ai, object-detection, object-tracking, python, real-time-ai, rgbd
 
 ### jev-semgrep
 
@@ -955,7 +955,7 @@ Repository topics: jev, cli, grep, openrouter, semantic-search, typesafe, python
 
 [Project \(en\)](https://awesomejev.cc/projects/thinkflowlab/system1-agents) · [Project \(zh\)](https://awesomejev.cc/zh/projects/thinkflowlab/system1-agents) · [Project \(ja\)](https://awesomejev.cc/ja/projects/thinkflowlab/system1-agents)
 
-[Repository](https://github.com/ThinkFlowLab/system1-agents) · agents · Python · 134 snapshot stars
+[Repository](https://github.com/ThinkFlowLab/system1-agents) · agents · Python · 136 snapshot stars
 
 Author description: System 1 decision models \(Jev, Laya, Cua-S1\) as brain for agents: Browser use, computer use, games and robotics
 
@@ -965,7 +965,7 @@ Repository topics: jev, ai-agents, browser-agent, browser-automation, claude-cod
 
 [Project \(en\)](https://awesomejev.cc/projects/dicklesworthstone/skillranker) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dicklesworthstone/skillranker) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dicklesworthstone/skillranker)
 
-[Repository](https://github.com/Dicklesworthstone/skillranker) · agents · Rust · 132 snapshot stars
+[Repository](https://github.com/Dicklesworthstone/skillranker) · agents · Rust · 133 snapshot stars
 
 Author description: Rust CLI powered by Jev from TypeSafe.ai that ranks agent skills for the next step using live session context. Includes Claude Code hooks, structured JSON, abstention, and local feedback. Requires a TypeSafe API key.
 
@@ -985,7 +985,7 @@ Repository topics: jev, chrome, extension, extension-chrome, webmcp, javascript
 
 [Project \(en\)](https://awesomejev.cc/projects/daseinlabs/open-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/daseinlabs/open-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/daseinlabs/open-jev)
 
-[Repository](https://github.com/daseinlabs/open-jev) · alternatives · Python · 129 snapshot stars
+[Repository](https://github.com/daseinlabs/open-jev) · alternatives · Python · 130 snapshot stars
 
 Author description: Open Jev implementation with custom finetuning
 
@@ -1011,6 +1011,16 @@ Author description: Stops AI coding agents from claiming work is done without ev
 
 Repository topics: jev, typescript
 
+### jev-use
+
+[Project \(en\)](https://awesomejev.cc/projects/savka777/jev-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/savka777/jev-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/savka777/jev-use)
+
+[Repository](https://github.com/savka777/jev-use) · browser · Swift · 122 snapshot stars
+
+Author description: Say it, and your Mac does it. A computer-use harness on Jev that reads the screen through Accessibility. Fast, no vision model
+
+Repository topics: jev, accessibility, ai, ai-agents, browser-use, computer-use, harness, macos
+
 ### jevmem
 
 [Project \(en\)](https://awesomejev.cc/projects/avinash-jetwani/jevmem) · [Project \(zh\)](https://awesomejev.cc/zh/projects/avinash-jetwani/jevmem) · [Project \(ja\)](https://awesomejev.cc/ja/projects/avinash-jetwani/jevmem)
@@ -1031,35 +1041,35 @@ Author description: lint text in code by jev scorerer
 
 Repository topics: jev, ai, typescript
 
-### jev-use
+### fastbrowse
 
-[Project \(en\)](https://awesomejev.cc/projects/savka777/jev-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/savka777/jev-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/savka777/jev-use)
+[Project \(en\)](https://awesomejev.cc/projects/agent-labs-dev/fastbrowse) · [Project \(zh\)](https://awesomejev.cc/zh/projects/agent-labs-dev/fastbrowse) · [Project \(ja\)](https://awesomejev.cc/ja/projects/agent-labs-dev/fastbrowse)
 
-[Repository](https://github.com/savka777/jev-use) · browser · Swift · 119 snapshot stars
+[Repository](https://github.com/agent-labs-dev/fastbrowse) · browser · Python · 117 snapshot stars
 
-Author description: Say it, and your Mac does it. A computer-use harness on Jev that reads the screen through Accessibility. Fast, no vision model
+Author description: A fast browser agent: Jev picks each action from what is on the page, an LLM reads and plans, and every claim in an answer cites a quote from the page.
 
-Repository topics: jev, accessibility, ai, ai-agents, browser-use, computer-use, harness, macos
+Repository topics: jev, browser, agent
 
 ### stanley-code
 
 [Project \(en\)](https://awesomejev.cc/projects/devagrawal09/stanley-code) · [Project \(zh\)](https://awesomejev.cc/zh/projects/devagrawal09/stanley-code) · [Project \(ja\)](https://awesomejev.cc/ja/projects/devagrawal09/stanley-code)
 
-[Repository](https://github.com/devagrawal09/stanley-code) · agents · TypeScript · 118 snapshot stars
+[Repository](https://github.com/devagrawal09/stanley-code) · agents · TypeScript · 116 snapshot stars
 
 Author description: Bounded TypeSafe Jev workflows for coding agents.
 
 Repository topics: jev, typescript
 
-### fastbrowse
+### jev-voice
 
-[Project \(en\)](https://awesomejev.cc/projects/agent-labs-dev/fastbrowse) · [Project \(zh\)](https://awesomejev.cc/zh/projects/agent-labs-dev/fastbrowse) · [Project \(ja\)](https://awesomejev.cc/ja/projects/agent-labs-dev/fastbrowse)
+[Project \(en\)](https://awesomejev.cc/projects/kevinbadi/jev-voice) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kevinbadi/jev-voice) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kevinbadi/jev-voice)
 
-[Repository](https://github.com/agent-labs-dev/fastbrowse) · browser · Python · 115 snapshot stars
+[Repository](https://github.com/kevinbadi/jev-voice) · agents · Python · 115 snapshot stars
 
-Author description: A fast browser agent: Jev picks each action from what is on the page, an LLM reads and plans, and every claim in an answer cites a quote from the page.
+Author description: Talk to your Mac. Local whisper.cpp + one Jev \(TypeSafe\) call per command + macOS automation.
 
-Repository topics: jev, browser, agent
+Repository topics: jev, python
 
 ### agent-router
 
@@ -1081,25 +1091,35 @@ Author description: Typed-decision models \(noul / choice / score\) trained by a
 
 Repository topics: jev, ai-agents, autonomous-research, decision-model, llm, recursive-self-improvement, system-one, typed-decisions
 
+### hey-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/henryklunaris/hey-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/henryklunaris/hey-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/henryklunaris/hey-jev)
+
+[Repository](https://github.com/henryklunaris/hey-jev) · applications · Python · 112 snapshot stars
+
+Author description: hey-jev: TypeSafe Jev ecosystem repository.
+
+Repository topics: jev, python
+
 ### jev-browser
 
 [Project \(en\)](https://awesomejev.cc/projects/ying-kai-liao/jev-browser) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ying-kai-liao/jev-browser) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ying-kai-liao/jev-browser)
 
-[Repository](https://github.com/Ying-Kai-Liao/jev-browser) · browser · JavaScript · 111 snapshot stars
+[Repository](https://github.com/Ying-Kai-Liao/jev-browser) · browser · JavaScript · 112 snapshot stars
 
 Author description: Browser automation where an LLM plans and Jev \(Typesafe System One\) decides. Library, CLI and MCP server.
 
 Repository topics: jev, javascript, browser-automation, llm-agents, mcp
 
-### jev-voice
+### jev-foundation-models
 
-[Project \(en\)](https://awesomejev.cc/projects/kevinbadi/jev-voice) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kevinbadi/jev-voice) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kevinbadi/jev-voice)
+[Project \(en\)](https://awesomejev.cc/projects/peterfriese/jev-foundation-models) · [Project \(zh\)](https://awesomejev.cc/zh/projects/peterfriese/jev-foundation-models) · [Project \(ja\)](https://awesomejev.cc/ja/projects/peterfriese/jev-foundation-models)
 
-[Repository](https://github.com/kevinbadi/jev-voice) · agents · Python · 111 snapshot stars
+[Repository](https://github.com/peterfriese/jev-foundation-models) · sdk · Swift · 112 snapshot stars
 
-Author description: Talk to your Mac. Local whisper.cpp + one Jev \(TypeSafe\) call per command + macOS automation.
+Author description: A lightweight, native Swift 6 bridge integrating TypeSafe AI's Jev System One decision model into Apple's Foundation Models framework.
 
-Repository topics: jev, python
+Repository topics: jev, swift
 
 ### winnow
 
@@ -1121,6 +1141,16 @@ Author description: Put a live Jev \(TypeSafe\) meter on any video: every senten
 
 Repository topics: jev
 
+### jevcore
+
+[Project \(en\)](https://awesomejev.cc/projects/perrylink/jevcore) · [Project \(zh\)](https://awesomejev.cc/zh/projects/perrylink/jevcore) · [Project \(ja\)](https://awesomejev.cc/ja/projects/perrylink/jevcore)
+
+[Repository](https://github.com/PerryLink/jevcore) · sdk · TypeScript · 107 snapshot stars
+
+Author description: TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.
+
+Repository topics: jev, ai-agents, cordis, decision-model, deepseek, deepseek-harness, dsh, dsh-plugin
+
 ### jev-curate
 
 [Project \(en\)](https://awesomejev.cc/projects/akashpriyadarshii/jev-curate) · [Project \(zh\)](https://awesomejev.cc/zh/projects/akashpriyadarshii/jev-curate) · [Project \(ja\)](https://awesomejev.cc/ja/projects/akashpriyadarshii/jev-curate)
@@ -1131,21 +1161,11 @@ Author description: High-throughput synthetic and pretraining dataset sifter for
 
 Repository topics: jev, arrow, cli, data-cleaning, data-engineering, dataset-curation, eval-harness, fine-tuning
 
-### jevcore
-
-[Project \(en\)](https://awesomejev.cc/projects/perrylink/jevcore) · [Project \(zh\)](https://awesomejev.cc/zh/projects/perrylink/jevcore) · [Project \(ja\)](https://awesomejev.cc/ja/projects/perrylink/jevcore)
-
-[Repository](https://github.com/PerryLink/jevcore) · sdk · TypeScript · 104 snapshot stars
-
-Author description: TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.
-
-Repository topics: jev, ai-agents, cordis, decision-model, deepseek, deepseek-harness, dsh, dsh-plugin
-
 ### jev-as-a-judge
 
 [Project \(en\)](https://awesomejev.cc/projects/danielgshea/jev-as-a-judge) · [Project \(zh\)](https://awesomejev.cc/zh/projects/danielgshea/jev-as-a-judge) · [Project \(ja\)](https://awesomejev.cc/ja/projects/danielgshea/jev-as-a-judge)
 
-[Repository](https://github.com/danielgshea/jev-as-a-judge) · research · Python · 103 snapshot stars
+[Repository](https://github.com/danielgshea/jev-as-a-judge) · research · Python · 105 snapshot stars
 
 Author description: Using Jev as an evaluator.
 
@@ -1155,7 +1175,7 @@ Repository topics: jev, python
 
 [Project \(en\)](https://awesomejev.cc/projects/openlayer-ai/jevals) · [Project \(zh\)](https://awesomejev.cc/zh/projects/openlayer-ai/jevals) · [Project \(ja\)](https://awesomejev.cc/ja/projects/openlayer-ai/jevals)
 
-[Repository](https://github.com/openlayer-ai/jevals) · research · Python · 102 snapshot stars
+[Repository](https://github.com/openlayer-ai/jevals) · research · Python · 104 snapshot stars
 
 Author description: Agent evals and guardrails as Jev decisions: one request per trace, a fraction of a cent, fast enough for the agent loop. Runs locally with Kev or Laya.
 
@@ -1165,11 +1185,21 @@ Repository topics: jev, agents, evals, guardrails, llm, llm-evaluation, ragas, t
 
 [Project \(en\)](https://awesomejev.cc/projects/nassim-arifette/jevgrep) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nassim-arifette/jevgrep) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nassim-arifette/jevgrep)
 
-[Repository](https://github.com/nassim-arifette/jevgrep) · developer · TypeScript · 101 snapshot stars
+[Repository](https://github.com/nassim-arifette/jevgrep) · developer · TypeScript · 103 snapshot stars
 
 Author description: Jev-powered semantic code search for coding agents — find behavior across repositories via CLI or MCP, with exact source excerpts and line numbers.
 
 Repository topics: jev, ai-agents, cli, code-navigation, code-search, coding-agents, developer-tools, mcp
+
+### open-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/kyegomez/open-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kyegomez/open-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kyegomez/open-jev)
+
+[Repository](https://github.com/kyegomez/open-jev) · alternatives · Python · 101 snapshot stars
+
+Author description: an open-source, from-first-principles reconstruction of the ideas behind TypeSafe AI's Jev, written in pytorch
+
+Repository topics: jev, ai, anthropic, attention, chatgpt, claude, gpt, transformers
 
 ### awesome-jev
 
@@ -1191,6 +1221,16 @@ Author description: Codebase search powered by Jev from @typesafe-ai
 
 Repository topics: jev
 
+### jevmail
+
+[Project \(en\)](https://awesomejev.cc/projects/fazlerocks/jevmail) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fazlerocks/jevmail) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fazlerocks/jevmail)
+
+[Repository](https://github.com/fazlerocks/jevmail) · applications · TypeScript · 97 snapshot stars
+
+Author description: Open-source AI email triage for Gmail. Sorts your inbox into Needs reply, Updates, Promos, Sales and Spam with Jev, TypeSafe AI's decision model, via Vercel AI Gateway. Read-only, runs locally, 1,000 emails in about a minute for 3 cents.
+
+Repository topics: jev, ai-email-assistant, ai-sdk, email-classification, email-sorter, email-triage, gmail, gmail-api
+
 ### advocaat
 
 [Project \(en\)](https://awesomejev.cc/projects/pithings/advocaat) · [Project \(zh\)](https://awesomejev.cc/zh/projects/pithings/advocaat) · [Project \(ja\)](https://awesomejev.cc/ja/projects/pithings/advocaat)
@@ -1211,36 +1251,6 @@ Author description: Free Rust SEO and GEO toolkit powered by TypeSafe Jev: 58-ru
 
 Repository topics: jev, ahrefs-alternative, answer-engine-optimization, claude-code, cli, coding-agents, generative-engine-optimization, geo
 
-### jevmail
-
-[Project \(en\)](https://awesomejev.cc/projects/fazlerocks/jevmail) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fazlerocks/jevmail) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fazlerocks/jevmail)
-
-[Repository](https://github.com/fazlerocks/jevmail) · applications · TypeScript · 93 snapshot stars
-
-Author description: Open-source AI email triage for Gmail. Sorts your inbox into Needs reply, Updates, Promos, Sales and Spam with Jev, TypeSafe AI's decision model, via Vercel AI Gateway. Read-only, runs locally, 1,000 emails in about a minute for 3 cents.
-
-Repository topics: jev, ai-email-assistant, ai-sdk, email-classification, email-sorter, email-triage, gmail, gmail-api
-
-### hey-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/henryklunaris/hey-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/henryklunaris/hey-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/henryklunaris/hey-jev)
-
-[Repository](https://github.com/henryklunaris/hey-jev) · applications · Python · 91 snapshot stars
-
-Author description: hey-jev: TypeSafe Jev ecosystem repository.
-
-Repository topics: jev, python
-
-### open-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/kyegomez/open-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kyegomez/open-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kyegomez/open-jev)
-
-[Repository](https://github.com/kyegomez/open-jev) · alternatives · Python · 89 snapshot stars
-
-Author description: an open-source, from-first-principles reconstruction of the ideas behind TypeSafe AI's Jev, written in pytorch
-
-Repository topics: jev, ai, anthropic, attention, chatgpt, claude, gpt, transformers
-
 ### typesafe-adblock
 
 [Project \(en\)](https://awesomejev.cc/projects/realzachi/typesafe-adblock) · [Project \(zh\)](https://awesomejev.cc/zh/projects/realzachi/typesafe-adblock) · [Project \(ja\)](https://awesomejev.cc/ja/projects/realzachi/typesafe-adblock)
@@ -1248,6 +1258,16 @@ Repository topics: jev, ai, anthropic, attention, chatgpt, claude, gpt, transfor
 [Repository](https://github.com/realZachi/typesafe-adblock) · browser · JavaScript · 89 snapshot stars
 
 Author description: 🧹 Fun project: a Chrome extension that asks a tiny AI decision model \(TypeSafe Jev\) "is this DOM element an ad?" and pops it off the page. BYOK, no backend, not a real ad blocker.
+
+Repository topics: jev
+
+### Jev-Case
+
+[Project \(en\)](https://awesomejev.cc/projects/hiwoniu/jev-case) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hiwoniu/jev-case) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hiwoniu/jev-case)
+
+[Repository](https://github.com/Hiwoniu/Jev-Case) · directories · TypeScript · 88 snapshot stars
+
+Author description: 收集全网优秀 case 的收藏库 \| A curated collection of excellent cases from across the web \(TypeSafe Jev / System One\).
 
 Repository topics: jev
 
@@ -1261,21 +1281,11 @@ Author description: Pre-alpha PostgreSQL extension for TypeSafe AI \(Jev\) categ
 
 Repository topics: jev, c
 
-### Jev-Case
-
-[Project \(en\)](https://awesomejev.cc/projects/hiwoniu/jev-case) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hiwoniu/jev-case) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hiwoniu/jev-case)
-
-[Repository](https://github.com/Hiwoniu/Jev-Case) · directories · TypeScript · 85 snapshot stars
-
-Author description: 收集全网优秀 case 的收藏库 \| A curated collection of excellent cases from across the web \(TypeSafe Jev / System One\).
-
-Repository topics: jev
-
 ### oxlint-plugin-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/wobsoriano/oxlint-plugin-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/wobsoriano/oxlint-plugin-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/wobsoriano/oxlint-plugin-jev)
 
-[Repository](https://github.com/wobsoriano/oxlint-plugin-jev) · developer · TypeScript · 85 snapshot stars
+[Repository](https://github.com/wobsoriano/oxlint-plugin-jev) · developer · TypeScript · 87 snapshot stars
 
 Author description: oxlint-plugin-jev: TypeSafe Jev ecosystem repository.
 
@@ -1285,7 +1295,7 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/dimweaker/jev-libero) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dimweaker/jev-libero) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dimweaker/jev-libero)
 
-[Repository](https://github.com/Dimweaker/jev-libero) · agents · Python · 81 snapshot stars
+[Repository](https://github.com/Dimweaker/jev-libero) · agents · Python · 82 snapshot stars
 
 Author description: Fine-grained robot control with Jev, physics previews, and configurable LIBERO tasks.
 
@@ -1295,7 +1305,7 @@ Repository topics: jev, emobodied-ai, libero, llm, model-based-control, mujoco, 
 
 [Project \(en\)](https://awesomejev.cc/projects/yzfly/awesome-jev-zh) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yzfly/awesome-jev-zh) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yzfly/awesome-jev-zh)
 
-[Repository](https://github.com/yzfly/awesome-jev-zh) · directories · HTML · 77 snapshot stars
+[Repository](https://github.com/yzfly/awesome-jev-zh) · directories · HTML · 81 snapshot stars
 
 Author description: Jev / TypeSafe System One 中文精选列表：官方资料、SDK、爆款应用、Agent 工具、开源复现与独立评测，附中文上手指南，每日自动收录 GitHub 热门项目。
 
@@ -1341,6 +1351,16 @@ Author description: JEV-inspired parallel decisions for CUDA LLMs. One context, 
 
 Repository topics: jev, javascript, cuda, game-ai, inference
 
+### system-one
+
+[Project \(en\)](https://awesomejev.cc/projects/iamaamir/system-one) · [Project \(zh\)](https://awesomejev.cc/zh/projects/iamaamir/system-one) · [Project \(ja\)](https://awesomejev.cc/ja/projects/iamaamir/system-one)
+
+[Repository](https://github.com/iamaamir/system-one) · sdk · TypeScript · 72 snapshot stars
+
+Author description: Provider-neutral System One runtime for TypeScript and Pi
+
+Repository topics: jev, calibrated-classification, choice-noul-score, decision-models, model-routing, pi-coding-agent, provider-neutral, reflex
+
 ### stuntd
 
 [Project \(en\)](https://awesomejev.cc/projects/bladedevoff/stuntd) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bladedevoff/stuntd) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bladedevoff/stuntd)
@@ -1350,16 +1370,6 @@ Repository topics: jev, javascript, cuda, game-ai, inference
 Author description: Local proxy that learns your app's typed LLM decisions and answers them with a Laya head. Jev and OpenAI compatible.
 
 Repository topics: jev, claude-code, distillation, laya, llm, llm-proxy, local-inference, openai-compatible
-
-### system-one
-
-[Project \(en\)](https://awesomejev.cc/projects/iamaamir/system-one) · [Project \(zh\)](https://awesomejev.cc/zh/projects/iamaamir/system-one) · [Project \(ja\)](https://awesomejev.cc/ja/projects/iamaamir/system-one)
-
-[Repository](https://github.com/iamaamir/system-one) · sdk · TypeScript · 70 snapshot stars
-
-Author description: Provider-neutral System One runtime for TypeScript and Pi
-
-Repository topics: jev, calibrated-classification, choice-noul-score, decision-models, model-routing, pi-coding-agent, provider-neutral, reflex
 
 ### awesome-jev
 
@@ -1380,6 +1390,16 @@ Repository topics: jev, ai-agents, awesome-list, decision-models, open-source, j
 Author description: Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Typed, schema-valid JSON in one forward pass.
 
 Repository topics: jev
+
+### JevIntent
+
+[Project \(en\)](https://awesomejev.cc/projects/nisaka520/jevintent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nisaka520/jevintent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nisaka520/jevintent)
+
+[Repository](https://github.com/Nisaka520/JevIntent) · applications · Java · 68 snapshot stars
+
+Author description: 微信（FkWeChat 插件）：长按消息分析意图 / 情绪 / 回复姿态，只在本机弹提示，对方无感知
+
+Repository topics: jev, android, chat-analysis, fkwechat, intent-recognition, lsposed, plugin, typesafe
 
 ### openthai-systemone
 
@@ -1411,16 +1431,6 @@ Author description: typesafe.pro: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, python
 
-### jev-foundation-models
-
-[Project \(en\)](https://awesomejev.cc/projects/peterfriese/jev-foundation-models) · [Project \(zh\)](https://awesomejev.cc/zh/projects/peterfriese/jev-foundation-models) · [Project \(ja\)](https://awesomejev.cc/ja/projects/peterfriese/jev-foundation-models)
-
-[Repository](https://github.com/peterfriese/jev-foundation-models) · sdk · Swift · 66 snapshot stars
-
-Author description: A lightweight, native Swift 6 bridge integrating TypeSafe AI's Jev System One decision model into Apple's Foundation Models framework.
-
-Repository topics: jev, swift
-
 ### jev-rules
 
 [Project \(en\)](https://awesomejev.cc/projects/eliaalberti/jev-rules) · [Project \(zh\)](https://awesomejev.cc/zh/projects/eliaalberti/jev-rules) · [Project \(ja\)](https://awesomejev.cc/ja/projects/eliaalberti/jev-rules)
@@ -1441,21 +1451,11 @@ Author description: Distill a repeated Jev classification task into a local mode
 
 Repository topics: jev, classification, distillation, knowledge-distillation, llm, mlops, model-cascade, python
 
-### JevIntent
-
-[Project \(en\)](https://awesomejev.cc/projects/nisaka520/jevintent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nisaka520/jevintent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nisaka520/jevintent)
-
-[Repository](https://github.com/Nisaka520/JevIntent) · applications · Java · 65 snapshot stars
-
-Author description: 微信（FkWeChat 插件）：长按消息分析意图 / 情绪 / 回复姿态，只在本机弹提示，对方无感知
-
-Repository topics: jev, android, chat-analysis, fkwechat, intent-recognition, lsposed, plugin, typesafe
-
 ### pi-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/theooliveira/pi-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/theooliveira/pi-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/theooliveira/pi-jev)
 
-[Repository](https://github.com/TheoOliveira/pi-jev) · agents · TypeScript · 64 snapshot stars
+[Repository](https://github.com/TheoOliveira/pi-jev) · agents · TypeScript · 66 snapshot stars
 
 Author description: Semantic tool routing and typed System One decisions for the Pi coding agent using TypeSafe Jev
 
@@ -1471,6 +1471,16 @@ Author description: Auto mode for every coding agent, built on Jev: risk-scores 
 
 Repository topics: jev, javascript, ai-agents, claude-code, codex
 
+### OpenJev
+
+[Project \(en\)](https://awesomejev.cc/projects/alanhuangyoo/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alanhuangyoo/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alanhuangyoo/openjev)
+
+[Repository](https://github.com/alanhuangyoo/OpenJev) · alternatives · Python · 63 snapshot stars
+
+Author description: OpenJev: open-source, local alternative to Jev. System-One decision models: typed questions in, calibrated probabilities out; general decisions and browser-agent steps.
+
+Repository topics: browser-agent, decision-model, distillation, jev, jev-alternative, llm, local-llm, openjev
+
 ### jev-mcp
 
 [Project \(en\)](https://awesomejev.cc/projects/burnigtm/jev-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/burnigtm/jev-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/burnigtm/jev-mcp)
@@ -1481,16 +1491,6 @@ Author description: MCP server that puts TypeSafe Jev on the coding loop in Curs
 
 Repository topics: jev, typescript
 
-### OpenJev
-
-[Project \(en\)](https://awesomejev.cc/projects/alanhuangyoo/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alanhuangyoo/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alanhuangyoo/openjev)
-
-[Repository](https://github.com/alanhuangyoo/OpenJev) · alternatives · Python · 62 snapshot stars
-
-Author description: OpenJev: open-source, local alternative to Jev. System-One decision models: typed questions in, calibrated probabilities out; general decisions and browser-agent steps.
-
-Repository topics: browser-agent, decision-model, distillation, jev, jev-alternative, llm, local-llm, openjev
-
 ### jeview
 
 [Project \(en\)](https://awesomejev.cc/projects/andududu/jeview) · [Project \(zh\)](https://awesomejev.cc/zh/projects/andududu/jeview) · [Project \(ja\)](https://awesomejev.cc/ja/projects/andududu/jeview)
@@ -1500,6 +1500,16 @@ Repository topics: browser-agent, decision-model, distillation, jev, jev-alterna
 Author description: An unofficial local visualizer for Jev \(TypeSafe\): a live view of every call your code makes. Not affiliated with TypeSafe AI.
 
 Repository topics: jev, ai, ai-agent, ai-agents, debugging, developer-tools, jev-ai, llm
+
+### jev-use
+
+[Project \(en\)](https://awesomejev.cc/projects/shitianfang/jev-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shitianfang/jev-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shitianfang/jev-use)
+
+[Repository](https://github.com/shitianfang/jev-use) · agents · JavaScript · 59 snapshot stars
+
+Author description: Claude Code / Codex / pi plugin that hands agent steps needing no text output to Jev \(TypeSafe's judgment model\) — measured p50 ~230 ms and ~$0.02 per 1,000 judgments, with typed escalation back to the LLM
+
+Repository topics: jev, agent, agent-skills, ai-agents, claude-code, claude-code-hooks, claude-code-plugin, claude-skills
 
 ### jgrep
 
@@ -1531,6 +1541,16 @@ Author description: Thinking coreutils
 
 Repository topics: jev, ai, coreutils, jev-ai, typesafe, typesafe-ai, go
 
+### spring-ai-typesafe
+
+[Project \(en\)](https://awesomejev.cc/projects/spring-ai-community/spring-ai-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/spring-ai-community/spring-ai-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/spring-ai-community/spring-ai-typesafe)
+
+[Repository](https://github.com/spring-ai-community/spring-ai-typesafe) · sdk · Java · 53 snapshot stars
+
+Author description: A Java SDK for the TypeSafe AI JEV API, &amp; Spring AI TypeSafe integrations.
+
+Repository topics: jev, java
+
 ### lev
 
 [Project \(en\)](https://awesomejev.cc/projects/abhinavexists/lev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/abhinavexists/lev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/abhinavexists/lev)
@@ -1540,26 +1560,6 @@ Repository topics: jev, ai, coreutils, jev-ai, typesafe, typesafe-ai, go
 Author description: An open System One decision model
 
 Repository topics: jev, modal, qwen, python
-
-### spring-ai-typesafe
-
-[Project \(en\)](https://awesomejev.cc/projects/spring-ai-community/spring-ai-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/spring-ai-community/spring-ai-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/spring-ai-community/spring-ai-typesafe)
-
-[Repository](https://github.com/spring-ai-community/spring-ai-typesafe) · sdk · Java · 52 snapshot stars
-
-Author description: A Java SDK for the TypeSafe AI JEV API, &amp; Spring AI TypeSafe integrations.
-
-Repository topics: jev, java
-
-### jev-use
-
-[Project \(en\)](https://awesomejev.cc/projects/shitianfang/jev-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shitianfang/jev-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shitianfang/jev-use)
-
-[Repository](https://github.com/shitianfang/jev-use) · agents · JavaScript · 51 snapshot stars
-
-Author description: Claude Code / Codex / pi plugin that hands agent steps needing no text output to Jev \(TypeSafe's judgment model\) — measured p50 ~230 ms and ~$0.02 per 1,000 judgments, with typed escalation back to the LLM
-
-Repository topics: jev, agent, agent-skills, ai-agents, claude-code, claude-code-hooks, claude-code-plugin, claude-skills
 
 ### laya-jev-GraphRAG
 
@@ -1575,7 +1575,7 @@ Repository topics: jev, astar-algorithm, eval-harness, fine-tuning, graphdatabas
 
 [Project \(en\)](https://awesomejev.cc/projects/yuankjing/jev-as-policy) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yuankjing/jev-as-policy) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yuankjing/jev-as-policy)
 
-[Repository](https://github.com/YuanKJing/Jev-as-Policy) · research · Python · 47 snapshot stars
+[Repository](https://github.com/YuanKJing/Jev-as-Policy) · research · Python · 48 snapshot stars
 
 Author description: The highly anticipated open-source repository for JEV as Policy enables one-click setup of the simulation environment. Evaluations of Astra + JEV on benchmarks such as RoboTwin will also be released soon.
 
@@ -1641,6 +1641,16 @@ Author description: Jev, TypeSafe's System One classifier, as a tool inside Clau
 
 Repository topics: jev, agent-skills, classifier, claude-code, codex, coding-agents, mcp, opencode
 
+### jevify
+
+[Project \(en\)](https://awesomejev.cc/projects/altryne/jevify) · [Project \(zh\)](https://awesomejev.cc/zh/projects/altryne/jevify) · [Project \(ja\)](https://awesomejev.cc/ja/projects/altryne/jevify)
+
+[Repository](https://github.com/altryne/jevify) · agents · Python · 43 snapshot stars
+
+Author description: An agent skill to discover TypeSafe Jev opportunities, design typed questions, and learn from recent community experiments.
+
+Repository topics: jev, agent-skills, ai-agents, thursdai, typesafe, python
+
 ### OneVOneJev
 
 [Project \(en\)](https://awesomejev.cc/projects/emrickgarrett/onevonejev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/emrickgarrett/onevonejev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/emrickgarrett/onevonejev)
@@ -1681,16 +1691,6 @@ Author description: Skill for Hermes, and other agents, to ask typesafe's jev
 
 Repository topics: jev, agent, skills
 
-### jevify
-
-[Project \(en\)](https://awesomejev.cc/projects/altryne/jevify) · [Project \(zh\)](https://awesomejev.cc/zh/projects/altryne/jevify) · [Project \(ja\)](https://awesomejev.cc/ja/projects/altryne/jevify)
-
-[Repository](https://github.com/altryne/jevify) · agents · Python · 40 snapshot stars
-
-Author description: An agent skill to discover TypeSafe Jev opportunities, design typed questions, and learn from recent community experiments.
-
-Repository topics: jev, agent-skills, ai-agents, thursdai, typesafe, python
-
 ### system-one-open
 
 [Project \(en\)](https://awesomejev.cc/projects/mithalouni/system-one-open) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mithalouni/system-one-open) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mithalouni/system-one-open)
@@ -1715,11 +1715,31 @@ Repository topics: jev, rust
 
 [Project \(en\)](https://awesomejev.cc/projects/keeltrace/hermes-nerve) · [Project \(zh\)](https://awesomejev.cc/zh/projects/keeltrace/hermes-nerve) · [Project \(ja\)](https://awesomejev.cc/ja/projects/keeltrace/hermes-nerve)
 
-[Repository](https://github.com/keeltrace/hermes-nerve) · agents · Python · 38 snapshot stars
+[Repository](https://github.com/keeltrace/hermes-nerve) · agents · Python · 39 snapshot stars
 
 Author description: Nerve is a supervisory nervous system for Hermes agents, adding typed System One decisions, ranking, verification, token-aware oversight, and an opt-in tool gate powered by TypeSafe Jev or Open Source Laya
 
 Repository topics: jev, python
+
+### jev-belay
+
+[Project \(en\)](https://awesomejev.cc/projects/valentynkit/jev-belay) · [Project \(zh\)](https://awesomejev.cc/zh/projects/valentynkit/jev-belay) · [Project \(ja\)](https://awesomejev.cc/ja/projects/valentynkit/jev-belay)
+
+[Repository](https://github.com/valentynkit/jev-belay) · developer · JavaScript · 38 snapshot stars
+
+Author description: Claude Code Stop hook that checks transcript evidence before asking TypeSafe Jev whether a task is ready to finish; fails open when the check cannot run.
+
+Repository topics: jev, claude-code, stop-hook, agent
+
+### jev-for-chrome
+
+[Project \(en\)](https://awesomejev.cc/projects/chy4pro/jev-for-chrome) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chy4pro/jev-for-chrome) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chy4pro/jev-for-chrome)
+
+[Repository](https://github.com/chy4pro/jev-for-chrome) · browser · TypeScript · 38 snapshot stars
+
+Author description: Jev for Chrome: drives the tab you are looking at with TypeSafe Jev, a sub-second decision model. Community port of browser-use/jev-ultrafast, not affiliated with TypeSafe.
+
+Repository topics: jev, ai-agent, browser-agent, browser-automation, browser-use, chrome-extension, manifest-v3, openrouter
 
 ### jev-superpowers
 
@@ -1730,6 +1750,16 @@ Repository topics: jev, python
 Author description: Systematic software development framework for AI coding agents upgraded with TypeSafe Jev System One typed decisions
 
 Repository topics: jev, agentic-skills, ai-agents, antigravity, claude-code, codex, coding-agents, cursor
+
+### jevgraph
+
+[Project \(en\)](https://awesomejev.cc/projects/chenmingtang830/jevgraph) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenmingtang830/jevgraph) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenmingtang830/jevgraph)
+
+[Repository](https://github.com/chenmingtang830/jevgraph) · alternatives · Python · 38 snapshot stars
+
+Author description: Evidence-backed knowledge graph construction with typed Jev relation decisions
+
+Repository topics: jev, information-extraction, knowledge-graph, llm, python, relation-extraction
 
 ### system-one
 
@@ -1750,26 +1780,6 @@ Repository topics: jev, python
 Author description: This is a LLM Gateway that mimics typesafe ai structured output. Like an imposter Jev.
 
 Repository topics: jev
-
-### jev-for-chrome
-
-[Project \(en\)](https://awesomejev.cc/projects/chy4pro/jev-for-chrome) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chy4pro/jev-for-chrome) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chy4pro/jev-for-chrome)
-
-[Repository](https://github.com/chy4pro/jev-for-chrome) · browser · TypeScript · 37 snapshot stars
-
-Author description: Jev for Chrome: drives the tab you are looking at with TypeSafe Jev, a sub-second decision model. Community port of browser-use/jev-ultrafast, not affiliated with TypeSafe.
-
-Repository topics: jev, ai-agent, browser-agent, browser-automation, browser-use, chrome-extension, manifest-v3, openrouter
-
-### jevgraph
-
-[Project \(en\)](https://awesomejev.cc/projects/chenmingtang830/jevgraph) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenmingtang830/jevgraph) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenmingtang830/jevgraph)
-
-[Repository](https://github.com/chenmingtang830/jevgraph) · alternatives · Python · 37 snapshot stars
-
-Author description: Evidence-backed knowledge graph construction with typed Jev relation decisions
-
-Repository topics: jev, information-extraction, knowledge-graph, llm, python, relation-extraction
 
 ### clash-jev
 
@@ -1821,6 +1831,16 @@ Author description: Rank Pi Agent Skills for the current task with TypeSafe Jev
 
 Repository topics: jev, typescript
 
+### jev-cli
+
+[Project \(en\)](https://awesomejev.cc/projects/shaharia-lab/jev-cli) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shaharia-lab/jev-cli) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shaharia-lab/jev-cli)
+
+[Repository](https://github.com/shaharia-lab/jev-cli) · developer · Rust · 35 snapshot stars
+
+Author description: Command-line tool for TypeSafe AI's Jev model. Ask yes/no, multiple-choice and rubric questions about any text and get calibrated probabilities back. Answers become exit codes for shells and CI, JSON for scripts, and MCP tools for AI agents.
+
+Repository topics: jev, ai-agents, classification, cli, command-line-tool, devtools, llm, mcp
+
 ### jev-test-filter
 
 [Project \(en\)](https://awesomejev.cc/projects/mizchi/jev-test-filter) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mizchi/jev-test-filter) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mizchi/jev-test-filter)
@@ -1840,16 +1860,6 @@ Repository topics: jev, typescript
 Author description: 看看 Jev 能做什么：用中英文讲清热门应用、工作原理和各自优缺点。Explore Jev apps with plain-language examples, explanations, and comparisons.
 
 Repository topics: jev, python
-
-### jev-cli
-
-[Project \(en\)](https://awesomejev.cc/projects/shaharia-lab/jev-cli) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shaharia-lab/jev-cli) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shaharia-lab/jev-cli)
-
-[Repository](https://github.com/shaharia-lab/jev-cli) · developer · Rust · 34 snapshot stars
-
-Author description: Command-line tool for TypeSafe AI's Jev model. Ask yes/no, multiple-choice and rubric questions about any text and get calibrated probabilities back. Answers become exit codes for shells and CI, JSON for scripts, and MCP tools for AI agents.
-
-Repository topics: jev, ai-agents, classification, cli, command-line-tool, devtools, llm, mcp
 
 ### jev-radar
 
@@ -1881,6 +1891,16 @@ Author description: Demo: IA detecta golpe do Pix e rastreia a quadrilha. Rust +
 
 Repository topics: jev, python
 
+### slop-grader
+
+[Project \(en\)](https://awesomejev.cc/projects/lukstei/slop-grader) · [Project \(zh\)](https://awesomejev.cc/zh/projects/lukstei/slop-grader) · [Project \(ja\)](https://awesomejev.cc/ja/projects/lukstei/slop-grader)
+
+[Repository](https://github.com/lukstei/slop-grader) · developer · TypeScript · 33 snapshot stars
+
+Author description: Jev-powered, rule-based grader for text files. Runs every rule against every line in parallel. No skimming, no missed lines.
+
+Repository topics: jev, ai-agents, ai-slop, ai-writing, cli, developer-tools, linter, llm
+
 ### jev-design-test
 
 [Project \(en\)](https://awesomejev.cc/projects/bhaig-de/jev-design-test) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bhaig-de/jev-design-test) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bhaig-de/jev-design-test)
@@ -1900,16 +1920,6 @@ Repository topics: jev, typescript
 Author description: A browser-native Doom agent experiment with structured spatial state, composable AI controls, live decision telemetry, and a Chocolate Doom WebAssembly runtime.
 
 Repository topics: jev, typescript
-
-### slop-grader
-
-[Project \(en\)](https://awesomejev.cc/projects/lukstei/slop-grader) · [Project \(zh\)](https://awesomejev.cc/zh/projects/lukstei/slop-grader) · [Project \(ja\)](https://awesomejev.cc/ja/projects/lukstei/slop-grader)
-
-[Repository](https://github.com/lukstei/slop-grader) · developer · TypeScript · 32 snapshot stars
-
-Author description: Jev-powered, rule-based grader for text files. Runs every rule against every line in parallel. No skimming, no missed lines.
-
-Repository topics: jev, ai-agents, ai-slop, ai-writing, cli, developer-tools, linter, llm
 
 ### jevgpt
 
@@ -1981,15 +1991,35 @@ Author description: 🐛 Give your coding agent a detective. Buggo investigates 
 
 Repository topics: jev, typescript
 
-### jev-belay
+### jev-agent-skill-router
 
-[Project \(en\)](https://awesomejev.cc/projects/valentynkit/jev-belay) · [Project \(zh\)](https://awesomejev.cc/zh/projects/valentynkit/jev-belay) · [Project \(ja\)](https://awesomejev.cc/ja/projects/valentynkit/jev-belay)
+[Project \(en\)](https://awesomejev.cc/projects/godsboy/jev-agent-skill-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router)
 
-[Repository](https://github.com/valentynkit/jev-belay) · developer · JavaScript · 28 snapshot stars
+[Repository](https://github.com/GodsBoy/jev-agent-skill-router) · agents · Python · 29 snapshot stars
 
-Author description: Claude Code Stop hook that checks transcript evidence before asking TypeSafe Jev whether a task is ready to finish; fails open when the check cannot run.
+Author description: Typed, confidence-aware agent skill routing with TypeSafe Jev.
 
-Repository topics: jev, claude-code, stop-hook, agent
+Repository topics: jev, python, agentic-ai, ai-agents, hermes-agent
+
+### jev-hub
+
+[Project \(en\)](https://awesomejev.cc/projects/mizzlelover/jev-hub) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mizzlelover/jev-hub) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mizzlelover/jev-hub)
+
+[Repository](https://github.com/mizzlelover/jev-hub) · directories · CSS · 29 snapshot stars
+
+Author description: JEV HUB · X 上关于 TypeSafe AI「系统一模型」Jev 的长文与演示视频聚合（保留原链与作者）｜ 谁是专家 出品
+
+Repository topics: jev, ai, awesome-list, typesafe, x-twitter, css
+
+### dsh-jev-interceptor
+
+[Project \(en\)](https://awesomejev.cc/projects/asktheway/dsh-jev-interceptor) · [Project \(zh\)](https://awesomejev.cc/zh/projects/asktheway/dsh-jev-interceptor) · [Project \(ja\)](https://awesomejev.cc/ja/projects/asktheway/dsh-jev-interceptor)
+
+[Repository](https://github.com/AskTheWay/dsh-jev-interceptor) · agents · TypeScript · 28 snapshot stars
+
+Author description: ⚡ Millisecond System-1 judgement for every tool call in DeepSeek Harness — Jev-powered risk classification &amp; evidence-gated auto-approval. Fail-closed by construction. dsh 生态第一个 System-1 决策插件
+
+Repository topics: jev, agent-harness, agentic-ai, ai-agents, ai-safety, decision-model, deepseek, deepseek-harness
 
 ### lev
 
@@ -2021,16 +2051,6 @@ Author description: Fast browser and macOS computer use for MCP agents. Local ex
 
 Repository topics: jev, ai-agents, browser-automation, computer-use, macos, mcp, typesafe, typescript
 
-### jev-agent-skill-router
-
-[Project \(en\)](https://awesomejev.cc/projects/godsboy/jev-agent-skill-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router)
-
-[Repository](https://github.com/GodsBoy/jev-agent-skill-router) · agents · Python · 27 snapshot stars
-
-Author description: Typed, confidence-aware agent skill routing with TypeSafe Jev.
-
-Repository topics: jev, python, agentic-ai, ai-agents, hermes-agent
-
 ### jev-axi
 
 [Project \(en\)](https://awesomejev.cc/projects/shiftynick/jev-axi) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shiftynick/jev-axi) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shiftynick/jev-axi)
@@ -2050,6 +2070,16 @@ Repository topics: jev, typescript, ai-agents, axi, claude-code
 Author description: Independent, evidence-based map of when TypeSafe's Jev actually holds up vs. breaks down — real API-call receipts, not a leaderboard. 中文為主的雙語 repo。
 
 Repository topics: jev, ai-agents, benchmark, calibration, llm-evaluation, machine-learning, typesafe, zh-tw
+
+### llm-typesafe
+
+[Project \(en\)](https://awesomejev.cc/projects/simonw/llm-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/simonw/llm-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/simonw/llm-typesafe)
+
+[Repository](https://github.com/simonw/llm-typesafe) · sdk · Python · 27 snapshot stars
+
+Author description: LLM plugin for accessing Jev and other TypeSafe AI models
+
+Repository topics: jev, python
 
 ### TypeSafe
 
@@ -2101,15 +2131,15 @@ Author description: The most complete gallery of what people build with Jev, Typ
 
 Repository topics: jev, ai, awesome, awesome-list, classification, gallery, llm, structured-output
 
-### jev-hub
+### dsh-jev
 
-[Project \(en\)](https://awesomejev.cc/projects/mizzlelover/jev-hub) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mizzlelover/jev-hub) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mizzlelover/jev-hub)
+[Project \(en\)](https://awesomejev.cc/projects/buberlo/dsh-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/buberlo/dsh-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/buberlo/dsh-jev)
 
-[Repository](https://github.com/mizzlelover/jev-hub) · directories · CSS · 25 snapshot stars
+[Repository](https://github.com/buberlo/dsh-jev) · agents · TypeScript · 25 snapshot stars
 
-Author description: JEV HUB · X 上关于 TypeSafe AI「系统一模型」Jev 的长文与演示视频聚合（保留原链与作者）｜ 谁是专家 出品
+Author description: Jev-powered decision layer for DeepSeek Harness
 
-Repository topics: jev, ai, awesome-list, typesafe, x-twitter, css
+Repository topics: jev, agent-harness, dsh-plugin, typesafe-ai, typescript
 
 ### jev-mcp
 
@@ -2130,26 +2160,6 @@ Repository topics: jev, python
 Author description: All things awesome related to Jev
 
 Repository topics: jev, awesome-list, jev-ai
-
-### dsh-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/buberlo/dsh-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/buberlo/dsh-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/buberlo/dsh-jev)
-
-[Repository](https://github.com/buberlo/dsh-jev) · agents · TypeScript · 24 snapshot stars
-
-Author description: Jev-powered decision layer for DeepSeek Harness
-
-Repository topics: jev, agent-harness, dsh-plugin, typesafe-ai, typescript
-
-### dsh-jev-interceptor
-
-[Project \(en\)](https://awesomejev.cc/projects/asktheway/dsh-jev-interceptor) · [Project \(zh\)](https://awesomejev.cc/zh/projects/asktheway/dsh-jev-interceptor) · [Project \(ja\)](https://awesomejev.cc/ja/projects/asktheway/dsh-jev-interceptor)
-
-[Repository](https://github.com/AskTheWay/dsh-jev-interceptor) · agents · TypeScript · 24 snapshot stars
-
-Author description: ⚡ Millisecond System-1 judgement for every tool call in DeepSeek Harness — Jev-powered risk classification &amp; evidence-gated auto-approval. Fail-closed by construction. dsh 生态第一个 System-1 决策插件
-
-Repository topics: jev, agent-harness, agentic-ai, ai-agents, ai-safety, decision-model, deepseek, deepseek-harness
 
 ### jev-on-a-laptop
 
@@ -2191,6 +2201,26 @@ Author description: Community TypeSafe AI playground: 110 use cases, games, dile
 
 Repository topics: jev, typescript
 
+### claude-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/0x7067/claude-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/0x7067/claude-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/0x7067/claude-jev)
+
+[Repository](https://github.com/0x7067/claude-jev) · developer · TypeScript · 23 snapshot stars
+
+Author description: Claude Code plugin: Jev for rule checks, verbatim compaction, and prompt routing
+
+Repository topics: jev, ai, claude-code, claude-code-plugin, jev-ai, python
+
+### claude-router
+
+[Project \(en\)](https://awesomejev.cc/projects/alexei-led/claude-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alexei-led/claude-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alexei-led/claude-router)
+
+[Repository](https://github.com/alexei-led/claude-router) · agents · JavaScript · 23 snapshot stars
+
+Author description: Claude Code plugin that auto-picks the right model for each turn — micro, low, medium, or high tier — using Jev routing.
+
+Repository topics: jev, anthropic, claude, claude-code, llm, model-routing, plugin, typesafe
+
 ### jev-column-race
 
 [Project \(en\)](https://awesomejev.cc/projects/goodrahstar/jev-column-race) · [Project \(zh\)](https://awesomejev.cc/zh/projects/goodrahstar/jev-column-race) · [Project \(ja\)](https://awesomejev.cc/ja/projects/goodrahstar/jev-column-race)
@@ -2220,6 +2250,16 @@ Repository topics: jev, gmail, jevmail, labeling, labeling-tool, spam, typesafe,
 Author description: Real-time drone swarm autonomy simulation using Jev for fast System 1 reflex decisions and collision avoidance, with optional System 2 reasoning for strategic guidance
 
 Repository topics: jev, autonomous-agents, drone-simulation, multi-agent, system-1, system-2, typesafe, typescript
+
+### JevLoop
+
+[Project \(en\)](https://awesomejev.cc/projects/zjunlp/jevloop) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zjunlp/jevloop) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zjunlp/jevloop)
+
+[Repository](https://github.com/zjunlp/JevLoop) · agents · TypeScript · 23 snapshot stars
+
+Author description: The agent loop where decisions don't cost a large language model call. Zero deps, runs offline, no API key needed.
+
+Repository topics: jev, agent-framework, agent-loop, ai-agent, decision-model, llm, system-one, typescript
 
 ### slop-filter
 
@@ -2251,15 +2291,25 @@ Author description: Screens an AI agent's tool calls before they run and tool re
 
 Repository topics: jev, agent-security, ai-agent-security, ai-agents, ai-security, claude-code, guardrails, jev-ai
 
-### claude-jev
+### awesome-jev-usecases
 
-[Project \(en\)](https://awesomejev.cc/projects/0x7067/claude-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/0x7067/claude-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/0x7067/claude-jev)
+[Project \(en\)](https://awesomejev.cc/projects/aliaihub/awesome-jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aliaihub/awesome-jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aliaihub/awesome-jev-usecases)
 
-[Repository](https://github.com/0x7067/claude-jev) · developer · TypeScript · 22 snapshot stars
+[Repository](https://github.com/aliaihub/awesome-jev-usecases) · resources · 22 snapshot stars
 
-Author description: Claude Code plugin: Jev for rule checks, verbatim compaction, and prompt routing
+Author description: Evidence-backed use cases, patterns, and guidance for building with Jev, TypeSafe AI's System One model. Every claim is labeled and sourced.
 
-Repository topics: jev, ai, claude-code, claude-code-plugin, jev-ai, python
+Repository topics: jev, ai-engineering, awesome-list, calibration, structured-output, system-one-models, typesafe
+
+### edgejev
+
+[Project \(en\)](https://awesomejev.cc/projects/yzfly/edgejev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yzfly/edgejev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yzfly/edgejev)
+
+[Repository](https://github.com/yzfly/edgejev) · agents · Python · 22 snapshot stars
+
+Author description: 离线可用的本地类型化决策：4 核 CPU 单题 15.6ms。Local &amp; offline Jev / System One inference on CPU — ONNX + INT8, no torch at runtime. 支持 laya / kev / PlayJev
+
+Repository topics: jev, calibrated-probabilities, cpu-inference, decision-model, edge-ai, int8, kev, laya
 
 ### evoke
 
@@ -2281,6 +2331,16 @@ Author description: Command-line tool for TypeSafe's Jev AI model
 
 Repository topics: jev, ai, cli, fact-checking, guardrails, llm-tools, nodejs, prompt-injection
 
+### jev-usecases
+
+[Project \(en\)](https://awesomejev.cc/projects/kenhuangus/jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kenhuangus/jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kenhuangus/jev-usecases)
+
+[Repository](https://github.com/kenhuangus/jev-usecases) · agents · Python · 22 snapshot stars
+
+Author description: Production TypeSafe Jev \(System One\) use-case harnesses with confidence-gated decision logic
+
+Repository topics: jev, python
+
 ### jeval
 
 [Project \(en\)](https://awesomejev.cc/projects/rlaope/jeval) · [Project \(zh\)](https://awesomejev.cc/zh/projects/rlaope/jeval) · [Project \(ja\)](https://awesomejev.cc/ja/projects/rlaope/jeval)
@@ -2288,26 +2348,6 @@ Repository topics: jev, ai, cli, fact-checking, guardrails, llm-tools, nodejs, p
 [Repository](https://github.com/rlaope/jeval) · research · Python · 22 snapshot stars
 
 Author description: Measures what your Jev classifier's confidence is really worth, and sets the human hand-off line from what a mistake costs.
-
-Repository topics: jev, python
-
-### JevLoop
-
-[Project \(en\)](https://awesomejev.cc/projects/zjunlp/jevloop) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zjunlp/jevloop) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zjunlp/jevloop)
-
-[Repository](https://github.com/zjunlp/JevLoop) · agents · TypeScript · 22 snapshot stars
-
-Author description: The agent loop where decisions don't cost a large language model call. Zero deps, runs offline, no API key needed.
-
-Repository topics: jev, agent-framework, agent-loop, ai-agent, decision-model, llm, system-one, typescript
-
-### llm-typesafe
-
-[Project \(en\)](https://awesomejev.cc/projects/simonw/llm-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/simonw/llm-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/simonw/llm-typesafe)
-
-[Repository](https://github.com/simonw/llm-typesafe) · sdk · Python · 22 snapshot stars
-
-Author description: LLM plugin for accessing Jev and other TypeSafe AI models
 
 Repository topics: jev, python
 
@@ -2321,16 +2361,6 @@ Author description: Open-source, local decision models inspired by TypeSafe’s 
 
 Repository topics: jev, agentic-ai, apache, datagen, dgx-spark, harness, local-ai, opensource
 
-### awesome-jev-usecases
-
-[Project \(en\)](https://awesomejev.cc/projects/aliaihub/awesome-jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aliaihub/awesome-jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aliaihub/awesome-jev-usecases)
-
-[Repository](https://github.com/aliaihub/awesome-jev-usecases) · resources · 21 snapshot stars
-
-Author description: Evidence-backed use cases, patterns, and guidance for building with Jev, TypeSafe AI's System One model. Every claim is labeled and sourced.
-
-Repository topics: jev, ai-engineering, awesome-list, calibration, structured-output, system-one-models, typesafe
-
 ### fastjev
 
 [Project \(en\)](https://awesomejev.cc/projects/chengyongru/fastjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chengyongru/fastjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chengyongru/fastjev)
@@ -2340,16 +2370,6 @@ Repository topics: jev, ai-engineering, awesome-list, calibration, structured-ou
 Author description: SDK-first, independently maintained SemIf fork for fast, self-hosted semantic decisions.
 
 Repository topics: jev, inference, llm, python, sdk, semantic-decisions, system-one
-
-### jev-usecases
-
-[Project \(en\)](https://awesomejev.cc/projects/kenhuangus/jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kenhuangus/jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kenhuangus/jev-usecases)
-
-[Repository](https://github.com/kenhuangus/jev-usecases) · agents · Python · 21 snapshot stars
-
-Author description: Production TypeSafe Jev \(System One\) use-case harnesses with confidence-gated decision logic
-
-Repository topics: jev, python
 
 ### jevframe
 
@@ -2391,6 +2411,16 @@ Author description: Jev + TypeScript SDK demo
 
 Repository topics: jev, typescript
 
+### jev-feels
+
+[Project \(en\)](https://awesomejev.cc/projects/qew7/jev-feels) · [Project \(zh\)](https://awesomejev.cc/zh/projects/qew7/jev-feels) · [Project \(ja\)](https://awesomejev.cc/ja/projects/qew7/jev-feels)
+
+[Repository](https://github.com/Qew7/jev-feels) · sdk · Ruby · 20 snapshot stars
+
+Author description: Semantic decisions as ordinary Ruby \#feels?, \#decide, \#score, Rails validations and pattern matching powered by Jev
+
+Repository topics: jev, ai, rails, ruby, ruby-gem, semantic, system-one, typesafe
+
 ### jev-recipes
 
 [Project \(en\)](https://awesomejev.cc/projects/agencyenterprise/jev-recipes) · [Project \(zh\)](https://awesomejev.cc/zh/projects/agencyenterprise/jev-recipes) · [Project \(ja\)](https://awesomejev.cc/ja/projects/agencyenterprise/jev-recipes)
@@ -2420,6 +2450,26 @@ Repository topics: jev, javascript
 Author description: Jev-powered plugins for coding agents
 
 Repository topics: jev, ai-agents, claude-code, coding-agents, opencode, permissions, shell, system-one
+
+### laya-browser-agent
+
+[Project \(en\)](https://awesomejev.cc/projects/chenneyzhuang/laya-browser-agent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenneyzhuang/laya-browser-agent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenneyzhuang/laya-browser-agent)
+
+[Repository](https://github.com/ChenneyZhuang/laya-browser-agent) · agents · Python · 20 snapshot stars
+
+Author description: Local, open-source Jev alternative: browser agent decisions with Laya \(System One model\) on your own machine. No cloud, no API key. Playwright/CDP, MCP-friendly.
+
+Repository topics: jev, agent, ai-agents, apple-silicon, browser-agent, browser-automation, computer-use, decision-model
+
+### OpenJev
+
+[Project \(en\)](https://awesomejev.cc/projects/gpt-agi/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/gpt-agi/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/gpt-agi/openjev)
+
+[Repository](https://github.com/GPT-AGI/OpenJev) · sdk · Python · 20 snapshot stars
+
+Author description: Jev-compatible System 开源Jev
+
+Repository topics: jev, python
 
 ### awesome-jev-usecases
 
@@ -2451,16 +2501,6 @@ Author description: A Jev-powered resolver for agent harnesses to find determini
 
 Repository topics: jev, ai-agents, mcp, javascript
 
-### jev-feels
-
-[Project \(en\)](https://awesomejev.cc/projects/qew7/jev-feels) · [Project \(zh\)](https://awesomejev.cc/zh/projects/qew7/jev-feels) · [Project \(ja\)](https://awesomejev.cc/ja/projects/qew7/jev-feels)
-
-[Repository](https://github.com/Qew7/jev-feels) · sdk · Ruby · 19 snapshot stars
-
-Author description: Semantic decisions as ordinary Ruby \#feels?, \#decide, \#score, Rails validations and pattern matching powered by Jev
-
-Repository topics: jev, ai, rails, ruby, ruby-gem, semantic, system-one, typesafe
-
 ### jev-ultrafast-mcp
 
 [Project \(en\)](https://awesomejev.cc/projects/jiawei686/jev-ultrafast-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jiawei686/jev-ultrafast-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jiawei686/jev-ultrafast-mcp)
@@ -2470,6 +2510,16 @@ Repository topics: jev, ai, rails, ruby, ruby-gem, semantic, system-one, typesaf
 Author description: Hand the browser work off: an MCP server where a decision model drives the page for your agent, so a flow costs one tool call instead of a turn per click. Ref-based element tables, code-checked assertions, zero-model macro replay. Speaks CDP to your Chrome.
 
 Repository topics: jev, python
+
+### jevalyn
+
+[Project \(en\)](https://awesomejev.cc/projects/ray-hughes/jevalyn) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ray-hughes/jevalyn) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ray-hughes/jevalyn)
+
+[Repository](https://github.com/Ray-Hughes/jevalyn) · sdk · Ruby · 19 snapshot stars
+
+Author description: The decision layer for your Rails app. A Rails-native wrapper around TypeSafe's Jev System One API: typed, calibrated decisions in your control flow.
+
+Repository topics: jev, decision-model, llm, rails, ruby, rubygem, typesafe-ai
 
 ### Jevflake
 
@@ -2481,6 +2531,16 @@ Author description: Ask TypeSafe's Jev decision model questions about your data 
 
 Repository topics: jev, dbt, dbt-packages, snowflake, terraform, python
 
+### jevonian
+
+[Project \(en\)](https://awesomejev.cc/projects/xinyao27/jevonian) · [Project \(zh\)](https://awesomejev.cc/zh/projects/xinyao27/jevonian) · [Project \(ja\)](https://awesomejev.cc/ja/projects/xinyao27/jevonian)
+
+[Repository](https://github.com/xinyao27/jevonian) · sdk · Go · 19 snapshot stars
+
+Author description: Local OpenAI/Anthropic/Responses-compatible proxy that uses TypeSafe Jev to route model and thinking level after protocol, context, and quota filtering; records each turn.
+
+Repository topics: jev, proxy, router, typescript
+
 ### kibu
 
 [Project \(en\)](https://awesomejev.cc/projects/madhurjyadc/kibu) · [Project \(zh\)](https://awesomejev.cc/zh/projects/madhurjyadc/kibu) · [Project \(ja\)](https://awesomejev.cc/ja/projects/madhurjyadc/kibu)
@@ -2491,25 +2551,25 @@ Author description: kibu: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, typescript
 
-### OpenJev
+### playjev
 
-[Project \(en\)](https://awesomejev.cc/projects/gpt-agi/openjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/gpt-agi/openjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/gpt-agi/openjev)
+[Project \(en\)](https://awesomejev.cc/projects/filedcom/playjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/filedcom/playjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/filedcom/playjev)
 
-[Repository](https://github.com/GPT-AGI/OpenJev) · sdk · Python · 19 snapshot stars
+[Repository](https://github.com/filedcom/playjev) · browser · TypeScript · 19 snapshot stars
 
-Author description: Jev-compatible System 开源Jev
+Author description: Fast, typed browser automation powered by Jev and Playwright
 
-Repository topics: jev, python
+Repository topics: jev, browser-automation, playwright, typesafe-ai, typescript
 
-### claude-router
+### switchboard
 
-[Project \(en\)](https://awesomejev.cc/projects/alexei-led/claude-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/alexei-led/claude-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/alexei-led/claude-router)
+[Project \(en\)](https://awesomejev.cc/projects/ruban-24/switchboard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ruban-24/switchboard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ruban-24/switchboard)
 
-[Repository](https://github.com/alexei-led/claude-router) · agents · JavaScript · 18 snapshot stars
+[Repository](https://github.com/ruban-24/switchboard) · agents · TypeScript · 19 snapshot stars
 
-Author description: Claude Code plugin that auto-picks the right model for each turn — micro, low, medium, or high tier — using Jev routing.
+Author description: An open-source, model-agnostic decision router for Claude Code and Codex.
 
-Repository topics: jev, anthropic, claude, claude-code, llm, model-routing, plugin, typesafe
+Repository topics: jev, claude-code, cli, codex, model-routing, reasoning-effort, system-one, typescript
 
 ### jev-ego
 
@@ -2521,15 +2581,15 @@ Author description: Fast browser agent for ego lite. One TypeSafe request per st
 
 Repository topics: jev, typescript, ai-agent, browser-agent, cdp
 
-### jevalyn
+### jev-skill-router
 
-[Project \(en\)](https://awesomejev.cc/projects/ray-hughes/jevalyn) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ray-hughes/jevalyn) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ray-hughes/jevalyn)
+[Project \(en\)](https://awesomejev.cc/projects/shimo4228/jev-skill-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shimo4228/jev-skill-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shimo4228/jev-skill-router)
 
-[Repository](https://github.com/Ray-Hughes/jevalyn) · sdk · Ruby · 18 snapshot stars
+[Repository](https://github.com/shimo4228/jev-skill-router) · agents · Python · 18 snapshot stars
 
-Author description: The decision layer for your Rails app. A Rails-native wrapper around TypeSafe's Jev System One API: typed, calibrated decisions in your control flow.
+Author description: Claude Code plugin: asks TypeSafe Jev which installed skill fits each prompt and logs the answer \(shadow-first\). A working reference for the skill-suggestion cookbook on Claude Code — the README records why it is unlikely to help a strong model as a router.
 
-Repository topics: jev, decision-model, llm, rails, ruby, rubygem, typesafe-ai
+Repository topics: jev, agent-skills, claude-code, claude-code-plugin, hooks, typesafe, typesafe-jev, python
 
 ### jevlogs
 
@@ -2541,26 +2601,6 @@ Author description: Open-source Jev log triage for OpenTelemetry. Score the sign
 
 Repository topics: jev, typescript
 
-### laya-browser-agent
-
-[Project \(en\)](https://awesomejev.cc/projects/chenneyzhuang/laya-browser-agent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenneyzhuang/laya-browser-agent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenneyzhuang/laya-browser-agent)
-
-[Repository](https://github.com/ChenneyZhuang/laya-browser-agent) · agents · Python · 18 snapshot stars
-
-Author description: Local, open-source Jev alternative: browser agent decisions with Laya \(System One model\) on your own machine. No cloud, no API key. Playwright/CDP, MCP-friendly.
-
-Repository topics: jev, agent, ai-agents, apple-silicon, browser-agent, browser-automation, computer-use, decision-model
-
-### playjev
-
-[Project \(en\)](https://awesomejev.cc/projects/filedcom/playjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/filedcom/playjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/filedcom/playjev)
-
-[Repository](https://github.com/filedcom/playjev) · browser · TypeScript · 18 snapshot stars
-
-Author description: Fast, typed browser automation powered by Jev and Playwright
-
-Repository topics: jev, browser-automation, playwright, typesafe-ai, typescript
-
 ### ruby\_llm-typesafe
 
 [Project \(en\)](https://awesomejev.cc/projects/kieranklaassen/ruby_llm-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kieranklaassen/ruby_llm-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kieranklaassen/ruby_llm-typesafe)
@@ -2571,15 +2611,15 @@ Author description: TypeSafe structured-output provider for RubyLLM 2
 
 Repository topics: jev, ruby
 
-### edgejev
+### awesome-jev-use-cases
 
-[Project \(en\)](https://awesomejev.cc/projects/yzfly/edgejev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yzfly/edgejev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yzfly/edgejev)
+[Project \(en\)](https://awesomejev.cc/projects/whyashthakker/awesome-jev-use-cases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/whyashthakker/awesome-jev-use-cases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/whyashthakker/awesome-jev-use-cases)
 
-[Repository](https://github.com/yzfly/edgejev) · agents · Python · 17 snapshot stars
+[Repository](https://github.com/whyashthakker/awesome-jev-use-cases) · resources · HTML · 17 snapshot stars
 
-Author description: 离线可用的本地类型化决策：4 核 CPU 单题 15.6ms。Local &amp; offline Jev / System One inference on CPU — ONNX + INT8, no torch at runtime. 支持 laya / kev / PlayJev
+Author description: Awesome list of Jev use cases. Compared with GPT Models \(LLMs\) across on cost and speed.
 
-Repository topics: jev, calibrated-probabilities, cpu-inference, decision-model, edge-ai, int8, kev, laya
+Repository topics: jev, ai, rlcd, rlhf, html
 
 ### Helm
 
@@ -2590,6 +2630,16 @@ Repository topics: jev, calibrated-probabilities, cpu-inference, decision-model,
 Author description: Route every coding task to the best AI agent on your machine — Claude Code, Codex, Cursor, Gemini CLI, Aider, OpenCode. Installs as a Claude Code plugin, Gemini extension, or Agent Skill.
 
 Repository topics: jev, agent-orchestration, agent-router, agent-skills, ai-agents, aider, claude-code, claude-code-plugin
+
+### jev-rerank
+
+[Project \(en\)](https://awesomejev.cc/projects/hev/reranker) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hev/reranker) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hev/reranker)
+
+[Repository](https://github.com/hev/reranker) · sdk · Python · 17 snapshot stars
+
+Author description: Use Jev \(TypeSafe's System One model\) as a calibrated reranker: one call, up to 30 documents, a probability per document. Apache-2.0.
+
+Repository topics: jev, python
 
 ### jev-rs
 
@@ -2610,16 +2660,6 @@ Repository topics: jev, rust
 Author description: 位于 nginx 与大模型后端之间的前置过滤反向代理：逐请求提取用户输入交给 JEV 判定，有害拦截、正常透明放行
 
 Repository topics: jev, api, gateway, go
-
-### switchboard
-
-[Project \(en\)](https://awesomejev.cc/projects/ruban-24/switchboard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ruban-24/switchboard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ruban-24/switchboard)
-
-[Repository](https://github.com/ruban-24/switchboard) · agents · TypeScript · 17 snapshot stars
-
-Author description: An open-source, model-agnostic decision router for Claude Code and Codex.
-
-Repository topics: jev, claude-code, cli, codex, model-routing, reasoning-effort, system-one, typescript
 
 ### AnyDecisionModel
 
@@ -2650,16 +2690,6 @@ Repository topics: jev, ai-agents, awesome, awesome-list, mcp, typesafe, python
 Author description: A curated list of tools, integrations, and experiments built on Jev, TypeSafe AI's System One model for fast, typed decisions.
 
 Repository topics: jev, ai-agents, awesome, awesome-list, computer-use, llm, system-one, typesafe
-
-### awesome-jev-use-cases
-
-[Project \(en\)](https://awesomejev.cc/projects/whyashthakker/awesome-jev-use-cases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/whyashthakker/awesome-jev-use-cases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/whyashthakker/awesome-jev-use-cases)
-
-[Repository](https://github.com/whyashthakker/awesome-jev-use-cases) · resources · HTML · 16 snapshot stars
-
-Author description: Awesome list of Jev use cases. Compared with GPT Models \(LLMs\) across on cost and speed.
-
-Repository topics: jev, ai, rlcd, rlhf, html
 
 ### duomind
 
@@ -2701,15 +2731,15 @@ Author description: An experimental JEV-powered framework for forecasting short-
 
 Repository topics: jev, python, financial-data, financial-machine-learning, llm
 
-### jev-skill-router
+### jev-commit
 
-[Project \(en\)](https://awesomejev.cc/projects/shimo4228/jev-skill-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shimo4228/jev-skill-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shimo4228/jev-skill-router)
+[Project \(en\)](https://awesomejev.cc/projects/valentynkit/jev-commit) · [Project \(zh\)](https://awesomejev.cc/zh/projects/valentynkit/jev-commit) · [Project \(ja\)](https://awesomejev.cc/ja/projects/valentynkit/jev-commit)
 
-[Repository](https://github.com/shimo4228/jev-skill-router) · agents · Python · 16 snapshot stars
+[Repository](https://github.com/valentynkit/jev-commit) · developer · Python · 16 snapshot stars
 
-Author description: Claude Code plugin: asks TypeSafe Jev which installed skill fits each prompt and logs the answer \(shadow-first\). A working reference for the skill-suggestion cookbook on Claude Code — the README records why it is unlikely to help a strong model as a router.
+Author description: Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, plus checks for debug leftovers and unmentioned work. Warns on mismatches, blocks only on a detected secret.
 
-Repository topics: jev, agent-skills, claude-code, claude-code-plugin, hooks, typesafe, typesafe-jev, python
+Repository topics: jev, python, code-review
 
 ### jev-studio
 
@@ -2720,16 +2750,6 @@ Repository topics: jev, agent-skills, claude-code, claude-code-plugin, hooks, ty
 Author description: if you're experimenting with jev it will be easier from here
 
 Repository topics: jev, demo
-
-### jevonian
-
-[Project \(en\)](https://awesomejev.cc/projects/xinyao27/jevonian) · [Project \(zh\)](https://awesomejev.cc/zh/projects/xinyao27/jevonian) · [Project \(ja\)](https://awesomejev.cc/ja/projects/xinyao27/jevonian)
-
-[Repository](https://github.com/xinyao27/jevonian) · sdk · Go · 16 snapshot stars
-
-Author description: Local OpenAI/Anthropic/Responses-compatible proxy that uses TypeSafe Jev to route model and thinking level after protocol, context, and quota filtering; records each turn.
-
-Repository topics: jev, proxy, router, typescript
 
 ### pi-jev-router
 
@@ -2751,6 +2771,26 @@ Author description: A Swift client for TypeSafe AI's Jev — typed judgements, n
 
 Repository topics: jev, foundation-models, jev-api, swift
 
+### typed\_evals
+
+[Project \(en\)](https://awesomejev.cc/projects/trustifai/typed_evals) · [Project \(zh\)](https://awesomejev.cc/zh/projects/trustifai/typed_evals) · [Project \(ja\)](https://awesomejev.cc/ja/projects/trustifai/typed_evals)
+
+[Repository](https://github.com/TrustifAI/typed_evals) · research · Python · 16 snapshot stars
+
+Author description: Fast, typed, calibrated evaluations for LLM and agent outputs, powered by Jev — with simple, framework-agnostic Python APIs
+
+Repository topics: jev, ai, ai-agents, crewai, evals, evaluation, evaluation-framework, evaluation-metrics
+
+### jev-bot
+
+[Project \(en\)](https://awesomejev.cc/projects/bl888m/jev-bot) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bl888m/jev-bot) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bl888m/jev-bot)
+
+[Repository](https://github.com/bl888m/jev-bot) · agents · Python · 15 snapshot stars
+
+Author description: JEV-powered market decision bot for stocks, crypto and memes. State in, BUY/SELL/HOLD/AVOID out, paper by default
+
+Repository topics: jev, pons-v2, python, robinhood, trading, typesafe
+
 ### jev-harness
 
 [Project \(en\)](https://awesomejev.cc/projects/antoniocoppe/jev-harness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/antoniocoppe/jev-harness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/antoniocoppe/jev-harness)
@@ -2761,15 +2801,15 @@ Author description: Decision harness for TypeSafe Jev — confidence gates, shad
 
 Repository topics: jev, agents, confidence, decision, evals, harness, llm, system-one
 
-### jev-rerank
+### jev-router
 
-[Project \(en\)](https://awesomejev.cc/projects/hev/reranker) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hev/reranker) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hev/reranker)
+[Project \(en\)](https://awesomejev.cc/projects/dirien/jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dirien/jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dirien/jev-router)
 
-[Repository](https://github.com/hev/reranker) · sdk · Python · 15 snapshot stars
+[Repository](https://github.com/dirien/jev-router) · agents · JavaScript · 15 snapshot stars
 
-Author description: Use Jev \(TypeSafe's System One model\) as a calibrated reranker: one call, up to 30 documents, a probability per document. Apache-2.0.
+Author description: Pass-through model router for Claude Code and Codex CLI that picks a model tier per human turn with Jev, TypeSafe AI's decision model
 
-Repository topics: jev, python
+Repository topics: jev, claude-code, codex, llm-gateway, model-router, ollama, typesafe, javascript
 
 ### jevbetter
 
@@ -2791,15 +2831,15 @@ Author description: 安卓无障碍版微信判读：只读屏、只弹 3 条 To
 
 Repository topics: jev, accessibility-service, android, chat-analysis, kotlin, privacy-friendly, toast, typesafe
 
-### typed\_evals
+### patdown
 
-[Project \(en\)](https://awesomejev.cc/projects/trustifai/typed_evals) · [Project \(zh\)](https://awesomejev.cc/zh/projects/trustifai/typed_evals) · [Project \(ja\)](https://awesomejev.cc/ja/projects/trustifai/typed_evals)
+[Project \(en\)](https://awesomejev.cc/projects/tyler-dot-earth/patdown) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tyler-dot-earth/patdown) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tyler-dot-earth/patdown)
 
-[Repository](https://github.com/TrustifAI/typed_evals) · research · Python · 15 snapshot stars
+[Repository](https://github.com/tyler-dot-earth/patdown) · developer · TypeScript · 15 snapshot stars
 
-Author description: Fast, typed, calibrated evaluations for LLM and agent outputs, powered by Jev — with simple, framework-agnostic Python APIs
+Author description: Block, steer, and "fuzzy lint" with Jev to make agents follow your rules and conventions. CLI, github action, pi package, claude extension, and more. Built with Effect + TypeScript.
 
-Repository topics: jev, ai, ai-agents, crewai, evals, evaluation, evaluation-framework, evaluation-metrics
+Repository topics: jev, typescript
 
 ### typesafe-ai
 
@@ -2831,15 +2871,45 @@ Author description: Interactive experiments with TypeSafe Jev, from support rout
 
 Repository topics: jev, javascript
 
-### jev-commit
+### dsh-jev-tools
 
-[Project \(en\)](https://awesomejev.cc/projects/valentynkit/jev-commit) · [Project \(zh\)](https://awesomejev.cc/zh/projects/valentynkit/jev-commit) · [Project \(ja\)](https://awesomejev.cc/ja/projects/valentynkit/jev-commit)
+[Project \(en\)](https://awesomejev.cc/projects/horusjiang/dsh-jev-tools) · [Project \(zh\)](https://awesomejev.cc/zh/projects/horusjiang/dsh-jev-tools) · [Project \(ja\)](https://awesomejev.cc/ja/projects/horusjiang/dsh-jev-tools)
 
-[Repository](https://github.com/valentynkit/jev-commit) · developer · Python · 14 snapshot stars
+[Repository](https://github.com/HorusJiang/dsh-jev-tools) · developer · TypeScript · 14 snapshot stars
 
-Author description: Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, plus checks for debug leftovers and unmentioned work. Warns on mismatches, blocks only on a detected secret.
+Author description: Jev judgment, not generation: prune long tool output, screen fetched pages for injected instructions, and gate completion claims inside DeepSeek Harness.
 
-Repository topics: jev, python, code-review
+Repository topics: jev, context-window, deepseek-harness, dsh, dsh-plugin, llm, prompt-injection, typesafe
+
+### jev-dspy-lab
+
+[Project \(en\)](https://awesomejev.cc/projects/jmanhype/jev-dspy-lab) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jmanhype/jev-dspy-lab) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jmanhype/jev-dspy-lab)
+
+[Repository](https://github.com/jmanhype/jev-dspy-lab) · research · Python · 14 snapshot stars
+
+Author description: Reproducible calibration and selective-risk benchmarks for Jev/TypeSafe decisions in DSPy workflows
+
+Repository topics: jev, python
+
+### jev-grounds
+
+[Project \(en\)](https://awesomejev.cc/projects/cadeos/jev-grounds) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cadeos/jev-grounds) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cadeos/jev-grounds)
+
+[Repository](https://github.com/cadeos/jev-grounds) · developer · JavaScript · 14 snapshot stars
+
+Author description: Chrome extension: a badge rating how well-argued an article is, via the Jev API.
+
+Repository topics: jev, javascript
+
+### jev-gtm-cookbook
+
+[Project \(en\)](https://awesomejev.cc/projects/bcharleson/jev-gtm-cookbook) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bcharleson/jev-gtm-cookbook) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bcharleson/jev-gtm-cookbook)
+
+[Repository](https://github.com/bcharleson/jev-gtm-cookbook) · resources · JavaScript · 14 snapshot stars
+
+Author description: 15 open-source outbound recipes on TypeSafe Jev. Score your LinkedIn network or any lead list against your ICP, catch job changes, triage replies. Local, zero dependencies. 16,711 connections scored for $0.73.
+
+Repository topics: jev, cold-email, cookbook, enrichment, gtm, icp, lead-scoring, linkedin
 
 ### jev-me
 
@@ -2850,16 +2920,6 @@ Repository topics: jev, python, code-review
 Author description: jev-me is grill-me with jev
 
 Repository topics: jev, python
-
-### jev-router
-
-[Project \(en\)](https://awesomejev.cc/projects/dirien/jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dirien/jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dirien/jev-router)
-
-[Repository](https://github.com/dirien/jev-router) · agents · JavaScript · 14 snapshot stars
-
-Author description: Pass-through model router for Claude Code and Codex CLI that picks a model tier per human turn with Jev, TypeSafe AI's decision model
-
-Repository topics: jev, claude-code, codex, llm-gateway, model-router, ollama, typesafe, javascript
 
 ### jev-router
 
@@ -2900,16 +2960,6 @@ Repository topics: jev, ai-personas, audience-simulation, cloudflare-workers, co
 Author description: Chrome extension that cleans up your LinkedIn feed: hides engagement bait, self-promo and off-topic posts using Jev, TypeSafe AI's typed classification model — and explains every decision.
 
 Repository topics: jev, ai, browser-extension, chrome-extension, content-classification, feed-filter, linkedin, linkedin-feed
-
-### patdown
-
-[Project \(en\)](https://awesomejev.cc/projects/tyler-dot-earth/patdown) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tyler-dot-earth/patdown) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tyler-dot-earth/patdown)
-
-[Repository](https://github.com/tyler-dot-earth/patdown) · developer · TypeScript · 14 snapshot stars
-
-Author description: Block, steer, and "fuzzy lint" with Jev to make agents follow your rules and conventions. CLI, github action, pi package, claude extension, and more. Built with Effect + TypeScript.
-
-Repository topics: jev, typescript
 
 ### snapjudge
 
@@ -2971,16 +3021,6 @@ Author description: Zero-shot English goals on a sim Franka. Jev chains hardcode
 
 Repository topics: jev, python
 
-### jev-bot
-
-[Project \(en\)](https://awesomejev.cc/projects/bl888m/jev-bot) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bl888m/jev-bot) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bl888m/jev-bot)
-
-[Repository](https://github.com/bl888m/jev-bot) · agents · Python · 13 snapshot stars
-
-Author description: JEV-powered market decision bot for stocks, crypto and memes. State in, BUY/SELL/HOLD/AVOID out, paper by default
-
-Repository topics: jev, pons-v2, python, robinhood, trading, typesafe
-
 ### openvons
 
 [Project \(en\)](https://awesomejev.cc/projects/genai-craft/openvons) · [Project \(zh\)](https://awesomejev.cc/zh/projects/genai-craft/openvons) · [Project \(ja\)](https://awesomejev.cc/ja/projects/genai-craft/openvons)
@@ -3011,6 +3051,16 @@ Author description: Run Laya locally with Bun: native ONNX inference, a TypeSafe
 
 Repository topics: jev, jev-ai, jev-model, laya, typesafe-ai, typesafe-jev, typescript
 
+### ask-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/kuhung/ask-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kuhung/ask-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kuhung/ask-jev)
+
+[Repository](https://github.com/kuhung/ask-jev) · applications · TypeScript · 12 snapshot stars
+
+Author description: 是非选择问Jev
+
+Repository topics: jev, typescript
+
 ### awesome-one
 
 [Project \(en\)](https://awesomejev.cc/projects/withoneai/awesome-one) · [Project \(zh\)](https://awesomejev.cc/zh/projects/withoneai/awesome-one) · [Project \(ja\)](https://awesomejev.cc/ja/projects/withoneai/awesome-one)
@@ -3021,25 +3071,15 @@ Author description: ✨ A showcase of One
 
 Repository topics: jev, typescript
 
-### dsh-jev-tools
+### jev-ai-sdk-form-router
 
-[Project \(en\)](https://awesomejev.cc/projects/horusjiang/dsh-jev-tools) · [Project \(zh\)](https://awesomejev.cc/zh/projects/horusjiang/dsh-jev-tools) · [Project \(ja\)](https://awesomejev.cc/ja/projects/horusjiang/dsh-jev-tools)
+[Project \(en\)](https://awesomejev.cc/projects/vercel-labs/jev-ai-sdk-form-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vercel-labs/jev-ai-sdk-form-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vercel-labs/jev-ai-sdk-form-router)
 
-[Repository](https://github.com/HorusJiang/dsh-jev-tools) · developer · TypeScript · 12 snapshot stars
+[Repository](https://github.com/vercel-labs/jev-ai-sdk-form-router) · agents · TypeScript · 12 snapshot stars
 
-Author description: Jev judgment, not generation: prune long tool output, screen fetched pages for injected instructions, and gate completion claims inside DeepSeek Harness.
+Author description: Route form submissions to the right people with Jev and AI SDK.
 
-Repository topics: jev, context-window, deepseek-harness, dsh, dsh-plugin, llm, prompt-injection, typesafe
-
-### jev-dspy-lab
-
-[Project \(en\)](https://awesomejev.cc/projects/jmanhype/jev-dspy-lab) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jmanhype/jev-dspy-lab) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jmanhype/jev-dspy-lab)
-
-[Repository](https://github.com/jmanhype/jev-dspy-lab) · research · Python · 12 snapshot stars
-
-Author description: Reproducible calibration and selective-risk benchmarks for Jev/TypeSafe decisions in DSPy workflows
-
-Repository topics: jev, python
+Repository topics: jev, ai, typesafe-ai, vercel, typescript
 
 ### jev-graph-search
 
@@ -3050,6 +3090,16 @@ Repository topics: jev, python
 Author description: Jev-assisted retrieval and evidence-preserving inspection for local Markdown, Obsidian vaults, and Logseq Markdown graphs.
 
 Repository topics: jev, logseq, markdown, obsidian, javascript
+
+### jev-harness
+
+[Project \(en\)](https://awesomejev.cc/projects/ismaelsoilet/jev-harness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ismaelsoilet/jev-harness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ismaelsoilet/jev-harness)
+
+[Repository](https://github.com/ismaelsoilet/jev-harness) · agents · Python · 12 snapshot stars
+
+Author description: jev-harness — Jev / TypeSafe related project
+
+Repository topics: jev, python
 
 ### jev-ultralightspeed
 
@@ -3181,6 +3231,16 @@ Author description: Independent, reproducible benchmark: a decision model \(jev\
 
 Repository topics: jev, benchmark, calibration, decision-models, llm-evaluation, reproducibility, html
 
+### dsh-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/zhangxaochen/dsh-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zhangxaochen/dsh-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zhangxaochen/dsh-jev)
+
+[Repository](https://github.com/zhangxaochen/dsh-jev) · agents · TypeScript · 11 snapshot stars
+
+Author description: Jev \(System One decision model\) plugin suite for DeepSeek Harness \(dsh\)
+
+Repository topics: jev, agent-tooling, cordis, deepseek-harness, dsh, guardrails, system-one, typesafe
+
 ### ego-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/zephyrdeng/ego-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zephyrdeng/ego-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zephyrdeng/ego-jev)
@@ -3190,26 +3250,6 @@ Repository topics: jev, benchmark, calibration, decision-models, llm-evaluation,
 Author description: Jev \(TypeSafe System One\) inner loop for ego-browser — one ~0.4s typed decision per DOM step instead of an LLM turn. Agent skill for ego lite.
 
 Repository topics: jev, agent-skills, ai-agents, browser-automation, claude-skills, codex-skills, skill-md, javascript
-
-### jev-gtm-cookbook
-
-[Project \(en\)](https://awesomejev.cc/projects/bcharleson/jev-gtm-cookbook) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bcharleson/jev-gtm-cookbook) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bcharleson/jev-gtm-cookbook)
-
-[Repository](https://github.com/bcharleson/jev-gtm-cookbook) · resources · JavaScript · 11 snapshot stars
-
-Author description: 15 open-source outbound recipes on TypeSafe Jev. Score your LinkedIn network or any lead list against your ICP, catch job changes, triage replies. Local, zero dependencies. 16,711 connections scored for $0.73.
-
-Repository topics: jev, cold-email, cookbook, enrichment, gtm, icp, lead-scoring, linkedin
-
-### jev-harness
-
-[Project \(en\)](https://awesomejev.cc/projects/ismaelsoilet/jev-harness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ismaelsoilet/jev-harness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ismaelsoilet/jev-harness)
-
-[Repository](https://github.com/ismaelsoilet/jev-harness) · agents · Python · 11 snapshot stars
-
-Author description: jev-harness — Jev / TypeSafe related project
-
-Repository topics: jev, python
 
 ### jev-lint
 
@@ -3241,6 +3281,16 @@ Author description: Coding-agent memory where every fact is a verbatim quote gra
 
 Repository topics: jev, agent-memory, calibrated-confidence, cli, coding-agent, python, sqlite, zero-dependency
 
+### lev
+
+[Project \(en\)](https://awesomejev.cc/projects/franckverrot/lev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/franckverrot/lev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/franckverrot/lev)
+
+[Repository](https://github.com/franckverrot/lev) · alternatives · Python · 11 snapshot stars
+
+Author description: Jev-style decision model based on LFM2.5-350M
+
+Repository topics: jev, ai, classifier, llm, ml, python
+
 ### typesafe-sdk-java
 
 [Project \(en\)](https://awesomejev.cc/projects/premo-cloud/typesafe-sdk-java) · [Project \(zh\)](https://awesomejev.cc/zh/projects/premo-cloud/typesafe-sdk-java) · [Project \(ja\)](https://awesomejev.cc/ja/projects/premo-cloud/typesafe-sdk-java)
@@ -3250,16 +3300,6 @@ Repository topics: jev, agent-memory, calibrated-confidence, cli, coding-agent, 
 Author description: Community Java client for the TypeSafe System One API \(unofficial\)
 
 Repository topics: jev, java, sdk, spring-boot, system-one, system-one-models, typesafe
-
-### ask-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/kuhung/ask-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kuhung/ask-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kuhung/ask-jev)
-
-[Repository](https://github.com/kuhung/ask-jev) · applications · TypeScript · 10 snapshot stars
-
-Author description: 是非选择问Jev
-
-Repository topics: jev, typescript
 
 ### citation-verifier
 
@@ -3290,16 +3330,6 @@ Repository topics: jev, agent-routing, ai-agents, autonomous-agents, awesome-jev
 Author description: What happens when jev meets jq? Intelligence you can pipe
 
 Repository topics: jev, ai, ai-agent, ai-coding, ai-tools, jq, terminal, unix
-
-### jev-ai-sdk-form-router
-
-[Project \(en\)](https://awesomejev.cc/projects/vercel-labs/jev-ai-sdk-form-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vercel-labs/jev-ai-sdk-form-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vercel-labs/jev-ai-sdk-form-router)
-
-[Repository](https://github.com/vercel-labs/jev-ai-sdk-form-router) · agents · TypeScript · 10 snapshot stars
-
-Author description: Route form submissions to the right people with Jev and AI SDK.
-
-Repository topics: jev, ai, typesafe-ai, vercel, typescript
 
 ### jev-browser
 
@@ -3371,16 +3401,6 @@ Author description: PR Risk review, automated by Jev
 
 Repository topics: jev, classification, pull-requests, python
 
-### lev
-
-[Project \(en\)](https://awesomejev.cc/projects/franckverrot/lev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/franckverrot/lev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/franckverrot/lev)
-
-[Repository](https://github.com/franckverrot/lev) · alternatives · Python · 10 snapshot stars
-
-Author description: Jev-style decision model based on LFM2.5-350M
-
-Repository topics: jev, ai, classifier, llm, ml, python
-
 ### nl-logic-interpreter
 
 [Project \(en\)](https://awesomejev.cc/projects/narphorium/nl-logic-interpreter) · [Project \(zh\)](https://awesomejev.cc/zh/projects/narphorium/nl-logic-interpreter) · [Project \(ja\)](https://awesomejev.cc/ja/projects/narphorium/nl-logic-interpreter)
@@ -3420,6 +3440,16 @@ Repository topics: jev, agent, compaction
 Author description: Typed, calibrated decisions from a local model. No text generated.
 
 Repository topics: jev, python
+
+### taste-lint
+
+[Project \(en\)](https://awesomejev.cc/projects/mblode/taste-lint) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mblode/taste-lint) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mblode/taste-lint)
+
+[Repository](https://github.com/mblode/taste-lint) · developer · TypeScript · 10 snapshot stars
+
+Author description: Catch AI slop before you ship.
+
+Repository topics: jev, system-one, typesafe, typescript
 
 ### typed-decisions
 
@@ -3471,6 +3501,16 @@ Author description: Awesome projects built with Jev from Typesafe AI
 
 Repository topics: jev, typesafe-ai
 
+### codex-jev-router
+
+[Project \(en\)](https://awesomejev.cc/projects/suenot/codex-jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/suenot/codex-jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/suenot/codex-jev-router)
+
+[Repository](https://github.com/suenot/codex-jev-router) · agents · JavaScript · 9 snapshot stars
+
+Author description: Portable Codex subagent-routing workflow using Jev Choice/Noul and local confidence gates, with a Sol fallback; invoked through project instructions rather than an automatic spawn hook.
+
+Repository topics: jev, codex, agent, model-routing
+
 ### Decis
 
 [Project \(en\)](https://awesomejev.cc/projects/chaitin/decis) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chaitin/decis) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chaitin/decis)
@@ -3480,16 +3520,6 @@ Repository topics: jev, typesafe-ai
 Author description: Self-hosted, Jev-compatible decision-model API — one /v1/systemone endpoint, open weights \(Laya, kev\), one Docker image per engine.
 
 Repository topics: jev, decision-models, docker, fastapi, inference-server, kev, laya, llm-serving
-
-### dsh-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/zhangxaochen/dsh-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zhangxaochen/dsh-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zhangxaochen/dsh-jev)
-
-[Repository](https://github.com/zhangxaochen/dsh-jev) · agents · TypeScript · 9 snapshot stars
-
-Author description: Jev \(System One decision model\) plugin suite for DeepSeek Harness \(dsh\)
-
-Repository topics: jev, agent-tooling, cordis, deepseek-harness, dsh, guardrails, system-one, typesafe
 
 ### duckdb-jev
 
@@ -3510,6 +3540,16 @@ Repository topics: jev, ai, classification, cpp, data-engineering, duckdb, duckd
 Author description: Open-source AI ad blocker for Chrome. No filter lists: TypeSafe AI's Jev model decides what is an ad. Bring your own key.
 
 Repository topics: jev, ad-blocker, adblock, ai, browser-extension, chrome-extension, manifest-v3, open-source
+
+### jev-codex-bridge
+
+[Project \(en\)](https://awesomejev.cc/projects/ansidium/jev-codex-bridge) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ansidium/jev-codex-bridge) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ansidium/jev-codex-bridge)
+
+[Repository](https://github.com/ansidium/jev-codex-bridge) · agents · JavaScript · 9 snapshot stars
+
+Author description: Model and reasoning routing for Codex Desktop and CLI, with a Windows service and validated updates
+
+Repository topics: jev, codex, model-routing, typesafe, windows, javascript
 
 ### jev-cookbook
 
@@ -3621,6 +3661,16 @@ Author description: Jev x 海龟汤
 
 Repository topics: jev, jev-ai, typescript
 
+### SwiftJev
+
+[Project \(en\)](https://awesomejev.cc/projects/soundblaster/swiftjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/soundblaster/swiftjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/soundblaster/swiftjev)
+
+[Repository](https://github.com/SoundBlaster/SwiftJev) · sdk · Swift · 9 snapshot stars
+
+Author description: Swift framework to access Jev System One model by TypeSafe.ai
+
+Repository topics: jev, swift
+
 ### twitter-jev-guard
 
 [Project \(en\)](https://awesomejev.cc/projects/qs-lll/twitter-jev-guard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/qs-lll/twitter-jev-guard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/qs-lll/twitter-jev-guard)
@@ -3640,6 +3690,16 @@ Repository topics: jev, javascript
 Author description: Community TypeSafe SDK in Golang
 
 Repository topics: jev, sdk, go
+
+### TypeSafeJevPlayground
+
+[Project \(en\)](https://awesomejev.cc/projects/laurentkempe/typesafejevplayground) · [Project \(zh\)](https://awesomejev.cc/zh/projects/laurentkempe/typesafejevplayground) · [Project \(ja\)](https://awesomejev.cc/ja/projects/laurentkempe/typesafejevplayground)
+
+[Repository](https://github.com/laurentkempe/TypeSafeJevPlayground) · sdk · C\# · 9 snapshot stars
+
+Author description: TypeSafe Jev Playground - idiomatic .NET port of typesafe-ai/typesafe-sdk-js v0.6.0
+
+Repository topics: jev, ai, csharp, dotnet, typesafe, typesafe-ai, c\#
 
 ### vox-arcana
 
@@ -3730,16 +3790,6 @@ Repository topics: jev, kotlin
 Author description: Fast, cheap browser sub-tasks for Claude and other agents: TypeSafe Jev decisions on top of browser-harness
 
 Repository topics: jev, python
-
-### jev-codex-bridge
-
-[Project \(en\)](https://awesomejev.cc/projects/ansidium/jev-codex-bridge) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ansidium/jev-codex-bridge) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ansidium/jev-codex-bridge)
-
-[Repository](https://github.com/ansidium/jev-codex-bridge) · agents · JavaScript · 8 snapshot stars
-
-Author description: Model and reasoning routing for Codex Desktop and CLI, with a Windows service and validated updates
-
-Repository topics: jev, codex, model-routing, typesafe, windows, javascript
 
 ### jev-mcp
 
@@ -3841,6 +3891,16 @@ Author description: Site search that understands the question. Ranked by TypeSaf
 
 Repository topics: jev, typesafe, typesafe-ai, typescript
 
+### jevseo
+
+[Project \(en\)](https://awesomejev.cc/projects/epergaboni/jevseo) · [Project \(zh\)](https://awesomejev.cc/zh/projects/epergaboni/jevseo) · [Project \(ja\)](https://awesomejev.cc/ja/projects/epergaboni/jevseo)
+
+[Repository](https://github.com/epergaboni/jevseo) · applications · TypeScript · 8 snapshot stars
+
+Author description: Typed SEO, AEO and GEO judgments powered by Jev, a System One decision model. Code owns the rules, the model owns the meaning.
+
+Repository topics: jev, typescript, system-one
+
 ### JevSwiftSDK
 
 [Project \(en\)](https://awesomejev.cc/projects/nsstudent/jevswiftsdk) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nsstudent/jevswiftsdk) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nsstudent/jevswiftsdk)
@@ -3871,26 +3931,6 @@ Author description: Question-guided evidence highlighting for research papers, p
 
 Repository topics: jev, javascript
 
-### SwiftJev
-
-[Project \(en\)](https://awesomejev.cc/projects/soundblaster/swiftjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/soundblaster/swiftjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/soundblaster/swiftjev)
-
-[Repository](https://github.com/SoundBlaster/SwiftJev) · sdk · Swift · 8 snapshot stars
-
-Author description: Swift framework to access Jev System One model by TypeSafe.ai
-
-Repository topics: jev, swift
-
-### taste-lint
-
-[Project \(en\)](https://awesomejev.cc/projects/mblode/taste-lint) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mblode/taste-lint) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mblode/taste-lint)
-
-[Repository](https://github.com/mblode/taste-lint) · developer · TypeScript · 8 snapshot stars
-
-Author description: Catch AI slop before you ship.
-
-Repository topics: jev, system-one, typesafe, typescript
-
 ### typesafe-jev-incident-router
 
 [Project \(en\)](https://awesomejev.cc/projects/kyle-chalmers/typesafe-jev-incident-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kyle-chalmers/typesafe-jev-incident-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kyle-chalmers/typesafe-jev-incident-router)
@@ -3900,16 +3940,6 @@ Repository topics: jev, system-one, typesafe, typescript
 Author description: Confidence-gated incident routing with TypeSafe Jev
 
 Repository topics: jev, python
-
-### TypeSafeJevPlayground
-
-[Project \(en\)](https://awesomejev.cc/projects/laurentkempe/typesafejevplayground) · [Project \(zh\)](https://awesomejev.cc/zh/projects/laurentkempe/typesafejevplayground) · [Project \(ja\)](https://awesomejev.cc/ja/projects/laurentkempe/typesafejevplayground)
-
-[Repository](https://github.com/laurentkempe/TypeSafeJevPlayground) · sdk · C\# · 8 snapshot stars
-
-Author description: TypeSafe Jev Playground - idiomatic .NET port of typesafe-ai/typesafe-sdk-js v0.6.0
-
-Repository topics: jev, ai, csharp, dotnet, typesafe, typesafe-ai, c\#
 
 ### what-the-jev
 
@@ -3961,15 +3991,15 @@ Author description: Claude Code plugin that scores review findings, debug hypoth
 
 Repository topics: jev, ai, antrophic, claude-plugin, typesafe, typescript
 
-### codex-jev-router
+### daf-jev
 
-[Project \(en\)](https://awesomejev.cc/projects/suenot/codex-jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/suenot/codex-jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/suenot/codex-jev-router)
+[Project \(en\)](https://awesomejev.cc/projects/docxology/daf-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/docxology/daf-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/docxology/daf-jev)
 
-[Repository](https://github.com/suenot/codex-jev-router) · agents · JavaScript · 7 snapshot stars
+[Repository](https://github.com/docxology/daf-jev) · sdk · Python · 7 snapshot stars
 
-Author description: Portable Codex subagent-routing workflow using Jev Choice/Noul and local confidence gates, with a Sol fallback; invoked through project instructions rather than an automatic spawn hook.
+Author description: daf-jev: composable Python toolkit for TypeSafe's Jev \(System One\) decision API — question builders, confidence gates, evaluator, calibration, CLI, MCP server, agent skill
 
-Repository topics: jev, codex, agent, model-routing
+Repository topics: jev, python
 
 ### diffjury
 
@@ -3991,16 +4021,6 @@ Author description: Doom or Bloom: map your AI worldview and compare it to other
 
 Repository topics: jev, ai, ai-futures, ai-risks, ai-safety, worldview, typescript
 
-### dsh-plugin-jev-effort-selector
-
-[Project \(en\)](https://awesomejev.cc/projects/justhalfbit/dsh-plugin-jev-effort-selector) · [Project \(zh\)](https://awesomejev.cc/zh/projects/justhalfbit/dsh-plugin-jev-effort-selector) · [Project \(ja\)](https://awesomejev.cc/ja/projects/justhalfbit/dsh-plugin-jev-effort-selector)
-
-[Repository](https://github.com/justhalfbit/dsh-plugin-jev-effort-selector) · developer · JavaScript · 7 snapshot stars
-
-Author description: DeepSeek Harness \(DSH\) 推理等级自动选择插件：由 Jev System One 模型判断每条消息值多少思考量，按模型声明的等级自动推导档位，上下文信封让「继续」这类追问继承话题深度，低置信度向上取，任何失败都静默沿用原等级。 \| Jev-driven reasoning effort per message: per-model ladders derived from what each model advertises, a fixed-size context envelope so follow-ups inherit topic depth, ties break upward, silent fallback on every failure path.
-
-Repository topics: jev, ai-agent, deepseek-harness, deepseek-harness-plugin, dsh, dsh-plugin, llm, plugin
-
 ### every
 
 [Project \(en\)](https://awesomejev.cc/projects/sufianetaouil/every) · [Project \(zh\)](https://awesomejev.cc/zh/projects/sufianetaouil/every) · [Project \(ja\)](https://awesomejev.cc/ja/projects/sufianetaouil/every)
@@ -4020,6 +4040,16 @@ Repository topics: jev, python
 Author description: Fast, drop-in profanity and toxicity screener for Node.js, powered by TypeSafe AI Jev. Catches leetspeak, character spacing, and romanized profanity across languages including Kannada, Telugu, Tamil, Hindi, and Bengali. ~50-500ms latency.
 
 Repository topics: jev, ai, bad-words, content-moderation, game-chat, hindi, hinglish, indic
+
+### hermes-switchyard
+
+[Project \(en\)](https://awesomejev.cc/projects/bgrablin/hermes-switchyard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bgrablin/hermes-switchyard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bgrablin/hermes-switchyard)
+
+[Repository](https://github.com/bgrablin/hermes-switchyard) · agents · Python · 7 snapshot stars
+
+Author description: Jev-powered decision plugin for Hermes Agent: automatic skill selection, policy-constrained model routing, typed assessments, and approval-gated computer use on Windows, macOS, and Linux.
+
+Repository topics: jev, ai-agents, computer-use, hermes-agent, skill-routing, python
 
 ### hundred
 
@@ -4081,6 +4111,16 @@ Author description: MCP server exposing TypeSafe Jev as typed, calibrated judgme
 
 Repository topics: jev, typescript, ai-agents, classification, claude-code
 
+### jev-playwright
+
+[Project \(en\)](https://awesomejev.cc/projects/arthurfiorette/jev-playwright) · [Project \(zh\)](https://awesomejev.cc/zh/projects/arthurfiorette/jev-playwright) · [Project \(ja\)](https://awesomejev.cc/ja/projects/arthurfiorette/jev-playwright)
+
+[Repository](https://github.com/arthurfiorette/jev-playwright) · developer · TypeScript · 7 snapshot stars
+
+Author description: Jev-powered Playwright test selection
+
+Repository topics: jev, e2e, playwright, selection, test, tests, typescript
+
 ### jev-skillful
 
 [Project \(en\)](https://awesomejev.cc/projects/bestagentkits/jev-skillful) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bestagentkits/jev-skillful) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bestagentkits/jev-skillful)
@@ -4130,16 +4170,6 @@ Repository topics: jev, python
 Author description: A Jev-driven general-purpose agent harness for faster, lower-cost execution, with built-in side-by-side experiments against LLM-only agents.
 
 Repository topics: jev, agent-runtime, ai-agents, docker, llm-evaluation, observability, python, sandbox
-
-### jevseo
-
-[Project \(en\)](https://awesomejev.cc/projects/epergaboni/jevseo) · [Project \(zh\)](https://awesomejev.cc/zh/projects/epergaboni/jevseo) · [Project \(ja\)](https://awesomejev.cc/ja/projects/epergaboni/jevseo)
-
-[Repository](https://github.com/epergaboni/jevseo) · applications · TypeScript · 7 snapshot stars
-
-Author description: Typed SEO, AEO and GEO judgments powered by Jev, a System One decision model. Code owns the rules, the model owns the meaning.
-
-Repository topics: jev, typescript, system-one
 
 ### mastra-jev-moderation
 
@@ -4301,16 +4331,6 @@ Author description: Semantic end-to-end agent testing for iOS, Android, and web.
 
 Repository topics: jev, android, e2e-testing, ios, test-automation, typescript, website
 
-### daf-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/docxology/daf-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/docxology/daf-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/docxology/daf-jev)
-
-[Repository](https://github.com/docxology/daf-jev) · sdk · Python · 6 snapshot stars
-
-Author description: daf-jev: composable Python toolkit for TypeSafe's Jev \(System One\) decision API — question builders, confidence gates, evaluator, calibration, CLI, MCP server, agent skill
-
-Repository topics: jev, python
-
 ### docket
 
 [Project \(en\)](https://awesomejev.cc/projects/glamboyosa/docket) · [Project \(zh\)](https://awesomejev.cc/zh/projects/glamboyosa/docket) · [Project \(ja\)](https://awesomejev.cc/ja/projects/glamboyosa/docket)
@@ -4320,6 +4340,16 @@ Repository topics: jev, python
 Author description: A Go TUI that uses Jev to classify documents, assess sensitivity and urgency, and determine whether action is required.
 
 Repository topics: jev, ai, bubbletea, byok, go, jev-ai, tui
+
+### dsh-plugin-jev-effort-selector
+
+[Project \(en\)](https://awesomejev.cc/projects/justhalfbit/dsh-plugin-jev-effort-selector) · [Project \(zh\)](https://awesomejev.cc/zh/projects/justhalfbit/dsh-plugin-jev-effort-selector) · [Project \(ja\)](https://awesomejev.cc/ja/projects/justhalfbit/dsh-plugin-jev-effort-selector)
+
+[Repository](https://github.com/justhalfbit/dsh-plugin-jev-effort-selector) · developer · JavaScript · 6 snapshot stars
+
+Author description: DeepSeek Harness \(DSH\) 推理等级自动选择插件：由 Jev System One 模型判断每条消息值多少思考量，按模型声明的等级自动推导档位，上下文信封让「继续」这类追问继承话题深度，低置信度向上取，任何失败都静默沿用原等级。 \| Jev-driven reasoning effort per message: per-model ladders derived from what each model advertises, a fixed-size context envelope so follow-ups inherit topic depth, ties break upward, silent fallback on every failure path.
+
+Repository topics: jev, ai-agent, deepseek-harness, deepseek-harness-plugin, dsh, dsh-plugin, llm, plugin
 
 ### fast-compact
 
@@ -4341,15 +4371,15 @@ Author description: A hundred hands through Git history — reproducible commit 
 
 Repository topics: jev, analytics, commit-history, git, python, research
 
-### hermes-switchyard
+### jev-ai-radar
 
-[Project \(en\)](https://awesomejev.cc/projects/bgrablin/hermes-switchyard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bgrablin/hermes-switchyard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bgrablin/hermes-switchyard)
+[Project \(en\)](https://awesomejev.cc/projects/jevaidev/jev-ai-radar) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jevaidev/jev-ai-radar) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jevaidev/jev-ai-radar)
 
-[Repository](https://github.com/bgrablin/hermes-switchyard) · agents · Python · 6 snapshot stars
+[Repository](https://github.com/jevaidev/jev-ai-radar) · directories · 6 snapshot stars
 
-Author description: Jev-powered decision plugin for Hermes Agent: automatic skill selection, policy-constrained model routing, typed assessments, and approval-gated computer use on Windows, macOS, and Linux.
+Author description: Daily curated Jev AI projects, System One community models, and real-world use cases.
 
-Repository topics: jev, ai-agents, computer-use, hermes-agent, skill-routing, python
+Repository topics: jev, ai-models, awesome-list, decision-models, developer-tools, system-one
 
 ### jev-baselines-eval
 
@@ -4371,6 +4401,16 @@ Author description: Typed decision layer for coding agents — Claude Code, Code
 
 Repository topics: jev, agent-routing, ai-agents, anthropic, claude-code, codex-plugin, laya-mlx, mcp
 
+### jev-docs
+
+[Project \(en\)](https://awesomejev.cc/projects/chenrui333/jev-docs) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenrui333/jev-docs) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenrui333/jev-docs)
+
+[Repository](https://github.com/chenrui333/jev-docs) · resources · Python · 6 snapshot stars
+
+Author description: Community-maintained history of Jev / TypeSafe System One APIs, SDKs, agent guidance, and engineering best practices.
+
+Repository topics: jev, agentic-ai, ai-agents, ai-engineering, developer-tools, documentation, llm, sdk
+
 ### jev-for-engineers
 
 [Project \(en\)](https://awesomejev.cc/projects/foadsf/jev-for-engineers) · [Project \(zh\)](https://awesomejev.cc/zh/projects/foadsf/jev-for-engineers) · [Project \(ja\)](https://awesomejev.cc/ja/projects/foadsf/jev-for-engineers)
@@ -4380,6 +4420,16 @@ Repository topics: jev, agent-routing, ai-agents, anthropic, claude-code, codex-
 Author description: Eight minimal working examples of TypeSafe's Jev \(a System One model\) applied to mechanical and electrical engineering: CAD/CAE/CAM routing, FEM result triage, DFM screening, BOM alignment, hallucination-proof extraction. Zero dependencies.
 
 Repository topics: jev, python, cad, cae, calibrated-confidence
+
+### jev-frontend-qa
+
+[Project \(en\)](https://awesomejev.cc/projects/nainish-rai/jev-frontend-qa) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nainish-rai/jev-frontend-qa) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nainish-rai/jev-frontend-qa)
+
+[Repository](https://github.com/Nainish-Rai/jev-frontend-qa) · developer · Python · 6 snapshot stars
+
+Author description: Evidence-driven frontend QA built on Jev Ultrafast and Browser Harness, with a synthetic todo demo.
+
+Repository topics: jev, browser, demo
 
 ### jev-go
 
@@ -4431,15 +4481,15 @@ Author description: A show-and-tell capability study for Jev, TypeSafe's System 
 
 Repository topics: jev, html
 
-### jev-playwright
+### jev-reader
 
-[Project \(en\)](https://awesomejev.cc/projects/arthurfiorette/jev-playwright) · [Project \(zh\)](https://awesomejev.cc/zh/projects/arthurfiorette/jev-playwright) · [Project \(ja\)](https://awesomejev.cc/ja/projects/arthurfiorette/jev-playwright)
+[Project \(en\)](https://awesomejev.cc/projects/pulkitxm/jev-reader) · [Project \(zh\)](https://awesomejev.cc/zh/projects/pulkitxm/jev-reader) · [Project \(ja\)](https://awesomejev.cc/ja/projects/pulkitxm/jev-reader)
 
-[Repository](https://github.com/arthurfiorette/jev-playwright) · developer · TypeScript · 6 snapshot stars
+[Repository](https://github.com/pulkitxm/jev-reader) · applications · JavaScript · 6 snapshot stars
 
-Author description: Jev-powered Playwright test selection
+Author description: Browser extension that explains difficult words with simple meanings and examples, powered by Jev.
 
-Repository topics: jev, e2e, playwright, selection, test, tests, typescript
+Repository topics: jev, javascript
 
 ### jev-sdk-java
 
@@ -4450,6 +4500,16 @@ Repository topics: jev, e2e, playwright, selection, test, tests, typescript
 Author description: Type-safe Java 21 client for the TypeSafe AI Jev \(System One\) decision API
 
 Repository topics: jev, decision-api, java, java21, maven, sdk, typesafe-ai
+
+### jev-search
+
+[Project \(en\)](https://awesomejev.cc/projects/savka777/jev-search) · [Project \(zh\)](https://awesomejev.cc/zh/projects/savka777/jev-search) · [Project \(ja\)](https://awesomejev.cc/ja/projects/savka777/jev-search)
+
+[Repository](https://github.com/savka777/jev-search) · agents · TypeScript · 6 snapshot stars
+
+Author description: Fast deep research for the pi coding agent: reads up to 100 pages in full per round, Jev keeps only the passages that answer your questions.
+
+Repository topics: jev, deep-research, jev-ai, pi-package, web-search, typescript
 
 ### jev-skills
 
@@ -4500,6 +4560,16 @@ Repository topics: jev, accessibility, ai-agent, anthropic, automation, claude, 
 Author description: Type anything. Get related emojis scored 0–3 with Jev.
 
 Repository topics: jev, emoji, jev-model, system-one, typesafe-ai, javascript
+
+### JevRanker
+
+[Project \(en\)](https://awesomejev.cc/projects/hgqimo/jevranker) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hgqimo/jevranker) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hgqimo/jevranker)
+
+[Repository](https://github.com/hgqimo/JevRanker) · research · Python · 6 snapshot stars
+
+Author description: Jev-style decision models as BlitzRank's compare oracle: k passages scored in one parallel forward pass, zero decoded tokens — 22x faster per match than a generative listwise LLM, at 2.9x its nDCG@10.
+
+Repository topics: jev, python
 
 ### jevriel
 
@@ -4601,6 +4671,16 @@ Author description: First independent head-to-head benchmark of System One decis
 
 Repository topics: jev, benchmark, calibration, decision-model, evaluation, laya, llm-eval, system-one
 
+### typesafe-mod
+
+[Project \(en\)](https://awesomejev.cc/projects/belazy167/typesafe-mod) · [Project \(zh\)](https://awesomejev.cc/zh/projects/belazy167/typesafe-mod) · [Project \(ja\)](https://awesomejev.cc/ja/projects/belazy167/typesafe-mod)
+
+[Repository](https://github.com/BeLazy167/typesafe-mod) · agents · TypeScript · 6 snapshot stars
+
+Author description: Claude Code mod that routes decisions to TypeSafe's Jev model: ranks installed skills per prompt, and answers the agent's own this-or-that questions when confident.
+
+Repository topics: jev, typescript
+
 ### TypeSafeAI.Net
 
 [Project \(en\)](https://awesomejev.cc/projects/hawxy/typesafeai.net) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hawxy/typesafeai.net) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hawxy/typesafeai.net)
@@ -4610,6 +4690,16 @@ Repository topics: jev, benchmark, calibration, decision-model, evaluation, laya
 Author description: .NET SDK for the TypeSafe AI platform
 
 Repository topics: jev, c\#, csharp, typesafe-ai
+
+### wakegate
+
+[Project \(en\)](https://awesomejev.cc/projects/shitianfang/wakegate) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shitianfang/wakegate) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shitianfang/wakegate)
+
+[Repository](https://github.com/shitianfang/wakegate) · agents · TypeScript · 6 snapshot stars
+
+Author description: Ask Jev whether a sleeping agent's wakeup is worth a full LLM turn before you resume it. A fail-open wake gate for long-running agents on Workers, Durable Objects and Node.
+
+Repository topics: jev, ai-agents, ai-sdk, cloudflare-durable-objects, cloudflare-workers, long-running-agents, typesafe, typesafe-ai
 
 ### a0-typesafe-ai
 
@@ -4661,6 +4751,16 @@ Author description: Orchestrator and subagent setups for Claude Code and Codex: 
 
 Repository topics: jev, python
 
+### cu-Jev
+
+[Project \(en\)](https://awesomejev.cc/projects/dtunai/cu-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dtunai/cu-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dtunai/cu-jev)
+
+[Repository](https://github.com/dtunai/cu-Jev) · alternatives · C · 5 snapshot stars
+
+Author description: cuda-Jev — a CUDA-native Jev System One decision inference engine. Jev compatible API, examples, and reproducible benchmarks.
+
+Repository topics: jev, cuda, jev-model, c
+
 ### decisions-judge-mcp
 
 [Project \(en\)](https://awesomejev.cc/projects/clouatre-labs/decisions-judge-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/clouatre-labs/decisions-judge-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/clouatre-labs/decisions-judge-mcp)
@@ -4700,6 +4800,16 @@ Repository topics: jev, agent-skills, ai-agents, automation, browser-automation,
 Author description: hello-jev-java: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, java
+
+### hunch
+
+[Project \(en\)](https://awesomejev.cc/projects/steven-shoemaker/hunch) · [Project \(zh\)](https://awesomejev.cc/zh/projects/steven-shoemaker/hunch) · [Project \(ja\)](https://awesomejev.cc/ja/projects/steven-shoemaker/hunch)
+
+[Repository](https://github.com/steven-shoemaker/hunch) · sdk · Python · 5 snapshot stars
+
+Author description: Ask Jev over columns of data: closed-set questions, cached and joined back.
+
+Repository topics: jev, classification, jev-ai, llm, python
 
 ### jev
 
@@ -4751,16 +4861,6 @@ Author description: Jev AI quickstart &amp; FAQ — TypeSafe AI's System One mod
 
 Repository topics: jev, ai, api, jev-ai, llm, system-one, typesafe-ai
 
-### jev-ai-radar
-
-[Project \(en\)](https://awesomejev.cc/projects/jevaidev/jev-ai-radar) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jevaidev/jev-ai-radar) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jevaidev/jev-ai-radar)
-
-[Repository](https://github.com/jevaidev/jev-ai-radar) · directories · 5 snapshot stars
-
-Author description: Daily curated Jev AI projects, System One community models, and real-world use cases.
-
-Repository topics: jev, ai-models, awesome-list, decision-models, developer-tools, system-one
-
 ### jev-arena-nanojev
 
 [Project \(en\)](https://awesomejev.cc/projects/liao96312/jev-arena-nanojev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/liao96312/jev-arena-nanojev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/liao96312/jev-arena-nanojev)
@@ -4791,16 +4891,6 @@ Author description: Audit your git diff against YAML coding-standards packs usin
 
 Repository topics: jev, skill
 
-### jev-docs
-
-[Project \(en\)](https://awesomejev.cc/projects/chenrui333/jev-docs) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chenrui333/jev-docs) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chenrui333/jev-docs)
-
-[Repository](https://github.com/chenrui333/jev-docs) · resources · Python · 5 snapshot stars
-
-Author description: Community-maintained history of Jev / TypeSafe System One APIs, SDKs, agent guidance, and engineering best practices.
-
-Repository topics: jev, agentic-ai, ai-agents, ai-engineering, developer-tools, documentation, llm, sdk
-
 ### jev-document-classification
 
 [Project \(en\)](https://awesomejev.cc/projects/charlyhno-eng/jev-document-classification) · [Project \(zh\)](https://awesomejev.cc/zh/projects/charlyhno-eng/jev-document-classification) · [Project \(ja\)](https://awesomejev.cc/ja/projects/charlyhno-eng/jev-document-classification)
@@ -4810,16 +4900,6 @@ Repository topics: jev, agentic-ai, ai-agents, ai-engineering, developer-tools, 
 Author description: JEV Document Classification enables the rapid and cost-effective classification of text-based documents using AI, leveraging TypeSafe's "System One" model.
 
 Repository topics: jev, typescript, blazingly-fast, cheap-api, document-classification
-
-### jev-frontend-qa
-
-[Project \(en\)](https://awesomejev.cc/projects/nainish-rai/jev-frontend-qa) · [Project \(zh\)](https://awesomejev.cc/zh/projects/nainish-rai/jev-frontend-qa) · [Project \(ja\)](https://awesomejev.cc/ja/projects/nainish-rai/jev-frontend-qa)
-
-[Repository](https://github.com/Nainish-Rai/jev-frontend-qa) · developer · Python · 5 snapshot stars
-
-Author description: Evidence-driven frontend QA built on Jev Ultrafast and Browser Harness, with a synthetic todo demo.
-
-Repository topics: jev, browser, demo
 
 ### jev-go
 
@@ -4861,6 +4941,16 @@ Author description: Slams a BAIT, CORP or BRAG stamp onto LinkedIn engagement-ba
 
 Repository topics: jev, chrome-extension, linkedin, system-one, typesafe, typesafe-ai, javascript
 
+### jev-market-reflex
+
+[Project \(en\)](https://awesomejev.cc/projects/zzsong1023/jev-market-reflex) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zzsong1023/jev-market-reflex) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zzsong1023/jev-market-reflex)
+
+[Repository](https://github.com/zzsong1023/jev-market-reflex) · agents · TypeScript · 5 snapshot stars
+
+Author description: Fast typed AI decisions on live crypto markets using TypeSafe AI Jev.
+
+Repository topics: jev, ai-agents, bun, crypto, paper-trading, real-time, typesafe-ai, typescript
+
 ### jev-mcp
 
 [Project \(en\)](https://awesomejev.cc/projects/legostin/jev-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/legostin/jev-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/legostin/jev-mcp)
@@ -4881,16 +4971,6 @@ Author description: Catch breaking API behavior hidden in OpenAPI prose with det
 
 Repository topics: jev, api-compatibility, api-governance, breaking-changes, code-quality, contract-testing, github-action, github-actions
 
-### jev-reader
-
-[Project \(en\)](https://awesomejev.cc/projects/pulkitxm/jev-reader) · [Project \(zh\)](https://awesomejev.cc/zh/projects/pulkitxm/jev-reader) · [Project \(ja\)](https://awesomejev.cc/ja/projects/pulkitxm/jev-reader)
-
-[Repository](https://github.com/pulkitxm/jev-reader) · applications · JavaScript · 5 snapshot stars
-
-Author description: Browser extension that explains difficult words with simple meanings and examples, powered by Jev.
-
-Repository topics: jev, javascript
-
 ### jev-router
 
 [Project \(en\)](https://awesomejev.cc/projects/xafold/jev-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/xafold/jev-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/xafold/jev-router)
@@ -4900,16 +4980,6 @@ Repository topics: jev, javascript
 Author description: jev-router: automatic model and effort switching for Claude Code
 
 Repository topics: jev, rust
-
-### jev-search
-
-[Project \(en\)](https://awesomejev.cc/projects/savka777/jev-search) · [Project \(zh\)](https://awesomejev.cc/zh/projects/savka777/jev-search) · [Project \(ja\)](https://awesomejev.cc/ja/projects/savka777/jev-search)
-
-[Repository](https://github.com/savka777/jev-search) · agents · TypeScript · 5 snapshot stars
-
-Author description: Fast deep research for the pi coding agent: reads up to 100 pages in full per round, Jev keeps only the passages that answer your questions.
-
-Repository topics: jev, deep-research, jev-ai, pi-package, web-search, typescript
 
 ### jev-skills
 
@@ -4990,16 +5060,6 @@ Repository topics: jev, go
 Author description: Pure Jev that can "type" and drive towards task completion.
 
 Repository topics: jev, browser-agent, llm-agents, playwright, typesafe, python
-
-### JevRanker
-
-[Project \(en\)](https://awesomejev.cc/projects/hgqimo/jevranker) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hgqimo/jevranker) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hgqimo/jevranker)
-
-[Repository](https://github.com/hgqimo/JevRanker) · research · Python · 5 snapshot stars
-
-Author description: Jev-style decision models as BlitzRank's compare oracle: k passages scored in one parallel forward pass, zero decoded tokens — 22x faster per match than a generative listwise LLM, at 2.9x its nDCG@10.
-
-Repository topics: jev, python
 
 ### jevtpp
 
@@ -5101,16 +5161,6 @@ Author description: Use the TypeSafe Jev decision model \(System One\) anywhere:
 
 Repository topics: jev, 9router, ai-router, bridge, claude-code, cline, cursor, decision-model
 
-### typesafe-mod
-
-[Project \(en\)](https://awesomejev.cc/projects/belazy167/typesafe-mod) · [Project \(zh\)](https://awesomejev.cc/zh/projects/belazy167/typesafe-mod) · [Project \(ja\)](https://awesomejev.cc/ja/projects/belazy167/typesafe-mod)
-
-[Repository](https://github.com/BeLazy167/typesafe-mod) · agents · TypeScript · 5 snapshot stars
-
-Author description: Claude Code mod that routes decisions to TypeSafe's Jev model: ranks installed skills per prompt, and answers the agent's own this-or-that questions when confident.
-
-Repository topics: jev, typescript
-
 ### typesafe-on-neon
 
 [Project \(en\)](https://awesomejev.cc/projects/andrelandgraf/safer-with-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/andrelandgraf/safer-with-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/andrelandgraf/safer-with-jev)
@@ -5201,16 +5251,6 @@ Author description: System 1 for your coding agent: cut token use by deciding, n
 
 Repository topics: jev, claude-code, claude-code-plugin, coding-agent, context-engineering, llm, system-1, tokens
 
-### cu-Jev
-
-[Project \(en\)](https://awesomejev.cc/projects/dtunai/cu-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dtunai/cu-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dtunai/cu-jev)
-
-[Repository](https://github.com/dtunai/cu-Jev) · alternatives · C · 4 snapshot stars
-
-Author description: cuda-Jev — a CUDA-native Jev System One decision inference engine. Jev compatible API, examples, and reproducible benchmarks.
-
-Repository topics: jev, cuda, jev-model, c
-
 ### docsignals
 
 [Project \(en\)](https://awesomejev.cc/projects/pspdfkit-labs/docsignals) · [Project \(zh\)](https://awesomejev.cc/zh/projects/pspdfkit-labs/docsignals) · [Project \(ja\)](https://awesomejev.cc/ja/projects/pspdfkit-labs/docsignals)
@@ -5260,16 +5300,6 @@ Repository topics: jev, agent, context-compaction, cordis, deepseek-harness, dsh
 Author description: Verdict-based context compaction for DeepSeek Harness — replaces lossy LLM summaries with fast keep/truncate/drop decisions from jev-latest; everything kept stays verbatim. Port of tamaratran/fast-jev-compaction.
 
 Repository topics: jev, compaction, context-management, cordis, deepseek-harness, dsh-plugin, llm, typescript
-
-### hunch
-
-[Project \(en\)](https://awesomejev.cc/projects/steven-shoemaker/hunch) · [Project \(zh\)](https://awesomejev.cc/zh/projects/steven-shoemaker/hunch) · [Project \(ja\)](https://awesomejev.cc/ja/projects/steven-shoemaker/hunch)
-
-[Repository](https://github.com/steven-shoemaker/hunch) · sdk · Python · 4 snapshot stars
-
-Author description: Ask Jev over columns of data: closed-set questions, cached and joined back.
-
-Repository topics: jev, classification, jev-ai, llm, python
 
 ### jev-agent-toolkit
 
@@ -5361,16 +5391,6 @@ Author description: Per-turn router for agent harnesses: one 350ms Jev call pick
 
 Repository topics: jev, agents, ai-agents, claude, claude-agent-sdk, cost-optimization, harness, llm-routing
 
-### jev-market-reflex
-
-[Project \(en\)](https://awesomejev.cc/projects/zzsong1023/jev-market-reflex) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zzsong1023/jev-market-reflex) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zzsong1023/jev-market-reflex)
-
-[Repository](https://github.com/zzsong1023/jev-market-reflex) · agents · TypeScript · 4 snapshot stars
-
-Author description: Fast typed AI decisions on live crypto markets using TypeSafe AI Jev.
-
-Repository topics: jev, ai-agents, bun, crypto, paper-trading, real-time, typesafe-ai, typescript
-
 ### jev-mobile
 
 [Project \(en\)](https://awesomejev.cc/projects/xinwang-nwpu/jev-mobile) · [Project \(zh\)](https://awesomejev.cc/zh/projects/xinwang-nwpu/jev-mobile) · [Project \(ja\)](https://awesomejev.cc/ja/projects/xinwang-nwpu/jev-mobile)
@@ -5390,6 +5410,16 @@ Repository topics: jev, mobile-agent, python
 Author description: Search code and text by meaning with natural-language grep, powered by Jev.
 
 Repository topics: jev, agent, grep, infrastructure, rag, semantic-search, typescript
+
+### jev-oncall
+
+[Project \(en\)](https://awesomejev.cc/projects/mingleiw/jev-oncall) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mingleiw/jev-oncall) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mingleiw/jev-oncall)
+
+[Repository](https://github.com/mingleiw/jev-oncall) · agents · HTML · 4 snapshot stars
+
+Author description: Incident triage on TypeSafe Jev — the model judges, plain code decides. Routing on probability distributions with a human-review middle band and fail-open defaults.
+
+Repository topics: jev, python
 
 ### jev-plays
 
@@ -5430,6 +5460,16 @@ Repository topics: jev, cli, context-compression, developer-tools, information-r
 Author description: Daily research monitor for standing questions: deterministic Python owns the loop, TypeSafe Jev screens sources per question, Qwen writes the notes \(pilot\)
 
 Repository topics: jev, literature-monitoring, obsidian, opentelemetry, pydantic-ai, python, qwen, research-pipeline
+
+### jev-rl
+
+[Project \(en\)](https://awesomejev.cc/projects/bring-ai/jev-rl) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bring-ai/jev-rl) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bring-ai/jev-rl)
+
+[Repository](https://github.com/Bring-AI/jev-rl) · research · Python · 4 snapshot stars
+
+Author description: JEV Reinforcement Learning: four classic games trained with JEV-powered rewards, reproducible experiments and checkpoint replays.
+
+Repository topics: jev, python
 
 ### jev-triage
 
@@ -5611,6 +5651,26 @@ Author description: Jev-style typed decisions from Qwen3.5-2B logits — one for
 
 Repository topics: fastapi, jev, logits, qwen, qwen3-5, self-hosted, system-one, transformers
 
+### reflex
+
+[Project \(en\)](https://awesomejev.cc/projects/ursuciprian/reflex) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ursuciprian/reflex) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ursuciprian/reflex)
+
+[Repository](https://github.com/ursuciprian/reflex) · agents · JavaScript · 4 snapshot stars
+
+Author description: Pre-execution risk gate for AI coding agents \(Claude Code, Codex, opencode, pi, Hermes\). Blocks or asks on risky shell commands, guards against prompt injection in what agents read, escalates to System 2 and a human queue. Optional TypeSafe Jev.
+
+Repository topics: jev, agent-security, ai-coding-agents, autonomous-agents, claude-code, claude-code-hooks, codex, codex-cli
+
+### sael
+
+[Project \(en\)](https://awesomejev.cc/projects/cipherting/sael) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cipherting/sael) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cipherting/sael)
+
+[Repository](https://github.com/cipherTing/sael) · sdk · Go · 4 snapshot stars
+
+Author description: Go client for the TypeSafe System One API \(Jev\) — the first piece of sael, a content-safety classifier for an AI request relay
+
+Repository topics: jev, go
+
 ### semantic-assert
 
 [Project \(en\)](https://awesomejev.cc/projects/mondaychen/semantic-assert) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mondaychen/semantic-assert) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mondaychen/semantic-assert)
@@ -5741,6 +5801,16 @@ Author description: Agent Skills for Codex Desktop and Claude Code, plus a Codex
 
 Repository topics: jev, agent-skills, codex, codex-desktop, codex-skills, typesafe-ai, python
 
+### awesome-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/robokrunch/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/robokrunch/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/robokrunch/awesome-jev)
+
+[Repository](https://github.com/robokrunch/awesome-jev) · directories · 3 snapshot stars
+
+Author description: A curated list of resources for Jev — TypeSafe AI's System One decision model. Maintained by RoboKrunch.
+
+Repository topics: jev, ai-agents, awesome-list, edge-ai, robotics, typesafe
+
 ### awesome-jev-apps
 
 [Project \(en\)](https://awesomejev.cc/projects/justmalhar/awesome-jev-apps) · [Project \(zh\)](https://awesomejev.cc/zh/projects/justmalhar/awesome-jev-apps) · [Project \(ja\)](https://awesomejev.cc/ja/projects/justmalhar/awesome-jev-apps)
@@ -5770,6 +5840,26 @@ Repository topics: jev, ai-agents, awesome-list, llm, system-one, typesafe, html
 Author description: Explore real-world use cases and projects built with TypeSafe AI's Jev: content moderation, AI agents, model routing, and semantic search. Curated by SeeAPI.
 
 Repository topics: jev, ai-agents, content-moderation, model-routing, semantic-search, typesafe-ai, python
+
+### awesome-system-one
+
+[Project \(en\)](https://awesomejev.cc/projects/andyrewlee/awesome-system-one) · [Project \(zh\)](https://awesomejev.cc/zh/projects/andyrewlee/awesome-system-one) · [Project \(ja\)](https://awesomejev.cc/ja/projects/andyrewlee/awesome-system-one)
+
+[Repository](https://github.com/andyrewlee/awesome-system-one) · directories · 3 snapshot stars
+
+Author description: Curated list of tools related to system one models
+
+Repository topics: jev, ai-agents, artificial-intelligence, awesome, awesome-list, calibration, computer-use, intent-classification
+
+### awesome-system1-decision-models
+
+[Project \(en\)](https://awesomejev.cc/projects/rajasekharponakala/awesome-system1-decision-models) · [Project \(zh\)](https://awesomejev.cc/zh/projects/rajasekharponakala/awesome-system1-decision-models) · [Project \(ja\)](https://awesomejev.cc/ja/projects/rajasekharponakala/awesome-system1-decision-models)
+
+[Repository](https://github.com/rajasekharponakala/awesome-system1-decision-models) · directories · JavaScript · 3 snapshot stars
+
+Author description: awesome-system1-decision-models: TypeSafe Jev ecosystem repository.
+
+Repository topics: jev, javascript
 
 ### clay-jev-people-ranker
 
@@ -5871,6 +5961,16 @@ Author description: Home Assistant integration that makes small judgment calls a
 
 Repository topics: jev, hacs, hacs-integration, home-assistant, homeassistant, jev-ai, python
 
+### henriquekieckbusch-module-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/henriquekieckbusch/henriquekieckbusch-module-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/henriquekieckbusch/henriquekieckbusch-module-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/henriquekieckbusch/henriquekieckbusch-module-jev)
+
+[Repository](https://github.com/henriquekieckbusch/henriquekieckbusch-module-jev) · sdk · PHP · 3 snapshot stars
+
+Author description: AI-powered decisions for Magento 2: Jev analyzes orders, customers, products, reviews and abandoned carts and writes the answer right in your admin.
+
+Repository topics: jev, ai, jev-ai, jev-api, magento2, magento2-module, php
+
 ### hermes-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/dogmatiic/hermes-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/dogmatiic/hermes-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/dogmatiic/hermes-jev)
@@ -5961,6 +6061,16 @@ Author description: Benchmarking Jev \(Typesafe.ai\) against a strong LLM on the
 
 Repository topics: jev, python
 
+### jev-agent-hooks
+
+[Project \(en\)](https://awesomejev.cc/projects/onlyjq04/jev-agent-hooks) · [Project \(zh\)](https://awesomejev.cc/zh/projects/onlyjq04/jev-agent-hooks) · [Project \(ja\)](https://awesomejev.cc/ja/projects/onlyjq04/jev-agent-hooks)
+
+[Repository](https://github.com/onlyjq04/jev-agent-hooks) · agents · JavaScript · 3 snapshot stars
+
+Author description: TypeSafe Jev hooks for Claude Code, Codex and pi: per-turn skill suggestion and subagent model routing
+
+Repository topics: jev, javascript
+
 ### jev-android-super
 
 [Project \(en\)](https://awesomejev.cc/projects/someshsampat2/jev-android-super) · [Project \(zh\)](https://awesomejev.cc/zh/projects/someshsampat2/jev-android-super) · [Project \(ja\)](https://awesomejev.cc/ja/projects/someshsampat2/jev-android-super)
@@ -5970,6 +6080,16 @@ Repository topics: jev, python
 Author description: jev-android-super: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, kotlin
+
+### jev-automation
+
+[Project \(en\)](https://awesomejev.cc/projects/yatharth1706/jev-automation) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yatharth1706/jev-automation) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yatharth1706/jev-automation)
+
+[Repository](https://github.com/yatharth1706/jev-automation) · browser · TypeScript · 3 snapshot stars
+
+Author description: Trying automation on web browser via jev from typesafe
+
+Repository topics: jev, typescript
 
 ### jev-behavior-study
 
@@ -6051,6 +6171,16 @@ Author description: Jev \(TypeSafe\) exploratory thread: claim audit, live demos
 
 Repository topics: jev, python
 
+### jev-factorio-agent
+
+[Project \(en\)](https://awesomejev.cc/projects/completedottech/jev-factorio-agent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/completedottech/jev-factorio-agent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/completedottech/jev-factorio-agent)
+
+[Repository](https://github.com/CompleteDotTech/jev-factorio-agent) · agents · Python · 3 snapshot stars
+
+Author description: Jev picks what, code owns how - a System One Factorio agent driven by TypeSafe's Jev on FLE
+
+Repository topics: jev, python
+
 ### jev-flash-router
 
 [Project \(en\)](https://awesomejev.cc/projects/ravinder82/jev-flash-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ravinder82/jev-flash-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ravinder82/jev-flash-router)
@@ -6081,6 +6211,16 @@ Author description: Not every coding task needs your best model. Experimental Je
 
 Repository topics: jev, agentic-ai, ai-agents, ai-coding-assistant, ai-engineering, anthropic, claude, claude-code
 
+### jev-go-sdk
+
+[Project \(en\)](https://awesomejev.cc/projects/ajayk/jev-go-sdk) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ajayk/jev-go-sdk) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ajayk/jev-go-sdk)
+
+[Repository](https://github.com/ajayk/jev-go-sdk) · sdk · Go · 3 snapshot stars
+
+Author description: Dependency-free Go client for TypeSafe AI's System One API and the Jev model
+
+Repository topics: jev, go, golang, sdk, system-one, typesafe
+
 ### jev-guard
 
 [Project \(en\)](https://awesomejev.cc/projects/clemensschartmueller/jev-guard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/clemensschartmueller/jev-guard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/clemensschartmueller/jev-guard)
@@ -6100,6 +6240,16 @@ Repository topics: jev, go
 Author description: Comparing LLM-as-judge vs TypeSafe Jev for agent guardrails: same rules, same agent, measured on cost, latency, calibration and coverage.
 
 Repository topics: jev, python
+
+### jev-mcp
+
+[Project \(en\)](https://awesomejev.cc/projects/codaaiteam/jev-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/codaaiteam/jev-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/codaaiteam/jev-mcp)
+
+[Repository](https://github.com/codaaiteam/jev-mcp) · sdk · JavaScript · 3 snapshot stars
+
+Author description: MCP server for Jev \(TypeSafe AI's System One model\) — give any agent typed, calibrated decisions: classify, score, check, gate risky tool calls. Try free: jevtypesafeai.com
+
+Repository topics: jev, ai-agents, claude-code, llm, mcp, model-context-protocol, system-one, typesafe-ai
 
 ### jev-mcp
 
@@ -6171,16 +6321,6 @@ Author description: TypeSafe's Jev model plays NetHack 5.0: code lists the legal
 
 Repository topics: jev, ai-agent, game-ai, hardfought, nethack, python, roguelike, typesafe
 
-### jev-oncall
-
-[Project \(en\)](https://awesomejev.cc/projects/mingleiw/jev-oncall) · [Project \(zh\)](https://awesomejev.cc/zh/projects/mingleiw/jev-oncall) · [Project \(ja\)](https://awesomejev.cc/ja/projects/mingleiw/jev-oncall)
-
-[Repository](https://github.com/mingleiw/jev-oncall) · agents · HTML · 3 snapshot stars
-
-Author description: Incident triage on TypeSafe Jev — the model judges, plain code decides. Routing on probability distributions with a human-review middle band and fail-open defaults.
-
-Repository topics: jev, python
-
 ### jev-physical-ai
 
 [Project \(en\)](https://awesomejev.cc/projects/robokrunch/jev-physical-ai) · [Project \(zh\)](https://awesomejev.cc/zh/projects/robokrunch/jev-physical-ai) · [Project \(ja\)](https://awesomejev.cc/ja/projects/robokrunch/jev-physical-ai)
@@ -6190,6 +6330,16 @@ Repository topics: jev, python
 Author description: Putting TypeSafe's Jev to work on robots, fleets, and edge hardware — real measured numbers, honestly caveated.
 
 Repository topics: jev, benchmark, edge-ai, physical-ai, robotics, typesafe, python
+
+### jev-rag-benchmark
+
+[Project \(en\)](https://awesomejev.cc/projects/emretheus/jev-rag-benchmark) · [Project \(zh\)](https://awesomejev.cc/zh/projects/emretheus/jev-rag-benchmark) · [Project \(ja\)](https://awesomejev.cc/ja/projects/emretheus/jev-rag-benchmark)
+
+[Repository](https://github.com/emretheus/jev-rag-benchmark) · research · Python · 3 snapshot stars
+
+Author description: Free English RAG benchmark for TypeSafe Jev 1.13 — frozen candidate pools, calibration, paired bootstrap CIs, $0 runs. Compared with OpenJev and NVIDIA cross-encoders.
+
+Repository topics: jev, benchmark, calibration, information-retrieval, llm-evaluation, nvidia, openjev, rag
 
 ### jev-relevance
 
@@ -6220,16 +6370,6 @@ Repository topics: jev, javascript
 Author description: Configurable GitHub submission review and PR classification with TypeSafe Jev. No text-generation model.
 
 Repository topics: jev, automation, awesome-list, classification, github-action, pull-request, typesafe, javascript
-
-### jev-rl
-
-[Project \(en\)](https://awesomejev.cc/projects/bring-ai/jev-rl) · [Project \(zh\)](https://awesomejev.cc/zh/projects/bring-ai/jev-rl) · [Project \(ja\)](https://awesomejev.cc/ja/projects/bring-ai/jev-rl)
-
-[Repository](https://github.com/Bring-AI/jev-rl) · research · Python · 3 snapshot stars
-
-Author description: JEV Reinforcement Learning: four classic games trained with JEV-powered rewards, reproducible experiments and checkpoint replays.
-
-Repository topics: jev, python
 
 ### jev-route
 
@@ -6361,6 +6501,16 @@ Author description: jev-trading: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, trading, typescript
 
+### jev-typesafe-real-financial-use-cases
+
+[Project \(en\)](https://awesomejev.cc/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/islambaraka90/jev-typesafe-real-financial-use-cases)
+
+[Repository](https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases) · research · JavaScript · 3 snapshot stars
+
+Author description: Fifty real-world financial use cases for TypeSafe's Jev model: typed, structured LLM answers over ledgers, fraud, portfolios, trades and filings, each graded against data where the right answer is known.
+
+Repository topics: jev, ai-agents, backtesting, financial-data, fintech, javascript, llm, llm-evaluation
+
 ### jev-voice-computer-use
 
 [Project \(en\)](https://awesomejev.cc/projects/ayushmaniar/jev-voice-computer-use) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ayushmaniar/jev-voice-computer-use) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ayushmaniar/jev-voice-computer-use)
@@ -6380,6 +6530,16 @@ Repository topics: jev, accessibility, computer-use, hands-free, speech-to-text,
 Author description: Telegram channel X-ray: Jev judges a year of posts, you get a card. One Cloudflare Worker.
 
 Repository topics: jev, cloudflare-workers, content-analysis, d1, openrouter, telegram, telegram-channel, typesafe
+
+### jev-writer
+
+[Project \(en\)](https://awesomejev.cc/projects/kaos599/jev-writer) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kaos599/jev-writer) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kaos599/jev-writer)
+
+[Repository](https://github.com/Kaos599/jev-writer) · research · JavaScript · 3 snapshot stars
+
+Author description: Find out which qualities of your writing actually predict engagement. Rates every post you have published against a pre-registered rubric using Jev's calibrated judgments, then tests those ratings against your real engagement numbers. Refuses to report findings your sample cannot support.
+
+Repository topics: jev, agent-skills, ai-gateway, calibrated-probabilities, claude-code, claude-skill, content-analytics, creator-tools
 
 ### jev2ui
 
@@ -6490,6 +6650,16 @@ Repository topics: jev, php
 Author description: Prove that your tests actually test something. Powered by Jev and your own API Key.
 
 Repository topics: jev, typescript
+
+### LinguaTrace
+
+[Project \(en\)](https://awesomejev.cc/projects/husdev/linguatrace) · [Project \(zh\)](https://awesomejev.cc/zh/projects/husdev/linguatrace) · [Project \(ja\)](https://awesomejev.cc/ja/projects/husdev/linguatrace)
+
+[Repository](https://github.com/HusDev/LinguaTrace) · applications · TypeScript · 3 snapshot stars
+
+Author description: The lesson notebook that writes itself. A live tutoring lesson becomes structured notes and a personalised Lesson Pack: Jev judges every turn, Gemini Live transcribes each speaker, and the tutor stays a person.
+
+Repository topics: jev, edtech, gemini-live, language-learning, nextjs, speech-to-text, sqlite, tldraw
 
 ### llm-schema-lite
 
@@ -6621,16 +6791,6 @@ Author description: A Demo of using JEV to classify various attributes of a book
 
 Repository topics: jev, attribution, character-modeling, classification, narratology, reader, sentiment-analysis, typescript
 
-### reflex
-
-[Project \(en\)](https://awesomejev.cc/projects/ursuciprian/reflex) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ursuciprian/reflex) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ursuciprian/reflex)
-
-[Repository](https://github.com/ursuciprian/reflex) · agents · JavaScript · 3 snapshot stars
-
-Author description: Pre-execution risk gate for AI coding agents \(Claude Code, Codex, opencode, pi, Hermes\). Blocks or asks on risky shell commands, guards against prompt injection in what agents read, escalates to System 2 and a human queue. Optional TypeSafe Jev.
-
-Repository topics: jev, agent-security, ai-coding-agents, autonomous-agents, claude-code, claude-code-hooks, codex, codex-cli
-
 ### risk-analysis-server
 
 [Project \(en\)](https://awesomejev.cc/projects/youdotcom-oss/risk-analysis-server) · [Project \(zh\)](https://awesomejev.cc/zh/projects/youdotcom-oss/risk-analysis-server) · [Project \(ja\)](https://awesomejev.cc/ja/projects/youdotcom-oss/risk-analysis-server)
@@ -6651,16 +6811,6 @@ Author description: Self-hosted gateway for LLMs and decision models. Claude Cod
 
 Repository topics: jev, ai-gateway, anthropic, claude-code, codex, coding-agents, context-pruning, decision-models
 
-### sael
-
-[Project \(en\)](https://awesomejev.cc/projects/cipherting/sael) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cipherting/sael) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cipherting/sael)
-
-[Repository](https://github.com/cipherTing/sael) · sdk · Go · 3 snapshot stars
-
-Author description: Go client for the TypeSafe System One API \(Jev\) — the first piece of sael, a content-safety classifier for an AI request relay
-
-Repository topics: jev, go
-
 ### Shirakawa
 
 [Project \(en\)](https://awesomejev.cc/projects/midorisawa/shirakawa) · [Project \(zh\)](https://awesomejev.cc/zh/projects/midorisawa/shirakawa) · [Project \(ja\)](https://awesomejev.cc/ja/projects/midorisawa/shirakawa)
@@ -6680,6 +6830,16 @@ Repository topics: jev, javascript
 Author description: We ask Jev, TypeSafe AI's System One model, whether AI should kill us all. Every ten minutes. Using the actual headlines.
 
 Repository topics: jev, javascript
+
+### slopmop
+
+[Project \(en\)](https://awesomejev.cc/projects/tomfrazier/slopmop) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tomfrazier/slopmop) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tomfrazier/slopmop)
+
+[Repository](https://github.com/tomfrazier/slopmop) · applications · TypeScript · 3 snapshot stars
+
+Author description: Mop the slop out of your LinkedIn feed. Not an AI detector: a bad-writing detector. Chrome extension + Vercel server, powered by Jev from Typesafe AI. MIT.
+
+Repository topics: jev, typescript
 
 ### SystemOneSharp
 
@@ -6791,6 +6951,16 @@ Author description: CLI and agent skill for TypeSafe System One \(Jev\): typed C
 
 Repository topics: jev, python
 
+### typesafe-computer-use-windows
+
+[Project \(en\)](https://awesomejev.cc/projects/kofanlabs/typesafe-computer-use-windows) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kofanlabs/typesafe-computer-use-windows) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kofanlabs/typesafe-computer-use-windows)
+
+[Repository](https://github.com/kofanlabs/typesafe-computer-use-windows) · agents · Python · 3 snapshot stars
+
+Author description: Windows port of typesafe-computer-use with Jev decisions, local OCR/UIA, and MCP host integration
+
+Repository topics: jev, automation, computer-use, mcp, ocr, typesafe, windows, python
+
 ### typesafe-go
 
 [Project \(en\)](https://awesomejev.cc/projects/zhirschtritt/typesafe-go) · [Project \(zh\)](https://awesomejev.cc/zh/projects/zhirschtritt/typesafe-go) · [Project \(ja\)](https://awesomejev.cc/ja/projects/zhirschtritt/typesafe-go)
@@ -6871,16 +7041,6 @@ Author description: Markdown to Sanity documents, with a classifier instead of a
 
 Repository topics: jev, classifier, experiment, markdown, portable-text, sanity, typesafe, typescript
 
-### wakegate
-
-[Project \(en\)](https://awesomejev.cc/projects/shitianfang/wakegate) · [Project \(zh\)](https://awesomejev.cc/zh/projects/shitianfang/wakegate) · [Project \(ja\)](https://awesomejev.cc/ja/projects/shitianfang/wakegate)
-
-[Repository](https://github.com/shitianfang/wakegate) · agents · TypeScript · 3 snapshot stars
-
-Author description: Ask Jev whether a sleeping agent's wakeup is worth a full LLM turn before you resume it. A fail-open wake gate for long-running agents on Workers, Durable Objects and Node.
-
-Repository topics: jev, ai-agents, ai-sdk, cloudflare-durable-objects, cloudflare-workers, long-running-agents, typesafe, typesafe-ai
-
 ### zio-evals
 
 [Project \(en\)](https://awesomejev.cc/projects/jamesward/zio-evals) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jamesward/zio-evals) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jamesward/zio-evals)
@@ -6920,6 +7080,16 @@ Repository topics: jev, adk, adk-go, ai-agents, ai-tools, golang, typesafe-ai, g
 Author description: using the new model JEV to play the game tetris
 
 Repository topics: jev, html
+
+### agentic-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/fbddcz/agentic-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fbddcz/agentic-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fbddcz/agentic-jev)
+
+[Repository](https://github.com/FBddcz/agentic-jev) · research · TypeScript · 2 snapshot stars
+
+Author description: ⚡ AgenticJev · 拾意 — 推荐智能体实验室。搜索 × 推荐 × 广告，Jev / MiniCPM / GPT / Claude 多模型决策与生成式组合对照。
+
+Repository topics: jev, agentic-ai, generative-recommendation, minicpm, recommender-system, typescript
 
 ### ailerix
 
@@ -6973,13 +7143,13 @@ Repository topics: jev, ai-agents, awesome, awesome-list, decision-models, kev, 
 
 ### awesome-jev
 
-[Project \(en\)](https://awesomejev.cc/projects/robokrunch/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/robokrunch/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/robokrunch/awesome-jev)
+[Project \(en\)](https://awesomejev.cc/projects/majiayu000/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/majiayu000/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/majiayu000/awesome-jev)
 
-[Repository](https://github.com/robokrunch/awesome-jev) · directories · 2 snapshot stars
+[Repository](https://github.com/majiayu000/awesome-jev) · directories · Python · 2 snapshot stars
 
-Author description: A curated list of resources for Jev — TypeSafe AI's System One decision model. Maintained by RoboKrunch.
+Author description: A curated list of Jev / TypeSafe System One projects, SDKs, tutorials, and evaluations. English and 简体中文.
 
-Repository topics: jev, ai-agents, awesome-list, edge-ai, robotics, typesafe
+Repository topics: jev, ai-agents, awesome, awesome-list, browser-automation, model-routing, system-one, typesafe-ai
 
 ### awesome-jev
 
@@ -6990,26 +7160,6 @@ Repository topics: jev, ai-agents, awesome-list, edge-ai, robotics, typesafe
 Author description: Unofficial list of insanely useful TypeSafe AI Jev / System One projects
 
 Repository topics: jev, python
-
-### awesome-system-one
-
-[Project \(en\)](https://awesomejev.cc/projects/andyrewlee/awesome-system-one) · [Project \(zh\)](https://awesomejev.cc/zh/projects/andyrewlee/awesome-system-one) · [Project \(ja\)](https://awesomejev.cc/ja/projects/andyrewlee/awesome-system-one)
-
-[Repository](https://github.com/andyrewlee/awesome-system-one) · directories · 2 snapshot stars
-
-Author description: Curated list of tools related to system one models
-
-Repository topics: jev, ai-agents, artificial-intelligence, awesome, awesome-list, calibration, computer-use, intent-classification
-
-### awesome-system1-decision-models
-
-[Project \(en\)](https://awesomejev.cc/projects/rajasekharponakala/awesome-system1-decision-models) · [Project \(zh\)](https://awesomejev.cc/zh/projects/rajasekharponakala/awesome-system1-decision-models) · [Project \(ja\)](https://awesomejev.cc/ja/projects/rajasekharponakala/awesome-system1-decision-models)
-
-[Repository](https://github.com/rajasekharponakala/awesome-system1-decision-models) · directories · JavaScript · 2 snapshot stars
-
-Author description: awesome-system1-decision-models: TypeSafe Jev ecosystem repository.
-
-Repository topics: jev, javascript
 
 ### barrunto
 
@@ -7121,6 +7271,16 @@ Author description: F´ flight software → CCSDS/Yamcs → Open MCT, with jev \
 
 Repository topics: jev, ccsds, claude, fprime, openmct, yamcs, python
 
+### dsh-jev-advisor
+
+[Project \(en\)](https://awesomejev.cc/projects/gordan-code/dsh-jev-advisor) · [Project \(zh\)](https://awesomejev.cc/zh/projects/gordan-code/dsh-jev-advisor) · [Project \(ja\)](https://awesomejev.cc/ja/projects/gordan-code/dsh-jev-advisor)
+
+[Repository](https://github.com/gordan-code/dsh-jev-advisor) · developer · JavaScript · 2 snapshot stars
+
+Author description: Jev \(TypeSafe System One\) gives the human a second opinion, not the agent. When DSH's model asks you a multiple-choice question, dsh-jev builds a structured Jev request and floats the recommendation, probability spread and confidence beside the options - one click to adopt. API key lives in Settings. No prompt changes.
+
+Repository topics: jev, agent-harness, ai-agent, cordis, dsh, dsh-desktop, dsh-plugin, dsh-plugin-market
+
 ### Fast-Jev-Agents
 
 [Project \(en\)](https://awesomejev.cc/projects/satiricalguru/fast-jev-agents) · [Project \(zh\)](https://awesomejev.cc/zh/projects/satiricalguru/fast-jev-agents) · [Project \(ja\)](https://awesomejev.cc/ja/projects/satiricalguru/fast-jev-agents)
@@ -7191,16 +7351,6 @@ Author description: Jev \(TypeSafe AI\) PoC through Game of Thrones
 
 Repository topics: jev, typescript
 
-### henriquekieckbusch-module-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/henriquekieckbusch/henriquekieckbusch-module-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/henriquekieckbusch/henriquekieckbusch-module-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/henriquekieckbusch/henriquekieckbusch-module-jev)
-
-[Repository](https://github.com/henriquekieckbusch/henriquekieckbusch-module-jev) · sdk · PHP · 2 snapshot stars
-
-Author description: AI-powered decisions for Magento 2: Jev analyzes orders, customers, products, reviews and abandoned carts and writes the answer right in your admin.
-
-Repository topics: jev, ai, jev-ai, jev-api, magento2, magento2-module, php
-
 ### home-assistant-typesafe
 
 [Project \(en\)](https://awesomejev.cc/projects/allenporter/home-assistant-typesafe) · [Project \(zh\)](https://awesomejev.cc/zh/projects/allenporter/home-assistant-typesafe) · [Project \(ja\)](https://awesomejev.cc/ja/projects/allenporter/home-assistant-typesafe)
@@ -7261,16 +7411,6 @@ Author description: Community index of tools, models, and real-world use cases b
 
 Repository topics: jev, awesome, jev-ai, typesafe-ai, astro
 
-### jev-agent-hooks
-
-[Project \(en\)](https://awesomejev.cc/projects/onlyjq04/jev-agent-hooks) · [Project \(zh\)](https://awesomejev.cc/zh/projects/onlyjq04/jev-agent-hooks) · [Project \(ja\)](https://awesomejev.cc/ja/projects/onlyjq04/jev-agent-hooks)
-
-[Repository](https://github.com/onlyjq04/jev-agent-hooks) · agents · JavaScript · 2 snapshot stars
-
-Author description: TypeSafe Jev hooks for Claude Code, Codex and pi: per-turn skill suggestion and subagent model routing
-
-Repository topics: jev, javascript
-
 ### jev-agent-kit
 
 [Project \(en\)](https://awesomejev.cc/projects/walidboulanouar/jev-agent-kit) · [Project \(zh\)](https://awesomejev.cc/zh/projects/walidboulanouar/jev-agent-kit) · [Project \(ja\)](https://awesomejev.cc/ja/projects/walidboulanouar/jev-agent-kit)
@@ -7301,16 +7441,6 @@ Author description: Low-latency audio censorship POC using Jev typed decisions a
 
 Repository topics: jev, typescript
 
-### jev-automation
-
-[Project \(en\)](https://awesomejev.cc/projects/yatharth1706/jev-automation) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yatharth1706/jev-automation) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yatharth1706/jev-automation)
-
-[Repository](https://github.com/yatharth1706/jev-automation) · browser · TypeScript · 2 snapshot stars
-
-Author description: Trying automation on web browser via jev from typesafe
-
-Repository topics: jev, typescript
-
 ### jev-awesome-skills
 
 [Project \(en\)](https://awesomejev.cc/projects/aitofy-dev/jev-awesome-skills) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aitofy-dev/jev-awesome-skills) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aitofy-dev/jev-awesome-skills)
@@ -7320,6 +7450,16 @@ Repository topics: jev, typescript
 Author description: Open-source Jev skills for Claude Code, Codex, Cursor, and Grok. TypeSafe System One: choice, noul, score. Proceed, ask, or stop.
 
 Repository topics: jev, agent-skills, awesome-list, claude, claude-code, codex, cursor, grok
+
+### jev-bot
+
+[Project \(en\)](https://awesomejev.cc/projects/stoopid-computers/jev-bot) · [Project \(zh\)](https://awesomejev.cc/zh/projects/stoopid-computers/jev-bot) · [Project \(ja\)](https://awesomejev.cc/ja/projects/stoopid-computers/jev-bot)
+
+[Repository](https://github.com/stoopid-computers/jev-bot) · agents · TypeScript · 2 snapshot stars
+
+Author description: Computer Use Agent developed with Jev
+
+Repository topics: jev, agentic-ai, agentic-engineering, agentic-workflow, ai, ai-agents, ai-automation, ai-coding
 
 ### jev-bridge
 
@@ -7461,16 +7601,6 @@ Author description: AI as a PowerShell decision primitive: describe what you nee
 
 Repository topics: jev, powershell
 
-### jev-factorio-agent
-
-[Project \(en\)](https://awesomejev.cc/projects/completedottech/jev-factorio-agent) · [Project \(zh\)](https://awesomejev.cc/zh/projects/completedottech/jev-factorio-agent) · [Project \(ja\)](https://awesomejev.cc/ja/projects/completedottech/jev-factorio-agent)
-
-[Repository](https://github.com/CompleteDotTech/jev-factorio-agent) · agents · Python · 2 snapshot stars
-
-Author description: Jev picks what, code owns how - a System One Factorio agent driven by TypeSafe's Jev on FLE
-
-Repository topics: jev, python
-
 ### jev-fill-pdf
 
 [Project \(en\)](https://awesomejev.cc/projects/takumi-golf/jev-fill-pdf) · [Project \(zh\)](https://awesomejev.cc/zh/projects/takumi-golf/jev-fill-pdf) · [Project \(ja\)](https://awesomejev.cc/ja/projects/takumi-golf/jev-fill-pdf)
@@ -7541,15 +7671,15 @@ Author description: jev-langgraph-ticket-app: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, python
 
-### jev-mcp
+### jev-logtriage
 
-[Project \(en\)](https://awesomejev.cc/projects/codaaiteam/jev-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/codaaiteam/jev-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/codaaiteam/jev-mcp)
+[Project \(en\)](https://awesomejev.cc/projects/jyatesdotdev/jev-logtriage) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jyatesdotdev/jev-logtriage) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jyatesdotdev/jev-logtriage)
 
-[Repository](https://github.com/codaaiteam/jev-mcp) · sdk · JavaScript · 2 snapshot stars
+[Repository](https://github.com/jyatesdotdev/jev-logtriage) · developer · Python · 2 snapshot stars
 
-Author description: MCP server for Jev \(TypeSafe AI's System One model\) — give any agent typed, calibrated decisions: classify, score, check, gate risky tool calls. Try free: jevtypesafeai.com
+Author description: Jev decides whether a batch of logs is worth acting on. Typed questions, confidence gates, nothing executed.
 
-Repository topics: jev, ai-agents, claude-code, llm, mcp, model-context-protocol, system-one, typesafe-ai
+Repository topics: jev, grafana, log-analysis, logs, loki, observability, on-call, python
 
 ### jev-mcp
 
@@ -7570,6 +7700,16 @@ Repository topics: jev, ai-agents, claude-code, codex, decisions, mcp, mcp-serve
 Author description: MCP server wrapping TypeSafe's Jev System One models — typed noul/choice/score judgments for AI agents
 
 Repository topics: jev, agents, ai, claude-code, mcp, mcp-server, opencode, structured-output
+
+### jev-msw
+
+[Project \(en\)](https://awesomejev.cc/projects/royalpinto007/jev-msw) · [Project \(zh\)](https://awesomejev.cc/zh/projects/royalpinto007/jev-msw) · [Project \(ja\)](https://awesomejev.cc/ja/projects/royalpinto007/jev-msw)
+
+[Repository](https://github.com/royalpinto007/jev-msw) · developer · TypeScript · 2 snapshot stars
+
+Author description: Mock Jev API decisions with MSW for deterministic tests without real API calls or credits.
+
+Repository topics: jev, api-mocking, jest, mock-service-worker, msw, open-source, testing, typesafe-ai
 
 ### jev-music-theory-1
 
@@ -7640,16 +7780,6 @@ Repository topics: jev, typescript
 Author description: Jev-augmented Playwright MCP proxy — page-state triage, prompt-injection shielding, goal-based snapshot pruning, risky-action gating. Drop-in wrapper around @playwright/mcp for any coding agent.
 
 Repository topics: jev, typescript
-
-### jev-rag-benchmark
-
-[Project \(en\)](https://awesomejev.cc/projects/emretheus/jev-rag-benchmark) · [Project \(zh\)](https://awesomejev.cc/zh/projects/emretheus/jev-rag-benchmark) · [Project \(ja\)](https://awesomejev.cc/ja/projects/emretheus/jev-rag-benchmark)
-
-[Repository](https://github.com/emretheus/jev-rag-benchmark) · research · Python · 2 snapshot stars
-
-Author description: Free English RAG benchmark for TypeSafe Jev 1.13 — frozen candidate pools, calibration, paired bootstrap CIs, $0 runs. Compared with OpenJev and NVIDIA cross-encoders.
-
-Repository topics: jev, benchmark, calibration, information-retrieval, llm-evaluation, nvidia, openjev, rag
 
 ### jev-research
 
@@ -7810,16 +7940,6 @@ Repository topics: jev, python, demo
 Author description: Upwork job classification example
 
 Repository topics: jev, python
-
-### jev-writer
-
-[Project \(en\)](https://awesomejev.cc/projects/kaos599/jev-writer) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kaos599/jev-writer) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kaos599/jev-writer)
-
-[Repository](https://github.com/Kaos599/jev-writer) · research · JavaScript · 2 snapshot stars
-
-Author description: Find out which qualities of your writing actually predict engagement. Rates every post you have published against a pre-registered rubric using Jev's calibrated judgments, then tests those ratings against your real engagement numbers. Refuses to report findings your sample cannot support.
-
-Repository topics: jev, agent-skills, ai-gateway, calibrated-probabilities, claude-code, claude-skill, content-analytics, creator-tools
 
 ### jev-x-blocker
 
@@ -8031,15 +8151,15 @@ Author description: Experiment to trick Typesafe’s Jev, aka “the language mo
 
 Repository topics: jev, ai, bot, chatbot, chatbots, llm, typesafe, javascript
 
-### LinguaTrace
+### lightjev
 
-[Project \(en\)](https://awesomejev.cc/projects/husdev/linguatrace) · [Project \(zh\)](https://awesomejev.cc/zh/projects/husdev/linguatrace) · [Project \(ja\)](https://awesomejev.cc/ja/projects/husdev/linguatrace)
+[Project \(en\)](https://awesomejev.cc/projects/ejokey/lightjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ejokey/lightjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ejokey/lightjev)
 
-[Repository](https://github.com/HusDev/LinguaTrace) · applications · TypeScript · 2 snapshot stars
+[Repository](https://github.com/Ejokey/lightjev) · agents · Python · 2 snapshot stars
 
-Author description: The lesson notebook that writes itself. A live tutoring lesson becomes structured notes and a personalised Lesson Pack: Jev judges every turn, Gemini Live transcribes each speaker, and the tutor stays a person.
+Author description: Read pages with Lightpanda, decide where to go with Jev — a self-steering crawler for tiny budgets
 
-Repository topics: jev, edtech, gemini-live, language-learning, nextjs, speech-to-text, sqlite, tldraw
+Repository topics: jev, agents, crawler, lightpanda, python, typesafe, web-scraping
 
 ### lmjtfy
 
@@ -8271,16 +8391,6 @@ Author description: Pick the right agent skill for every prompt with TypeSafe's 
 
 Repository topics: jev, typescript
 
-### slopmop
-
-[Project \(en\)](https://awesomejev.cc/projects/tomfrazier/slopmop) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tomfrazier/slopmop) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tomfrazier/slopmop)
-
-[Repository](https://github.com/tomfrazier/slopmop) · applications · TypeScript · 2 snapshot stars
-
-Author description: Mop the slop out of your LinkedIn feed. Not an AI detector: a bad-writing detector. Chrome extension + Vercel server, powered by Jev from Typesafe AI. MIT.
-
-Repository topics: jev, typescript
-
 ### snake-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/siroccomask/snake-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/siroccomask/snake-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/siroccomask/snake-jev)
@@ -8421,16 +8531,6 @@ Author description: Claude Code kit for TypeSafe \(Jev\): agents, skill, client,
 
 Repository topics: jev, ai-agents, claude-code, decision-engine, llm-tooling, typesafe, python
 
-### typesafe-computer-use-windows
-
-[Project \(en\)](https://awesomejev.cc/projects/kofanlabs/typesafe-computer-use-windows) · [Project \(zh\)](https://awesomejev.cc/zh/projects/kofanlabs/typesafe-computer-use-windows) · [Project \(ja\)](https://awesomejev.cc/ja/projects/kofanlabs/typesafe-computer-use-windows)
-
-[Repository](https://github.com/kofanlabs/typesafe-computer-use-windows) · agents · Python · 2 snapshot stars
-
-Author description: Windows port of typesafe-computer-use with Jev decisions, local OCR/UIA, and MCP host integration
-
-Repository topics: jev, automation, computer-use, mcp, ocr, typesafe, windows, python
-
 ### typesafe-migration-guard
 
 [Project \(en\)](https://awesomejev.cc/projects/opaielsheikh/typesafe-migration-guard) · [Project \(zh\)](https://awesomejev.cc/zh/projects/opaielsheikh/typesafe-migration-guard) · [Project \(ja\)](https://awesomejev.cc/ja/projects/opaielsheikh/typesafe-migration-guard)
@@ -8541,16 +8641,6 @@ Author description: agent-tool-router: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, typescript
 
-### agentic-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/fbddcz/agentic-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/fbddcz/agentic-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/fbddcz/agentic-jev)
-
-[Repository](https://github.com/FBddcz/agentic-jev) · research · TypeScript · 1 snapshot stars
-
-Author description: ⚡ AgenticJev · 拾意 — 推荐智能体实验室。搜索 × 推荐 × 广告，Jev / MiniCPM / GPT / Claude 多模型决策与生成式组合对照。
-
-Repository topics: jev, agentic-ai, generative-recommendation, minicpm, recommender-system, typescript
-
 ### ai-column-jev
 
 [Project \(en\)](https://awesomejev.cc/projects/milanterhes/ai-column-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/milanterhes/ai-column-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/milanterhes/ai-column-jev)
@@ -8611,16 +8701,6 @@ Author description: A tree housing every closed question humans or machines ask,
 
 Repository topics: jev, python
 
-### awesome-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/majiayu000/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/majiayu000/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/majiayu000/awesome-jev)
-
-[Repository](https://github.com/majiayu000/awesome-jev) · directories · Python · 1 snapshot stars
-
-Author description: A curated list of Jev / TypeSafe System One projects, SDKs, tutorials, and evaluations. English and 简体中文.
-
-Repository topics: jev, ai-agents, awesome, awesome-list, browser-automation, model-routing, system-one, typesafe-ai
-
 ### Awesome-Jev
 
 [Project \(en\)](https://awesomejev.cc/projects/youzizzz1028/awesome-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/youzizzz1028/awesome-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/youzizzz1028/awesome-jev)
@@ -8670,6 +8750,16 @@ Repository topics: jev, awesome, awesome-list, awesome-lists, chinese, llm, pyth
 Author description: Jev-powered AI agent skills for Codex and Claude Code: code review, testing, debugging, extraction and QA evidence. Open source, MIT.
 
 Repository topics: jev, agent-skills, ai-agents, claude-code, code-review, codex, debugging, developer-tools
+
+### awesome-jev-apps
+
+[Project \(en\)](https://awesomejev.cc/projects/jinghao-leon/awesome-jev-apps) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jinghao-leon/awesome-jev-apps) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jinghao-leon/awesome-jev-apps)
+
+[Repository](https://github.com/JingHao-Leon/awesome-jev-apps) · directories · Python · 1 snapshot stars
+
+Author description: Jev 优质应用与生态精选｜System One 决策模型：开源应用·SDK·平台集成·开源复刻·教程 \| curated apps &amp; SDKs for TypeSafe AI's Jev model
+
+Repository topics: jev, ai-agents, ai-routing, awesome-list, chinese, classification, llm, structured-output
 
 ### awesome-jev-essentials
 
@@ -8950,16 +9040,6 @@ Repository topics: jev, typescript, experimental, typesafe
 Author description: DeepSeek Harness plugin: per-tool-call Auto-permission review powered by TypeSafe Jev, with account usage and API-key management inline on its settings page
 
 Repository topics: jev, auto-review, code-review, deepseek-harness, dsh, guardrails, permission, plugin
-
-### dsh-jev-advisor
-
-[Project \(en\)](https://awesomejev.cc/projects/gordan-code/dsh-jev-advisor) · [Project \(zh\)](https://awesomejev.cc/zh/projects/gordan-code/dsh-jev-advisor) · [Project \(ja\)](https://awesomejev.cc/ja/projects/gordan-code/dsh-jev-advisor)
-
-[Repository](https://github.com/gordan-code/dsh-jev-advisor) · developer · JavaScript · 1 snapshot stars
-
-Author description: Jev \(TypeSafe System One\) gives the human a second opinion, not the agent. When DSH's model asks you a multiple-choice question, dsh-jev builds a structured Jev request and floats the recommendation, probability spread and confidence beside the options - one click to adopt. API key lives in Settings. No prompt changes.
-
-Repository topics: jev, agent-harness, ai-agent, cordis, dsh, dsh-desktop, dsh-plugin, dsh-plugin-market
 
 ### dsh-jev-verify
 
@@ -9405,7 +9485,7 @@ Repository topics: jev
 
 [Project \(en\)](https://awesomejev.cc/projects/jyeswak/jev_playground) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jyeswak/jev_playground) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jyeswak/jev_playground)
 
-[Repository](https://github.com/JYeswak/jev_playground) · research · Python · 1 snapshot stars
+[Repository](https://github.com/JYeswak/jev_playground) · research · HTML · 1 snapshot stars
 
 Author description: Measure what Jev can actually do before you build on it. Graded findings, ruled-out candidates, and recipes with stop-conditions. 0 promotions — on purpose.
 
@@ -9540,16 +9620,6 @@ Repository topics: jev, ai-fairness, algorithmic-bias, audit-study, benchmark, b
 Author description: Daily demo applying TypeSafe's Jev model to Spain's official gazette \(BOE\).
 
 Repository topics: jev, typescript
-
-### jev-bot
-
-[Project \(en\)](https://awesomejev.cc/projects/stoopid-computers/jev-bot) · [Project \(zh\)](https://awesomejev.cc/zh/projects/stoopid-computers/jev-bot) · [Project \(ja\)](https://awesomejev.cc/ja/projects/stoopid-computers/jev-bot)
-
-[Repository](https://github.com/stoopid-computers/jev-bot) · agents · TypeScript · 1 snapshot stars
-
-Author description: Computer Use Agent developed with Jev
-
-Repository topics: jev, agentic-ai, agentic-engineering, agentic-workflow, ai, ai-agents, ai-automation, ai-coding
 
 ### jev-bouncer
 
@@ -9731,6 +9801,16 @@ Author description: Zero-dependency System 1 decision engine, calibrated guardra
 
 Repository topics: jev, agent-guardrails, ai-agents, python, system-one, token-optimization, typesafe-ai
 
+### jev-decision-maker-at-meteora
+
+[Project \(en\)](https://awesomejev.cc/projects/cedarmuse-creator/jev-decision-maker-at-meteora) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cedarmuse-creator/jev-decision-maker-at-meteora) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cedarmuse-creator/jev-decision-maker-at-meteora)
+
+[Repository](https://github.com/cedarmuse-creator/jev-decision-maker-at-meteora) · agents · Python · 1 snapshot stars
+
+Author description: Decision Maker at Meteora - a decision agent for Meteora DLMM liquidity on Solana. Named after Jev, TypeSafe AI's System One model \(https://console.typesafe.ai/home\), which answers its typed Noul and Score questions. Ranks the live pool universe, runs live rug cards, and holds 3-5 pools under explicit hard gates and book rules.
+
+Repository topics: jev, python, system-one
+
 ### jev-decision-mcp
 
 [Project \(en\)](https://awesomejev.cc/projects/amidabuddha/jev-decision-mcp) · [Project \(zh\)](https://awesomejev.cc/zh/projects/amidabuddha/jev-decision-mcp) · [Project \(ja\)](https://awesomejev.cc/ja/projects/amidabuddha/jev-decision-mcp)
@@ -9760,6 +9840,16 @@ Repository topics: jev, rust
 Author description: RAG quality gate adapted for TypeSafe Jev - relevance filtering + document injection detection, fan-out in one call
 
 Repository topics: jev, html, demo
+
+### jev-dev-harness
+
+[Project \(en\)](https://awesomejev.cc/projects/celolopes/jev-dev-harness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/celolopes/jev-dev-harness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/celolopes/jev-dev-harness)
+
+[Repository](https://github.com/celolopes/jev-dev-harness) · developer · TypeScript · 1 snapshot stars
+
+Author description: Open-source developer harness and runtime safety toolkit for AI coding agents powered by TypeSafe AI / Jev
+
+Repository topics: jev, typescript
 
 ### jev-dingtalk
 
@@ -9881,16 +9971,6 @@ Author description: Unofficial Go SDK for TypeSafe AI's Jev API
 
 Repository topics: jev, go
 
-### jev-go-sdk
-
-[Project \(en\)](https://awesomejev.cc/projects/ajayk/jev-go-sdk) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ajayk/jev-go-sdk) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ajayk/jev-go-sdk)
-
-[Repository](https://github.com/ajayk/jev-go-sdk) · sdk · Go · 1 snapshot stars
-
-Author description: Dependency-free Go client for TypeSafe AI's System One API and the Jev model
-
-Repository topics: jev, go, golang, sdk, system-one, typesafe
-
 ### jev-graphrag
 
 [Project \(en\)](https://awesomejev.cc/projects/neo4j-field/jev-graphrag) · [Project \(zh\)](https://awesomejev.cc/zh/projects/neo4j-field/jev-graphrag) · [Project \(ja\)](https://awesomejev.cc/ja/projects/neo4j-field/jev-graphrag)
@@ -9900,16 +9980,6 @@ Repository topics: jev, go, golang, sdk, system-one, typesafe
 Author description: Small demos + use-case backlog: TypeSafe AI's Jev as a calibrated decision layer for GraphRAG pipelines on Neo4j.
 
 Repository topics: jev, python
-
-### jev-grounds
-
-[Project \(en\)](https://awesomejev.cc/projects/cadeos/jev-grounds) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cadeos/jev-grounds) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cadeos/jev-grounds)
-
-[Repository](https://github.com/cadeos/jev-grounds) · developer · JavaScript · 1 snapshot stars
-
-Author description: Chrome extension: a badge rating how well-argued an article is, via the Jev API.
-
-Repository topics: jev, javascript
 
 ### jev-guard
 
@@ -10081,6 +10151,16 @@ Author description: Configurable semantic CI checks for repository files using T
 
 Repository topics: jev, javascript
 
+### jev-llm
+
+[Project \(en\)](https://awesomejev.cc/projects/akash-kamat/jev-llm) · [Project \(zh\)](https://awesomejev.cc/zh/projects/akash-kamat/jev-llm) · [Project \(ja\)](https://awesomejev.cc/ja/projects/akash-kamat/jev-llm)
+
+[Repository](https://github.com/akash-kamat/jev-llm) · applications · JavaScript · 1 snapshot stars
+
+Author description: An LLM built without a language model — using TypeSafe Jev's non-generative AI for contextual response selection. Zero hallucination. Zero prompt injection.
+
+Repository topics: jev, javascript
+
 ### jev-local
 
 [Project \(en\)](https://awesomejev.cc/projects/tapsin/jev-local) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tapsin/jev-local) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tapsin/jev-local)
@@ -10090,16 +10170,6 @@ Repository topics: jev, javascript
 Author description: JEV-Local: System-1 decision engine for local LLMs. Mimics TypefAI JEV: structured choices only, no chatter, calibrated confidence. Works with Ollama, vLLM, llama.cpp, LM Studio.
 
 Repository topics: jev, agent, browser-automation, decision-engine, llama-cpp, llm, lm-studio, local-llm
-
-### jev-logtriage
-
-[Project \(en\)](https://awesomejev.cc/projects/jyatesdotdev/jev-logtriage) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jyatesdotdev/jev-logtriage) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jyatesdotdev/jev-logtriage)
-
-[Repository](https://github.com/jyatesdotdev/jev-logtriage) · developer · Python · 1 snapshot stars
-
-Author description: Jev decides whether a batch of logs is worth acting on. Typed questions, confidence gates, nothing executed.
-
-Repository topics: jev, grafana, log-analysis, logs, loki, observability, on-call, python
 
 ### jev-loop-detector
 
@@ -10180,16 +10250,6 @@ Repository topics: jev, typescript
 Author description: Companion code for Engineering Decision Systems with JEV \(AI Engineering Insider\). A production-style toolkit \(jevkit\) plus eleven hands-on labs, one per chapter, for building decision systems on TypeSafe's Jev System One model.
 
 Repository topics: jev, jev-ai, jev-api, jev-model, python
-
-### jev-msw
-
-[Project \(en\)](https://awesomejev.cc/projects/royalpinto007/jev-msw) · [Project \(zh\)](https://awesomejev.cc/zh/projects/royalpinto007/jev-msw) · [Project \(ja\)](https://awesomejev.cc/ja/projects/royalpinto007/jev-msw)
-
-[Repository](https://github.com/royalpinto007/jev-msw) · developer · TypeScript · 1 snapshot stars
-
-Author description: Mock Jev API decisions with MSW for deterministic tests without real API calls or credits.
-
-Repository topics: jev, api-mocking, jest, mock-service-worker, msw, open-source, testing, typesafe-ai
 
 ### jev-pi-skills
 
@@ -10340,6 +10400,16 @@ Repository topics: jev, python
 Author description: Go Jev harness for Claude Code, Codex, and Grok Build. No npx. Not an MCP server.
 
 Repository topics: jev, golang, grok, go
+
+### jev-samples
+
+[Project \(en\)](https://awesomejev.cc/projects/aarora79/jev-samples) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aarora79/jev-samples) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aarora79/jev-samples)
+
+[Repository](https://github.com/aarora79/jev-samples) · resources · 1 snapshot stars
+
+Author description: Runnable samples for Jev, TypeSafe AI's System One model. Send state and questions carrying their own answer options, then branch on the typed value that comes back.
+
+Repository topics: jev, calibration, classification, code-samples, confidence-thresholds, decision-making, examples, llm
 
 ### jev-sandbox
 
@@ -10521,6 +10591,16 @@ Author description: Pre-registered benchmark: can a 2B local model \(Gemma 4 E2B
 
 Repository topics: jev, benchmark, gemma, hallucination, mempalace, rag, searxng, small-language-models
 
+### jev-testbed
+
+[Project \(en\)](https://awesomejev.cc/projects/hulryung/jev-testbed) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hulryung/jev-testbed) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hulryung/jev-testbed)
+
+[Repository](https://github.com/hulryung/jev-testbed) · research · Python · 1 snapshot stars
+
+Author description: Jev \(TypeSafe System One\) 테스트베드 — 클라우드 API와 로컬 셀프호스팅\(jeff/GLiFormer\) 양쪽 실행 예제 및 실측 결과
+
+Repository topics: jev, python
+
 ### jev-tetris
 
 [Project \(en\)](https://awesomejev.cc/projects/machinelearning-nerd/jev-tetris) · [Project \(zh\)](https://awesomejev.cc/zh/projects/machinelearning-nerd/jev-tetris) · [Project \(ja\)](https://awesomejev.cc/ja/projects/machinelearning-nerd/jev-tetris)
@@ -10591,16 +10671,6 @@ Author description: Near-free GitHub issue triage powered by TypeSafe AI's Jev -
 
 Repository topics: jev, ai, automation, ci, classification, confidence-calibration, developer-tools, devtools
 
-### jev-typesafe-real-financial-use-cases
-
-[Project \(en\)](https://awesomejev.cc/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/islambaraka90/jev-typesafe-real-financial-use-cases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/islambaraka90/jev-typesafe-real-financial-use-cases)
-
-[Repository](https://github.com/IslamBaraka90/jev-typesafe-real-financial-use-cases) · research · JavaScript · 1 snapshot stars
-
-Author description: Fifty real-world financial use cases for TypeSafe's Jev model: typed, structured LLM answers over ledgers, fraud, portfolios, trades and filings, each graded against data where the right answer is known.
-
-Repository topics: jev, ai-agents, backtesting, financial-data, fintech, javascript, llm, llm-evaluation
-
 ### jev-typesafeai
 
 [Project \(en\)](https://awesomejev.cc/projects/vishivishvish/jev-typesafeai) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vishivishvish/jev-typesafeai) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vishivishvish/jev-typesafeai)
@@ -10630,6 +10700,16 @@ Repository topics: jev, python
 Author description: JEV-use\_cases: TypeSafe Jev ecosystem repository.
 
 Repository topics: jev, python
+
+### jev-usecases
+
+[Project \(en\)](https://awesomejev.cc/projects/vamsikrishna2421/jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vamsikrishna2421/jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vamsikrishna2421/jev-usecases)
+
+[Repository](https://github.com/vamsikrishna2421/jev-usecases) · directories · 1 snapshot stars
+
+Author description: Jev \(TypeSafe AI's System One decision model\) use-case catalog: real-world builds, cost math, design patterns, and a reality check on vendor claims.
+
+Repository topics: jev
 
 ### jev-usher
 
@@ -11110,6 +11190,16 @@ Repository topics: jev, python
 Author description: A proof of concept implementation of TypeSafe's Jev API, backed by local Laya checkpoints.
 
 Repository topics: jev, laya, python
+
+### learn-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/aaronmeis/learn-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aaronmeis/learn-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aaronmeis/learn-jev)
+
+[Repository](https://github.com/aaronmeis/learn-jev) · resources · HTML · 1 snapshot stars
+
+Author description: Learn Jev — TypeSafe System One typed decisions for software. Personal GitHub Pages reference hub \(deck, shorts, sources\). Unofficial.
+
+Repository topics: jev, learning, notebooklm, system-one, typesafe, html
 
 ### lisa
 
@@ -11721,6 +11811,16 @@ Author description: Keeps your YouTube subscriptions current: Jev judges, code s
 
 Repository topics: jev, ai-agents, llm-evals, python, sqlite, subscriptions, typesafe, youtube
 
+### tri-emails-jev
+
+[Project \(en\)](https://awesomejev.cc/projects/colindargent/tri-emails-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/colindargent/tri-emails-jev)
+
+[Repository](https://github.com/ColinDargent/tri-emails-jev) · resources · Python · 1 snapshot stars
+
+Author description: Trier sa boîte mail avec Jev \(TypeSafe\) : 4 templates prêts à l'emploi - script Python, workflow n8n, scénario Make, skill Claude Code.
+
+Repository topics: jev, python
+
 ### triagedy
 
 [Project \(en\)](https://awesomejev.cc/projects/m0rphtail/triagedy) · [Project \(zh\)](https://awesomejev.cc/zh/projects/m0rphtail/triagedy) · [Project \(ja\)](https://awesomejev.cc/ja/projects/m0rphtail/triagedy)
@@ -11760,6 +11860,16 @@ Repository topics: jev, browser-extension, chrome-extension, content-curation, o
 Author description: Typesafe AI SDK in Elixir using Req
 
 Repository topics: jev, elixir
+
+### typesafe-ai-go
+
+[Project \(en\)](https://awesomejev.cc/projects/darlinggoose/typesafe-ai-go) · [Project \(zh\)](https://awesomejev.cc/zh/projects/darlinggoose/typesafe-ai-go) · [Project \(ja\)](https://awesomejev.cc/ja/projects/darlinggoose/typesafe-ai-go)
+
+[Repository](https://github.com/DarlingGoose/typesafe-ai-go) · sdk · Go · 1 snapshot stars
+
+Author description: typesafe-ai-go: TypeSafe Jev ecosystem repository.
+
+Repository topics: jev, golang, typesafe-ai, typesafe-jev, go
 
 ### typesafe-ai-implementation-skill
 
@@ -12510,16 +12620,6 @@ Repository topics: jev, awesome, awesome-list, typesafe-ai, javascript
 Author description: Every public project built on Jev, TypeSafe AI's System One model — 5,713 indexed daily, with the ones worth your afternoon hand-read and marked.
 
 Repository topics: jev, awesome, awesome-list, system-one, typed-decisions, typesafe-ai, python
-
-### awesome-jev-apps
-
-[Project \(en\)](https://awesomejev.cc/projects/jinghao-leon/awesome-jev-apps) · [Project \(zh\)](https://awesomejev.cc/zh/projects/jinghao-leon/awesome-jev-apps) · [Project \(ja\)](https://awesomejev.cc/ja/projects/jinghao-leon/awesome-jev-apps)
-
-[Repository](https://github.com/JingHao-Leon/awesome-jev-apps) · directories · Python · 0 snapshot stars
-
-Author description: Jev 优质应用与生态精选｜System One 决策模型：开源应用·SDK·平台集成·开源复刻·教程 \| curated apps &amp; SDKs for TypeSafe AI's Jev model
-
-Repository topics: jev, ai-agents, ai-routing, awesome-list, chinese, classification, llm, structured-output
 
 ### awesome-jev-family
 
@@ -15261,16 +15361,6 @@ Author description: omp plugin: JEV \(TypeSafe System One\) picks the next codin
 
 Repository topics: jev, typescript, system-one
 
-### jev-decision-maker-at-meteora
-
-[Project \(en\)](https://awesomejev.cc/projects/cedarmuse-creator/jev-decision-maker-at-meteora) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cedarmuse-creator/jev-decision-maker-at-meteora) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cedarmuse-creator/jev-decision-maker-at-meteora)
-
-[Repository](https://github.com/cedarmuse-creator/jev-decision-maker-at-meteora) · agents · Python · 0 snapshot stars
-
-Author description: Decision Maker at Meteora - a decision agent for Meteora DLMM liquidity on Solana. Named after Jev, TypeSafe AI's System One model \(https://console.typesafe.ai/home\), which answers its typed Noul and Score questions. Ranks the live pool universe, runs live rug cards, and holds 3-5 pools under explicit hard gates and book rules.
-
-Repository topics: jev, python, system-one
-
 ### Jev-decision-plugin
 
 [Project \(en\)](https://awesomejev.cc/projects/tomtyiu/jev-decision-plugin) · [Project \(zh\)](https://awesomejev.cc/zh/projects/tomtyiu/jev-decision-plugin) · [Project \(ja\)](https://awesomejev.cc/ja/projects/tomtyiu/jev-decision-plugin)
@@ -15428,16 +15518,6 @@ Repository topics: jev, typescript
 [Repository](https://github.com/n-yokomachi/jev-dev) · research · TypeScript · 0 snapshot stars
 
 Author description: 同じ発言を jev と LLM の両方に判定させ、感情の変動値のズレと応答速度を1画面で見比べるデモ（affectus + Vercel AI Gateway）
-
-Repository topics: jev, typescript
-
-### jev-dev-harness
-
-[Project \(en\)](https://awesomejev.cc/projects/celolopes/jev-dev-harness) · [Project \(zh\)](https://awesomejev.cc/zh/projects/celolopes/jev-dev-harness) · [Project \(ja\)](https://awesomejev.cc/ja/projects/celolopes/jev-dev-harness)
-
-[Repository](https://github.com/celolopes/jev-dev-harness) · developer · TypeScript · 0 snapshot stars
-
-Author description: Open-source developer harness and runtime safety toolkit for AI coding agents powered by TypeSafe AI / Jev
 
 Repository topics: jev, typescript
 
@@ -16351,16 +16431,6 @@ Author description: An experiment with semantic code linting using Jev from Type
 
 Repository topics: jev, linter, linters, linting, typescript
 
-### jev-llm
-
-[Project \(en\)](https://awesomejev.cc/projects/akash-kamat/jev-llm) · [Project \(zh\)](https://awesomejev.cc/zh/projects/akash-kamat/jev-llm) · [Project \(ja\)](https://awesomejev.cc/ja/projects/akash-kamat/jev-llm)
-
-[Repository](https://github.com/akash-kamat/jev-llm) · applications · JavaScript · 0 snapshot stars
-
-Author description: An LLM built without a language model — using TypeSafe Jev's non-generative AI for contextual response selection. Zero hallucination. Zero prompt injection.
-
-Repository topics: jev, javascript
-
 ### jev-llm-benchmark
 
 [Project \(en\)](https://awesomejev.cc/projects/chronona/jev-llm-benchmark) · [Project \(zh\)](https://awesomejev.cc/zh/projects/chronona/jev-llm-benchmark) · [Project \(ja\)](https://awesomejev.cc/ja/projects/chronona/jev-llm-benchmark)
@@ -17231,16 +17301,6 @@ Author description: Score declared writing dimensions and cite only exact source
 
 Repository topics: jev, content-quality, explainable-ai, nodejs, open-source, text-evaluation, writing-analysis, javascript
 
-### jev-samples
-
-[Project \(en\)](https://awesomejev.cc/projects/aarora79/jev-samples) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aarora79/jev-samples) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aarora79/jev-samples)
-
-[Repository](https://github.com/aarora79/jev-samples) · resources · 0 snapshot stars
-
-Author description: Runnable samples for Jev, TypeSafe AI's System One model. Send state and questions carrying their own answer options, then branch on the typed value that comes back.
-
-Repository topics: jev, calibration, classification, code-samples, confidence-thresholds, decision-making, examples, llm
-
 ### jev-screen
 
 [Project \(en\)](https://awesomejev.cc/projects/yuantong-wu/jev-screen) · [Project \(zh\)](https://awesomejev.cc/zh/projects/yuantong-wu/jev-screen) · [Project \(ja\)](https://awesomejev.cc/ja/projects/yuantong-wu/jev-screen)
@@ -17781,16 +17841,6 @@ Author description: Run only the tests your change touched: import graph + owner
 
 Repository topics: jev, ci, playwright, qa-automation, test-impact-analysis, typescript, vitest
 
-### jev-testbed
-
-[Project \(en\)](https://awesomejev.cc/projects/hulryung/jev-testbed) · [Project \(zh\)](https://awesomejev.cc/zh/projects/hulryung/jev-testbed) · [Project \(ja\)](https://awesomejev.cc/ja/projects/hulryung/jev-testbed)
-
-[Repository](https://github.com/hulryung/jev-testbed) · research · Python · 0 snapshot stars
-
-Author description: Jev \(TypeSafe System One\) 테스트베드 — 클라우드 API와 로컬 셀프호스팅\(jeff/GLiFormer\) 양쪽 실행 예제 및 실측 결과
-
-Repository topics: jev, python
-
 ### jev-testing
 
 [Project \(en\)](https://awesomejev.cc/projects/scuilla/jev-testing) · [Project \(zh\)](https://awesomejev.cc/zh/projects/scuilla/jev-testing) · [Project \(ja\)](https://awesomejev.cc/ja/projects/scuilla/jev-testing)
@@ -18010,16 +18060,6 @@ Repository topics: jev, bizhawk, game-ai, llm-agents, lua, reverse-engineering, 
 Author description: Native Unreal Engine 5.8 StateTree tasks for finite, revision-guarded Jev decisions.
 
 Repository topics: jev, decision-making, game-ai, open-source, statetree, unreal-engine, c++
-
-### jev-usecases
-
-[Project \(en\)](https://awesomejev.cc/projects/vamsikrishna2421/jev-usecases) · [Project \(zh\)](https://awesomejev.cc/zh/projects/vamsikrishna2421/jev-usecases) · [Project \(ja\)](https://awesomejev.cc/ja/projects/vamsikrishna2421/jev-usecases)
-
-[Repository](https://github.com/vamsikrishna2421/jev-usecases) · directories · 0 snapshot stars
-
-Author description: Jev \(TypeSafe AI's System One decision model\) use-case catalog: real-world builds, cost math, design patterns, and a reality check on vendor claims.
-
-Repository topics: jev
 
 ### jev-user-jury
 
@@ -19051,16 +19091,6 @@ Author description: Guardrails de input, tool call y output para agentes de IA c
 
 Repository topics: jev, ai-safety, fastapi, guardrails, laya, llm-agents, llm-as-a-judge, nvidia-l4
 
-### learn-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/aaronmeis/learn-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/aaronmeis/learn-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/aaronmeis/learn-jev)
-
-[Repository](https://github.com/aaronmeis/learn-jev) · resources · HTML · 0 snapshot stars
-
-Author description: Learn Jev — TypeSafe System One typed decisions for software. Personal GitHub Pages reference hub \(deck, shorts, sources\). Unofficial.
-
-Repository topics: jev, learning, notebooklm, system-one, typesafe, html
-
 ### leash
 
 [Project \(en\)](https://awesomejev.cc/projects/cmaintz/leash) · [Project \(zh\)](https://awesomejev.cc/zh/projects/cmaintz/leash) · [Project \(ja\)](https://awesomejev.cc/ja/projects/cmaintz/leash)
@@ -19070,16 +19100,6 @@ Repository topics: jev, learning, notebooklm, system-one, typesafe, html
 Author description: Jev-powered guardrail that keeps a coding agent's output quality on a short leash: judges every turn against your un-lintable project rules and tells it which one it broke. Ratcheted, advisory, never a gate.
 
 Repository topics: jev, agent-hooks, agents, ai, claude-code, cli, code-quality, code-review
-
-### lightjev
-
-[Project \(en\)](https://awesomejev.cc/projects/ejokey/lightjev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/ejokey/lightjev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/ejokey/lightjev)
-
-[Repository](https://github.com/Ejokey/lightjev) · agents · Python · 0 snapshot stars
-
-Author description: Read pages with Lightpanda, decide where to go with Jev — a self-steering crawler for tiny budgets
-
-Repository topics: jev, agents, crawler, lightpanda, python, typesafe, web-scraping
 
 ### liljevduel
 
@@ -19735,7 +19755,7 @@ Repository topics: jev, typescript
 
 [Project \(en\)](https://awesomejev.cc/projects/phamhongviet/pi-ext-model-router) · [Project \(zh\)](https://awesomejev.cc/zh/projects/phamhongviet/pi-ext-model-router) · [Project \(ja\)](https://awesomejev.cc/ja/projects/phamhongviet/pi-ext-model-router)
 
-[Repository](https://github.com/phamhongviet/pi-ext-model-router) · developer · Python · 0 snapshot stars
+[Repository](https://github.com/phamhongviet/pi-ext-model-router) · developer · JavaScript · 0 snapshot stars
 
 Author description: pi.dev extension to select models using TypeSafe Jev
 
@@ -21081,16 +21101,6 @@ Author description: Deterministic transcript cleanup and compaction support usin
 
 Repository topics: jev, javascript
 
-### tri-emails-jev
-
-[Project \(en\)](https://awesomejev.cc/projects/colindargent/tri-emails-jev) · [Project \(zh\)](https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev) · [Project \(ja\)](https://awesomejev.cc/ja/projects/colindargent/tri-emails-jev)
-
-[Repository](https://github.com/ColinDargent/tri-emails-jev) · resources · Python · 0 snapshot stars
-
-Author description: Trier sa boîte mail avec Jev \(TypeSafe\) : 4 templates prêts à l'emploi - script Python, workflow n8n, scénario Make, skill Claude Code.
-
-Repository topics: jev, python
-
 ### triaje-ambulancias
 
 [Project \(en\)](https://awesomejev.cc/projects/christiancruzarango/triaje-ambulancias) · [Project \(zh\)](https://awesomejev.cc/zh/projects/christiancruzarango/triaje-ambulancias) · [Project \(ja\)](https://awesomejev.cc/ja/projects/christiancruzarango/triaje-ambulancias)
@@ -21310,16 +21320,6 @@ Repository topics: jev, javascript
 Author description: TypeSafe AI: structured AI judgments as programming primitives
 
 Repository topics: jev, javascript
-
-### typesafe-ai-go
-
-[Project \(en\)](https://awesomejev.cc/projects/darlinggoose/typesafe-ai-go) · [Project \(zh\)](https://awesomejev.cc/zh/projects/darlinggoose/typesafe-ai-go) · [Project \(ja\)](https://awesomejev.cc/ja/projects/darlinggoose/typesafe-ai-go)
-
-[Repository](https://github.com/DarlingGoose/typesafe-ai-go) · sdk · Go · 0 snapshot stars
-
-Author description: typesafe-ai-go: TypeSafe Jev ecosystem repository.
-
-Repository topics: jev, golang, typesafe-ai, typesafe-jev, go
 
 ### typesafe-ai-jev-demo
 

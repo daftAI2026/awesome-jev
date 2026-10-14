@@ -1,15 +1,16 @@
 /**
  * [INPUT]: 依赖 TanStack Start 服务端函数、规范快照、项目/新闻身份与确定性相关性规则
- * [OUTPUT]: 提供 getProjectTag 标签计数；详情携带十二条页脚标签；提供 getProject、getNewsItem、getNewsIndex 与 getDirectoryCounts 同源只读边界
+ * [OUTPUT]: 提供项目/新闻详情、标签计数及目录计数；新闻索引仅返回 50 条与可选单条预览
  * [POS]: lib 的路由数据适配器；项目详情只交付当前记录和最多三条相关摘要或旧地址重定向，完整快照不进入全站启动包
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { createServerFn } from '@tanstack/react-start'
 import { findGitHubProject, projectRedirectPath } from './project-routes'
-import { findNewsItem, type NewsItem } from './news'
+import { findNewsItem, selectNewsPage, newsPreviewSearch, type NewsItem } from './news'
 import type { DirectoryItem } from './types'
 import { relatedProjects, type CategorizedProject } from './related-projects'
 import { projectTagIndex, normalizeProjectTag, TAG_INDEX_MIN_PROJECTS } from './project-tags'
+import { directorySearch } from './pagination'
 import { CATEGORIES } from './categories'
 
 export const getDirectoryCounts = createServerFn({ method: 'GET' })
@@ -59,7 +60,8 @@ export const getNewsItem = createServerFn({ method: 'GET' })
   })
 
 export const getNewsIndex = createServerFn({ method: 'GET' })
-  .handler(async () => {
+  .validator((input: { page?: unknown; preview?: unknown }) => ({ ...directorySearch(input ?? {}), ...newsPreviewSearch(input ?? {}) }))
+  .handler(async ({ data }) => {
     const { default: news } = await import('../../data/news.json')
-    return news as NewsItem[]
+    return selectNewsPage(news as NewsItem[], data.page, data.preview)
   })

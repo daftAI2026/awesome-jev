@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖目录展示投影、搜索/排序/分页与项目/新闻/收藏/Agents 组件
+ * [INPUT]: 依赖目录展示投影、搜索/排序/分页、新闻有界页与按需静态历史搜索
  * [OUTPUT]: 提供标签聚合/索引与页脚内链、目录布局、手机固定两行控制栏、分类说明、每页 50 条、投稿与 Agents 页脚
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -34,7 +34,7 @@ import { useSaved } from '@/hooks/useSaved'
 import { savedRouteSearch, type SavedRouteSearch, type SavedSection } from '@/lib/saved'
 import { searchItems } from '@/lib/search'
 import { sortGithubItems } from '@/lib/sort'
-import { newsPath, type NewsItem } from '@/lib/news'
+import { newsPath, type NewsItem, type NewsPage } from '@/lib/news'
 import { directoryProjects, directoryRanks, directoryCategoryCounts } from '@/lib/directory-projects'
 import { directorySearch, paginate } from '@/lib/pagination'
 import type { DirectoryItem, GithubSort, GithubView } from '@/lib/types'
@@ -115,8 +115,8 @@ export default function App() {
   const [lastSavedSearch, setLastSavedSearch] = useState<SavedRouteSearch>(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : {})
   const savedSearch = useMemo(() => basePath === '/saved' ? savedRouteSearch(routeSearch) : lastSavedSearch,
     [basePath, routeSearch, lastSavedSearch])
-  const routeNewsItems = useMatches({ select: (matches) =>
-    matches.find((match) => match.routeId === '/_directory/{-$locale}/news')?.loaderData as NewsItem[] | undefined })
+  const routeNewsPage = useMatches({ select: (matches) =>
+    matches.find((match) => match.routeId === '/_directory/{-$locale}/news')?.loaderData as NewsPage | undefined })
   const [newsItems, setNewsItems] = useState<NewsItem[] | null>(null)
   const [newsLoadFailed, setNewsLoadFailed] = useState(false)
   const [savedNewsRequested, setSavedNewsRequested] = useState(false)
@@ -153,7 +153,9 @@ export default function App() {
     if (basePath === '/saved') setLastSavedSearch(savedRouteSearch(routeSearch))
   }, [basePath, routeSearch])
   useEffect(() => {
-    if (filter !== 'saved' || !savedNewsRequested || !savedEntries.some((entry) => entry.kind === 'news')) return
+    const needsSearch = filter === 'news' && query.trim().length > 0
+    const needsSaved = filter === 'saved' && savedNewsRequested && savedEntries.some((entry) => entry.kind === 'news')
+    if (!needsSearch && !needsSaved) return
     if (newsItems !== null || newsLoadFailed) return
     let active = true
     import('../data/news.json').then(({ default: rows }) => {
@@ -162,7 +164,7 @@ export default function App() {
       if (active) setNewsLoadFailed(true)
     })
     return () => { active = false }
-  }, [filter, newsItems, newsLoadFailed, savedEntries, savedNewsRequested])
+  }, [filter, query, newsItems, newsLoadFailed, savedEntries, savedNewsRequested])
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return
@@ -268,7 +270,7 @@ export default function App() {
   const filterButton = (id: keyof typeof FILTER_LABEL) => {
     const count = id === 'top100' ? undefined
       : id === 'all' ? items.length
-      : id === 'news' ? (routeNewsItems ?? newsItems)?.length
+      : id === 'news' ? (routeNewsPage?.total ?? newsItems?.length)
       : id === 'saved' ? savedEntries.length
       : id === 'tags' ? publicTags.length
       : categoryCounts[id]
@@ -441,8 +443,9 @@ export default function App() {
               </ul>
               {!matchingTags.length && <p className="mt-6 text-sm text-muted-foreground">{t('emptySearch')}</p>}
             </section> : filter === 'news' ? (
-              routeNewsItems === undefined ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
-                  : <NewsPanel key={query} items={routeNewsItems} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
+              newsLoadFailed && query.trim() ? <p role="alert" className="py-10 text-sm text-destructive">{t('newsLoadFailed')}</p>
+                : routeNewsPage === undefined || (query.trim() && newsItems === null) ? <p className="py-10 text-sm text-muted-foreground">{t('newsLoading')}</p>
+                  : <NewsPanel key={query} items={query.trim() ? newsItems! : routeNewsPage.items} serverPage={query.trim() ? undefined : routeNewsPage} query={query} savedIds={savedNewsIds} onToggleSaved={toggleNewsSaved}
                       previewId={newsPreviewId} onPreview={openNewsPreview} onPreviewClose={closeNewsPreview} />
             ) : filter === 'saved' ? (
               <SavedPanel entries={savedEntries} projects={items} news={newsItems} newsLoadFailed={newsLoadFailed}

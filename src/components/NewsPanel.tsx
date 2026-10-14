@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 TanStack Virtual、新闻/分页纯规则、Router、i18n 与新闻摘要对话框
  * [OUTPUT]: 提供每页 50 条新闻时间线；手机评分独占左对齐行，完整卡片标记预览来源
- * [POS]: components 的新闻索引阅读层，路由交付快照而不抓取原文
+ * [POS]: components 的新闻索引阅读层，路由交付当前页；历史搜索与收藏使用按需静态快照
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
@@ -10,7 +10,7 @@ import { paginate } from '@/lib/pagination'
 import { DirectoryPagination } from '@/components/DirectoryPagination'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import { useI18n, type Locale } from '@/i18n'
-import { newsPath, newsTime, sortNews, type NewsItem } from '@/lib/news'
+import { newsPath, newsTime, sortNews, type NewsItem, type NewsPage } from '@/lib/news'
 import { INTL_LOCALE, localizedPath } from '@/lib/locale-routes'
 import { NewsDialog } from '@/components/NewsDialog'
 import { SaveButton } from '@/components/SaveButton'
@@ -102,8 +102,9 @@ function NewsCard({ item, onPreview, saved, onToggleSaved }: {
   )
 }
 
-export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = false, previewId, onPreview, onPreviewClose }: {
+export function NewsPanel({ items, serverPage, query, savedIds, onToggleSaved, savedView = false, previewId, onPreview, onPreviewClose }: {
   items: NewsItem[]
+  serverPage?: NewsPage
   query: string
   savedIds: ReadonlySet<string>
   onToggleSaved: (item: NewsItem) => void
@@ -118,7 +119,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
   const initialListRef = useRef<HTMLOListElement>(null)
   const virtualListRef = useRef<HTMLOListElement>(null)
   const [scrollMargin, setScrollMargin] = useState(0)
-  const detailItem = items.find((item) => item.id === previewId) ?? null
+  const detailItem = items.find((item) => item.id === previewId) ?? (serverPage?.preview && serverPage.preview.id === previewId ? serverPage.preview : null)
   const detailOpen = detailItem !== null
   const matched = useMemo(() => {
     const term = query.trim().toLocaleLowerCase()
@@ -126,7 +127,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
       `${item.title} ${item.originalTitle ?? ''} ${item.summary ?? ''} ${item.sourceName}`.toLocaleLowerCase().includes(term)) : items
     return sortNews(filtered)
   }, [items, query])
-  const page = useMemo(() => paginate(matched, requestedPage), [matched, requestedPage])
+  const page = useMemo(() => serverPage ?? paginate(matched, requestedPage), [serverPage, matched, requestedPage])
   const rows = useMemo(() => {
     const result: NewsRow[] = []
     let previousDay = ''
@@ -213,7 +214,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
       <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2 text-sm text-muted-foreground">
         <p>{t('newsVia')} <a href="https://aihot.news/" target="_blank" rel="noopener noreferrer"
           className="text-foreground underline underline-offset-4">AIHOT</a></p>
-        {items.length > 0 && <span className="tabular-nums">{t('resultCountPlural', { count: matched.length })}</span>}
+        {items.length > 0 && <span className="tabular-nums">{t('resultCountPlural', { count: page.total })}</span>}
       </div>
       {items.length === 0 ? (
         <p className="py-10 text-sm text-muted-foreground">
@@ -244,7 +245,7 @@ export function NewsPanel({ items, query, savedIds, onToggleSaved, savedView = f
           </ol>}
         </>
       )}
-      <DirectoryPagination total={matched.length} page={page.page} />
+      <DirectoryPagination total={page.total} page={page.page} />
       <NewsDialog item={detailItem} open={detailOpen} onOpenChange={(open) => { if (!open) onPreviewClose() }} triggerRef={detailTriggerRef}
         saved={detailItem ? savedIds.has(detailItem.id) : false}
         onToggleSaved={detailItem ? () => toggleItemSaved(detailItem) : undefined} />

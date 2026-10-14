@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖分页/排名/检索纯规则、真实项目与新闻快照、三语言 head
- * [OUTPUT]: 验证 50 条边界、全量检索、全局排名、页码校验与规范地址
+ * [OUTPUT]: 验证 50 条边界、全量检索、排名、翻页归一与规范地址
  * [POS]: scripts 的分页离线护栏；不拆分数据、不请求外部站点
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -34,6 +34,15 @@ test('50-item pages cover empty, exact, remainder and out-of-range results', () 
     assert.ok(paginate(rows, count).items.length <= 50)
     assert.equal(paginate(rows, 0).page, 1)
   }
+})
+test('URL normalization uses the requested page, not stale server-rendered page data', () => {
+  const source = readFileSync('src/components/DirectoryPagination.tsx', 'utf8')
+  assert.match(source, /const normalized = paginationRange\(total, requested\)\.page/)
+  assert.match(source, /requested === normalized/)
+  assert.doesNotMatch(source, /requested === range\.page/)
+  // --- 请求第二页但首屏仍显示第一页，不得撤销有效请求 ---
+  assert.equal(paginationRange(330, 2).page, 2)
+  assert.equal(paginationRange(330, 999999).page, 7)
 })
 test('all categories and sorts paginate the entire result set without duplicates or data mutation', () => {
   const source = JSON.stringify(projects)

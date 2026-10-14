@@ -2,6 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+og-fonts.test.ts: 固定字库成功字节复用、失败重试、未知名称与流容量上限回归
+news-page.test.ts: 递增历史下 50 条服务端交付、计数/排序/越界与单条预览回归
 generate-jev-figure.mjs: 项目级 Anatomy kit 离线投影 60 实体，生成可信路径和投影；--geometry 输出同源圆角实体与顺序，不在构建请求链运行
 jev-figure.test.ts: 本地 0.3 秒教学轨迹、自动出口轮换、真实圆角棱柱遮挡、产物重建、刻度线端与无可执行标记回归
 error-policy.test.ts: 错误状态与缺失分离、Error message/stack/cause 脱敏离线回归
@@ -9,8 +11,8 @@ error-page-fixture.ts: 当前源码临时复制与测试专用故障路由，生
 error-delivery.test.ts: 隔离产物十条真实错误/恢复回归，检查脱敏/状态/索引/恢复入口
 tag-delivery.test.ts: 真实 HTTP 三语言标签索引/详情内链、分页、同义 301、特殊字符/长尾 noindex 与未知 404
 project-tags.test.ts: 公开标签同义/按项目去重、特殊字符/注入路径、原始快照和 Action bot 候选不变回归
-pagination.test.ts: Node 全量筛选后每页 50 条、边界、排名和规范地址回归
-pagination-delivery.test.ts: Node 三语言真实 HTTP 全分类/Top100/新闻的逐页内容与规范地址回归
+pagination.test.ts: Node 每页 50 条、排名和规范地址回归；归一不撤销服务端待加载的有效页
+pagination-delivery.test.ts: 三语言分页 HTTP、规范地址与新闻水合不泄漏离页历史回归
 generate-llms.ts: Node 构建期公开文档生成器，公开标签路由/原始主题边界同步，分类/排名/路径复用规范规则，展示字段白名单隔离审计
 agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG 安全/授权回归
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
@@ -33,8 +35,8 @@ code-discovery.test.ts: Node test code-discovery 的契约与回归验证，运�
 code-discovery.ts: 代码搜索线索与固定提交内容证据提取
 directory-catalog.test.ts: 身份基线/审计字段不泄漏、全目录展示/检索/排序等价及真实 Vite client/SSR 热更新的投影回归
 directory-catalog.ts: 构建期展示白名单与虚拟模块，规范快照保留完整审计且无第二份生成数据
-og-image.test.ts: 真实 WASM PNG、白底排版、动态计数及 HTTP 版本/缓存/失败边界回归
-og-delivery.test.ts: 实际 Worker PNG、缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
+og-image.test.ts: 同键并发合并/失败重试、真实 WASM PNG、白底排版与版本/缓存边界回归
+og-delivery.test.ts: Worker 冷并发响应体独立、PNG 与缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
 generate-sitemap.test.ts: Node 三语言有限索引、摘要门槛、同义标签/长尾排除与身份唯一回归
 generate-sitemap.ts: 生成三种语言的有限索引与至少三项目共用的公开标签页，排除收藏和不足摘要

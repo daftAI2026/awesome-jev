@@ -1,9 +1,11 @@
 /**
- * [INPUT]: 依赖 新闻条目与 ISO 时间戳，不依赖快照
- * [OUTPUT]: 对外提供 新闻身份、摘要索引边界、预览搜索校验及时间排序
+ * [INPUT]: 依赖新闻条目、ISO 时间戳与每页 50 条分页规则
+ * [OUTPUT]: 对外提供 新闻身份、时间排序与缓存索引后的有界页/单条预览
  * [POS]: lib 的新闻纯规则，被路由、展示与采集脚本共用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
+import { paginate } from './pagination.ts'
+
 export interface NewsItem {
   id: string
   title: string
@@ -51,4 +53,14 @@ export function newsTime(item: NewsItem): number {
 
 export function sortNews(items: NewsItem[]): NewsItem[] {
   return [...items].sort((a, b) => newsTime(b) - newsTime(a) || b.id.localeCompare(a.id))
+}
+
+export type NewsPage = ReturnType<typeof paginate<NewsItem>> & { preview: NewsItem | null }
+const sortedSnapshots = new WeakMap<readonly NewsItem[], NewsItem[]>()
+
+export function selectNewsPage(items: NewsItem[], requested: unknown = 1, preview?: string): NewsPage {
+  let sorted = sortedSnapshots.get(items)
+  if (!sorted) { sorted = sortNews(items); sortedSnapshots.set(items, sorted) }
+  const page = paginate(sorted, requested)
+  return { ...page, preview: preview ? findNewsItem(items, preview) ?? null : null }
 }

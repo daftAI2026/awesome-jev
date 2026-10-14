@@ -1,3 +1,9 @@
+<!--
+[INPUT]: PageSpeed 基线、模块图与本地真实 HTTP 验证
+[OUTPUT]: 性能取舍、启动包与按需新闻交付边界；区分字节与用户体验指标
+[POS]: docs 的性能证据记录；路由依赖归 architecture.md
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
 # PageSpeed delivery audit
 
 This document records the decisions from the [2026-10-01 PageSpeed report](https://pagespeed.web.dev/analysis/https-awesomejev-cc/egl9ige48i). The report contains 159 audits for each device profile, including passed, informative, manual and not-applicable checks. A displayed warning is not automatically a reason to change the architecture or presentation.
@@ -21,7 +27,7 @@ Accessibility, best practices and SEO score 100 on both profiles. CrUX has insuf
 
 The initial HTML contains 21 real project cards and 18 decorative skeletons. CSS previously hid real cards whenever scripting was enabled until `CardMasonry` finished hydration and measurement. One-column screens do not need JavaScript to establish that initial reading layout. Below 40rem, pre-hydration cards now use the same natural single-column flow already used by the no-script fallback. The existing measured virtual window takes over afterward; desktop skeletons, card contents, final styles, ordering, overscan, animations and interactions are retained.
 
-The entry also depended on complete project/news snapshots through eager route loaders. Standalone project/news loaders now use TanStack Start's existing `createServerFn` GET boundary and return only the requested record. The news index uses the same boundary for its existing snapshot. The preview loader dynamically imports the project module already available to the directory, rather than adding a network call to a local preview. See [architecture.md](architecture.md#route-data-delivery). This follows the [server-function documentation](https://tanstack.com/start/latest/docs/framework/react/guide/server-functions) and the installed 1.168.58 exports; no framework upgrade or custom request layer is introduced.
+The entry also depended on complete project/news snapshots through eager route loaders. Standalone project/news loaders now use TanStack Start's existing `createServerFn` GET boundary and return only the requested record. The news index returns 50 items, the full count and at most one explicit preview item; it does not serialize the archive. Full-history news search loads the static news chunk on demand, as Saved news already does. The preview loader dynamically imports the project module already available to the directory, rather than adding a network call to a local preview. See [architecture.md](architecture.md#route-data-delivery). This follows the [server-function documentation](https://tanstack.com/start/latest/docs/framework/react/guide/server-functions); the original boundary used 1.168.58, while the current baseline is recorded in the root map. No custom request layer is introduced.
 
 Mounted card heights are read into a batch before virtual-size updates, instead of alternating each read with an update. Pre-ready rendering pins the SSR prefix and preserves actual scrolling; Virtualizer size compensation is disabled only during that natural-flow stage and restored in the same ready handoff. Router's public restoration callback also skips its first top reset only for an unchanged, non-hash URL that has already been scrolled; all later navigation uses the default restoration behavior. Both boundaries are needed to preserve reading begun before hydration. The category Sheet trigger's accessible name now includes its visible localized filter label. Neither changes final visual content.
 

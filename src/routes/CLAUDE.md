@@ -11,7 +11,7 @@ __root.tsx: TanStack 文档壳、首屏语言/主题初始化和统一 404/500 �
 _directory.tsx: 无路径目录布局，将 App 与子路由 Outlet 组合
 _directory.{-$locale}.category.$category.tsx: 分类白名单校验与可见用途说明同源的逐页分类元数据，非法分类交给根 404
 _directory.{-$locale}.index.tsx: 目录首页与逐页语言搜索元数据
-_directory.{-$locale}.news.tsx: Start 服务端函数加载新闻索引，逐页规范地址、SSR 与客户端导航消费同一快照
+_directory.{-$locale}.news.tsx: Start 仅交付当前 50 条、计数和可选单条预览，页码驱动 loader，逐页规范地址同源
 _directory.{-$locale}.preview.$owner.$repo.tsx: 复用目录投影与独立页分享图身份，遮罩 head 不回退成全站图
 _directory.{-$locale}.saved.tsx: 浏览器本地收藏的验证搜索状态，禁止索引
 _directory.{-$locale}.top100.tsx: 全目录星标前 100 的逐页身份与元数据

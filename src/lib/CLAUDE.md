@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+og-fonts.ts: 四份固定 OG 字库的有界读取与成功字节复用，不保存跨请求 I/O 或失败
 error-policy.ts: 路由错误判定与 Error 序列化脱敏，不传 message/stack/cause
 project-tags.ts: 公开标签纯投影，明确同义词去重、泛词排除和按项目计数；原始 tags 不变
 pagination.ts: 纯每页 50 条规则、URL 页码/排序校验与有界页码清单
@@ -13,16 +14,16 @@ related-projects.ts: 每个快照弱键索引一次分类/主题，交付最多�
 seo-inspection.ts: 服务端 HTML 与 sitemap 事实抽取及正常/错误/排除诊断，不读取排名
 workbench.ts: 单一工作台工具/目标/宽度搜索状态白名单、规范路径项目选择与同语言目标地址
 catalog-updated-at.ts: 历史时间戳校验与固定时区展示，缺失时不造时间
-catalog.functions.ts: Start 同源只读数据边界，项目交付当前记录及最多三条相关摘要或旧地址 301 目标，新闻详情交付单条记录，新闻索引按路由读取，标签/分页 head 仅交付计数，详情额外交付十二条页脚标签，快照仅在 handler 内导入
+catalog.functions.ts: Start 同源只读数据边界，项目交付当前记录及最多三条相关摘要或旧地址 301 目标，新闻详情交付单条记录，新闻索引最多交付当前 50 条和单条预览，标签/分页 head 仅交付计数，详情额外交付十二条页脚标签，快照仅在 handler 内导入
 categories.ts: 项目/新闻分类及名称/用途说明键的共享白名单
 inclusion.ts: 收录依据及同仓固定 blob/tree 证据边界，前端与采集共用而不信任类型断言
 locale-head.ts: 有效页面及逐页规范 URL、语言 alternates 与可覆盖的 OG/Twitter 图片元数据
 locale-routes.ts: en/zh/ja 路径识别、转换和 hreflang 的纯规则
 masonry.ts: 有序虚拟瀑布流几何与启动状态规则，预就绪保留 SSR 前缀及用户阅读位置
-news.ts: 新闻身份、摘要索引边界和展示工具
-og-response.ts: 可注入渲染/缓存的 HTTP 策略，先验证身份，规范版本键、HEAD/ETag 与 no-store 失败
-og-render.server.ts: Workers WASM 栅格化适配器，通过 ASSETS 读取有界字库并释放渲染对象
-og-service.server.ts: 当前规范快照与 Workers Cache 的服务端入口，仅缓存未命中时加载渲染器
+news.ts: 新闻身份、时间排序与弱键快照索引，每页 50 条及可选单条预览
+og-response.ts: 同键渲染合并至缓存写入结束，仅共享 PNG 字节；HTTP 策略，先验证身份，规范版本键、HEAD/ETag 与 no-store 失败
+og-render.server.ts: Workers WASM 栅格化适配器，复用成功字库字节并释放渲染对象
+og-service.server.ts: 当前快照、实例内在途表与 Workers Cache 的服务端入口，仅缓存未命中时加载渲染器
 og-template.ts: 白底 ASCII 分享图纯 SVG 排版，全文身份与限行文字分离
 og-inspection.ts: 浏览器有界同源只读探针，检验实际 OG/Twitter 标签、canonical 与 PNG 响应，不模拟第三方缓存
 project-routes.ts: GitHub 项目规范路径、精确查找与同一记录的清洗旧地址重定向

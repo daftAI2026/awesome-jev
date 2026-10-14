@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖真实 Worker、规范快照、分页/排序规则与三语言文案
- * [OUTPUT]: 验证全部分类、Top100、新闻的第二页 HTML、链接和逐页规范地址
+ * [OUTPUT]: 验证分类/Top100/新闻分页与新闻水合不泄漏离页历史
  * [POS]: scripts 的分页 HTTP 护栏；必须拦住静态第一页覆盖查询页
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -69,6 +69,8 @@ for (const locale of LOCALES) {
     assert.ok(main.includes(`data-page="2" data-pages="${page.pages}" data-total="${news.length}"`))
     assert.ok(main.includes(`href="${localizedPath(`/news/${page.items[0].id}`, locale)}"`))
     assert.ok(!main.includes(`href="${localizedPath(`/news/${news[0].id}`, locale)}"`))
+    assert.ok(html.includes(page.items[0].id), 'Current page must be serialized')
+    assert.ok(!html.includes(news[0].id), 'Off-page history must not leak through loader hydration')
     const ids = new Set(page.items.map((item) => localizedPath(`/news/${item.id}`, locale)))
     const rendered = [...main.matchAll(/href="([^"]*\/news\/[a-z0-9]+)"/g)].map((match) => match[1])
     assert.ok(rendered.length > 0 && rendered.length <= 50)

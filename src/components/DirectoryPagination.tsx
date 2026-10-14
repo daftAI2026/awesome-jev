@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 TanStack Router、分页纯规则、i18n 与本站 Pagination 原语
- * [OUTPUT]: 提供真实页码链接、结果范围、越界页码归一和翻页焦点定位
+ * [OUTPUT]: 提供真实页码链接、结果范围、仅越界页码归一和翻页焦点定位
  * [POS]: components 的共享分页入口；项目、新闻及收藏传入全量结果数量
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -19,11 +19,12 @@ export function DirectoryPagination({ total, page, sort }: {
   const { pathname, search } = useRouterState({ select: (state) => state.location })
   const range = paginationRange(total, page)
   const requested = directorySearch(search).page ?? 1
+  const normalized = paginationRange(total, requested).page
   useEffect(() => {
-    // --- 背景预览不得新增历史；越界页以替换导航归一 ---
-    if (total === 0 || requested === range.page || pathname.includes('/preview/')) return
-    void navigate({ to: pathname, search: { ...search, page: range.page > 1 ? range.page : undefined }, replace: true, resetScroll: false })
-  }, [navigate, pathname, range.page, requested, search, total])
+    // --- 只归一越界请求；服务端旧页仍在显示时不得撤销翻页 ---
+    if (total === 0 || requested === normalized || pathname.includes('/preview/')) return
+    void navigate({ to: pathname, search: { ...search, page: normalized > 1 ? normalized : undefined }, replace: true, resetScroll: false })
+  }, [navigate, pathname, normalized, requested, search, total])
   if (total === 0) return null
   const target = (next: number) => ({ ...search, preview: undefined, page: next > 1 ? next : undefined, ...(sort ? { sort } : {}) })
   const linkProps = (next: number, disabled = false) => ({

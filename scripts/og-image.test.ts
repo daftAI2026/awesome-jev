@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖纯 SVG/HTTP 策略、固定字库和真实 Node WASM 渲染器
- * [OUTPUT]: 对外提供动态计数、白底文本 PNG、规范版本与缓存/失败响应的回归
+ * [OUTPUT]: 对外提供动态计数、白底 PNG、同键在途合并与缓存/失败重试回归
  * [POS]: scripts 的 OG 策略护栏；不创建持久图片，也不请求 GitHub
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -116,4 +116,56 @@ test('unknown identities, unsupported methods and failed rasterization do not pu
   assert.equal(failed.status, 503)
   assert.equal(failed.headers.get('Cache-Control'), 'no-store')
   assert.equal(await failed.text(), 'OG image unavailable')
+})
+
+test('cold concurrent aliases share one render until the cache write finishes', async () => {
+  let renders = 0
+  let writes = 0
+  let release!: () => void
+  const writing = new Promise<void>((resolve) => { release = resolve })
+  const inflight = new Map<string, Promise<Uint8Array<ArrayBuffer>>>()
+  const custom = { banner, inflight, render: async () => { renders++; return png }, cache: {
+    match: async () => undefined,
+    put: async () => { writes++; await writing },
+  } }
+  const paths = [siteShareImage(2199).path, '/api/og/site', '/og.png']
+  const pending = Array.from({ length: 20 }, (_, i) => serveOg(request(paths[i % paths.length]), content, custom))
+  await new Promise((resolve) => setImmediate(resolve))
+  release()
+  const responses = await Promise.all(pending)
+  assert.equal(renders, 1)
+  assert.equal(writes, 1)
+  assert.equal(inflight.size, 0)
+  for (const response of responses) {
+    assert.equal(response.status, 200)
+    assert.deepEqual(new Uint8Array(await response.arrayBuffer()), png)
+  }
+  assert.match(responses[0].headers.get('Cache-Control')!, /immutable/)
+  assert.equal(responses[1].headers.get('Cache-Control'), 'public, max-age=60')
+})
+
+test('shared render failures release the key so a later request can retry', async () => {
+  let renders = 0
+  const inflight = new Map<string, Promise<Uint8Array<ArrayBuffer>>>()
+  const custom = { banner, inflight, render: async () => {
+    if (++renders === 1) throw new Error('temporary render failure')
+    return png
+  } }
+  const responses = await Promise.all(Array.from({ length: 5 }, () => serveOg(request('/api/og/site'), content, custom)))
+  assert.ok(responses.every((response) => response.status === 503))
+  assert.equal(renders, 1)
+  assert.equal(inflight.size, 0)
+  assert.equal((await serveOg(request('/api/og/site'), content, custom)).status, 200)
+  assert.equal(renders, 2)
+})
+
+test('different content versions never join the same render task', async () => {
+  let renders = 0
+  const inflight = new Map<string, Promise<Uint8Array<ArrayBuffer>>>()
+  const custom = { banner, inflight, render: async () => { renders++; return png } }
+  const responses = await Promise.all([2199, 2200, 2199, 2200].map((projectCount) =>
+    serveOg(request('/api/og/site'), { kind: 'site', projectCount }, custom)))
+  assert.equal(renders, 2)
+  assert.equal(inflight.size, 0)
+  assert.deepEqual(responses.map((response) => response.headers.get('X-OG-Project-Count')), ['2199', '2200', '2199', '2200'])
 })

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖分享图身份、纯 SVG 模板与调用方注入的渲染/缓存能力
- * [OUTPUT]: 对外提供 serveOg 的 PNG、条件请求、规范版本和失败响应
+ * [OUTPUT]: 提供 PNG/条件响应、同键在途合并与失败后重试
  * [POS]: lib 的 OG HTTP 策略；先验证当前目录身份，再读缓存，不接受任意标题或图片地址
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -11,6 +11,7 @@ export type OgContent = { kind: 'site'; projectCount: number } | { kind: 'projec
 export interface OgPorts {
   banner: string
   render: (svg: string) => Promise<Uint8Array<ArrayBuffer>>
+  inflight?: Map<string, Promise<Uint8Array<ArrayBuffer>>>
   cache?: { match: (request: Request) => Promise<Response | undefined>; put: (request: Request, response: Response) => Promise<void> }
 }
 
@@ -47,16 +48,24 @@ export async function serveOg(request: Request, content: OgContent | null, ports
       headers.set('X-OG-Cache', 'HIT')
       return new Response(cached.body, { headers })
     }
-    const svg = content.kind === 'site' ? renderSiteSvg(content.projectCount, ports.banner) : renderProjectSvg(content.item, ports.banner)
-    const png = await ports.render(svg)
-    headers.set('X-OG-Cache', 'MISS')
-    const response = new Response(png, { headers })
-    if (ports.cache) {
-      const cacheHeaders = new Headers(headers)
-      cacheHeaders.set('Cache-Control', 'public, max-age=31536000, immutable')
-      await ports.cache.put(key, new Response(response.clone().body, { headers: cacheHeaders }))
+    let task = ports.inflight?.get(key.url)
+    if (!task) {
+      // ---- 只共享 PNG 字节；流、Request 与 Response 留在所属请求内 ----
+      task = Promise.resolve().then(async () => {
+        const svg = content.kind === 'site' ? renderSiteSvg(content.projectCount, ports.banner) : renderProjectSvg(content.item, ports.banner)
+        const png = await ports.render(svg)
+        if (ports.cache) {
+          const cacheHeaders = new Headers(headers)
+          cacheHeaders.set('Cache-Control', 'public, max-age=31536000, immutable')
+          await ports.cache.put(key, new Response(png.slice(), { headers: cacheHeaders }))
+        }
+        return png
+      }).finally(() => { ports.inflight?.delete(key.url) })
+      ports.inflight?.set(key.url, task)
     }
-    return response
+    const png = await task
+    headers.set('X-OG-Cache', 'MISS')
+    return new Response(png.slice(), { headers })
   } catch {
     // 不回退到旧图或全站图：工作台能发现真实渲染失败。
     return failure(503, 'OG image unavailable', request.method)

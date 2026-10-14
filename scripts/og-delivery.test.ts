@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖当前规范目录与 TEST_SITE_ORIGIN 指向的真实 Worker
- * [OUTPUT]: 对外提供动态 PNG、缓存/条件请求、项目三语言 head 与工作台生产访问隔离验收
+ * [OUTPUT]: 对外提供动态 PNG、跨请求并发独立响应、缓存/条件请求与生产工作台隔离
  * [POS]: scripts 的 OG 集成护栏，随 test:delivery 零跳过运行，不调用第三方接口
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -136,4 +136,15 @@ test('production workbench returns 404 before loading data while public site met
     assert.deepEqual(tags.get('og:image'), [SITE_ORIGIN + siteShareImage(count).path])
     assert.ok(tags.get('og:image:alt')![0].includes(String(count)))
   }
+})
+
+test('concurrent cold Worker requests return independently readable PNG bodies', { skip: !origin }, async () => {
+  const item = catalog.find((entry) => entry.id !== project.id && entry.id !== cjkProject.id)!
+  const versioned = projectShareImage(item).path
+  const bare = versioned.split('?')[0]
+  const images = await Promise.all(Array.from({ length: 8 }, (_, index) => png(index % 2 ? bare : versioned)))
+  for (const image of images) assert.deepEqual(image.bytes, images[0].bytes)
+  const warmed = await png(versioned)
+  assert.equal(warmed.response.headers.get('X-OG-Cache'), 'HIT')
+  assert.deepEqual(warmed.bytes, images[0].bytes)
 })

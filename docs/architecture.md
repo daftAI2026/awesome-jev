@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: Start 稳定版迁移与 Vite 安全基线、公开标签投影与站内导航契约； 模块依赖、同版本部署、分页 SSR 与静态详情契约
+[OUTPUT]: Start/Vite 版本边界、模块依赖与同版本部署；分页 SSR、静态详情及 OG/新闻成本边界
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -125,7 +125,7 @@ npm run deploy   # build + wrangler deploy
 
 TanStack Start owns the generated client/document entry. The root icon link serves `public/favicon.svg`: the user-provided black J path on a transparent background, with its original 9 × 11 viewBox and no font dependency. The obsolete root `index.html` and `src/main.tsx` SPA bootstrap are removed: Vite otherwise serves their stale homepage metadata ahead of the Start runtime during development. Local workbench probes and built delivery therefore inspect the same routing/head pipeline.
 
-`src/lib/catalog.functions.ts` uses the installed TanStack Start `createServerFn` GET boundary. JSON imports remain inside handlers, so the compiler removes them from browser RPC stubs. Project detail loaders return the requested record and at most three related summaries; news detail loaders return only the requested record, and the news index returns the existing news snapshot. During SSR/prerender these functions execute locally; browser navigation calls the same-origin Worker endpoint, without a custom fetch wrapper, external API, or new database. Missing records still become route-level HTTP 404s. The preview loader dynamically imports the GitHub module already loaded by the directory, returning only its title/summary to head metadata without adding an RPC to an otherwise local preview.
+`src/lib/catalog.functions.ts` uses the installed TanStack Start `createServerFn` GET boundary. JSON imports remain inside handlers, so the compiler removes them from browser RPC stubs. Project detail loaders return the requested record and at most three related summaries; news detail loaders return only the requested record, and the news index returns the requested 50-record page, count/range and at most one explicit preview. Sorting is indexed once per immutable snapshot; ordinary SSR never serializes the full news history. Non-empty history search and saved-news reading reuse the client-only static news chunk on demand, keeping search local. During SSR/prerender these functions execute locally; browser navigation calls the same-origin Worker endpoint, without a custom fetch wrapper, external API, or new database. Missing records still become route-level HTTP 404s. The preview loader dynamically imports the GitHub module already loaded by the directory, returning only its title/summary to head metadata without adding an RPC to an otherwise local preview.
 
 `App` and the masked preview share `virtual:directory-catalog`, a Vite build-time whitelist projection of the canonical GitHub snapshot. It preserves every current search/sort/card/preview field, complete inclusion rationale and pinned evidence URL; unused machine scores and audit hashes/links remain in canonical JSON but are not sent to the directory. There is no generated second source of truth, new RPC or preview loading state. Development invalidates both projected and canonical modules across Vite environments when the catalog changes. Standalone server detail reads and prerender path enumeration still use canonical data. Related summaries are selected server-side by same category and shared non-generic topics; no additional full snapshot enters the detail client. That dataset belongs to the directory chunk, not every route's entry. Saved news remains a deferred import on demand. This change reduces unrelated data on detail pages and removes news data from homepage startup; it does **not** remove the GitHub catalog from a fully interactive homepage. Keep RPC deployment and static HTML from the same build. See [performance.md](performance.md) for the report baseline, decisions and verification boundaries.
 
@@ -215,3 +215,25 @@ Tag pages use Worker-first SSR so `?page=2` cannot receive page-one Static Asset
 - No authentication, rate limiter or maintenance mode exists in the app. Do not fabricate 401/403/429 routes or a fake `/500` page.
 - Cloudflare CPU termination, gateway 502/504 and server-render failure outside Router loading need platform/server-level recovery. React cannot catch them.
 - A temporary copy of current source injects failure routes for production-build HTTP tests. No fault route or switch enters deployment.
+
+## OG 冷缓存与新闻交付的成本边界
+
+同键 OG 请求在当前 Worker 实例合并渲染。
+合并持续到 Cache API 写入完成，失败后移除任务。
+每个请求独立构造响应，只共享已完成的 PNG 字节。
+四份固定字库只缓存成功字节，不缓存失败或响应流。
+HEAD、304、版本归一与未知身份仍在渲染前返回。
+沿用运行时图片，不增加全目录构建期 PNG 或存储服务。
+
+合并不是全局锁，Cache API 不跨数据中心复制。
+新闻页不因历史增长而扩大动态交付条数。
+历史搜索仍须在浏览器读取完整静态新闻块。
+本轮不删除新闻、改变采集门槛或申请付费服务。
+本轮未读取账户账单或配置，不保证总额封顶。
+
+2026-10-15 本地回归：同键 20 个冷缓存请求只渲染一次。
+330 条新闻的首页序列化由 260974 降至 39396 字节。
+该值减少 84.9%，仅比较 JSON 字节，不代表账单降幅。
+100、1000 与 10000 条历史样本均只交付当前 50 条。
+
+依据：[Cache API](https://developers.cloudflare.com/workers/runtime-apis/cache/)、[跨请求 I/O 边界](https://developers.cloudflare.com/workers/observability/errors/#cannot-perform-io-on-behalf-of-a-different-request)。

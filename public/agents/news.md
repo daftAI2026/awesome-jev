@@ -13,6 +13,136 @@
 
 News pages contain source-attributed summaries, not full articles. Publication time is taken from the source when available. Items without summaries are excluded from this document.
 
+## Prime Intellect 收购 Moondream，联合创始人加入主导推理与多模态
+
+[Summary page \(en\)](https://awesomejev.cc/news/rruqd7cz78jq6l889kjp56jlz) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rruqd7cz78jq6l889kjp56jlz) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rruqd7cz78jq6l889kjp56jlz)
+
+[Prime Intellect（网页）](https://www.primeintellect.ai/blog/moondream) · [AIHOT](https://aihot.news/items/rruqd7cz78jq6l889kjp56jlz)
+
+Source publication: 2026-10-12T16:00:00.000Z
+
+Prime Intellect 宣布收购 Moondream，创始人 Vik Korrapati 和 Jay Allen 加入并负责推理业务及视觉、computer use 等多模态模型工作。
+
+## Artificial Analysis 发布 Decision Index v1.0，Jev 1.13 居决策模型之首但仍不及 Claude Haiku 5.5
+
+[Summary page \(en\)](https://awesomejev.cc/news/d93pq4h9mea5jguxue00icytz) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/d93pq4h9mea5jguxue00icytz) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/d93pq4h9mea5jguxue00icytz)
+
+[X：Artificial Analysis \(@ArtificialAnlys\)](https://x.com/ArtificialAnlys/status/2110046565691949058) · [AIHOT](https://aihot.news/items/d93pq4h9mea5jguxue00icytz)
+
+Source publication: 2026-10-13T16:34:38.000Z
+
+Artificial Analysis 发布 Decision Index v1.0，从知识、推理、工具调用和分类四个基准评测决策模型的能力、成本和速度。
+
+## ScaleDown 发布三款小型 AI 模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/cwinq6yx0ne6bxcp2xwyrpw26) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/cwinq6yx0ne6bxcp2xwyrpw26) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/cwinq6yx0ne6bxcp2xwyrpw26)
+
+[X：Testing Catalog \(@testingcatalog\)](https://x.com/testingcatalog/status/2110029285322903761) · [AIHOT](https://aihot.news/items/cwinq6yx0ne6bxcp2xwyrpw26)
+
+Source publication: 2026-10-13T15:25:58.000Z
+
+ScaleDown 推出 Classify、Extract、Summarize 三款小型 AI 模型，均支持 100 万 token 输入、文本或图像，可通过 ScaleDown API 及 OpenRouter、Vercel AI Gateway、LiteLLM、LangChain 调用。
+
+## Scaledown 约束解码模型家族上线 OpenRouter
+
+[Summary page \(en\)](https://awesomejev.cc/news/n9cywyuptc6b1kv9xqrg0m4ob) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/n9cywyuptc6b1kv9xqrg0m4ob) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/n9cywyuptc6b1kv9xqrg0m4ob)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2109989782302716140) · [AIHOT](https://aihot.news/items/n9cywyuptc6b1kv9xqrg0m4ob)
+
+Source publication: 2026-10-13T12:49:00.000Z
+
+Scaledown 的约束解码模型家族（Summarize、Extract、Classify-1）已在 OpenRouter 上线，每个模型专为单一任务打造，支持长文本/图片/PDF 摘要、自然语言定义字段提取 JSON、自定义标签分类。发布期 8 折优惠：输入 $0.04/M tokens，输出免费。
+
+## ScaleDown 发布 3 个 Constrained Decoding Models：Classify、Extract 和 Summarize
+
+[Summary page \(en\)](https://awesomejev.cc/news/vvpftg0om5n6mrap61aag1wep) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/vvpftg0om5n6mrap61aag1wep) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/vvpftg0om5n6mrap61aag1wep)
+
+[X：Rohan Paul \(@rohanpaul\_ai\)](https://x.com/rohanpaul_ai/status/2109988217000976781) · [AIHOT](https://aihot.news/items/vvpftg0om5n6mrap61aag1wep)
+
+Source publication: 2026-10-13T12:42:47.000Z
+
+ScaleDown 发布 3 个面向单一任务的 Constrained Decoding Models（Classify、Extract、Summarize），不做逐 token 生成，只对输入做一次 prefill 并从原文中直接选出答案。
+
+## LangChain 发布 langchain-scaledown 集成，用 ScaleDown 约束解码模型管理长时智能体上下文
+
+[Summary page \(en\)](https://awesomejev.cc/news/uljn62mk9ujyya1xg51hc6dp8) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uljn62mk9ujyya1xg51hc6dp8) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uljn62mk9ujyya1xg51hc6dp8)
+
+[LangChain：Blog（RSS）](https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents) · [AIHOT](https://aihot.news/items/uljn62mk9ujyya1xg51hc6dp8)
+
+Source publication: 2026-10-13T11:56:53.000Z
+
+LangChain 发布 langchain-scaledown 集成，并在 LangSmith LLM Gateway 中支持 ScaleDown 的约束解码模型（CDM），用于降低长时智能体上下文管理的成本和延迟。
+
+## DeepEval 发布 JevEval：用 Jev 替代生成式 LLM 当评估裁判
+
+[Summary page \(en\)](https://awesomejev.cc/news/k7db3qco4nxghtyl1h6opiq7y) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/k7db3qco4nxghtyl1h6opiq7y) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/k7db3qco4nxghtyl1h6opiq7y)
+
+[X：邵猛 \(@shao\_\_meng\)](https://x.com/shao__meng/status/2109947508424389075) · [AIHOT](https://aihot.news/items/k7db3qco4nxghtyl1h6opiq7y)
+
+Source publication: 2026-10-13T10:01:01.000Z
+
+DeepEval 团队发布 JevEval，用 Jev 替代生成式 LLM 担任评估裁判，把 LLM 评估从"生成判定"改为"结构化决策"。它将评估逻辑、语义判断与分数计算三者分离：人定义显式可审查的评估逻辑，Jev 返回概率分布而非生成文本，DeepEval 用固定公式算出确定性分数，解决传统 LLM-as-a-judge 不可解释、同输入两次运行分数不稳定的问题。
+
+## Meta 发布首款前沿模型 Muse Wonder
+
+[Summary page \(en\)](https://awesomejev.cc/news/eugi5rnddiycpq0bjk6sorqd7) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/eugi5rnddiycpq0bjk6sorqd7) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/eugi5rnddiycpq0bjk6sorqd7)
+
+[X：Testing Catalog \(@testingcatalog\)](https://x.com/testingcatalog/status/2109924204468425145) · [AIHOT](https://aihot.news/items/eugi5rnddiycpq0bjk6sorqd7)
+
+Source publication: 2026-10-13T08:28:25.000Z
+
+Meta 发布首款前沿模型 Muse Wonder，上线 Meta Model API 和 Muse Code，定价每百万 input/output tokens 4 美元/20 美元；最高推理版本 Muse Wonder Full 仅面向 Muse Code 订阅用户，不在 API 提供。
+
+## n8n 教程：用 You.com 和 Jev 搭建每天早上的 AI 新闻简报工作流
+
+[Summary page \(en\)](https://awesomejev.cc/news/z968a5gjatexbngn6pn52nicm) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/z968a5gjatexbngn6pn52nicm) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/z968a5gjatexbngn6pn52nicm)
+
+[n8n Blog](https://blog.n8n.io/spotlight-you-com/) · [AIHOT](https://aihot.news/items/z968a5gjatexbngn6pn52nicm)
+
+Source publication: 2026-10-13T05:45:04.000Z
+
+n8n 博客发布一篇客座教程，介绍用 You.com 节点、TypeSafe AI 的 Jev 模型和 n8n 搭建每早 8 点的 AI 新闻简报工作流。
+
+## TypeSafe Jev 引爆决策 AI 模型赛道，微软、OpenAI 等跟进并卷入原创争议
+
+[Summary page \(en\)](https://awesomejev.cc/news/l6n00uey1dd0cutv6xxnels6h) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/l6n00uey1dd0cutv6xxnels6h) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/l6n00uey1dd0cutv6xxnels6h)
+
+[IT之家·人工智能](https://www.ithome.com/1/012/193.htm) · [AIHOT](https://aihot.news/items/l6n00uey1dd0cutv6xxnels6h)
+
+Source publication: 2026-10-13T02:27:08.673Z
+
+TypeSafe 发布决策 AI 模型 Jev 后，微软推出 Microsoft Decision，OpenAI 推出 Decisions API，Fastino 发布 Glide，Cloudflare Clef 与 Perplexity Decider 采用开放权重。
+
+## SubQ Snap 长上下文决策模型：384K 上下文、线性延迟
+
+[Summary page \(en\)](https://awesomejev.cc/news/ttzjdmgrt0vozxx3f9tmmpo35) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ttzjdmgrt0vozxx3f9tmmpo35) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ttzjdmgrt0vozxx3f9tmmpo35)
+
+[X：Rohan Paul \(@rohanpaul\_ai\)](https://x.com/rohanpaul_ai/status/2109713379757867045) · [AIHOT](https://aihot.news/items/ttzjdmgrt0vozxx3f9tmmpo35)
+
+Source publication: 2026-10-12T18:30:40.000Z
+
+SubQ 推出 SubQ Snap，号称首个面向企业真实工作的长上下文决策模型，支持 384K 多模态上下文，是 Jev 的 12 倍。其延迟随上下文线性增长：100K tokens 660ms、384K 2.5 秒，而标准二次注意力在该区间成本约涨 15 倍。
+
+## TypeSafe AI 举办 Disrupt AI 乐观主义活动
+
+[Summary page \(en\)](https://awesomejev.cc/news/ae65xf467amenwurfsfgazj5a) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ae65xf467amenwurfsfgazj5a) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ae65xf467amenwurfsfgazj5a)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2109706394488520941) · [AIHOT](https://aihot.news/items/ae65xf467amenwurfsfgazj5a)
+
+Source publication: 2026-10-12T18:02:55.000Z
+
+明天和我们一起 Jev 的最后机会！ Disrupt 为 AI 乐观主义举办的 happy hour builders，别让未来从你身边溜走，报名 👇
+
+## Latent Space 新播客节目上线
+
+[Summary page \(en\)](https://awesomejev.cc/news/e6sywxs5p9s6pliixc0c9oh2l) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/e6sywxs5p9s6pliixc0c9oh2l) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/e6sywxs5p9s6pliixc0c9oh2l)
+
+[X：Dex Horthy（HumanLayer）\(@dexhorthy\)](https://x.com/dexhorthy/status/2109675757123350626) · [AIHOT](https://aihot.news/items/e6sywxs5p9s6pliixc0c9oh2l)
+
+Source publication: 2026-10-12T16:01:11.000Z
+
+这里面好多🔥观点啊 （引用推文：新节目公告：High Taste Testers——美食与优质 AI 对话。试播集即将上线 http://youtube.com/@latentspacepod，嘉宾包括 @davis7、@dexhorthy、@AdjectiveAllison、@altryne、@benhylak，聊 DevDay/Dots、Jev、Muse、Grok、Claude v GPT v Gemini 以及当下所有热门话题！）
+
 ## Cloudflare 发布 Clef-omni：30B-A3B 多模态决策模型，单次调用评分文本、图像、音频和视频
 
 [Summary page \(en\)](https://awesomejev.cc/news/rc16kc7la6wib4t4nqdosjglp) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rc16kc7la6wib4t4nqdosjglp) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rc16kc7la6wib4t4nqdosjglp)
@@ -101,7 +231,7 @@ Nace AI 开源 9B 决策模型 Drex 1.5，读取状态和类型化问题后为�
 
 Source publication: 2026-10-10T06:03:09.000Z
 
-Microsoft 发布 Microsoft-Decision-1，一个由 Qwen3.5-9B 后训练的决策评分模型，对固定选项输出校准概率而非生成文本，已上线 Microsoft Foundry 和 OpenRouter。
+Microsoft 发布 Microsoft-Decision-1，一个基于 Qwen3.5-9B 后训练的决策评分模型，对固定选项返回校准概率而非生成文本，现已在 Microsoft Foundry 和 OpenRouter 上线。
 
 ## Cloudflare 推出开放权重决策模型 Clef-omni，新增音频和视频输入
 
@@ -123,7 +253,7 @@ Source publication: 2026-10-09T23:28:29.367Z
 
 据彭博社 10 月 9 日报道，TypeSafe AI 旗下决策模型 Jev 推出数周走红，完成约 8.7 亿美元融资，由 a16z 领投，估值达 75 亿美元。Jev 已被约三分之一的财富 500 强企业采用，上线数天内用户突破 100 万，平台每天处理数万亿 token，扣除运营成本后已实现盈利。公司团队刚满 20 人，计划用新资金扩充员工、推进大规模部署并采购更多算力。
 
-## Nathan Lambert：AI 将快速进步，但不会走向通用超级智能
+## Nathan Lambert：AI 将迎来快速进展，但不是通向通用超级智能
 
 [Summary page \(en\)](https://awesomejev.cc/news/b8c356snnq00hlq3djeibs2ub) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/b8c356snnq00hlq3djeibs2ub) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/b8c356snnq00hlq3djeibs2ub)
 
@@ -131,7 +261,7 @@ Source publication: 2026-10-09T23:28:29.367Z
 
 Source publication: 2026-10-09T21:33:47.000Z
 
-Nathan Lambert 撰文认为 AI 将在基础设施和工程能力上快速进步，未来几年模型会成为超人的分布式 GPU 工程师，但这不会让模型在本质上发生巨变，也不指向通用超级智能。
+Nathan Lambert 在 Interconnects 撰文称，AI 将在基础设施和工程能力上快速加速，模型几年内可成为超人的分布式 GPU 工程师，但不会因此带来本质上不同的模型或通用超级智能。
 
 ## Jev 模型开发商 TypeSafe AI 融资 8.7 亿美元，估值达 75 亿美元
 

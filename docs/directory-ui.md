@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 目录/新闻公开快照、路由状态与已验收组件
-[OUTPUT]: 公开标签投影与站内导航契约； 目录布局、每页 50 条及预览/收藏的行为契约
+[OUTPUT]: 公开标签与导航契约；50 条分页、待加载页归一及预览/收藏行为
 [POS]: docs 的目录交互权威；视觉 token 归 design.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -21,6 +21,8 @@ All projects, every project category, Top 100, news and each Saved source show a
 The parent language route validates positive safe-integer `page` and the known `sort` values. Page 1 omits `page`. Each result section reuses DirectoryPagination only below its cards/list; it shows the item range, bounded page numbers, Previous and Next. Desktop has at most seven page-number/ellipsis slots; below `sm` it has at most five so 320px screens do not overflow. A single-page result has only its range. Zero results have no pager. The UI primitives adapt the shadcn base-nova Pagination source, retain our Base UI Button, semantic tokens and Phosphor icons, and use localized accessible names.
 
 Pagination uses real links that work with modified clicks. Ordinary clicks navigate with TanStack Router, focus `#main`, and position it below the sticky header without animation. The selected project sort travels in pagination links. Search remains in component state; it is not written into URLs, chat prompts or analytics. Changing search or sort resets to page 1 with replace navigation. Changing categories or Saved source/category starts on page 1. View changes keep the current page. Out-of-range pages clamp to the last page, then replace the URL without adding history.
+
+URL normalization compares the requested page against the full result count. It does not compare against the displayed server page: while the next loader is pending, the displayed page can still be the previous page. News loaders deliver only 50 items and the full count. Full-history search loads the static news chunk only on demand; it does not send the query to the server.
 
 Project and news previews retain the background page and filters in their unmasked route. Browser Back and Close restore that background. The public masked URL remains the standalone project/news address. Language changes preserve the public query string. Page refresh reads the requested page before rendering, not only after hydration.
 
