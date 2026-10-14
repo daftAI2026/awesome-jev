@@ -2937,6 +2937,30 @@
         "checkedAt": "2026-10-13T20:48:38.316Z"
       },
       "retryAt": "2026-10-20T20:48:38.316Z"
+    },
+    "itsodeleo/mlx-zeroeffort-decider": {
+      "status": "review",
+      "discoveredAt": "2026-10-14T00:36:11.509Z",
+      "attempts": 1,
+      "checkedAt": "2026-10-14T00:36:11.509Z",
+      "lastReview": {
+        "repo": "itsodeleo/mlx-zeroeffort-decider",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.75,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.86,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "b4097a7109eefc966731678828111d864875b992",
+        "evidenceUrl": "https://github.com/itsodeleo/mlx-zeroeffort-decider/blob/b4097a7109eefc966731678828111d864875b992/README.md",
+        "evidenceSha256": "d5dc24da2fb29463614b05ad3418ad5bedf23d316f4a751458714ac8cf6269e9",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-14T00:36:11.509Z"
+      },
+      "retryAt": "2026-10-21T00:36:11.509Z"
     }
   }
 }
