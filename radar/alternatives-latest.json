@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-14T00:36:11.509Z",
+  "at": "2026-10-14T09:01:14.490Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 101,
-      "total": 101,
+      "fetched": 105,
+      "total": 105,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 122,
-      "total": 122,
+      "fetched": 124,
+      "total": 124,
       "status": "bounded"
     }
   ],
@@ -20,28 +20,102 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 7,
   "added": 0,
-  "pending": 141,
+  "pending": 147,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "itsodeleo/mlx-zeroeffort-decider",
+      "repo": "algorythm-canada/openjevswift",
       "status": "review",
       "score": {
-        "jevAbout": 0.75,
+        "jevAbout": 0.96,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.88,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "4ea20b293402457d1fe540dda9f0962e00e812b1",
+      "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/4ea20b293402457d1fe540dda9f0962e00e812b1/README.md",
+      "evidenceSha256": "cd84727b1951b2a8adc4b34c9fb4e0719a00d462aaf9eb67e363788dbadd1967",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "itsodeleo/mlx-direct-decider",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.74,
         "jevKeep": "keep",
         "jevKeepConfidence": 0.86,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "b4097a7109eefc966731678828111d864875b992",
-      "evidenceUrl": "https://github.com/itsodeleo/mlx-zeroeffort-decider/blob/b4097a7109eefc966731678828111d864875b992/README.md",
-      "evidenceSha256": "d5dc24da2fb29463614b05ad3418ad5bedf23d316f4a751458714ac8cf6269e9",
+      "sha": "c3842af893069b78d71f9220a12269f4798de993",
+      "evidenceUrl": "https://github.com/itsodeleo/mlx-direct-decider/blob/c3842af893069b78d71f9220a12269f4798de993/README.md",
+      "evidenceSha256": "23aa2455e07dd1aef078a826ebd15accccffe021cd946fca31b61d1667027c8a",
       "model": "jev-latest",
-      "checkedAt": "2026-10-14T00:36:11.509Z"
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "kanakoferreira/jev-social",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "d66ef4b7c0d9c1bf67b214c372b67f9d9981d0c8",
+      "evidenceUrl": "https://github.com/kanakoferreira/jev-social/blob/d66ef4b7c0d9c1bf67b214c372b67f9d9981d0c8/README.md",
+      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "kaya734/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "962cdccc816dbee59747998eea496c0c7cfd69ff",
+      "evidenceUrl": "https://github.com/kaya734/jevcore/blob/962cdccc816dbee59747998eea496c0c7cfd69ff/README.md",
+      "evidenceSha256": "c396a4d585440eb6410d5116403836c4d77fb906c6832cf15bdcc83105ba78ac",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "sathiskumarjothi0-oss/bev-decisions-pypi",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.88,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.86,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "fc3774742354699685b35ae1020230f91061e40f",
+      "evidenceUrl": "https://github.com/sathiskumarjothi0-oss/bev-decisions-pypi/blob/fc3774742354699685b35ae1020230f91061e40f/README.md",
+      "evidenceSha256": "5f0788702aca7aabbe173fc6990f5a0b8585c9be2025fa27a30fe506e38e7a52",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "sma5111/coreai-kit",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "14e232b84d0ed8a404269f26d141be7f62e02062",
+      "evidenceUrl": "https://github.com/sma5111/coreai-kit/blob/14e232b84d0ed8a404269f26d141be7f62e02062/README.md",
+      "evidenceSha256": "ab62b0779133ef12a57503d8cb68b3f1c75312eebec1528b99cdea0f13c0846c",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
+    },
+    {
+      "repo": "xieshaocong33ethan/ventus-2b",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "41c2237ddda5c4223dcb99a64f65aa4f05086584",
+      "evidenceUrl": "https://github.com/xieshaocong33ethan/ventus-2b/blob/41c2237ddda5c4223dcb99a64f65aa4f05086584/README.md",
+      "evidenceSha256": "2f95f217d2b0ef4efbe2a6476efcc21dd64605abbb8265810b69a211901ad6ef",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-14T09:01:14.490Z"
     }
   ],
   "identity": {
