@@ -4978,5 +4978,20 @@
     "reason": "作者作为当事方给出融资规模、估值和业务数据，并说明自研底层技术栈与新产品线，读者可据此了解 Modal 的增长轨迹。",
     "originalUrl": "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
     "aihotUrl": "https://aihot.news/items/x5umoaa0xhd8n76uysjppz2fa"
+  },
+  {
+    "id": "dglcjhvaamnkja0r6ag18piux",
+    "title": "Jev 1.14 发布：Databricks 与 TypeSafe 合作",
+    "originalTitle": "Jev 1.14 is out!",
+    "summary": "Jev 1.14 发布了！\n\n图像输入、box API、更好的质量、更长的上下文。祝贺 TypeSafe 团队让 Jevolution 持续前进！\n\n我们 @databricks 很兴奋能与 TypeSafe 合作，将新的 Jev 带给我们的客户！",
+    "sourceName": "X：Yuchen Jin (@Yuchenj_UW)",
+    "publishedAt": "2026-10-14T21:58:44.000Z",
+    "discoveredAt": "2026-10-14T22:20:20.203Z",
+    "category": "ai-products",
+    "score": 30,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/Yuchenj_UW/status/2110490516433605087",
+    "aihotUrl": "https://aihot.news/items/dglcjhvaamnkja0r6ag18piux"
   }
 ]
