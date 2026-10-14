@@ -4948,5 +4948,35 @@
     "reason": "文章给出 ScaleDown 约束解码模型与 LangChain、Deep Agents 中间件的具体配置方法，读者可以按场景迁移用于压缩智能体上下文。",
     "originalUrl": "https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents",
     "aihotUrl": "https://aihot.news/items/uljn62mk9ujyya1xg51hc6dp8"
+  },
+  {
+    "id": "xr4399jj1u9njzs056jw9xrvk",
+    "title": "Jev 进化中，TypeSafe AI 举办市政厅",
+    "originalTitle": "what's this?",
+    "summary": "这是什么？\n\nJev 正在进化！\n\n下午 1:14 收听我们与 @CompleteSkeptic 和 @allietheicon 的市政厅，了解更多",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-14T17:16:02.000Z",
+    "discoveredAt": "2026-10-14T17:43:10.990Z",
+    "category": null,
+    "score": 21,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2110419371453825349",
+    "aihotUrl": "https://aihot.news/items/xr4399jj1u9njzs056jw9xrvk"
+  },
+  {
+    "id": "x5umoaa0xhd8n76uysjppz2fa",
+    "title": "Modal 年化收入突破 10 亿美元并完成 7.5 亿美元 D 轮融资",
+    "originalTitle": "Modal crosses $1B in Annualized Run Rate and raises $750M Series D",
+    "summary": "Modal 宣布年化收入突破 10 亿美元，并完成 7.5 亿美元 D 轮融资，投后估值 157.5 亿美元，由 Accel 领投，Kleiner Perkins 及现有投资方跟投。",
+    "sourceName": "Modal 官方工程博客（RSS）",
+    "publishedAt": "2026-10-14T00:00:00.000Z",
+    "discoveredAt": "2026-10-14T14:53:23.168Z",
+    "category": "industry",
+    "score": 71,
+    "selected": true,
+    "reason": "作者作为当事方给出融资规模、估值和业务数据，并说明自研底层技术栈与新产品线，读者可据此了解 Modal 的增长轨迹。",
+    "originalUrl": "https://modal.com/blog/1-billion-annualized-run-rate-series-d",
+    "aihotUrl": "https://aihot.news/items/x5umoaa0xhd8n76uysjppz2fa"
   }
 ]
