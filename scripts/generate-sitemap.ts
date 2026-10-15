@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖规范项目/新闻快照、路径身份与语言 alternates
+ * [INPUT]: 依赖规范项目/新闻快照、公开可见性、路径身份与语言 alternates
  * [OUTPUT]: 对外提供 buildSitemap、generateSitemap 与离线生成命令
  * [POS]: scripts 的有限索引资产边界；标签共用公开投影；不收录长尾、收藏、工作台或图片 API，不伪造 lastmod
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -12,6 +12,7 @@ import { CATEGORIES } from '../src/lib/categories.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { hasIndexableNewsSummary, newsPath } from '../src/lib/news.ts'
 import { LOCALES, localeAlternates, localizedPath } from '../src/lib/locale-routes.ts'
+import { isPublicProject } from '../src/lib/catalog-visibility.ts'
 
 const SITE_ORIGIN = 'https://awesomejev.cc'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -53,7 +54,7 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
   const taggedProjects: TaggedProject[] = []
 
   for (const value of items) {
-    if (!isSitemapItem(value) || value.type !== 'github') continue
+    if (!isSitemapItem(value) || value.type !== 'github' || !isPublicProject(value)) continue
 
     const summary = typeof value.summary === 'string' ? value.summary.trim() : ''
     if (!summary) continue

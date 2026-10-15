@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖规范 GitHub 快照、前端目录类型与 Vite 的虚拟模块/多环境更新接口
+ * [INPUT]: 依赖规范 GitHub 快照、公开可见性与 Vite 的虚拟模块/多环境更新接口
  * [OUTPUT]: 对外提供目录展示投影、虚拟模块 ID 与 directoryCatalogPlugin
- * [POS]: scripts 的构建期数据交付边界，不生成第二份规范快照或改变同步预览
+ * [POS]: scripts 的构建期公开边界；隐藏生命周期记录并裁剪审计字段，不生成第二份规范快照
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { readFile } from 'node:fs/promises'
@@ -10,6 +10,7 @@ import { resolve } from 'node:path'
 import { normalizePath, type EnvironmentModuleNode, type Plugin } from 'vite'
 import type { DirectoryItem } from '../src/lib/types.ts'
 import type { Category } from '../src/lib/categories.ts'
+import { publicProjects } from '../src/lib/catalog-visibility.ts'
 
 export type DirectoryCatalogItem = DirectoryItem & { category?: Category }
 export const DIRECTORY_CATALOG_ID = 'virtual:directory-catalog'
@@ -26,7 +27,7 @@ function pick<T extends object, K extends keyof T>(value: T, keys: readonly K[])
 
 // --- 白名单保留完整展示与校验输入；审计字段仍留在唯一规范快照 ---
 export function projectDirectoryCatalog(rows: readonly DirectoryCatalogItem[]): DirectoryCatalogItem[] {
-  return rows.map((row) => {
+  return publicProjects(rows).map((row) => {
     const meta = row.sourceMeta
     return structuredClone({
       ...pick(row, ITEM_FIELDS),

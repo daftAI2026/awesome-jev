@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖真实 Worker、规范快照、分页/排序规则与三语言文案
+ * [INPUT]: 依赖真实 Worker、公开快照、分页/排序规则与三语言文案
  * [OUTPUT]: 验证分类/Top100/新闻分页与新闻水合不泄漏离页历史
  * [POS]: scripts 的分页 HTTP 护栏；必须拦住静态第一页覆盖查询页
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -14,9 +14,10 @@ import { sortNews, type NewsItem } from '../src/lib/news.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { LOCALES, localizedPath } from '../src/lib/locale-routes.ts'
 import { readCatalog } from './catalog.ts'
+import { publicProjects } from '../src/lib/catalog-visibility.ts'
 
 const origin = process.env.TEST_SITE_ORIGIN
-const projects = readCatalog(process.cwd()).rows
+const projects = publicProjects(readCatalog(process.cwd()).rows)
 const ranks = githubStarRanks(projects)
 const news = sortNews(JSON.parse(readFileSync('data/news.json', 'utf8')) as NewsItem[])
 

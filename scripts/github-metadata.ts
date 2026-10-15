@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖共享 GitHub 只读客户端、catalog 的编辑保护、持久化身份/历史 ID 种子与 UI 排名
- * [OUTPUT]: 提供 50 项身份批读、全目录刷新、续点与只读探针
- * [POS]: 元数据读取边界；不可访问保留旧值，异常响应撤销本轮增量
+ * [OUTPUT]: 提供 50 项身份批读、全目录刷新、本站 ID 失败凭据与只读探针
+ * [POS]: 元数据读取边界；按本站 ID 计数与续点，同 URL 新旧身份不合并，异常撤销增量
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { resolve } from 'node:path'
@@ -20,7 +20,7 @@ export interface MetadataReport {
   top100: { ok: number; total: number; complete: boolean; unrefreshed: string[] }
   resolved: { from: string; to: string; databaseId: number }[]
 }
-interface MetadataCursor { metadataCursor: number; metadataNext?: string }
+interface MetadataCursor { metadataCursor: number; metadataNext?: string; metadataNextId?: string }
 export interface IdentityBootstrapReport {
   ok: number; failed: number; batches: number; cost: number | null; resolved: MetadataReport['resolved']; deferred?: string
 }
@@ -37,9 +37,9 @@ export function metadataTop(rows: DirectoryItem[]): DirectoryItem[] {
 }
 export function updateMetadataTop(rows: DirectoryItem[], fresh: Set<string>, report: MetadataReport): void {
   const top = metadataTop(rows)
-  const ok = top.filter((row) => fresh.has(rowKey(row))).length
-  report.top100 = { ok, total: top.length, complete: ok === top.length, unrefreshed: top.filter((row) => !fresh.has(rowKey(row))).map(rowKey) }
-  report.remaining = rows.filter((row) => row.type === 'github' && !fresh.has(rowKey(row))).length
+  const ok = top.filter((row) => fresh.has(row.id)).length
+  report.top100 = { ok, total: top.length, complete: ok === top.length, unrefreshed: top.filter((row) => !fresh.has(row.id)).map(rowKey) }
+  report.remaining = rows.filter((row) => row.type === 'github' && !fresh.has(row.id)).length
 }
 
 // --- 有基线按 Node ID 查对象；旧数据由 GitHub 解析地址后自动建基线，不把名字当身份 ---
@@ -83,7 +83,7 @@ export async function readMetadataBatch(api: GitHubApi, rows: DirectoryItem[]): 
     const current = repoKey(value.url)!
     if (current !== rowKey(row)) resolved.push({ from: rowKey(row), to: current, databaseId: identity.databaseId })
     const [owner, name] = value.nameWithOwner.split('/')
-    return { id: identity.databaseId, node_id: identity.nodeId, html_url: row.url, full_name: value.nameWithOwner, owner: { login: owner }, name,
+    return { id: identity.databaseId, node_id: identity.nodeId, html_url: value.url, full_name: value.nameWithOwner, owner: { login: owner }, name,
       stargazers_count: value.stargazerCount, forks_count: value.forkCount,
       language: value.primaryLanguage === null ? null : (value.primaryLanguage as { name: string }).name }
   })
@@ -119,13 +119,14 @@ export async function bootstrapIdentities(rows: DirectoryItem[], api: GitHubApi)
 export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCursor, api: GitHubApi, otherLimit = rows.length) {
   if (!count(otherLimit)) throw new Error('github-invalid-metadata-limit')
   const original = structuredClone(rows)
-  const originalCursor = state.metadataCursor, originalNext = state.metadataNext
+  const originalCursor = state.metadataCursor, originalNext = state.metadataNext, originalNextId = state.metadataNextId
   const report: MetadataReport = { ok: 0, failed: 0, batches: 0, cost: 0, other: 0, remaining: rows.length,
     attempted: 0, fresh: 0, unavailable: 0, deferredRemaining: 0,
     top100: { ok: 0, total: 0, complete: false, unrefreshed: [] }, resolved: [] }
   const fresh = new Set<string>()
+  const observed = new Map<string, GitHubRepository>()
   const attempted = new Set<string>()
-  const failures: { repo: string; reason: string }[] = []
+  const failures: { id: string; repo: string; reason: string }[] = []
   let deferred: { phase: string; reason: string; metadataRemaining?: number } | undefined
   const read = async (batch: DirectoryItem[]): Promise<boolean> => {
     try {
@@ -136,20 +137,20 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
       if (result.deferred) {
         deferred = { phase: 'metadata', reason: result.deferred }
         for (const [i, row] of batch.entries()) {
-          attempted.add(rowKey(row))
+          attempted.add(row.id)
           if (!result.repositories[i]) {
             report.failed++
-            failures.push({ repo: rowKey(row), reason: 'github-invalid-response' })
+            failures.push({ id: row.id, repo: rowKey(row), reason: 'github-invalid-response' })
           }
         }
         return false
       }
       batch.forEach((row, i) => {
         const key = rowKey(row)
-        attempted.add(key)
+        attempted.add(row.id)
         const meta = result.repositories[i]
-        if (meta) { Object.assign(row, refreshRow(row, meta)); fresh.add(key); report.ok++ }
-        else { report.failed++; failures.push({ repo: key, reason: 'github-unavailable-repository' }) }
+        if (meta) { Object.assign(row, refreshRow(row, { ...meta, html_url: row.url })); observed.set(row.id, meta); fresh.add(row.id); report.ok++ }
+        else { report.failed++; failures.push({ id: row.id, repo: key, reason: 'github-unavailable-repository' }) }
       })
       return true
     } catch (error) {
@@ -161,8 +162,8 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
       }
       for (const row of batch) {
         const key = rowKey(row)
-        attempted.add(key); report.failed++
-        failures.push({ repo: key, reason: error instanceof Error && /^github-[a-z0-9-]+$/.test(error.message) ? error.message : 'github-invalid-response' })
+        attempted.add(row.id); report.failed++
+        failures.push({ id: row.id, repo: key, reason: error instanceof Error && /^github-[a-z0-9-]+$/.test(error.message) ? error.message : 'github-invalid-response' })
       }
       deferred = { phase: 'metadata', reason: 'github-invalid-response' }
       return false
@@ -171,7 +172,7 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
   const priority = async () => {
     // 每个身份本轮最多尝试一次；星标下降带来的新 Top 必须继续补读，失败不能伪称成功。
     while (!deferred) {
-      const pending = metadataTop(rows).filter((row) => !attempted.has(rowKey(row)))
+      const pending = metadataTop(rows).filter((row) => !attempted.has(row.id))
       if (!pending.length) break
       if (!await read(pending.slice(0, METADATA_BATCH_SIZE))) break
     }
@@ -179,7 +180,8 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
   }
   await priority()
   if (!deferred && rows.length) {
-    const anchor = state.metadataNext ? rows.findIndex((row) => rowKey(row) === state.metadataNext) : -1
+    const identityAnchor = state.metadataNextId ? rows.findIndex((row) => row.id === state.metadataNextId) : -1
+    const anchor = identityAnchor >= 0 ? identityAnchor : state.metadataNext ? rows.findIndex((row) => rowKey(row) === state.metadataNext) : -1
     let cursor = anchor >= 0 ? anchor : state.metadataCursor % rows.length
     let visited = 0
     while (visited < rows.length && report.other < otherLimit && !deferred) {
@@ -189,13 +191,14 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
       while (visited + scanned < rows.length && batch.length < Math.min(METADATA_BATCH_SIZE, otherLimit - report.other)) {
         const row = rows[next]
         next = (next + 1) % rows.length; scanned++
-        if (row.type === 'github' && !attempted.has(rowKey(row))) batch.push(row)
+        if (row.type === 'github' && !attempted.has(row.id)) batch.push(row)
       }
       if (batch.length && !await read(batch)) break
       report.other += batch.length
       cursor = next; visited += scanned
       state.metadataCursor = cursor
       state.metadataNext = rowKey(rows[cursor])
+      state.metadataNextId = rows[cursor].id
     }
     await priority()
   }
@@ -203,18 +206,20 @@ export async function refreshMetadata(rows: DirectoryItem[], state: MetadataCurs
   // 安全异常撤销整轮增量；正常限流仍保留已完成批次，供 partial 快照验证。
   if (deferred?.reason === 'github-invalid-response') {
     rows.forEach((row, i) => { Object.assign(row, original[i]) })
-    fresh.clear(); report.ok = 0; report.resolved = []
+    fresh.clear(); observed.clear(); report.ok = 0; report.resolved = []
     state.metadataCursor = originalCursor
     if (originalNext === undefined) delete state.metadataNext
     else state.metadataNext = originalNext
+    if (originalNextId === undefined) delete state.metadataNextId
+    else state.metadataNextId = originalNextId
     updateMetadataTop(rows, fresh, report)
   }
   report.attempted = attempted.size
   report.fresh = fresh.size
   report.unavailable = failures.filter((failure) => failure.reason === 'github-unavailable-repository').length
-  report.deferredRemaining = rows.filter((row) => row.type === 'github' && !attempted.has(rowKey(row))).length
+  report.deferredRemaining = rows.filter((row) => row.type === 'github' && !attempted.has(row.id)).length
   if (deferred) deferred.metadataRemaining = report.remaining
-  return { report, fresh, failures, deferred }
+  return { report, fresh, failures, deferred, observed }
 }
 
 // --- 可在可信 Actions 中仅使用内置 token 验证跨公开仓库读取，不加载任何模型密钥 ---

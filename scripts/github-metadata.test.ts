@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test 与批量元数据的身份、续点及只读探针接口
- * [OUTPUT]: 验证全目录批读、不可访问隔离、异常失败关闭和续点恢复
+ * [OUTPUT]: 验证全目录批读、真实身份读数、不可访问隔离和异常撤销
  * [POS]: scripts 元数据调度契约，不连接 GitHub 或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,7 +10,7 @@ import { readMetadataBatch, refreshMetadata, probeMetadata, metadataTop, bootstr
 import { METADATA_IDENTITY_ALIASES } from './github-metadata-aliases.ts'
 import { repoKey } from './catalog.ts'
 import { createGitHubClient } from './github-client.ts'
-const emptyState = () => ({ metadataCursor: 0 } as { metadataCursor: number; metadataNext?: string })
+const emptyState = () => ({ metadataCursor: 0 } as { metadataCursor: number; metadataNext?: string; metadataNextId?: string })
 import { githubStarRanks } from '../src/lib/sort.ts'
 import type { DirectoryItem, GitHubApi } from './model-types.ts'
 const rows = (n: number): DirectoryItem[] => Array.from({ length: n }, (_, i) => ({ id: `r-${i}`, type: 'github', title: `Repo ${i}`,
@@ -159,6 +159,8 @@ test('previously unseen rename creates its baseline automatically; later moves q
         stargazerCount: 100, forkCount: 3, primaryLanguage: null }, rateLimit: { cost: 1 } } }
     })
     assert.equal(result.report.top100.complete, true)
+    assert.equal(result.observed.get(source[0].id)?.html_url, `https://github.com/${current}`)
+    assert.equal(result.observed.get(source[0].id)?.id, 42)
     assert.deepEqual(result.report.resolved, [{ from: 'test/r-0', to: current, databaseId: 42 }])
     assert.deepEqual(source[0], { ...before, sourceMeta: { ...before.sourceMeta, stars: 100, forks: 3, language: null,
       githubIdentity: { databaseId: 42, nodeId } } })
@@ -427,4 +429,73 @@ test('metadata accounting separates unavailable identities from deferred work an
   assert.equal(result.report.remaining, 51)
   assert.equal(result.report.cost, null, 'an interrupted query has unknown cost')
   assert.equal(result.deferred?.reason, 'github-deadline')
+})
+
+// --- 同地址可保留旧 replaced 身份；一次尝试对应本站记录，不对应可复用的仓库名 ---
+test('replaced and current identities sharing one URL retain separate metadata accounting', async () => {
+  const source = rows(2)
+  source[0].sourceMeta.githubIdentity = { databaseId: 1, nodeId: 'old-object' }
+  source[0].sourceMeta.lifecycle = { state: 'replaced', since: '2026-10-16T00:00:00.000Z' }
+  source[1].url = source[0].url
+  source[1].sourceMeta.githubIdentity = { databaseId: 2, nodeId: 'new-object' }
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    const data: Record<string, unknown> = { rateLimit: { cost: 1 } }
+    for (const match of request!.query.matchAll(/(r\d+):\s*node\(id:"([^"]+)"\)/g)) {
+      data[match[1]] = match[2] === 'old-object' ? null : { id: 'new-object', databaseId: 2,
+        nameWithOwner: 'test/r-0', url: source[1].url, stargazerCount: 8, forkCount: 0, primaryLanguage: null }
+    }
+    return { data }
+  })
+  assert.equal(result.report.attempted, 2)
+  assert.equal(result.report.fresh, 1)
+  assert.equal(result.report.unavailable, 1)
+  assert.equal(result.report.remaining, 1)
+  assert.equal(result.report.top100.ok, 1)
+  assert.equal(result.report.top100.complete, false)
+  assert.deepEqual([...result.fresh], [source[1].id])
+  assert.deepEqual(result.failures, [{ id: source[0].id, repo: 'test/r-0', reason: 'github-unavailable-repository' }])
+})
+
+test('a same-address non-Top identity is not skipped after the Top identity was attempted', async () => {
+  const source = rows(105)
+  source.forEach((row, i) => { row.sourceMeta.githubIdentity = { databaseId: 1000 + i, nodeId: `test/r-${i}` } })
+  source[0].sourceMeta.lifecycle = { state: 'replaced', since: '2026-10-16T00:00:00.000Z' }
+  source[104].url = source[0].url
+  const seen: string[] = []
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    const payload = response(request!.query)
+    for (const match of request!.query.matchAll(/(r\d+):\s*node\(id:"test\/r-(\d+)"\)/g)) {
+      seen.push(match[2])
+      if (match[2] === '0') payload.data[match[1]] = null
+      if (match[2] === '104') Object.assign(payload.data[match[1]] as object, { url: source[104].url, nameWithOwner: 'test/r-0' })
+    }
+    return payload
+  })
+  assert.equal(seen.filter(id => id === '104').length, 1)
+  assert.equal(new Set(seen).size, 105)
+  assert.equal(result.report.attempted, 105)
+  assert.equal(result.report.fresh, 104)
+  assert.equal(result.report.deferredRemaining, 0)
+})
+
+test('local-ID cursor disambiguates a shared URL while keeping the legacy address anchor', async () => {
+  const source = rows(120)
+  source.forEach((row, i) => { row.sourceMeta.githubIdentity = { databaseId: 1000 + i, nodeId: `test/r-${i}` } })
+  source[110].url = source[100].url
+  const state = { metadataCursor: 0, metadataNext: 'test/r-100', metadataNextId: 'r-110' }
+  const queries: string[] = []
+  await refreshMetadata(source, state, async (_path, request) => {
+    queries.push(request!.query)
+    const payload = response(request!.query)
+    for (const match of request!.query.matchAll(/(r\d+):\s*node\(id:"test\/r-110"\)/g)) {
+      Object.assign(payload.data[match[1]] as object, { url: source[110].url, nameWithOwner: 'test/r-100' })
+    }
+    return payload
+  }, 1)
+  assert.match(queries[2], /node\(id:"test\/r-110"\)/)
+  assert.equal(state.metadataNextId, 'r-111')
+  assert.equal(state.metadataNext, 'test/r-111')
+  const before = structuredClone(state)
+  await refreshMetadata(source, state, async () => ({ data: {} }))
+  assert.deepEqual(state, before, 'unsafe response must restore both anchor representations')
 })

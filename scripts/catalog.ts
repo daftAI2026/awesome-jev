@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖规范目录 JSON、模型分类规则、收录依据、共享安全地址与 GitHub 身份基线校验
+ * [INPUT]: 依赖规范目录、公共可见性、固定收录依据与角色写权限边界
  * [OUTPUT]: 对外提供目录读取、运行时校验、容量发布门槛、README 渲染和受控快照应用
- * [POS]: scripts 的规范数据边界，守住人工编辑字段与自动发布权限
+ * [POS]: scripts 的规范数据边界，守住数字身份、历史记录与自动发布权限
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
@@ -12,6 +12,8 @@ import { isProjectCategory, reviewDecision } from './jev-client.ts'
 import { isInclusionBasis, isPinnedEvidenceUrl, pinnedSource } from '../src/lib/inclusion.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { readGitHubIdentity, repositoryIdentity } from './github-identity.ts'
+import { publicProjects, isPublicProject } from '../src/lib/catalog-visibility.ts'
+import { validateCollectedRow, validateReplacements, type CatalogWriter } from './catalog-mutation.ts'
 import type {
   Catalog,
   CatalogSourceMeta,
@@ -88,8 +90,31 @@ function validateScore(value: Record<string, unknown>): void {
   }
   if (value.category !== undefined && !isProjectCategory(value.category)) throw new Error('Invalid score category')
 }
+function validateLifecycle(value: unknown, identity: unknown): void {
+  if (value === undefined) return
+  if (!isRecord(value) || Object.keys(value).some(key => !['state', 'since', 'reason', 'target'].includes(key)) ||
+    !['unavailable', 'review', 'replaced'].includes(String(value.state)) || (typeof value.since !== 'string' || !validDate(value.since, true)) ||
+    !readGitHubIdentity(identity)) throw new Error('Invalid catalog lifecycle')
+  if (value.state === 'unavailable') {
+    if (value.reason !== undefined || value.target !== undefined) throw new Error('Invalid catalog lifecycle')
+    return
+  }
+  const target = value.target
+  if (!['identity-changed', 'migration-evidence', 'address-conflict'].includes(String(value.reason)) || !isRecord(target) ||
+    Object.keys(target).some(key => !['url', 'databaseId', 'nodeId'].includes(key)) ||
+    !readGitHubIdentity(target) || typeof target.url !== 'string' || !repoKey(target.url) ||
+    value.state === 'replaced' && (value.reason !== 'identity-changed' || target.databaseId === readGitHubIdentity(identity)!.databaseId)) {
+    throw new Error('Invalid catalog lifecycle')
+  }
+}
 function validateSourceFields(meta: Record<string, unknown>, url: string): void {
   if (meta.githubIdentity !== undefined && !readGitHubIdentity(meta.githubIdentity)) throw new Error('Invalid GitHub identity')
+  validateLifecycle(meta.lifecycle, meta.githubIdentity)
+  if (meta.previousInclusion !== undefined && (!Array.isArray(meta.previousInclusion) || meta.previousInclusion.some(basis => {
+    if (!isRecord(basis) || !Array.isArray(basis.evidence) || !isRecord(basis.evidence[0]) || typeof basis.evidence[0].url !== 'string') return true
+    const previous = basis.evidence[0].url.split('/').slice(0, 5).join('/')
+    return ![url, ...(Array.isArray(meta.previousUrls) ? meta.previousUrls : [])].some(source => typeof source === 'string' && repoKey(source) === repoKey(previous)) || !isInclusionBasis(basis, previous)
+  }))) throw new Error('Invalid historical inclusion')
   for (const key of ['author', 'language'] as const) {
     if (meta[key] != null && typeof meta[key] !== 'string') throw new Error(`Invalid ${key}`)
   }
@@ -157,8 +182,8 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
       if (!Array.isArray(sourceMeta.previousUrls)) throw new Error('Invalid previous repository URLs')
       for (const previous of sourceMeta.previousUrls) {
         const key = typeof previous === 'string' ? projectPathFromUrl(previous) : null
-        if (!key || key === projectPathFromUrl(url) || previousUrls.has(key)) throw new Error('Invalid previous repository URLs')
-        previousUrls.add(key)
+        if (!key || key === projectPathFromUrl(url) || isPublicProject(candidate) && previousUrls.has(key)) throw new Error('Invalid previous repository URLs')
+        if (isPublicProject(candidate)) previousUrls.add(key)
       }
     }
     if (ids.has(id)) throw new Error(`Duplicate id: ${id}`)
@@ -173,8 +198,10 @@ export function validateRows(rows: unknown): asserts rows is DirectoryItem[] {
     if (!key || typeof sourceMeta.repo !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sourceMeta.repo)) {
       throw new Error(`Invalid repository: ${id}`)
     }
-    if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
-    repos.add(key)
+    if (isPublicProject(candidate)) {
+      if (repos.has(key)) throw new Error(`Duplicate repository: ${key}`)
+      repos.add(key)
+    }
     if (Object.hasOwn(sourceMeta, 'openIssues')) throw new Error('Legacy openIssues field')
     if (sourceMeta.inclusion !== undefined && !isInclusionBasis(sourceMeta.inclusion, url)) {
       throw new Error(`Invalid inclusion basis: ${id}`)
@@ -273,7 +300,7 @@ export function replaceRegion(text: string, name: string, content: string): stri
 
 export function renderReadme(text: string, rows: DirectoryItem[]): string {
   validateRows(rows)
-  const projects = rows
+  const projects = publicProjects(rows)
   const groups = new Map<string, GitHubDirectoryItem[]>(sections.map(([title]) => [title, []]))
   for (const row of projects) {
     const section = sections.find(([, category]) => category === (row.category ?? 'other'))
@@ -327,7 +354,7 @@ export function syncReadme(root: string, { check = false }: { check?: boolean } 
 }
 
 // --- 发布边界：快照不能删除旧数据或改写人工编辑内容 ---
-export function validateSnapshot(root: string, snapshot: string): Catalog {
+export function validateSnapshot(root: string, snapshot: string, mode: CatalogWriter = 'radar'): Catalog {
   const current = readCatalog(root)
   const next = readCatalog(snapshot)
   validateRepositoryIdentityChanges(next.rows, current.rows)
@@ -340,24 +367,22 @@ export function validateSnapshot(root: string, snapshot: string): Catalog {
       const old = rows[i]
       const fresh = after[i]
       if (!old || !fresh) throw new Error('Catalog deletion')
-      const editorial: Record<string, unknown> = { ...old.sourceMeta }
-      for (const key of ['stars', 'forks', 'language', 'githubIdentity'] as const) {
-        if (Object.hasOwn(fresh.sourceMeta, key)) editorial[key] = fresh.sourceMeta[key]
+      try { validateCollectedRow(old, fresh, mode) } catch (error) {
+        throw new Error(`Editorial data changed: ${error instanceof Error ? error.message : 'invalid mutation'}`)
       }
-      const expected: GitHubDirectoryItem = { ...old, sourceMeta: editorial }
-      if (!isDeepStrictEqual(expected, fresh)) throw new Error('Editorial data changed')
     }
   }
   for (const row of next.rows.filter((item) => !oldById.has(item.id))) {
     if (reviewDecision(row.sourceMeta) !== 'keep') throw new Error('Unreviewed addition')
   }
+  validateReplacements(current.rows, next.rows, mode)
   const expected = renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), next.rows)
   if (expected !== readFileSync(join(snapshot, 'README.md'), 'utf8')) throw new Error('Unexpected README changes')
   return next
 }
 
-export function applySnapshot(root: string, snapshot: string, files = ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json']): void {
-  validateSnapshot(root, snapshot)
+export function applySnapshot(root: string, snapshot: string, files = ['data/github.json', 'README.md', 'radar/state.json', 'radar/latest.json'], mode: CatalogWriter = 'radar'): void {
+  validateSnapshot(root, snapshot, mode)
   // 所有输入先验证，之后才写入。state/latest 的结构由雷达 CLI 额外校验。
   for (const file of files) {
     const content = readFileSync(join(snapshot, file), 'utf8')

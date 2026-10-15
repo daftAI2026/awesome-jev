@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、展示投影、分享图身份与 Git 历史
+ * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
  * [OUTPUT]: 对外提供多环境构建、有限预渲染路径及可信更新时间配置
- * [POS]: 根级构建编排，规范数据决定索引，展示虚拟模块只裁剪浏览器未用审计字段
+ * [POS]: 根级构建编排；仅公开记录进入预渲染和计数，展示虚拟模块裁剪隐藏记录与审计字段
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { execFileSync } from 'node:child_process'
@@ -21,9 +21,11 @@ import { projectPathFromUrl } from './src/lib/project-routes.ts'
 import { newsPath } from './src/lib/news.ts'
 import { LOCALES, localizedPath } from './src/lib/locale-routes.ts'
 import { siteShareImage } from './src/lib/share-image.ts'
+import { publicProjects } from './src/lib/catalog-visibility.ts'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
-const projectPaths = githubData
+const publicCatalog = publicProjects(githubData)
+const projectPaths = publicCatalog
   .filter((item) => item.type === 'github' && typeof item.summary === 'string' && item.summary.trim().length > 0)
   .map((item) => {
     const projectPath = projectPathFromUrl(item.url)
@@ -94,8 +96,8 @@ export default defineConfig({
   ],
   define: {
     'import.meta.env.VITE_CATALOG_UPDATED_AT': JSON.stringify(catalogUpdatedAt ?? ''),
-    'import.meta.env.VITE_SITE_OG_ALT': JSON.stringify(siteShareImage(githubData.filter((item) => item.type === 'github').length).alt),
-    'import.meta.env.VITE_SITE_OG_PATH': JSON.stringify(siteShareImage(githubData.filter((item) => item.type === 'github').length).path),
+    'import.meta.env.VITE_SITE_OG_ALT': JSON.stringify(siteShareImage(publicCatalog.filter((item) => item.type === 'github').length).alt),
+    'import.meta.env.VITE_SITE_OG_PATH': JSON.stringify(siteShareImage(publicCatalog.filter((item) => item.type === 'github').length).path),
   },
   resolve: {
     alias: {

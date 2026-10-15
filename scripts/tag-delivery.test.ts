@@ -1,19 +1,21 @@
 /**
- * [INPUT]: 依赖真实 Worker、规范快照、公开标签与三语言分页规则
+ * [INPUT]: 依赖真实 Worker、公开快照、公开标签与三语言分页规则
  * [OUTPUT]: 验证标签索引/详情内链、逐页 SSR、特殊字符、301/404 和 noindex
  * [POS]: scripts 的标签 HTTP 交付护栏；不以客户端水合掩盖错误首屏
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import projects from '../data/github.json' with { type: 'json' }
+import snapshot from '../data/github.json' with { type: 'json' }
 import { projectTagIndex, projectTags, hasProjectTag, TAG_INDEX_MIN_PROJECTS } from '../src/lib/project-tags.ts'
 import { localizedPath, LOCALES } from '../src/lib/locale-routes.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { paginate } from '../src/lib/pagination.ts'
 import { sortGithubItems } from '../src/lib/sort.ts'
+import { publicProjects } from '../src/lib/catalog-visibility.ts'
 
 const origin = process.env.TEST_SITE_ORIGIN
+const projects = publicProjects(snapshot)
 const index = projectTagIndex(projects)
 
 for (const locale of LOCALES) {

@@ -1,6 +1,6 @@
 <!--
-[INPUT]: 依赖采集/审核契约、GitHub Actions、执行交接与离线测试
-[OUTPUT]: 提供采集发布规则、权限边界与 Workflow 解耦 TDD 证据
+[INPUT]: 依赖采集/审核、生命周期、GitHub Actions 与离线测试
+[OUTPUT]: 提供采集发布、可逆下架、迁址与原预算重审规则
 [POS]: docs 的自动化运维契约，连接工作流权限隔离与目录数据发布，不作为运行时代码依赖
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -31,7 +31,7 @@ npm run data:check
 | Workflow | 职责 | 模型凭据 |
 | --- | --- | --- |
 | Jev ecosystem radar | 核心发现、审核与目录发布 | 原核心预算 |
-| Jev metadata sync | 全目录统计与身份刷新 | 无 |
+| Jev metadata sync | 全目录统计、生命周期观察与同身份迁址 | 无 |
 | Jev site delivery | PR/main 校验、产物部署与收录通知 | 无 |
 | Open-source alternatives radar | 独立替代实现发现与审核 | 原替代预算 |
 | Jev submission review | 投稿建议性审核 | 原投稿预算 |
@@ -140,7 +140,8 @@ primary/secondary 不单凭 403 或 429 区分。
 未知错误不解释为“没有结果”。
 
 独立统计以 checkout 的基线 SHA 和目录集合为范围。
-每批最多 50，每个身份每轮最多尝试一次。
+GraphQL 每批最多 50，每个身份每轮批读一次。
+明确不可访问身份另有有界 REST 复核。
 默认遍历全目录，不再截断其它 1000 项。
 这是请求批次选择，不是 GitHub 的项目数量限制。
 GITHUB_TOKEN GraphQL 基础额度是每仓库每小时 1000 点。
@@ -157,7 +158,11 @@ Top100 新鲜度仅作报告，不再阻断其它安全数据。
 这明确替换旧的“Top100 全成功才可继续”规则。
 
 `radar/metadata-state.json` 独占统计续点。
+metadataNextId 优先按本站稳定 ID 续读。
+metadataNext 保留旧 URL 锚点兼容，不升级状态版本。
 `radar/metadata-latest.json` 独占本轮统计报告。
+新失败凭据携带本站 id，repo 只作地址展示。
+恢复只清除同 id 的失败；无 id 的历史报告仍可读取。
 初始报告为 not-run，不编造时间或刷新成功。
 核心 v2 不继续写 metadataCursor/metadataNext。
 迁移命令从排空后的最新 v1 状态复制统计续点。
@@ -169,11 +174,60 @@ Top100 新鲜度仅作报告，不再阻断其它安全数据。
 28 条历史种子只服务旧行，不扩展人工改名白名单。
 首次基线不能追溯此前已被重占的名称。
 发现端的 legacy bootstrap 只补身份，不改统计。
-改名后的已收录仓库不再次入队或付费审核。
+相同身份且固定证据连续的改名不再次付费。
+迁移证据失败或不同数字身份交原 radar 重审。
 
 依据：[GraphQL limits](https://docs.github.com/en/graphql/overview/rate-limits-and-query-limits-for-the-graphql-api)。
 
 Radar/alternatives recovery checks trusted attempts and their jobs, including previous attempts of the current run. It orders by actual collect completion, not the run's creation order. An executed same-UTC-day collect with a missing/expired budget artifact blocks further paid work instead of falling back to an older counter; a skipped scan or verify-only run does not. The next UTC day resets the daily accounting. Unfiltered workflow history is bounded to 10,000 runs, attempts to 100, and jobs/artifacts to 1,000 per queried endpoint; exceeding a bound fails closed. This uses the workflow's serial execution order, not a transactional or exactly-once ledger. Runner loss before upload remains an unknown outcome requiring investigation, not permission to reset today's allowance.
+
+### 目录生命周期与自动迁址
+
+复用 metadata Workflow，不增加第八条 Workflow。
+API 404 只证明当前身份不可见，不区分删除与私有。
+旧行与旧统计始终保留；达到门槛后仅从公开投影下架。
+
+失效观察要求完整正常轮次及公开控制探针成功。
+没有待复核缺失对象时，不执行额外控制探针。
+至少三个独立六小时周期，首末跨度至少 72 小时。
+同一个 GITHUB_RUN_ID 的重跑不增加次数。
+同周期的多个手动 run 也不增加次数。
+未尝试、限流、认证、5xx 与未知响应不累计失效。
+后续复核异常撤销本轮新增观察与 unavailable 转换。
+已核实统计保留，暂停原因写入 lifecycle 报告。
+异常比例的分母分子均排除 replaced 墓碑。
+不可访问达到十项且占剩余目录一半时，跳过失效累计。
+统计尝试、失败及 Top100 仍计入全部规范身份。
+报告明确标记 mass-unavailable，不批量自动下架。
+
+正常读取复用 Node ID 批读的数字身份与地址。
+仅缺失身份每轮最多复核 50 项，按周期轮转。
+依次请求数字 ID 与旧路径，最多 100 次 REST 请求。
+同路径返回不同数字 ID，立即隔离为 review。
+它不是旧项目恢复，也不覆盖旧数字 ID 或旧评分。
+
+同数字 ID 新地址先核验旧固定版本证据。
+来源文件须匹配 Git blob SHA，引文须真实存在。
+已有文件哈希和整体收据哈希也须匹配。
+旧收据未保存 sha 字段时，使用证据 URL 中的固定 SHA。
+证据缺失或地址冲突进入 review，并保存 API 确认的 target。
+限流、认证或服务故障暂停证据迁移，不伪造失败结论。
+成功迁移保留本站 ID、人工摘要、评分与收据语义。
+仅仓库名直接派生的标题和 owner 直接派生的作者随迁。
+旧地址进入 previousUrls，引用只迁路径，不改固定版本。
+
+同身份重新可访问时，只自动解除 unavailable。
+人工移除的行不重新创建，replaced 不自动复活。
+review 由原核心 radar 按既有门槛与预算重新审核。
+新数字身份审核通过后追加新记录，旧记录保留为 replaced。
+同身份重审保留旧 inclusion 历史，不把旧依据改写成新结论。
+计费仍是核心每日 2000 次实际 HTTP 尝试，包含分段与重试。
+普通生命周期观察、改名取证与恢复不调用模型。
+
+公开目录、详情、别名、OG、README、sitemap 与机器文档，
+均只读取没有 lifecycle 字段的记录。
+完整规范记录继续用于身份去重、审计与恢复。
+完整字段与状态契约见 [data-model.md](data-model.md#catalog-lifecycle-and-public-visibility)。
 
 ### Recover a validated snapshot without another model call
 
@@ -183,7 +237,7 @@ Radar/alternatives recovery checks trusted attempts and their jobs, including pr
 
 ### Latest-main publication
 
-All three collectors call `scripts/publish-data.ts` after their original validation. It fetches current main before committing. With no new upstream commit, it regenerates sitemap and uses the already-validated fast path. When main advanced, a detached temporary worktree starts at that latest commit and `publication-merge.ts` overlays only the difference between the collection baseline and this run's result. Latest-main order, unrelated additions, human descriptions/README prose and source withdrawals are retained; catalogs only update permitted scalar/identity fields and add reviewed projects. Concurrent differing news edits retain the entire main record. Conflicting established GitHub identities or an independently advanced same-collector checkpoint are real conflicts, not silently overwritten.
+All four data-producing workflows call `scripts/publish-data.ts` after their original validation. It fetches current main before committing. With no new upstream commit, it regenerates sitemap and uses the already-validated fast path. When main advanced, a detached temporary worktree starts at that latest commit and `publication-merge.ts` overlays only the difference between the collection baseline and this run's result. Latest-main order, unrelated additions, human descriptions/README prose and source withdrawals are retained; catalogs only update permitted scalar/identity fields and add reviewed projects. Concurrent differing news edits retain the entire main record. Conflicting established GitHub identities or an independently advanced same-collector checkpoint are real conflicts, not silently overwritten.
 
 README and sitemap are regenerated from the combined snapshots, rather than text-merging generated files. Discovery publication never re-reads Top100. Metadata publication keeps the original baseline coverage report; no paid model review is repeated. The merged worktree runs typecheck, tests, catalog/news/category checks, lint, build and zero-skip delivery checks. Only that collector's owned paths are committed. A normal push racing with another main commit restarts overlay/validation, up to three attempts. Permission/network failures with unchanged main and validation failures stop without publishing. No force-push, blanket old-snapshot copy, or reset/rebase of the caller's checkout is used. Temporary worktrees are owned and removed by the publisher; the CLI allows real publication only in Actions.
 

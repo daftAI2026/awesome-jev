@@ -195,9 +195,9 @@ test('manual scorer limits paid reviews for GitHub projects', async (t) => {
   t.after(() => rmSync(root, { recursive: true, force: true }))
   mkdirSync(join(root, 'scripts')); mkdirSync(join(root, 'data'))
   mkdirSync(join(root, 'src/lib'), { recursive: true })
-  for (const file of ['inclusion.ts', 'project-routes.ts']) copyFileSync(`src/lib/${file}`, join(root, 'src/lib', file))
+  for (const file of ['inclusion.ts', 'project-routes.ts', 'catalog-visibility.ts']) copyFileSync(`src/lib/${file}`, join(root, 'src/lib', file))
   writeFileSync(join(root, 'package.json'), '{"type":"module"}')
-  for (const file of ['score-sources.ts', 'catalog.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts', 'github-identity.ts', 'model-types.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
+  for (const file of ['score-sources.ts', 'catalog.ts', 'catalog-mutation.ts', 'jev-client.ts', 'github-client.ts', 'github-evidence.ts', 'github-identity.ts', 'model-types.ts']) copyFileSync(`scripts/${file}`, join(root, 'scripts', file))
   for (const file of ['github.json']) {
     writeFileSync(join(root, 'data', file), JSON.stringify([1, 2].map((n) => ({ id: `${file}-${n}`, type: 'github',
       title: 'Test', summary: 'Test', url: 'https://github.com/test/test', sourceMeta: {} }))))

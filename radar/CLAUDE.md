@@ -2,10 +2,10 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-state.json: 核心 v2 搜索与候选检查点，保存 nextReviewLane 和最多 100 条残页；不再拥有统计续点
+state.json: 核心 v2 搜索与候选检查点，保存绑定原目录的 catalogReview、nextReviewLane 和最多 100 条残页；不再拥有统计续点
 latest.json: 核心发现/审核轮次、背压与取证收据；历史 metadata 字段不再作为刷新或发布门
-metadata-state.json: version 1 的独占 metadataCursor/metadataNext；从排空后的最新旧状态迁移
-metadata-latest.json: 独立统计基线 SHA、覆盖、成本与失败分类；初始 not-run，不伪造运行记录
+metadata-state.json: version 1 的统计续点 metadataNextId/旧 URL 与失效 observations；按本地 ID 保存独立运行/六小时周期，不手填历史
+metadata-latest.json: 独立统计覆盖和生命周期迁址/隔离/恢复计数；失败轮次不冒称有效失效观察
 alternatives-state.json: 替代实现的独立搜索/候选检查点，不复用核心元数据续点或付费账本
 alternatives-latest.json: 替代实现的独立审查与新增记录，不替代核心元数据报告
 

@@ -1,10 +1,11 @@
 /**
- * [INPUT]: 依赖 目录条目类型与 GitHub URL/路径白名单
+ * [INPUT]: 依赖目录条目类型、公开可见性与 GitHub URL/路径白名单
  * [OUTPUT]: 对外提供 规范仓库身份、详情路径、无歧义目录查找与清洗旧地址重定向
- * [POS]: lib 的项目身份边界，路由与采集侧共享规则而不依赖快照
+ * [POS]: lib 的项目身份边界；解析供采集复用，详情和别名查找拒绝隐藏记录
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import type { DirectoryItem } from './types.ts'
+import { isPublicProject } from './catalog-visibility.ts'
 
 export interface GitHubRepository {
   owner: string
@@ -94,7 +95,7 @@ export function findGitHubProject(
   let found: DirectoryItem | undefined
 
   for (const item of items) {
-    if (item.type !== 'github') continue
+    if (item.type !== 'github' || !isPublicProject(item)) continue
     const parsed = parseGitHubRepositoryUrl(item.url)
     if (parsed?.key !== key) continue
     if (found) return undefined
@@ -112,6 +113,6 @@ export function projectRedirectPath(
 ): string | null {
   const requested = projectPath(owner, repo)
   if (!requested) return null
-  const matches = items.filter((item) => item.sourceMeta.previousUrls?.some((url) => projectPathFromUrl(url) === requested))
+  const matches = items.filter((item) => isPublicProject(item) && item.sourceMeta.previousUrls?.some((url) => projectPathFromUrl(url) === requested))
   return matches.length === 1 ? projectPathFromUrl(matches[0].url) : null
 }

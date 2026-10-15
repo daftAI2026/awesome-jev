@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖采集候选状态、规范 GitHub 身份与代码导航线索
- * [OUTPUT]: 提供两条发现链共用的残页回灌、有限背压与审核公平排序
+ * [OUTPUT]: 提供残页回灌、有限背压与审核公平排序；目录复核冷却不被缓存逐出
  * [POS]: scripts 的候选导航边界，不保存源码，不执行网络或模型请求
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -24,7 +24,7 @@ export function candidateQueue(state: RadarState, known: Set<string | null>, kno
   const pending = () => Object.values(state.candidates).filter(entry => entry.status === 'pending').length
   const total = () => Object.keys(state.candidates).length + (state.pendingSearchPage?.items.length ?? 0)
   const evict = () => {
-    const oldest = Object.entries(state.candidates).filter(([, entry]) => entry.status === 'drop')
+    const oldest = Object.entries(state.candidates).filter(([, entry]) => entry.status === 'drop' && !entry.catalogReview)
       .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) || a.localeCompare(b))[0]
     if (!oldest) return false
     delete state.candidates[oldest[0]]; evicted.add(oldest[0]); report.evicted++
@@ -34,6 +34,7 @@ export function candidateQueue(state: RadarState, known: Set<string | null>, kno
     evicted.has(lead.repo) || lead.repo === 'daftai2026/awesome-jev'
   const enqueue = (lead: SearchLead): boolean => {
     if (ignored(lead)) return true
+    if (state.candidates[lead.repo]?.catalogReview) return true
     if (!Object.hasOwn(state.candidates, lead.repo)) {
       if (pending() >= CORE_PENDING_LIMIT) return false
       if (total() >= maxTotal && !evict()) return false

@@ -207,11 +207,11 @@ async function main(): Promise<void> {
     const report = JSON.parse(readFileSync(join(snapshot, reportFile), 'utf8')) as RadarReport
     if (!['complete', 'partial'].includes(report.status) || !Array.isArray(report.receipts)) throw new Error('Invalid report')
     const oldIds = new Set(readCatalog(root).rows.map((row) => row.id))
-    const next = validateSnapshot(root, snapshot)
+    const next = validateSnapshot(root, snapshot, 'alternatives')
     if (next.rows.some((row) => !oldIds.has(row.id) && (row.type !== 'github' || row.category !== 'alternatives'))) {
       throw new Error('Non-alternative addition')
     }
-    applySnapshot(root, snapshot, ['data/github.json', 'README.md', stateFile, reportFile])
+    applySnapshot(root, snapshot, ['data/github.json', 'README.md', stateFile, reportFile], 'alternatives')
     return
   }
   const key = process.env.TYPESAFE_API_KEY

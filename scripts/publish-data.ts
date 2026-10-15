@@ -66,7 +66,7 @@ export async function publishData({ root, mode, validate = validateMerged, befor
   if (mode === 'news') { validateNews(baseline); validateNews(collected) }
   else {
     validateCheckpoint(mode, JSON.parse(incoming.get(files[3])!), JSON.parse(incoming.get(files[4])!))
-    mergePublishedCatalog(baseline, collected, baseline)
+    mergePublishedCatalog(baseline, collected, baseline, mode)
     if (mode === 'metadata' && (collected.length !== baseline.length || collected.some((row: { id: string }, i: number) => row.id !== baseline[i].id))) throw new Error('publication-metadata-membership-change')
   }
   const parent = mkdtempSync(join(tmpdir(), 'jev-publish-'))
@@ -86,7 +86,7 @@ export async function publishData({ root, mode, validate = validateMerged, befor
         if (mode === 'news') {
           store(target, dataFile, mergePublishedNews(baseline, collected, json(target, dataFile)))
         } else {
-          const rows = mergePublishedCatalog(baseline, collected, readCatalog(target).rows)
+          const rows = mergePublishedCatalog(baseline, collected, readCatalog(target).rows, mode)
           const stateFile = files[3], reportFile = files[4]
           // 同一队列的检查点也被推进时，不能用旧轮次将其倒退。
           if (!equal(json(target, stateFile), JSON.parse(original.get(stateFile)!))) throw new Error('publication-checkpoint-advanced')
@@ -104,7 +104,7 @@ export async function publishData({ root, mode, validate = validateMerged, befor
           // 与最新 main 比较，而不是借原基线绕过人工字段/收录阈值保护。
           const check = join(parent, 'baseline')
           git(root, ['worktree', 'add', '--detach', check, latest])
-          try { validateSnapshot(check, target) } finally { git(root, ['worktree', 'remove', '--force', check]) }
+          try { validateSnapshot(check, target, mode) } finally { git(root, ['worktree', 'remove', '--force', check]) }
         }
         generateSitemap(target)
         await validate(target)

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖共享三语言收录依据类型与 GitHub 数字/Node 身份字段
- * [OUTPUT]: 对外提供 采集目录、GitHub 来源/阶段截止只读查询、模型请求与评分契约
+ * [OUTPUT]: 对外提供采集目录、可逆下架/身份复核、只读查询与模型评分契约
  * [POS]: 服务端共享类型权威，区分规范审计记录与前端展示类型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -27,13 +27,25 @@ export interface CatalogSourceMeta extends ScoreInput {
   language?: string | null
   date?: string
   inclusion?: InclusionBasis
+  previousInclusion?: InclusionBasis[]
   previousUrls?: string[]
   githubIdentity?: GitHubIdentity
+  lifecycle?: CatalogLifecycle
 }
 
 export interface GitHubIdentity {
   databaseId: number
   nodeId: string
+}
+
+/** 不透明 Node ID 用于查询；数字 ID 绑定复核目标，地址不能替换身份。 */
+export interface CatalogLifecycleTarget extends GitHubIdentity { url: string }
+/** 缺省表示公开；下架只改变公开投影，不删除规范记录。 */
+export interface CatalogLifecycle {
+  state: 'unavailable' | 'review' | 'replaced'
+  since: string
+  reason?: 'identity-changed' | 'migration-evidence' | 'address-conflict'
+  target?: CatalogLifecycleTarget
 }
 
 export interface GitHubDirectoryItem {

@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 Node test、已构建静态 HTML/模块图及 TEST_SITE_ORIGIN 运行站点
+ * [INPUT]: 依赖 Node test、公开可见性、已构建 HTML/模块图及 TEST_SITE_ORIGIN 运行站点
  * [OUTPUT]: 对外提供首页描述真实 HTTP 交付、启动包数据边界、favicon、清洗旧地址 301、详情交付与预渲染内容的回归检查
  * [POS]: scripts 的性能交付护栏；检查总依赖而非仅检查变小的入口文件
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,9 +8,9 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
-import githubData from '../data/github.json' with { type: 'json' }
+import snapshot from '../data/github.json' with { type: 'json' }
 import newsData from '../data/news.json' with { type: 'json' }
-import { projectPathFromUrl } from '../src/lib/project-routes.ts'
+import { projectPathFromUrl, projectRedirectPath } from '../src/lib/project-routes.ts'
 import { newsPath } from '../src/lib/news.ts'
 import { relatedProjects, type CategorizedProject } from '../src/lib/related-projects.ts'
 import { CATEGORY_DESCRIPTION } from '../src/lib/categories.ts'
@@ -18,9 +18,11 @@ import { en } from '../src/i18n/locales/en.ts'
 import { zh } from '../src/i18n/locales/zh.ts'
 import { ja } from '../src/i18n/locales/ja.ts'
 import { localizedPath, type Locale } from '../src/lib/locale-routes.ts'
+import { isPublicProject, publicProjects } from '../src/lib/catalog-visibility.ts'
 
 const build = process.env.TEST_BUILD_OUTPUT
 const origin = process.env.TEST_SITE_ORIGIN
+const githubData = publicProjects(snapshot)
 const project = githubData[0]
 const news = newsData.find((item) => item.summary && item.summary.trim().length >= 60)!
 const projectPath = projectPathFromUrl(project.url)!
@@ -148,6 +150,28 @@ test('homepage startup uses the display projection without catalog audit fields'
   const modules = modulesFor(html, build!).join('\n')
   assert.ok(modules.includes(project.id), 'Projection must retain the complete local directory identity')
   assertNoDirectoryAudit(modules)
+  for (const row of snapshot.filter((item) => !isPublicProject(item))) {
+    assertNoSnapshot(modules, row.id)
+    if (!githubData.some(item => projectPathFromUrl(item.url) === projectPathFromUrl(row.url))) assertNoSnapshot(modules, row.url)
+  }
+})
+
+test('retired identities stay hidden; reused addresses resolve only their current public owner', { skip: !origin }, async () => {
+  for (const row of snapshot.filter((item) => !isPublicProject(item))) {
+    for (const url of [row.url, ...(row.sourceMeta.previousUrls ?? [])]) {
+      for (const locale of ['en', 'zh', 'ja'] as const) {
+        const response = await fetch(`${origin}${localizedPath(projectPathFromUrl(url)!, locale)}`, { redirect: 'manual' })
+        const path = projectPathFromUrl(url)!
+        const replacement = githubData.find(item => projectPathFromUrl(item.url) === path)
+        const [owner, repo] = new URL(url).pathname.slice(1).split('/')
+        const redirect = projectRedirectPath(githubData, owner, repo)
+        assert.equal(response.status, replacement ? 200 : redirect ? 301 : 404, `${locale}: ${url}`)
+        const html = await response.text()
+        assert.ok(!html.includes(`\"id\":\"${row.id}\"`))
+        if (!replacement && !redirect) assert.ok(!html.includes(row.url))
+      }
+    }
+  }
 })
 
 const expectedRelated = relatedProjects(githubData as CategorizedProject[], project as CategorizedProject)

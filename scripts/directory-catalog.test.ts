@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、规范目录、展示投影与安装的 Vite 多环境模块图
- * [OUTPUT]: 对外提供全目录展示等价、审计字段排除与热更新一致性的离线回归断言
+ * [OUTPUT]: 对外提供公开目录展示等价、审计字段排除与热更新一致性的离线回归断言
  * [POS]: scripts 的构建投影验收，不启动产品构建或调用网络/付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -15,8 +15,9 @@ import { directoryCatalogPlugin, projectDirectoryCatalog, DIRECTORY_CATALOG_ID, 
 import type { DirectoryCatalogItem } from './directory-catalog.ts'
 import { searchItems } from '../src/lib/search.ts'
 import { githubStarRanks, sortGithubItems } from '../src/lib/sort.ts'
+import { publicProjects } from '../src/lib/catalog-visibility.ts'
 
-const full = JSON.parse(readFileSync(new URL('../data/github.json', import.meta.url), 'utf8')) as DirectoryCatalogItem[]
+const full = publicProjects(JSON.parse(readFileSync(new URL('../data/github.json', import.meta.url), 'utf8')) as DirectoryCatalogItem[])
 const metaFields = ['stars', 'forks', 'language', 'author', 'date', 'repo', 'inclusion'] as const
 const topFields = ['id', 'type', 'title', 'summary', 'tags', 'url', 'category'] as const
 const ids = (rows: DirectoryCatalogItem[]) => rows.map((row) => row.id)

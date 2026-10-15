@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖规范项目/新闻校验、共享公开标签/分类/排名/路径与 Agents 文档契约
+ * [INPUT]: 依赖规范项目/新闻校验、公开可见性、标签/分类/排名/路径与 Agents 文档契约
  * [OUTPUT]: 提供 buildAgentDocuments 与 generateLlms，生成互链 Markdown 和两份 TXT
  * [POS]: scripts 的构建期公开出口；只投影展示字段，不输出审计或本机数据
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -19,6 +19,7 @@ import { newsPath, sortNews, type NewsItem } from '../src/lib/news.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { githubStarRanks } from '../src/lib/sort.ts'
 import { SITE_ORIGIN } from '../src/lib/share-image.ts'
+import { publicProjects } from '../src/lib/catalog-visibility.ts'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const REPOSITORY = 'https://github.com/daftAI2026/awesome-jev'
@@ -58,7 +59,8 @@ function projectEntry(item: GitHubDirectoryItem): string {
   ].filter(Boolean).join('\n\n')
 }
 
-export function buildAgentDocuments(projects: readonly GitHubDirectoryItem[], news: readonly NewsItem[]) {
+export function buildAgentDocuments(snapshot: readonly GitHubDirectoryItem[], news: readonly NewsItem[]) {
+  const projects = publicProjects(snapshot)
   const ranks = githubStarRanks([...projects])
   const ranked = [...projects].sort((a, b) => ranks.get(a.id)! - ranks.get(b.id)!)
   const publicNews = sortNews(news.filter((item) => item.summary?.trim()))

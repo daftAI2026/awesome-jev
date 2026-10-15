@@ -2,7 +2,15 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-metadata-sync.ts: 无模型全目录统计入口，独占统计续点；只允许安全 partial 快照，诊断不能应用
+catalog-lifecycle.ts: 数字身份复核、固定证据迁址和可逆下架；异常不累加失效，回滚保留已证实恢复
+catalog-lifecycle.test.ts: 假时钟与离线 API 验证 72 小时、多周期、证据连续性和身份隔离
+catalog-mutation.ts: 按采集角色授权字段；地址、证据和生命周期原子叠加，保留人工并发编辑
+catalog-lifecycle-flow.test.ts: 真实审核/预算到发布、README 和公开入口的串联验收；仅模拟外部 HTTP
+catalog-lifecycle-publication.test.ts: 生命周期发布角色、隐退替换、README 和三方竞争回归
+catalog-review.ts: 将规范复核请求绑定到原候选池；同 ID 迁移，新 ID 独立收录
+catalog-review.test.ts: 身份竞态、旧预算、持久冷却、分类和替代准入回归
+public-visibility.test.ts: 真实投影和服务端入口验证全部隐藏状态不进入公开出口
+metadata-sync.ts: 无模型统计和生命周期入口，独占续点与失效观察；诊断不能应用
 metadata-sync.test.ts: 无模型刷新、编辑保护、统计状态迁移与非法诊断拒收回归
 candidate-queue.ts: 两条发现链共用的残页缓冲与背压，显式容量策略；核心额外使用交替审核排序
 site-publication.ts: 发布与部署共用六条精确状态白名单；按完整提交历史拒绝旧产物
@@ -23,7 +31,7 @@ generate-llms.ts: Node 构建期公开文档生成器，公开标签路由/原�
 agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG 安全/授权回归
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
 agent-delivery.test.ts: Node 真实 HTTP 机器文档媒体类型、互链/实体地址与页脚入口回归
-publication-merge.ts: 三方纯数据增量合并，保留最新 main 顺序/人工字段/撤回，禁止旧快照整体覆盖
+publication-merge.ts: 三方增量合并，按角色授权迁址/下架/复核；保留最新 main 的人工编辑与撤回
 publish-data.ts: 四采集器共享增量发布器，保留独占检查点与最新 main；输出最终 site_changed/提交 SHA，不重跑模型或统计
 deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝、采集资源隔离与四采集器按最终差异派发；无线上写入
 publish-data.test.ts: Node test 真实本地 Git 竞争、四采集器叠加与纯状态发布、验证失败不推送和临时工作树清理
@@ -40,7 +48,7 @@ category-order.test.ts: Node test 分类排序与手机版固定两行/桌面 Fl
 code-discovery.test.ts: Node test code-discovery 的契约与回归验证，运行 npm test
 code-discovery.ts: 代码搜索线索与固定提交内容证据提取
 directory-catalog.test.ts: 身份基线/审计字段不泄漏、全目录展示/检索/排序等价及真实 Vite client/SSR 热更新的投影回归
-directory-catalog.ts: 构建期展示白名单与虚拟模块，规范快照保留完整审计且无第二份生成数据
+directory-catalog.ts: 构建期展示白名单与虚拟模块，只投影公开记录；规范快照保留隐藏历史与完整审计
 og-image.test.ts: 同键并发合并/失败重试、真实 WASM PNG、白底排版与版本/缓存边界回归
 og-delivery.test.ts: Worker 冷并发响应体独立、PNG 与缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
@@ -71,7 +79,7 @@ project-routes.test.ts: Node test 路径安全、精确项目查找与清洗旧�
 radar-budget.test.ts: Node test radar-budget 的契约与回归验证，运行 npm test
 radar-budget.ts: 审核请求预算与持久化边界
 radar.test.ts: Node test radar 的契约与回归验证，运行 npm test
-radar.ts: 核心发现与审核，共享来源失败分类；v1 无损升级 v2；五分钟发现窗口、交替审核、身份去重与诊断拒收，统计由 metadata-sync 独占
+radar.ts: 核心发现与审核，共享来源失败分类；v1 无损升级 v2；五分钟发现窗口、交替审核、身份去重与诊断拒收，目录复核共用原预算，统计由 metadata-sync 独占
 repository-review.test.ts: Node test repository-review 的契约与回归验证，运行 npm test
 repository-review.ts: 固定提交的整仓审核与文件排除策略
 review-checkpoint.ts: 核对可信 workflow/attempt/jobs，按 collect 时序定位预算；已知 verify/部署无采集，未知任务与当日缺失账本拒绝回退

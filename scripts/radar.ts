@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖 catalog、GitHub 取证、模型审核和 radar-budget 的可信采集能力
- * [OUTPUT]: 提供来源失败分类、核心状态校验、采集运行与快照写入
+ * [INPUT]: 依赖目录复核请求、GitHub 取证、模型审核和 radar-budget 的可信采集能力
+ * [OUTPUT]: 提供共享预算的发现/目录复核；身份或分类未定则保持隐藏
  * [POS]: 核心发现与审核编排；两条队列共用来源隔离，统计由独立入口负责
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -14,7 +14,7 @@ import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
 import { knownGitHubIds } from './github-identity.ts'
 import { bootstrapIdentities } from './github-metadata.ts'
 import type { IdentityBootstrapReport, MetadataReport } from './github-metadata.ts'
-import { githubEvidence, evidenceIssue } from './github-evidence.ts'
+import { githubEvidence, evidenceIssue, alternativeEvidenceIssue } from './github-evidence.ts'
 import { evaluateJev, reviewDecision, JEV_MODEL } from './jev-client.ts'
 
 import { candidateQueue, fairReviewQueue, migrateCoreState, validatePendingPage, CORE_TOTAL_LIMIT } from './candidate-queue.ts'
@@ -23,13 +23,16 @@ import { CODE_QUERIES, searchCodePage, integrationEvidence } from './code-discov
 import type { CodeHint, EvidenceLink } from './code-discovery.ts'
 import type { Catalog, DirectoryItem, GitHubApi, GitHubRepository, JevRow, JevScore } from './model-types.ts'
 import { createRadarBudget } from './radar-budget.ts'
+import { importCatalogReviews, validateCatalogReviewRequest, assertCatalogReviewTarget, applyCatalogReview } from './catalog-review.ts'
+import type { CatalogReviewRequest } from './catalog-review.ts'
 
 export interface RadarReviewOptions {
   beforeRequest?: () => Promise<void>
   attempts?: number
+  alternative?: boolean
 }
 
-export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt }
+export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt; catalogReview?: CatalogReviewRequest }
 export interface RadarState { version: number; pages: Record<string, number>; metadataCursor?: number; metadataNext?: string; nextReviewLane?: 'pending' | 'retry'; pendingSearchPage?: PendingSearchPage; candidates: Record<string, Candidate> }
 interface Source { query: string; fetched: number; total: number; status: string }
 export interface Receipt { repo: string | null; status: string; reason?: string; score?: JevScore; sha?: string; evidenceUrl?: string; evidenceSha256?: string; evidenceLinks?: EvidenceLink[]; model?: string; checkedAt?: string }
@@ -74,6 +77,7 @@ export function validateState(state: RadarState, maxTotal = state?.version === 2
       !Number.isSafeInteger(entry.attempts) || entry.attempts < 0 ||
       (entry.stars != null && (!Number.isSafeInteger(entry.stars) || entry.stars < 0)) ||
       (entry.codeHints != null && (!Array.isArray(entry.codeHints) || entry.codeHints.length > 3 || entry.codeHints.some((hint) => !hint || typeof hint.path !== 'string' || hint.path.length > 4096 || typeof hint.query !== 'string' || hint.query.length > 500)))) throw new Error('Invalid candidate state')
+    validateCatalogReviewRequest(entry.catalogReview, repo)
   }
 }
 
@@ -99,7 +103,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   const files = new Map([...catalog.files].map(([file, rows]) => [file, structuredClone(rows)]))
   const rows = [...files.values()].flat()
   const known = new Set(rows.filter((r) => r.type === 'github').map((r) => repoKey(r.url)))
-  for (const key of Object.keys(state.candidates)) if (known.has(key)) delete state.candidates[key]
+  for (const key of Object.keys(state.candidates)) if (known.has(key) && !state.candidates[key].catalogReview) delete state.candidates[key]
   const report: RadarReport = { at: started, model: JEV_MODEL, status: 'partial', sources: [],
     metadata: { ok: 0, failed: 0 }, reviewed: 0, added: 0, pending: 0, overflow: 0, evicted: 0, receipts: [] }
   report.identity = await bootstrapIdentities(rows, api)
@@ -114,6 +118,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.deferred = { phase, reason: safeReason(error) }
   }
   const knownIds = knownGitHubIds(rows)
+  report.backpressure = importCatalogReviews(rows, state, MAX_QUEUE, CORE_TOTAL_LIMIT) || undefined
   const queue = candidateQueue(state, known, knownIds, report, started, CORE_TOTAL_LIMIT)
   queue.drain()
 
@@ -195,42 +200,53 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.reviewed++
     try {
       const { repo, sha, text: readme, evidenceUrl } = await githubEvidence(api, key, { allowFullScan: !!entry.codeHints?.length })
-      if (repo.id !== undefined && knownIds.has(repo.id)) {
+      const source = entry.catalogReview ? assertCatalogReviewTarget(rows, entry.catalogReview, repo) : undefined
+      if (!entry.catalogReview && repo.id !== undefined && knownIds.has(repo.id)) {
         delete state.candidates[key]; report.reviewed--; continue
       }
       const integration = await integrationEvidence(api, key, sha, entry.codeHints ?? [])
       const text = readme + integration.text
       if (deadlineReached()) throw new Error('radar-deadline')
-      const candidate = candidateRow(repo)
-      const reason = integration.incomplete ? 'github-incomplete-integration-evidence' : evidenceIssue(repo, text)
+      const alternative = source?.category === 'alternatives'
+      const candidate = candidateRow(repo, {}, { alternative })
+      const license = repo.license?.spdx_id
+      const reason = integration.incomplete ? 'github-incomplete-integration-evidence' : alternative
+        ? !license || license === 'NOASSERTION' ? 'missing-open-source-license' : alternativeEvidenceIssue(repo, text)
+        : evidenceIssue(repo, text)
       const score = reason ? undefined : await review(candidate, text, {
+        ...(alternative ? { alternative: true } : {}),
         beforeRequest: async () => {
           if (deadlineReached()) throw new Error('radar-deadline')
           await beforeRequest?.()
           if (deadlineReached()) throw new Error('radar-deadline')
         },
       })
-      const decision = reason ? 'review' : reviewDecision(score)
-      const receipt: Receipt = { repo: key, status: decision, score, reason: reason ?? undefined, sha, evidenceUrl,
+      const rawDecision = reason ? 'review' : reviewDecision(score)
+      const categoryChanged = source && (score?.category === undefined || (alternative ? score.category !== 'alternatives' :
+        entry.catalogReview?.sourceDatabaseId === repo.id && score.category !== source.category))
+      const decision = rawDecision === 'keep' && categoryChanged ? 'review' : rawDecision
+      const receipt: Receipt = { repo: key, status: decision, score, reason: reason ?? (rawDecision === 'keep' && categoryChanged ? 'catalog-review-category-changed' : undefined), sha, evidenceUrl,
         evidenceSha256: createHash('sha256').update(text).digest('hex'), evidenceLinks: integration.links, model: JEV_MODEL, checkedAt: started }
-      report.receipts.push(receipt)
       if (decision === 'keep') {
-        if (rows.some((r) => r.id === candidate.id)) throw new Error('github-id-collision')
         if (!score) throw new Error('jev-invalid-response')
         const { category, ...reviewScore } = score
         candidate.category = category ?? 'other'
         Object.assign(candidate.sourceMeta, reviewScore, { jevEvidence: receipt })
-        files.get('github.json')!.push(candidate)
-        rows.push(candidate)
+        let addition: DirectoryItem | undefined = candidate
+        if (entry.catalogReview) {
+          assertCatalogReviewTarget(rows, entry.catalogReview, await api(`/repos/${key}`) as GitHubRepository)
+          addition = applyCatalogReview(rows, entry.catalogReview, candidate)
+        } else if (rows.some((r) => r.id === candidate.id)) throw new Error('github-id-collision')
+        if (addition) { files.get('github.json')!.push(addition); rows.push(addition); report.added++ }
         known.add(key)
         if (candidate.sourceMeta.githubIdentity) knownIds.add(candidate.sourceMeta.githubIdentity.databaseId)
         delete state.candidates[key]
-        report.added++
       } else {
         entry.status = decision as 'review' | 'drop'
         entry.lastReview = receipt
         entry.retryAt = new Date(now.getTime() + (decision === 'drop' ? 30 : 7) * DAY).toISOString()
       }
+      report.receipts.push(receipt)
       state.nextReviewLane = previous.status === 'pending' ? 'retry' : 'pending'
     } catch (error) {
       if (isDeferredRunError(error) || deadlineReached()) {
@@ -257,7 +273,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   }
   report.buffered = state.pendingSearchPage?.items.length ?? 0
   report.pending = Object.values(state.candidates).filter((e) => e.status !== 'drop').length
-  report.totalProjects = known.size
+  report.totalProjects = rows.length
   report.status = !report.deferred && report.sources.every((s) => s.status === 'complete') && !report.buffered && !report.backpressure && !report.pending && !report.overflow && !report.evicted && !report.receipts.some((r) => r.status === 'error') ? 'complete' : 'partial'
   validateState(state)
   return { files, rows, state, report }

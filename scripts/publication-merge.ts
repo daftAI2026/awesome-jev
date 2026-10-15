@@ -6,60 +6,55 @@
  */
 import { isDeepStrictEqual as equal } from 'node:util'
 import { repoKey, validateRepositoryIdentityChanges, validateRows } from './catalog.ts'
+import { isPublicProject } from '../src/lib/catalog-visibility.ts'
+import { mergeCollectedRow, validateCollectedRow, validateReplacements, type CatalogWriter } from './catalog-mutation.ts'
 import { knownGitHubIds } from './github-identity.ts'
 import { reviewDecision } from './jev-client.ts'
 import { validateNews } from './news-sync.ts'
 import type { DirectoryItem } from './model-types.ts'
 import type { NewsItem } from '../src/lib/news.ts'
 
-const AUTOMATIC_FIELDS = ['stars', 'forks', 'language', 'githubIdentity'] as const
-
-export function mergePublishedCatalog(base: DirectoryItem[], collected: DirectoryItem[], latest: DirectoryItem[]): DirectoryItem[] {
+export function mergePublishedCatalog(base: DirectoryItem[], collected: DirectoryItem[], latest: DirectoryItem[], mode: CatalogWriter = 'radar'): DirectoryItem[] {
   validateRows(base); validateRows(collected); validateRows(latest)
   validateRepositoryIdentityChanges(collected, base)
-  const collectedIds = new Set(collected.map((row) => row.id))
-  if (base.some((row) => !collectedIds.has(row.id))) throw new Error('publication-catalog-deletion')
-  const baseById = new Map(base.map((row) => [row.id, row]))
+  validateReplacements(base, collected, mode)
+  const collectedIds = new Set(collected.map(row => row.id))
+  if (base.some(row => !collectedIds.has(row.id))) throw new Error('publication-catalog-deletion')
+  const baseById = new Map(base.map(row => [row.id, row]))
   const result = structuredClone(latest)
-  const latestById = new Map(result.map((row) => [row.id, row]))
-  const urls = new Set(result.map((row) => repoKey(row.url)))
-  const identities = knownGitHubIds(result)
+  const positions = new Map(result.map((row, index) => [row.id, index]))
+  // 先叠加旧身份，再收录新身份；隐藏旧记录不占用公开地址。
   for (const [index, incoming] of collected.entries()) {
     const before = baseById.get(incoming.id)
-    const current = latestById.get(incoming.id)
-    if (before) {
-      if (base[index]?.id !== incoming.id) throw new Error('publication-catalog-reordered')
-      const expected = structuredClone(before)
-      for (const field of AUTOMATIC_FIELDS) {
-        if (Object.hasOwn(incoming.sourceMeta, field)) Object.assign(expected.sourceMeta, { [field]: incoming.sourceMeta[field] })
-      }
-      if (!equal(expected, incoming)) throw new Error('publication-editorial-change')
-      // 远端删除/身份变更由维护者掌控，不用旧采集结果复活或改写它。
-      if (!current || current.url !== before.url || current.sourceMeta.repo !== before.sourceMeta.repo) continue
-      for (const field of AUTOMATIC_FIELDS) {
-        if (equal(incoming.sourceMeta[field], before.sourceMeta[field])) continue
-        if (equal(current.sourceMeta[field], before.sourceMeta[field])) {
-          Object.assign(current.sourceMeta, { [field]: incoming.sourceMeta[field] })
-        } else if (field === 'githubIdentity') {
-          const oldId = current.sourceMeta.githubIdentity?.databaseId
-          const nextId = incoming.sourceMeta.githubIdentity?.databaseId
-          if (oldId !== nextId) throw new Error('publication-github-identity-conflict')
-        }
-        // 同时变动的统计保留最新 main，不在发布阶段补读统计。
-      }
-      if (current.sourceMeta.githubIdentity) identities.add(current.sourceMeta.githubIdentity.databaseId)
-    } else {
-      if (reviewDecision(incoming.sourceMeta) !== 'keep') throw new Error('publication-unreviewed-addition')
-      const identity = incoming.sourceMeta.githubIdentity?.databaseId
-      if (current) {
-        if (current.url !== incoming.url) throw new Error('publication-id-collision')
-        continue
-      }
-      if (urls.has(repoKey(incoming.url)) || identity !== undefined && identities.has(identity)) continue
-      const added = structuredClone(incoming)
-      result.push(added); latestById.set(added.id, added); urls.add(repoKey(added.url))
-      if (identity !== undefined) identities.add(identity)
+    if (!before) continue
+    if (base[index]?.id !== incoming.id) throw new Error('publication-catalog-reordered')
+    validateCollectedRow(before, incoming, mode)
+    const position = positions.get(incoming.id)
+    if (position === undefined) {
+      if (incoming.sourceMeta.lifecycle?.state === 'replaced' && before.sourceMeta.lifecycle?.state !== 'replaced') throw new Error('publication-withdrawn-replacement')
+      continue // 不用旧采集结果复活维护者撤回的记录。
     }
+    result[position] = mergeCollectedRow(before, incoming, result[position], mode)
+  }
+  const urls = new Set(result.filter(isPublicProject).map(row => repoKey(row.url)))
+  const identities = knownGitHubIds(result)
+  for (const incoming of collected.filter(row => !baseById.has(row.id))) {
+    if (reviewDecision(incoming.sourceMeta) !== 'keep') throw new Error('publication-unreviewed-addition')
+    const currentIndex = positions.get(incoming.id)
+    const identity = incoming.sourceMeta.githubIdentity?.databaseId
+    if (currentIndex !== undefined) {
+      const current = result[currentIndex]
+      if (current.url !== incoming.url || current.sourceMeta.githubIdentity?.databaseId !== identity) throw new Error('publication-id-collision')
+      continue
+    }
+    if (urls.has(repoKey(incoming.url)) || identity !== undefined && identities.has(identity)) {
+      if (result.some(row => row.sourceMeta.lifecycle?.state === 'replaced' && row.sourceMeta.lifecycle.target?.databaseId === identity)) throw new Error('publication-replacement-conflict')
+      continue
+    }
+    const added = structuredClone(incoming)
+    positions.set(added.id, result.length); result.push(added)
+    if (isPublicProject(added)) urls.add(repoKey(added.url))
+    if (identity !== undefined) identities.add(identity)
   }
   validateRows(result)
   validateRepositoryIdentityChanges(result, latest)

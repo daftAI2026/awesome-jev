@@ -1,12 +1,12 @@
 <!--
-[INPUT]: 依赖规范项目/新闻快照、展示投影与采集状态契约
-[OUTPUT]: 提供公开字段、审计身份、收录依据与运行状态边界
+[INPUT]: 依赖规范快照、生命周期、公开投影与采集状态
+[OUTPUT]: 提供可见性、身份迁移、收录依据与运行状态边界
 [POS]: docs 的数据权威地图；采集步骤与权限另见 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 # Data model
 
-Canonical public stores:
+Canonical stores (project audit records and public projection are distinct):
 
 - [`data/github.json`](../data/github.json) — curated GitHub projects, including independent open-source alternatives
 - [`data/news.json`](../data/news.json) — separate AIHOT Jev news records
@@ -46,9 +46,58 @@ interface DirectoryItem {
 
 ### GitHub object identity
 
-The collector-only optional `sourceMeta.githubIdentity: { databaseId: number; nodeId: string }` binds an entry to the GitHub repository object rather than its mutable owner/name. Successful authenticated metadata reads bootstrap legacy rows; newly admitted API records also carry it. Once established, refresh and snapshot validation cannot remove or change the positive numeric ID. Node IDs are opaque lookup addresses, so a different returned Node ID with the same numeric ID is allowed. Existing IDs, URLs, author text and pinned evidence remain unchanged; current names appear only in the metadata report. A legacy row's first bootstrap has no historical-ID proof beyond any preexisting reviewed seed, so it cannot detect a name reclaimed before that baseline. No fabricated baseline is added to canonical JSON during local testing.
+The collector-only optional `sourceMeta.githubIdentity: { databaseId: number; nodeId: string }` binds an entry to the GitHub repository object rather than its mutable owner/name. Successful authenticated metadata reads bootstrap legacy rows; newly admitted API records also carry it. Once established, refresh and snapshot validation cannot remove or change the positive numeric ID. Node IDs are opaque lookup addresses, so a different returned Node ID with the same numeric ID is allowed. 本站 ID 与数字 ID 保持不变。相同数字 ID 的新地址经过固定证据核验后自动迁移；规则见下节。 A legacy row's first bootstrap has no historical-ID proof beyond any preexisting reviewed seed, so it cannot detect a name reclaimed before that baseline. No fabricated baseline is added to canonical JSON during local testing.
 
 This identity is machine audit, excluded from the build-time browser display projection. It also prevents core/alternatives discovery or queued review from re-admitting the same renamed object. After the 2026-10-03 one-time cleanup, stored numeric IDs must be unique across catalog rows. URL uniqueness still guards the published catalog; baseline identity adds collector object-level deduplication rather than changing public route keys.
+
+### Catalog lifecycle and public visibility
+
+`sourceMeta.lifecycle` 是采集审计状态，不是删除证明。
+没有此字段的记录才进入公开投影。
+
+```ts
+lifecycle?: {
+  state: 'unavailable' | 'review' | 'replaced'
+  since: string
+  reason?: 'identity-changed' | 'migration-evidence' | 'address-conflict'
+  target?: { url: string; databaseId: number; nodeId: string }
+}
+```
+
+- `unavailable`：达到不可访问观察门槛，暂时下架。
+- `review`：身份或迁移证据需要原 Jev 审核。
+- `replaced`：新身份审核通过，旧身份保留为隐藏审计记录。
+
+三态均保留规范记录、旧统计、评分与收据。
+保留记录不等于继续公开，也不宣称仓库已删除。
+`src/lib/catalog-visibility.ts` 是唯一可见性规则。
+目录、搜索、分类、标签、计数与相关项目共用此投影。
+详情、旧地址、OG、README、sitemap 与机器文档同样过滤。
+隐藏记录仍参与采集去重，不能作为新项目重复收费。
+
+统计状态保持 version 1，按本站 ID 保存 `observations`。
+字段为 first/last/count/runId/cycle/runIds。
+至少三个独立六小时周期，且首末跨度至少 72 小时，才下架。
+只累计完整正常轮次，并要求公开控制探针成功。
+相同 `GITHUB_RUN_ID` 重跑不累加，同周期新 run 也不累加。
+不从历史报告补造观察；恢复同一身份即清除观察。
+计数最多三次，确认窗口的 run ID 最多保留 14 个。
+下架后冻结观察，详细异常规则见 [collector.md](collector.md#目录生命周期与自动迁址)。
+
+同数字 ID 改名保留本站 ID、人工标题、摘要与评分。
+标题严格等于旧仓库名时，才随 API 新名称更新。
+作者严格等于旧 owner 时，才随新 owner 更新。
+成功迁址同步 url/repo，并将旧地址加入 previousUrls。
+迁移旧 inclusion/jevEvidence 前，核验相同固定 SHA 的来源。
+核验包含文件 Git SHA、引文与已有证据哈希。
+缺失证据或地址冲突进入 review，不盲改引用。
+
+同一数字 ID 恢复，只自动清除 unavailable。
+review 由原 radar 重审解除，replaced 不自动恢复。
+同路径新数字 ID 不是恢复，不能继承旧准入收据。
+新身份通过原 Jev 门槛后追加独立记录，旧记录改为 replaced。
+同身份重审后的旧 inclusion 留在 previousInclusion，不冒充当前依据。
+这些审核共用原 radar 预算，不增加 Workflow 或模型。
 
 ### Inclusion rationale and review scores
 
@@ -95,11 +144,11 @@ Defined in [`src/lib/news.ts`](../src/lib/news.ts): AIHOT item ID, title, option
 
 ## Consumption and write boundaries
 
-The directory imports the build-time `virtual:directory-catalog` display projection from the sole canonical `data/github.json`, filters by category, searches and sorts it, then renders project cards or rows. Full inclusion records remain available for synchronous previews; unused audit fields do not enter this browser module. News imports `data/news.json` independently. Every published core radar run refreshes the final Top100's `stars`, `forks` and `language`, plus up to 1,000 other projects using the persisted identity cursor; it preserves ID, URL, title, summary, tags, category, Jev scores and pinned evidence. Existing `sourceMeta.repo` display aliases from renames are tolerated only when URL and repo identity remain unchanged from the baseline; newly added or identity-edited rows must match their canonical repository URL. The normalized URL owns public-route uniqueness; known GitHub IDs additionally prevent rename-induced collector duplicates. Optional metadata is runtime-validated too: scores, dates, nested receipt types and same-repository pinned blob/tree links cannot rely on TypeScript assertions.
+The directory imports the build-time `virtual:directory-catalog` display projection from the sole canonical `data/github.json`, filters by category, searches and sorts it, then renders project cards or rows. Full inclusion records remain available for synchronous previews; unused audit fields do not enter this browser module. News imports `data/news.json` independently. 独立 metadata Workflow 每轮按 50 项批次遍历全目录。核心 radar 不刷新统计。普通刷新保留编辑字段；身份迁移与生命周期变更遵循上述窄权限规则。 Existing `sourceMeta.repo` display aliases from renames are tolerated only when URL and repo identity remain unchanged from the baseline; newly added or identity-edited rows must match their canonical repository URL. The normalized URL owns public-route uniqueness; known GitHub IDs additionally prevent rename-induced collector duplicates. Optional metadata is runtime-validated too: scores, dates, nested receipt types and same-repository pinned blob/tree links cannot rely on TypeScript assertions.
 
 `Project directories` is a primary category shared by the README, website sidebar, category routes and sitemap. The README generator reads the stored category; it does not infer classification from repository names. Listing an external directory does not import its entries into this catalog; each included GitHub repository still needs its own review.
 
-New reviewed projects append to `github.json`, never replace or reorder existing rows. Admission requires Jev `keep`, `jevAbout >= 0.9` and `jevKeepConfidence >= 0.9`; a category choice is recorded in the same review. `radar/state.json` holds pending/error candidates and cursors, while `radar/latest.json` holds audit receipts. Neither is imported into the website. README project sections and count badge are generated from the same GitHub store; edit descriptions in JSON rather than inside generated README markers.
+New reviewed projects append to `github.json`, never replace or reorder existing rows. Admission requires Jev `keep`, `jevAbout >= 0.9` and `jevKeepConfidence >= 0.9`; a category choice is recorded in the same review. `radar/state.json` holds pending/error candidates and cursors, while `radar/latest.json` holds audit receipts. Neither is imported into the website. README project sections and count badge are generated from the same public GitHub projection; edit descriptions in JSON rather than inside generated README markers.
 
 Client-side sort uses `awesome-jev-github-sort` (`stars`, `date`, `name`); missing dates sort last. The page's data-update timestamp follows the newest Git commit touching `data/github.json` or `data/news.json`, not a UI-only change.
 
@@ -111,7 +160,7 @@ The ten removed public addresses are recorded in the retained row's `sourceMeta.
 
 ### Authorized 404 follow-up
 
-On 2026-10-03 the maintainer explicitly requested another check and removal of still-unavailable sources. Official `gh api repos/{owner}/{repo}` rechecked all 30 unanchored entries; every one again returned HTTP 404, while a known public repository was readable with the same authentication. This establishes public unavailability, not deleted versus private. All 30 were removed under that explicit authorization. The current canonical catalog contains **2,159 records, all with unique verified GitHub identities**; retained records are byte-for-byte equivalent as parsed JSON, and README/sitemap are regenerated from that same snapshot. The seven remaining rationale cases are listed in [inclusion-follow-up.md](inclusion-follow-up.md). Removed records remain recoverable from Git history; no blacklist, archive dataset or automatic-404 deletion mechanism is added.
+On 2026-10-03 the maintainer explicitly requested another check and removal of still-unavailable sources. Official `gh api repos/{owner}/{repo}` rechecked all 30 unanchored entries; every one again returned HTTP 404, while a known public repository was readable with the same authentication. This establishes public unavailability, not deleted versus private. All 30 were removed under that explicit authorization. That authorized cleanup left **2,159 records, all with unique verified GitHub identities**; retained records are byte-for-byte equivalent as parsed JSON, and README/sitemap are regenerated from that same snapshot. The seven remaining rationale cases are listed in [inclusion-follow-up.md](inclusion-follow-up.md). Removed records remain recoverable from Git history; no blacklist, archive dataset or automatic-404 deletion mechanism is added.
 
 
 ## Raw tags and public tags
@@ -130,7 +179,13 @@ New Action bot candidates already obtain repository topics through `candidateRow
 残页仅保存导航线索，最多 100 条，不保存源码。
 nextReviewLane 记录首次待审与到期复核的下一组。
 统计续点独占 radar/metadata-state.json，不再双写。
+metadataNextId 保存本站稳定 ID，优先作为续点。
+metadataNext 保留旧 URL 锚点，兼容原 version 1。
 metadata-latest 初始 not-run，运行后记录原基线覆盖。
+新失败凭据按 id 唯一匹配；repo 只作地址展示。
+旧报告可缺少 id；新轮恢复不能按 URL 合并身份。
+统计状态兼容旧 v1，新增失败观察而不重置续点。
+生命周期字段留在规范记录，不进入公开投影。
 替代队列显式保持独立的 2000 总容量与原预算。
 这些运行状态不进入浏览器展示投影。
 迁移保留全部收据与候选，不回退或裁剪旧状态。

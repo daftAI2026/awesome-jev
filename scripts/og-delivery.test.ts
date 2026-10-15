@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖当前规范目录与 TEST_SITE_ORIGIN 指向的真实 Worker
+ * [INPUT]: 依赖当前规范目录、公开可见性与 TEST_SITE_ORIGIN 指向的真实 Worker
  * [OUTPUT]: 对外提供动态 PNG、跨请求并发独立响应、缓存/条件请求与生产工作台隔离
  * [POS]: scripts 的 OG 集成护栏，随 test:delivery 零跳过运行，不调用第三方接口
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,12 +8,14 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import catalog from '../data/github.json' with { type: 'json' }
+import snapshot from '../data/github.json' with { type: 'json' }
 import { projectShareImage, siteShareImage, SITE_ORIGIN } from '../src/lib/share-image.ts'
 import { projectPathFromUrl } from '../src/lib/project-routes.ts'
+import { isPublicProject, publicProjects } from '../src/lib/catalog-visibility.ts'
 
 const origin = process.env.TEST_SITE_ORIGIN
 const build = process.env.TEST_BUILD_OUTPUT
+const catalog = publicProjects(snapshot)
 const count = catalog.filter((item) => item.type === 'github').length
 const project = catalog[0]
 const cjkProject = catalog.find((item) => /[\u2e80-\u9fff\u3040-\u30ff]/u.test(item.title + item.summary))!
@@ -102,6 +104,20 @@ test('runtime HEAD/304, stale versions and missing identities preserve HTTP sema
   assert.equal(missing.status, 404)
   assert.equal(missing.headers.get('Cache-Control'), 'no-store')
   assert.match(missing.headers.get('Content-Type')!, /^text\/plain/)
+})
+
+test('retired OG versions return 404 or resolve only the reviewed replacement version', { skip: !origin }, async () => {
+  for (const item of snapshot.filter((row) => !isPublicProject(row))) {
+    for (const method of ['GET', 'HEAD']) {
+      const response = await fetchLocal(projectShareImage(item).path, { method, redirect: 'manual' })
+      const replacement = catalog.find(row => projectPathFromUrl(row.url) === projectPathFromUrl(item.url))
+      const current = replacement && projectShareImage(replacement).path
+      assert.equal(response.status, current ? current === projectShareImage(item).path ? 200 : 307 : 404, item.url)
+      if (response.status !== 200) assert.equal(response.headers.get('Cache-Control'), 'no-store')
+      if (response.status === 307) assert.equal(response.headers.get('Location'), current)
+      await response.body?.cancel()
+    }
+  }
 })
 
 test('production workbench returns 404 before loading data while public site metadata remains correct', { skip: !origin }, async () => {

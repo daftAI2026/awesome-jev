@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 TanStack Start 服务端函数、规范快照、项目/新闻身份与确定性相关性规则
+ * [INPUT]: 依赖 TanStack Start、规范快照、公开可见性、项目/新闻身份与相关性规则
  * [OUTPUT]: 提供项目/新闻详情、标签计数及目录计数；新闻索引仅返回 50 条与可选单条预览
  * [POS]: lib 的路由数据适配器；项目详情只交付当前记录和最多三条相关摘要或旧地址重定向，完整快照不进入全站启动包
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -12,10 +12,12 @@ import { relatedProjects, type CategorizedProject } from './related-projects'
 import { projectTagIndex, normalizeProjectTag, TAG_INDEX_MIN_PROJECTS } from './project-tags'
 import { directorySearch } from './pagination'
 import { CATEGORIES } from './categories'
+import { publicProjects } from './catalog-visibility'
 
 export const getDirectoryCounts = createServerFn({ method: 'GET' })
   .handler(async () => {
-    const { default: projects } = await import('../../data/github.json')
+    const { default: snapshot } = await import('../../data/github.json')
+    const projects = publicProjects(snapshot)
     return {
       total: projects.length,
       categories: Object.fromEntries(CATEGORIES.map((category) => [category,

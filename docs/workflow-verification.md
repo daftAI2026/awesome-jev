@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 依赖执行交接、当前代码、离线 TDD 日志与真实交付结果
-[OUTPUT]: 记录 TDD、排空迁移与提交前验证基线
+[OUTPUT]: 记录 Workflow 解耦与目录生命周期的 TDD/交付基线
 [POS]: docs 的变更验收基线；生产结果以 Actions 制品和部署记录为准
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -146,3 +146,39 @@ queued 有两条 10 月 7 日历史异常：
 site 回滚须整体恢复调用方和精确 CI 绑定。
 v2 超过 2000 或残页非空时，不交回旧 reader。
 保留状态与预算，暂停 writer，优先前向修复。
+
+
+## 目录生命周期闭环 — 2026-10-16
+
+在既有七条 Workflow 内实现，不新增审核预算。
+无模型同步迁移同 ID 地址，并保存旧址。
+持续失联满足 72 小时和三个独立周期才下架。
+未知身份先隔离，由原 Jev 队列复核。
+通过后自动恢复或独立收录，拒绝和报错保持隐藏。
+同一发布出口同步 README 与网站，不等待另一个 Bot。
+
+以下先红后绿日志保存在本机，不进入制品：
+
+| 边界 | 日志 |
+| --- | --- |
+| 生命周期迁移、恢复与时钟 | /tmp/metadata-lifecycle-red-20261016.log |
+| 后续认证/限流/格式异常撤销失效累计 | /tmp/metadata-lifecycle-attacks-red-20261016.log |
+| 公共出口隐藏状态 | /tmp/jev-public-visibility-red.log |
+| 角色授权、原子迁移与并发撤回 | /tmp/jev-lifecycle-publication-red.log |
+| 不能绕过绑定替换或用 metadata 新增身份 | /tmp/jev-publication-adversarial-red.log |
+| 同 URL 新旧数字身份分别计数 | /tmp/jev-metadata-same-url-red.log |
+
+串联测试只模拟 GitHub 与 Jev HTTP。
+实际执行 Jev 响应解析、预算与固定收据生成。
+再执行三方合并、README 与公开入口查询。
+同 ID 和新 ID 均覆盖 keep/drop/review/error。
+只读现场预览核验 2201 个对象、35 次同 ID 迁址。
+该预览未发布，没有伪造运行 ID 或失效观察。
+生产 72 小时窗口从新有效观察开始，不回填历史。
+
+隔离工作树安装锁定依赖，目录与新闻检查通过。
+网站构建通过，真实 HTTP/模块图 68 项零跳过。
+最终追加标量身份保护后，类型和 lint 再次通过。
+完整单测为 717 通过、0 失败、67 个交付环境跳过。
+该追加只改采集发布边界，不改网站构建输入。
+生产仍须由精确提交的 site CI 重新构建并部署同份产物。

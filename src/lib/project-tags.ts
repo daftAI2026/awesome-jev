@@ -1,9 +1,11 @@
 /**
- * [INPUT]: 依赖项目 tags 原始数组，不读取简介或调用模型
+ * [INPUT]: 依赖项目 tags 原始数组与公开可见性，不读取简介或调用模型
  * [OUTPUT]: 提供公开标签、同义名称、规范路径与按项目去重的计数
- * [POS]: lib 的标签投影权威；原始快照不变，详情/目录/索引共用
+ * [POS]: lib 的标签投影权威；隐藏记录不贡献标签或计数，原始快照不变
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
+import { isPublicProject } from './catalog-visibility.ts'
+
 export const TAG_INDEX_MIN_PROJECTS = 3
 
 // --- 只合并明确同义名称；不合并 C/C++、SDK/MCP 或宽窄用途 ---
@@ -33,6 +35,7 @@ export function normalizeProjectTag(value: unknown): string | null {
 }
 
 export function projectTags(project: TaggedProject): string[] {
+  if (!isPublicProject(project)) return []
   return [...new Set((project.tags ?? []).map(normalizeProjectTag).filter((tag): tag is string => tag !== null))]
 }
 
