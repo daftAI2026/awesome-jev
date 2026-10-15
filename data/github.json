@@ -132196,5 +132196,102 @@
         "checkedAt": "2026-10-06T20:33:11.317Z"
       }
     }
+  },
+  {
+    "id": "gh-12-emiroberti77-jev-py-integration",
+    "type": "github",
+    "title": "jev-py-integration",
+    "summary": "Jev System one AI model, very fast decision making engine.  Jev AI will use input tokens but no output tokens",
+    "tags": [
+      "jev",
+      "ai",
+      "jev-ai",
+      "jev-api",
+      "jev-model",
+      "model",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/EmiRoberti77/jev-py-integration",
+    "sourceMeta": {
+      "repo": "EmiRoberti77/jev-py-integration",
+      "author": "EmiRoberti77",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1389259529,
+        "nodeId": "R_kgDOUs5rCQ"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "emiroberti77/jev-py-integration",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "fd89467de1c1dc2e95944736f0d27fcd153725f3",
+        "evidenceUrl": "https://github.com/emiroberti77/jev-py-integration/blob/fd89467de1c1dc2e95944736f0d27fcd153725f3/README.md",
+        "evidenceSha256": "41152cd01a4b21e8774866e2d627f3ff58074d5c4d846bdfd472f78470151906",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-15T15:36:19.602Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-yichenbc-jev-charactor",
+    "type": "github",
+    "title": "jev-charactor",
+    "summary": "Jev-Character: a TypeScript core for role-playing agents, autonomous game NPCs and AI towns. Agent memory, natural-language behavior authoring and programmatic dialogue, with a playable 2D multi-agent simulation.",
+    "tags": [
+      "jev",
+      "agent-memory",
+      "ai-town",
+      "autonomous-agents",
+      "dialogue-systems",
+      "game-ai",
+      "interactive-fiction",
+      "multi-agent-systems"
+    ],
+    "category": "agents",
+    "url": "https://github.com/YichenBC/jev-charactor",
+    "sourceMeta": {
+      "repo": "YichenBC/jev-charactor",
+      "author": "YichenBC",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1392913414,
+        "nodeId": "R_kgDOUwYsBg"
+      },
+      "date": "2026-09-28",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "yichenbc/jev-charactor",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "b200c156a215a6078fd4c98230d39b7f7677cfca",
+        "evidenceUrl": "https://github.com/yichenbc/jev-charactor/blob/b200c156a215a6078fd4c98230d39b7f7677cfca/README.md",
+        "evidenceSha256": "f24a05ed18abd9ab4f69a41ef351c7cd3a99184f3403ff5fdd6223170c0a8ac2",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-15T15:36:19.602Z"
+      }
+    }
   }
 ]

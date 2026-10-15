@@ -1,187 +1,167 @@
 {
-  "at": "2026-10-13T00:39:40.639Z",
+  "at": "2026-10-15T15:36:19.602Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 2690,
+      "total": 2762,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 9080,
+      "total": 9382,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 7640,
+      "total": 7877,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 186,
-      "total": 586,
+      "fetched": 200,
+      "total": 594,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
       "fetched": 200,
-      "total": 637,
+      "total": 661,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 3779,
+      "total": 3846,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 0,
-      "total": 0,
-      "status": "github-rate-limited"
+      "fetched": 200,
+      "total": 35392,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"@typesafe-ai/sdk\" in:file",
+      "fetched": 200,
+      "total": 9792,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"TYPESAFE_API_KEY\" in:file",
+      "fetched": 200,
+      "total": 75264,
+      "status": "search-cap"
+    },
+    {
+      "query": "code:\"jev-latest\" in:file",
+      "fetched": 200,
+      "total": 78592,
+      "status": "search-cap"
     }
   ],
   "metadata": {
-    "ok": 1094,
-    "failed": 6,
-    "batches": 22,
-    "cost": 22,
-    "other": 1000,
-    "remaining": 1105,
-    "top100": {
-      "ok": 100,
-      "total": 100,
-      "complete": true,
-      "unrefreshed": []
-    },
-    "resolved": [
-      {
-        "from": "anotiawang/awesome-jev",
-        "to": "anotiawang/awesome-decision-models",
-        "databaseId": 1374404623
-      },
-      {
-        "from": "itsmostafa/typesafe-mcp",
-        "to": "itsmostafa/system-one-connector",
-        "databaseId": 1373977947
-      },
-      {
-        "from": "uehaj/jev-semgrep",
-        "to": "uehaj/sys1grep",
-        "databaseId": 1376671563
-      },
-      {
-        "from": "mehdihadeli/typesafe-jev-dotnet-sdk",
-        "to": "mehdihadeli/typesafe-dotnet-sdk",
-        "databaseId": 1381987597
-      },
-      {
-        "from": "dperezcabrera/system-one-chess",
-        "to": "dperezcabrera/ai-chess-lab",
-        "databaseId": 1380374177
-      },
-      {
-        "from": "devonance/doomsat",
-        "to": "doom-satellite/doomsat",
-        "databaseId": 1381009481
-      },
-      {
-        "from": "tayaee/typesafe-ai-jev-demo",
-        "to": "tayaee/classifier-benchmark-results",
-        "databaseId": 1376777707
-      },
-      {
-        "from": "elbruno/elbruno.ai.jev",
-        "to": "elbruno/elbruno.ai.decisions",
-        "databaseId": 1381430542
-      },
-      {
-        "from": "faizullah9181/esketcher",
-        "to": "faizullah9181/jev-esketcher",
-        "databaseId": 1383974102
-      },
-      {
-        "from": "monotykamary/jev-fabric",
-        "to": "fabric-runtime/jev-fabric",
-        "databaseId": 1387099307
-      },
-      {
-        "from": "philippelhaus/codex-jev",
-        "to": "philippelhaus/codex-decision",
-        "databaseId": 1389646078
-      },
-      {
-        "from": "zeroalloc-net/zeroalloc.jev",
-        "to": "marcelroozekrans/minos.net",
-        "databaseId": 1390289994
-      },
-      {
-        "from": "iammrduncan/typesafe-ai-benchmark",
-        "to": "iammrduncan/inference-benchmarks",
-        "databaseId": 1373664881
-      },
-      {
-        "from": "bunsdev/typesafe-ai-playground",
-        "to": "typesafeai/typesafe-playground",
-        "databaseId": 1373324760
-      },
-      {
-        "from": "huntedman/jevlint",
-        "to": "iamtoomas/jevlint",
-        "databaseId": 1374372746
-      },
-      {
-        "from": "phureewat29/got-jev",
-        "to": "phureewat29/jev-got",
-        "databaseId": 1374274889
-      },
-      {
-        "from": "zavocc/ground-zero",
-        "to": "wmcbtech30/ground-zero",
-        "databaseId": 1375280181
-      }
-    ]
+    "ok": 0,
+    "failed": 0
   },
-  "reviewed": 0,
-  "added": 0,
-  "pending": 2000,
-  "overflow": 641,
+  "reviewed": 5,
+  "added": 2,
+  "pending": 3025,
+  "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "akashpriyadarshii/jev-curate",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
+      "repo": "emiroberti77/jev-py-integration",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.92,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.92,
+        "category": "agents"
+      },
+      "sha": "fd89467de1c1dc2e95944736f0d27fcd153725f3",
+      "evidenceUrl": "https://github.com/emiroberti77/jev-py-integration/blob/fd89467de1c1dc2e95944736f0d27fcd153725f3/README.md",
+      "evidenceSha256": "41152cd01a4b21e8774866e2d627f3ff58074d5c4d846bdfd472f78470151906",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-10-15T15:36:19.602Z"
     },
     {
-      "repo": "207studio/jev-skills",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
+      "repo": "alexei-led/pi-model-router",
+      "status": "review",
+      "reason": "insufficient-provider-context",
+      "sha": "72ea0ad7d66d84c2a985727c6dd6c45acdf192e4",
+      "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/72ea0ad7d66d84c2a985727c6dd6c45acdf192e4/README.md",
+      "evidenceSha256": "b72fbdaa776972a08a02714079b744f7f10b754467103e434a44aa077bafba20",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/alexei-led/pi-model-router/blob/72ea0ad7d66d84c2a985727c6dd6c45acdf192e4/docs/jev-advisor.md",
+          "path": "docs/jev-advisor.md",
+          "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-10-15T15:36:19.602Z"
     },
     {
-      "repo": "haxudev/jev-benchmark",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
+      "repo": "yichenbc/jev-charactor",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.9,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.95,
+        "category": "agents"
+      },
+      "sha": "b200c156a215a6078fd4c98230d39b7f7677cfca",
+      "evidenceUrl": "https://github.com/yichenbc/jev-charactor/blob/b200c156a215a6078fd4c98230d39b7f7677cfca/README.md",
+      "evidenceSha256": "f24a05ed18abd9ab4f69a41ef351c7cd3a99184f3403ff5fdd6223170c0a8ac2",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-10-15T15:36:19.602Z"
     },
     {
-      "repo": "keysersoft/jev-mcp-server",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
+      "repo": "alexkarpandrus/tickettrain",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.29,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.2,
+        "category": "developer",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "32864ad2da8e5d877a7857ffa3381d582cb71af1",
+      "evidenceUrl": "https://github.com/alexkarpandrus/tickettrain/blob/32864ad2da8e5d877a7857ffa3381d582cb71af1/README.md",
+      "evidenceSha256": "2f867902f77ef6f4efbd1e624a6394ff36364f73382aaed7803fe0b159cb1703",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/alexkarpandrus/tickettrain/blob/32864ad2da8e5d877a7857ffa3381d582cb71af1/llm.txt",
+          "path": "llm.txt",
+          "sha256": "26d0472efb48874324700d76fb6055987f3cfffa7c8c29c25c8b0ad7f6d1e1bb"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-10-15T15:36:19.602Z"
     },
     {
-      "repo": "akashpriyadarshii/jev-seo",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
-    },
-    {
-      "repo": "original0211/jev-perp-paper-trader",
-      "reason": "github-invalid-metadata",
-      "status": "metadata-error"
+      "repo": "asertyui1/decide.js",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.93,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.88,
+        "category": "sdk"
+      },
+      "sha": "51df04a8c95574088d47d123560e6540fa5f800d",
+      "evidenceUrl": "https://github.com/asertyui1/decide.js/blob/51df04a8c95574088d47d123560e6540fa5f800d/README.md",
+      "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-10-15T15:36:19.602Z"
     }
   ],
   "identity": {
@@ -191,9 +171,9 @@
     "cost": 0,
     "resolved": []
   },
-  "deferred": {
-    "phase": "discovery",
-    "reason": "github-rate-limited"
-  },
-  "totalProjects": 2199
+  "buffered": 0,
+  "totalProjects": 2201,
+  "publication": {
+    "rebasedOn": "40acf806b9b15f3ebb04302beca2a35906a046d9"
+  }
 }
