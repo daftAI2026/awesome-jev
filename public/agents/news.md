@@ -13,6 +13,126 @@
 
 News pages contain source-attributed summaries, not full articles. Publication time is taken from the source when available. Items without summaries are excluded from this document.
 
+## TypeSafe AI 发布 Jev 1.14：新增图像、Box 类型与 262k 上下文
+
+[Summary page \(en\)](https://awesomejev.cc/news/j1ruta4icorq6fmq26g713938) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/j1ruta4icorq6fmq26g713938) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/j1ruta4icorq6fmq26g713938)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/14/typesafe-ai-jev-1-14-images-box-long-context/) · [AIHOT](https://aihot.news/items/j1ruta4icorq6fmq26g713938)
+
+Source publication: 2026-10-15T05:45:03.000Z
+
+TypeSafe AI 发布 System One 决策模型 Jev 1.14，以 jev-preview 别名上线，新增图像输入、Box 边界框类型和 262k 长上下文三项实验性“危险区”功能。
+
+## Jev 1.14 发布：新增图像与更长上下文
+
+[Summary page \(en\)](https://awesomejev.cc/news/vd5kbjbewfnpobyidk9bdhyss) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/vd5kbjbewfnpobyidk9bdhyss) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/vd5kbjbewfnpobyidk9bdhyss)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536685805355064) · [AIHOT](https://aihot.news/items/vd5kbjbewfnpobyidk9bdhyss)
+
+Source publication: 2026-10-15T01:02:12.000Z
+
+我们在 10.14 太平洋时间下午 1:14 宣布了 Jev 1.14 🔥 一个全新升级的模型，以及为我们的梦想家们准备的实验性功能： • 图像 • 一种新的 box 类型 • 更长的上下文 惊喜的是，Jev 早就能看到你了！👁️ 但我们对生产级智能的标准相当高，所以开发者们注意，这些是预览功能。 进入 ~\*~ 危险地带 ~\*~ 风险自负。🚨
+
+## Jev 模型新增图像多模态能力
+
+[Summary page \(en\)](https://awesomejev.cc/news/v8i8w6fvd94c5mjq2idkta4k2) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/v8i8w6fvd94c5mjq2idkta4k2) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/v8i8w6fvd94c5mjq2idkta4k2)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536687835328981) · [AIHOT](https://aihot.news/items/v8i8w6fvd94c5mjq2idkta4k2)
+
+Source publication: 2026-10-15T01:02:12.000Z
+
+可组合图像：Jev 有眼睛了！！！眼睛眼睛宝贝。 我们不仅为未来的 Jev 模型启用多模态，也在为你们熟知且喜爱的当前 Jev 启用多模态。 图像可以出现在之前文本能出现的任何地方，以你能想到的任何组合方式。尽情发挥吧。 详情见文档：http://docs.typesafe.ai/go/images
+
+## Jev 1.14 引入边界框原语
+
+[Summary page \(en\)](https://awesomejev.cc/news/ptvttac5ieesk8mr4ntnf02y7) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ptvttac5ieesk8mr4ntnf02y7) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ptvttac5ieesk8mr4ntnf02y7)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536690037391732) · [AIHOT](https://aihot.news/items/ptvttac5ieesk8mr4ntnf02y7)
+
+Source publication: 2026-10-15T01:02:13.000Z
+
+我们说机器原生类型远不止于决策，这话是认真的，而且我们在定义 System One 模型时非常谨慎。 为 Jev 1.14 引入边界框原语，以 Jev 的速度进行定位。 详情见文档：http://docs.typesafe.ai/go/box
+
+## TypeSafe AI 模型 Jev 上下文长度提升 4 倍
+
+[Summary page \(en\)](https://awesomejev.cc/news/jjg8s4rwrctxfq4xcdgrfy7ru) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/jjg8s4rwrctxfq4xcdgrfy7ru) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/jjg8s4rwrctxfq4xcdgrfy7ru)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536691702452264) · [AIHOT](https://aihot.news/items/jjg8s4rwrctxfq4xcdgrfy7ru)
+
+Source publication: 2026-10-15T01:02:13.000Z
+
+尺寸 apparently 确实重要 💅 所以虽然我们强烈建议限制上下文长度，但你现在不必这么做了。Jev 扛得住。能承受 4 倍的量。 详情见文档：https://docs.typesafe.ai/models\#context-length
+
+## Jev 1.14.0 预览版发布
+
+[Summary page \(en\)](https://awesomejev.cc/news/q01n2m2852om43wn7c6qt20xy) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/q01n2m2852om43wn7c6qt20xy) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/q01n2m2852om43wn7c6qt20xy)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536692952334716) · [AIHOT](https://aihot.news/items/q01n2m2852om43wn7c6qt20xy)
+
+Source publication: 2026-10-15T01:02:14.000Z
+
+\`jev-preview\` 现在指向 \`jev-1.14.0\`。 • 全面小幅改进 • 最大提升可能在多语言支持方面 • 我们想让你🫵告诉我们 Jev 在哪些地方还像个笨蛋
+
+## TypeSafe AI 发布 JEV-1.14 更新
+
+[Summary page \(en\)](https://awesomejev.cc/news/svgaxb4te4k88q4p3lx63nnb8) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/svgaxb4te4k88q4p3lx63nnb8) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/svgaxb4te4k88q4p3lx63nnb8)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110536696551059521) · [AIHOT](https://aihot.news/items/svgaxb4te4k88q4p3lx63nnb8)
+
+Source publication: 2026-10-15T01:02:14.000Z
+
+更多关于这些更新的内容，详见我们的公告文章~ 很多人总爱问我们接下来要发布什么样的科幻级产品 好吧，未来将会是美好而无聊的。 更强的智能。更好的稳定性。支持真实部署的功能。 至于真正令人震撼的东西？我们会留到未来作为惊喜。 https://typesafe.ai/blog/jev-1-14
+
+## Jev 1.14 上线 OpenRouter
+
+[Summary page \(en\)](https://awesomejev.cc/news/rr4tvnk2ok2q6yc1gnpg32ce2) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rr4tvnk2ok2q6yc1gnpg32ce2) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rr4tvnk2ok2q6yc1gnpg32ce2)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2110525059093987468) · [AIHOT](https://aihot.news/items/rr4tvnk2ok2q6yc1gnpg32ce2)
+
+Source publication: 2026-10-15T00:16:00.000Z
+
+Jev 1.14 现已上线 OpenRouter。 据 @typesafeai 称，这个版本"平淡得漂亮"： • 各方面：都好了那么一点点 • 多语言：最大的升级 • 多模态：现在能看了（实验性） • 价格：不变（$0.042/M 输入，输出免费） • 抓马：没有 http://openrouter.ai/typesafe/jev-1.14
+
+## TypeSafe 发布 JEV-1-14 更新说明
+
+[Summary page \(en\)](https://awesomejev.cc/news/qj6lsuzughd8l2idcuiw8wjwh) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/qj6lsuzughd8l2idcuiw8wjwh) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/qj6lsuzughd8l2idcuiw8wjwh)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2110525071110648210) · [AIHOT](https://aihot.news/items/qj6lsuzughd8l2idcuiw8wjwh)
+
+Source publication: 2026-10-15T00:16:03.000Z
+
+TypeSafe 发布的完整（依然无聊的）更新说明： https://typesafe.ai/blog/jev-1-14
+
+## Jev 1.14 发布：Databricks 与 TypeSafe 合作
+
+[Summary page \(en\)](https://awesomejev.cc/news/dglcjhvaamnkja0r6ag18piux) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/dglcjhvaamnkja0r6ag18piux) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/dglcjhvaamnkja0r6ag18piux)
+
+[X：Yuchen Jin \(@Yuchenj\_UW\)](https://x.com/Yuchenj_UW/status/2110490516433605087) · [AIHOT](https://aihot.news/items/dglcjhvaamnkja0r6ag18piux)
+
+Source publication: 2026-10-14T21:58:44.000Z
+
+Jev 1.14 发布了！ 图像输入、box API、更好的质量、更长的上下文。祝贺 TypeSafe 团队让 Jevolution 持续前进！ 我们 @databricks 很兴奋能与 TypeSafe 合作，将新的 Jev 带给我们的客户！
+
+## Jev 进化中，TypeSafe AI 举办市政厅
+
+[Summary page \(en\)](https://awesomejev.cc/news/xr4399jj1u9njzs056jw9xrvk) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/xr4399jj1u9njzs056jw9xrvk) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/xr4399jj1u9njzs056jw9xrvk)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110419371453825349) · [AIHOT](https://aihot.news/items/xr4399jj1u9njzs056jw9xrvk)
+
+Source publication: 2026-10-14T17:16:02.000Z
+
+这是什么？ Jev 正在进化！ 下午 1:14 收听我们与 @CompleteSkeptic 和 @allietheicon 的市政厅，了解更多
+
+## Modal 年化收入突破 10 亿美元并完成 7.5 亿美元 D 轮融资
+
+[Summary page \(en\)](https://awesomejev.cc/news/x5umoaa0xhd8n76uysjppz2fa) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/x5umoaa0xhd8n76uysjppz2fa) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/x5umoaa0xhd8n76uysjppz2fa)
+
+[Modal 官方工程博客（RSS）](https://modal.com/blog/1-billion-annualized-run-rate-series-d) · [AIHOT](https://aihot.news/items/x5umoaa0xhd8n76uysjppz2fa)
+
+Source publication: 2026-10-14T00:00:00.000Z
+
+Modal 宣布年化收入突破 10 亿美元，并完成 7.5 亿美元 D 轮融资，投后估值 157.5 亿美元，由 Accel 领投，Kleiner Perkins 及现有投资方跟投。
+
 ## Prime Intellect 收购 Moondream，联合创始人加入主导推理与多模态
 
 [Summary page \(en\)](https://awesomejev.cc/news/rruqd7cz78jq6l889kjp56jlz) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rruqd7cz78jq6l889kjp56jlz) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rruqd7cz78jq6l889kjp56jlz)
