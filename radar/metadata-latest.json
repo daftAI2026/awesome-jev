@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "2054089cca639988f3fc95cd59f90b8a3eceec26",
-  "at": "2026-10-15T15:36:01.318Z",
-  "totalProjects": 2199,
+  "baselineSha": "6ba2fa3ac85529b2e5186468b31d19b2a6e3a967",
+  "at": "2026-10-15T17:06:51.049Z",
+  "totalProjects": 2201,
   "metadata": {
-    "ok": 2181,
+    "ok": 2183,
     "failed": 18,
-    "batches": 45,
-    "cost": 45,
-    "other": 2098,
+    "batches": 46,
+    "cost": 46,
+    "other": 2101,
     "remaining": 18,
-    "attempted": 2199,
-    "fresh": 2181,
+    "attempted": 2201,
+    "fresh": 2183,
     "unavailable": 18,
     "deferredRemaining": 0,
     "top100": {
@@ -202,76 +202,101 @@
   },
   "receipts": [
     {
+      "id": "gh-17-alex314618-create-jevrev",
       "repo": "alex314618-create/jevrev",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-ivorpad-skillranker",
       "repo": "ivorpad/skillranker",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-rdk16-jevudio",
       "repo": "rdk16/jevudio",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-6-inverx-jevre",
       "repo": "inverx/jevre",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-7-rezastd-living-npc-world",
       "repo": "rezastd/living-npc-world",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-11-sionex-code-bx",
       "repo": "sionex-code/bx",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-10-wanlanglin-jev-skills",
       "repo": "wanlanglin/jev-skills",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-6-x96x64-ctxjev",
       "repo": "x96x64/ctxjev",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-13-paulsonnentag-scrap",
       "repo": "paulsonnentag/scrap",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-17-akashpriyadarshii-jev-superpowers",
       "repo": "akashpriyadarshii/jev-superpowers",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-8-aviletek-jev-flow-harness",
       "repo": "aviletek/jev-flow-harness",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-15-mant1ssa-smf3kt-chat_jev",
       "repo": "mant1ssa-smf3kt/chat_jev",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-17-akashpriyadarshii-jev-curate",
       "repo": "akashpriyadarshii/jev-curate",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-9-207studio-jev-skills",
       "repo": "207studio/jev-skills",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-7-haxudev-jev-benchmark",
       "repo": "haxudev/jev-benchmark",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-10-keysersoft-jev-mcp-server",
       "repo": "keysersoft/jev-mcp-server",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-17-akashpriyadarshii-jev-seo",
       "repo": "akashpriyadarshii/jev-seo",
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-12-original0211-jev-perp-paper-trader",
       "repo": "original0211/jev-perp-paper-trader",
       "reason": "github-unavailable-repository"
     }
-  ]
+  ],
+  "lifecycle": {
+    "migrated": 35,
+    "review": 2,
+    "unavailable": 0,
+    "restored": 0,
+    "checked": 18
+  }
 }
