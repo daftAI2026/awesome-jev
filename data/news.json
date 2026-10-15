@@ -5128,5 +5128,50 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenRouter/status/2110525071110648210",
     "aihotUrl": "https://aihot.news/items/qj6lsuzughd8l2idcuiw8wjwh"
+  },
+  {
+    "id": "zsnps8w2j43a8ci91q2zjv9x0",
+    "title": "Liquid AI 发布多模态决策模型 d1-ultra",
+    "originalTitle": "d1-ultra: Introducing the World’s Best Decision Model",
+    "summary": "Liquid AI 发布多模态决策模型 d1-ultra，输入文本或图像与问题，单次前向直接返回各答案概率，不生成 token。",
+    "sourceName": "Liquid AI 模型与工程博客（网页）",
+    "publishedAt": "2026-10-15T00:00:00.000Z",
+    "discoveredAt": "2026-10-15T17:46:30.001Z",
+    "category": "ai-models",
+    "score": 53,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.liquid.ai/blog/d1-ultra",
+    "aihotUrl": "https://aihot.news/items/zsnps8w2j43a8ci91q2zjv9x0"
+  },
+  {
+    "id": "eksi3tu4e121lwa7t93dt6q4e",
+    "title": "LangChain 发布 Interrupt NYC & London 全部更新：LangSmith AI Search、Managed Deep Agents v0.9 等",
+    "originalTitle": "October 2026 LangChain Newsletter: Everything we shipped at Interrupt NYC & London",
+    "summary": "LangChain 在 Interrupt NYC 和 London 活动上发布多项 LangSmith 新功能，包括可用自然语言语义检索 trace 的 AI Search、支持用户级记忆与 Slack 交互的 Managed Deep Agents v0.9、加入 Red Teaming 的 LangSmith Engine v2。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-10-15T16:00:00.000Z",
+    "discoveredAt": "2026-10-15T17:18:38.023Z",
+    "category": "ai-products",
+    "score": 42,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.langchain.com/blog/october-2026-langchain-newsletter",
+    "aihotUrl": "https://aihot.news/items/eksi3tu4e121lwa7t93dt6q4e"
+  },
+  {
+    "id": "virsb1x13670yw25mr9fyxqtt",
+    "title": "Tessl Verifiers 正式发布，用仓库内纯文本规则检查每次 Agent 代码变更",
+    "originalTitle": "Verifiers: enforce your repo's rules on every agent change",
+    "summary": "Tessl 发布 Verifiers，规则以 JSON 文件形式存放在仓库中，每次代码变更时由 LLM judge 逐条给出 pass 或 fail，可像 lint 或测试一样在本地、pre-commit 或 CI 中使用。",
+    "sourceName": "Tessl：产品与工程博客",
+    "publishedAt": "2026-10-14T16:00:00.000Z",
+    "discoveredAt": "2026-10-15T12:44:28.881Z",
+    "category": "ai-products",
+    "score": 63,
+    "selected": true,
+    "reason": "官方详细介绍 Verifiers 的机制、配置与接入方式，读者可据此把它当作 lint 或测试之外的确定性检查接入现有工作流。",
+    "originalUrl": "https://tessl.io/blog/verifiers-enforce-your-repos-rules-on-every-agent-change",
+    "aihotUrl": "https://aihot.news/items/virsb1x13670yw25mr9fyxqtt"
   }
 ]
