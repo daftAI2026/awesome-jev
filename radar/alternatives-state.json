@@ -2509,19 +2509,26 @@
     "phocinae/phocinae-largha-150m-v1": {
       "status": "review",
       "discoveredAt": "2026-10-08T01:17:50.849Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-08T01:17:50.849Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-15T08:35:08.344Z",
       "lastReview": {
         "repo": "phocinae/phocinae-largha-150m-v1",
         "status": "review",
-        "reason": "insufficient-alternative-context",
-        "sha": "d190db066d3526f8f3ef322c802cd824fd9dde4b",
-        "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/d190db066d3526f8f3ef322c802cd824fd9dde4b/README.md",
-        "evidenceSha256": "3b70e97ec22631453a00df282634befd11c2ffa5505f26eb394ca28d4b70caa1",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.89,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "08c1577a4992673318121cc5d2c3c61e84a9ff09",
+        "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/08c1577a4992673318121cc5d2c3c61e84a9ff09/README.md",
+        "evidenceSha256": "b17556a6de50099d831312c11624b10b5fc1d9af7da5ebde9411883ef4d9c860",
         "model": "jev-latest",
-        "checkedAt": "2026-10-08T01:17:50.849Z"
+        "checkedAt": "2026-10-15T08:35:08.344Z"
       },
-      "retryAt": "2026-10-15T01:17:50.849Z"
+      "retryAt": "2026-10-22T08:35:08.344Z"
     },
     "phocinae/.github": {
       "status": "review",
