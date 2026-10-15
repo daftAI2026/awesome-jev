@@ -1,3 +1,9 @@
+<!--
+[INPUT]: 依赖规范项目/新闻快照、展示投影与采集状态契约
+[OUTPUT]: 提供公开字段、审计身份、收录依据与运行状态边界
+[POS]: docs 的数据权威地图；采集步骤与权限另见 collector.md
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
 # Data model
 
 Canonical public stores:
@@ -81,7 +87,7 @@ The queue prioritizes outstanding projects by stars, including legacy projects w
 
 GitHub metadata refreshes preserve `inclusion` alongside the original author description and machine review. Existing Actions can read the extended catalog without another model or API key. Newly admitted rows may have no editorial rationale yet; every production build runs the existing offline `inclusion:check` to expose the current completed/pending count, without rejecting an otherwise eligible project or calling a prose-generating model. After a collector publishes additions, use `--queue` to review the new backlog and preserve an explicit unresolved-source list rather than silently forgetting entries. Current reviewer-written text is not fabricated by the collector.
 
-The radar's push/PR verification compares against the event's fixed base commit and fetches sources only for added or edited rationales. Ordinary star/fork refreshes do not refetch unchanged evidence. The submission bot independently runs the same comparison from trusted `main` code, including rationale-only PRs for existing projects. An absent source, invalid record or mismatched quote fails verification; no model call or credential is needed. Matching a quote proves its occurrence, not the correctness of the surrounding prose: maintainers still review the interpretation and translations. Removing a rationale remains a visible, maintainer-reviewed data change rather than a fabricated replacement.
+The site's push/PR verification compares against the event's fixed base commit and fetches sources only for added or edited rationales. Ordinary star/fork refreshes do not refetch unchanged evidence. The submission bot independently runs the same comparison from trusted `main` code, including rationale-only PRs for existing projects. An absent source, invalid record or mismatched quote fails verification; no model call or credential is needed. Matching a quote proves its occurrence, not the correctness of the surrounding prose: maintainers still review the interpretation and translations. Removing a rationale remains a visible, maintainer-reviewed data change rather than a fabricated replacement.
 
 ## News `NewsItem`
 
@@ -115,3 +121,16 @@ Raw `tags` can contain GitHub topics, a programming-language label and a collect
 `src/lib/project-tags.ts` is the sole public projection. It lowercases/trims names, merges an explicit synonym table, removes generic ecosystem labels, deduplicates within each project and counts across the current snapshot. It never reads descriptions to invent tags. Distinct concepts such as C/C++/C#, SDK/MCP and MCP/MCP Server remain distinct. At least three projects must share a tag for the public index and sitemap. Sparse topics remain available in project details. This threshold governs navigation/indexing only, not project inclusion or source retention.
 
 New Action bot candidates already obtain repository topics through `candidateRow`; the same projection makes their public names consistent without extra model calls. No schema migration, paid backfill or forced one-tag classification is introduced. Projects with only generic source tags receive no fabricated public topic.
+
+
+## 自动采集运行状态
+
+核心 radar/state.json 使用 v2，兼容读取旧 v1。
+候选 map 与搜索残页共用 4000 总容量，pending 最多 2000。
+残页仅保存导航线索，最多 100 条，不保存源码。
+nextReviewLane 记录首次待审与到期复核的下一组。
+统计续点独占 radar/metadata-state.json，不再双写。
+metadata-latest 初始 not-run，运行后记录原基线覆盖。
+替代队列显式保持独立的 2000 总容量与原预算。
+这些运行状态不进入浏览器展示投影。
+迁移保留全部收据与候选，不回退或裁剪旧状态。

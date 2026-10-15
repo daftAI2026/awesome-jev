@@ -50,7 +50,7 @@ export function catalogFiles(rows: DirectoryItem[], readme = template): Files {
 }
 
 export function successCI(head: string, branch = BRANCH, event = 'workflow_dispatch', repositoryId = REPOSITORY_ID, number?: number): { run: Run; jobs: Job[] } {
-  const run: Run = { id: 501, workflow_id: WORKFLOW_ID, path: '.github/workflows/radar.yml', event, head_sha: head, head_branch: branch,
+  const run: Run = { id: 501, workflow_id: WORKFLOW_ID, path: '.github/workflows/site.yml', event, head_sha: head, head_branch: branch,
     display_title: `Jev validate: ${branch}`,
     head_repository: { id: repositoryId, full_name: REPOSITORY }, status: 'completed', conclusion: 'success', run_attempt: 1,
     pull_requests: number ? [{ number }] : [] }
@@ -163,7 +163,7 @@ export function harness() {
       }
       if (endpoint === '/repos/test/new') return structuredClone(state.source)
       if (endpoint === '/repos/test/new/commits/main') return { sha: state.sourceHead }
-      if (endpoint === `${PREFIX}/actions/workflows/radar.yml`) return { id: WORKFLOW_ID, path: '.github/workflows/radar.yml', state: 'active' }
+      if (endpoint === `${PREFIX}/actions/workflows/site.yml`) return { id: WORKFLOW_ID, path: '.github/workflows/site.yml', state: 'active' }
       if (endpoint === PREFIX) return { id: REPOSITORY_ID, full_name: REPOSITORY }
       if (endpoint === `${PREFIX}/actions/workflows/${WORKFLOW_ID}/runs`) {
         const requestedHead = url.searchParams.get('head_sha')
@@ -251,7 +251,7 @@ export function harness() {
         state.pr!.body = body.body as string
         return structuredClone(state.pr)
       }
-      if (path === `${PREFIX}/actions/workflows/radar.yml/dispatches` && method === 'POST') {
+      if (path === `${PREFIX}/actions/workflows/site.yml/dispatches` && method === 'POST') {
         assert.deepEqual(body.inputs, { mode: 'validate' })
         assert.ok(body.ref === 'main' || body.ref === BRANCH)
         if (body.ref === 'main' && state.failMainDispatch-- > 0) throw new Error('github-write-outcome-unknown')

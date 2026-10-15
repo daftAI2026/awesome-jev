@@ -177,9 +177,9 @@ test('verify-only jobs and ordinary push runs do not create a budget gap', async
 
 function deploymentJob(conclusion = 'success') {
   // --- 从真实工作流取名称，让部署改名触发恢复契约回归 ---
-  const workflow = readFileSync(new URL('../.github/workflows/radar.yml', import.meta.url), 'utf8')
+  const workflow = readFileSync(new URL('../.github/workflows/site.yml', import.meta.url), 'utf8')
   const name = workflow.match(/^  deploy:\n    name: (.+)$/m)?.[1]
-  assert.ok(name, 'radar workflow must expose its deployment job name')
+  assert.ok(name, 'site retains the historical deployment job name for radar budget compatibility')
   return { run_id: 6, head_sha: 'a'.repeat(40), name, status: 'completed', conclusion, steps: [] as Record<string, unknown>[] }
 }
 

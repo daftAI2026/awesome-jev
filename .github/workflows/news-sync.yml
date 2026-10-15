@@ -44,7 +44,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: node --experimental-strip-types scripts/publish-data.ts news
       - name: Request verified main deployment after data publication
-        if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        if: steps.publication.outputs.status == 'published' && steps.publication.outputs.site_changed == 'true' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run radar.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate
+        run: gh workflow run site.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

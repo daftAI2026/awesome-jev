@@ -294,7 +294,7 @@ export function renderReadme(text: string, rows: DirectoryItem[]): string {
     '[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)',
     '[![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc)',
     `![Projects](https://img.shields.io/badge/projects-${projects.length}-10b981?style=classic)`,
-    '[![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/radar.yml)',
+    '[![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml)',
     '[![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers)',
     '[![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)',
   ].join(' ')

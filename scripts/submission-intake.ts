@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖可信投稿报告、维护者权限、规范目录生成器与分离的 GitHub 读写客户端
+ * [INPUT]: 依赖可信投稿报告、精确 site CI、目录生成器与 GitHub 读写边界
  * [OUTPUT]: 对外提供分类复核收录、精确 CI/合并、明确不匹配拒收与已关闭请求的恢复
  * [POS]: scripts 的条件写入边界；只运行 main 代码，不执行 PR 或投稿仓库代码、不调用 Jev
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -24,7 +24,7 @@ import { AGENT_REVIEW_MARKER, isOkCommand, parseAgentReviewComment, type AgentRe
 const PREFIX = `/repos/${REPOSITORY}`
 export const INTAKE_MARKER = '<!-- awesome-jev-intake:v1 -->'
 const RESULT_MARKER = '<!-- awesome-jev-intake-result:v1 -->'
-const RADAR_PATH = '.github/workflows/radar.yml'
+const SITE_PATH = '.github/workflows/site.yml'
 const SHA = /^[a-f0-9]{40}$/
 const BOT = 'github-actions[bot]'
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
@@ -177,7 +177,7 @@ async function commitFiles({ api, write }: IntakeOptions, base: string, files: R
 // --- CI 身份、当前 attempt 和实际 verify 步骤共同约束，任意绿色 check 不构成许可 ---
 export function verifiedRun(run: unknown, workflowId: number, repositoryId: number, sha: string, branch: string, jobs: unknown, prNumber?: number): boolean {
   if (!isRecord(run) || run.workflow_id !== workflowId || run.event !== (prNumber ? 'pull_request' : 'workflow_dispatch') ||
-    run.path !== RADAR_PATH || run.head_sha !== sha || run.head_branch !== branch ||
+    run.path !== SITE_PATH || run.head_sha !== sha || run.head_branch !== branch ||
     !isRecord(run.head_repository) || run.head_repository.id !== repositoryId ||
     run.status !== 'completed' || run.conclusion !== 'success' || !positive(run.run_attempt) || !Array.isArray(jobs)) return false
   // GitHub 可省略 fork run 的 PR 关联；此时仍由当前 PR 的 repo/ref/SHA 三元组绑定。
@@ -192,9 +192,9 @@ export function verifiedRun(run: unknown, workflowId: number, repositoryId: numb
 }
 
 async function validation({ api, write }: IntakeOptions, pr: Record<string, any>): Promise<boolean> {
-  const workflow = record(await api(`${PREFIX}/actions/workflows/radar.yml`))
+  const workflow = record(await api(`${PREFIX}/actions/workflows/site.yml`))
   const repository = record(await api(PREFIX))
-  if (!positive(workflow.id) || workflow.path !== RADAR_PATH || !positive(repository.id)) throw new Error('intake-invalid-workflow')
+  if (!positive(workflow.id) || workflow.path !== SITE_PATH || !positive(repository.id)) throw new Error('intake-invalid-workflow')
   const botPr = pr.user?.login === BOT && pr.user.type === 'Bot' && parseIntakeMeta(pr.body)
   const event = botPr ? 'workflow_dispatch' : 'pull_request'
   const sourceId = botPr ? repository.id : pr.head.repo?.id
@@ -206,7 +206,7 @@ async function validation({ api, write }: IntakeOptions, pr: Record<string, any>
     r.head_repository?.id === sourceId).sort((a, b) => b.id - a.id)
   if (!matches.length) {
     if (!botPr || pr.head.repo?.full_name !== REPOSITORY) return false
-    await write(`${PREFIX}/actions/workflows/radar.yml/dispatches`, 'POST', { ref: pr.head.ref, inputs: { mode: 'validate' } })
+    await write(`${PREFIX}/actions/workflows/site.yml/dispatches`, 'POST', { ref: pr.head.ref, inputs: { mode: 'validate' } })
     return false
   }
   const run = record(await api(`${PREFIX}/actions/runs/${matches[0].id}`))
@@ -236,15 +236,15 @@ async function verifyData(api: GitHubApi, pr: Record<string, any>, approvals: In
 
 async function ensureMainValidation({ api, write }: IntakeOptions): Promise<void> {
   const currentMain = await mainSha(api)
-  const workflow = record(await api(`${PREFIX}/actions/workflows/radar.yml`))
-  if (!positive(workflow.id) || workflow.path !== RADAR_PATH) throw new Error('intake-invalid-workflow')
+  const workflow = record(await api(`${PREFIX}/actions/workflows/site.yml`))
+  if (!positive(workflow.id) || workflow.path !== SITE_PATH) throw new Error('intake-invalid-workflow')
   const validationRuns = record(await api(`${PREFIX}/actions/workflows/${workflow.id}/runs?event=workflow_dispatch&head_sha=${currentMain}&per_page=100`))
   if (!Array.isArray(validationRuns.workflow_runs)) throw new Error('intake-invalid-response')
   if (!validationRuns.workflow_runs.some((run: Record<string, any>) => run.head_sha === currentMain && run.head_branch === 'main' &&
-    run.workflow_id === workflow.id && run.event === 'workflow_dispatch' && run.path === RADAR_PATH &&
+    run.workflow_id === workflow.id && run.event === 'workflow_dispatch' && run.path === SITE_PATH &&
     run.head_repository?.full_name === REPOSITORY && run.display_title === 'Jev validate: main')) {
     // 合并已成功但 dispatch 结果不明时，下轮先查同版本 run；不重复生成 PR 或再次合并。
-    await write(`${PREFIX}/actions/workflows/radar.yml/dispatches`, 'POST', { ref: 'main', inputs: { mode: 'validate' } })
+    await write(`${PREFIX}/actions/workflows/site.yml/dispatches`, 'POST', { ref: 'main', inputs: { mode: 'validate' } })
   }
 }
 

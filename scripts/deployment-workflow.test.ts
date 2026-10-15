@@ -1,18 +1,18 @@
 /**
  * [INPUT]: 依赖可信 main 工作流、临时产物与隔离 Bash/CLI 替身
- * [OUTPUT]: 验证同版本产物交接、部署门、过期拒绝和机器人发布派发
+ * [OUTPUT]: 验证同版本产物、部署门、发布派发与采集资源隔离
  * [POS]: scripts 的部署边界回归；不读取凭据或发起线上部署
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import test, { type TestContext } from 'node:test'
 import assert from 'node:assert/strict'
-import { spawnSync } from 'node:child_process'
+import { spawnSync, execFileSync } from 'node:child_process'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { writePublicationOutput } from './publish-data.ts'
 
-const workflow = (file = 'radar.yml') => readFileSync(new URL(`../.github/workflows/${file}`, import.meta.url), 'utf8')
+const workflow = (file = 'site.yml') => readFileSync(new URL(`../.github/workflows/${file}`, import.meta.url), 'utf8')
 const radar = workflow()
 const deploy = radar.slice(radar.indexOf('\n  deploy:\n'), radar.indexOf('\n  resume-intake:\n'))
 
@@ -91,17 +91,25 @@ test('real packaging restores hidden assets and refuses wrong SHA or Worker conf
   }
 })
 
-test('freshness command skips obsolete main and fails closed on GitHub read errors', (t) => {
+test('real freshness command permits state-only main and fails closed on data or GitHub read errors', t => {
   const f = fixture(t)
+  const git = (...args: string[]) => execFileSync('git', args, { cwd: f.root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim()
+  git('init', '--initial-branch=main'); git('config', 'user.name', 'Test'); git('config', 'user.email', 'test@example.com')
+  f.save('scripts/site-publication.ts', readFileSync(new URL('./site-publication.ts', import.meta.url), 'utf8'))
+  f.save('data/github.json', 'base'); git('add', '.'); git('commit', '-m', 'base')
+  const verified = git('rev-parse', 'HEAD'); git('remote', 'add', 'origin', f.root)
   f.save('bin/gh', '#!/bin/sh\nprintf "%s\\n" "$@" > "$RECEIPT"\n[ "$GH_FAIL" = "yes" ] && exit 17\nprintf "%s\\n" "$LATEST_SHA"\n', true)
   const check = command(deploy, 'Refuse superseded main deployment')
-  assert.equal(f.invoke(check, { LATEST_SHA: 'verified-main' }).status, 0)
+  const invoke = (latest: string, extra = {}) => { if (existsSync(join(f.root, 'output'))) rmSync(join(f.root, 'output')); return f.invoke(check, { GITHUB_SHA: verified, LATEST_SHA: latest, ...extra }) }
+  assert.equal(invoke(verified).status, 0)
   assert.equal(readFileSync(join(f.root, 'output'), 'utf8'), 'current=true\n')
-  rmSync(join(f.root, 'output'))
-  assert.equal(f.invoke(check, { LATEST_SHA: 'newer-main' }).status, 0)
+  f.save('radar/state.json', '{}'); git('add', 'radar'); git('commit', '-m', 'state')
+  assert.equal(invoke(git('rev-parse', 'HEAD')).status, 0)
+  assert.equal(readFileSync(join(f.root, 'output'), 'utf8'), 'current=true\n')
+  f.save('data/github.json', 'new'); git('add', 'data'); git('commit', '-m', 'data')
+  assert.equal(invoke(git('rev-parse', 'HEAD')).status, 0)
   assert.equal(readFileSync(join(f.root, 'output'), 'utf8'), 'current=false\n')
-  rmSync(join(f.root, 'output'))
-  assert.equal(f.invoke(check, { GH_FAIL: 'yes' }).status, 17)
+  assert.equal(invoke(verified, { GH_FAIL: 'yes' }).status, 17)
   assert.equal(existsSync(join(f.root, 'output')), false)
   assert.equal(readFileSync(join(f.root, 'receipt'), 'utf8'), 'api\nrepos/daftAI2026/awesome-jev/git/ref/heads/main\n--jq\n.object.sha\n')
 })
@@ -122,15 +130,15 @@ test('deploy command requires both credentials and invokes only the precompiled 
 test('all collectors dispatch trusted main only after an actual publication; dispatch errors remain visible', (t) => {
   const f = fixture(t)
   f.save('bin/gh', '#!/bin/sh\nprintf "%s\\n" "$@" > "$RECEIPT"\nexit "${GH_EXIT:-0}"\n', true)
-  for (const file of ['radar.yml', 'alternatives.yml', 'news-sync.yml']) {
+  for (const file of ['radar.yml', 'alternatives.yml', 'news-sync.yml', 'metadata-sync.yml']) {
     const source = workflow(file)
     const publisher = source.slice(source.indexOf('      contents: write'))
     assert.match(publisher, /      actions: write/)
     assert.match(publisher, /id: publication/)
-    assert.match(publisher, /if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'/)
+    assert.match(publisher, /if: steps.publication.outputs.status == 'published' && steps.publication.outputs.site_changed == 'true' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'/)
     const dispatch = command(source, 'Request verified main deployment after data publication')
     assert.equal(f.invoke(dispatch).status, 0)
-    assert.equal(readFileSync(join(f.root, 'receipt'), 'utf8'), 'workflow\nrun\nradar.yml\n--repo\ndaftAI2026/awesome-jev\n--ref\nmain\n-f\nmode=validate\n')
+    assert.equal(readFileSync(join(f.root, 'receipt'), 'utf8'), 'workflow\nrun\nsite.yml\n--repo\ndaftAI2026/awesome-jev\n--ref\nmain\n-f\nmode=validate\n')
     assert.equal(f.invoke(dispatch, { GH_EXIT: '17' }).status, 17)
     assert.equal(publisher.includes('secrets.CLOUDFLARE_API_TOKEN'), false)
   }
@@ -139,8 +147,41 @@ test('all collectors dispatch trusted main only after an actual publication; dis
 test('publication status appends to Actions output and is optional outside Actions', (t) => {
   const f = fixture(t), output = join(f.root, 'output')
   f.save('output', 'prior=value\n')
-  writePublicationOutput('published', output)
-  writePublicationOutput('unchanged', output)
-  writePublicationOutput('published')
-  assert.equal(readFileSync(output, 'utf8'), 'prior=value\nstatus=published\nstatus=unchanged\n')
+  writePublicationOutput({ status: 'published', siteChanged: true, publishedSha: 'a'.repeat(40) }, output)
+  writePublicationOutput({ status: 'unchanged', siteChanged: false }, output)
+  writePublicationOutput({ status: 'published', siteChanged: false })
+  assert.equal(readFileSync(output, 'utf8'), `prior=value\nstatus=published\nsite_changed=true\npublished_sha=${'a'.repeat(40)}\nstatus=unchanged\nsite_changed=false\npublished_sha=\n`)
+})
+
+test('discovery workflow no longer owns site triggers or production credentials', () => {
+  const source = workflow('radar.yml')
+  assert.doesNotMatch(source, /secrets.CLOUDFLARE|^  (push|pull_request|verify|deploy|resume-intake):/m)
+  assert.match(source, /options: \[sync\]/)
+  assert.match(workflow('metadata-sync.yml'), /cron: '11 1,7,13,19 \* \* \*'/)
+  assert.doesNotMatch(workflow('metadata-sync.yml'), /TYPESAFE|JEV_.*BUDGET|limit:/)
+})
+
+test('metadata capability failure cannot gate the radar collection step', t => {
+  const f = fixture(t)
+  f.save('bin/node', `#!/bin/sh
+printf '%s\\n' "$*" >> "$RECEIPT"
+case "$*" in
+  *scripts/github-metadata.ts*) exit 23 ;;
+  *scripts/review-checkpoint.ts*) exit 0 ;;
+  *scripts/radar.ts*) printf reviewed > "$RUNNER_TEMP/reviewed" ;;
+  *) exit 64 ;;
+esac
+`, true)
+  // --- 反例先证明故障探针会阻断后续采集，再执行工作流的真实命令顺序 ---
+  const probe = 'node --experimental-strip-types scripts/github-metadata.ts --probe'
+  const collect = 'node --experimental-strip-types scripts/radar.ts "$RUNNER_TEMP/snapshot"'
+  assert.equal(f.invoke(`${probe}\n${collect}`).status, 23)
+  assert.equal(existsSync(join(f.root, 'reviewed')), false)
+  const source = workflow('radar.yml')
+  const scan = source.slice(source.indexOf('\n  scan:\n'), source.indexOf('      - name: Save radar request budget'))
+  const commands = [...scan.matchAll(/^        run: (node .+)$/gm)].map(match => match[1])
+  assert.ok(commands.some(value => value.includes('scripts/review-checkpoint.ts')))
+  assert.equal(commands.filter(value => value.includes('scripts/radar.ts')).length, 1)
+  assert.equal(f.invoke(commands.join('\n')).status, 0, 'GraphQL diagnostics must not prevent REST-backed candidate review')
+  assert.equal(readFileSync(join(f.root, 'reviewed'), 'utf8'), 'reviewed')
 })

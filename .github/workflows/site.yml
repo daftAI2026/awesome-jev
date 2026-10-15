@@ -1,0 +1,148 @@
+# [INPUT]: 依赖可信 main、精确 PR head 与完整交付检查
+# [OUTPUT]: 封装同版本产物，可信 main 部署并通知收录控制器
+# [POS]: 网站唯一交付入口；不持有审核密钥
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+name: Jev site delivery
+run-name: >-
+  ${{ github.event_name == 'workflow_dispatch' && format('Jev validate: {0}', github.ref_name) || github.event.pull_request.title || github.event.head_commit.message || github.event_name }}
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [validate]
+        default: validate
+permissions:
+  contents: read
+concurrency:
+  group: jev-site-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    outputs:
+      artifact_id: ${{ steps.worker-artifact.outputs.artifact-id }}
+    if: github.event_name != 'schedule' && (github.event_name != 'workflow_dispatch' || inputs.mode == 'validate')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify new or edited rationale quotes at pinned sources
+        run: |
+          if [ -z "$INCLUSION_BASE_SHA" ]; then
+            INCLUSION_BASE_SHA=$(git rev-parse HEAD^)
+          fi
+          npm run inclusion:verify -- "$INCLUSION_BASE_SHA"
+        env:
+          INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+      - name: Verify catalog and delivery
+        run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+      - name: Package verified Worker output
+        id: package
+        if: >-
+          github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+          (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'validate'))
+        run: |
+          printf '%s\n' "$GITHUB_SHA" > dist/.build-sha
+          tar -czf "$RUNNER_TEMP/worker-build.tar.gz" dist
+      - name: Save verified Worker output
+        id: worker-artifact
+        if: steps.package.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: worker-${{ github.sha }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/worker-build.tar.gz
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+  deploy:
+    name: Deploy verified main artifact
+    needs: verify
+    if: >-
+      needs.verify.result == 'success' && needs.verify.outputs.artifact_id != '' &&
+      github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+      vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true' &&
+      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'validate'))
+    permissions:
+      contents: read
+    environment: production
+    concurrency:
+      group: jev-production-deploy
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.verify.outputs.artifact_id }}
+          path: ${{ runner.temp }}/worker-build
+          merge-multiple: true
+      - name: Restore exact verified output
+        run: |
+          tar -xzf "$RUNNER_TEMP/worker-build/worker-build.tar.gz"
+          test "$(cat dist/.build-sha)" = "$GITHUB_SHA"
+          node -e 'const c=require("./dist/server/wrangler.json"); if(c.name!=="awesome-jev-project" || c.no_bundle!==true || c.assets?.directory!=="../client") process.exit(1)'
+      - name: Install locked deploy tool without running build
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Refuse superseded main deployment
+        id: freshness
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          git -c 'credential.helper=!gh auth git-credential' fetch --no-tags origin "$latest"
+          node --experimental-strip-types scripts/site-publication.ts --deployable "$GITHUB_SHA" "$latest"
+      - name: Deploy the verified output without rebuilding
+        if: steps.freshness.outputs.current == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo 'Missing production Cloudflare token.'; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'Missing Cloudflare account ID.'; exit 1; }
+          npx --no-install wrangler deploy --config dist/server/wrangler.json --message "GitHub $GITHUB_SHA"
+  resume-intake:
+    needs: verify
+    # 通知失败不污染已成功的验证；失败 job 仍可见，后续 sweep 可读取完整 CI 恢复。
+    continue-on-error: true
+    if: >-
+      needs.verify.result == 'success' &&
+      github.repository == 'daftAI2026/awesome-jev' &&
+      github.event_name == 'workflow_dispatch' && inputs.mode == 'validate' &&
+      startsWith(github.ref_name, 'jev-intake/issue-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      actions: write
+    steps:
+      # 只传导航编号，不授予批准；不 checkout 分支代码，不把写入 token 交给验证 job。
+      - name: Resume trusted-main intake
+        run: |
+          if [[ "$INTAKE_REF" =~ ^jev-intake/issue-([1-9][0-9]*)$ ]]; then
+            gh workflow run submission-intake.yml --repo "$GITHUB_REPOSITORY" --ref main -f "number=${BASH_REMATCH[1]}"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INTAKE_REF: ${{ github.ref_name }}

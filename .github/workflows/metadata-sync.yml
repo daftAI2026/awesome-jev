@@ -1,0 +1,122 @@
+# [INPUT]: 依赖内置 GitHub token、规范目录与独立统计检查点
+# [OUTPUT]: 全目录统计快照、诊断与安全增量发布，无模型请求
+# [POS]: 每六小时错峰运行的元数据同步，发布后交给站点流水线
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+name: Jev metadata sync
+on:
+  schedule:
+    - cron: '11 1,7,13,19 * * *'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Commit the validated metadata snapshot
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: jev-metadata-${{ github.ref }}
+  cancel-in-progress: false
+  queue: max
+jobs:
+  scan:
+    permissions:
+      contents: read
+    if: >-
+      github.repository == 'daftAI2026/awesome-jev' && github.ref == 'refs/heads/main' &&
+      ((github.event_name == 'schedule' && vars.RADAR_ENABLED == 'true') ||
+       github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+      artifact_id: ${{ steps.snapshot.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+          fetch-depth: 0
+      - id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - name: Refresh full catalog (no model key)
+        id: collect
+        run: node --experimental-strip-types scripts/metadata-sync.ts "$RUNNER_TEMP/snapshot"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Save failed collection diagnostics (not a publishable snapshot)
+        if: failure() && steps.collect.outcome == 'failure'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: metadata-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/snapshot/radar
+          if-no-files-found: warn
+          retention-days: 14
+      - id: snapshot
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: metadata-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/snapshot
+          if-no-files-found: error
+          retention-days: 14
+  validate:
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.scan.outputs.source_sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.scan.outputs.artifact_id }}
+          path: ${{ runner.temp }}/snapshot
+          merge-multiple: true
+      - run: node --experimental-strip-types scripts/metadata-sync.ts --apply "$RUNNER_TEMP/snapshot"
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+  publish:
+    concurrency:
+      group: jev-data-publish
+      cancel-in-progress: false
+      queue: max
+    needs: [scan, validate]
+    if: github.event_name == 'schedule' || inputs.publish == true
+    permissions:
+      contents: write
+      actions: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.scan.outputs.source_sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.scan.outputs.artifact_id }}
+          path: ${{ runner.temp }}/snapshot
+          merge-multiple: true
+      - run: node --experimental-strip-types scripts/metadata-sync.ts --apply "$RUNNER_TEMP/snapshot"
+      - name: Publish on latest main with bounded conflict recovery
+        id: publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node --experimental-strip-types scripts/publish-data.ts metadata
+      - name: Request verified main deployment after data publication
+        if: steps.publication.outputs.status == 'published' && steps.publication.outputs.site_changed == 'true' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run site.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

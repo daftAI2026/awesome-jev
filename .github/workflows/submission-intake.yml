@@ -5,7 +5,7 @@
 name: Jev submission intake
 on:
   workflow_run:
-    workflows: [Jev submission review, Jev ecosystem radar]
+    workflows: [Jev submission review, Jev site delivery]
     types: [completed]
   issue_comment:
     types: [created]

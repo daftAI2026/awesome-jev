@@ -121,6 +121,10 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
   publish:
+    concurrency:
+      group: jev-data-publish
+      cancel-in-progress: false
+      queue: max
     needs: [scan, validate]
     if: github.event_name == 'schedule' || inputs.publish == true
     permissions:
@@ -149,7 +153,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: node --experimental-strip-types scripts/publish-data.ts alternatives
       - name: Request verified main deployment after data publication
-        if: steps.publication.outputs.status == 'published' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
+        if: steps.publication.outputs.status == 'published' && steps.publication.outputs.site_changed == 'true' && vars.CLOUDFLARE_ACTIONS_DEPLOY_ENABLED == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run radar.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate
+        run: gh workflow run site.yml --repo "$GITHUB_REPOSITORY" --ref main -f mode=validate

@@ -45,7 +45,7 @@ export function mergePublishedCatalog(base: DirectoryItem[], collected: Director
           const nextId = incoming.sourceMeta.githubIdentity?.databaseId
           if (oldId !== nextId) throw new Error('publication-github-identity-conflict')
         }
-        // 同时变动的统计保留最新 main；核心发布随后重新刷新最终 Top100。
+        // 同时变动的统计保留最新 main，不在发布阶段补读统计。
       }
       if (current.sourceMeta.githubIdentity) identities.add(current.sourceMeta.githubIdentity.databaseId)
     } else {

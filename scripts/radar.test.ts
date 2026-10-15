@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、核心雷达与注入的离线 GitHub / 模型桩
- * [OUTPUT]: 对外提供核心雷达、元数据与审核恢复的回归断言
+ * [OUTPUT]: 提供来源故障隔离、运行级停止、候选迁移与公平审核恢复断言
  * [POS]: scripts 的采集编排离线验收，不调用真实网络或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -8,7 +8,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { classifyProjects, evaluateJev, parseScore, reviewDecision, reviewBody } from './jev-client.ts'
 import { createGitHubClient } from './github-client.ts'
-import { emptyState, runRadar, validateState } from './radar.ts'
+import { emptyState, runRadar, validateState, type RadarState } from './radar.ts'
 import type { ReviewApi, ReviewRepository, ReviewRow, ReviewScore } from './review-types.ts'
 
 const now = new Date('2026-09-22T00:00:00Z')
@@ -142,7 +142,7 @@ test('missing README never reaches Jev and cannot enter catalog', async () => {
   }, review: async () => { called = true; return score } })
   assert.equal(called, false); assert.equal(result.report.added, 0)
 })
-test('failed priority metadata preserves old record and blocks paid candidates', async () => {
+test('unavailable legacy identity preserves old record without blocking paid candidates', async () => {
   const old: ReviewRow = { id: 'old', type: 'github', title: 'Old', summary: 'Curated', tags: ['sdk'],
     url: 'https://github.com/test/old', sourceMeta: { repo: 'test/old', stars: 9 } }
   const original: Catalog = { files: new Map<string, ReviewRow[]>([['github.json', [old]]]), rows: [old] }
@@ -150,9 +150,9 @@ test('failed priority metadata preserves old record and blocks paid candidates',
     if (path === '/graphql') return { data: { r0: null, rateLimit: { cost: 1 } }, errors: [{ type: 'NOT_FOUND', path: ['r0'] }] }
     return api(path)
   } })
-  assert.deepEqual(result.rows[0], old); assert.equal(result.report.metadata.failed, 1)
-  assert.equal(result.report.added, 0)
-  assert.equal(result.report.metadata.top100.complete, false)
+  assert.deepEqual(result.rows[0], old); assert.equal(result.report.identity?.failed, 1)
+  assert.equal(result.report.added, 1)
+  assert.equal(result.report.metadata.top100, undefined)
 })
 test('search cursors continue across runs; search cap is explicit', async () => {
   const pages: number[] = []
@@ -251,15 +251,15 @@ test('repository search retains star priority across queue checkpoints', async (
 
 test('terminal rejection cache cannot permanently block new discovery at queue capacity', async () => {
   const state = emptyState()
-  for (let i = 0; i < 2000; i++) state.candidates[`old/rejected-${i}`] = {
+  for (let i = 0; i < 4000; i++) state.candidates[`old/rejected-${i}`] = {
     status: 'drop', discoveredAt: now.toISOString(), checkedAt: now.toISOString(),
     retryAt: '2026-10-22T00:00:00Z', attempts: 1,
   }
   const result = await runRadar({ ...options(), state })
   assert.equal(result.report.added, 1)
-  assert.equal(result.report.evicted, 1)
+  assert.equal(result.report.evicted, 100)
   assert.equal(result.report.status, 'partial')
-  assert.ok(Object.keys(result.state.candidates).length < 2000)
+  assert.ok(Object.keys(result.state.candidates).length < 4000)
 })
 
 test('persisted timestamps must be ISO strings, not Date.parse-coercible numbers', () => {
@@ -285,12 +285,12 @@ for (const [evidence, reason] of [
 })
 
 // --- 历史游标和候选预算均不得截断旧项目刷新 ---
-test('every existing GitHub repository is refreshed regardless of candidate limit or old cursor', async () => {
+test('legacy identity bootstrap ignores candidate limit and never changes statistics', async () => {
   const rows: ReviewRow[] = Array.from({ length: 501 }, (_, i) => ({ id: `old-${i}`, type: 'github', title: `Old ${i}`,
     summary: 'Curated', url: `https://github.com/test/old-${i}`,
     sourceMeta: { repo: `test/old-${i}`, stars: 501 - i, forks: 8, language: 'JavaScript', ...score } }))
   const before = structuredClone(rows)
-  const state = { ...emptyState(), metadataCursor: 300 }
+  const state = { version: 1, pages: {}, candidates: {}, metadataCursor: 300 }
   const seen: string[] = []
   const result = await runRadar({ catalog: { files: new Map<string, ReviewRow[]>([['github.json', rows]]), rows },
     state, queries: [], limit: 1, now,
@@ -306,15 +306,15 @@ test('every existing GitHub repository is refreshed regardless of candidate limi
       return payload
     },
   })
-  assert.equal(seen.length, 502) // 未读到身份的旧项额外执行同一批读；仍不修改其统计。
+  assert.equal(seen.length, 501) // 未读到身份的旧项额外执行同一批读；仍不修改其统计。
   assert.equal(new Set(seen).size, 501)
-  assert.equal(result.report.metadata.ok, 500)
-  assert.equal(result.report.metadata.failed, 1)
+  assert.equal(result.report.identity?.ok, 500)
+  assert.equal(result.report.identity?.failed, 1)
   assert.deepEqual(result.rows[500], before[500])
   for (const [i, row] of result.rows.entries()) {
     if (i === 500) continue
     assert.deepEqual(row, { ...before[i], sourceMeta: { ...before[i].sourceMeta,
-      stars: 4, forks: 2, language: 'TypeScript', githubIdentity: {
+      githubIdentity: {
         databaseId: fixtureDatabaseId(`test/old-${i}`), nodeId: `test/old-${i}` } } })
   }
   assert.deepEqual(rows, before)
@@ -329,18 +329,18 @@ test('deadline spans discovery and preserves untouched candidates', async () => 
     api: async () => { calls++; return { items: [], total_count: 0 } } })
   assert.equal(calls, 0)
   assert.equal(result.report.status, 'partial')
-  assert.equal(result.report.deferred?.phase, 'discovery')
+  assert.equal(result.report.deferred?.phase, 'review')
   assert.deepEqual(result.state.candidates, state.candidates)
 })
-test('deadline in metadata stops all later requests, keeps old rows and reports unfinished refresh', async () => {
+test('deadline in identity bootstrap stops later requests and leaves statistics untouched', async () => {
   const rows = metadataRows(51)
   let time = 0; let calls = 0
   const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', rows]]), rows }, queries: [], deadline: 100, clock: () => time,
     api: async (_path, request) => { calls++; time = 100; return graphResponse(request!.query, () => 10000) } })
   assert.equal(calls, 1)
-  assert.equal(result.report.metadata.ok, 50)
+  assert.equal(result.report.identity?.ok, 50)
   assert.equal(result.report.metadata.failed, 0)
-  assert.deepEqual(result.report.deferred, { phase: 'metadata', reason: 'github-deadline', metadataRemaining: 1 })
+  assert.deepEqual(result.report.deferred, { phase: 'identity', reason: 'github-deadline' })
   assert.equal(result.report.status, 'partial')
   assert.deepEqual(result.rows[50], rows[50])
 })
@@ -399,96 +399,40 @@ function graphResponse(query: string, stars: (key: string) => number = (key) => 
   for (const match of query.matchAll(/(r\d+):\s*node\(id:\s*"([^"]+)"\)/g)) put(match[1], match[2])
   return { data }
 }
-test('default runRadar prioritizes top100 then batches 1000 others with persistent cursor across 5000 rows', async () => {
-  const rows = metadataRows(5000)
-  let state = emptyState()
-  let currentRows = rows
-  const ever = new Set<string>()
-  for (let round = 0; round < 5; round++) {
-    const calls: string[][] = []
-    const shared = createGitHubClient('test', { wait: async () => {}, fetchImpl: async (url, init) => {
-      assert.equal(url, 'https://api.github.com/graphql')
-      assert.equal(init?.method, 'POST')
-      const query = JSON.parse(init?.body as string).query as string
-      const keys = [...query.matchAll(/(?:name:\s*"m-|node\(id:\s*"test\/m-)(\d+)"/g)].map((m) => `test/m-${m[1]}`)
-      calls.push(keys); keys.forEach((key) => ever.add(key))
-      return Response.json(graphResponse(query, (key) => 5000 - Number(key.split('-').at(-1))))
-    } })
-    const result = await runRadar({ catalog: { files: new Map([['github.json', currentRows]]), rows: currentRows }, state,
-      queries: [], api: shared, review: async () => { assert.fail('No paid metadata review') } })
-    assert.deepEqual(calls.slice(0, 2).flat(), Array.from({ length: 100 }, (_, i) => `test/m-${i}`))
-    assert.equal(result.report.metadata.top100.ok, 100)
-    assert.equal(result.report.metadata.top100.complete, true)
-    assert.equal(result.report.status, 'partial')
-    assert.ok(result.report.metadata.remaining > 0)
-    assert.equal(result.report.metadata.cost! + result.report.identity!.cost!, calls.length)
-    assert.equal(result.report.identity!.ok, round === 0 ? 3900 : 0)
-    assert.ok(calls.every((batch) => batch.length <= 50))
-    assert.ok(result.report.metadata.other <= 1000)
-    state = result.state; currentRows = result.rows
-  }
-  assert.equal(ever.size, 5000)
-  assert.deepEqual(rows, metadataRows(5000))
+test('5000 legacy identities bootstrap once without changing stats or refreshing them in later runs', async () => {
+  const rows = metadataRows(5000), before = structuredClone(rows)
+  let calls = 0
+  const first = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, queries: [],
+    api: async (_path, request) => { calls++; return graphResponse(request!.query) }, review: async () => assert.fail('No model') })
+  assert.equal(calls, 100)
+  assert.equal(first.report.identity?.ok, 5000)
+  assert.deepEqual(first.rows.map(row => row.sourceMeta.stars), before.map(row => row.sourceMeta.stars))
+  const second = await runRadar({ catalog: { files: first.files, rows: first.rows }, state: first.state, queries: [],
+    api: async () => assert.fail('Anchored catalog must not refresh statistics'), review: async () => assert.fail('No model') })
+  assert.equal(second.report.identity?.ok, 0)
+  assert.deepEqual(rows, before)
 })
-test('metadata precedes discovery and incomplete top100 blocks candidate paid calls', async () => {
-  const rows = metadataRows(2)
-  const state = emptyState()
-  state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
-  const calls: string[] = []
-  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, state, queries: ['discover'],
-    api: async (path, request) => { calls.push(path); return path === '/graphql' ? graphResponse(request!.query, () => 2, new Set(['test/m-0'])) : { items: [], total_count: 0 } },
-    review: async () => { assert.fail('Incomplete priority must not call paid model') } })
-  assert.deepEqual(calls, ['/graphql'])
-  assert.equal(result.report.metadata.top100.complete, false)
-  assert.equal(result.report.metadata.top100.ok, 1)
-  assert.deepEqual(result.state.candidates, state.candidates)
-})
-test('priority closure refreshes cached outsiders entering top100 after initial leaders drop', async () => {
-  const rows = metadataRows(150)
-  const seen = new Set<string>()
-  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, queries: [], metadataLimit: 0,
-    api: async (_path, request) => {
-      const query = request!.query
-      for (const match of query.matchAll(/name:\s*"m-(\d+)"/g)) seen.add(`test/m-${match[1]}`)
-      return graphResponse(query, (key) => Number(key.split('-').at(-1)) < 100 ? 0 : 50)
-    }, review: async () => { assert.fail('No paid metadata review') } })
-  assert.equal(seen.size, 150)
-  assert.equal(result.report.metadata.top100.complete, true)
-  assert.equal(result.report.metadata.other, 0)
-})
-
-test('new paid-accepted high-star candidate is fresh in final top100 without redundant GraphQL', async () => {
+test('new high-star admission does not cause a catalog statistics request', async () => {
   const rows = metadataRows(100)
-  let batches = 0
+  rows.forEach((row, i) => { row.sourceMeta.githubIdentity = { databaseId: 10000 + i, nodeId: `node-${i}` } })
   const accepted = { ...repo, stargazers_count: 99999 }
   const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', rows]]), rows },
     api: async (path, request) => {
-      if (path === '/graphql') { batches++; return graphResponse(request!.query, () => 100) }
+      assert.notEqual(path, '/graphql')
       if (path.startsWith('/search/')) return { items: [accepted], total_count: 1 }
       if (path === '/repos/test/jev-sdk') return accepted
-      return api(path)
+      return api(path, request)
     } })
   assert.equal(result.report.added, 1)
-  assert.equal(result.report.metadata.top100.complete, true)
-  assert.equal(result.report.metadata.top100.ok, 100)
-  assert.equal(batches, 2)
+  assert.deepEqual(result.rows.slice(0, 100), rows)
   assert.equal(result.rows.at(-1)?.sourceMeta.stars, 99999)
-})
-test('priority failure report enumerates every unrefreshed displayed top repository', async () => {
-  const rows = metadataRows(2)
-  const result = await runRadar({ catalog: { files: new Map([['github.json', rows]]), rows }, queries: [],
-    api: async (_path, request) => graphResponse(request!.query, () => 2, new Set(['test/m-0'])),
-    review: async () => { assert.fail('No paid call') } })
-  assert.deepEqual(result.report.metadata.top100.unrefreshed, ['test/m-0'])
 })
 
 // --- failed 诊断不能借输出目录残留的 data/README 被误 apply；旧快照仍兼容 ---
 for (const [label, top, expected] of [
-  ['explicit incomplete', { ok: 0, total: 100, complete: false, unrefreshed: ['test/fail'] }, 'github-top100-incomplete'],
-  ['malformed complete', { ok: 0, total: 100, complete: 'yes', unrefreshed: [] }, 'github-invalid-top100-report'],
-  ['inconsistent complete', { ok: 50, total: 100, complete: true, unrefreshed: [] }, 'github-invalid-top100-report'],
-  ['malformed null', null, 'github-invalid-top100-report'],
-  ['modern completed rotation partial', { ok: 100, total: 100, complete: true, unrefreshed: [] }, undefined],
+  ['diagnostic', undefined, 'Invalid report'],
+  ['identity failure', undefined, 'Invalid report'],
+  ['legacy incomplete Top no longer gates discovery', { ok: 0, total: 100, complete: false, unrefreshed: ['test/fail'] }, undefined],
   ['legacy omitted', undefined, undefined],
 ] as const) test(`CLI --apply guards ${label} without touching baseline files`, async () => {
   const fs = await import('node:fs')
@@ -505,7 +449,10 @@ for (const [label, top, expected] of [
     }
     const before = files.map((file) => fs.readFileSync(join(root, file)))
     const report = JSON.parse(fs.readFileSync(join(snapshot, 'radar/latest.json'), 'utf8'))
-    report.status = 'partial'; report.metadata = { ok: 0, failed: 1 }
+    report.status = label === 'diagnostic' ? 'diagnostic' : 'partial';
+    if (label === 'identity failure') report.deferred = { phase: 'identity', reason: 'github-invalid-response' }
+    else delete report.deferred
+    report.metadata = { ok: 0, failed: 1 }
     if (top !== undefined) report.metadata.top100 = top
     fs.writeFileSync(join(snapshot, 'radar/latest.json'), JSON.stringify(report))
     const result = spawnSync(process.execPath, ['--experimental-strip-types', resolve('scripts/radar.ts'), '--apply', snapshot], {
@@ -536,7 +483,6 @@ for (const queued of [false, true]) test(`renamed listed repository is not revie
       if (path === '/repos/test/jev-sdk') return renamed
       return api(path)
     }, review: async () => { assert.fail('Rename must not incur another model review') } })
-  assert.equal(result.report.metadata.top100.complete, true)
   assert.equal(result.report.reviewed, 0)
   assert.equal(result.report.added, 0)
   assert.equal(result.report.pending, 0)
@@ -565,11 +511,10 @@ test('legacy rows beyond the statistics rotation get identity before discovery a
         if (path === '/repos/test/jev-sdk') return renamed
         return api(path)
       }, review: async () => { paid++; return score } })
-    assert.equal(result.report.metadata.other, 1000)
     assert.equal(result.report.added, 0)
     assert.equal(result.rows.length, 1101)
     assert.equal(result.rows[1100].sourceMeta.githubIdentity?.databaseId, renamed.id)
-    assert.equal(result.report.identity?.ok, round === 0 ? 1 : 0)
+    assert.equal(result.report.identity?.ok, round === 0 ? 1101 : 0)
     current = result.rows; state = result.state
   }
   assert.equal(paid, 0)
@@ -589,4 +534,130 @@ test('temporary bootstrap field errors pause discovery and paid review for legac
   assert.equal(result.report.reviewed, 0)
   assert.equal(result.report.added, 0)
   assert.equal(result.rows.length, 1101)
+})
+
+// --- Workflow 解耦：发现与状态的新边界 ---
+test('discovery radar does not refresh already anchored catalog statistics', async () => {
+  const listed = metadataRows(1); listed[0].sourceMeta.githubIdentity = { databaseId: 1, nodeId: 'listed' }
+  const result = await runRadar({ ...options(), catalog: { files: new Map([['github.json', listed]]), rows: listed }, queries: [], api: async () => assert.fail('No metadata request in discovery') })
+  assert.deepEqual(result.rows, listed)
+  assert.equal(result.state.version, 2)
+  assert.equal(Object.hasOwn(result.state, 'metadataCursor'), false)
+})
+test('legacy candidate state migrates losslessly without the statistics cursor', async () => {
+  const state: RadarState = { version: 1, pages: { old: 2 }, metadataCursor: 283, metadataNext: 'test/old', candidates: {} }
+  for (let i = 0; i < 2000; i++) state.candidates[`test/q-${i}`] = { status: 'review', discoveredAt: now.toISOString(), retryAt: '2099-01-01T00:00:00Z', attempts: 2, lastReview: { repo: `test/q-${i}`, status: 'review' } }
+  const result = await runRadar({ ...options(), state, queries: [] })
+  assert.equal(result.state.version, 2)
+  assert.deepEqual(result.state.candidates, state.candidates)
+  assert.deepEqual(result.state.pages, state.pages)
+  assert.equal(result.state.nextReviewLane, 'pending')
+  assert.equal(Object.hasOwn(result.state, 'metadataCursor'), false)
+})
+test('search failure does not stop existing candidates from evidence review', async () => {
+  const state = emptyState(); state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  const result = await runRadar({ ...options(), state, api: async (path, req) => {
+    if (path.startsWith('/search/')) throw new Error('github-resource-deferred')
+    return api(path, req)
+  } })
+  assert.equal(result.report.added, 1)
+  assert.equal(result.report.sources[0].status, 'github-resource-deferred')
+})
+// --- 来源故障不能扩大为整轮暂停；认证、格式与全局限制仍失败关闭 ---
+for (const source of ['repositories', 'code']) {
+  for (const reason of ['github-network-or-timeout', 'github-http-500', 'github-http-502', 'github-http-503', 'github-http-504']) {
+    test(`source-local ${source} ${reason} preserves the cursor and reviews existing candidates`, async () => {
+      const state = emptyState(), cursor = source === 'code' ? 'code:offline query' : 'offline query'
+      state.pages[cursor] = 2
+      state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+      const result = await runRadar({ ...options(), state,
+        queries: source === 'repositories' ? ['offline query'] : [], codeQueries: source === 'code' ? ['offline query'] : [],
+        api: async (path, request) => {
+          if (path.startsWith('/search/')) throw new Error(reason)
+          return api(path, request)
+        } })
+      assert.equal(result.report.added, 1)
+      assert.equal(result.report.reviewed, 1)
+      assert.equal(result.report.deferred, undefined)
+      assert.equal(result.report.status, 'partial')
+      assert.equal(result.report.sources[0]?.status, reason)
+      assert.equal(result.state.pages[cursor], 2)
+    })
+  }
+  for (const reason of ['github-deadline', 'github-rate-limited', 'github-request-budget', 'github-http-401', 'github-invalid-response']) {
+    test(`global discovery ${source} ${reason} preserves untouched candidates and stops all later work`, async () => {
+      const state = emptyState()
+      state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+      let calls = 0
+      const result = await runRadar({ ...options(), state,
+        queries: source === 'repositories' ? ['blocked', 'must-not-run'] : [], codeQueries: source === 'code' ? ['blocked', 'must-not-run'] : [],
+        api: async path => { calls++; assert.ok(path.startsWith('/search/')); throw new Error(reason) },
+        review: async () => assert.fail('Global failures must not call the model') })
+      assert.equal(calls, 1)
+      assert.equal(result.report.reviewed, 0)
+      assert.deepEqual(result.state.candidates, state.candidates)
+      assert.deepEqual(result.report.deferred, { phase: 'discovery', reason })
+    })
+  }
+}
+test('pending and due review lanes alternate and budget interruption preserves the next lane', async () => {
+  const state = emptyState()
+  for (const [key, status] of [['test/p1', 'pending'], ['test/p2', 'pending'], ['test/r1', 'review'], ['test/r2', 'review']] as const) {
+    state.candidates[key] = { status, discoveredAt: '2026-09-01T00:00:00Z', attempts: 0, ...(status === 'review' ? { retryAt: '2026-09-02T00:00:00Z' } : {}) }
+  }
+  const seen: string[] = []
+  const result = await runRadar({ ...options(), state, queries: [], api: async path => {
+    const key = path.match(/^\/repos\/([^/]+\/[^/?]+)/)?.[1] ?? ''
+    const value = await api(path)
+    return path === `/repos/${key}` ? { ...value as object, html_url: `https://github.com/${key}`, full_name: key, name: key.split('/')[1] } : value
+  }, review: async (row) => { seen.push(row.sourceMeta!.repo!); if (seen.length === 3) throw new Error('radar-budget-exhausted'); return { ...score, jevKeep: 'review' } } })
+  assert.deepEqual(seen, ['test/p1', 'test/r1', 'test/p2'])
+  assert.equal(result.state.nextReviewLane, 'pending')
+  assert.equal(result.state.candidates['test/p2'].attempts, 0)
+})
+test('pending cap buffers the remainder of an observed page and replays it before new search', async () => {
+  const state = emptyState()
+  for (let i = 0; i < 1999; i++) state.candidates[`test/old-${i}`] = { status: 'pending', discoveredAt: now.toISOString(), retryAt: '2099-01-01T00:00:00Z', attempts: 0 }
+  const candidateApi: ReviewApi = async path => {
+    const value = await api(path), key = path.match(/^\/repos\/([^/]+\/[^/?]+)/)?.[1]
+    return key && path === `/repos/${key}` ? { ...value as object, html_url: `https://github.com/${key}`, full_name: key, name: key.split('/')[1] } : value
+  }
+  const result = await runRadar({ ...options(), state, api: async path => path.startsWith('/search/') ? { items: Array.from({ length: 100 }, (_, i) => ({ ...repo, html_url: `https://github.com/test/new-${i}`, full_name: `test/new-${i}` })), total_count: 200 } : candidateApi(path), review: async () => { throw new Error('radar-budget-exhausted') } })
+  assert.equal(Object.keys(result.state.candidates).length, 2000)
+  assert.equal(result.state.pendingSearchPage?.items.length, 99)
+  assert.equal(result.state.pages['test query'] ?? 1, 1)
+  delete result.state.candidates['test/old-0']
+  const next = await runRadar({ ...options(), state: result.state, api: async path => {
+    assert.ok(!path.startsWith('/search/'), 'buffer must drain before a new search')
+    return candidateApi(path)
+  }, review: async () => { throw new Error('radar-budget-exhausted') } })
+  assert.equal(next.state.pendingSearchPage?.items.length, 98)
+})
+
+test('candidate storage has independent pending/total bounds and rejects extra buffered payloads before requests', () => {
+  const state = emptyState()
+  for (let i = 0; i < 4000; i++) state.candidates[`test/r-${i}`] = { status: i < 2000 ? 'pending' : 'review', discoveredAt: now.toISOString(), attempts: 0 }
+  validateState(state)
+  state.candidates['test/overflow'] = { status: 'review', discoveredAt: now.toISOString(), attempts: 0 }
+  assert.throws(() => validateState(state), /overflow/)
+  delete state.candidates['test/overflow']
+  state.candidates['test/r-2000'].status = 'pending'
+  assert.throws(() => validateState(state), /overflow/)
+  const old = { version: 1, metadataCursor: 0, pages: {}, candidates: {}, nextReviewLane: 'unknown' }
+  assert.throws(() => validateState(old as unknown as RadarState), /state/)
+  const buffered = { ...emptyState(), pendingSearchPage: { query: 'x', page: 1, nextPage: 2, sourceStatus: 'bounded', items: [], response: 'private HTTP body' } }
+  assert.throws(() => validateState(buffered), /pending search/)
+})
+test('five-minute discovery window still leaves the same client available for evidence', async () => {
+  const state = emptyState(); state.candidates['test/jev-sdk'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+  let time = 0, calls = 0
+  const result = await runRadar({ ...options(), state, queries: ['first', 'second'], deadline: 1500000, clock: () => time,
+    api: async (path, request, scope) => {
+      if (path.startsWith('/search/')) { calls++; assert.equal(scope?.deadline, 300000); time = 300000; return { items: [], total_count: 0 } }
+      assert.ok(time < 1500000)
+      return api(path, request)
+    } })
+  assert.equal(calls, 1)
+  assert.equal(result.report.added, 1)
+  assert.ok(result.report.sources.some(source => source.status === 'github-phase-deadline'))
 })

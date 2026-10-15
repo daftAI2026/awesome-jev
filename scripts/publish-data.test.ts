@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖三方合并、真实 Git 本地 bare remote、临时仓库与注入验证器
- * [OUTPUT]: 对外提供三采集器增量保护、发布竞争重试及失败不推送的离线回归
+ * [OUTPUT]: 对外提供四采集器独占状态、最终站点差异与发布竞争回归
  * [POS]: scripts 的发布验收；制造真实 non-fast-forward，不接触 GitHub 或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -15,6 +15,8 @@ import { publishData } from './publish-data.ts'
 import { renderReadme } from './catalog.ts'
 import { parseNewsItem } from './news-sync.ts'
 import { generateSitemap } from './generate-sitemap.ts'
+import { runMetadata } from './metadata-sync.ts'
+import { readCatalog } from './catalog.ts'
 import { emptyState } from './radar.ts'
 import type { DirectoryItem } from './model-types.ts'
 
@@ -87,6 +89,8 @@ function repositories(t: TestContext) {
     save(local, `radar/${mode}state.json`, emptyState())
     save(local, `radar/${mode}latest.json`, { status: 'complete', receipts: [], metadata: { top100: { complete: true } } })
   }
+  save(local, 'radar/metadata-state.json', { version: 1, metadataCursor: 0 })
+  save(local, 'radar/metadata-latest.json', { status: 'not-run' })
   const commit = (cwd: string, message: string) => {
     run(cwd, ['add', '.'])
     run(cwd, ['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', message])
@@ -104,7 +108,7 @@ test('normal validated publication uses a normal fast-forward push without a red
   const fixture = repositories(t)
   save(fixture.local, 'data/news.json', [news('base'), news('local')])
   const result = await publishData({ root: fixture.local, mode: 'news', validate: () => assert.fail('No merge needs no second build') })
-  assert.deepEqual(result, { status: 'published', attempts: 1, rebased: false })
+  assert.deepEqual({ status: result.status, attempts: result.attempts, rebased: result.rebased }, { status: 'published', attempts: 1, rebased: false })
   assert.equal(fixture.head(), run(fixture.local, ['rev-parse', 'HEAD']))
 })
 for (const mode of ['news', 'radar', 'alternatives'] as const) test(`${mode} publication overlays onto new main and validates the merged state`, async (t) => {
@@ -125,8 +129,8 @@ for (const mode of ['news', 'radar', 'alternatives'] as const) test(`${mode} pub
       assert.ok(readFileSync(join(cwd, 'public/sitemap.xml'), 'utf8').includes('urlset'))
     },
   })
-  assert.deepEqual(result, { status: 'published', attempts: 1, rebased: true })
-  assert.equal(validations, 1); assert.equal(metadataCalls, mode === 'radar' ? 1 : 0)
+  assert.deepEqual({ status: result.status, attempts: result.attempts, rebased: result.rebased }, { status: 'published', attempts: 1, rebased: true })
+  assert.equal(validations, 1); assert.equal(metadataCalls, 0)
   run(fixture.other, ['pull', '--ff-only'])
   assert.equal(load(fixture.other, 'data/news.json').some((item: { id: string }) => item.id === 'remote'), true)
   assert.equal(run(fixture.local, ['worktree', 'list', '--porcelain']).match(/^worktree /gm)?.length, 1)
@@ -137,7 +141,7 @@ test('a real push race retries against main, regenerates sitemap and preserves b
   let validations = 0
   const result = await publishData({ root: fixture.local, mode: 'news', validate: () => { validations++ },
     beforePush: (_root, attempt) => { if (attempt === 1) fixture.advance('remote') } })
-  assert.deepEqual(result, { status: 'published', attempts: 2, rebased: true })
+  assert.deepEqual({ status: result.status, attempts: result.attempts, rebased: result.rebased }, { status: 'published', attempts: result.attempts, rebased: true }); assert.equal(result.attempts, 2)
   assert.equal(validations, 1)
   run(fixture.other, ['pull', '--ff-only'])
   assert.deepEqual(load(fixture.other, 'data/news.json').map((item: { id: string }) => item.id), ['base', 'remote', 'local'])
@@ -172,4 +176,57 @@ test('all publication workflows use the same Actions-only publisher without mode
     assert.match(publication, /GH_TOKEN: \$\{\{ github\.token \}\}/)
     assert.doesNotMatch(publication, /TYPESAFE_API_KEY|git push|git.*reset|git.*rebase/)
   }
+})
+
+
+test('metadata and discovery publish independent checkpoints from the same baseline without additional Top reads', async t => {
+  const f = repositories(t)
+  const collected = await runMetadata({ catalog: readCatalog(f.local), state: load(f.local, 'radar/metadata-state.json'), baselineSha: run(f.local, ['rev-parse', 'HEAD']),
+    api: async () => ({ data: { r0: { id: 'opaque', databaseId: 1, nameWithOwner: 'test/one', url: 'https://github.com/test/one', stargazerCount: 9, forkCount: 2, primaryLanguage: null }, rateLimit: { cost: 1 } } }) })
+  save(f.local, 'data/github.json', collected.rows); save(f.local, 'radar/metadata-state.json', collected.state); save(f.local, 'radar/metadata-latest.json', collected.report)
+  const metadata = await publishData({ root: f.local, mode: 'metadata', validate: () => {} })
+  assert.equal(metadata.status, 'published')
+  const next = load(f.other, 'radar/state.json'); next.pages.discovery = 2
+  save(f.other, 'radar/state.json', next)
+  const discovery = await publishData({ root: f.other, mode: 'radar', validate: () => {}, githubApi: async () => assert.fail('Discovery publication must not refresh Top') })
+  assert.equal(discovery.status, 'published')
+  assert.equal(discovery.siteChanged, false)
+  const finalData = JSON.parse(run(f.other, ['show', 'origin/main:data/github.json']))
+  assert.equal(finalData[0].sourceMeta.stars, 9)
+  assert.equal(JSON.parse(run(f.other, ['show', 'origin/main:radar/state.json'])).pages.discovery, 2)
+  assert.deepEqual(JSON.parse(run(f.other, ['show', 'origin/main:radar/metadata-latest.json'])), collected.report)
+})
+test('state-only publication persists but does not request a site build; catalog changes do', async t => {
+  const f = repositories(t), state = load(f.local, 'radar/state.json')
+  state.pages.test = 2; save(f.local, 'radar/state.json', state)
+  const result = await publishData({ root: f.local, mode: 'radar', validate: () => {} })
+  assert.equal(result.status, 'published'); assert.equal(result.siteChanged, false)
+  assert.equal(result.publishedSha, f.head())
+  const unchanged = await publishData({ root: f.local, mode: 'radar', validate: () => {} })
+  assert.equal(unchanged.siteChanged, false); assert.equal(unchanged.publishedSha, undefined)
+  save(f.local, 'data/github.json', [row('one'), row('two')])
+  assert.equal((await publishData({ root: f.local, mode: 'radar', validate: () => {} })).siteChanged, true)
+})
+
+test('publisher rejects a pre-staged whitespace filename without committing unrelated files', async t => {
+  const f = repositories(t), before = f.head()
+  writeFileSync(join(f.local, '   '), 'unrelated')
+  run(f.local, ['add', '--', '   '])
+  await assert.rejects(publishData({ root: f.local, mode: 'news', validate: () => {} }), /index-not-clean/)
+  assert.equal(f.head(), before)
+})
+
+test('site_changed uses the final merged staged diff rather than the original collection delta', async t => {
+  const f = repositories(t)
+  const collected = await runMetadata({ catalog: readCatalog(f.local), state: load(f.local, 'radar/metadata-state.json'), baselineSha: run(f.local, ['rev-parse', 'HEAD']),
+    api: async () => ({ data: { r0: { id: 'opaque', databaseId: 1, nameWithOwner: 'test/one', url: 'https://github.com/test/one', stargazerCount: 9, forkCount: 2, primaryLanguage: null }, rateLimit: { cost: 1 } } }) })
+  for (const [file, value] of [['data/github.json', collected.rows], ['radar/metadata-state.json', collected.state], ['radar/metadata-latest.json', collected.report]] as const) save(f.local, file, value)
+  save(f.other, 'data/github.json', collected.rows)
+  writeFileSync(join(f.other, 'README.md'), renderReadme(readFileSync(join(f.other, 'README.md'), 'utf8'), collected.rows))
+  run(f.other, ['add', '.']); run(f.other, ['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'same metadata already on main']); run(f.other, ['push', 'origin', 'main'])
+  const result = await publishData({ root: f.local, mode: 'metadata', validate: () => {} })
+  assert.equal(result.rebased, true)
+  assert.equal(result.status, 'published')
+  assert.equal(result.siteChanged, false)
+  assert.equal(result.publishedSha, f.head())
 })

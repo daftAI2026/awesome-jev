@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "pages": {
     "topic:jev fork:false": 3,
     "\"typesafe.ai\" in:readme fork:false": 3,
@@ -12,7 +12,6 @@
     "code:\"TYPESAFE_API_KEY\" in:file": 8,
     "code:\"jev-latest\" in:file": 7
   },
-  "metadataCursor": 283,
   "candidates": {
     "7starsseeker/dsh-jev-guard": {
       "status": "review",
@@ -47072,5 +47071,5 @@
       "stars": 0
     }
   },
-  "metadataNext": "kunobi-ninja/kunobi-jev"
+  "nextReviewLane": "pending"
 }

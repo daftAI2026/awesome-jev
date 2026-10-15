@@ -5,11 +5,11 @@ React 19 + TypeScript 6 + TanStack Start 1.169.1 / Router 1.170.44 + Vite 8（�
 src/ - 路由、目录界面、共享纯工具与 OG 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
 data/ - GitHub 项目与 AIHOT 新闻的独立 JSON 快照，容量告警/发布门槛见局部地图
 docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为准
-scripts/ - 自动 GitHub 身份建基线/按 ID 刷新、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
+scripts/ - 独立全目录元数据同步、残页背压/交替审核、精确状态部署等价、自动 GitHub 身份建基线、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
 public/ - 静态 favicon、索引、机器文档、原版品牌与许可完备字库 (3 子目录: agents, agent-logos, og-fonts)
 radar/ - 生态与替代实现的状态及发布报告
 .agents/ - 项目专用 Agent 复核与 Anatomy SVG skill 与独立分类收据交接 (1 子目录: skills)，不部署云端 Agent
-.github/ - 投稿/审核/收录、可信数据发布与 main 已验产物部署；机器人发布显式派发 main 校验
+.github/ - 七条 Workflow 分离统计、发现、投稿与 site 交付；最终非状态发布显式派发 main 校验
 </directory>
 <config>
 .gitignore - 排除本机日志、构建、浏览器与 Start/Workers 缓存；不排除正式脚本和测试
@@ -42,10 +42,11 @@ src/start.ts - Start 服务端错误公开序列化边界
 Agents 页脚复用三语言与本站主题，布局/品牌资产/按钮名称沿用 OpenFree 原版。构建从规范项目/新闻快照生成 llms.txt、llms-full.txt 和八份互链 Markdown，不输出审核分数、本机收藏或凭据。Static Assets 的 _headers 明确 TXT/Markdown 媒体类型。聊天入口仅传同一公开问题，不调用 API；五品牌端点沿用原版；只替换本站公开问题与文档地址，不增加免责声明段落。
 
 访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
+本站区域已开启 Always Use HTTPS。HTTP 在边缘 301 到同路径 HTTPS，并保留查询参数；设置独立于 Worker 制品，不新增应用跳转或 HSTS。回滚与验收见 docs/deployment.md。
 本站 WAF 拒绝目录根路径的精确 `page=999999` 探测。未验证 ShapBot 抓取三语言标签页时接受挑战。已验证机器人不受此标签规则约束。正常分页与静态资产保持原路。不封 IP、ASN 或国家。规则独立于 Worker 制品；边界与按 ref 回滚见 docs/deployment.md。此防护不等于 SSR CPU 优化。
 本站区域已开启免费的 Cloudflare Crawler Hints。缓存信号驱动 IndexNow 通知，不额外创建 Action 或密钥，不保证每次 Worker SSR 更新都被通知；以 Bing 接收报告另行验证，不把启用等同收录。配置依据见 docs/deployment.md。
 验证: npm run typecheck、npm run lint、npm test、npm run build、npm run test:delivery（构建后真实 HTTP/模块图，零跳过）。使用 Node 24；不将 .env 或采集凭据写入文档。
 
-可信 main 校验封装同版本 dist，production job 按 artifact ID 部署，不重复构建。部署凭据仅存 production Secret，环境仅允许 main；PR/采集器不持有此凭据。实际数据推送显式派发 main 校验。部署开关与 Cloudflare Git 构建切换/恢复见 docs/deployment.md。
+可信 site main 校验封装同版本 dist，production job 按 artifact ID 部署，不重复构建。快照验证与最终 main 交付仍各构建一次。仅六条精确状态文件推进不使旧产物过期；逐提交检查完整 Git 历史，非状态变更及 revert 均拒绝旧产物。部署凭据仅存 production Secret，环境仅允许 main；PR/采集器不持有此凭据。最终 site_changed=true 的数据推送显式派发 site 校验；纯状态保存不派发。部署开关与 Cloudflare Git 构建切换/恢复见 docs/deployment.md。
 
 法则: 极简·稳定·导航·版本精确；修改后按文件头部 → 局部地图 → 全局地图检查。

@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test 与批量元数据的身份、续点及只读探针接口
- * [OUTPUT]: 对外提供局部响应、改名身份、排名更替、追加和真实客户端额度暂停的离线验收
+ * [OUTPUT]: 验证全目录批读、不可访问隔离、异常失败关闭和续点恢复
  * [POS]: scripts 元数据调度契约，不连接 GitHub 或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -10,7 +10,7 @@ import { readMetadataBatch, refreshMetadata, probeMetadata, metadataTop, bootstr
 import { METADATA_IDENTITY_ALIASES } from './github-metadata-aliases.ts'
 import { repoKey } from './catalog.ts'
 import { createGitHubClient } from './github-client.ts'
-import { emptyState } from './radar.ts'
+const emptyState = () => ({ metadataCursor: 0 } as { metadataCursor: number; metadataNext?: string })
 import { githubStarRanks } from '../src/lib/sort.ts'
 import type { DirectoryItem, GitHubApi } from './model-types.ts'
 const rows = (n: number): DirectoryItem[] => Array.from({ length: n }, (_, i) => ({ id: `r-${i}`, type: 'github', title: `Repo ${i}`,
@@ -88,7 +88,7 @@ test('real client quota on second other page keeps last completed batch cursor; 
   const first = await refreshMetadata(source, state, shared)
   assert.equal(first.report.top100.complete, true)
   assert.equal(first.report.ok, 150)
-  assert.equal(first.deferred?.reason, 'github-deadline')
+  assert.equal(first.deferred?.reason, 'github-resource-deferred')
   assert.equal(state.metadataNext, 'test/r-150')
   assert.equal(state.metadataCursor, 150)
   const secondPages: string[] = []
@@ -285,4 +285,146 @@ test('bootstrap pauses discovery on GraphQL errors but tolerates explicitly abse
     assert.equal(report.failed, 1)
     assert.deepEqual(source, before)
   }
+})
+
+// --- 交接批次一：先证明旧实现的上限与失败传播缺口，不连接网络 ---
+test('full metadata round attempts all 5000 identities once in batches of at most 50', async () => {
+  const source = rows(5000)
+  const seen = new Set<string>()
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    const batch = [...request!.query.matchAll(/name:"r-(\d+)"/g)].map((match) => match[1])
+    assert.ok(batch.length > 0 && batch.length <= 50)
+    for (const key of batch) {
+      assert.ok(!seen.has(key), `identity ${key} attempted twice`)
+      seen.add(key)
+    }
+    return response(request!.query)
+  })
+  assert.equal(seen.size, 5000, 'default metadata refresh must not truncate the catalog at 1100')
+  assert.equal(result.report.ok, 5000)
+  assert.equal(result.report.batches, 100)
+  assert.equal(result.report.cost, 100)
+  assert.equal(result.report.remaining, 0)
+})
+
+test('an explicit metadata work limit can exceed 1000 without replacing the default full scan', async () => {
+  const result = await refreshMetadata(rows(1200), emptyState(), api, 1100)
+  assert.equal(result.report.ok, 1200)
+})
+
+test('unavailable Top identity retains its old row without blocking the rest of the catalog', async () => {
+  const source = rows(250)
+  source[0].sourceMeta.stars = 50000
+  const original = structuredClone(source[0])
+  const seen = new Set<string>()
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    const payload = response(request!.query)
+    for (const match of request!.query.matchAll(/(r\d+):\s*repository\(owner:"test", name:"r-(\d+)"\)/g)) {
+      seen.add(match[2])
+      if (match[2] === '0') payload.data[match[1]] = null
+    }
+    return payload
+  })
+  assert.equal(seen.size, 250, 'one unavailable Top identity must not stop non-Top reads')
+  assert.deepEqual(source[0], original)
+  assert.equal(result.report.ok, 249)
+  assert.equal(result.report.failed, 1)
+  assert.equal(result.report.top100.complete, false, 'unavailable is not fresh')
+  assert.equal(result.deferred, undefined)
+  assert.equal(result.failures[0].reason, 'github-unavailable-repository')
+})
+
+test('unknown GraphQL batch error stops the round instead of being ignored', async () => {
+  const source = rows(150), original = structuredClone(source)
+  let calls = 0
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    calls++
+    const payload = response(request!.query)
+    payload.data.r0 = null
+    return { ...payload, errors: [{ type: 'INTERNAL', path: ['r0'] }] }
+  })
+  assert.equal(result.deferred?.reason, 'github-invalid-response', 'batch deferred must reach the caller')
+  assert.equal(calls, 1)
+  assert.deepEqual(source, original, 'a fatal response must not leave publishable row changes')
+})
+
+for (const defect of ['numeric-id', 'url-name', 'negative-count', 'missing-language', 'missing-alias', 'unknown-error-path'] as const) {
+  test(`unsafe metadata ${defect} fails closed and rolls back earlier completed batch changes`, async () => {
+    const source = rows(150)
+    source.forEach((row, i) => { row.sourceMeta.githubIdentity = { databaseId: 1000 + i, nodeId: `test/r-${i}` } })
+    const original = structuredClone(source)
+    const state = emptyState(), oldState = structuredClone(state)
+    let calls = 0
+    const result = await refreshMetadata(source, state, async (_path, request) => {
+      calls++
+      const payload = response(request!.query)
+      if (calls !== 2) return payload
+      const value = payload.data.r0 as Record<string, unknown>
+      if (defect === 'numeric-id') value.databaseId = 999999
+      if (defect === 'url-name') value.url = 'https://github.com/attacker/replacement'
+      if (defect === 'negative-count') value.stargazerCount = -1
+      if (defect === 'missing-language') delete value.primaryLanguage
+      if (defect === 'missing-alias') delete payload.data.r0
+      return defect === 'unknown-error-path' ? { ...payload, errors: [{ type: 'INTERNAL', path: ['unrequested'] }] } : payload
+    })
+    assert.equal(result.deferred?.reason, 'github-invalid-response', `${defect} is not an unavailable repository`)
+    assert.equal(calls, 2, 'unsafe response must stop further reads')
+    assert.deepEqual(source, original, 'do not publish earlier increments from an unsafe round')
+    assert.deepEqual(state, oldState, 'unsafe round must not advance its authoritative checkpoint')
+  })
+}
+
+test('only alias-level NOT_FOUND with a null repository is a safe unavailable result', async () => {
+  const source = rows(150)
+  let first = true
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    const payload = response(request!.query)
+    if (!first) return payload
+    first = false
+    payload.data.r0 = null
+    return { ...payload, errors: [{ type: 'NOT_FOUND', path: ['r0'] }] }
+  })
+  assert.equal(result.report.ok, 149)
+  assert.equal(result.deferred, undefined)
+  assert.equal(result.failures[0].reason, 'github-unavailable-repository')
+  const nested = await readMetadataBatch(async (_path, request) => ({ ...response(request!.query),
+    errors: [{ type: 'NOT_FOUND', path: ['r0', 'forkCount'] }] }), rows(1))
+  assert.equal(nested.deferred, 'github-invalid-response', 'a missing scalar must not masquerade as an absent repository')
+})
+
+test('unsafe non-Top batch cannot leave a complete Top report after rolling back the round', async () => {
+  const source = rows(200), original = structuredClone(source)
+  const state = emptyState(), oldState = structuredClone(state)
+  let calls = 0
+  const result = await refreshMetadata(source, state, async (_path, request) => {
+    calls++
+    const payload = response(request!.query)
+    if (calls === 4) (payload.data.r0 as Record<string, unknown>).databaseId = null
+    return payload
+  })
+  assert.equal(result.deferred?.reason, 'github-invalid-response')
+  assert.deepEqual(source, original)
+  assert.deepEqual(state, oldState)
+  assert.equal(result.report.top100.complete, false, 'rolled-back reads cannot authorize the legacy snapshot publisher')
+  assert.equal(result.report.ok, 0)
+  assert.equal(result.fresh.size, 0)
+})
+
+test('metadata accounting separates unavailable identities from deferred work and never invents query cost', async () => {
+  const source = rows(150)
+  source[0].sourceMeta.stars = 50000
+  let calls = 0
+  const result = await refreshMetadata(source, emptyState(), async (_path, request) => {
+    if (++calls === 3) throw new Error('github-deadline')
+    const payload = response(request!.query)
+    if (calls === 1) payload.data.r0 = null
+    return payload
+  })
+  assert.equal(result.report.attempted, 100)
+  assert.equal(result.report.fresh, 99)
+  assert.equal(result.report.unavailable, 1)
+  assert.equal(result.report.deferredRemaining, 50)
+  assert.equal(result.report.remaining, 51)
+  assert.equal(result.report.cost, null, 'an interrupted query has unknown cost')
+  assert.equal(result.deferred?.reason, 'github-deadline')
 })

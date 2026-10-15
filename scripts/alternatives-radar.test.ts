@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、替代实现雷达与离线请求桩
- * [OUTPUT]: 对外提供替代实现采集及边界恢复回归断言
+ * [OUTPUT]: 提供替代实现来源故障隔离、运行级停止、独立容量与背压回归
  * [POS]: scripts 的独立队列验收，不调用真实网络或付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -224,3 +224,51 @@ test('legacy renamed alternative is anchored before discovery without evidence o
   assert.equal(result.rows[0].url, known.url)
   assert.equal(result.rows[0].sourceMeta.githubIdentity?.databaseId, repo.id)
 })
+
+test('alternative queue retains its independent 2000 total cap and never advances search under backpressure', async () => {
+  const state = emptyAlternativesState()
+  for (let i = 0; i < 1950; i++) state.candidates[`test/q-${i}`] = { status: 'review', discoveredAt: now.toISOString(), retryAt: '2099-01-01T00:00:00Z', attempts: 1 }
+  let searches = 0
+  const result = await runAlternatives({ catalog: catalog(), state, now, queries: ['query'], api: async () => { searches++; return { items: [alternatives[0]], total_count: 200 } }, review: async () => assert.fail('No eligible review') })
+  assert.equal(searches, 0)
+  assert.equal(result.state.pages.query, undefined)
+  assert.equal(Object.keys(result.state.candidates).length, 1950)
+  assert.equal(result.report.backpressure, 1)
+  const oversized = { ...result.state, candidates: { ...result.state.candidates } }
+  for (let i = 1950; i < 2001; i++) oversized.candidates[`test/q-${i}`] = { status: 'review', discoveredAt: now.toISOString(), attempts: 0 }
+  assert.throws(() => validateAlternativesState(oversized), /overflow/)
+})
+
+// --- 替代队列与核心队列遵守同一来源/整轮故障边界 ---
+for (const reason of ['github-network-or-timeout', 'github-http-500', 'github-http-502', 'github-http-503', 'github-http-504']) {
+  test(`alternative source-local ${reason} preserves the cursor and reviews existing candidates`, async () => {
+    const state = emptyAlternativesState(), repo = alternatives[0], key = repo.full_name.toLowerCase()
+    state.pages.query = 2
+    state.candidates[key] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+    const result = await runAlternatives({ catalog: catalog(), state, now, queries: ['query'],
+      api: async path => {
+        if (path.startsWith('/search/')) throw new Error(reason)
+        return githubApi([repo])(path)
+      }, review: async () => keep })
+    assert.equal(result.report.added, 1)
+    assert.equal(result.report.reviewed, 1)
+    assert.equal(result.report.deferred, undefined)
+    assert.equal(result.report.status, 'partial')
+    assert.equal(result.report.sources[0]?.status, reason)
+    assert.equal(result.state.pages.query, 2)
+  })
+}
+for (const reason of ['github-deadline', 'github-rate-limited', 'github-request-budget', 'github-http-401', 'github-invalid-response']) {
+  test(`alternative global discovery ${reason} preserves untouched candidates and stops all later work`, async () => {
+    const state = emptyAlternativesState(), key = alternatives[0].full_name.toLowerCase()
+    state.candidates[key] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
+    let calls = 0
+    const result = await runAlternatives({ catalog: catalog(), state, now, queries: ['blocked', 'must-not-run'],
+      api: async path => { calls++; assert.ok(path.startsWith('/search/')); throw new Error(reason) },
+      review: async () => assert.fail('Global failures must not call the model') })
+    assert.equal(calls, 1)
+    assert.equal(result.report.reviewed, 0)
+    assert.deepEqual(result.state.candidates, state.candidates)
+    assert.deepEqual(result.report.deferred, { phase: 'discovery', reason })
+  })
+}

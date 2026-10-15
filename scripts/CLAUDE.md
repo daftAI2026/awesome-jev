@@ -2,6 +2,12 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+metadata-sync.ts: 无模型全目录统计入口，独占统计续点；只允许安全 partial 快照，诊断不能应用
+metadata-sync.test.ts: 无模型刷新、编辑保护、统计状态迁移与非法诊断拒收回归
+candidate-queue.ts: 两条发现链共用的残页缓冲与背压，显式容量策略；核心额外使用交替审核排序
+site-publication.ts: 发布与部署共用六条精确状态白名单；按完整提交历史拒绝旧产物
+site-publication.test.ts: 真实临时 Git 验证状态推进、revert、合并、重命名和失败关闭
+
 og-fonts.test.ts: 固定字库成功字节复用、失败重试、未知名称与流容量上限回归
 news-page.test.ts: 递增历史下 50 条服务端交付、计数/排序/越界与单条预览回归
 generate-jev-figure.mjs: 项目级 Anatomy kit 离线投影 60 实体，生成可信路径和投影；--geometry 输出同源圆角实体与顺序，不在构建请求链运行
@@ -18,14 +24,14 @@ agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG �
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
 agent-delivery.test.ts: Node 真实 HTTP 机器文档媒体类型、互链/实体地址与页脚入口回归
 publication-merge.ts: 三方纯数据增量合并，保留最新 main 顺序/人工字段/撤回，禁止旧快照整体覆盖
-publish-data.ts: 三采集器共享发布器，叠加最新 main 并普通推送；输出 published/unchanged，工作流据此派发 main，不重跑模型
-deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝与三采集器派发；无线上写入
-publish-data.test.ts: Node test 真实本地 Git 竞争、三采集器叠加、验证失败不推送和临时工作树清理
+publish-data.ts: 四采集器共享增量发布器，保留独占检查点与最新 main；输出最终 site_changed/提交 SHA，不重跑模型或统计
+deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝、采集资源隔离与四采集器按最终差异派发；无线上写入
+publish-data.test.ts: Node test 真实本地 Git 竞争、四采集器叠加与纯状态发布、验证失败不推送和临时工作树清理
 onsite-seo.test.ts: Node 首页描述 25–160 字符/品牌身份、相关项目、工作台输入、SEO 诊断与有界流读取的离线边界验证
 alternative-audit.test.ts: Node test alternative-audit 的契约与回归验证，运行 npm test
 alternative-audit.ts: 既有目录的替代实现证据审计；运行暂停保留已完成检查点而不污染待审状态
 alternatives-radar.test.ts: Node test alternatives-radar 的契约与回归验证，运行 npm test
-alternatives-radar.ts: 独立替代实现队列，复用目录发布和预算边界，发现前补旧项身份，数字 ID 排除改名后的已收录对象
+alternatives-radar.ts: 独立替代实现队列，复用来源失败分类、目录发布和预算边界，发现前补旧项身份，数字 ID 排除改名后的已收录对象
 awesome-jev-banner.txt: 目录字符字标的原始资产
 catalog-updated-at.test.ts: Node test catalog-updated-at 的契约与回归验证，运行 npm test
 catalog.test.ts: Node test catalog 的契约与回归验证，运行 npm test
@@ -40,21 +46,21 @@ og-delivery.test.ts: Worker 冷并发响应体独立、PNG 与缓存/条件请�
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
 generate-sitemap.test.ts: Node 三语言有限索引、摘要门槛、同义标签/长尾排除与身份唯一回归
 generate-sitemap.ts: 生成三种语言的有限索引与至少三项目共用的公开标签页，排除收藏和不足摘要
-github-client.test.ts: Node test 响应头/限流/截止、读写隔离与未知写入不重试的离线回归
+github-client.test.ts: 响应头与正文共同区分主/次级限流，阶段响应体截止、读写隔离与未知写入不重试回归
 github-ref-cleanup.ts: 专用单 ref updateRefs expected SHA 删除能力，无通用 GraphQL 写入口或自动重试
 github-ref-cleanup.test.ts: 专用 CAS 删除能力的固定 mutation、expected SHA 与未知写入不重试回归
-github-client.ts: 共享只读 REST/GraphQL、响应头驱动限流及独立无重试写入；未知写入由调用方重读，截止覆盖取证
+github-client.ts: 共享只读 REST/GraphQL，主限流按资源隔离、次级限流全局等待；阶段截止覆盖响应体，已知认证/格式错误不降级；独立写入不重试
 github-identity.ts: 数字 ID/不透明 Node ID 的统一读取校验，供目录验证、首次身份建基线、统计刷新与双队列去重共用
 github-metadata-aliases.ts: 28 条历史核验的数字 ID 种子；旧数据建基线时防止身份替换，后续改名不再追加人工例外
-github-metadata.test.ts: Node test 首次自动改名、后续 ID 查询/迁移、防重占、Top100 固定点与历史种子、目录增删续点和实际额度暂停回归
-github-metadata.ts: 同一只读客户端的 50 项批读，首次解析自动建 ID 基线、发现前补未轮到旧项身份、之后按 Node ID 查询并报告当前名；每轮 Top100 成功刷新，其它最多 1000 项按身份锚点续读；独立能力探针不加载付费凭据
+github-metadata.test.ts: Node 离线验证 5000 项单轮批读、不可访问隔离、身份/响应异常整轮撤销、未知成本、续点恢复及历史改名身份
+github-metadata.ts: 同一只读客户端的 50 项身份批读，默认遍历全目录；不可访问留旧且继续，身份/响应异常撤销本轮增量；分别报告尝试、新鲜、不可访问与未完成数；独立同步入口调用，发现端仅使用身份补齐
 github-evidence.ts: 固定提交的 GitHub 来源与替代实现证据
 inclusion.test.ts: Node test inclusion 的契约与回归验证，运行 npm test
 inclusion.ts: 采集侧收录证据校验与改动验证
 jev-client.ts: 仅服务端的 Jev 审核请求和决策契约
 locale-routes.test.ts: Node test 三语言路径、hreflang 与首页 GitHub 目录搜索/分享文案契约
 masonry.test.ts: Node test 通道/间距和水合前滚动的窗口/位置契约，避免自然流丢失虚拟前缀
-model-types.ts: 原始 tags 与公开投影分界，采集、GitHub 来源与模型审核共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubQuery 仅声明只读 GraphQL
+model-types.ts: 原始 tags 与公开投影分界，采集、GitHub 来源与模型审核共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubApi 支持阶段截止；GitHubQuery 仅声明只读 GraphQL
 news-sync.test.ts: Node test news-sync 的契约与回归验证，运行 npm test
 not-found.test.ts: Node test 三语言非法编码路径 400、真实 404/恢复链接与正常页索引回归，需 TEST_SITE_ORIGIN
 page-delivery.test.ts: Node 三语言首页唯一描述真实 HTTP、favicon 真实 SVG、三语言旧地址 301、启动模块总依赖、有界推荐/分类内链与三语言 H1/摘要一致性，使用 TEST_BUILD_OUTPUT/TEST_SITE_ORIGIN
@@ -65,7 +71,7 @@ project-routes.test.ts: Node test 路径安全、精确项目查找与清洗旧�
 radar-budget.test.ts: Node test radar-budget 的契约与回归验证，运行 npm test
 radar-budget.ts: 审核请求预算与持久化边界
 radar.test.ts: Node test radar 的契约与回归验证，运行 npm test
-radar.ts: Top100 优先刷新、其它项续点、发现前补旧项身份/ID 去重的核心生态发现与可信快照发布；Top 不完整先存诊断并非零退出，完整 Top 的部分轮转允许发布
+radar.ts: 核心发现与审核，共享来源失败分类；v1 无损升级 v2；五分钟发现窗口、交替审核、身份去重与诊断拒收，统计由 metadata-sync 独占
 repository-review.test.ts: Node test repository-review 的契约与回归验证，运行 npm test
 repository-review.ts: 固定提交的整仓审核与文件排除策略
 review-checkpoint.ts: 核对可信 workflow/attempt/jobs，按 collect 时序定位预算；已知 verify/部署无采集，未知任务与当日缺失账本拒绝回退

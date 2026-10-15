@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test 与 GitHub 客户端的注入网络、时钟和等待接口
- * [OUTPUT]: 对外提供限流/预算/截止与显式写入不重试、不跨域和空响应的回归断言
+ * [OUTPUT]: 验证响应体截止、认证停机、限流作用域、预算与写入隔离
  * [POS]: scripts 的共享 REST/GraphQL 读取及条件收录写入边界验收，不连接真实 GitHub
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -157,4 +157,201 @@ test('writer refuses absolute URLs, traversal and query paths without sending cr
   }
   assert.equal(calls, 0)
   assert.throws(() => createGitHubWriter(''), /github-missing-token/)
+})
+
+// --- 独立资源与阶段截止不能重置共享客户端的保护 ---
+test('exhausted search primary beyond deadline does not halt available core', async () => {
+  const f = fixture([Response.json({}, { status: 403, headers: { 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' } }), ok()], { deadline: 1_060_000 })
+  await assert.rejects(f.api('/search/repositories?q=x'), /github-/)
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+  assert.equal(f.calls(), 2)
+})
+test('exhausted GraphQL primary beyond deadline leaves REST available', async () => {
+  const f = fixture([Response.json({ errors: [{ type: 'RATE_LIMITED' }] }, { headers: { 'x-ratelimit-resource': 'graphql', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' } }), ok()], { deadline: 1_060_000 })
+  await assert.rejects(f.api('/graphql', { query: 'query { viewer { login } }' }), /github-/)
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+})
+test('phase deadline shares quota and still leaves time for evidence reads', async () => {
+  const f = fixture([ok(), ok()], { deadline: 1_300_000 })
+  await assert.rejects(f.api('/search/repositories?q=x', undefined, { deadline: 1_000_000 }), /github-phase-deadline/)
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+  assert.equal(f.calls(), 1)
+})
+test('secondary wait crossing phase window cannot be bypassed by switching resources', async () => {
+  const f = fixture([new Response('', { status: 429, headers: { 'retry-after': '120' } }), ok()], { deadline: 1_300_000 })
+  await assert.rejects(f.api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), /github-phase-deadline/)
+  await f.api('/repos/test/repo')
+  assert.deepEqual(f.waits, [120000])
+  assert.equal(f.calls(), 2)
+})
+test('invalid authentication stops subsequent reads without another request', async () => {
+  const f = fixture([new Response('', { status: 401 }), ok()])
+  await assert.rejects(f.api('/search/repositories?q=x'), /github-http-401/)
+  await assert.rejects(f.api('/repos/test/repo'), /github-http-401/)
+  assert.equal(f.calls(), 1)
+})
+for (const scope of ['phase', 'run'] as const) for (const cancellation of ['success', 'abort'] as const) {
+  test(`known 401 at ${scope} deadline retains global halt when body cancellation is ${cancellation}`, async () => {
+    let time = 1_000_000, calls = 0, cancelled = 0
+    const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+      fetchImpl: async () => {
+        if (++calls > 1) return ok()
+        time = scope === 'phase' ? 1_060_000 : 1_300_000
+        return new Response(new ReadableStream({ cancel() {
+          cancelled++
+          if (cancellation === 'abort') throw new DOMException('private upstream response', 'AbortError')
+        } }), { status: 401 })
+      } })
+    await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-http-401' })
+    await assert.rejects(api('/repos/test/repo'), { message: 'github-http-401' })
+    assert.equal(calls, 1); assert.equal(cancelled, 1)
+  })
+}
+
+// --- 响应体读取也受阶段期限约束，错误正文不进入公开错误 ---
+for (const scope of ['phase', 'run'] as const) test(`body abort at ${scope} deadline preserves its failure scope`, async () => {
+  let time = 1_000_000, calls = 0
+  const response = ok()
+  response.json = async () => {
+    time = scope === 'phase' ? 1_060_000 : 1_300_000
+    throw new DOMException('private upstream response', 'AbortError')
+  }
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    fetchImpl: async () => ++calls === 1 ? response : ok() })
+  const reason = scope === 'phase' ? 'github-phase-deadline' : 'github-deadline'
+  await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: reason })
+  if (scope === 'phase') {
+    assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+    assert.equal(calls, 2)
+  } else {
+    await assert.rejects(api('/repos/test/repo'), { message: reason })
+    assert.equal(calls, 1)
+  }
+})
+test('malformed success JSON before deadline remains a sanitized response error', async () => {
+  const f = fixture([new Response('private upstream response')])
+  await assert.rejects(f.api('/repos/test/repo'), { message: 'github-invalid-response' })
+  assert.equal(f.calls(), 1)
+})
+for (const scope of ['phase', 'run'] as const) test(`malformed success JSON at ${scope} deadline is not downgraded to a timeout`, async () => {
+  let time = 1_000_000, calls = 0
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    fetchImpl: async () => {
+      calls++
+      time = scope === 'phase' ? 1_060_000 : 1_300_000
+      return new Response('private malformed upstream response')
+    } })
+  await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-invalid-response' })
+  assert.equal(calls, 1)
+})
+test('error-body abort at phase deadline is not swallowed as an ordinary permission failure', async () => {
+  let time = 1_000_000, calls = 0
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    fetchImpl: async () => {
+      if (++calls > 1) return ok()
+      time = 1_060_000
+      return new Response(new ReadableStream({ start(controller) { controller.error(new DOMException('private upstream response', 'AbortError')) } }), { status: 403 })
+    } })
+  await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+  assert.equal(calls, 2)
+})
+
+// --- 状态码不能代替限流原因；明确 secondary 优先于同时耗尽的 primary ---
+test('primary 429 without Retry-After is resource-scoped', async () => {
+  const headers: Record<string, string> = { 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' }
+  const f = fixture([Response.json({ message: 'API rate limit exceeded. private upstream response' }, { status: 429, headers }), ok()], { deadline: 1_060_000 })
+  await assert.rejects(f.api('/search/repositories?q=x'), { message: 'github-resource-deferred' })
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+  await assert.rejects(f.api('/search/repositories?q=y'), { message: 'github-resource-deferred' })
+  assert.equal(f.calls(), 2); assert.deepEqual(f.waits, [])
+})
+test('unread limit body cannot hide a secondary pause behind exhausted primary headers', async () => {
+  let time = 1_000_000, calls = 0
+  const waits: number[] = []
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    wait: async ms => { waits.push(ms); time += ms },
+    fetchImpl: async () => {
+      if (++calls > 1) return ok()
+      const response = new Response('', { status: 403,
+        headers: { 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' } })
+      response.json = async () => { time = 1_060_000; throw new DOMException('private upstream response', 'AbortError') }
+      return response
+    } })
+  await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+  assert.deepEqual(waits, [60_000]); assert.equal(calls, 2)
+})
+test('Retry-After remains global even when a generic limit message also reports primary exhaustion', async () => {
+  const f = fixture([Response.json({ message: 'API rate limit exceeded.' }, {
+    status: 429, headers: { 'retry-after': '30', 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' },
+  }), ok()], { deadline: 1_300_000 })
+  await assert.rejects(f.api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+  assert.deepEqual(f.waits, [120_000]); assert.equal(f.calls(), 2)
+})
+for (const status of [403, 429]) for (const body of ['malformed', 'aborted'] as const) {
+  test(`Retry-After with exhausted primary and ${body} ${status} body cannot release another resource early`, async () => {
+    let time = 1_000_000, calls = 0
+    const waits: number[] = []
+    const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+      wait: async ms => { waits.push(ms); time += ms },
+      fetchImpl: async () => {
+        if (++calls > 1) return ok()
+        const response = new Response('private malformed body', { status,
+          headers: { 'retry-after': '120', 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' } })
+        if (body === 'aborted') response.json = async () => { time = 1_060_000; throw new DOMException('private upstream response', 'AbortError') }
+        return response
+      } })
+    await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+    assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+    assert.deepEqual(waits, [120_000]); assert.equal(calls, 2)
+  })
+}
+test('explicit secondary 403 with zero primary remaining pauses every resource until reset', async () => {
+  const f = fixture([Response.json({ message: 'You have exceeded a secondary rate limit. private upstream response' }, {
+    status: 403, headers: { 'x-ratelimit-resource': 'search', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' },
+  }), ok()], { deadline: 1_300_000 })
+  await assert.rejects(f.api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await f.api('/repos/test/repo'), { ok: true })
+  assert.deepEqual(f.waits, [120_000]); assert.equal(f.calls(), 2)
+})
+test('explicit secondary GraphQL response cannot masquerade as exhausted primary quota', async () => {
+  const f = fixture([Response.json({ errors: [{ type: 'RATE_LIMITED', message: 'You have exceeded a secondary rate limit.' }] }, {
+    headers: { 'x-ratelimit-resource': 'graphql', 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '1120' },
+  })], { deadline: 1_060_000 })
+  await assert.rejects(f.api('/graphql', { query: 'query X { viewer { login } }' }), { message: 'github-deadline' })
+  await assert.rejects(f.api('/repos/test/repo'), { message: 'github-deadline' })
+  assert.equal(f.calls(), 1); assert.deepEqual(f.waits, [])
+})
+test('secondary headers survive an error-body abort at the phase boundary', async () => {
+  let time = 1_000_000, calls = 0
+  const waits: number[] = []
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    wait: async ms => { waits.push(ms); time += ms },
+    fetchImpl: async () => {
+      if (++calls > 1) return ok()
+      const response = new Response('', { status: 429, headers: { 'retry-after': '120' } })
+      response.json = async () => { time = 1_060_000; throw new DOMException('private upstream response', 'AbortError') }
+      return response
+    } })
+  await assert.rejects(api('/search/repositories?q=x', undefined, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+  assert.ok(waits.reduce((sum, ms) => sum + ms, 0) >= 60_000)
+  assert.equal(calls, 2)
+})
+test('secondary GraphQL body completed at phase expiry still retains its global pause', async () => {
+  let time = 1_000_000, calls = 0
+  const waits: number[] = []
+  const api = createGitHubClient('test-only', { now: () => time, deadline: 1_300_000,
+    wait: async ms => { waits.push(ms); time += ms },
+    fetchImpl: async () => {
+      if (++calls > 1) return ok()
+      const response = ok()
+      response.json = async () => { time = 1_060_000; return { errors: [{ type: 'RATE_LIMITED', message: 'You have exceeded a secondary rate limit.' }] } }
+      return response
+    } })
+  await assert.rejects(api('/graphql', { query: 'query X { viewer { login } }' }, { deadline: 1_060_000 }), { message: 'github-phase-deadline' })
+  assert.deepEqual(await api('/repos/test/repo'), { ok: true })
+  assert.deepEqual(waits, [60_000]); assert.equal(calls, 2)
 })

@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 radar 的显式交接 job、Node 文件系统与隔离 Bash/gh 替身
+ * [INPUT]: 依赖 site 的显式交接 job、Node 文件系统与隔离 Bash/gh 替身
  * [OUTPUT]: 验证 CI 后只唤醒可信 main 收录入口、严格分支编号和派发失败可见性
  * [POS]: scripts 的工作流边界回归；执行真实交接命令但不持有凭据或访问 GitHub
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -12,9 +12,9 @@ import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 function handoff() {
-  const workflow = readFileSync(new URL('../.github/workflows/radar.yml', import.meta.url), 'utf8')
+  const workflow = readFileSync(new URL('../.github/workflows/site.yml', import.meta.url), 'utf8')
   const start = workflow.indexOf('\n  resume-intake:\n')
-  const end = workflow.indexOf('\n  scan:\n', start)
+  const end = workflow.length
   assert.ok(start >= 0 && end > start, 'Bot validation must explicitly resume intake, not rely only on workflow_run')
   const job = workflow.slice(start, end)
   const command = job.match(/        run: \|\n((?:          .+\n)+)/)?.[1]
