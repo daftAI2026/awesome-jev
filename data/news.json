@@ -5173,5 +5173,50 @@
     "reason": "官方详细介绍 Verifiers 的机制、配置与接入方式，读者可据此把它当作 lint 或测试之外的确定性检查接入现有工作流。",
     "originalUrl": "https://tessl.io/blog/verifiers-enforce-your-repos-rules-on-every-agent-change",
     "aihotUrl": "https://aihot.news/items/virsb1x13670yw25mr9fyxqtt"
+  },
+  {
+    "id": "kasbsqdsfuv4jt2661rcmpery",
+    "title": "OpenRouter 推出 Armor 测试版",
+    "originalTitle": "Today, we are launching OpenRouter Armor in beta.",
+    "summary": "今天，我们推出 OpenRouter Armor 测试版。\n\n工具调用让智能体能够与外部世界交互，而基于正则表达式的过滤往往不足以检测不受欢迎的工具调用。\n\nArmor 使用 @typesafeai 的 Jev 模型，在你的智能体执行工具调用之前，拦截违反策略的调用，性能优于 Claude Code 的自动分类器，而成本仅为后者的一小部分。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-10-15T21:00:20.000Z",
+    "discoveredAt": "2026-10-15T21:14:45.676Z",
+    "category": "ai-products",
+    "score": 49,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2110838205654470840",
+    "aihotUrl": "https://aihot.news/items/kasbsqdsfuv4jt2661rcmpery"
+  },
+  {
+    "id": "behni52wos7nkpkvkd9ih7nfi",
+    "title": "Jev 1.13 在内部测试中准确率最高成本最低",
+    "originalTitle": "On an internal test set we generated for this task, Jev 1.13 had the highest accuracy and lowest cost when compared to other Decisions mo...",
+    "summary": "在我们为此任务生成的内部测试集上，与其他 Decisions 模型以及 Claude Code 使用 Sonnet 5 的情况相比，Jev 1.13 的准确率最高、成本最低。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-10-15T21:00:34.000Z",
+    "discoveredAt": "2026-10-15T21:14:45.659Z",
+    "category": "ai-models",
+    "score": 18,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2110838266920591515",
+    "aihotUrl": "https://aihot.news/items/behni52wos7nkpkvkd9ih7nfi"
+  },
+  {
+    "id": "i6clqpf1gxbel4trq563k8dsa",
+    "title": "IBM 发布 Granite Switch 4.1 模型：单端点同时支持对话、决策与语音转写",
+    "originalTitle": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+    "summary": "IBM Granite 团队发布 Granite-Switch-4.1-8B 和 -30B 模型，将 Decision aLoRA、专用 Guardian aLoRA 和 Granite-Speech-5.0-Turbo-CTC（OpenASR 排行榜上最快的 ASR 模型）组合进单一托管端点，可在对话、通用与专用决策、语音转写之间快速切换，显存占用约等于基础模型本身。",
+    "sourceName": "Hugging Face 社区博客（混合发现）",
+    "publishedAt": "2026-10-15T20:34:01.000Z",
+    "discoveredAt": "2026-10-15T20:54:44.561Z",
+    "category": "ai-models",
+    "score": 57,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+    "aihotUrl": "https://aihot.news/items/i6clqpf1gxbel4trq563k8dsa"
   }
 ]
