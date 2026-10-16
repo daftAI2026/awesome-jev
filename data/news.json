@@ -5293,5 +5293,35 @@
     "reason": null,
     "originalUrl": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
     "aihotUrl": "https://aihot.news/items/e5sq3ktyg84rq5fe3t5rwho0x"
+  },
+  {
+    "id": "ycfihlm1n3dzio97h5wjadwdf",
+    "title": "RespanAI Span-02 上线 OpenRouter",
+    "originalTitle": "Span-02 from @RespanAI is now on OpenRouter",
+    "summary": "RespanAI 的 Span-02 现已登陆 OpenRouter\n\n一款开放权重决策模型：输入文本和图像，定义你的问题，返回一个选择、是/否/未知，或一个带概率的评分。\n\n输入 $0.01/百万 tokens，输出免费，131K 上下文。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-10-16T19:45:27.000Z",
+    "discoveredAt": "2026-10-16T19:54:30.372Z",
+    "category": "ai-products",
+    "score": 43,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2111181748986163580",
+    "aihotUrl": "https://aihot.news/items/ycfihlm1n3dzio97h5wjadwdf"
+  },
+  {
+    "id": "h28k9pkicfezo8hdr6rzjmut6",
+    "title": "北大三星论文：慢推理模型离线教练快模型",
+    "originalTitle": "New Peking University and Samsung paper shows that a slow reasoning model can coach a fast model offline, raising its live game score fro...",
+    "summary": "北京大学与三星的论文提出 TORSI，让慢推理模型在局间研究快模型的失败并写出指令，供快模型在实时游戏中执行，两轮后 Jev 平均分从 13.51 升至 24.19，6 类游戏全部提升。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-10-16T19:13:58.000Z",
+    "discoveredAt": "2026-10-16T19:41:17.216Z",
+    "category": "paper",
+    "score": 43,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2111173824725287024",
+    "aihotUrl": "https://aihot.news/items/h28k9pkicfezo8hdr6rzjmut6"
   }
 ]
