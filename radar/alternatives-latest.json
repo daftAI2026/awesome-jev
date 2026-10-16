@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-15T23:51:43.338Z",
+  "at": "2026-10-16T08:30:13.830Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 128,
-      "total": 128,
+      "fetched": 129,
+      "total": 129,
       "status": "bounded"
     }
   ],
@@ -27,63 +27,71 @@
   "evicted": 0,
   "receipts": [
     {
-      "repo": "jev-engineering/cookbook",
+      "repo": "nvkudva/ollajev",
       "status": "review",
       "score": {
-        "jevAbout": 0.12,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.48,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
+        "jevAbout": 0.85,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.77,
+        "category": "alternatives"
       },
-      "sha": "68f7de69af42d4f561a338c8050fd65033c36d24",
-      "evidenceUrl": "https://github.com/jev-engineering/cookbook/blob/68f7de69af42d4f561a338c8050fd65033c36d24/README.md",
-      "evidenceSha256": "9014ff14b7012de19dda039c10d5847463c04180e90e19b620b0c727ca8a61b9",
+      "sha": "55d0149782ca772ae3208bde7d4bd31beca7cd55",
+      "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/55d0149782ca772ae3208bde7d4bd31beca7cd55/README.md",
+      "evidenceSha256": "3fd02ec112a7b95732b9677ecc48f0564658c76ccc211738180672bba06801dd",
       "model": "jev-latest",
-      "checkedAt": "2026-10-15T23:51:43.338Z"
+      "checkedAt": "2026-10-16T08:30:13.830Z"
     },
     {
-      "repo": "amantux/mcp-router",
+      "repo": "momen-devv/multitenant-ecommerce",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "9e71bdcbbbc96d4bc587c36997055225dda13732",
+      "evidenceUrl": "https://github.com/momen-devv/multitenant-ecommerce/blob/9e71bdcbbbc96d4bc587c36997055225dda13732/README.md",
+      "evidenceSha256": "2a576046050f5d90950dddfcad4b768329dc73dfb9270c925d07d22a8a944487",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-16T08:30:13.830Z"
+    },
+    {
+      "repo": "bhushankinge/jev-laya-classification-bench",
       "status": "review",
       "score": {
-        "jevAbout": 0.42,
+        "jevAbout": 0.14,
         "jevKeep": "review",
-        "jevKeepConfidence": 0.28,
+        "jevKeepConfidence": 0.18,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "29c3ab21180d0849c51a53deb9aa143f2fe5212f",
-      "evidenceUrl": "https://github.com/amantux/mcp-router/blob/29c3ab21180d0849c51a53deb9aa143f2fe5212f/README.md",
-      "evidenceSha256": "09108419582575fab3dafe2bee2dc921cbd4cd1a4e055ddde57238a92cbb4063",
+      "sha": "728f2eba42871fa5bbe13c09ccfcb07943366cd9",
+      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
+      "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
       "model": "jev-latest",
-      "checkedAt": "2026-10-15T23:51:43.338Z"
+      "checkedAt": "2026-10-16T08:30:13.830Z"
     },
     {
-      "repo": "itsodeleo/jev-mlx",
-      "status": "error",
-      "reason": "github-network-or-timeout"
+      "repo": "senna-lang/qwen3-4b-system-one",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.82,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.25,
+        "category": "other"
+      },
+      "sha": "043f7642d2b69dcb54f20d46edd3d54c49d11a7b",
+      "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/043f7642d2b69dcb54f20d46edd3d54c49d11a7b/README.md",
+      "evidenceSha256": "2a448c2e2091f976fa5aa6bd84972c5e2930d1396b57794397da7161f146cad3",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-16T08:30:13.830Z"
     },
     {
-      "repo": "ihendriks439/jev-social",
+      "repo": "threelightstudio/jev-laya-local-daemon",
       "status": "review",
       "reason": "missing-open-source-license",
-      "sha": "9326ed601351e5004e48950674e6eada3ba59995",
-      "evidenceUrl": "https://github.com/ihendriks439/jev-social/blob/9326ed601351e5004e48950674e6eada3ba59995/README.md",
-      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+      "sha": "0c9a266cac632890abddac7e66f2ed68d649abe5",
+      "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
+      "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
       "model": "jev-latest",
-      "checkedAt": "2026-10-15T23:51:43.338Z"
-    },
-    {
-      "repo": "lang4292/coreai-kit",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "8963c8d92f7971b7917387d9d8cb82cf80bc751d",
-      "evidenceUrl": "https://github.com/lang4292/coreai-kit/blob/8963c8d92f7971b7917387d9d8cb82cf80bc751d/README.md",
-      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-15T23:51:43.338Z"
+      "checkedAt": "2026-10-16T08:30:13.830Z"
     }
   ],
   "identity": {
