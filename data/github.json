@@ -132418,5 +132418,2141 @@
         "checkedAt": "2026-10-15T15:36:19.602Z"
       }
     }
+  },
+  {
+    "id": "gh-6-gbesse-jev-association-dossier-proof",
+    "type": "github",
+    "title": "jev-association-dossier-proof",
+    "summary": "Évalue la cohérence entre l’objet déclaré d’une association, ses activités et une demande de financement.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-association-dossier-proof",
+    "sourceMeta": {
+      "repo": "gbesse/jev-association-dossier-proof",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400704231,
+        "nodeId": "R_kgDOU30M5w"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-association-dossier-proof",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "6f6115883cb11da91f451a1bdefc0dbd6cb18692",
+        "evidenceUrl": "https://github.com/gbesse/jev-association-dossier-proof/blob/6f6115883cb11da91f451a1bdefc0dbd6cb18692/README.md",
+        "evidenceSha256": "668a83528b81e6ffd0db092027f93cc15e2892c196da4ce1c2bfc51ef16f997a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-avant-boamp",
+    "type": "github",
+    "title": "jev-avant-boamp",
+    "summary": "Détecte dans les délibérations locales des signaux d’achat public avant la publication d’un avis BOAMP.",
+    "tags": [
+      "jev",
+      "boamp",
+      "france",
+      "open-data",
+      "public-procurement",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-avant-boamp",
+    "sourceMeta": {
+      "repo": "gbesse/jev-avant-boamp",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1391125332,
+        "nodeId": "R_kgDOUurjVA"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-avant-boamp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "sdk"
+        },
+        "sha": "edfc76e969ca27fdb7757d72e7edb54dbc47b9e4",
+        "evidenceUrl": "https://github.com/gbesse/jev-avant-boamp/blob/edfc76e969ca27fdb7757d72e7edb54dbc47b9e4/README.md",
+        "evidenceSha256": "54d0807cd9b23fd8a8b70b67a1cf2cccdb9f41eafdbe37855122d736765dd4c2",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-bocc-impact",
+    "type": "github",
+    "title": "jev-bocc-impact",
+    "summary": "Relie les évolutions des conventions collectives à leurs impacts paie et RH, après filtrage exact par IDCC.",
+    "tags": [
+      "jev",
+      "bocc",
+      "collective-agreements",
+      "france",
+      "hr-tech",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-bocc-impact",
+    "sourceMeta": {
+      "repo": "gbesse/jev-bocc-impact",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1391125679,
+        "nodeId": "R_kgDOUurkrw"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "gbesse/jev-bocc-impact",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "sdk"
+        },
+        "sha": "d615a4b3c2621b0b723b01a3161ee9cf41841acc",
+        "evidenceUrl": "https://github.com/gbesse/jev-bocc-impact/blob/d615a4b3c2621b0b723b01a3161ee9cf41841acc/README.md",
+        "evidenceSha256": "f48802ab8a9ab11f92772f29a9565afd616b4ba283eeebbb5ae24c062e179239",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-boundaryml-baml",
+    "type": "github",
+    "title": "baml",
+    "summary": "The programming language for agents",
+    "tags": [
+      "jev",
+      "boundaryml",
+      "guardrails",
+      "llm",
+      "programming-language",
+      "structured-data",
+      "rust"
+    ],
+    "category": "agents",
+    "url": "https://github.com/BoundaryML/baml",
+    "sourceMeta": {
+      "repo": "BoundaryML/baml",
+      "author": "BoundaryML",
+      "stars": 9415,
+      "forks": 499,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 701494311,
+        "nodeId": "R_kgDOKc_0Jw"
+      },
+      "date": "2023-10-06",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "boundaryml/baml",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "agents"
+        },
+        "sha": "38f18aa8edece49f898872252574b49c219a2cbc",
+        "evidenceUrl": "https://github.com/boundaryml/baml/blob/38f18aa8edece49f898872252574b49c219a2cbc/README.md",
+        "evidenceSha256": "560f16fe0ff1b8f1f48e5890a0c4c041d0b80d696d61d04f6268ddb814afb907",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/boundaryml/baml/blob/38f18aa8edece49f898872252574b49c219a2cbc/baml_language/crates/baml_builtins2/baml_std/typesafeai/client.baml",
+            "path": "baml_language/crates/baml_builtins2/baml_std/typesafeai/client.baml",
+            "sha256": "1ad83a284433e8bea3b0fa07e7203e8cccd8bbb0664d0aef8e21b2659b4439ed"
+          },
+          {
+            "url": "https://github.com/boundaryml/baml/blob/38f18aa8edece49f898872252574b49c219a2cbc/typescript2/app-website/blog-articles/2026-09-17-typesafe-ai-jev.mdx",
+            "path": "typescript2/app-website/blog-articles/2026-09-17-typesafe-ai-jev.mdx",
+            "sha256": "aa15ba9fdc20123d51d1b3114d344ec5ccddfa6ce4d19ea42b4e733fd2191d72"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-bodacc-reprise",
+    "type": "github",
+    "title": "jev-bodacc-reprise",
+    "summary": "Trie les annonces BODACC utiles à l’analyse d’une reprise d’entreprise.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/gbesse/jev-bodacc-reprise",
+    "sourceMeta": {
+      "repo": "gbesse/jev-bodacc-reprise",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398571428,
+        "nodeId": "R_kgDOU1yBpA"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-bodacc-reprise",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "applications"
+        },
+        "sha": "30df95161ed04c468163bf4813dd15714ff645f0",
+        "evidenceUrl": "https://github.com/gbesse/jev-bodacc-reprise/blob/30df95161ed04c468163bf4813dd15714ff645f0/README.md",
+        "evidenceSha256": "4bb23d724b6297ef95e5565857021e9d1b7752a2c7c066d0d887222240c7c5d3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-hikaruegashira-jev-kitchen",
+    "type": "github",
+    "title": "jev-kitchen",
+    "summary": "jev-kitchen: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "hackathon",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/HikaruEgashira/jev-kitchen",
+    "sourceMeta": {
+      "repo": "HikaruEgashira/jev-kitchen",
+      "author": "HikaruEgashira",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1376200019,
+        "nodeId": "R_kgDOUgclUw"
+      },
+      "date": "2026-09-18",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "hikaruegashira/jev-kitchen",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "2bf58e112fd44b90fabf50ea898f95cf011cdde6",
+        "evidenceUrl": "https://github.com/hikaruegashira/jev-kitchen/blob/2bf58e112fd44b90fabf50ea898f95cf011cdde6/README.md",
+        "evidenceSha256": "b74740c304693de28548cd99dd8961292b8265a85b68460e812ec0b3e0a0d6b1",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/hikaruegashira/jev-kitchen/blob/2bf58e112fd44b90fabf50ea898f95cf011cdde6/src/worker.ts",
+            "path": "src/worker.ts",
+            "sha256": "8debcf3a4bdef565335206fed38d98a23230a1f7fb13999b656dc6a370d32105"
+          },
+          {
+            "url": "https://github.com/hikaruegashira/jev-kitchen/blob/2bf58e112fd44b90fabf50ea898f95cf011cdde6/.agents/skills/jev-bench/SKILL.md",
+            "path": ".agents/skills/jev-bench/SKILL.md",
+            "sha256": "60d82d1019236277d829820a207e27d3f3eda0e04809fdf9cb8bfc48a0eed2a0"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-cada-desk",
+    "type": "github",
+    "title": "jev-cada-desk",
+    "summary": "Prépare le triage des demandes de documents publics à partir de précédents CADA sourcés.",
+    "tags": [
+      "jev",
+      "cada",
+      "france",
+      "legal-tech",
+      "open-data",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-cada-desk",
+    "sourceMeta": {
+      "repo": "gbesse/jev-cada-desk",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1391126251,
+        "nodeId": "R_kgDOUurm6w"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "gbesse/jev-cada-desk",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "sdk"
+        },
+        "sha": "efa90beb9a6614340d90cc5f4d74d544956b31b6",
+        "evidenceUrl": "https://github.com/gbesse/jev-cada-desk/blob/efa90beb9a6614340d90cc5f4d74d544956b31b6/README.md",
+        "evidenceSha256": "35495aacf3b84f79a769d7502f12541b6b62af170d13a87ae0b6cf6161251a47",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-carbone-factor-fit",
+    "type": "github",
+    "title": "jev-carbone-factor-fit",
+    "summary": "Classe les facteurs d’émission ADEME candidats pour un libellé d’activité ou de dépense.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-carbone-factor-fit",
+    "sourceMeta": {
+      "repo": "gbesse/jev-carbone-factor-fit",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400688704,
+        "nodeId": "R_kgDOU3zQQA"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-carbone-factor-fit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "a08c6315618e8c2e7c26ad7b7780a13b3a5684ad",
+        "evidenceUrl": "https://github.com/gbesse/jev-carbone-factor-fit/blob/a08c6315618e8c2e7c26ad7b7780a13b3a5684ad/README.md",
+        "evidenceSha256": "b2f0b5d8795a52f072dd4d25510cb617286dedae61639b47a1fa6ac086a714b7",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-concurrence-precedent-map",
+    "type": "github",
+    "title": "jev-concurrence-precedent-map",
+    "summary": "Classe les précédents de l’Autorité de la concurrence pertinents pour une pratique économique décrite.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-concurrence-precedent-map",
+    "sourceMeta": {
+      "repo": "gbesse/jev-concurrence-precedent-map",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400706273,
+        "nodeId": "R_kgDOU30U4Q"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-concurrence-precedent-map",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "sdk"
+        },
+        "sha": "7360788fb208bb24280b4bb4151456f2bf28ed5b",
+        "evidenceUrl": "https://github.com/gbesse/jev-concurrence-precedent-map/blob/7360788fb208bb24280b4bb4151456f2bf28ed5b/README.md",
+        "evidenceSha256": "3a4ad3585a1740d5649d284792ec30ce27c42e359da1fdfe0bbe6e66d976d348",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-cuivre-transition",
+    "type": "github",
+    "title": "jev-cuivre-transition",
+    "summary": "Qualifie les situations locales à traiter avant la fermeture du réseau cuivre.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-cuivre-transition",
+    "sourceMeta": {
+      "repo": "gbesse/jev-cuivre-transition",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398571437,
+        "nodeId": "R_kgDOU1yBrQ"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-cuivre-transition",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "324c2fc2b962040f35f55afcaae3935348a8eb4c",
+        "evidenceUrl": "https://github.com/gbesse/jev-cuivre-transition/blob/324c2fc2b962040f35f55afcaae3935348a8eb4c/README.md",
+        "evidenceSha256": "aab90428ce30a8d05ee766790ebdbcad9dacd23521bc5373394531ba26e63187",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-datagouv-schema-drift",
+    "type": "github",
+    "title": "jev-datagouv-schema-drift",
+    "summary": "Qualifie les évolutions de schéma et de ressources d’un jeu de données référencé sur data.gouv.fr.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-datagouv-schema-drift",
+    "sourceMeta": {
+      "repo": "gbesse/jev-datagouv-schema-drift",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400708968,
+        "nodeId": "R_kgDOU30faA"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-datagouv-schema-drift",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "1134c0165ee8cec6fce64ab11b7983ccf981db4b",
+        "evidenceUrl": "https://github.com/gbesse/jev-datagouv-schema-drift/blob/1134c0165ee8cec6fce64ab11b7983ccf981db4b/README.md",
+        "evidenceSha256": "d3db7ccba706bdb4a34a3aa76d213dbc5db345ae737b635acfce4ef787aa541e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-debat-trace",
+    "type": "github",
+    "title": "jev-debat-trace",
+    "summary": "Suit la manière dont les arguments d’un débat public français apparaissent dans les engagements ultérieurs du maître d’ouvrage.",
+    "tags": [
+      "jev",
+      "civic-tech",
+      "cndp",
+      "france",
+      "public-debate",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-debat-trace",
+    "sourceMeta": {
+      "repo": "gbesse/jev-debat-trace",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1395990549,
+        "nodeId": "R_kgDOUzUgFQ"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-debat-trace",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "sdk"
+        },
+        "sha": "7137b67673d0e2b8023ed0d01b663a9a1eac9589",
+        "evidenceUrl": "https://github.com/gbesse/jev-debat-trace/blob/7137b67673d0e2b8023ed0d01b663a9a1eac9589/README.md",
+        "evidenceSha256": "10a514be63dca97db79dfab8df66399824c0e23db2dfc75a18cbf8eb2dc94ed5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-dotation-locale-proof",
+    "type": "github",
+    "title": "jev-dotation-locale-proof",
+    "summary": "Évalue si un dossier de dotation locale contient des preuves suffisamment précises pour être revu.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-dotation-locale-proof",
+    "sourceMeta": {
+      "repo": "gbesse/jev-dotation-locale-proof",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398571294,
+        "nodeId": "R_kgDOU1yBHg"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-dotation-locale-proof",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "01d68b2b4b44629c17b5e58354de62b3464ccb5a",
+        "evidenceUrl": "https://github.com/gbesse/jev-dotation-locale-proof/blob/01d68b2b4b44629c17b5e58354de62b3464ccb5a/README.md",
+        "evidenceSha256": "ed73d6ff50ef6a0f6fed1b5cbc5efed426ce6dea443f7351fc022b181c1d54c1",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-dpe-travaux-map",
+    "type": "github",
+    "title": "jev-dpe-travaux-map",
+    "summary": "Regroupe des recommandations DPE en scénarios de travaux lisibles et contrôlables.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-dpe-travaux-map",
+    "sourceMeta": {
+      "repo": "gbesse/jev-dpe-travaux-map",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398613625,
+        "nodeId": "R_kgDOU10meQ"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-dpe-travaux-map",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "a5cbe8de331416ee237acb632bec7e869fa9ff76",
+        "evidenceUrl": "https://github.com/gbesse/jev-dpe-travaux-map/blob/a5cbe8de331416ee237acb632bec7e869fa9ff76/README.md",
+        "evidenceSha256": "835343fc0a3b6863f5b73595f87ab9497fea2552109b2730544c9fd4debf6489",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-dvf-comparable",
+    "type": "github",
+    "title": "jev-dvf-comparable",
+    "summary": "Qualifie la comparabilité de mutations DVF pour documenter une estimation immobilière.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-dvf-comparable",
+    "sourceMeta": {
+      "repo": "gbesse/jev-dvf-comparable",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398614685,
+        "nodeId": "R_kgDOU10qnQ"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-dvf-comparable",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "484bb107e6441c268975d74e122821057486e56f",
+        "evidenceUrl": "https://github.com/gbesse/jev-dvf-comparable/blob/484bb107e6441c268975d74e122821057486e56f/README.md",
+        "evidenceSha256": "70c0574542872f27e0badbc558ad9dc4004ea266927360e36e0830a2526432a9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-essms-proof",
+    "type": "github",
+    "title": "jev-essms-proof",
+    "summary": "Évalue la solidité des preuves associées aux résultats d’évaluation d’un ESSMS.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-essms-proof",
+    "sourceMeta": {
+      "repo": "gbesse/jev-essms-proof",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398616785,
+        "nodeId": "R_kgDOU10y0Q"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-essms-proof",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "14d5aa063010d0fd505796d94ecfbdfb38ea7f5e",
+        "evidenceUrl": "https://github.com/gbesse/jev-essms-proof/blob/14d5aa063010d0fd505796d94ecfbdfb38ea7f5e/README.md",
+        "evidenceSha256": "fb9da03d24ca43993183c20b2720384051e18871ad6f4131808779b97bad7ab6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-fonds-vert-analogue",
+    "type": "github",
+    "title": "jev-fonds-vert-analogue",
+    "summary": "Repère des projets Fonds vert analogues sans transformer une similarité en éligibilité.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-fonds-vert-analogue",
+    "sourceMeta": {
+      "repo": "gbesse/jev-fonds-vert-analogue",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398571290,
+        "nodeId": "R_kgDOU1yBGg"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-fonds-vert-analogue",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "alternatives"
+        },
+        "sha": "599ba3a22190bd09f7cbcce682ec2760e0533db2",
+        "evidenceUrl": "https://github.com/gbesse/jev-fonds-vert-analogue/blob/599ba3a22190bd09f7cbcce682ec2760e0533db2/README.md",
+        "evidenceSha256": "1d3fca31da95296ae8098beeb32cdc78e3dfa422cc303b7e105ee9917b5d1b20",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-france-services-router",
+    "type": "github",
+    "title": "jev-france-services-router",
+    "summary": "Oriente une demande administrative vers les partenaires et structures France Services pertinents.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "agents",
+    "url": "https://github.com/gbesse/jev-france-services-router",
+    "sourceMeta": {
+      "repo": "gbesse/jev-france-services-router",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400695747,
+        "nodeId": "R_kgDOU3zrww"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-france-services-router",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "agents"
+        },
+        "sha": "b9d71b244f5eaebf801cdc71d99a6f5482b7273c",
+        "evidenceUrl": "https://github.com/gbesse/jev-france-services-router/blob/b9d71b244f5eaebf801cdc71d99a6f5482b7273c/README.md",
+        "evidenceSha256": "d9ac852aabc80df3339a35f15f1d4949f4973aa7caa1edb0a6ac215340d529d3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-georisques-preflight",
+    "type": "github",
+    "title": "jev-georisques-preflight",
+    "summary": "Prépare les points de vigilance d’un projet à partir des risques naturels et technologiques sourcés.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-georisques-preflight",
+    "sourceMeta": {
+      "repo": "gbesse/jev-georisques-preflight",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400687732,
+        "nodeId": "R_kgDOU3zMdA"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-georisques-preflight",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "965de2c75035892cc9a7a58eb11c99e026f22624",
+        "evidenceUrl": "https://github.com/gbesse/jev-georisques-preflight/blob/965de2c75035892cc9a7a58eb11c99e026f22624/README.md",
+        "evidenceSha256": "48098c2d62ab28d44006556c16df32eb86df8c0a469d2eea3da8ccf58af27a84",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-ift-record-review",
+    "type": "github",
+    "title": "jev-ift-record-review",
+    "summary": "Prépare un enregistrement phytopharmaceutique avant son calcul officiel d’IFT.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-ift-record-review",
+    "sourceMeta": {
+      "repo": "gbesse/jev-ift-record-review",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400691153,
+        "nodeId": "R_kgDOU3zZ0Q"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-ift-record-review",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "5c26bb32e19f95970f3bd2e958cdebae9b674c61",
+        "evidenceUrl": "https://github.com/gbesse/jev-ift-record-review/blob/5c26bb32e19f95970f3bd2e958cdebae9b674c61/README.md",
+        "evidenceSha256": "8a2fcf721a8bbbb901684acdf0bb02a7583ef3217b0792c8cdf8af69e19c4441",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-inclusion-service-fit",
+    "type": "github",
+    "title": "jev-inclusion-service-fit",
+    "summary": "Classe les offres d’insertion sociale et professionnelle selon une situation décrite librement.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-inclusion-service-fit",
+    "sourceMeta": {
+      "repo": "gbesse/jev-inclusion-service-fit",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400699885,
+        "nodeId": "R_kgDOU3z77Q"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-inclusion-service-fit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "alternatives"
+        },
+        "sha": "a32b358e3e62fc35cfa3694ef306a94335602f28",
+        "evidenceUrl": "https://github.com/gbesse/jev-inclusion-service-fit/blob/a32b358e3e62fc35cfa3694ef306a94335602f28/README.md",
+        "evidenceSha256": "d358986e821113421077df765bb36e9f7d6caad2f952734945d8532f6eaf4eec",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-insersup-claim-check",
+    "type": "github",
+    "title": "jev-insersup-claim-check",
+    "summary": "Vérifie si une affirmation d’insertion est soutenue par l’indicateur InserSup cité.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-insersup-claim-check",
+    "sourceMeta": {
+      "repo": "gbesse/jev-insersup-claim-check",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398618727,
+        "nodeId": "R_kgDOU106Zw"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "gbesse/jev-insersup-claim-check",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "alternatives"
+        },
+        "sha": "b0b58937234061ae61cb8b5d8c44b10d4e00ea86",
+        "evidenceUrl": "https://github.com/gbesse/jev-insersup-claim-check/blob/b0b58937234061ae61cb8b5d8c44b10d4e00ea86/README.md",
+        "evidenceSha256": "50904154b06cb55a7983559c2591b8656434682ed92bb570d5ec2dc4a10a25e6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-joafe-purpose-shift",
+    "type": "github",
+    "title": "jev-joafe-purpose-shift",
+    "summary": "Distingue les changements matériels et administratifs entre annonces successives d’une association.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-joafe-purpose-shift",
+    "sourceMeta": {
+      "repo": "gbesse/jev-joafe-purpose-shift",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400701977,
+        "nodeId": "R_kgDOU30EGQ"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-joafe-purpose-shift",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "a458dfef42f9bd849c4061ca2e73aecb857c6185",
+        "evidenceUrl": "https://github.com/gbesse/jev-joafe-purpose-shift/blob/a458dfef42f9bd849c4061ca2e73aecb857c6185/README.md",
+        "evidenceSha256": "2ea778f51587029d11b7e73884775720c12434436f3a802ce0fc092ccdefb2cd",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-jurisprudence-shift",
+    "type": "github",
+    "title": "jev-jurisprudence-shift",
+    "summary": "Compare des motifs de décisions françaises et signale les évolutions possibles de la jurisprudence.",
+    "tags": [
+      "jev",
+      "france",
+      "judilibre",
+      "legal-tech",
+      "open-data",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-jurisprudence-shift",
+    "sourceMeta": {
+      "repo": "gbesse/jev-jurisprudence-shift",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1391125955,
+        "nodeId": "R_kgDOUurlww"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-jurisprudence-shift",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "185dde18a6615eec91d6791890d58e72039489b6",
+        "evidenceUrl": "https://github.com/gbesse/jev-jurisprudence-shift/blob/185dde18a6615eec91d6791890d58e72039489b6/README.md",
+        "evidenceSha256": "30b23e7e6042513bb17c27ee35513817b010a43a22b94c51817e25fd4a10d9cf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-mediation-numerique-fit",
+    "type": "github",
+    "title": "jev-mediation-numerique-fit",
+    "summary": "Oriente une difficulté numérique vers le niveau d’accompagnement et le lieu de médiation adaptés.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-mediation-numerique-fit",
+    "sourceMeta": {
+      "repo": "gbesse/jev-mediation-numerique-fit",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400700798,
+        "nodeId": "R_kgDOU3z_fg"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-mediation-numerique-fit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "679b882c0f1e79a743ac7ad982b8c35bee993c0f",
+        "evidenceUrl": "https://github.com/gbesse/jev-mediation-numerique-fit/blob/679b882c0f1e79a743ac7ad982b8c35bee993c0f/README.md",
+        "evidenceSha256": "fab8350b40a9655111167b09db52b5d8072cb2c58cebfef1ae99f46c3a5d8c53",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-medicament-doc-shift",
+    "type": "github",
+    "title": "jev-medicament-doc-shift",
+    "summary": "Classe les changements entre versions de notices et documents officiels d’un médicament.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-medicament-doc-shift",
+    "sourceMeta": {
+      "repo": "gbesse/jev-medicament-doc-shift",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400707239,
+        "nodeId": "R_kgDOU30Ypw"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-medicament-doc-shift",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "b1b1d25731f029bc19ebf4e48cf3ec03cc87e43c",
+        "evidenceUrl": "https://github.com/gbesse/jev-medicament-doc-shift/blob/b1b1d25731f029bc19ebf4e48cf3ec03cc87e43c/README.md",
+        "evidenceSha256": "8a9b693fbc04b62e5957bf4ef96375bce17c9dfde493e8b7e9ba1cedba6da2d7",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-minimis-watch",
+    "type": "github",
+    "title": "jev-minimis-watch",
+    "summary": "Prépare la revue des cumuls d’aides de minimis à partir d’éléments sourcés.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-minimis-watch",
+    "sourceMeta": {
+      "repo": "gbesse/jev-minimis-watch",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1398571300,
+        "nodeId": "R_kgDOU1yBJA"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gbesse/jev-minimis-watch",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "alternatives"
+        },
+        "sha": "7b06d35bc7f8028b986be72d1e31edba32bef13a",
+        "evidenceUrl": "https://github.com/gbesse/jev-minimis-watch/blob/7b06d35bc7f8028b986be72d1e31edba32bef13a/README.md",
+        "evidenceSha256": "c61d0f62910654ff3a05c9e014b7e1dda8cbf4fdc9b50d2e34b9d8abf411e401",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-objet-seconde-vie",
+    "type": "github",
+    "title": "jev-objet-seconde-vie",
+    "summary": "Oriente un objet usagé vers une solution locale de réparation, réemploi, don ou recyclage.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/gbesse/jev-objet-seconde-vie",
+    "sourceMeta": {
+      "repo": "gbesse/jev-objet-seconde-vie",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400694711,
+        "nodeId": "R_kgDOU3zntw"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-objet-seconde-vie",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "alternatives"
+        },
+        "sha": "90cb722aaf44447fbfc466f5a6347513be3c8193",
+        "evidenceUrl": "https://github.com/gbesse/jev-objet-seconde-vie/blob/90cb722aaf44447fbfc466f5a6347513be3c8193/README.md",
+        "evidenceSha256": "2d77efef4faed204575e1114bea4548cf32aa3286c2210cbe670e6365d5e07a9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-gbesse-jev-patrimoine-travaux-scope",
+    "type": "github",
+    "title": "jev-patrimoine-travaux-scope",
+    "summary": "Compare des travaux envisagés aux parties décrites comme protégées d’un monument historique.",
+    "tags": [
+      "jev",
+      "france",
+      "open-data",
+      "typesafe-ai",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gbesse/jev-patrimoine-travaux-scope",
+    "sourceMeta": {
+      "repo": "gbesse/jev-patrimoine-travaux-scope",
+      "author": "gbesse",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1400705192,
+        "nodeId": "R_kgDOU30QqA"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "gbesse/jev-patrimoine-travaux-scope",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "c76c1975c7d35371745a949c8c46430cc0769765",
+        "evidenceUrl": "https://github.com/gbesse/jev-patrimoine-travaux-scope/blob/c76c1975c7d35371745a949c8c46430cc0769765/README.md",
+        "evidenceSha256": "76c61fbf4cce228affe76f5536e7cedef87a6bd95409ae29b657f2e78e97d171",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-4-ntsd-zero-market-radar",
+    "type": "github",
+    "title": "zero-market-radar",
+    "summary": "Real-time stock news sentiment and alerter powered by a System One decision model (Jev) for ultra-fast.",
+    "tags": [
+      "jev",
+      "financial-data",
+      "finnhub",
+      "jev-model",
+      "market-analysis",
+      "market-news",
+      "sentiment-analysis",
+      "stocks"
+    ],
+    "category": "applications",
+    "url": "https://github.com/ntsd/zero-market-radar",
+    "sourceMeta": {
+      "repo": "ntsd/zero-market-radar",
+      "author": "ntsd",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1404488505,
+        "nodeId": "R_kgDOU7bLOQ"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "ntsd/zero-market-radar",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "ca19a5472a21f25469db90f7cf6c4cddff1b5b5b",
+        "evidenceUrl": "https://github.com/ntsd/zero-market-radar/blob/ca19a5472a21f25469db90f7cf6c4cddff1b5b5b/README.md",
+        "evidenceSha256": "bb858a0f216c38834e358a9dd247638aff9224141f5ea1f9cae7a6a8b33a1767",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/ntsd/zero-market-radar/blob/ca19a5472a21f25469db90f7cf6c4cddff1b5b5b/package.json",
+            "path": "package.json",
+            "sha256": "7b2535c9378331adcd5f8c84fc71ac4e0d9ab074c6931adf1891ea3ffb6bd547"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-mertkayacs-jevalt",
+    "type": "github",
+    "title": "jevalt",
+    "summary": "Three 4B decision models for English, Turkish and German, with per-option probabilities, GGUF builds and the Jev API.",
+    "tags": [
+      "jev",
+      "calibration",
+      "decision-model",
+      "english",
+      "german",
+      "gguf",
+      "jevalt",
+      "llama-cpp"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/mertkayacs/jevalt",
+    "sourceMeta": {
+      "repo": "mertkayacs/jevalt",
+      "author": "mertkayacs",
+      "stars": 5,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1399243662,
+        "nodeId": "R_kgDOU2bDjg"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "mertkayacs/jevalt",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "e42f5e90aeaeb994cb77c4c04a6e388213909ca1",
+        "evidenceUrl": "https://github.com/mertkayacs/jevalt/blob/e42f5e90aeaeb994cb77c4c04a6e388213909ca1/README.md",
+        "evidenceSha256": "85c19f15fb15843558d10fd6a83585d8b87ab11b40684e37bff20e6b0bb7799a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-will-rice-jev-snips-benchmark",
+    "type": "github",
+    "title": "jev-snips-benchmark",
+    "summary": "Applying Jev to Snips Natural Language Understanding Benchmark",
+    "tags": [
+      "jev",
+      "benchmark",
+      "evaluation",
+      "few-shot",
+      "intent-classification",
+      "natural-language-understanding",
+      "nlu",
+      "slot-filling"
+    ],
+    "category": "research",
+    "url": "https://github.com/will-rice/jev-snips-benchmark",
+    "sourceMeta": {
+      "repo": "will-rice/jev-snips-benchmark",
+      "author": "will-rice",
+      "stars": 1,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1404464016,
+        "nodeId": "R_kgDOU7ZrkA"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "will-rice/jev-snips-benchmark",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "9cd882b2adc59fb3575b25aebd5ffbb2c4c6e8ba",
+        "evidenceUrl": "https://github.com/will-rice/jev-snips-benchmark/blob/9cd882b2adc59fb3575b25aebd5ffbb2c4c6e8ba/README.md",
+        "evidenceSha256": "538e25f14c7d7e89d5411b92f2928fc69e6678bc00c0e3c9f911eb2cbbb4cf2f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-sailtovictory-zork_by_jev",
+    "type": "github",
+    "title": "zork_by_jev",
+    "summary": "Autonomous Zork I agent: a local or hosted language model reads the game and proposes commands, and Jev (a decision model) picks one. Python harness with map memory, lessons across games, and replay.",
+    "tags": [
+      "jev",
+      "ai-agent",
+      "interactive-fiction",
+      "ollama",
+      "zork",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/sailtovictory/zork_by_jev",
+    "sourceMeta": {
+      "repo": "sailtovictory/zork_by_jev",
+      "author": "sailtovictory",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1403604242,
+        "nodeId": "R_kgDOU6lNEg"
+      },
+      "date": "2026-10-03",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "sailtovictory/zork_by_jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "d0db566f9b36f7a6b32de08e7d732d934fab0c1d",
+        "evidenceUrl": "https://github.com/sailtovictory/zork_by_jev/blob/d0db566f9b36f7a6b32de08e7d732d934fab0c1d/README.md",
+        "evidenceSha256": "c06350e8bb316857220b4e526041b31a8d67199e87834683f37eda484d6abb06",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-will-rice-jev-tool-calling",
+    "type": "github",
+    "title": "jev-tool-calling",
+    "summary": "Applying Jev to zero-shot tool calling on the Berkeley Function Calling Leaderboard (BFCL)",
+    "tags": [
+      "jev",
+      "benchmark",
+      "bfcl",
+      "evaluation",
+      "function-calling",
+      "llm-agents",
+      "token-classification",
+      "tool-calling"
+    ],
+    "category": "research",
+    "url": "https://github.com/will-rice/jev-tool-calling",
+    "sourceMeta": {
+      "repo": "will-rice/jev-tool-calling",
+      "author": "will-rice",
+      "stars": 0,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1404584431,
+        "nodeId": "R_kgDOU7hB7w"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "will-rice/jev-tool-calling",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "4888ca8790161923d3e08d483f2ead4305be86d2",
+        "evidenceUrl": "https://github.com/will-rice/jev-tool-calling/blob/4888ca8790161923d3e08d483f2ead4305be86d2/README.md",
+        "evidenceSha256": "269f3e9aa041594ac405cc2a11f9d096aed037bee2c813342d695e5432d0c3d5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-15-superagents-lab-jev-search",
+    "type": "github",
+    "title": "jev-search",
+    "summary": "Search the web with TypeSafe's Jev: source selection, query understanding and relevance ranking. Built with Search1API.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/superagents-lab/jev-search",
+    "sourceMeta": {
+      "repo": "superagents-lab/jev-search",
+      "author": "superagents-lab",
+      "stars": 537,
+      "forks": 65,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1374858514,
+        "nodeId": "R_kgDOUfKtEg"
+      },
+      "date": "2026-09-17",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "superagents-lab/jev-search",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "applications"
+        },
+        "sha": "a98f724ad742d8aa48c83e99eb234e45824ff0a5",
+        "evidenceUrl": "https://github.com/superagents-lab/jev-search/blob/a98f724ad742d8aa48c83e99eb234e45824ff0a5/README.md",
+        "evidenceSha256": "c525296ddd318b893f6d63b1ba4e6008c7b9aac60778d4d6fbb7da75eb12e2e2",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/superagents-lab/jev-search/blob/a98f724ad742d8aa48c83e99eb234e45824ff0a5/README.md",
+            "path": "README.md",
+            "sha256": "28621b508e097a7dd3cce315400abe0548ddcc0db26fc810699677e487a4eef4"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-jonathanavis96-jev-kit",
+    "type": "github",
+    "title": "jev-kit",
+    "summary": "Everything you need to run TypeSafe's Jev with Claude Code: a tool-call guard, tier guard, file search, browser agent, review, belay, compaction and installers.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/jonathanavis96/jev-kit",
+    "sourceMeta": {
+      "repo": "jonathanavis96/jev-kit",
+      "author": "jonathanavis96",
+      "stars": 83,
+      "forks": 7,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1377318049,
+        "nodeId": "R_kgDOUhg0oQ"
+      },
+      "date": "2026-09-19",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "jonathanavis96/jev-kit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "agents"
+        },
+        "sha": "b4e463b2929319c1079985ce75d175f67cbf7a86",
+        "evidenceUrl": "https://github.com/jonathanavis96/jev-kit/blob/b4e463b2929319c1079985ce75d175f67cbf7a86/README.md",
+        "evidenceSha256": "e0df86982f29f38ac56ea397bfce8d41b6eb437f9e1f68d3d1bb4e7daa2e1bcc",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/jonathanavis96/jev-kit/blob/b4e463b2929319c1079985ce75d175f67cbf7a86/docs/jev-reference/typesafe-docs/sdk_python_api_constants.md",
+            "path": "docs/jev-reference/typesafe-docs/sdk_python_api_constants.md",
+            "sha256": "e23e33411b507d17a423aa692036716307a44e219c87b7bf7339b85cf3caed6c"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-5-tsale-jevline",
+    "type": "github",
+    "title": "jevline",
+    "summary": "Jevline: start from one confirmed-malicious process; Jev links the rest of the incident into a timeline, execution chain and evidence table.",
+    "tags": [
+      "jev",
+      "dfir",
+      "incident-response",
+      "mitre-attack",
+      "security-tools",
+      "threat-hunting",
+      "typesafe",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/tsale/jevline",
+    "sourceMeta": {
+      "repo": "tsale/jevline",
+      "author": "tsale",
+      "stars": 40,
+      "forks": 4,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1406537490,
+        "nodeId": "R_kgDOU9YPEg"
+      },
+      "date": "2026-10-06",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "tsale/jevline",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "applications"
+        },
+        "sha": "91bfe67cd8b3ff4e8f031ebcc2f0fa1f1237b091",
+        "evidenceUrl": "https://github.com/tsale/jevline/blob/91bfe67cd8b3ff4e8f031ebcc2f0fa1f1237b091/README.md",
+        "evidenceSha256": "eafbc5261730682b5f7400e0be3d7276b9f77d2683df2bd75bb4fc622732dc67",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/tsale/jevline/blob/91bfe67cd8b3ff4e8f031ebcc2f0fa1f1237b091/ARCHITECTURE.md",
+            "path": "ARCHITECTURE.md",
+            "sha256": "e508f8c0658dfcaf1f08cffc69274533545fa39b62f9f818ef14a058fb41000d"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-yaxin9luo-spending-effort-with-jev",
+    "type": "github",
+    "title": "spending-effort-with-jev",
+    "summary": "Jev-powered /effort advisor for Claude Code: tells you when to switch effort, per prompt",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "developer",
+    "url": "https://github.com/Yaxin9Luo/spending-effort-with-jev",
+    "sourceMeta": {
+      "repo": "Yaxin9Luo/spending-effort-with-jev",
+      "author": "Yaxin9Luo",
+      "stars": 7,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1389529591,
+        "nodeId": "R_kgDOUtKJ9w"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "yaxin9luo/spending-effort-with-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "developer"
+        },
+        "sha": "e8b3918e807606ab405af5a364e00437ebe93c64",
+        "evidenceUrl": "https://github.com/yaxin9luo/spending-effort-with-jev/blob/e8b3918e807606ab405af5a364e00437ebe93c64/README.md",
+        "evidenceSha256": "28d1a83efbc89974c94de3462f5f591257f50d14ab1dd29a9985cf58cf451db6",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/yaxin9luo/spending-effort-with-jev/blob/e8b3918e807606ab405af5a364e00437ebe93c64/PRIVACY.md",
+            "path": "PRIVACY.md",
+            "sha256": "af19466300f554d36dba1dbd291ee45aca0e8318d32626f657246a06d60e15db"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-sanamhub-typesafe-dotnet",
+    "type": "github",
+    "title": "typesafe-dotnet",
+    "summary": "Unofficial .NET client for the TypeSafe AI System One API",
+    "tags": [
+      "jev",
+      "api-client",
+      "csharp",
+      "dependency-injection",
+      "dotnet",
+      "http-client",
+      "nativeaot",
+      "netstandard"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/sanamhub/typesafe-dotnet",
+    "sourceMeta": {
+      "repo": "sanamhub/typesafe-dotnet",
+      "author": "sanamhub",
+      "stars": 5,
+      "forks": 1,
+      "language": "C#",
+      "githubIdentity": {
+        "databaseId": 1406617144,
+        "nodeId": "R_kgDOU9dGOA"
+      },
+      "date": "2026-10-06",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "sanamhub/typesafe-dotnet",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "sdk"
+        },
+        "sha": "c73e9f91014158928e3dafa9076f010b6b5b8e91",
+        "evidenceUrl": "https://github.com/sanamhub/typesafe-dotnet/blob/c73e9f91014158928e3dafa9076f010b6b5b8e91/README.md",
+        "evidenceSha256": "8ad73a9147ef27d347da6bad1fb51fcf2e7666a427dd1ab1f8143e565cab838b",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/sanamhub/typesafe-dotnet/blob/c73e9f91014158928e3dafa9076f010b6b5b8e91/SECURITY.md",
+            "path": "SECURITY.md",
+            "sha256": "8e048e598a3e300f837907e2de012bfe2c94a035948f1ca9c950ebe2bfe476e1"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-aaddrick-building-with-decision-models",
+    "type": "github",
+    "title": "building-with-decision-models",
+    "summary": "Unofficial skill for building with decision models (Jev, Clef, pplx-decider, ai_decide, Ollama): typed decisions, calibrated confidence, provider differences, and prior art sorted by implementation shape.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "ai-decide",
+      "calibration",
+      "claude-code",
+      "claude-code-plugin",
+      "clef"
+    ],
+    "category": "resources",
+    "url": "https://github.com/aaddrick/building-with-decision-models",
+    "sourceMeta": {
+      "repo": "aaddrick/building-with-decision-models",
+      "author": "aaddrick",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1408090680,
+        "nodeId": "R_kgDOU-3COA"
+      },
+      "date": "2026-10-07",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "aaddrick/building-with-decision-models",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "resources"
+        },
+        "sha": "aa9e881ae8fd30fc50cc2387df97c23df2c23176",
+        "evidenceUrl": "https://github.com/aaddrick/building-with-decision-models/blob/aa9e881ae8fd30fc50cc2387df97c23df2c23176/README.md",
+        "evidenceSha256": "dbc2cca0fadd8c23a75bbb11c94b238673c89db7e003740d90d495ca2f06269c",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/aaddrick/building-with-decision-models/blob/aa9e881ae8fd30fc50cc2387df97c23df2c23176/skills/building-with-decision-models/providers/clef.md",
+            "path": "skills/building-with-decision-models/providers/clef.md",
+            "sha256": "29f2fe5a4bc2b4e200e4feb95420ddb2c4708501e67872ad77b851d4e7b17303"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-bufbuild-protoc-gen-jev",
+    "type": "github",
+    "title": "protoc-gen-jev",
+    "summary": "Experimental plugin to convert protobuf into Jev code",
+    "tags": [
+      "jev",
+      "golan",
+      "jev-a",
+      "protobu",
+      "protoc",
+      "protoc-plugin",
+      "python",
+      "typescript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/bufbuild/protoc-gen-jev",
+    "sourceMeta": {
+      "repo": "bufbuild/protoc-gen-jev",
+      "author": "bufbuild",
+      "stars": 4,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1397757669,
+        "nodeId": "R_kgDOU1AW5Q"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "bufbuild/protoc-gen-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "7cfecc3be78ea39c899caa3bbd4ecb50163f5eb5",
+        "evidenceUrl": "https://github.com/bufbuild/protoc-gen-jev/blob/7cfecc3be78ea39c899caa3bbd4ecb50163f5eb5/README.md",
+        "evidenceSha256": "9c73029f24d0c08fbca7c326681987c22e0fdacd233963a2a24a7b2632595294",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/bufbuild/protoc-gen-jev/blob/7cfecc3be78ea39c899caa3bbd4ecb50163f5eb5/examples/typescript/gen/incident/v1/incident_jev.ts",
+            "path": "examples/typescript/gen/incident/v1/incident_jev.ts",
+            "sha256": "8f73c425cdcd58e82516a8d662edcd461868b426d38c075ca86d800d96f539be"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-bitranox-btx-skill-jev-judge",
+    "type": "github",
+    "title": "btx-skill-jev-judge",
+    "summary": "Claude Code plugin and Python CLI: hand a judgment repeated over many items to TypeSafe's Jev, with redaction, rate limiting, a pilot and a flat-question check.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "anthropic",
+      "batch-processing",
+      "classification",
+      "claude",
+      "claude-code"
+    ],
+    "category": "agents",
+    "url": "https://github.com/bitranox/btx-skill-jev-judge",
+    "sourceMeta": {
+      "repo": "bitranox/btx-skill-jev-judge",
+      "author": "bitranox",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1399998314,
+        "nodeId": "R_kgDOU3JHag"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "bitranox/btx-skill-jev-judge",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "agents"
+        },
+        "sha": "d5996a99f83869d062bfaf5b42e5c49e6e922499",
+        "evidenceUrl": "https://github.com/bitranox/btx-skill-jev-judge/blob/d5996a99f83869d062bfaf5b42e5c49e6e922499/README.md",
+        "evidenceSha256": "fcdafaf9f27dd5e151554381f677b5cf194d0d01f4c871fcf18b8fd671a08890",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/bitranox/btx-skill-jev-judge/blob/d5996a99f83869d062bfaf5b42e5c49e6e922499/SECURITY.md",
+            "path": "SECURITY.md",
+            "sha256": "ab0ab88040805fc500217eac549b6436940bcdf12eb9a777c5d9687d50fc3201"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-nolindnaidoo-decisionlint",
+    "type": "github",
+    "title": "decisionlint",
+    "summary": "Lint the questions you send to TypeSafe's Jev model: a VS Code extension, a command line for CI and an MCP server for AI agents",
+    "tags": [
+      "jev",
+      "cli",
+      "developer-tools",
+      "letools",
+      "lint",
+      "linter",
+      "mcp",
+      "typesafe"
+    ],
+    "category": "developer",
+    "url": "https://github.com/nolindnaidoo/decisionlint",
+    "sourceMeta": {
+      "repo": "nolindnaidoo/decisionlint",
+      "author": "nolindnaidoo",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1404731385,
+        "nodeId": "R_kgDOU7p_-Q"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "nolindnaidoo/decisionlint",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "developer"
+        },
+        "sha": "8354e95c8371c72ae9f8b2a3182601daa7b8ca03",
+        "evidenceUrl": "https://github.com/nolindnaidoo/decisionlint/blob/8354e95c8371c72ae9f8b2a3182601daa7b8ca03/README.md",
+        "evidenceSha256": "421a7716b65d2f7e0dd6952f0935fdf8d0cdc299a2d038da0c2c57b1cfb421d7",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/nolindnaidoo/decisionlint/blob/8354e95c8371c72ae9f8b2a3182601daa7b8ca03/src/cli/cli.test.ts",
+            "path": "src/cli/cli.test.ts",
+            "sha256": "bc80c5a769698087616bd1ab3e2bb53455a37bc7430463ea3445c7095922428c"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-tynamite-evaluation-behavioral-system-one",
+    "type": "github",
+    "title": "evaluation-behavioral-system-one",
+    "summary": "evaluation-behavioral-system-one: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/tynamite/evaluation-behavioral-system-one",
+    "sourceMeta": {
+      "repo": "tynamite/evaluation-behavioral-system-one",
+      "author": "tynamite",
+      "stars": 1,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1416129546,
+        "nodeId": "R_kgDOVGhsCg"
+      },
+      "date": "2026-10-12",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "tynamite/evaluation-behavioral-system-one",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "6c7d7b0730b63fa6249946d789d1986797ebc94c",
+        "evidenceUrl": "https://github.com/tynamite/evaluation-behavioral-system-one/blob/6c7d7b0730b63fa6249946d789d1986797ebc94c/README.md",
+        "evidenceSha256": "5e321f98dd9d31d3a59abe6b63dba58bd79f7280b1bf4a1c7ed3519af252cd27",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/tynamite/evaluation-behavioral-system-one/blob/6c7d7b0730b63fa6249946d789d1986797ebc94c/ORDER_PREREGISTRATION.md",
+            "path": "ORDER_PREREGISTRATION.md",
+            "sha256": "0a6b386293aa90288ee00651b60f52b798c21c64bf8d2402d39dbc057241a2cb"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T11:28:30.308Z"
+      }
+    }
   }
 ]
