@@ -5278,5 +5278,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
     "aihotUrl": "https://aihot.news/items/yx3j0y0wabdlwgf9giusru2ow"
+  },
+  {
+    "id": "e5sq3ktyg84rq5fe3t5rwho0x",
+    "title": "Vercel 数据显示 Jev 成为其史上采用最快的 AI 模型",
+    "originalTitle": "Jev is Vercel’s fastest-adopted AI model ever",
+    "summary": "Vercel 周四发布的数据显示，TypeSafe AI 的决策模型 Jev 上线两周内被 35% 的付费团队使用，接近第二名 Sonnet 5.5 的两倍，是 Vercel 平台上模型首两周最快采用纪录。",
+    "sourceName": "TechCrunch：AI（RSS）",
+    "publishedAt": "2026-10-16T15:33:49.000Z",
+    "discoveredAt": "2026-10-16T16:21:16.621Z",
+    "category": "ai-models",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+    "aihotUrl": "https://aihot.news/items/e5sq3ktyg84rq5fe3t5rwho0x"
   }
 ]
