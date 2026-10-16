@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-16T19:01:53.087Z",
+  "at": "2026-10-16T23:52:39.368Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,46 +20,66 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
-  "added": 1,
+  "reviewed": 4,
+  "added": 0,
   "pending": 164,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "aldinelabs/trutina",
-      "status": "keep",
+      "repo": "dexmac221/doomgemma",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.13,
+        "jevKeep": "drop",
+        "jevKeepConfidence": 0.31,
+        "category": "other"
+      },
+      "sha": "a6253bf5524827a2ab5f4e764ca6feef046f8927",
+      "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/a6253bf5524827a2ab5f4e764ca6feef046f8927/README.md",
+      "evidenceSha256": "0c7347872e7669f29a47b6d63335cba4d382e74f77c6ea39e9d2c7184d84fbcb",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-16T23:52:39.368Z"
+    },
+    {
+      "repo": "name0x0/jevlet",
+      "status": "review",
       "score": {
         "jevAbout": 0.93,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.95,
+        "jevKeepConfidence": 0.86,
         "category": "alternatives"
       },
-      "sha": "a19ece99f93e0afa37f143cbe7f66aa7080739ca",
-      "evidenceUrl": "https://github.com/aldinelabs/trutina/blob/a19ece99f93e0afa37f143cbe7f66aa7080739ca/README.md",
-      "evidenceSha256": "ccf27b7cd37bcb478501f54fec7b0b936e7400dc8cbecdbbe3b33e6945b61da9",
+      "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
+      "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
+      "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
       "model": "jev-latest",
-      "checkedAt": "2026-10-16T19:01:53.087Z"
+      "checkedAt": "2026-10-16T23:52:39.368Z"
     },
     {
-      "repo": "emregarnier84628/coreai-kit",
+      "repo": "humanity-forever/decision-luna-browse-control",
       "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "204b840ae20c376bd925fe9beb4948c04ac3bf6c",
-      "evidenceUrl": "https://github.com/emregarnier84628/coreai-kit/blob/204b840ae20c376bd925fe9beb4948c04ac3bf6c/README.md",
-      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+      "reason": "insufficient-alternative-context",
+      "sha": "e95a9373ed38e7b18b7daa258038a91e6f625b2c",
+      "evidenceUrl": "https://github.com/humanity-forever/decision-luna-browse-control/blob/e95a9373ed38e7b18b7daa258038a91e6f625b2c/README.md",
+      "evidenceSha256": "4cba2611cf35dbc4688ce7ba479d5bea9b9e895a3b27e3c2ea70f749923abf3d",
       "model": "jev-latest",
-      "checkedAt": "2026-10-16T19:01:53.087Z"
+      "checkedAt": "2026-10-16T23:52:39.368Z"
     },
     {
-      "repo": "loriyoshida/coreai-kit",
+      "repo": "teilomillet/kayak",
       "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "521bdf99fd2025c64628a7b6a36c44fec48db2bc",
-      "evidenceUrl": "https://github.com/loriyoshida/coreai-kit/blob/521bdf99fd2025c64628a7b6a36c44fec48db2bc/README.md",
-      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+      "score": {
+        "jevAbout": 0.81,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.83,
+        "category": "alternatives"
+      },
+      "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
+      "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
+      "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
       "model": "jev-latest",
-      "checkedAt": "2026-10-16T19:01:53.087Z"
+      "checkedAt": "2026-10-16T23:52:39.368Z"
     }
   ],
   "identity": {
@@ -70,5 +90,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 2329
+  "totalProjects": 2336
 }
