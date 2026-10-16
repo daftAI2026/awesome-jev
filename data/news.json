@@ -5218,5 +5218,35 @@
     "reason": null,
     "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
     "aihotUrl": "https://aihot.news/items/i6clqpf1gxbel4trq563k8dsa"
+  },
+  {
+    "id": "hzzds5bn4m9in6co5phc0hesi",
+    "title": "TypeSafe AI 发布 Jev 1.14 决策模型仅一天，Liquid AI 以 d1-ultra 全面超车",
+    "originalTitle": "TypeSafe AI 发布 Jev 1.14 决策模型仅一天， Liquid AI 便以 d1-ultra 全面超车",
+    "summary": "TypeSafe AI 于太平洋时间 10 月 14 日下午 1:14 发布 Jev 决策模型 1.14 预览版，支持图像输入、更长上下文和新的 \"box\" 类型。仅一天后，Liquid AI 推出号称“全球最佳”的决策模型 d1-ultra，在八类任务中表现均优于 Jev 1.14，整体表现也好于 vLLM Semantic Router d3 等竞品。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-10-16T03:15:19.553Z",
+    "discoveredAt": "2026-10-16T03:50:46.285Z",
+    "category": "ai-models",
+    "score": 32,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/013/794.htm",
+    "aihotUrl": "https://aihot.news/items/hzzds5bn4m9in6co5phc0hesi"
+  },
+  {
+    "id": "uuvbwkx0boqc6ze5t7ll9zfn5",
+    "title": "TypeSafe CEO 谈 Jev 发布一月与 AI 自动化",
+    "originalTitle": "our CEO @CompleteSkeptic tells the tale of Dr. Einstein and Mr. Bean",
+    "summary": "我们的 CEO @CompleteSkeptic 讲述了爱因斯坦博士与憨豆先生的故事\n\n> 如果 AI 95% 的时候像爱因斯坦，5% 的时候像憨豆先生，你要怎么用它来自动化任何事情？\n\n@mattturck 带我们回顾了 Jev 疯狂的第一个月",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-16T01:12:09.000Z",
+    "discoveredAt": "2026-10-16T01:40:44.798Z",
+    "category": "opinion",
+    "score": 35,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2110901576550547602",
+    "aihotUrl": "https://aihot.news/items/uuvbwkx0boqc6ze5t7ll9zfn5"
   }
 ]
