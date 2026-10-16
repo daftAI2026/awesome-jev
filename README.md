@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2327-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2334-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -1261,10 +1261,12 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**typesafeai-review**](https://github.com/rbalch/typesafeai-review) - Using Typesafe.AI to generate diff reviews. · `Python`
 - [**jev-playground**](https://github.com/realdubb/jev-playground) - Playground for TypeSafe AI's Jev decision model: provider-agnostic AI SDK scripts, jev-filter CLI, GitHub pruner · `TypeScript`
 - [**agent-gate-loop**](https://github.com/Ripwords/agent-gate-loop) - Reusable GitHub Action: agent fix loop gated by checks, an AI reviewer, and TypeSafe Jev · `TypeScript`
+- [**jev-checkkit**](https://github.com/s-hiraoku/jev-checkkit) - jev-checkkit: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**Agent-Trace**](https://github.com/SahityaBhaskar/Agent-Trace) - Agent-Trace: TypeSafe Jev ecosystem repository. · `Python`
 - [**expect-semantic**](https://github.com/samarkundal/expect-semantic) - expect-semantic: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**jev-proxy**](https://github.com/Santiago-j-s/jev-proxy) - Local observability proxy and playground for TypeSafe Jev · `TypeScript`
 - [**jev-lint**](https://github.com/schalkneethling/jev-lint) - An experiment with semantic code linting using Jev from TypeSafe AI · `TypeScript`
+- [**jev-checkup**](https://github.com/shm11C3/jev-checkup) - jev-checkup: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**fast-jev-compaction**](https://github.com/sohryuu101/fast-jev-compaction) - Verbatim, Jev-guided context compaction for Claude Code \(fork with local additions\) · `TypeScript`
 - [**jev-codex**](https://github.com/SomebooksIT/jev-codex) - Delegation-first Jev routing, deterministic code review, and preventive checkpoints for Codex Desktop. · `Python`
 - [**jev-needs-review**](https://github.com/steelwalrus/jev-needs-review) - Classifies PRs as "merge candidate" or "human review" required using Jev's typed decision making. · `TypeScript`
@@ -1698,6 +1700,8 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-jigs**](https://github.com/orvn/jev-jigs) - jev-jigs: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**decision-layer**](https://github.com/peterdschmitt/decision-layer) - decision-layer: TypeSafe Jev ecosystem repository. · `Astro`
 - [**dsh**](https://github.com/Quyenld9699/dsh) - dsh: TypeSafe Jev ecosystem repository. · `PowerShell`
+- [**jev-explained**](https://github.com/sambhav/jev-explained) - jev-explained: TypeSafe Jev ecosystem repository. · `HTML`
+- [**jev-3000**](https://github.com/schalkneethling/jev-3000) - Demo of TypeSafe's Jev decision model: Noul, Choice, Score · `TypeScript`
 - [**jev-playground**](https://github.com/shivanathd/jev-playground) - BYOK playground for TypeSafe Jev \(System One\): Choice, Score, Noul examples for production gates. · `TypeScript`
 - [**survey-qc-with-jev**](https://github.com/stephotee/survey-qc-with-jev) - Survey respondent quality control with deterministic rules plus semantic judgments from TypeSafe's Jev model — a fully reproducible worked example · `HTML`
 - [**jev-typesafe**](https://github.com/suyash-lyzr/jev-typesafe) - jev-typesafe: TypeSafe Jev ecosystem repository. · `TypeScript`
@@ -2228,7 +2232,9 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**scam-checker-with-jev**](https://github.com/Sachin-chaurasiya/scam-checker-with-jev) - Paste a suspicious text message. Get a straight answer and the reasons behind it. · `TypeScript`
 - [**pong-jev**](https://github.com/safzanpirani/pong-jev) - TypeSafe's Jev plays Atari Pong. One typed Choice question per frame, no coordinates sent to the model. · `TypeScript`
 - [**blink-duel**](https://github.com/Sagnik2503/blink-duel) - &gt; A fast-paced browser game where you compete against \*\*Jev\*\* to distinguish real, fake, and AI-generated content across a series of deceptive challenges. · `TypeScript`
+- [**on-brief**](https://github.com/samaksh-bajaj/on-brief) - on-brief: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**jev-is-here**](https://github.com/samyakjain0606/jev-is-here) - flopcheck — paste a draft tweet, get 16 calibrated judgments from TypeSafe's Jev in one request · `TypeScript`
+- [**jevagotchi**](https://github.com/scottweiss/jevagotchi) - jevagotchi: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**jev-testing**](https://github.com/scuilla/jev-testing) - jev-testing: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**movie-finder**](https://github.com/seanockert/movie-finder) - Find movies that match your query using Jev model · `JavaScript`
 - [**moviejev**](https://github.com/SebasPinto/moviejev) - LLM movie recommender using Jev \(TypeSafe AI\) as a calibrated reranker, with an offline eval against an LLM judge · `Python`
@@ -2239,6 +2245,7 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**Search-Function-Test**](https://github.com/Shifros/Search-Function-Test) - A test project based on Jev AI, the goal is to build a search function for a blog/article website that has 100s of articles to search from, So the user can actually use the search as chat to question anything and find related answers/articles · `JavaScript`
 - [**ipa-jev-quiz**](https://github.com/shikakufy/ipa-jev-quiz) - ipa-jev-quiz: TypeSafe Jev ecosystem repository. · `JavaScript`
 - [**dealscout**](https://github.com/shivprime94/dealscout) - Jev-powered deal search engine with a chat frontend — semantic matching + offer eligibility by TypeSafe's Jev, all the money in plain code. · `JavaScript`
+- [**plasis**](https://github.com/shreyaspangal/plasis) - Type what you need. Get the UI. · `TypeScript`
 - [**scam-shield**](https://github.com/ShupingR/scam-shield) - Scam text message filter powered by TypeSafe's Jev model · `TypeScript`
 - [**jev-perfume-advisor**](https://github.com/sidhasadhak/jev-perfume-advisor) - Perfume recommendation chatbot powered by TypeSafe Jev's typed decisions \(no generated text\) over FragDB-format fragrance data · `TypeScript`
 - [**Floaty**](https://github.com/silver-lynn/Floaty) - A hand-drawn desktop speech companion with live captions, Jev scoring, linked radar reviews and collectible hats. · `Python`

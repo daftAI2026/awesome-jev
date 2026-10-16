@@ -138736,5 +138736,348 @@
         "checkedAt": "2026-10-16T19:01:53.087Z"
       }
     }
+  },
+  {
+    "id": "gh-9-s-hiraoku-jev-checkkit",
+    "type": "github",
+    "title": "jev-checkkit",
+    "summary": "jev-checkkit: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/s-hiraoku/jev-checkkit",
+    "sourceMeta": {
+      "repo": "s-hiraoku/jev-checkkit",
+      "author": "s-hiraoku",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1376698485,
+        "nodeId": "R_kgDOUg7AdQ"
+      },
+      "date": "2026-09-19",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "s-hiraoku/jev-checkkit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "developer"
+        },
+        "sha": "a236b480ef4d4e55b97b1f1eaee56d02262698a3",
+        "evidenceUrl": "https://github.com/s-hiraoku/jev-checkkit/blob/a236b480ef4d4e55b97b1f1eaee56d02262698a3/README.md",
+        "evidenceSha256": "554cc1c65bed5c9212fd7e99a550d2b6df96bc5a294376cc6772a46e6024cacf",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/s-hiraoku/jev-checkkit/blob/a236b480ef4d4e55b97b1f1eaee56d02262698a3/tests/evaluate.test.ts",
+            "path": "tests/evaluate.test.ts",
+            "sha256": "f0f1099aaa94645c3b80c4180b9221629206f582757810dc40631d2bbb9646ac"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-samaksh-bajaj-on-brief",
+    "type": "github",
+    "title": "on-brief",
+    "summary": "on-brief: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/samaksh-bajaj/on-brief",
+    "sourceMeta": {
+      "repo": "samaksh-bajaj/on-brief",
+      "author": "samaksh-bajaj",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1390736658,
+        "nodeId": "R_kgDOUuT1Eg"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "samaksh-bajaj/on-brief",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "4539794b526879e1773082ce7d98f7664cfa9517",
+        "evidenceUrl": "https://github.com/samaksh-bajaj/on-brief/blob/4539794b526879e1773082ce7d98f7664cfa9517/README.md",
+        "evidenceSha256": "0a4a025f6a36b8d6d58000c5f835e312e2406d11d8ed905bad95faac77dbe419",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/samaksh-bajaj/on-brief/blob/4539794b526879e1773082ce7d98f7664cfa9517/CLAUDE.md",
+            "path": "CLAUDE.md",
+            "sha256": "7263ba9d0d9c1eb99b9a8e9724ca4f908901ffad1be9b6b2cd52abf6abe658a4"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-sambhav-jev-explained",
+    "type": "github",
+    "title": "jev-explained",
+    "summary": "jev-explained: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "html"
+    ],
+    "category": "resources",
+    "url": "https://github.com/sambhav/jev-explained",
+    "sourceMeta": {
+      "repo": "sambhav/jev-explained",
+      "author": "sambhav",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "githubIdentity": {
+        "databaseId": 1374988374,
+        "nodeId": "R_kgDOUfSoVg"
+      },
+      "date": "2026-09-17",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "sambhav/jev-explained",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "resources"
+        },
+        "sha": "64244b3207e01cb5a7f5386fc3a3aa7b101b85f6",
+        "evidenceUrl": "https://github.com/sambhav/jev-explained/blob/64244b3207e01cb5a7f5386fc3a3aa7b101b85f6/README.md",
+        "evidenceSha256": "271a912c3de027fadb2681976343e6a19a439a094839318de57ca070b5bf0607",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/sambhav/jev-explained/blob/64244b3207e01cb5a7f5386fc3a3aa7b101b85f6/index.html",
+            "path": "index.html",
+            "sha256": "14f486605afc68dd8254b0a4509819d1538e6822a56f467c0371aafc78a5f2af"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-15-schalkneethling-jev-3000",
+    "type": "github",
+    "title": "jev-3000",
+    "summary": "Demo of TypeSafe's Jev decision model: Noul, Choice, Score",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "resources",
+    "url": "https://github.com/schalkneethling/jev-3000",
+    "sourceMeta": {
+      "repo": "schalkneethling/jev-3000",
+      "author": "schalkneethling",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1385171165,
+        "nodeId": "R_kgDOUpAI3Q"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "schalkneethling/jev-3000",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "resources"
+        },
+        "sha": "4a2f0ae205eae6d7934e9d26cab785cfaa549ba0",
+        "evidenceUrl": "https://github.com/schalkneethling/jev-3000/blob/4a2f0ae205eae6d7934e9d26cab785cfaa549ba0/README.md",
+        "evidenceSha256": "1a073b03465da4dbc285aab8ef08a53d77e2380e3b312b4b4d44807c3ef6edab",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/schalkneethling/jev-3000/blob/4a2f0ae205eae6d7934e9d26cab785cfaa549ba0/src/decision/validate.ts",
+            "path": "src/decision/validate.ts",
+            "sha256": "143a98a44fefa72ccecf45e1eda35568e642648ae8dc3bc284345cd45a1571b6"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-scottweiss-jevagotchi",
+    "type": "github",
+    "title": "jevagotchi",
+    "summary": "jevagotchi: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/scottweiss/jevagotchi",
+    "sourceMeta": {
+      "repo": "scottweiss/jevagotchi",
+      "author": "scottweiss",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1401877757,
+        "nodeId": "R_kgDOU470_Q"
+      },
+      "date": "2026-10-02",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "scottweiss/jevagotchi",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "applications"
+        },
+        "sha": "c6d2337847fbe83cbe875bd7b20707c9d05c0069",
+        "evidenceUrl": "https://github.com/scottweiss/jevagotchi/blob/c6d2337847fbe83cbe875bd7b20707c9d05c0069/README.md",
+        "evidenceSha256": "061adc3e2d155b93dc50b722e6290beac3f89df7dc6cb0690adff4684aabbdc0",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/scottweiss/jevagotchi/blob/c6d2337847fbe83cbe875bd7b20707c9d05c0069/packages/core/src/psyche.ts",
+            "path": "packages/core/src/psyche.ts",
+            "sha256": "8576e03766f1d5128e4f7a0f7b6950ff608e45b61ef720bb3edce88fa28382ef"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-shm11c3-jev-checkup",
+    "type": "github",
+    "title": "jev-checkup",
+    "summary": "jev-checkup: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/shm11C3/jev-checkup",
+    "sourceMeta": {
+      "repo": "shm11C3/jev-checkup",
+      "author": "shm11C3",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1377926096,
+        "nodeId": "R_kgDOUiF70A"
+      },
+      "date": "2026-09-20",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "shm11c3/jev-checkup",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "developer"
+        },
+        "sha": "06b8347e6e56c129b87050870a65ad6d2f679203",
+        "evidenceUrl": "https://github.com/shm11c3/jev-checkup/blob/06b8347e6e56c129b87050870a65ad6d2f679203/README.md",
+        "evidenceSha256": "febd23e1aebb18397ae215e946e8e174c2b25158b1752f07b1fe09de1e31ae95",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/shm11c3/jev-checkup/blob/06b8347e6e56c129b87050870a65ad6d2f679203/.github/workflows/codebase-health.yml",
+            "path": ".github/workflows/codebase-health.yml",
+            "sha256": "93ae2656b22948bceec6a1e23b45b0fccb615b6cce191694748ea5f536e65205"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-shreyaspangal-plasis",
+    "type": "github",
+    "title": "plasis",
+    "summary": "Type what you need. Get the UI.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/shreyaspangal/plasis",
+    "sourceMeta": {
+      "repo": "shreyaspangal/plasis",
+      "author": "shreyaspangal",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1408695127,
+        "nodeId": "R_kgDOU_b7Vw"
+      },
+      "date": "2026-10-07",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "shreyaspangal/plasis",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "applications"
+        },
+        "sha": "8b8dd13409aedc3c5c9281e67dbf8e5d8d53ec03",
+        "evidenceUrl": "https://github.com/shreyaspangal/plasis/blob/8b8dd13409aedc3c5c9281e67dbf8e5d8d53ec03/README.md",
+        "evidenceSha256": "2edbac9c0c6f8ab999620e2ae484da57c6f1b7aff8f9e723a1b75ebc8038822d",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/shreyaspangal/plasis/blob/8b8dd13409aedc3c5c9281e67dbf8e5d8d53ec03/src/lib/jev/questions.ts",
+            "path": "src/lib/jev/questions.ts",
+            "sha256": "e4a85d9993bee77f5baeab76311e553fcd831763cbdfd55b4fc51312e501a793"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T21:13:04.435Z"
+      }
+    }
   }
 ]
