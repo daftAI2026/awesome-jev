@@ -5248,5 +5248,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2110901576550547602",
     "aihotUrl": "https://aihot.news/items/uuvbwkx0boqc6ze5t7ll9zfn5"
+  },
+  {
+    "id": "akq3j9x64fwljgi9o0o7y8trf",
+    "title": "Liquid AI 发布 d1-ultra，登顶 Artificial Analysis Decision Index v1.0",
+    "originalTitle": "Liquid AI has released d1-ultra, taking the #1 position on the Artificial Analysis Decision Index v1.0, supported by a reduction in hallu...",
+    "summary": "Liquid AI 发布决策模型 d1-ultra，以 65 分登顶 Artificial Analysis Decision Index v1.0，领先 Jev 1.14 的 57 分。",
+    "sourceName": "X：Artificial Analysis (@ArtificialAnlys)",
+    "publishedAt": "2026-10-16T11:11:59.000Z",
+    "discoveredAt": "2026-10-16T11:20:15.107Z",
+    "category": "ai-models",
+    "score": 52,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/ArtificialAnlys/status/2111052531166249039",
+    "aihotUrl": "https://aihot.news/items/akq3j9x64fwljgi9o0o7y8trf"
+  },
+  {
+    "id": "yx3j0y0wabdlwgf9giusru2ow",
+    "title": "Liquid AI 发布多模态决策模型 d1-ultra，Artificial Analysis 决策指数得 65 分",
+    "originalTitle": "Liquid AI Releases d1-ultra: A Multimodal Decision Model That Scores 65 on the AA Decision Index",
+    "summary": "Liquid AI 发布迄今最强的决策模型 d1-ultra，可读取文本、图像或两者，以概率形式回答有界问题，单次前向传播输出 0 个 token。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-16T06:26:41.000Z",
+    "discoveredAt": "2026-10-16T07:13:14.501Z",
+    "category": "ai-models",
+    "score": 59,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+    "aihotUrl": "https://aihot.news/items/yx3j0y0wabdlwgf9giusru2ow"
   }
 ]
