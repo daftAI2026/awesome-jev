@@ -416,7 +416,7 @@
         "checkedAt": "2026-10-15T00:05:33.347Z"
       },
       "retryAt": "2026-10-22T00:05:33.347Z",
-      "stars": 33133
+      "stars": 33158
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1134,7 +1134,7 @@
         "checkedAt": "2026-10-15T14:24:03.550Z"
       },
       "retryAt": "2026-10-22T14:24:03.550Z",
-      "stars": 8131
+      "stars": 8132
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2389,31 +2389,6 @@
       "retryAt": "2026-10-18T19:42:29.257Z",
       "stars": 1
     },
-    "bojansandhaus/jev-lcm-hermes-compaction": {
-      "status": "review",
-      "discoveredAt": "2026-10-04T18:47:08.647Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-11T19:42:29.257Z",
-      "lastReview": {
-        "repo": "bojansandhaus/jev-lcm-hermes-compaction",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.06,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.46,
-          "category": "alternatives",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "10af053e7e0a12e91338a4d1ccebc2e587a79564",
-        "evidenceUrl": "https://github.com/bojansandhaus/jev-lcm-hermes-compaction/blob/10af053e7e0a12e91338a4d1ccebc2e587a79564/README.md",
-        "evidenceSha256": "7ba7c3208d17611a0bae159cd0f1d86dcddad5aeb743389125d7726fb71bb433",
-        "model": "jev-latest",
-        "checkedAt": "2026-10-11T19:42:29.257Z"
-      },
-      "retryAt": "2026-10-18T19:42:29.257Z",
-      "stars": 0
-    },
     "computational-social-science/limen": {
       "status": "review",
       "discoveredAt": "2026-10-05T22:10:36.313Z",
@@ -2643,7 +2618,7 @@
         "checkedAt": "2026-10-15T08:35:08.344Z"
       },
       "retryAt": "2026-10-22T08:35:08.344Z",
-      "stars": 145
+      "stars": 150
     },
     "phocinae/.github": {
       "status": "review",
@@ -3518,6 +3493,42 @@
         "checkedAt": "2026-10-16T14:15:12.569Z"
       },
       "retryAt": "2026-10-23T14:15:12.569Z"
+    },
+    "loriyoshida/coreai-kit": {
+      "status": "review",
+      "discoveredAt": "2026-10-16T19:01:53.087Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-16T19:01:53.087Z",
+      "lastReview": {
+        "repo": "loriyoshida/coreai-kit",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "521bdf99fd2025c64628a7b6a36c44fec48db2bc",
+        "evidenceUrl": "https://github.com/loriyoshida/coreai-kit/blob/521bdf99fd2025c64628a7b6a36c44fec48db2bc/README.md",
+        "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T19:01:53.087Z"
+      },
+      "retryAt": "2026-10-23T19:01:53.087Z"
+    },
+    "emregarnier84628/coreai-kit": {
+      "status": "review",
+      "discoveredAt": "2026-10-16T19:01:53.087Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-16T19:01:53.087Z",
+      "lastReview": {
+        "repo": "emregarnier84628/coreai-kit",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "204b840ae20c376bd925fe9beb4948c04ac3bf6c",
+        "evidenceUrl": "https://github.com/emregarnier84628/coreai-kit/blob/204b840ae20c376bd925fe9beb4948c04ac3bf6c/README.md",
+        "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T19:01:53.087Z"
+      },
+      "retryAt": "2026-10-23T19:01:53.087Z"
     }
   }
 }

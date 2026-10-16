@@ -775,6 +775,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alanhuangyoo/openjev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/aldinelabs/trutina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aldinelabs/trutina" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/alekseitylindus/s1gate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alekseitylindus/s1gate" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alekseitylindus/s1gate" />
@@ -18517,6 +18523,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alanhuangyoo/openjev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/aldinelabs/trutina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aldinelabs/trutina" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/alekseitylindus/s1gate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alekseitylindus/s1gate" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alekseitylindus/s1gate" />
@@ -36257,6 +36269,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alanhuangyoo/openjev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alanhuangyoo/openjev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alanhuangyoo/openjev" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/aldinelabs/trutina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aldinelabs/trutina" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aldinelabs/trutina" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/alekseitylindus/s1gate</loc>

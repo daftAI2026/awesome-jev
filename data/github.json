@@ -138688,5 +138688,53 @@
         "checkedAt": "2026-10-16T16:42:25.089Z"
       }
     }
+  },
+  {
+    "id": "gh-10-aldinelabs-trutina",
+    "type": "github",
+    "title": "trutina",
+    "summary": "trutina-4b: a typed decision model with calibrated per-option probabilities in one forward pass",
+    "tags": [
+      "decision-model",
+      "multi-exit",
+      "multi-exit-architectures",
+      "openai-decisions",
+      "openai-decisions-api",
+      "qwen35",
+      "typed-decision",
+      "typed-decision-model"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/aldinelabs/trutina",
+    "sourceMeta": {
+      "repo": "aldinelabs/trutina",
+      "author": "aldinelabs",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1412353207,
+        "nodeId": "R_kgDOVC7Mtw"
+      },
+      "date": "2026-10-09",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "aldinelabs/trutina",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "a19ece99f93e0afa37f143cbe7f66aa7080739ca",
+        "evidenceUrl": "https://github.com/aldinelabs/trutina/blob/a19ece99f93e0afa37f143cbe7f66aa7080739ca/README.md",
+        "evidenceSha256": "ccf27b7cd37bcb478501f54fec7b0b936e7400dc8cbecdbbe3b33e6945b61da9",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-16T19:01:53.087Z"
+      }
+    }
   }
 ]
