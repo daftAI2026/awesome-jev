@@ -5443,5 +5443,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/",
     "aihotUrl": "https://aihot.news/items/o9xe4ksnclm1w5p4wx864fy03"
+  },
+  {
+    "id": "qd282rx4ek0igzw3264zfal9f",
+    "title": "LangChain 详解 agent 评估常见问题：从数据集搭建到 Harbor 基准",
+    "originalTitle": "The Most Common Questions About Agent Evals, Answered",
+    "summary": "LangChain 基于 LangSmith 团队的实践经验，回答 agent 评估最常见的入门与进阶问题：agent 输出多样、路径不唯一，传统单元测试难以覆盖，需要从 trace 中抽取 10–20 个示例建数据集、跑基线并持续把线上失败加入数据集形成改进循环。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-10-15T19:00:00.000Z",
+    "discoveredAt": "2026-10-15T02:05:18.916Z",
+    "category": "tip",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.langchain.com/blog/common-questions-about-agent-evals",
+    "aihotUrl": "https://aihot.news/items/qd282rx4ek0igzw3264zfal9f"
   }
 ]
