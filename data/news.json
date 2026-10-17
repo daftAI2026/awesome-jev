@@ -5428,5 +5428,20 @@
     "reason": null,
     "originalUrl": "https://x.com/shao__meng/status/2111265013755482375",
     "aihotUrl": "https://aihot.news/items/kehybk3xqo7kcxtqc6d90z99i"
+  },
+  {
+    "id": "o9xe4ksnclm1w5p4wx864fy03",
+    "title": "Jev 发布约 4 周内涌现 20 个替代决策模型，MarkTechPost 横向对比选型",
+    "originalTitle": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026",
+    "summary": "MarkTechPost 盘点了 TypeSafe 于 2026 年 9 月 15 日发布决策模型 Jev 后约 4 周内出现的 20 个替代方案，来自 Cloudflare、OpenAI、Perplexity、Liquid AI、AWS Strands Labs 及独立开发者，按参数规模、许可证、硬件、定价、Jev API 兼容性和基准表现逐项比较。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-17T07:26:39.000Z",
+    "discoveredAt": "2026-10-17T09:34:29.938Z",
+    "category": "ai-models",
+    "score": 66,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/",
+    "aihotUrl": "https://aihot.news/items/o9xe4ksnclm1w5p4wx864fy03"
   }
 ]
