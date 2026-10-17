@@ -148992,5 +148992,286 @@
         "checkedAt": "2026-10-17T15:38:35.025Z"
       }
     }
+  },
+  {
+    "id": "gh-12-kevin-liu-01-mailroom",
+    "type": "github",
+    "title": "mailroom",
+    "summary": "Your Gmail, sorted. Rules you can read, typed AI judgments from TypeSafe's Jev for pennies, receipts and undo for everything.",
+    "tags": [
+      "jev",
+      "ai",
+      "email",
+      "gmail",
+      "nextjs",
+      "typesafe",
+      "vercel",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/Kevin-Liu-01/mailroom",
+    "sourceMeta": {
+      "repo": "Kevin-Liu-01/mailroom",
+      "author": "Kevin-Liu-01",
+      "stars": 2,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1388172052,
+        "nodeId": "R_kgDOUr3TFA"
+      },
+      "date": "2026-09-25",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "kevin-liu-01/mailroom",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "375e931121942ddee6be9ba80bc3f6b07e0b6fc6",
+        "evidenceUrl": "https://github.com/kevin-liu-01/mailroom/blob/375e931121942ddee6be9ba80bc3f6b07e0b6fc6/README.md",
+        "evidenceSha256": "bc7e7200de05d01d156c6a8699a1a615337e41fb1b5b72aa29d748c14ae4e484",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
+  },
+  {
+    "id": "gh-15-nguyennhianhtri-jev-foundry-judge",
+    "type": "github",
+    "title": "jev-foundry-judge",
+    "summary": "Jev (TypeSafe) as the judge for Azure AI Foundry agent evaluation — drop-in evaluators, BYO-key demo app, live benchmark",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/nguyennhianhtri/jev-foundry-judge",
+    "sourceMeta": {
+      "repo": "nguyennhianhtri/jev-foundry-judge",
+      "author": "nguyennhianhtri",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1389210737,
+        "nodeId": "R_kgDOUs2scQ"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "nguyennhianhtri/jev-foundry-judge",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "65940ad9c9a4c4a3a4c382b1328e343ef4219a6d",
+        "evidenceUrl": "https://github.com/nguyennhianhtri/jev-foundry-judge/blob/65940ad9c9a4c4a3a4c382b1328e343ef4219a6d/README.md",
+        "evidenceSha256": "2d5b7c8b6c2eb3089fc0dd696b6c1d17bc90ea505a027fd56480fda1f24eb5b0",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
+  },
+  {
+    "id": "gh-17-andrescarreondiaz-jevvium",
+    "type": "github",
+    "title": "jevvium",
+    "summary": "Turn acceptance criteria into Appium tests. A decision model (Jev) explores the app once, then jevvium writes a plain, deterministic WebdriverIO test.",
+    "tags": [
+      "jev",
+      "ai-testing",
+      "android",
+      "appium",
+      "ios",
+      "mobile-testing",
+      "qa-automation",
+      "test-automation"
+    ],
+    "category": "developer",
+    "url": "https://github.com/AndresCarreonDiaz/jevvium",
+    "sourceMeta": {
+      "repo": "AndresCarreonDiaz/jevvium",
+      "author": "AndresCarreonDiaz",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1396187963,
+        "nodeId": "R_kgDOUzgjOw"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "andrescarreondiaz/jevvium",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "developer"
+        },
+        "sha": "8bf5f7e483f00834b63a714e0b0e697e8d069f11",
+        "evidenceUrl": "https://github.com/andrescarreondiaz/jevvium/blob/8bf5f7e483f00834b63a714e0b0e697e8d069f11/README.md",
+        "evidenceSha256": "e29d8af699ee3e9a3751f5adf0080208ac45f0955f797d393185f85677c82908",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-azri-muhsin-jev-sinhala-review",
+    "type": "github",
+    "title": "jev-sinhala-review",
+    "summary": "Empirical zero-shot benchmark of TypeSafe Jev (v1.13.0) on low-resource Sinhala and Singlish NLP benchmarks (SOLD, SinhalaMMLU, NSINA)",
+    "tags": [
+      "jev",
+      "benchmark",
+      "decision-model",
+      "indic-nlp",
+      "nlp",
+      "sinhala-nlp",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/Azri-Muhsin/jev-sinhala-review",
+    "sourceMeta": {
+      "repo": "Azri-Muhsin/jev-sinhala-review",
+      "author": "Azri-Muhsin",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1403051624,
+        "nodeId": "R_kgDOU6DeaA"
+      },
+      "date": "2026-10-03",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "azri-muhsin/jev-sinhala-review",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "research"
+        },
+        "sha": "1329d2abc566f7dfe487633579b2c6819435c74e",
+        "evidenceUrl": "https://github.com/azri-muhsin/jev-sinhala-review/blob/1329d2abc566f7dfe487633579b2c6819435c74e/README.md",
+        "evidenceSha256": "30558333a111edb418272359343e250d82ef45323ec5a4505fd0e0c96020d214",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-brettreifs-decision-kit",
+    "type": "github",
+    "title": "decision-kit",
+    "summary": "Agentic UI demonstrations for rapid, context-aware decisions with TypeSafe AI Jev, LLMs, and the GitHub Copilot SDK",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "agents",
+    "url": "https://github.com/BrettReifs/decision-kit",
+    "sourceMeta": {
+      "repo": "BrettReifs/decision-kit",
+      "author": "BrettReifs",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1391499853,
+        "nodeId": "R_kgDOUvCaTQ"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "brettreifs/decision-kit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "agents"
+        },
+        "sha": "e2ac704918254e343090b18a62c2bae49ee7eb56",
+        "evidenceUrl": "https://github.com/brettreifs/decision-kit/blob/e2ac704918254e343090b18a62c2bae49ee7eb56/README.md",
+        "evidenceSha256": "e780b5dbd53d56fe25cef15cd0f23554438ba20d19cec35c1de1d2a372e6475d",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-cmaintz-jev-dotnet",
+    "type": "github",
+    "title": "jev-dotnet",
+    "summary": "Unofficial .NET SDK for TypeSafe AI's Jev System One model. Typed Choice/Score/Noul judgments with calibrated confidence, zero dependencies.",
+    "tags": [
+      "jev",
+      "ai",
+      "api-client",
+      "classification",
+      "confidence",
+      "csharp",
+      "dotnet",
+      "dotnet-core"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/CMaintz/jev-dotnet",
+    "sourceMeta": {
+      "repo": "CMaintz/jev-dotnet",
+      "author": "CMaintz",
+      "stars": 1,
+      "forks": 1,
+      "language": "C#",
+      "githubIdentity": {
+        "databaseId": 1394815193,
+        "nodeId": "R_kgDOUyMw2Q"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "cmaintz/jev-dotnet",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "9c46b08dea2f6fac6ce11dfb94fab8d4b349f608",
+        "evidenceUrl": "https://github.com/cmaintz/jev-dotnet/blob/9c46b08dea2f6fac6ce11dfb94fab8d4b349f608/README.md",
+        "evidenceSha256": "8f8ed7916238b53ea8af524e80626adea0382ee5c559f2a3ff27d2f39c6e2068",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T20:39:02.895Z"
+      }
+    }
   }
 ]
