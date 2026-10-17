@@ -149273,5 +149273,53 @@
         "checkedAt": "2026-10-17T20:39:02.895Z"
       }
     }
+  },
+  {
+    "id": "gh-15-pally-sai-tilak-primus-decision",
+    "type": "github",
+    "title": "primus-decision",
+    "summary": "Primus Decision 0.1 by AAME: a 3.7M-parameter non-transformer model for typed probabilistic decisions, with local CPU inference, benchmarks and reproducible evidence.",
+    "tags": [
+      "aame",
+      "cpu-inference",
+      "gru",
+      "invoice-processing",
+      "machine-learning",
+      "model-evaluation",
+      "non-transformer",
+      "primus-decision"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/pally-sai-tilak/primus-decision",
+    "sourceMeta": {
+      "repo": "pally-sai-tilak/primus-decision",
+      "author": "pally-sai-tilak",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1383322686,
+        "nodeId": "R_kgDOUnPUPg"
+      },
+      "date": "2026-09-23",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "pally-sai-tilak/primus-decision",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "0c00866a20602c0ff2c757e55b3b4d836a137611",
+        "evidenceUrl": "https://github.com/pally-sai-tilak/primus-decision/blob/0c00866a20602c0ff2c757e55b3b4d836a137611/README.md",
+        "evidenceSha256": "1e8739beb970639c11aee2f8f42da7b816c25159806453f62acb2370fa9b6ebe",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T23:25:14.117Z"
+      }
+    }
   }
 ]
