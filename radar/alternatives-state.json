@@ -416,7 +416,7 @@
         "checkedAt": "2026-10-15T00:05:33.347Z"
       },
       "retryAt": "2026-10-22T00:05:33.347Z",
-      "stars": 33225
+      "stars": 33252
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1109,7 +1109,7 @@
         "checkedAt": "2026-10-15T14:24:03.550Z"
       },
       "retryAt": "2026-10-22T14:24:03.550Z",
-      "stars": 8134
+      "stars": 8135
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1915,31 +1915,6 @@
       },
       "retryAt": "2026-10-19T22:35:27.189Z"
     },
-    "algorythm-canada/openjevswift": {
-      "status": "review",
-      "discoveredAt": "2026-09-30T00:45:18.800Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-14T09:01:14.490Z",
-      "lastReview": {
-        "repo": "algorythm-canada/openjevswift",
-        "status": "review",
-        "score": {
-          "jevAbout": 0.96,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.88,
-          "category": "alternatives",
-          "needsReview": true,
-          "conflictingEvidence": false
-        },
-        "sha": "4ea20b293402457d1fe540dda9f0962e00e812b1",
-        "evidenceUrl": "https://github.com/algorythm-canada/openjevswift/blob/4ea20b293402457d1fe540dda9f0962e00e812b1/README.md",
-        "evidenceSha256": "cd84727b1951b2a8adc4b34c9fb4e0719a00d462aaf9eb67e363788dbadd1967",
-        "model": "jev-latest",
-        "checkedAt": "2026-10-14T09:01:14.490Z"
-      },
-      "retryAt": "2026-10-21T09:01:14.490Z",
-      "stars": 10
-    },
     "computational-social-science/jevrsi": {
       "status": "error",
       "discoveredAt": "2026-09-30T09:59:31.148Z",
@@ -2545,7 +2520,7 @@
         "checkedAt": "2026-10-15T08:35:08.344Z"
       },
       "retryAt": "2026-10-22T08:35:08.344Z",
-      "stars": 161
+      "stars": 164
     },
     "phocinae/.github": {
       "status": "review",
@@ -2840,7 +2815,7 @@
         "checkedAt": "2026-10-12T11:19:04.262Z"
       },
       "retryAt": "2026-10-19T11:19:04.262Z",
-      "stars": 0
+      "stars": 1
     },
     "mike8470/jev-style": {
       "status": "review",
@@ -3442,7 +3417,7 @@
       "status": "review",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-10-17T13:11:54.597Z",
       "lastReview": {
         "repo": "solvai/jevrunner",
@@ -3570,6 +3545,49 @@
         "checkedAt": "2026-10-17T13:11:54.597Z"
       },
       "retryAt": "2026-10-24T13:11:54.597Z"
+    },
+    "felipegenef/local-ai-system-one-lab": {
+      "status": "review",
+      "discoveredAt": "2026-10-17T17:55:33.058Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-17T17:55:33.058Z",
+      "lastReview": {
+        "repo": "felipegenef/local-ai-system-one-lab",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "28eff79b84842da5dc605c804d2375d546f24ad7",
+        "evidenceUrl": "https://github.com/felipegenef/local-ai-system-one-lab/blob/28eff79b84842da5dc605c804d2375d546f24ad7/README.md",
+        "evidenceSha256": "edf1a94071fa1c8920c45097a778b6de27dba3541c9d590199278805da49b852",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T17:55:33.058Z"
+      },
+      "retryAt": "2026-10-24T17:55:33.058Z"
+    },
+    "divingsbysangam/typesafe-jev-salesforce": {
+      "status": "review",
+      "discoveredAt": "2026-10-17T17:55:33.058Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-17T17:55:33.058Z",
+      "lastReview": {
+        "repo": "divingsbysangam/typesafe-jev-salesforce",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.25,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.34,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "986ae849651d6599275f417791ab95443e71f530",
+        "evidenceUrl": "https://github.com/divingsbysangam/typesafe-jev-salesforce/blob/986ae849651d6599275f417791ab95443e71f530/README.md",
+        "evidenceSha256": "96569312d16daac6e96604961ecceef420ff7c1bae233b651ed2bc0fa44d272e",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T17:55:33.058Z"
+      },
+      "retryAt": "2026-10-24T17:55:33.058Z"
     }
   }
 }
