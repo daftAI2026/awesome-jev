@@ -146528,5 +146528,907 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       }
     }
+  },
+  {
+    "id": "gh-12-pawelmamcarz-linkedin-ai-slop",
+    "type": "github",
+    "title": "linkedin-ai-slop",
+    "summary": "LinkedIn feed AI-slop detector using TypeSafe Jev API",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/pawelmamcarz/linkedin-ai-slop",
+    "sourceMeta": {
+      "repo": "pawelmamcarz/linkedin-ai-slop",
+      "author": "pawelmamcarz",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1384111308,
+        "nodeId": "R_kgDOUn_czA"
+      },
+      "date": "2026-09-23",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "pawelmamcarz/linkedin-ai-slop",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "developer"
+        },
+        "sha": "dff6eda5e869d3c22a60521fc148a520460e1f27",
+        "evidenceUrl": "https://github.com/pawelmamcarz/linkedin-ai-slop/blob/dff6eda5e869d3c22a60521fc148a520460e1f27/README.md",
+        "evidenceSha256": "ca0e68e1987578bb0997ccdca7cc984ae33ed0dcef58700cac1a79fd66f590fb",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-phamhung075-4genthub-client",
+    "type": "github",
+    "title": "4genthub-client",
+    "summary": "4genthub-client: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "go"
+    ],
+    "category": "agents",
+    "url": "https://github.com/phamhung075/4genthub-client",
+    "sourceMeta": {
+      "repo": "phamhung075/4genthub-client",
+      "author": "phamhung075",
+      "stars": 0,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1413015956,
+        "nodeId": "R_kgDOVDjplA"
+      },
+      "date": "2026-10-10",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "phamhung075/4genthub-client",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "d708d31952a575c1444934c706479cf27207237a",
+        "evidenceUrl": "https://github.com/phamhung075/4genthub-client/blob/d708d31952a575c1444934c706479cf27207237a/README.md",
+        "evidenceSha256": "17eba75c736ac5b0f6e37b129770e5671b352d76420d966266173d8c1bc91ca3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-pmagnomuller-conduit",
+    "type": "github",
+    "title": "conduit",
+    "summary": "Loopback gateway for Claude Code or OpenCode: automatic Anthropic → GLM → DeepSeek failover, breaker-driven, plus optional per-call model routing by Jev (TypeSafe System One) — capability-first across all three providers — with manual pinning, control UI and CLI",
+    "tags": [
+      "jev",
+      "go"
+    ],
+    "category": "agents",
+    "url": "https://github.com/pmagnomuller/conduit",
+    "sourceMeta": {
+      "repo": "pmagnomuller/conduit",
+      "author": "pmagnomuller",
+      "stars": 0,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1331967254,
+        "nodeId": "R_kgDOT2Q1Fg"
+      },
+      "date": "2026-08-12",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "pmagnomuller/conduit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "d7b7422d10a1c6c43ab52dcf4ceca64d18dd10ce",
+        "evidenceUrl": "https://github.com/pmagnomuller/conduit/blob/d7b7422d10a1c6c43ab52dcf4ceca64d18dd10ce/README.md",
+        "evidenceSha256": "0f29b2f74b14ae9895388dce7989c93fb810a958c0a6c5d2398aec775e987338",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-24-purushotham-prajapati-24-tabman",
+    "type": "github",
+    "title": "tabMan",
+    "summary": "tabMan: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/Purushotham-Prajapati-24/tabMan",
+    "sourceMeta": {
+      "repo": "Purushotham-Prajapati-24/tabMan",
+      "author": "Purushotham-Prajapati-24",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1381235170,
+        "nodeId": "R_kgDOUlP54g"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "purushotham-prajapati-24/tabman",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "developer"
+        },
+        "sha": "0c6ad7ab7a330ff6659f1d0cb33c3110469632a3",
+        "evidenceUrl": "https://github.com/purushotham-prajapati-24/tabman/blob/0c6ad7ab7a330ff6659f1d0cb33c3110469632a3/README.md",
+        "evidenceSha256": "1d7cdb84996e8f67ed8258a7dc66c568e9ee44084afbed8f7f9da98046038ccc",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-rahulreddyysr-jev-snake",
+    "type": "github",
+    "title": "jev-snake",
+    "summary": "jev-snake: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/RAHULREDDYYSR/jev-snake",
+    "sourceMeta": {
+      "repo": "RAHULREDDYYSR/jev-snake",
+      "author": "RAHULREDDYYSR",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1382033563,
+        "nodeId": "R_kgDOUmAomw"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "rahulreddyysr/jev-snake",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "applications"
+        },
+        "sha": "cd16af2682d57ca88cdd73f561927f2aed23ff21",
+        "evidenceUrl": "https://github.com/rahulreddyysr/jev-snake/blob/cd16af2682d57ca88cdd73f561927f2aed23ff21/README.md",
+        "evidenceSha256": "d7a55184fa7b65f51c84f23b882dd680b1a6c8b3a8a1a7c070e7e67bb7c73b7f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-raihandotmd-ticketing-priority-system",
+    "type": "github",
+    "title": "ticketing-priority-system",
+    "summary": "ticketing-priority-system: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "svelte"
+    ],
+    "category": "applications",
+    "url": "https://github.com/raihandotmd/ticketing-priority-system",
+    "sourceMeta": {
+      "repo": "raihandotmd/ticketing-priority-system",
+      "author": "raihandotmd",
+      "stars": 0,
+      "forks": 0,
+      "language": "Svelte",
+      "githubIdentity": {
+        "databaseId": 1382672345,
+        "nodeId": "R_kgDOUmnn2Q"
+      },
+      "date": "2026-09-23",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "raihandotmd/ticketing-priority-system",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "applications"
+        },
+        "sha": "7071cd8f70d5d85647c0b92c28d1747fd624474f",
+        "evidenceUrl": "https://github.com/raihandotmd/ticketing-priority-system/blob/7071cd8f70d5d85647c0b92c28d1747fd624474f/README.md",
+        "evidenceSha256": "3032c1df2b16a447946fb473a22ea6a03f06d36df3482e5e6539e91e4be49c4c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-rickysullivan-typesafe-tutorial",
+    "type": "github",
+    "title": "typesafe-tutorial",
+    "summary": "Notebooks built while learning TypeSafe AI's System One model Jev",
+    "tags": [
+      "jev",
+      "jupyter notebook"
+    ],
+    "category": "resources",
+    "url": "https://github.com/rickysullivan/typesafe-tutorial",
+    "sourceMeta": {
+      "repo": "rickysullivan/typesafe-tutorial",
+      "author": "rickysullivan",
+      "stars": 0,
+      "forks": 0,
+      "language": "Jupyter Notebook",
+      "githubIdentity": {
+        "databaseId": 1382483945,
+        "nodeId": "R_kgDOUmcH6Q"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "rickysullivan/typesafe-tutorial",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "resources"
+        },
+        "sha": "b433a84ae35a6767901376596a193a70e7b011c5",
+        "evidenceUrl": "https://github.com/rickysullivan/typesafe-tutorial/blob/b433a84ae35a6767901376596a193a70e7b011c5/README.md",
+        "evidenceSha256": "20bb2117455398273745c06f0ddf8b325e65525e05b092489c0fa0671b049cbf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-rmandevs-vigia",
+    "type": "github",
+    "title": "vigia",
+    "summary": "Moderating live-stream chat in real time (ES/EN)",
+    "tags": [
+      "jev",
+      "content-moderation",
+      "playground",
+      "twitch",
+      "typesafe-ai",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/rmandevs/vigia",
+    "sourceMeta": {
+      "repo": "rmandevs/vigia",
+      "author": "rmandevs",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1382467551,
+        "nodeId": "R_kgDOUmbH3w"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "rmandevs/vigia",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "ab5313fffa474b3501ffce35e8aabd21470727bf",
+        "evidenceUrl": "https://github.com/rmandevs/vigia/blob/ab5313fffa474b3501ffce35e8aabd21470727bf/README.md",
+        "evidenceSha256": "1a9fa5e3ba18957df6b65cf4ed34dc82867ab4cce14bdde1f66deffb07dbe13b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-ronaldomafra-ai-trade-memory",
+    "type": "github",
+    "title": "ai-trade-memory",
+    "summary": "ai-trade-memory: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/ronaldomafra/ai-trade-memory",
+    "sourceMeta": {
+      "repo": "ronaldomafra/ai-trade-memory",
+      "author": "ronaldomafra",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1413764750,
+        "nodeId": "R_kgDOVERWjg"
+      },
+      "date": "2026-10-10",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "ronaldomafra/ai-trade-memory",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "alternatives"
+        },
+        "sha": "fe14e0153000b94d9e6a1d76fab97d1fbdaee107",
+        "evidenceUrl": "https://github.com/ronaldomafra/ai-trade-memory/blob/fe14e0153000b94d9e6a1d76fab97d1fbdaee107/README.md",
+        "evidenceSha256": "9daa9dd17643df55919676fa50e421c2bada275cb53cbb5694164569a3778f46",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-safzanpirani-juna",
+    "type": "github",
+    "title": "juna",
+    "summary": "A lean Pi coding agent profile that keeps context small, with TypeSafe Jev pruning tool output",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "coding-agent",
+      "context-engineering",
+      "exa",
+      "llm",
+      "pi-coding-agent",
+      "prompt-caching"
+    ],
+    "category": "agents",
+    "url": "https://github.com/safzanpirani/juna",
+    "sourceMeta": {
+      "repo": "safzanpirani/juna",
+      "author": "safzanpirani",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1389035424,
+        "nodeId": "R_kgDOUsr_oA"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "safzanpirani/juna",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "5f9ca9939cbda45d176dec4bd91f9c21b98d65e3",
+        "evidenceUrl": "https://github.com/safzanpirani/juna/blob/5f9ca9939cbda45d176dec4bd91f9c21b98d65e3/README.md",
+        "evidenceSha256": "4fc7eee1e739d91b51ae1b45d12d5bf319d6207ce3446cefa6d06dced222a145",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-samaksh-bajaj-evil-8-ball",
+    "type": "github",
+    "title": "evil-8-ball",
+    "summary": "evil-8-ball: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/samaksh-bajaj/evil-8-ball",
+    "sourceMeta": {
+      "repo": "samaksh-bajaj/evil-8-ball",
+      "author": "samaksh-bajaj",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1381142460,
+        "nodeId": "R_kgDOUlKPvA"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "samaksh-bajaj/evil-8-ball",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "abc9532dfd0150c319872b0a8dcb44c07086b7db",
+        "evidenceUrl": "https://github.com/samaksh-bajaj/evil-8-ball/blob/abc9532dfd0150c319872b0a8dcb44c07086b7db/README.md",
+        "evidenceSha256": "9f3f5b01a9a84c75bc0ee83bca399aa7d605be33c04858ff210f7b61443bf994",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-samiulhuda360-ci-triage",
+    "type": "github",
+    "title": "ci-triage",
+    "summary": "Reads failed CI runs, re-runs flaky and infrastructure failures once, and explains real ones in one PR comment (Jev)",
+    "tags": [
+      "jev",
+      "ci-cd",
+      "devops",
+      "flaky-tests",
+      "github-actions",
+      "human-in-the-loop",
+      "python",
+      "typesafe"
+    ],
+    "category": "agents",
+    "url": "https://github.com/samiulhuda360/ci-triage",
+    "sourceMeta": {
+      "repo": "samiulhuda360/ci-triage",
+      "author": "samiulhuda360",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1415369767,
+        "nodeId": "R_kgDOVFzUJw"
+      },
+      "date": "2026-10-12",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "samiulhuda360/ci-triage",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "383f2a1f4657d7ff471fd1a6d3c8cdd098b11d77",
+        "evidenceUrl": "https://github.com/samiulhuda360/ci-triage/blob/383f2a1f4657d7ff471fd1a6d3c8cdd098b11d77/README.md",
+        "evidenceSha256": "5f16b193d4211a53ef5f62f67e1d547e0fbf1d2deb88363d04cd0bad86fa26b3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-hello-wy-sub2api",
+    "type": "github",
+    "title": "sub2api",
+    "summary": "sub2api: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "go"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/hello-wy/sub2api",
+    "sourceMeta": {
+      "repo": "hello-wy/sub2api",
+      "author": "hello-wy",
+      "stars": 1,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1238499887,
+        "nodeId": "R_kgDOSdICLw"
+      },
+      "date": "2026-05-14",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "hello-wy/sub2api",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "sdk"
+        },
+        "sha": "59c941805dbb993c84e75ff1d1039fb6df4eff98",
+        "evidenceUrl": "https://github.com/hello-wy/sub2api/blob/59c941805dbb993c84e75ff1d1039fb6df4eff98/README.md",
+        "evidenceSha256": "4c9b66a395d8404b9c33e3492d6268b889497cba9f5a1970f4aac5522a8edaa6",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/hello-wy/sub2api/blob/59c941805dbb993c84e75ff1d1039fb6df4eff98/backend/internal/service/content_moderation_engines.go",
+            "path": "backend/internal/service/content_moderation_engines.go",
+            "sha256": "5bc2044fa4791b9465a2aa05b715f9de6b354a5e1ba33e02503df7f5d487fc53"
+          },
+          {
+            "url": "https://github.com/hello-wy/sub2api/blob/59c941805dbb993c84e75ff1d1039fb6df4eff98/backend/internal/service/content_moderation_typesafe_live_test.go",
+            "path": "backend/internal/service/content_moderation_typesafe_live_test.go",
+            "sha256": "75386fc7560e3ebe998bb1ad8d2d8265346fbb3da56d3f13b0598fccdd99317f"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-samiulhuda360-depgate",
+    "type": "github",
+    "title": "depgate",
+    "summary": "Merges safe Dependabot and Renovate updates itself, holds risky ones: 0 wrong merges on 199 real updates (Jev)",
+    "tags": [
+      "jev",
+      "dependabot",
+      "github-actions",
+      "renovate",
+      "typesafe",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/samiulhuda360/depgate",
+    "sourceMeta": {
+      "repo": "samiulhuda360/depgate",
+      "author": "samiulhuda360",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1411688555,
+        "nodeId": "R_kgDOVCSoaw"
+      },
+      "date": "2026-10-09",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "samiulhuda360/depgate",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "a2e4fa35c707e885634bff7b935079569ab0d67b",
+        "evidenceUrl": "https://github.com/samiulhuda360/depgate/blob/a2e4fa35c707e885634bff7b935079569ab0d67b/README.md",
+        "evidenceSha256": "d3eb1b5a10499c669f311dacd11d5a8866d9a8fa0a8e5a3fc3b0bab354630360",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-samiulhuda360-n8n-nodes-jev",
+    "type": "github",
+    "title": "n8n-nodes-jev",
+    "summary": "n8n node that routes items only when the AI is confident and sends the rest to a person (Jev, 97.5% accurate)",
+    "tags": [
+      "jev",
+      "automation",
+      "n8n",
+      "n8n-community-node-package",
+      "typesafe",
+      "typescript",
+      "javascript"
+    ],
+    "category": "agents",
+    "url": "https://github.com/samiulhuda360/n8n-nodes-jev",
+    "sourceMeta": {
+      "repo": "samiulhuda360/n8n-nodes-jev",
+      "author": "samiulhuda360",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1411652122,
+        "nodeId": "R_kgDOVCQaGg"
+      },
+      "date": "2026-10-09",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "samiulhuda360/n8n-nodes-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "agents"
+        },
+        "sha": "c120358a8ebe07aa072e25aab306d7378d43d11f",
+        "evidenceUrl": "https://github.com/samiulhuda360/n8n-nodes-jev/blob/c120358a8ebe07aa072e25aab306d7378d43d11f/README.md",
+        "evidenceSha256": "5309ae9d110a3cd7c4058473bf035758fde4c688e6e999ee67bd7be814ea1e70",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-15-sandesh-s-dalvi-playwright-jev-testing",
+    "type": "github",
+    "title": "playwright-jev-testing",
+    "summary": "Playwright TypeScript automation testing with TypeSafe Jev as the intelligence layer: semantic assertions, element selection, goal-driven flows, and failure classification (flake vs genuine, fix vs ticket). Includes Petstore API example.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "browser",
+    "url": "https://github.com/Sandesh-S-Dalvi/playwright-jev-testing",
+    "sourceMeta": {
+      "repo": "Sandesh-S-Dalvi/playwright-jev-testing",
+      "author": "Sandesh-S-Dalvi",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1417906027,
+        "nodeId": "R_kgDOVIOHaw"
+      },
+      "date": "2026-10-13",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "sandesh-s-dalvi/playwright-jev-testing",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "browser"
+        },
+        "sha": "62c8709111a66093c22e54071f824d268ae888bf",
+        "evidenceUrl": "https://github.com/sandesh-s-dalvi/playwright-jev-testing/blob/62c8709111a66093c22e54071f824d268ae888bf/README.md",
+        "evidenceSha256": "51f07bef01cc6b730247488184944a003c9ae7f1cac0683c22774b65827da377",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-schemaitat-opencode-plugin-auto-classifier",
+    "type": "github",
+    "title": "opencode-plugin-auto-classifier",
+    "summary": "OpenCode plugin that classifies shell commands, reads, and edits with TypeSafe Jev (System One) and folds the result into permission decisions.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/schemaitat/opencode-plugin-auto-classifier",
+    "sourceMeta": {
+      "repo": "schemaitat/opencode-plugin-auto-classifier",
+      "author": "schemaitat",
+      "stars": 0,
+      "forks": 1,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1415306505,
+        "nodeId": "R_kgDOVFvdCQ"
+      },
+      "date": "2026-10-12",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "schemaitat/opencode-plugin-auto-classifier",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "developer"
+        },
+        "sha": "0d3512a752545774a1491d41b125d67c71b16286",
+        "evidenceUrl": "https://github.com/schemaitat/opencode-plugin-auto-classifier/blob/0d3512a752545774a1491d41b125d67c71b16286/README.md",
+        "evidenceSha256": "f8e95879cbd0973ea84d15a525e828037a5d35b11a7c92be023c7d7fde9c4ca8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-sciscend-system-one-categorizer-demo",
+    "type": "github",
+    "title": "system-one-categorizer-demo",
+    "summary": "Jev vs Laya on Bulgarian: two System One models suggest a category for each blog post. A local BgGPT names new topics.",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "benchmark",
+      "bggpt",
+      "bulgarian",
+      "laya",
+      "llm",
+      "model-comparison"
+    ],
+    "category": "research",
+    "url": "https://github.com/SciScend/system-one-categorizer-demo",
+    "sourceMeta": {
+      "repo": "SciScend/system-one-categorizer-demo",
+      "author": "SciScend",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1386483549,
+        "nodeId": "R_kgDOUqQPXQ"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "sciscend/system-one-categorizer-demo",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "research"
+        },
+        "sha": "0d7716003d6a1a8525fd812eb9b5f6d1f78439e6",
+        "evidenceUrl": "https://github.com/sciscend/system-one-categorizer-demo/blob/0d7716003d6a1a8525fd812eb9b5f6d1f78439e6/README.md",
+        "evidenceSha256": "002aa81946cb118a936559b5eb323981a4dc2c9762fc46139f246d3aaf63889f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-20-sebastiaanvandesteeg-jev",
+    "type": "github",
+    "title": "jev",
+    "summary": "jev: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/sebastiaanvandesteeg/jev",
+    "sourceMeta": {
+      "repo": "sebastiaanvandesteeg/jev",
+      "author": "sebastiaanvandesteeg",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1381060795,
+        "nodeId": "R_kgDOUlFQuw"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "sebastiaanvandesteeg/jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "applications"
+        },
+        "sha": "a113689554a2d843571291861ef7e1d77daf1be1",
+        "evidenceUrl": "https://github.com/sebastiaanvandesteeg/jev/blob/a113689554a2d843571291861ef7e1d77daf1be1/README.md",
+        "evidenceSha256": "5c88bd36684d59c8e65383df50cfa38fcd5a7b192bd63dc92dbe39f621095ebe",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-smapira-kaseifu",
+    "type": "github",
+    "title": "kaseifu",
+    "summary": "Japanese house keeper",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "category": "applications",
+    "url": "https://github.com/smapira/kaseifu",
+    "sourceMeta": {
+      "repo": "smapira/kaseifu",
+      "author": "smapira",
+      "stars": 0,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1381231689,
+        "nodeId": "R_kgDOUlPsSQ"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "smapira/kaseifu",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "4cd003079121c1b7de07eeffc2519f3483996fed",
+        "evidenceUrl": "https://github.com/smapira/kaseifu/blob/4cd003079121c1b7de07eeffc2519f3483996fed/README.md",
+        "evidenceSha256": "bfff3ad61f77c1901e75b8ea68da1b0a1391e0a1d2bfdf04e066ad01e77d6f95",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-17T10:48:12.184Z"
+      }
+    }
   }
 ]
