@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "a4d9a1da025439d0463e57ea271e40230261c368",
-  "at": "2026-10-18T05:50:47.239Z",
-  "totalProjects": 2829,
+  "baselineSha": "74004600cfa18d5c2961d4d6224de40a1cbc4450",
+  "at": "2026-10-18T12:01:58.419Z",
+  "totalProjects": 2876,
   "metadata": {
-    "ok": 2810,
-    "failed": 19,
-    "batches": 58,
-    "cost": 58,
-    "other": 2729,
-    "remaining": 19,
-    "attempted": 2829,
-    "fresh": 2810,
-    "unavailable": 19,
+    "ok": 2856,
+    "failed": 20,
+    "batches": 59,
+    "cost": 59,
+    "other": 2776,
+    "remaining": 20,
+    "attempted": 2876,
+    "fresh": 2856,
+    "unavailable": 20,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -119,6 +119,11 @@
       "id": "gh-12-original0211-jev-perp-paper-trader",
       "repo": "original0211/jev-perp-paper-trader",
       "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-5-yinjs-claude-jev",
+      "repo": "yinjs/claude-jev",
+      "reason": "github-unavailable-repository"
     }
   ],
   "lifecycle": {
@@ -126,6 +131,6 @@
     "review": 0,
     "unavailable": 0,
     "restored": 0,
-    "checked": 17
+    "checked": 18
   }
 }
