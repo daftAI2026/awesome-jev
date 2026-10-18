@@ -5473,5 +5473,20 @@
     "reason": null,
     "originalUrl": "https://x.com/SaitoWu/status/2111775766631657836",
     "aihotUrl": "https://aihot.news/items/xk1emvwinxzt2gus03ljj47ps"
+  },
+  {
+    "id": "op6i25a61eomfo7jbjrwtzbjp",
+    "title": "谁来评测评测者？好评测的标准",
+    "originalTitle": "who benchmarks the benchmarkers?",
+    "summary": "谁来评测那些评测者？\n\n一个好的评测是：\n\n- 短暂的。它只截取某一时刻的状态与能力。\n- 有依据的。它直接衡量你关心的任务和数据上的表现。\n- 具体的。它针对的是期望结果本身，而不是其某种代理指标。\n\n记好了！",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-18T17:43:01.000Z",
+    "discoveredAt": "2026-10-18T18:01:35.046Z",
+    "category": "opinion",
+    "score": 35,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2111875713737380347",
+    "aihotUrl": "https://aihot.news/items/op6i25a61eomfo7jbjrwtzbjp"
   }
 ]
