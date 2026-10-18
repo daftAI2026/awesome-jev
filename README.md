@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2874-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2875-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -1105,6 +1105,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-gomoku**](https://github.com/mizchi/jev-gomoku) - jev-gomoku: TypeSafe Jev ecosystem repository. · `MoonBit`
 - [**reflexui**](https://github.com/mmarqueti/reflexui) - Adaptive, explainable screens driven by fast typed-judgment models. A System One model \(Jev\) decides what's relevant; your code decides what's allowed. · `TypeScript`
 - [**semval4j**](https://github.com/mohamedikbel/semval4j) - semval4j: TypeSafe Jev ecosystem repository. · `Java`
+- [**classifier-mcp**](https://github.com/n-r-w/classifier-mcp) - MCP server in Go for LLM-powered \(Jev\) classification of text, local files, and line ranges using custom criteria. · `Go`
 - [**typesafe-sdk-go**](https://github.com/nangcr/typesafe-sdk-go) - GitHub project related to TypeSafe AI / Jev: nangcr/typesafe-sdk-go · `Go`
 - [**attck-mapper-jev**](https://github.com/NenXMaster-AB/attck-mapper-jev) - Library for System One usage using Jev for Cyber threat intel · `Python`
 - [**reflex**](https://github.com/NenXMaster-AB/reflex) - Iibrary for Jev · `Python`

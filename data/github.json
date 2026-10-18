@@ -163838,5 +163838,54 @@
         "checkedAt": "2026-10-18T11:11:00.030Z"
       }
     }
+  },
+  {
+    "id": "gh-5-n-r-w-classifier-mcp",
+    "type": "github",
+    "title": "classifier-mcp",
+    "summary": "MCP server in Go for LLM-powered (Jev) classification of text, local files, and line ranges using custom criteria.",
+    "tags": [
+      "jev",
+      "ai-tools",
+      "file-classification",
+      "golang",
+      "llm",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/n-r-w/classifier-mcp",
+    "sourceMeta": {
+      "repo": "n-r-w/classifier-mcp",
+      "author": "n-r-w",
+      "stars": 0,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1405437101,
+        "nodeId": "R_kgDOU8VErQ"
+      },
+      "date": "2026-10-05",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "n-r-w/classifier-mcp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "sdk"
+        },
+        "sha": "0ab7b42312b9cde207b7a813faa27a0882b6ac6b",
+        "evidenceUrl": "https://github.com/n-r-w/classifier-mcp/blob/0ab7b42312b9cde207b7a813faa27a0882b6ac6b/README.md",
+        "evidenceSha256": "56afbe506efda007d84288ebdab7200d21b7b1ad8a47adce4e7d52ee2257b5d9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T15:54:35.834Z"
+      }
+    }
   }
 ]
