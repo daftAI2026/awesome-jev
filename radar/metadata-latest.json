@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "9334d9fefb21c2ec17d2dcb48dbe8793c62d3bd0",
-  "at": "2026-10-18T16:29:29.569Z",
-  "totalProjects": 2877,
+  "baselineSha": "fec51c1864a9ff5ad89c39934e4df2dc46bae2a7",
+  "at": "2026-10-18T21:27:55.887Z",
+  "totalProjects": 2886,
   "metadata": {
-    "ok": 2856,
+    "ok": 2865,
     "failed": 21,
     "batches": 59,
     "cost": 59,
-    "other": 2777,
+    "other": 2786,
     "remaining": 21,
-    "attempted": 2877,
-    "fresh": 2856,
+    "attempted": 2886,
+    "fresh": 2865,
     "unavailable": 21,
     "deferredRemaining": 0,
     "top100": {
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "0x1f/pi-jev-multi-provider",
-        "to": "0x1f/pi-taskmesh",
-        "databaseId": 1380051204
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -138,9 +132,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 16,
     "restored": 0,
     "checked": 19
   }
