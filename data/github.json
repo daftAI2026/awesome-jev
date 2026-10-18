@@ -163890,5 +163890,401 @@
         "checkedAt": "2026-10-18T15:54:35.834Z"
       }
     }
+  },
+  {
+    "id": "gh-6-nnance-home-jev",
+    "type": "github",
+    "title": "home-jev",
+    "summary": "Home automation simulator driven by natural language rules, using TypeSafe's Jev",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/nnance/home-jev",
+    "sourceMeta": {
+      "repo": "nnance/home-jev",
+      "author": "nnance",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1404517750,
+        "nodeId": "R_kgDOU7c9dg"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "nnance/home-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "applications"
+        },
+        "sha": "76b730036661d0d6dad2a03cb0df518bc0361e2e",
+        "evidenceUrl": "https://github.com/nnance/home-jev/blob/76b730036661d0d6dad2a03cb0df518bc0361e2e/README.md",
+        "evidenceSha256": "eb59231e1afca7a189f5503e547e2a89e05e1d57f0301141f1af5469ecb01897",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-ohta0525-unkokanri",
+    "type": "github",
+    "title": "unkokanri",
+    "summary": "unkokanri: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/ohta0525/unkokanri",
+    "sourceMeta": {
+      "repo": "ohta0525/unkokanri",
+      "author": "ohta0525",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1401595679,
+        "nodeId": "R_kgDOU4qnHw"
+      },
+      "date": "2026-10-02",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "ohta0525/unkokanri",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "applications"
+        },
+        "sha": "70e020be23a2beb187f40056d9515005a367b32c",
+        "evidenceUrl": "https://github.com/ohta0525/unkokanri/blob/70e020be23a2beb187f40056d9515005a367b32c/README.md",
+        "evidenceSha256": "d48a10854c0a2c835a50d866fa155780cae22b803e2b1dca5b8c76f653c9cd49",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-omerherera-jev-ui",
+    "type": "github",
+    "title": "jev-ui",
+    "summary": "jev-ui: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/OmerHerera/jev-ui",
+    "sourceMeta": {
+      "repo": "OmerHerera/jev-ui",
+      "author": "OmerHerera",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1396622910,
+        "nodeId": "R_kgDOUz7GPg"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "omerherera/jev-ui",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "4a7029e050f3e0cd5a7c70e0addef5ba4a90c752",
+        "evidenceUrl": "https://github.com/omerherera/jev-ui/blob/4a7029e050f3e0cd5a7c70e0addef5ba4a90c752/README.md",
+        "evidenceSha256": "a110f53dee5ef6700ee1d31c27024304eb9bb8ae74e82360d7e0680ff5526ce5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-pablob07-jevmc",
+    "type": "github",
+    "title": "JevMC",
+    "summary": "Unofficial Java SDK for Jev (TypeSafe.ai System One) - chat moderation for PaperMC plugins",
+    "tags": [
+      "jev",
+      "jev-ai",
+      "minecraft",
+      "papermc",
+      "plugin",
+      "java"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/PabloB07/JevMC",
+    "sourceMeta": {
+      "repo": "PabloB07/JevMC",
+      "author": "PabloB07",
+      "stars": 0,
+      "forks": 0,
+      "language": "Java",
+      "githubIdentity": {
+        "databaseId": 1395464064,
+        "nodeId": "R_kgDOUy0XgA"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "pablob07/jevmc",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "sdk"
+        },
+        "sha": "b86fd3c6fe6835ef14fc5851c1698eec90672229",
+        "evidenceUrl": "https://github.com/pablob07/jevmc/blob/b86fd3c6fe6835ef14fc5851c1698eec90672229/README.md",
+        "evidenceSha256": "992bcef1db7b8458304ed576de62a18bbe6d843ff1d515a8a8c69298dc07cb83",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-panikparty-system1doom",
+    "type": "github",
+    "title": "System1Doom",
+    "summary": "System One models (TypeSafe Jev, Laya) play DOOM via ViZDoom: typed decisions + deterministic controller",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/PanikParty/System1Doom",
+    "sourceMeta": {
+      "repo": "PanikParty/System1Doom",
+      "author": "PanikParty",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1393399947,
+        "nodeId": "R_kgDOUw2Yiw"
+      },
+      "date": "2026-09-28",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "panikparty/system1doom",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "research"
+        },
+        "sha": "9dcbcac4bd9b23a216d766c2e873582766771920",
+        "evidenceUrl": "https://github.com/panikparty/system1doom/blob/9dcbcac4bd9b23a216d766c2e873582766771920/README.md",
+        "evidenceSha256": "b241f779fa7f7880c76eed1e79989dc6077f08419225a1e85456058f8ddfb4b5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-patcon-polis-jev-impute-simulation",
+    "type": "github",
+    "title": "polis-jev-impute-simulation",
+    "summary": "Experiment to impute missing Polis votes (AGREE / DISAGREE / PASS) with TypeSafe's Jev",
+    "tags": [
+      "jev",
+      "collective-intelligence",
+      "democracy",
+      "polis",
+      "polislike",
+      "typesafe",
+      "typescript"
+    ],
+    "category": "research",
+    "url": "https://github.com/patcon/polis-jev-impute-simulation",
+    "sourceMeta": {
+      "repo": "patcon/polis-jev-impute-simulation",
+      "author": "patcon",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1407377429,
+        "nodeId": "R_kgDOU-LgFQ"
+      },
+      "date": "2026-10-06",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "patcon/polis-jev-impute-simulation",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "research"
+        },
+        "sha": "1a3bf4f3b65bc969f3fc33b58bc1a2fa6281e177",
+        "evidenceUrl": "https://github.com/patcon/polis-jev-impute-simulation/blob/1a3bf4f3b65bc969f3fc33b58bc1a2fa6281e177/README.md",
+        "evidenceSha256": "83d32ce5f9479c03218cf7729a4ad559c5d9550988409c87772285dfa7604cb8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-phidung-hub-jev-context-compaction",
+    "type": "github",
+    "title": "jev-context-compaction",
+    "summary": "Jev-guided transcript compaction for Claude Code. Rust rewrite of tamaratran/fast-jev-compaction.",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "category": "agents",
+    "url": "https://github.com/PhiDung-hub/jev-context-compaction",
+    "sourceMeta": {
+      "repo": "PhiDung-hub/jev-context-compaction",
+      "author": "PhiDung-hub",
+      "stars": 0,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1385198755,
+        "nodeId": "R_kgDOUpB0ow"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "phidung-hub/jev-context-compaction",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "b7ce8a91fa54ebf230d1821294f2600426810dee",
+        "evidenceUrl": "https://github.com/phidung-hub/jev-context-compaction/blob/b7ce8a91fa54ebf230d1821294f2600426810dee/README.md",
+        "evidenceSha256": "85cb59fa13c082efef8c59ed15c82558cd2f461e0d2cbe4792c451a1739c533c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-polyvariant-jev4s",
+    "type": "github",
+    "title": "jev4s",
+    "summary": "jev4s: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "scala"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/polyvariant/jev4s",
+    "sourceMeta": {
+      "repo": "polyvariant/jev4s",
+      "author": "polyvariant",
+      "stars": 0,
+      "forks": 1,
+      "language": "Scala",
+      "githubIdentity": {
+        "databaseId": 1388232847,
+        "nodeId": "R_kgDOUr7Ajw"
+      },
+      "date": "2026-09-25",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "polyvariant/jev4s",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "sdk"
+        },
+        "sha": "7a2ad6ce0fba85a097bbadc588a9b748b8af54bd",
+        "evidenceUrl": "https://github.com/polyvariant/jev4s/blob/7a2ad6ce0fba85a097bbadc588a9b748b8af54bd/README.md",
+        "evidenceSha256": "a4a0db985f86e0684b4ad5039695715038e9bb4509019761cb3c6c17b2f89622",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-rasatpetabit-pi-ras-compact",
+    "type": "github",
+    "title": "pi-ras-compact",
+    "summary": "Jev (TypeSafe System One) verbatim compaction for Pi",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/rasatpetabit/pi-ras-compact",
+    "sourceMeta": {
+      "repo": "rasatpetabit/pi-ras-compact",
+      "author": "rasatpetabit",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1419961534,
+        "nodeId": "R_kgDOVKLkvg"
+      },
+      "date": "2026-10-14",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "rasatpetabit/pi-ras-compact",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "developer"
+        },
+        "sha": "6031ccd37ea4ab3b6533233de4aa24300000c1c7",
+        "evidenceUrl": "https://github.com/rasatpetabit/pi-ras-compact/blob/6031ccd37ea4ab3b6533233de4aa24300000c1c7/README.md",
+        "evidenceSha256": "3f8b6be65e1a9c5eb0f366c70a05e447777b98f1a24b163f5ea71b1da3d0d9d7",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-18T20:47:29.808Z"
+      }
+    }
   }
 ]
