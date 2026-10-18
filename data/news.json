@@ -5458,5 +5458,20 @@
     "reason": null,
     "originalUrl": "https://www.langchain.com/blog/common-questions-about-agent-evals",
     "aihotUrl": "https://aihot.news/items/qd282rx4ek0igzw3264zfal9f"
+  },
+  {
+    "id": "xk1emvwinxzt2gus03ljj47ps",
+    "title": "All In 播客拆解 CoreWeave 盒子结构与 AI 算力泡沫风险",
+    "originalTitle": "AI 泡沫最先裂开的不是算力需求，是一个叫「盒子」的东西",
+    "summary": "作者整理 All In 播客对 AI 泡沫的讨论，核心是 CoreWeave 创始人发明的「盒子」融资结构：把客户长约、GPU 和数据中心合同打包成独立偿付单元，典型合约五年、两年半回本。",
+    "sourceName": "X：Saito 硬地骇客 (@SaitoWu)",
+    "publishedAt": "2026-10-18T11:05:52.000Z",
+    "discoveredAt": "2026-10-18T11:19:30.826Z",
+    "category": "opinion",
+    "score": 64,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/SaitoWu/status/2111775766631657836",
+    "aihotUrl": "https://aihot.news/items/xk1emvwinxzt2gus03ljj47ps"
   }
 ]
