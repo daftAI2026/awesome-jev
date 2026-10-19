@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: Start/Vite 版本边界、模块依赖与同版本部署；分页 SSR、静态详情及 OG/新闻成本边界
+[OUTPUT]: Start/Vite 边界、同版本部署与免费静态交付；保留长尾 SSR 及新闻边界
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -35,7 +35,7 @@ Start 与 Router 独立编号，不强行使用相同版本号。
 - Vite 构建要求 Vite 8；本站保持 8.3.4。
 - 服务端函数已用 `.validator()`，无 `.inputValidator()`。
 - 本站不使用内置 `useSession` 或响应流所有权旧 API。
-- 本站使用内置 server-entry，不自建 `createStartHandler`。
+- `src/server.ts` 先分发静态产物；`ssr-handler.ts` 保留官方 `createStartHandler(defaultStreamHandler)` 与请求作用域。
 - 非法编码路径在页面渲染前返回 400；三语言 HTTP 回归覆盖此边界。
 - 保留 Cloudflare → Start → React 插件顺序。
 - 保留预渲染、Worker-first 分页与异常脱敏边界。
@@ -86,7 +86,9 @@ Mobile
 
 ## Workers auto-deploy
 
-[`wrangler.toml`](../wrangler.toml) targets the existing `awesome-jev-project` Worker. TanStack Start prerenders English, Chinese, and Japanese variants of the homepage, Top 100, ten categories and every valid GitHub project detail into route-specific HTML; Cloudflare keeps detail HTML and static assets asset-first. Directory head loaders receive only total/category counts from getDirectoryCounts, not the browser projection; standalone startup must stay snapshot-free. The homepage, Top 100, category indexes and aggregate news paths use selective Worker-first routing to SSR their validated `page` query. Their build-time first-page HTML remains available for build verification; Static Assets must not override a second-page request with first-page HTML. The Worker handles non-prerendered routes and returns real 404 responses for unknown addresses, invalid categories, missing projects, and missing news IDs. These states reuse `src/components/NotFoundPage.tsx` with route-localized recovery links and noindex metadata. This is not an SPA fallback. Directory indexes use request-specific SSR for pagination; independent detail routes retain static delivery.
+[`wrangler.toml`](../wrangler.toml) keeps the existing Worker and selective Worker-first directory patterns. `src/server.ts` reads a small build-time delivery catalog before importing Start. The homepage, Top 100, categories, news index, tag index, and tags meeting the three-project index threshold have finite, three-language query snapshots. `staticPagePath` maps validated sort and clamped page to the exact asset. The public URL, rendered cards, canonical, alternates, and hydration data remain those of the requested page; `/_pages` is an internal asset path, never a canonical or sitemap entry. Detail pages and machine documents remain Assets-first.
+
+Development, local prerender misses, long-tail tags, previews, saved views and server functions retain the existing SSR path. This is not an SPA fallback and does not prove that every remaining request fits the Free CPU allowance. Missing routes still return real localized 404s and application failures retain safe 500 handling. A cache HIT or HTTP 200 is not proof of an adequate CPU budget.
 
 The root [`.node-version`](../.node-version) selects Node 24 LTS for GitHub Actions and local builds; `package.json` declares the same supported major. English, Chinese, and Japanese news-item HTML pages are prerendered for stable `/news/{id}` URLs; the aggregate `/news` page prerenders its initial news cards, while browser-local `/saved` remains `noindex` and outside the sitemap.
 
@@ -185,13 +187,13 @@ Local verification (2026-10-03): real Playwright checks passed all 90 mobile-cat
 
 ## Open Graph delivery
 
-`/api/og/site` and `/api/og/projects/{owner}/{repo}` generate PNG responses on demand with `@cf-wasm/resvg` 0.4.0 in Workers. There are no per-project PNG files or OG build step. The current published canonical snapshot supplies the full GitHub count and each project's title/summary; this is deployment-snapshot freshness, not a live GitHub lookup. The pure `share-image` identity contract produces version-query URLs shared by route metadata, the workbench and runtime. Count/title/summary changes invalidate the corresponding identity; increment IMAGE_VERSION for template/font/render changes.
+`/api/og/site`, `/api/og/projects/{owner}/{repo}` and `/og.png` keep their public URL contracts. `scripts/generate-og.ts` rasterizes the current public catalog with Node `@cf-wasm/resvg` 0.4.0 after Vite prerendering. It writes versioned PNGs to `dist/client/_og`, not the source `public` directory. Failed generation fails the build; stale generated PNGs are removed and unknown files are not deleted. The final static file count must not exceed the Workers Free allowance of 20,000.
 
-`og-service.server` validates catalog membership before cache lookup; arbitrary title, URL and remote image parameters are not accepted. `og-response` normalizes stale/extra query parameters to the current finite version URL, supports HEAD and ETag/304 without rasterization, and keeps unversioned compatibility responses short-lived. Workers Cache stores immutable version keys; PNG rendering executes only on a miss. Missing projects return 404 and render failures return no-store 503 instead of substituting an unrelated or old image. `/og.png` remains a runtime compatibility endpoint. Cache misses still consume Worker CPU/memory; validate the deployed plan and cold-request timing before release.
+The Worker entry uses a build-time membership/version catalog and streams the corresponding ASSETS response. Production OG does not import the full canonical JSON or invoke WASM. `og-response` shares version normalization, no-store failures, HEAD and ETag/304 across static and development adapters. Hidden identities return 404 before asset lookup; missing generated bytes return 503 instead of an old or unrelated image. `X-OG-Cache: STATIC` identifies the build artifact, not a runtime cache HIT.
 
-Licensed fixed Geist/CJK fonts reside in `public/og-fonts` as Static Assets, read through the ASSETS binding rather than external HTTP. CJK fallback is loaded only when SVG text needs it. Neither font bytes nor renderer WASM nor the complete canonical catalog enter browser startup modules; the Worker bundles renderer WASM and releases per-render objects.
+The original runtime renderer, fixed-font loader and in-flight coalescing remain for local development. Licensed Geist/CJK fonts stay in `public/og-fonts`; neither fonts, renderer WASM nor canonical audit data enter browser startup modules. Image identity still comes from count, repository, title and summary; template/font changes must increment IMAGE_VERSION.
 
-Root metadata provides the runtime site image. Standalone and masked project routes override the complete image group together: HTTPS OG image/secure URL/type/dimensions/alt and Twitter large-image card/image/alt, alongside existing canonical, localized title, description and URL fields. Generic pages and news retain the site image; no news-level image generator is introduced. No unverifiable account handles or per-platform metadata are invented.
+Root metadata provides the versioned site image. Standalone and masked project routes override the complete image group together: HTTPS OG image/secure URL/type/dimensions/alt and Twitter large-image card/image/alt, alongside existing canonical, localized title, description and URL fields. Generic pages and news retain the site image; no news-level image generator is introduced. No unverifiable account handles or per-platform metadata are invented.
 
 The three-language `/og-workbench` route is a development-only, non-prerendered tool, excluded from the sitemap. Compile-time `import.meta.env.DEV` gates both beforeLoad and loader; production GET/HEAD requests return real 404s with no workbench data or page head. Query parameters and Host headers cannot enable it. Production preview is intentionally also denied; use `npm run dev -- --host 127.0.0.1` locally. `noindex` is only a local SEO hint, not access control. Public OG PNG endpoints remain available to social crawlers. Its own loader reads only the existing display projection and maps to title/URL/summary; it does not add catalog dependencies to unrelated route entry bundles. The browser-only `og-inspection` boundary reads actual same-origin HTML and PNG bytes on demand, checks required/duplicate tags and current expected image identity, verifies canonical and PNG MIME/dimensions, and exposes raw metadata. It neither executes inspected page scripts nor requests third-party preview services; external social-card caching cannot be guaranteed by these checks.
 
@@ -200,7 +202,7 @@ The three-language `/og-workbench` route is a development-only, non-prerendered 
 
 Raw snapshot tags → pure public-tag projection → detail links, directory filters and sitemap. These consumers share explicit aliases, per-project counts and the three-project index threshold. `/tags/:tag` reads only its count for head metadata; App reuses the existing display catalog. Standalone details receive only twelve footer tag summaries, not another full snapshot.
 
-Tag pages use Worker-first SSR so `?page=2` cannot receive page-one Static Assets. They are intentionally not added to Vite's prerender enumeration, avoiding thousands of additional builds. Canonical/hreflang use the normalized tag and bounded page; synonym 301 redirects retain page/sort. A low-count tag page remains navigable with noindex. `/tags` is the public index; no taxonomy database, model requests or new workflow is required.
+Tag pages use the Worker-first finite-query adapter so `?page=2` cannot receive page-one Static Assets. Tags meeting the three-project index threshold are prerendered; long-tail tags retain SSR to stay below the Free static-file allowance. Encoded tag requests preserve their public identity through the locked Start version’s two normalization passes; encoded default pages use private hash paths to avoid ASSETS filename decoding. Canonical/hreflang use the normalized tag and bounded page; synonym 301 redirects retain page/sort. A low-count tag page remains navigable with noindex. `/tags` is the public index; no taxonomy database, model requests or new workflow is required.
 
 ## Error recovery boundary
 
@@ -216,20 +218,19 @@ Tag pages use Worker-first SSR so `?page=2` cannot receive page-one Static Asset
 - Cloudflare CPU termination, gateway 502/504 and server-render failure outside Router loading need platform/server-level recovery. React cannot catch them.
 - A temporary copy of current source injects failure routes for production-build HTTP tests. No fault route or switch enters deployment.
 
-## OG 冷缓存与新闻交付的成本边界
+## 免费交付与新闻成本边界
 
-同键 OG 请求在当前 Worker 实例合并渲染。
-合并持续到 Cache API 写入完成，失败后移除任务。
-每个请求独立构造响应，只共享已完成的 PNG 字节。
-四份固定字库只缓存成功字节，不缓存失败或响应流。
-HEAD、304、版本归一与未知身份仍在渲染前返回。
-沿用运行时图片，不增加全目录构建期 PNG 或存储服务。
+2026-10-20 起，生产 OG 改为构建期 PNG。
+冷请求也只读取当前制品，不靠缓存避免栅格化。
+以下同键合并结果保留为开发渲染器的历史证据。
+目录有限查询同样读取构建产物，不逐请求排序和 SSR。
+排序器仍复用固定 Collator，供浏览器与剩余 SSR 共用。
+长尾标签、预览和 RPC 仍须用生产日志验证 CPU。
 
-合并不是全局锁，Cache API 不跨数据中心复制。
 新闻页不因历史增长而扩大动态交付条数。
-历史搜索仍须在浏览器读取完整静态新闻块。
-本轮不删除新闻、改变采集门槛或申请付费服务。
-本轮未读取账户账单或配置，不保证总额封顶。
+历史搜索仍在浏览器读取静态新闻块。
+本次不删数据、不改变收录门槛、不申请付费服务。
+不新增 KV、R2、队列、数据库或 Workflow。
 
 2026-10-15 本地回归：同键 20 个冷缓存请求只渲染一次。
 330 条新闻的首页序列化由 260974 降至 39396 字节。

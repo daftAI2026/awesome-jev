@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+static-delivery.ts: 有限查询页与构建 PNG 的 ASSETS 快路径；条件响应不读取图片正文，未覆盖路由保留 SSR
 catalog-visibility.ts: 唯一公开可见性规则；有生命周期标记即隐藏，原记录仍供采集和去重
 og-fonts.ts: 四份固定 OG 字库的有界读取与成功字节复用，不保存跨请求 I/O 或失败
 error-policy.ts: 路由错误判定与 Error 序列化脱敏，不传 message/stack/cause
@@ -22,7 +23,7 @@ locale-head.ts: 有效页面及逐页规范 URL、语言 alternates 与可覆盖
 locale-routes.ts: en/zh/ja 路径识别、转换和 hreflang 的纯规则
 masonry.ts: 有序虚拟瀑布流几何与启动状态规则，预就绪保留 SSR 前缀及用户阅读位置
 news.ts: 新闻身份、时间排序与弱键快照索引，每页 50 条及可选单条预览
-og-response.ts: 同键渲染合并至缓存写入结束，仅共享 PNG 字节；HTTP 策略，先验证身份，规范版本键、HEAD/ETag 与 no-store 失败
+og-response.ts: 静态图片与开发渲染共用 HTTP 策略；先验证身份、版本及 HEAD/ETag，缺失产物不回退旧图
 og-render.server.ts: Workers WASM 栅格化适配器，复用成功字库字节并释放渲染对象
 og-service.server.ts: 当前公开快照、实例内在途表与 Workers Cache 的服务端入口；隐藏身份在读缓存前返回 404，仅缓存未命中时加载渲染器
 og-template.ts: 白底 ASCII 分享图纯 SVG 排版，全文身份与限行文字分离
@@ -33,7 +34,7 @@ saved.ts: 仅存来源 ID/保存时间的本地收藏契约及搜索校验
 scroll-restoration.ts: 首次水合保留实际阅读位置的一次性策略，后续导航/hash 恢复 Router 默认行为
 share-image.ts: 全站/项目内容版本图片地址、尺寸和 OG/Twitter 契约，不加载快照
 search.ts: Fuse.js 项目检索，保持数据来源边界
-sort.ts: 确定性项目排序与全局星标排名，并列星标共用标题/ID 次序
+sort.ts: Intl.Collator 固定标题比较配置复用；确定性排序与全局排名保留标题/ID 次序
 types.ts: 前端目录数据和展示模式公共类型，区分原始 tags 与公开标签投影
 utils.ts: 共享类名组合等小型工具
 

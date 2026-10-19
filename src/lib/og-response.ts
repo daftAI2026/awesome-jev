@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖分享图身份、纯 SVG 模板与调用方注入的渲染/缓存能力
- * [OUTPUT]: 提供 PNG/条件响应、同键在途合并与失败后重试
- * [POS]: lib 的 OG HTTP 策略；先验证当前目录身份，再读缓存，不接受任意标题或图片地址
+ * [OUTPUT]: 提供 PNG/条件响应、静态图片交付与开发渲染的在途合并
+ * [POS]: lib 的 OG HTTP 策略；静态与开发入口共用身份、版本和条件响应
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { projectShareImage, siteShareImage, SITE_ORIGIN, type ShareProject } from './share-image.ts'
@@ -19,10 +19,9 @@ function failure(status: number, message: string, method: string): Response {
   return new Response(method === 'HEAD' ? null : message, { status, headers: { 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8', ...(status === 405 ? { Allow: 'GET, HEAD' } : {}) } })
 }
 
-export async function serveOg(request: Request, content: OgContent | null, ports: OgPorts): Promise<Response> {
+function representation(request: Request, image: { path: string } | null, projectCount?: number) {
   if (request.method !== 'GET' && request.method !== 'HEAD') return failure(405, 'Method not allowed', request.method)
-  if (!content) return failure(404, 'Project not found', request.method)
-  const image = content.kind === 'site' ? siteShareImage(content.projectCount) : projectShareImage(content.item)
+  if (!image) return failure(404, 'Project not found', request.method)
   const current = new URL(image.path, SITE_ORIGIN)
   const incoming = new URL(request.url)
   const versioned = incoming.search === current.search && incoming.pathname === current.pathname
@@ -35,12 +34,32 @@ export async function serveOg(request: Request, content: OgContent | null, ports
     'Content-Location': image.path,
     'Cache-Control': versioned ? 'public, max-age=31536000, immutable' : 'public, max-age=60',
     ETag: etag,
-    ...(content.kind === 'site' ? { 'X-OG-Project-Count': String(content.projectCount) } : {}),
+    ...(projectCount !== undefined ? { 'X-OG-Project-Count': String(projectCount) } : {}),
   })
   if (request.headers.get('If-None-Match')?.split(',').some((value) => value.trim().replace(/^W\//, '') === etag || value.trim() === '*')) {
     return new Response(null, { status: 304, headers })
   }
   if (request.method === 'HEAD') return new Response(null, { headers })
+  return { headers, current }
+}
+
+export async function serveOgAsset(request: Request, image: { path: string; asset: string; count?: number } | null,
+  readAsset: (request: Request) => Promise<Response>): Promise<Response> {
+  const result = representation(request, image, image?.count)
+  if (result instanceof Response) return result
+  try {
+    const asset = await readAsset(new Request(new URL(image!.asset, request.url)))
+    if (asset.status !== 200) { await asset.body?.cancel(); return failure(503, 'OG image unavailable', request.method) }
+    result.headers.set('X-OG-Cache', 'STATIC')
+    return new Response(asset.body, { headers: result.headers })
+  } catch { return failure(503, 'OG image unavailable', request.method) }
+}
+
+export async function serveOg(request: Request, content: OgContent | null, ports: OgPorts): Promise<Response> {
+  const image = content ? content.kind === 'site' ? siteShareImage(content.projectCount) : projectShareImage(content.item) : null
+  const result = representation(request, image, content?.kind === 'site' ? content.projectCount : undefined)
+  if (result instanceof Response) return result
+  const { headers, current } = result
   const key = new Request(current)
   try {
     const cached = await ports.cache?.match(key)
@@ -52,7 +71,7 @@ export async function serveOg(request: Request, content: OgContent | null, ports
     if (!task) {
       // ---- 只共享 PNG 字节；流、Request 与 Response 留在所属请求内 ----
       task = Promise.resolve().then(async () => {
-        const svg = content.kind === 'site' ? renderSiteSvg(content.projectCount, ports.banner) : renderProjectSvg(content.item, ports.banner)
+        const svg = content!.kind === 'site' ? renderSiteSvg(content!.projectCount, ports.banner) : renderProjectSvg(content!.item, ports.banner)
         const png = await ports.render(svg)
         if (ports.cache) {
           const cacheHeaders = new Headers(headers)

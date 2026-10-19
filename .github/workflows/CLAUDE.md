@@ -10,7 +10,7 @@ site.yml: 精确 PR/main 交付与同次 artifact 部署；允许纯状态后继
 submission-review.yml: 可信 main 上的 Issue/PR 建议性审查与恢复，允许写评论但不改目录或合并 PR
 submission-intake.yml: 独立可信 main 条件写入；自动 keep 或维护者 /ok 分类收据生成数据 PR，精确 CI 后合并/关闭；完整不匹配纯投稿的拒收/CAS 回收与有界恢复，无 Jev 凭据
 
-radar/alternatives 发布目录、README 与 sitemap，不再生成或提交 OG 图片；部署后的 Worker 从同一目录快照按请求渲染。
+radar/alternatives 发布目录、README 与 sitemap，不生成或提交 OG 图片。site 构建同快照的公开 PNG，生产 Worker 只验证身份并交付静态产物。
 
 site 的 verify 与 radar/alternatives/metadata 的 validate 与 news 的 sync 验证均在 build 后执行 test:delivery；构建图和真实 HTTP 检查不得靠 skip 变绿。
 

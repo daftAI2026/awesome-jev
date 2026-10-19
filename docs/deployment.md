@@ -1,10 +1,71 @@
 <!--
 [INPUT]: 依赖 site 工作流、production 环境、Workers 构建触发器与区域设置
-[OUTPUT]: 提供同版本部署、HTTPS 跳转、CPU 探测防护与 Crawler Hints 边界
+[OUTPUT]: 提供同版本部署、免费 CPU/资产门槛、HTTPS 与区域防护边界
 [POS]: docs 的站点发布契约；采集准入归 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 # 站点部署
+
+## 免费 CPU 与静态交付
+
+2026-10-20 方案保留 Workers Free。
+不修改套餐、CPU 付费上限或区域规则。
+免费 HTTP 请求的 CPU 预算为 10ms。
+SSR 与 WASM 冷渲染不靠偶发超额容忍运行。
+
+### 根因与复测边界
+
+北京 2026-10-19 的指标包含 6876 次调用。
+其中 177 次为 exceededResources，占 2.57%。
+另有 130 次客户端断连，不能合并成 CPU 错误。
+旧版目录 SSR 样本 CPU 为 160–253ms。
+旧版全站 OG 样本 CPU 为 294ms。
+这些样本返回 200，不等同于失败路径分布。
+历史日志未开启，不能补造全部失败 URL。
+
+本机同快照排序的 CPU 中位数：
+stars 从 69.916ms 降至 2.413ms。
+name 从 100.780ms 降至 2.738ms。
+两种排序的完整项目 ID 次序均保持不变。
+该测量使用 Node 24，不是 Cloudflare CPU。
+生产验收仍需对照同版本冷请求日志与指标。
+
+本机验收：809 项离线测试，738 通过、71 项需 HTTP 环境。
+完整交付另有 72 项通过，零失败、零跳过。
+3057 张 PNG 与 18609 个静态文件通过构建门槛。
+浏览器搜索、预览、收藏、排序偏好和分页已验证。
+这些结果不冒充生产 CPU 或发布完成。
+
+### 交付边界
+
+`src/server.ts` 按已验证查询读取有限 HTML。
+主目录、分类、Top100、新闻和可索引标签进入清单。
+排序保留 stars/name/date，新闻仍按时间排序。
+越界页码读取最后一页，不读取第一页代替。
+内部 `/_pages` 不进入 canonical 或 sitemap。
+编码标签也使用内部资产地址，避免文件寻址歧义。
+构建适配 Start 1.171.52 的两次路径解码。
+回归直接执行框架完整流水线。
+构建片段阻止斜杠污染 page/sort。
+HTTP 不接收该片段或合成查询项。
+真实交付另检查 C/C#/C++ 内容。
+预览、长尾标签、收藏和 RPC 保留原 SSR。
+这些入口仍需发布后观察，不承诺全站零超限。
+
+`npm run build` 在 Vite 后生成全部公开 OG PNG。
+PNG 与 HTML 随同一份 dist 验证、上传和部署。
+无运行时外部图片服务，无额外部署步骤。
+生成失败或超过 20000 静态文件时拒绝交付。
+不通过删数据、删检查或自动付费绕过容量门槛。
+
+Wrangler 源配置开启 invocation logs 并隐藏查询字符串。
+当前 Free 包含每日 200000 个日志事件，保留三天。
+日志有配额与投递边界，不能据缺失推断请求成功。
+以 GraphQL 请求指标对照日志中的 outcome、CPU 和版本。
+首轮验收检查冷/热页面与 PNG 的真实执行路径。
+回滚使用上一份已验制品，不单独替换 HTML 或 PNG。
+
+依据：[CPU/资产限制](https://developers.cloudflare.com/workers/platform/limits/)、[免费日志](https://developers.cloudflare.com/workers/observability/logs/workers-logs/)。
 
 ## HTTP 到 HTTPS
 

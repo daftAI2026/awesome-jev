@@ -98,7 +98,7 @@ export async function runDelivery(options: DeliveryOptions = {}): Promise<string
     }
     if (!ready) throw new Error(`Preview startup timeout: ${preview.output()}`)
     options.signal?.throwIfAborted()
-    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts', 'scripts/og-delivery.test.ts', 'scripts/agent-delivery.test.ts', 'scripts/pagination-delivery.test.ts', 'scripts/tag-delivery.test.ts', 'scripts/error-delivery.test.ts'], cwd, env, output)
+    tests = launch(options.testCommand ?? [process.execPath, '--experimental-strip-types', '--test', '--test-reporter=tap', 'scripts/page-delivery.test.ts', 'scripts/not-found.test.ts', 'scripts/og-delivery.test.ts', 'scripts/agent-delivery.test.ts', 'scripts/pagination-delivery.test.ts', 'scripts/tag-delivery.test.ts', 'scripts/error-delivery.test.ts', 'scripts/static-delivery-http.test.ts'], cwd, env, output)
     let timer: ReturnType<typeof setTimeout> | undefined
     const cancelled = () => cancelReject?.(options.signal?.reason ?? new Error('Delivery cancelled'))
     let cancelReject: ((reason: unknown) => void) | undefined

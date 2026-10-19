@@ -4,9 +4,9 @@
 成员清单
 _directory.{-$locale}.tags.$tag.tsx: 标签计数/每页 50 条元数据，同义地址 301、未知 404、长尾 noindex
 _directory.{-$locale}.tags.index.tsx: 三语言公开标签索引与同源元数据，App 复用展示投影
-api.og.site.ts: 全站 GET/HEAD 动态 PNG/405 端点，计数来自完整已发布目录
-api.og.projects.$owner.$repo.ts: 项目 GET/HEAD 动态 PNG/405 端点，规范目录身份控制可生成范围
-og[.]png.ts: 旧全站分享地址的运行时兼容路由，与新端点共享当前数据和缓存
+api.og.site.ts: 全站开发 PNG/405 回退端点；生产轻入口先交付构建 PNG
+api.og.projects.$owner.$repo.ts: 项目开发 PNG/405 回退端点；生产静态清单先校验公开身份
+og[.]png.ts: 旧全站分享地址的开发兼容路由；生产轻入口复用同版本 PNG
 __root.tsx: TanStack 文档壳、首屏语言/主题初始化和统一 404/500 边界；错误响应 no-store/noindex，移除成功 SEO
 _directory.tsx: 无路径目录布局，将 App 与子路由 Outlet 组合
 _directory.{-$locale}.category.$category.tsx: 分类白名单校验与可见用途说明同源的逐页分类元数据，非法分类交给根 404

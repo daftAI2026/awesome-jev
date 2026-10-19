@@ -2,6 +2,11 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+generate-og.ts: Node 构建期 PNG 生成与过期版本回收；校验免费 20000 文件上限，不写 public 源文件
+generate-og.test.ts: 公开计数、隐藏身份、构建失败和免费容量的离线回归
+static-catalog.ts: 构建有限分页/排序与可索引标签清单；隔离 Start 双次解码，公开 URL 与资产身份不变
+static-delivery.test.ts: 冷请求、逐页身份、真实框架编码归一与 PNG 条件响应回归
+static-delivery-http.test.ts: 真实 Worker 验证三语言查询页不走 SSR，全部有限页面/PNG 存在且未超免费容量
 catalog-lifecycle.ts: 数字身份复核、固定证据迁址和可逆下架；异常不累加失效，回滚保留已证实恢复
 catalog-lifecycle.test.ts: 假时钟与离线 API 验证 72 小时、多周期、证据连续性和身份隔离
 catalog-mutation.ts: 按采集角色授权字段；地址、证据和生命周期原子叠加，保留人工并发编辑
@@ -26,11 +31,12 @@ error-delivery.test.ts: 隔离产物十条真实错误/恢复回归，检查脱�
 tag-delivery.test.ts: 真实 HTTP 三语言标签索引/详情内链、分页、同义 301、特殊字符/长尾 noindex 与未知 404
 project-tags.test.ts: 公开标签同义/按项目去重、特殊字符/注入路径、原始快照和 Action bot 候选不变回归
 pagination.test.ts: Node 每页 50 条、排名和规范地址回归；归一不撤销服务端待加载的有效页
+sort.test.ts: Node 排序语义与全量 ID 次序回归；测试替身阻止逐次重建比较配置
 pagination-delivery.test.ts: 三语言分页 HTTP、规范地址与新闻水合不泄漏离页历史回归
 generate-llms.ts: Node 构建期公开文档生成器，公开标签路由/原始主题边界同步，分类/排名/路径复用规范规则，展示字段白名单隔离审计
 agent-links.test.ts: Node 三语言公开提示词、五品牌 q 参数与 SVG 安全/授权回归
 generate-llms.test.ts: Node 真实快照确定性、互链、文本转义与审计字段隔离回归
-agent-delivery.test.ts: Node 真实 HTTP 机器文档媒体类型、互链/实体地址与页脚入口回归
+agent-delivery.test.ts: 真实 HTTP 机器文档/全部内链/页脚回归；GET 读完正文后复用连接，避免临时端口耗尽
 publication-merge.ts: 三方增量合并，按角色授权迁址/下架/复核；保留最新 main 的人工编辑与撤回
 publish-data.ts: 四采集器共享增量发布器，保留独占检查点与最新 main；输出最终 site_changed/提交 SHA，不重跑模型或统计
 deployment-workflow.test.ts: Node 隔离 Bash 验证已验产物/隐藏文件、SHA/Worker 配置、过期部署拒绝、采集资源隔离与四采集器按最终差异派发；无线上写入
@@ -48,7 +54,7 @@ category-order.test.ts: Node test 分类排序与手机版固定两行/桌面 Fl
 code-discovery.test.ts: Node test code-discovery 的契约与回归验证，运行 npm test
 code-discovery.ts: 代码搜索线索与固定提交内容证据提取
 directory-catalog.test.ts: 身份基线/审计字段不泄漏、全目录展示/检索/排序等价及真实 Vite client/SSR 热更新的投影回归
-directory-catalog.ts: 构建期展示白名单与虚拟模块，只投影公开记录；规范快照保留隐藏历史与完整审计
+directory-catalog.ts: 展示投影与静态交付双虚拟模块；两份快照热更新失效，隐藏历史与审计留在规范数据
 og-image.test.ts: 同键并发合并/失败重试、真实 WASM PNG、白底排版与版本/缓存边界回归
 og-delivery.test.ts: Worker 冷并发响应体独立、PNG 与缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约

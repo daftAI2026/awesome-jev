@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && npm run agents:generate && vite build && tsc -b",
+    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && npm run agents:generate && vite build && node --experimental-strip-types scripts/generate-og.ts && tsc -b",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",

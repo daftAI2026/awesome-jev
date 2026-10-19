@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖当前规范目录、公开可见性与 TEST_SITE_ORIGIN 指向的真实 Worker
- * [OUTPUT]: 对外提供动态 PNG、跨请求并发独立响应、缓存/条件请求与生产工作台隔离
+ * [OUTPUT]: 对外提供构建 PNG、跨请求独立响应、条件请求与生产工作台隔离
  * [POS]: scripts 的 OG 集成护栏，随 test:delivery 零跳过运行，不调用第三方接口
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -63,7 +63,7 @@ for (const locale of ['', '/zh', '/ja']) {
   })
 }
 
-test('real Worker returns current site and distinct Latin/CJK project PNGs without static images', { skip: !origin }, async () => {
+test('real Worker streams current site and distinct Latin/CJK build PNGs without runtime rasterization', { skip: !origin }, async () => {
   const site = await png(siteShareImage(count).path)
   assert.equal(site.response.headers.get('X-OG-Project-Count'), String(count))
   assert.equal(site.response.headers.get('Content-Location'), siteShareImage(count).path)
@@ -72,7 +72,7 @@ test('real Worker returns current site and distinct Latin/CJK project PNGs witho
   assert.notDeepEqual(item.bytes, site.bytes)
   assert.notDeepEqual(cjk.bytes, site.bytes)
   const cached = await png(siteShareImage(count).path)
-  assert.equal(cached.response.headers.get('X-OG-Cache'), 'HIT')
+  assert.equal(cached.response.headers.get('X-OG-Cache'), 'STATIC')
   assert.deepEqual(cached.bytes, site.bytes)
   assert.match(cached.response.headers.get('Cache-Control')!, /immutable/)
   const compat = await png('/og.png')
@@ -82,6 +82,7 @@ test('real Worker returns current site and distinct Latin/CJK project PNGs witho
     assert.ok(!existsSync(join(build, 'og.png')))
     assert.ok(!existsSync(join(build, 'og.svg')))
     assert.ok(!existsSync(join(build, 'og')))
+    assert.equal(readdirSync(join(build, '_og')).filter((name) => name.endsWith('.png')).length, count + 1)
     assert.ok(readdirSync(join(build, 'og-fonts')).includes('NotoSansSC.ttf'))
     assert.ok(!readdirSync(join(build, 'assets')).some((name) => /resvg|og-render|og-service|\.wasm$/.test(name)), 'Worker renderer leaked into browser assets')
   }
@@ -161,6 +162,6 @@ test('concurrent cold Worker requests return independently readable PNG bodies',
   const images = await Promise.all(Array.from({ length: 8 }, (_, index) => png(index % 2 ? bare : versioned)))
   for (const image of images) assert.deepEqual(image.bytes, images[0].bytes)
   const warmed = await png(versioned)
-  assert.equal(warmed.response.headers.get('X-OG-Cache'), 'HIT')
+  assert.equal(warmed.response.headers.get('X-OG-Cache'), 'STATIC')
   assert.deepEqual(warmed.bytes, images[0].bytes)
 })

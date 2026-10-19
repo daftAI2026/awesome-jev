@@ -13,6 +13,6 @@ sitemap.xml: 三语言有效页面与共用标签索引，排除长尾标签、O
 子模块
 agents/: 见 agents/CLAUDE.md，规范快照生成的互链机器文档
 agent-logos/: 见 agent-logos/CLAUDE.md，五品牌原版 SVG、来源记录与保留许可；不是 UI 图标库
-og-fonts/: 见 og-fonts/CLAUDE.md，固定、许可完备的运行时字库；不是预生成 PNG
+og-fonts/: 见 og-fonts/CLAUDE.md，固定、许可完备的构建/开发字库；生产 PNG 在 dist 生成
 
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

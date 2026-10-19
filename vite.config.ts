@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
- * [OUTPUT]: 对外提供多环境构建、有限预渲染路径及可信更新时间配置
+ * [OUTPUT]: 对外提供多环境构建、有限分页/排序产物与可信更新时间配置
  * [POS]: 根级构建编排；仅公开记录进入预渲染和计数，展示虚拟模块裁剪隐藏记录与审计字段
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -9,6 +9,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import { directoryCatalogPlugin } from './scripts/directory-catalog.ts'
+import { staticCatalog, staticPrerenderPages } from './scripts/static-catalog.ts'
 import { cloudflare } from '@cloudflare/vite-plugin'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import react from '@vitejs/plugin-react'
@@ -59,6 +60,9 @@ const englishPrerenderPaths = [
   ...newsPaths,
 ]
 const prerenderPaths = LOCALES.flatMap((locale) => englishPrerenderPaths.map((path) => localizedPath(path, locale)))
+const staticPages = staticPrerenderPages(staticCatalog(githubData, newsData.length))
+const prerenderPages = new Map(prerenderPaths.map((path) => [path, { path }]))
+for (const page of staticPages) prerenderPages.set(page.prerender.outputPath, page)
 
 const catalogUpdatedAt = (() => {
   try {
@@ -90,7 +94,7 @@ export default defineConfig({
         autoStaticPathsDiscovery: false,
         crawlLinks: false,
       },
-      pages: prerenderPaths.map((path) => ({ path })),
+      pages: [...prerenderPages.values()],
     }),
     react(),
   ],

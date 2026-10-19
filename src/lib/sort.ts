@@ -1,10 +1,13 @@
 /**
- * [INPUT]: 依赖 目录公共类型与来源星标/日期
+ * [INPUT]: 依赖目录公共类型、来源星标/日期与 Intl.Collator
  * [OUTPUT]: 提供确定性项目排序与全目录星标排名；星标并列共用标题/ID 次序
- * [POS]: lib 的排序权威，App、列表及收藏共享排名身份
+ * [POS]: lib 的排序权威；复用标题比较配置，App、列表及收藏共享排名身份
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import type { DirectoryItem, GithubSort } from './types.ts'
+
+// --- 固定标题比较配置只创建一次；ID 并列规则仍用默认 locale ---
+const titleCollator = new Intl.Collator('en', { sensitivity: 'base' })
 
 function numOrZero(v: number | null | undefined): number {
   return typeof v === 'number' && !Number.isNaN(v) ? v : 0
@@ -30,7 +33,7 @@ export function githubStarRanks(items: DirectoryItem[]): Map<string, number> {
 
 function compareStars(a: DirectoryItem, b: DirectoryItem): number {
   return numOrZero(b.sourceMeta.stars) - numOrZero(a.sourceMeta.stars)
-    || a.title.localeCompare(b.title, 'en', { sensitivity: 'base' })
+    || titleCollator.compare(a.title, b.title)
     || a.id.localeCompare(b.id)
 }
 
@@ -42,9 +45,7 @@ export function sortGithubItems(
   if (sort === 'stars') {
     copy.sort(compareStars)
   } else if (sort === 'name') {
-    copy.sort((a, b) =>
-      a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }),
-    )
+    copy.sort((a, b) => titleCollator.compare(a.title, b.title))
   } else {
     // date — newest first; missing last
     copy.sort((a, b) => {

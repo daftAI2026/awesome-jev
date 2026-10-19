@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 TEST_SITE_ORIGIN 真实 Worker、机器文档契约与三语言入口
  * [OUTPUT]: 验证匿名 GET 媒体类型、全部站内互链与实际页脚品牌入口
- * [POS]: scripts 的构建后 HTTP 护栏；verify-delivery 保证零跳过
+ * [POS]: scripts 的构建后 HTTP 护栏；GET 读完正文复用连接，验收零跳过
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
@@ -37,7 +37,9 @@ test('anonymous machine documents have correct MIME types and all site links res
   await Promise.all(Array.from({ length: 12 }, async () => {
     while (queue.length) {
       const path = queue.pop()!
-      const response = await fetch(`${origin}${path}`, { method: 'HEAD', redirect: 'manual' })
+      // --- HEAD 使 Undici 断开连接；全目录会耗尽本机临时端口。GET 读完后复用连接 ---
+      const response = await fetch(`${origin}${path}`, { redirect: 'manual' })
+      await response.arrayBuffer()
       assert.equal(response.status, 200, `Broken public link: ${path}`)
     }
   }))
