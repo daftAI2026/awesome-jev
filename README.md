@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2869-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-2870-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -2878,6 +2878,7 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**syn**](https://github.com/b0bleet/syn) - Open-source, Jev-compatible System One API: typed decisions \(Noul, Choice, Score\) from next-token probabilities in one forward pass. Works with typesafe-sdk. Free hosted at sifty.dev. · `Python`
 - [**e-jev**](https://github.com/damvolkov/e-jev) - e-jev: TypeSafe Jev ecosystem repository. · `Python`
 - [**lmr-rs**](https://github.com/faulker/lmr-rs) - lmr-rs: TypeSafe Jev ecosystem repository. · `Rust`
+- [**bobcat**](https://github.com/foxl-ai/bobcat) - Bobcat: a typed-decision model. State in, Choice / Noul / Score out, with a probability for every answer you name; no generated text. Compiler, server, training and evaluation code for Bobcat 1.1 and Bobcat Flash 1.1. · `Python`
 - [**jev-aides-territoires-fit**](https://github.com/gbesse/jev-aides-territoires-fit) - Classe des aides publiques selon leur adéquation avec un projet territorial sourcé. · `JavaScript`
 - [**jev-cuivre-transition**](https://github.com/gbesse/jev-cuivre-transition) - Qualifie les situations locales à traiter avant la fermeture du réseau cuivre. · `JavaScript`
 - [**jev-dotation-locale-proof**](https://github.com/gbesse/jev-dotation-locale-proof) - Évalue si un dossier de dotation locale contient des preuves suffisamment précises pour être revu. · `JavaScript`

@@ -164393,5 +164393,52 @@
         "checkedAt": "2026-10-19T04:44:33.367Z"
       }
     }
+  },
+  {
+    "id": "gh-7-foxl-ai-bobcat",
+    "type": "github",
+    "title": "bobcat",
+    "summary": "Bobcat: a typed-decision model. State in, Choice / Noul / Score out, with a probability for every answer you name; no generated text. Compiler, server, training and evaluation code for Bobcat 1.1 and Bobcat Flash 1.1.",
+    "tags": [
+      "calibration",
+      "classification",
+      "huggingface",
+      "llm",
+      "typed-decisions",
+      "vllm",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/foxl-ai/bobcat",
+    "sourceMeta": {
+      "repo": "foxl-ai/bobcat",
+      "author": "foxl-ai",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1388190100,
+        "nodeId": "R_kgDOUr4ZlA"
+      },
+      "date": "2026-09-25",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "foxl-ai/bobcat",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "alternatives"
+        },
+        "sha": "538169365291d7c46d2c116f8ee09ad9f4b3ac5e",
+        "evidenceUrl": "https://github.com/foxl-ai/bobcat/blob/538169365291d7c46d2c116f8ee09ad9f4b3ac5e/README.md",
+        "evidenceSha256": "5f0bedf64dcdff96199ac15bc77a4f1a628efe6e7d48dd84c179674e701f5654",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-19T09:18:23.719Z"
+      }
+    }
   }
 ]
