@@ -5488,5 +5488,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2111875713737380347",
     "aihotUrl": "https://aihot.news/items/op6i25a61eomfo7jbjrwtzbjp"
+  },
+  {
+    "id": "rv2gymgzw7h624dxhy098r2uo",
+    "title": "Princeton 与 Google 论文提出 JevAgentHarness，用 4B 决策模型分担 LLM 智能体例行决策",
+    "originalTitle": "New Princeton Univ + Google paper finds that the decision model most accurate on isolated questions solved only 69.5% of agent tasks, wh...",
+    "summary": "Princeton 与 Google 等机构的论文提出 JevAgentHarness，用小型决策模型回答智能体中的多选例行决策，仅在置信度低于阈值时交给 LLM。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-10-19T09:04:00.000Z",
+    "discoveredAt": "2026-10-19T09:28:34.436Z",
+    "category": "paper",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2112107486098473471",
+    "aihotUrl": "https://aihot.news/items/rv2gymgzw7h624dxhy098r2uo"
   }
 ]
