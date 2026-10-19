@@ -5503,5 +5503,20 @@
     "reason": null,
     "originalUrl": "https://x.com/rohanpaul_ai/status/2112107486098473471",
     "aihotUrl": "https://aihot.news/items/rv2gymgzw7h624dxhy098r2uo"
+  },
+  {
+    "id": "hq3l67h54qtdpyer6zrkctyh9",
+    "title": "Mercury 2 入选 TIME 2026 年度最佳发明",
+    "originalTitle": "Mercury 2 Named to TIME's Best Inventions of 2026",
+    "summary": "Inception Labs 的 Mercury 2 入选 TIME 2026 年度最佳发明 AI 类别，被称为首个为推理而构建的扩散 LLM。它并行生成并多轮精炼 token，速度超过 1,000 tokens/秒，比领先的速度优化 LLM 快 5 倍以上。",
+    "sourceName": "Inception Labs：Blog（网页）",
+    "publishedAt": "2026-10-15T07:00:00.000Z",
+    "discoveredAt": "2026-10-19T17:22:33.628Z",
+    "category": "industry",
+    "score": 36,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.inceptionlabs.ai/blog/mercury-2-named-to-time-s-best-inventions-of-2026",
+    "aihotUrl": "https://aihot.news/items/hq3l67h54qtdpyer6zrkctyh9"
   }
 ]
