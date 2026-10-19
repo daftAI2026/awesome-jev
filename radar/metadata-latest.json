@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "fa57bce69e9a103fca1e6cae9da6530427fb2605",
-  "at": "2026-10-19T06:08:12.880Z",
-  "totalProjects": 2887,
+  "baselineSha": "cbc978503a2ca5af2ffd1580c5ef044390f8c70a",
+  "at": "2026-10-19T14:37:54.160Z",
+  "totalProjects": 3074,
   "metadata": {
-    "ok": 2866,
-    "failed": 21,
-    "batches": 59,
-    "cost": 59,
-    "other": 2787,
-    "remaining": 21,
-    "attempted": 2887,
-    "fresh": 2866,
-    "unavailable": 21,
+    "ok": 3051,
+    "failed": 23,
+    "batches": 63,
+    "cost": 63,
+    "other": 2974,
+    "remaining": 23,
+    "attempted": 3074,
+    "fresh": 3051,
+    "unavailable": 23,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -38,6 +38,11 @@
     {
       "id": "gh-rdk16-jevudio",
       "repo": "rdk16/jevudio",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-gazer2020-jev-btzsc",
+      "repo": "gazer2020/jev-btzsc",
       "reason": "github-unavailable-repository"
     },
     {
@@ -129,6 +134,11 @@
       "id": "gh-5-yinjs-claude-jev",
       "repo": "yinjs/claude-jev",
       "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-14-kevincodesavvy-jev-model-router",
+      "repo": "kevincodesavvy/jev-model-router",
+      "reason": "github-unavailable-repository"
     }
   ],
   "lifecycle": {
@@ -136,6 +146,6 @@
     "review": 0,
     "unavailable": 0,
     "restored": 0,
-    "checked": 19
+    "checked": 21
   }
 }
