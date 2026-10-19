@@ -13063,6 +13063,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-behavior-study" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/rinnecoder/jev-box-study</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-box-study" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/rinti/wagtail-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinti/wagtail-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinti/wagtail-jev" />
@@ -34483,6 +34489,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-behavior-study" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/rinnecoder/jev-box-study</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-box-study" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/rinti/wagtail-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinti/wagtail-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinti/wagtail-jev" />
@@ -55901,6 +55913,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinnecoder/jev-behavior-study" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinnecoder/jev-behavior-study" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-behavior-study" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/rinnecoder/jev-box-study</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/rinnecoder/jev-box-study" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/rinnecoder/jev-box-study" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/rinti/wagtail-jev</loc>

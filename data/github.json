@@ -164350,5 +164350,48 @@
         "checkedAt": "2026-10-18T20:47:29.808Z"
       }
     }
+  },
+  {
+    "id": "gh-10-rinnecoder-jev-box-study",
+    "type": "github",
+    "title": "jev-box-study",
+    "summary": "Findings from building an AI-image hallucination detector on TypeSafe Jev 1.14 Box + image input: what worked, what didn't, why",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "research",
+    "url": "https://github.com/RINNECODER/jev-box-study",
+    "sourceMeta": {
+      "repo": "RINNECODER/jev-box-study",
+      "author": "RINNECODER",
+      "stars": 0,
+      "forks": 1,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1419913783,
+        "nodeId": "R_kgDOVKIqNw"
+      },
+      "date": "2026-10-14",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "rinnecoder/jev-box-study",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "research"
+        },
+        "sha": "0c19f4c1ee1218d979a916211c766bf00f73e74d",
+        "evidenceUrl": "https://github.com/rinnecoder/jev-box-study/blob/0c19f4c1ee1218d979a916211c766bf00f73e74d/README.md",
+        "evidenceSha256": "408e97fe236f1ee674a24f2b6bd742b6cd617d40e686d541006062f77a5accd5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-19T04:44:33.367Z"
+      }
+    }
   }
 ]

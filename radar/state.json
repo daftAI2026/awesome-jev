@@ -1,7 +1,7 @@
 {
   "version": 2,
   "pages": {
-    "topic:jev fork:false": 1,
+    "topic:jev fork:false": 2,
     "\"typesafe.ai\" in:readme fork:false": 9,
     "\"Jev\" \"System One\" in:readme fork:false": 3,
     "topic:typesafe-ai fork:false": 5,
@@ -320,7 +320,7 @@
       "attempts": 5,
       "checkedAt": "2026-10-18T20:47:29.808Z",
       "retryAt": "2026-10-25T20:47:29.808Z",
-      "stars": 348
+      "stars": 356
     },
     "muratcanberber/jev-thefishgame": {
       "status": "review",
@@ -935,7 +935,7 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       },
       "retryAt": "2026-10-24T04:31:30.091Z",
-      "stars": 997
+      "stars": 998
     },
     "ethanalgox/aistock": {
       "status": "review",
@@ -1324,7 +1324,7 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       },
       "retryAt": "2026-10-24T04:31:30.091Z",
-      "stars": 1246
+      "stars": 1259
     },
     "manifoldor/xtags": {
       "status": "review",
@@ -7684,7 +7684,7 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       },
       "retryAt": "2026-10-24T04:31:30.091Z",
-      "stars": 506
+      "stars": 508
     },
     "omnijev/playjev": {
       "status": "review",
@@ -8046,7 +8046,7 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       },
       "retryAt": "2026-10-24T04:31:30.091Z",
-      "stars": 110
+      "stars": 113
     },
     "jlov7/jev-decision-lab": {
       "status": "review",
@@ -8305,7 +8305,7 @@
         "checkedAt": "2026-10-17T04:31:30.091Z"
       },
       "retryAt": "2026-10-24T04:31:30.091Z",
-      "stars": 146
+      "stars": 145
     },
     "rodert/jevplayer": {
       "status": "review",
@@ -32892,7 +32892,7 @@
       "status": "review",
       "discoveredAt": "2026-09-23T21:30:17.226Z",
       "attempts": 3,
-      "stars": 2758,
+      "stars": 2759,
       "checkedAt": "2026-10-18T04:37:49.139Z",
       "lastReview": {
         "repo": "zilliztech/memsearch",
@@ -35602,7 +35602,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 4,
-      "stars": 1466,
+      "stars": 1471,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
@@ -39445,7 +39445,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 3,
-      "stars": 8133,
+      "stars": 8142,
       "checkedAt": "2026-10-16T16:42:25.089Z",
       "lastReview": {
         "repo": "yaoapp/yao",
@@ -39996,7 +39996,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 3,
-      "stars": 2760,
+      "stars": 2795,
       "checkedAt": "2026-10-18T11:11:00.030Z",
       "lastReview": {
         "repo": "dzhng/jevgrep",
@@ -43510,7 +43510,7 @@
       "status": "review",
       "discoveredAt": "2026-09-29T05:43:59.256Z",
       "attempts": 2,
-      "stars": 35,
+      "stars": 36,
       "checkedAt": "2026-10-16T16:42:25.089Z",
       "lastReview": {
         "repo": "goldenloaf24h/browserpaw",
@@ -62279,7 +62279,7 @@
     "speccy88/mia5150": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 1,
+      "attempts": 2,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -62294,8 +62294,8 @@
           "path": "experiments/benchmarks/skillret-embedding-jev-fusion/results/jev-plan-pilot-context-v1/requests/2eb42fdbf5b3deb55ea4979d6226aecd047111ed5405ce95dc3d25a00ff4b806.json"
         }
       ],
-      "checkedAt": "2026-10-16T21:13:04.435Z",
-      "retryAt": "2026-10-17T21:13:04.435Z"
+      "checkedAt": "2026-10-19T04:44:33.367Z",
+      "retryAt": "2026-10-21T04:44:33.367Z"
     },
     "oleksandr-rud/cascade-codex": {
       "status": "review",
@@ -77102,12 +77102,6 @@
       },
       "retryAt": "2026-10-25T11:11:00.030Z"
     },
-    "rinnecoder/jev-box-study": {
-      "status": "pending",
-      "discoveredAt": "2026-10-16T11:28:30.308Z",
-      "attempts": 0,
-      "stars": 0
-    },
     "ajasra/jev-hooks": {
       "status": "review",
       "discoveredAt": "2026-10-16T11:28:30.308Z",
@@ -82368,6 +82362,96 @@
     "stefanbakker472/jev-browser": {
       "status": "pending",
       "discoveredAt": "2026-10-18T15:54:35.834Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "alytaphoenix/laya-strix": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "justindobbs/reflex-code-search": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "justindobbs/tracecore-reflex": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "colesmcintosh/liedar": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jwe24-code/moqi-jev-loop": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jwe24-code/dsh-jev-loop": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "theaimogul/jevcam": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "maryami97169/jevmem": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "cheryl7951/doma": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "hernandez7028/doma": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "carmen394/jevcore": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "alessio2535/doma": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "georgebonnet58537/jev-mem": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "yuqio602/jev-mem": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gia-uh/decision-toolkit": {
+      "status": "pending",
+      "discoveredAt": "2026-10-19T04:44:33.367Z",
       "attempts": 0,
       "stars": 0
     }
