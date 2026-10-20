@@ -174670,5 +174670,397 @@
         "checkedAt": "2026-10-19T22:23:08.720Z"
       }
     }
+  },
+  {
+    "id": "gh-6-ondata-vd-jev",
+    "type": "github",
+    "title": "vd-jev",
+    "summary": "VisiData plugin: ask a closed question about every row of a text column with a decision model (Jev or any other on OpenRouter) and get typed columns back: a probability, a label or a point on a scale, each with its confidence.",
+    "tags": [
+      "jev",
+      "cli",
+      "data",
+      "decision-models",
+      "llm",
+      "openrouter",
+      "python",
+      "terminal"
+    ],
+    "category": "developer",
+    "url": "https://github.com/ondata/vd-jev",
+    "sourceMeta": {
+      "repo": "ondata/vd-jev",
+      "author": "ondata",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1424234292,
+        "nodeId": "R_kgDOVOQXNA"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "ondata/vd-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "developer"
+        },
+        "sha": "ce4762b4beb6785460cc9ec30ae3b8c5c40b8d13",
+        "evidenceUrl": "https://github.com/ondata/vd-jev/blob/ce4762b4beb6785460cc9ec30ae3b8c5c40b8d13/README.md",
+        "evidenceSha256": "2d3e14838f02ceaedfe37eb4e04cdaad789b00dd206066365bd08ac2032ac809",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-19-andreaesposito38663-jev-social",
+    "type": "github",
+    "title": "jev-social",
+    "summary": "Open-source, local-first social media research agent for Instagram, TikTok, and LinkedIn. Jev routes read-only steps; socai CLI captures cited browser evidence.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "browser-agent",
+      "browser-automation",
+      "decision-model",
+      "deep-research",
+      "instagram"
+    ],
+    "category": "agents",
+    "url": "https://github.com/AndreaEsposito38663/jev-social",
+    "sourceMeta": {
+      "repo": "AndreaEsposito38663/jev-social",
+      "author": "AndreaEsposito38663",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1424085059,
+        "nodeId": "R_kgDOVOHQQw"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "andreaesposito38663/jev-social",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "dc0af1e1840a3caf36d7f691f4add2b3bad4be1c",
+        "evidenceUrl": "https://github.com/andreaesposito38663/jev-social/blob/dc0af1e1840a3caf36d7f691f4add2b3bad4be1c/README.md",
+        "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-16-aranyatrinh61946-building-with-typesafe-jev",
+    "type": "github",
+    "title": "building-with-typesafe-jev",
+    "summary": "Unofficial skill that teaches coding agents to build with TypeSafe AI's Jev: typed decisions, calibrated confidence, and prior art from 150+ community projects.",
+    "tags": [
+      "jev",
+      "agent-skill",
+      "agent-skills",
+      "ai-agents",
+      "calibration",
+      "classification",
+      "claude-code",
+      "claude-code-plugin"
+    ],
+    "category": "resources",
+    "url": "https://github.com/AranyaTrinh61946/building-with-typesafe-jev",
+    "sourceMeta": {
+      "repo": "AranyaTrinh61946/building-with-typesafe-jev",
+      "author": "AranyaTrinh61946",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1424082963,
+        "nodeId": "R_kgDOVOHIEw"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "aranyatrinh61946/building-with-typesafe-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "resources"
+        },
+        "sha": "f8e939eddd235883dab4756bc488b6cccb447ad3",
+        "evidenceUrl": "https://github.com/aranyatrinh61946/building-with-typesafe-jev/blob/f8e939eddd235883dab4756bc488b6cccb447ad3/README.md",
+        "evidenceSha256": "dec5f60a2805bd7de9ea56d1a23f0bad9b71ec41d82fd21eef70da5953d67548",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-ingridwolf551-jev-social",
+    "type": "github",
+    "title": "jev-social",
+    "summary": "Open-source, local-first social media research agent for Instagram, TikTok, and LinkedIn. Jev routes read-only steps; socai CLI captures cited browser evidence.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "browser-agent",
+      "browser-automation",
+      "decision-model",
+      "deep-research",
+      "instagram"
+    ],
+    "category": "agents",
+    "url": "https://github.com/IngridWolf551/jev-social",
+    "sourceMeta": {
+      "repo": "IngridWolf551/jev-social",
+      "author": "IngridWolf551",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1424736904,
+        "nodeId": "R_kgDOVOvCiA"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "ingridwolf551/jev-social",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "agents"
+        },
+        "sha": "0c7e4b87e3831a95db93919896ad2439df1421cd",
+        "evidenceUrl": "https://github.com/ingridwolf551/jev-social/blob/0c7e4b87e3831a95db93919896ad2439df1421cd/README.md",
+        "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-larrydavis089-jev-social",
+    "type": "github",
+    "title": "jev-social",
+    "summary": "Open-source, local-first social media research agent for Instagram, TikTok, and LinkedIn. Jev routes read-only steps; socai CLI captures cited browser evidence.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "browser-agent",
+      "browser-automation",
+      "decision-model",
+      "deep-research",
+      "instagram"
+    ],
+    "category": "agents",
+    "url": "https://github.com/larrydavis089/jev-social",
+    "sourceMeta": {
+      "repo": "larrydavis089/jev-social",
+      "author": "larrydavis089",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1424530513,
+        "nodeId": "R_kgDOVOicUQ"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "larrydavis089/jev-social",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "198a839773c3ac2ea28d0733aa6797651674ac71",
+        "evidenceUrl": "https://github.com/larrydavis089/jev-social/blob/198a839773c3ac2ea28d0733aa6797651674ac71/README.md",
+        "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-manonm8018-jev-social",
+    "type": "github",
+    "title": "jev-social",
+    "summary": "Open-source, local-first social media research agent for Instagram, TikTok, and LinkedIn. Jev routes read-only steps; socai CLI captures cited browser evidence.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "browser-agent",
+      "browser-automation",
+      "decision-model",
+      "deep-research",
+      "instagram"
+    ],
+    "category": "agents",
+    "url": "https://github.com/manonm8018/jev-social",
+    "sourceMeta": {
+      "repo": "manonm8018/jev-social",
+      "author": "manonm8018",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1424733156,
+        "nodeId": "R_kgDOVOuz5A"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "manonm8018/jev-social",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "a887cf9ded46938e89c264fa8909d0106898469a",
+        "evidenceUrl": "https://github.com/manonm8018/jev-social/blob/a887cf9ded46938e89c264fa8909d0106898469a/README.md",
+        "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-mariechaudhry-jev-social",
+    "type": "github",
+    "title": "jev-social",
+    "summary": "Open-source, local-first social media research agent for Instagram, TikTok, and LinkedIn. Jev routes read-only steps; socai CLI captures cited browser evidence.",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "ai-agents",
+      "browser-agent",
+      "browser-automation",
+      "decision-model",
+      "deep-research",
+      "instagram"
+    ],
+    "category": "agents",
+    "url": "https://github.com/MarieChaudhry/jev-social",
+    "sourceMeta": {
+      "repo": "MarieChaudhry/jev-social",
+      "author": "MarieChaudhry",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1424528472,
+        "nodeId": "R_kgDOVOiUWA"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "mariechaudhry/jev-social",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "ab2c806f82bf5c558a7606ed9a6c2693b87b8b21",
+        "evidenceUrl": "https://github.com/mariechaudhry/jev-social/blob/ab2c806f82bf5c558a7606ed9a6c2693b87b8b21/README.md",
+        "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-seanjeong42-jevcore",
+    "type": "github",
+    "title": "jevcore",
+    "summary": "TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "cordis",
+      "decision-model",
+      "deepseek",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/seanjeong42/jevcore",
+    "sourceMeta": {
+      "repo": "seanjeong42/jevcore",
+      "author": "seanjeong42",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1424087105,
+        "nodeId": "R_kgDOVOHYQQ"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "seanjeong42/jevcore",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "7fce10244a847c72bd7a752b6e78fbc5511e7a01",
+        "evidenceUrl": "https://github.com/seanjeong42/jevcore/blob/7fce10244a847c72bd7a752b6e78fbc5511e7a01/README.md",
+        "evidenceSha256": "c396a4d585440eb6410d5116403836c4d77fb906c6832cf15bdcc83105ba78ac",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      }
+    }
   }
 ]

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "pages": {
-    "topic:jev fork:false": 4,
+    "topic:jev fork:false": 5,
     "\"typesafe.ai\" in:readme fork:false": 1,
     "\"Jev\" \"System One\" in:readme fork:false": 4,
     "topic:typesafe-ai fork:false": 5,
@@ -66612,7 +66612,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
       "attempts": 1,
-      "stars": 16,
+      "stars": 19,
       "checkedAt": "2026-10-17T15:38:35.025Z",
       "lastReview": {
         "repo": "dingw530/mint-llm-wiki",
@@ -92773,6 +92773,353 @@
       "stars": 1,
       "checkedAt": "2026-10-19T22:23:08.720Z",
       "retryAt": "2026-10-20T22:23:08.720Z"
+    },
+    "jenoshimizu870/eullm": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "jenoshimizu870/eullm",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "c3b7f1b76dbcc340bb192a04f66c35a5f128725e",
+        "evidenceUrl": "https://github.com/jenoshimizu870/eullm/blob/c3b7f1b76dbcc340bb192a04f66c35a5f128725e/README.md",
+        "evidenceSha256": "eb321be34672e86f585846b3b31a50001652fa91a66c1241c4d9b3d302a471cc",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "cenkergultekin/cenkbot": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "cenkergultekin/cenkbot",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "f80288ac31163a9b05530932648660b35b1b2f79",
+        "evidenceUrl": "https://github.com/cenkergultekin/cenkbot/blob/f80288ac31163a9b05530932648660b35b1b2f79/README.md",
+        "evidenceSha256": "df25e069da497a1e3dfed580d84facdd45d97734a412247ef157ff99de56b5ba",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "magilliam27/sec-8k-filings-and-decision-models": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "magilliam27/sec-8k-filings-and-decision-models",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "05bbea3d01806e928b0928be258c865a464b04aa",
+        "evidenceUrl": "https://github.com/magilliam27/sec-8k-filings-and-decision-models/blob/05bbea3d01806e928b0928be258c865a464b04aa/README.md",
+        "evidenceSha256": "ead9568c79cedf327a08ac1455975a13c48a62fbb14190e24f7bd0bb821c7e1f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "svetlanarichardson90/doma": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "svetlanarichardson90/doma",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "f4ad3878790c183a5c981773068194abe50ddc4f",
+        "evidenceUrl": "https://github.com/svetlanarichardson90/doma/blob/f4ad3878790c183a5c981773068194abe50ddc4f/README.md",
+        "evidenceSha256": "21a62e98c89f6ccb50a036918275682f938274d796521679c3bcfe292d86b38e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "burakbraun972/eullm": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "burakbraun972/eullm",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "65d82c13ee49ab6bd541f65575d977476175d6b4",
+        "evidenceUrl": "https://github.com/burakbraun972/eullm/blob/65d82c13ee49ab6bd541f65575d977476175d6b4/README.md",
+        "evidenceSha256": "eb321be34672e86f585846b3b31a50001652fa91a66c1241c4d9b3d302a471cc",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "vyildirim4103/jev-mem": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "vyildirim4103/jev-mem",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "91250696329365d836db7dc1529e68e8af757568",
+        "evidenceUrl": "https://github.com/vyildirim4103/jev-mem/blob/91250696329365d836db7dc1529e68e8af757568/README.md",
+        "evidenceSha256": "8d5bcee2e51b618934eca32a4b9767d7511b340085958f049fb10a86f1e9efbf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "piotrl71269/gutsy": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "piotrl71269/gutsy",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "c9d196dd82eb60a5e59ddb81cc0ae1278b7cce6a",
+        "evidenceUrl": "https://github.com/piotrl71269/gutsy/blob/c9d196dd82eb60a5e59ddb81cc0ae1278b7cce6a/README.md",
+        "evidenceSha256": "b2dd4b6b9e884f931548b891ed4039c5627ca3255cb100f32c5b298a65cea2f3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "ashp15205/jev-laya-system-1": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "ashp15205/jev-laya-system-1",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "5629109f7af235b70cc1609290fd2fb5473e97a1",
+        "evidenceUrl": "https://github.com/ashp15205/jev-laya-system-1/blob/5629109f7af235b70cc1609290fd2fb5473e97a1/README.md",
+        "evidenceSha256": "3cd3f85c7dd9995b8abd11ed61fd5abbd0ff7829ede1338349f44d47a1e5664c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "hsoto898/doma": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "hsoto898/doma",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "de977ed3f7f28d1abee6259efb40ff5999315974",
+        "evidenceUrl": "https://github.com/hsoto898/doma/blob/de977ed3f7f28d1abee6259efb40ff5999315974/README.md",
+        "evidenceSha256": "21a62e98c89f6ccb50a036918275682f938274d796521679c3bcfe292d86b38e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "haabdullah916/gutsy": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "haabdullah916/gutsy",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "560b3619e533bcec8b8c2c273890db7513a72544",
+        "evidenceUrl": "https://github.com/haabdullah916/gutsy/blob/560b3619e533bcec8b8c2c273890db7513a72544/README.md",
+        "evidenceSha256": "b2dd4b6b9e884f931548b891ed4039c5627ca3255cb100f32c5b298a65cea2f3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "simonet03222/gutsy": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "simonet03222/gutsy",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "f2a50bfe063166d24761171ec67d22ec0fd541ac",
+        "evidenceUrl": "https://github.com/simonet03222/gutsy/blob/f2a50bfe063166d24761171ec67d22ec0fd541ac/README.md",
+        "evidenceSha256": "b2dd4b6b9e884f931548b891ed4039c5627ca3255cb100f32c5b298a65cea2f3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "stewart889/eullm": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "stewart889/eullm",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "e30d26c00b1e4772ea64953407c9cbe4f09e86c2",
+        "evidenceUrl": "https://github.com/stewart889/eullm/blob/e30d26c00b1e4772ea64953407c9cbe4f09e86c2/README.md",
+        "evidenceSha256": "d508b9a3a77d53e1b016a2dfcece085f88d2a2fecd9afaab3ef50786888f5e83",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "tdizhere/system3": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "tdizhere/system3",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "904e5a234165f51f97abb1b18389903aa188e8a4",
+        "evidenceUrl": "https://github.com/tdizhere/system3/blob/904e5a234165f51f97abb1b18389903aa188e8a4/README.md",
+        "evidenceSha256": "d51164df9362e363690d300110ac77b38fde18dfde537b21301b4ed0f9e8b773",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "arthurkatcher/jev-click-bench": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "arthurkatcher/jev-click-bench",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "83af36a5cf5496cee5f061f898a4d32dc2970bfa",
+        "evidenceUrl": "https://github.com/arthurkatcher/jev-click-bench/blob/83af36a5cf5496cee5f061f898a4d32dc2970bfa/README.md",
+        "evidenceSha256": "95c819ead98fb53930b527770c80a0481a87d3f1d8f7614ce6c00e145d3aa063",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "voulalee57/doma": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "voulalee57/doma",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "111ca8d839cc4885855fbd3a4d50badec34a7e82",
+        "evidenceUrl": "https://github.com/voulalee57/doma/blob/111ca8d839cc4885855fbd3a4d50badec34a7e82/README.md",
+        "evidenceSha256": "21a62e98c89f6ccb50a036918275682f938274d796521679c3bcfe292d86b38e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "kim8554/quicksilver": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "kim8554/quicksilver",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.83,
+          "category": "agents"
+        },
+        "sha": "56b3b48cc7b6d8e6c7ecfc07e200c99f102a434c",
+        "evidenceUrl": "https://github.com/kim8554/quicksilver/blob/56b3b48cc7b6d8e6c7ecfc07e200c99f102a434c/README.md",
+        "evidenceSha256": "bfa31a86f92f85b62db2e3e84ab4960db079729d930387eb173d3b307c888885",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "gjones90694/gutsy": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "gjones90694/gutsy",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "a25dd1c99aa660519f238bcde59362eea7cfbd97",
+        "evidenceUrl": "https://github.com/gjones90694/gutsy/blob/a25dd1c99aa660519f238bcde59362eea7cfbd97/README.md",
+        "evidenceSha256": "b2dd4b6b9e884f931548b891ed4039c5627ca3255cb100f32c5b298a65cea2f3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "daankumar/doma": {
+      "status": "review",
+      "discoveredAt": "2026-10-20T04:54:46.648Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-20T04:54:46.648Z",
+      "lastReview": {
+        "repo": "daankumar/doma",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "00ac1199846d6274291498e9b488b7442dfd7831",
+        "evidenceUrl": "https://github.com/daankumar/doma/blob/00ac1199846d6274291498e9b488b7442dfd7831/README.md",
+        "evidenceSha256": "21a62e98c89f6ccb50a036918275682f938274d796521679c3bcfe292d86b38e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-20T04:54:46.648Z"
+      },
+      "retryAt": "2026-10-27T04:54:46.648Z"
     }
   },
   "nextReviewLane": "retry"
