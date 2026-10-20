@@ -4,8 +4,8 @@
 成员清单
 mcp-catalog.ts: 规范快照生成公开 MCP 白名单、身份表和三种排序；单项 UTF-8 JSON 超过 4096 B 阻止构建
 mcp-catalog.test.ts: MCP 字段隔离、迁址、隐藏、新身份接管旧地址、全目录排序等价与容量边界
-mcp-config.test.ts: 正式端点、五客户端原生配置与三语言键的接入契约
-mcp-server.test.ts: 官方客户端新旧协议、只读工具、单消息容量、来源校验与失败封闭限流
+mcp-config.test.ts: 单行 Tabs/家族顺序、三种安装 URL 解码白名单、收藏后入口与品牌原字节契约
+mcp-server.test.ts: 新旧协议、纯分类预热、schema 单次转换、只读工具、输入容量与失败封闭限流
 mcp-delivery.test.ts: 真实 Worker MCP、三语言静态指南、Markdown 与浏览器隔离门禁
 mcp-docs.test.ts: 客户端配置、公开 Markdown 与 Registry 元数据的一致性门禁
 generate-og.ts: Node 构建期 PNG 生成与过期版本回收；校验免费 20000 文件上限，不写 public 源文件

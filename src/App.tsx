@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖目录展示投影、搜索/排序/分页、新闻有界页与按需静态历史搜索
- * [OUTPUT]: 提供标签聚合/索引与页脚内链、目录布局、手机固定两行控制栏、分类说明、每页 50 条、投稿与 Agents 页脚
+ * [OUTPUT]: 提供目录/标签/新闻布局、侧栏 MCP 接入、分页、收藏、投稿与 Agents 页脚
  * [POS]: src 的目录编排层，由 _directory 路由挂载
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -300,6 +300,10 @@ export default function App() {
       {filterButton('top100')}
       {filterButton('news')}
       {filterButton('saved')}
+      <Button nativeButton={false} role="link" render={<a href={localizedPath('/mcp', locale)} />}
+        variant="ghost" className="min-h-8 w-full justify-start rounded-lg px-3 py-1.5 font-normal whitespace-nowrap text-muted-foreground">
+        {t('mcpNav')}
+      </Button>
       <Separator className="my-1" />
       {filterButton('all')}
       {CATEGORIES.map(filterButton)}

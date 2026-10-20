@@ -1,10 +1,14 @@
 /**
  * [INPUT]: 依赖官方 MCP SDK、构建快照与注入的匿名请求限流器
- * [OUTPUT]: 提供无会话的单消息 MCP 入口与字节/深度上限
- * [POS]: lib 的协议边界；只解析一次，不读凭据或记录查询正文
+ * [OUTPUT]: 提供无会话 MCP、纯分类预热、工具 schema 缓存与输入上限
+ * [POS]: lib 的协议边界；固定初始化移到模块期，逐请求验证不降级
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
-import { createMcpHandler, isJsonContentType, McpServer } from '@modelcontextprotocol/server'
+import {
+  classifyInboundRequest, createMcpHandler, deserializeMessage, isJsonContentType, McpServer,
+  CLIENT_CAPABILITIES_META_KEY, CLIENT_INFO_META_KEY, PROTOCOL_VERSION_META_KEY,
+  type StandardSchemaWithJSON,
+} from '@modelcontextprotocol/server'
 import { z } from 'zod'
 import { CATEGORIES } from './categories.ts'
 import {
@@ -25,7 +29,25 @@ const allowedOrigins = new Set([
   'https://claude.ai', 'https://chatgpt.com', 'https://glama.ai',
   'http://localhost:6274', 'http://127.0.0.1:6274',
 ])
-const searchSchema = z.object({
+// --- SDK 每请求创建实例；只缓存不可变的工具描述，不共享协议会话 ---
+export function cacheMcpInputSchema<T extends z.ZodType>(schema: T): StandardSchemaWithJSON<z.input<T>, z.output<T>> {
+  const standard = schema['~standard']
+  const input = standard.jsonSchema.input({ target: 'draft-2020-12' })
+  return {
+    '~standard': {
+      ...standard,
+      jsonSchema: {
+        ...standard.jsonSchema,
+        input: options => {
+          if (options.target !== 'draft-2020-12') throw new Error('MCP schema requires draft-2020-12.')
+          return input
+        },
+      },
+    },
+  }
+}
+
+const searchSchema = cacheMcpInputSchema(z.object({
   query: z.string().max(MCP_QUERY_MAX_LENGTH)
     .refine(value => value.trim().split(/\s+/u).filter(Boolean).length <= MCP_QUERY_MAX_WORDS, 'Use at most eight words.')
     .optional().describe('Plain-text words; all words must match. No regex or semantic search.'),
@@ -35,11 +57,36 @@ const searchSchema = z.object({
   sort: z.enum(['stars', 'name', 'date']).optional().describe('Default: stars.'),
   page: z.number().int().min(1).max(MCP_PAGE_LIMIT).optional(),
   limit: z.number().int().min(1).max(MCP_RESULT_LIMIT).optional().describe('Default: 10; maximum: 20.'),
-}).strict()
-const detailSchema = z.object({
+}).strict())
+const detailSchema = cacheMcpInputSchema(z.object({
   identity: z.string().trim().min(1).max(500).describe('GitHub owner/repository or https://github.com/owner/repository.'),
-}).strict()
+}).strict())
 const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false } as const
+
+// --- SDK preload 只构造 schema；首次解析仍初始化 Zod 的惰性对象 ---
+// 两条纯合成消息预热分类层，不执行工具、不建立会话、不替代实际请求验证。
+export function warmMcpWireSchemas() {
+  const version = '2026-07-28'
+  const modern = {
+    jsonrpc: '2.0', id: 0, method: 'server/discover', params: { _meta: {
+      [PROTOCOL_VERSION_META_KEY]: version,
+      [CLIENT_CAPABILITIES_META_KEY]: {},
+      [CLIENT_INFO_META_KEY]: { name: 'awesome-jev-schema-warmup', version: MCP_SERVER_VERSION },
+    } },
+  }
+  const legacy = { jsonrpc: '2.0', method: 'notifications/initialized' }
+  const fixtures = [
+    { httpMethod: 'POST', protocolVersionHeader: version, mcpMethodHeader: modern.method, body: modern },
+    { httpMethod: 'POST', protocolVersionHeader: '2025-11-25', body: legacy },
+  ]
+  return fixtures.map((fixture, index) => {
+    const outcome = classifyInboundRequest(fixture)
+    if (outcome.kind !== (index === 0 ? 'modern' : 'legacy')) throw new Error('MCP schema warmup classification failed.')
+    deserializeMessage(JSON.stringify(fixture.body))
+    return outcome.kind
+  })
+}
+warmMcpWireSchemas()
 
 function result<T extends object>(value: T) {
   return { content: [{ type: 'text' as const, text: JSON.stringify(value) }], structuredContent: value }

@@ -9,7 +9,7 @@ architecture.md: 免费有限查询/构建 PNG 与开发渲染边界；新闻有
 deployment.md: MCP/网站免费 CPU 与资产门禁、同版本制品、Registry/Glama 回读；区域规则与 production 隔离
 collector.md: 采集、审核、限流与可信发布规则；七条 Workflow、候选迁移与本地 TDD/上线边界；分类收据、正负向权限/精确 CI/CAS 恢复、ID 基线、同 ID 迁址/持续失效下架、原预算目录复核及最新 main 增量发布
 data-model.md: 候选 v2/统计单写者与残页容量；原始 tags 与公开标签投影/同义/计数边界，持久化目录、GH CLI 全量清洗、唯一 GitHub 身份/旧地址 301、可逆下架公共投影与编辑/证据保护，区分审计字段和浏览器投影
-design.md: 稳定视觉契约、共享预览 arc/presence 动效、白底黑字代码分享图和统一工作台；现有 CSS token 是页面实现权威
+design.md: 稳定视觉契约、共享预览动效、代码分享图、统一工作台与 MCP 品牌页签；现有 CSS token 是页面实现权威
 directory-ui.md: 单列分类/标签、内链与 50 条分页 SSR；归一不撤销待加载有效页；手机控制栏与评分分行、检索/预览/本机收藏行为
 reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
 inclusion-follow-up.md: 全量依据复核后当前 7 项待补证与已授权移除的 404 来源记录，区分空仓、占位及跨仓范围，禁止编造依据或自动删除

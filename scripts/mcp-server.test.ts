@@ -1,14 +1,17 @@
 /**
  * [INPUT]: 依赖官方 MCP 客户端、真实协议入口与构建投影
- * [OUTPUT]: 验证新旧协议、单消息、流式字节/深度上限与跨域安全
+ * [OUTPUT]: 验证协议、无 I/O 预热、schema 缓存与输入安全
  * [POS]: scripts 的 MCP 协议回归；内存 HTTP 连接不访问外网
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
 import test from 'node:test'
+import { spawnSync } from 'node:child_process'
+import { z } from 'zod'
 import { Client, StreamableHTTPClientTransport } from '@modelcontextprotocol/client'
+import { McpServer, type StandardSchemaWithJSON } from '@modelcontextprotocol/server'
 import { buildMcpCatalog } from './mcp-catalog.ts'
-import { createMcpEndpoint, MCP_BODY_LIMIT, MCP_JSON_DEPTH_LIMIT } from '../src/lib/mcp-server.ts'
+import { cacheMcpInputSchema, createMcpEndpoint, warmMcpWireSchemas, MCP_BODY_LIMIT, MCP_JSON_DEPTH_LIMIT } from '../src/lib/mcp-server.ts'
 
 const rows = [{
   id: 'github:owner/sdk', type: 'github' as const, title: 'Jev SDK', summary: 'Typed decisions with TypeScript.',
@@ -21,6 +24,95 @@ const url = 'https://awesomejev.cc/api/mcp'
 const headers = { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' }
 const rpc = (body: unknown, extra: HeadersInit = {}) => new Request(url, {
   method: 'POST', headers: { ...headers, ...extra }, body: JSON.stringify(body),
+})
+
+test('tool JSON Schema is converted once before requests without dropping Zod refinements', async (t) => {
+  const schema = z.object({ name: z.string().trim().refine(value => value !== 'forbidden') }).strict()
+  const original = schema['~standard'].jsonSchema.input
+  let conversions = 0
+  t.mock.method(schema['~standard'].jsonSchema, 'input', (options: Parameters<typeof original>[0]) => {
+    conversions++
+    return original(options)
+  })
+  const cached = cacheMcpInputSchema(schema)
+  assert.equal(conversions, 1, '转换应发生在模块初始化，不等到第一个请求')
+  const first = cached['~standard'].jsonSchema.input({ target: 'draft-2020-12' })
+  for (let request = 0; request < 20; request++) {
+    assert.strictEqual(cached['~standard'].jsonSchema.input({ target: 'draft-2020-12' }), first)
+  }
+  assert.equal(conversions, 1, '每请求新 SDK 实例不能重复转换同一工具')
+  assert.deepEqual(await cached['~standard'].validate({ name: ' valid ' }), { value: { name: 'valid' } })
+  assert.ok((await cached['~standard'].validate({ name: 'forbidden' })).issues)
+  assert.ok((await cached['~standard'].validate({ name: 'valid', extra: true })).issues)
+  assert.throws(() => cached['~standard'].jsonSchema.input({ target: 'draft-07' }), /draft-2020-12/)
+})
+
+test('wire classifier warmup is synchronous, has no I/O and preserves both protocol eras', () => {
+  const fetchBefore = globalThis.fetch
+  const timeoutBefore = globalThis.setTimeout
+  const intervalBefore = globalThis.setInterval
+  const forbidden = () => { throw new Error('Warmup must not perform I/O or schedule work') }
+  try {
+    globalThis.fetch = forbidden
+    globalThis.setTimeout = forbidden as unknown as typeof setTimeout
+    globalThis.setInterval = forbidden as unknown as typeof setInterval
+    assert.deepEqual(warmMcpWireSchemas(), ['modern', 'legacy'])
+    assert.deepEqual(warmMcpWireSchemas(), ['modern', 'legacy'])
+  } finally {
+    globalThis.fetch = fetchBefore
+    globalThis.setTimeout = timeoutBefore
+    globalThis.setInterval = intervalBefore
+  }
+})
+
+test('a cold module import warms both classifier paths before serving requests', () => {
+  const script = `
+    import assert from 'node:assert/strict'
+    import { mock } from 'node:test'
+    import * as sdk from '@modelcontextprotocol/server'
+    const calls = []
+    mock.module('@modelcontextprotocol/server', { namedExports: {
+      ...sdk, classifyInboundRequest: input => {
+        const result = sdk.classifyInboundRequest(input)
+        calls.push(result.kind)
+        return result
+      },
+    } })
+    const forbidden = () => { throw new Error('Startup must not perform I/O or schedule work') }
+    globalThis.fetch = forbidden
+    globalThis.setTimeout = forbidden
+    globalThis.setInterval = forbidden
+    await import(process.argv[1])
+    assert.deepEqual(calls, ['modern', 'legacy'])
+  `
+  const child = spawnSync(process.execPath, [
+    '--experimental-strip-types', '--experimental-test-module-mocks',
+    '--input-type=module', '-e', script, new URL('../src/lib/mcp-server.ts', import.meta.url).href,
+  ], { encoding: 'utf8', timeout: 15_000 })
+  assert.equal(child.status, 0, child.stderr)
+})
+
+test('fresh SDK instances share converted tool schemas rather than converting per request', async (t) => {
+  const schemas: { name: string; schema: StandardSchemaWithJSON }[] = []
+  const register = McpServer.prototype.registerTool
+  t.mock.method(McpServer.prototype, 'registerTool', function (this: McpServer, ...args: Parameters<typeof register>) {
+    schemas.push({ name: args[0], schema: args[1].inputSchema as unknown as StandardSchemaWithJSON })
+    return Reflect.apply(register, this, args)
+  })
+  const server = endpoint()
+  try {
+    for (let request = 0; request < 2; request++) {
+      const response = await server.fetch(rpc({ jsonrpc: '2.0', id: request, method: 'tools/list' }))
+      assert.equal(response.status, 200)
+      assert.match(await response.text(), /search_projects/)
+    }
+    assert.equal(schemas.length, 4, '真实 SDK 每请求仍创建独立实例并注册两个工具')
+    const options = { target: 'draft-2020-12' } as const
+    for (const name of ['search_projects', 'get_project']) {
+      const [first, second] = schemas.filter(entry => entry.name === name).map(entry => entry.schema)
+      assert.strictEqual(first['~standard'].jsonSchema.input(options), second['~standard'].jsonSchema.input(options), name)
+    }
+  } finally { await server.close() }
 })
 
 test('official modern client discovers exactly two read-only tools and queries the snapshot', async () => {

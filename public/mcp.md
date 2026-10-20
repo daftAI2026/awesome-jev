@@ -1,6 +1,6 @@
 <!--
 [INPUT]: MCP 接入配置、公开查询契约与发布快照
-[OUTPUT]: 公开客户端配置、工具参数与数据边界
+[OUTPUT]: 原生配置、官方预填入口、工具参数与数据边界
 [POS]: public 的 MCP 机器文档；与使用页和 server.json 保持同一端点
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -21,7 +21,11 @@ https://awesomejev.cc/api/mcp
 
 Use a remote MCP client with Streamable HTTP support. No account, API key or sign-in is required. Both tools are read-only. The endpoint accepts MCP POST requests; opening it in a browser is not a connection test.
 
+Chat apps and coding tools use different setup flows, even when they share a brand. Choose the client you use below.
+
 ### Claude
+
+[Add in Claude](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Awesome+JEV&connectorUrl=https%3A%2F%2Fawesomejev.cc%2Fapi%2Fmcp) opens the client's add-server screen. You must review and confirm the address and tools there. This is not a completed installation. The copyable manual configuration remains below. See the [official install-link specification](https://claude.com/docs/connectors/building/directory-vs-custom#custom-connector-install-link).
 
 1. Open Customize → Connectors and add a custom connector.
 2. Name it Awesome JEV, paste the server address, and choose No sign in.
@@ -39,7 +43,25 @@ claude mcp add --transport http awesome-jev https://awesomejev.cc/api/mcp
 
 This uses Claude Code's default project-local scope. Open Claude Code, check `/mcp`, and approve read-only tool calls when prompted. See the [official Claude Code guide](https://code.claude.com/docs/en/mcp).
 
+### ChatGPT
+
+1. Open [Plugins in ChatGPT](https://chatgpt.com/plugins), select +, then Add custom MCP server. Your plan and workspace permissions govern access.
+2. Enter Awesome JEV and the endpoint above. Choose no authentication, review the notice, and create it as a plugin.
+3. Review the two tools and install your custom plugin. Start a new conversation, type `@`, and select Awesome JEV. This is not a public directory listing. There is no Awesome JEV listing button on this page.
+
+See the [official ChatGPT connection guide](https://developers.openai.com/plugins/deploy/connect-chatgpt). If the option is unavailable, check that guide and your workspace policy. This endpoint does not unlock client features or require an Awesome JEV account.
+
+### Codex
+
+```sh
+codex mcp add awesome-jev --url https://awesomejev.cc/api/mcp
+```
+
+Start a new Codex session and check that both tools are available. See the [official Codex guide](https://developers.openai.com/codex/mcp).
+
 ### Cursor
+
+[Add in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=awesome-jev&config=eyJ1cmwiOiJodHRwczovL2F3ZXNvbWVqZXYuY2MvYXBpL21jcCJ9) opens the client's add-server screen. You must review and confirm the address and tools there. This is not a completed installation. The copyable manual configuration remains below. See the [official install-link specification](https://cursor.com/docs/mcp/install-links).
 
 Merge this entry into your project's `.cursor/mcp.json`. Keep existing servers:
 
@@ -55,13 +77,50 @@ Merge this entry into your project's `.cursor/mcp.json`. Keep existing servers:
 
 Check the MCP connection in Cursor, then allow Agent to use the tools. See the [official Cursor guide](https://cursor.com/docs/mcp).
 
-### Codex
+### VS Code
 
-```sh
-codex mcp add awesome-jev --url https://awesomejev.cc/api/mcp
+[Add in VS Code](vscode:mcp/install?%7B%22name%22%3A%22awesome-jev%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fawesomejev.cc%2Fapi%2Fmcp%22%7D) opens the client's add-server screen. You must review and confirm the address and tools there. This is not a completed installation. The copyable manual configuration remains below. See the [official install-link specification](https://code.visualstudio.com/api/extension-guides/ai/mcp#create-an-mcp-installation-url).
+
+Merge this entry into your workspace's `.vscode/mcp.json`. Keep existing servers. VS Code uses `servers`, not `mcpServers`:
+
+```json
+{
+  "servers": {
+    "awesome-jev": {
+      "type": "http",
+      "url": "https://awesomejev.cc/api/mcp"
+    }
+  }
+}
 ```
 
-Start a new Codex session and check that both tools are available. See the [official Codex guide](https://developers.openai.com/codex/mcp).
+Select Start above the entry, review the trust prompt, and enable the tools in agent chat. See the [official VS Code configuration reference](https://code.visualstudio.com/docs/agents/reference/mcp-configuration).
+
+### Gemini CLI
+
+This configuration is for Gemini CLI, not the Gemini website. Merge it into your project's `.gemini/settings.json`, preserving existing entries. Streamable HTTP uses `httpUrl`; `url` selects a different transport:
+
+```json
+{
+  "mcpServers": {
+    "awesome-jev": {
+      "httpUrl": "https://awesomejev.cc/api/mcp"
+    }
+  }
+}
+```
+
+Restart Gemini CLI, check `/mcp`, and approve read-only tool use when prompted. See the [official Gemini CLI guide](https://geminicli.com/docs/tools/mcp-server/).
+
+### Hermes
+
+With Hermes Agent installed, run:
+
+```sh
+hermes mcp add awesome-jev --url https://awesomejev.cc/api/mcp
+```
+
+No authentication option is needed. Check the connection with `hermes mcp test awesome-jev`. Start a new chat or run `/reload-mcp` in an existing session to load the tools. See the [official Hermes CLI reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands#hermes-mcp).
 
 ### Other clients
 

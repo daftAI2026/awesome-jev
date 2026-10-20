@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+tabs.tsx: shadcn base-nova 页签组合，Base UI 绑定键盘与面板，沿用主题和无阴影选中态
 pagination.tsx: shadcn base-nova 分页原语，复用本站 Base UI Button 与 Phosphor
 alert.tsx: 警告语义容器与内容原语
 badge.tsx: 短状态/计数标记原语，标准过渡避免继承显隐动画

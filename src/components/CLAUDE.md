@@ -2,7 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-McpPage.tsx: 公开接入页；客户端切换与复制复用原主题，无账户、连接探测或远端请求
+McpPage.tsx: 公开接入页；单行原生横滚 Tabs 保持产品家族相邻，焦点滚入视区，官方预填入口不自动安装
 RecoveryPage.tsx: 404/500 共用恢复动作与 Jev 教学图；桌面 subgrid 共用分割线行，不读取目录或异常正文
 RouteErrorPage.tsx: 根路由错误/断网适配器，重载当前地址重试，不输出内部异常
 DirectoryBrowseFooter.tsx: 三语言分类与十二个热门标签内链，目录和独立详情共用

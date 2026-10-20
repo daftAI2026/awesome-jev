@@ -41,10 +41,19 @@ test('MCP registry metadata identifies the public remote and matching setup page
 
 test('MCP Markdown preserves the exact native configurations and official client references', () => {
   const markdown = document()
+  const headings = [...markdown.matchAll(/^### (Claude|Claude Code|ChatGPT|Codex|Cursor|VS Code|Gemini CLI|Hermes|Other clients)$/gm)].map(match => match[1])
+  assert.deepEqual(headings, ['Claude', 'Claude Code', 'ChatGPT', 'Codex', 'Cursor', 'VS Code', 'Gemini CLI', 'Hermes', 'Other clients'])
+  assert.match(markdown, /Chat apps and coding tools use different setup flows/)
   for (const client of MCP_CLIENTS) {
     assert.ok(markdown.includes(client.config), client.id)
     assert.ok(markdown.includes(client.docs), client.id)
+    if ('installUrl' in client) {
+      assert.ok(markdown.includes(client.installUrl), client.id)
+      assert.ok(markdown.includes(client.installDocs), client.id)
+    }
   }
+  assert.match(markdown, /not a public directory listing/)
+  assert.match(markdown, /review and confirm/)
   const endpoints = [...markdown.matchAll(/https:\/\/awesomejev\.cc\/api\/[^\s)`"']+/g)].map(match => match[0])
   assert.ok(endpoints.length > 0)
   assert.ok(endpoints.every(endpoint => endpoint === MCP_ENDPOINT))
@@ -81,7 +90,7 @@ test('MCP Markdown has a static media type and the setup page has a documented d
   assert.match(design, /## MCP setup page/)
   for (const path of ['/mcp', '/zh/mcp', '/ja/mcp']) assert.ok(design.includes(`\`${path}\``))
   assert.match(design, /McpPage/)
-  assert.match(design, /ToggleGroup/)
+  assert.match(design, /TabsList/)
   assert.match(design, /No account dashboard/)
   assert.match(design, /Clipboard failure/)
   assert.match(design, /No decorative motion/)

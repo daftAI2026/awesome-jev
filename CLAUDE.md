@@ -47,6 +47,8 @@ MCP 接入页为三语言 /mcp，协议入口为 /api/mcp，机器说明为 /mcp
 只提供 search_projects 和 get_project，公开匿名只读，不调用 AI 或 GitHub。
 构建期投影白名单、身份别名、检索文本和排序。请求不重建索引。
 SDK 2.3.1 的 workerd 校验器在 isolate 启动期预热，避免首请求懒加载开销。
+模块期另解析两条合成消息，初始化 SDK 分类层的惰性对象。
+工具 JSON Schema 只转换一次；每请求保留独立 Server 与完整验证。
 协议拒绝批量消息，正文最多 16 KiB，单页最多 20 项。
 匿名 IP 每个边缘位置每分钟 120 次；此规则不是全局账单硬上限。
 无数据库、KV、Durable Objects、账户或新增 Workflow。仍共享 Workers Free 配额。
