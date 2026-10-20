@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "347c90184fd684afb1c25a5edd11ea8c3865e50f",
-  "at": "2026-10-19T22:53:26.706Z",
-  "totalProjects": 3113,
+  "baselineSha": "7029d066e971942120976a575d025555a9e7652c",
+  "at": "2026-10-20T05:58:45.056Z",
+  "totalProjects": 3121,
   "metadata": {
-    "ok": 3089,
+    "ok": 3097,
     "failed": 24,
     "batches": 64,
     "cost": 64,
-    "other": 3013,
+    "other": 3021,
     "remaining": 24,
-    "attempted": 3113,
-    "fresh": 3089,
+    "attempted": 3121,
+    "fresh": 3097,
     "unavailable": 24,
     "deferredRemaining": 0,
     "top100": {
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "balajiregt/jev-scope-qa",
+        "to": "balajiregt/playwright-decision-bench",
+        "databaseId": 1383640866
+      }
+    ]
   },
   "receipts": [
     {
@@ -147,7 +153,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
