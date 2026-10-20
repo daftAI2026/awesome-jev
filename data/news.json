@@ -5578,5 +5578,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/19/nace-ai-drex-max-multimodal-decision-model/",
     "aihotUrl": "https://aihot.news/items/bhqzy77m0cacgwpzaacii9xi9"
+  },
+  {
+    "id": "k5fynws6ik9ilerxjmpc8cpu6",
+    "title": "Cloudflare 发布 System One 抽取模型 Clairic 预览版，上线 Workers AI",
+    "originalTitle": "Cloudflare Releases Clairic, a System One Extraction Model on Workers AI",
+    "summary": "Cloudflare 在 Workers AI 上发布 System One 抽取模型 Clairic 预览版，读取文本或图片并在 1 次前向传播中返回带类型的值而非生成文本，每个字段附带置信度和 p_null。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-20T07:45:41.000Z",
+    "discoveredAt": "2026-10-20T09:25:20.515Z",
+    "category": "ai-models",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/20/cloudflare-releases-clairic-a-system-one-extraction-model-on-workers-ai/",
+    "aihotUrl": "https://aihot.news/items/k5fynws6ik9ilerxjmpc8cpu6"
   }
 ]
