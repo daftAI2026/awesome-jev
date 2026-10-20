@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-20T11:42:19.960Z",
+  "at": "2026-10-20T17:11:40.499Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,171 +68,341 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 32,
+  "reviewed": 66,
   "added": 0,
   "pending": 3915,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "maurobonfietti/remote-jobs",
+      "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "shaftoe/awesome-pi-coding-agent",
+      "repo": "dominic789654/awesome-deepseek-harness",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "znq19/kiraai_alife_memory_z_plugin",
+      "repo": "jmagly/aiwg",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "rikkooo/jev-trade",
+      "repo": "shibing624/ai-paper-analysis",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "aflockofswifts/meetings",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "quriosity-agent/articles",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "oscar-dzy/awesome-jev-papers",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "dongtsi/awesome-trustworthy-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "amrithasuresh/awesome-index",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "abozaralizadeh/traide",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "ciyuan1234/skops",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "dilneiss/alr",
+      "repo": "fernandogarzaaa/project-away",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "jdecool/stars-feed",
+      "repo": "afernandez-virtual/my-skills",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "axelvincent/jevlibrary",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "songjunsub/knowledge-garden",
+      "repo": "billjr99/llmproxy",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "zzz1yao/datajev",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "007m7/jev-chat",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "a1re1/drip",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "arthrp/libre-semif-rs",
+      "repo": "colesmcintosh/forged",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "bingchancn/omp-jev-toolkit",
+      "repo": "enhansome/enhansome-awesome-aitools",
       "status": "error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "deepdivekr/agent-driver",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "goldenloaf24h/browserclaw",
+      "repo": "gbolask24/decision-bench-uk",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "hulryung-uo/anima3",
+      "repo": "han102300/dsh-opencode-free",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "ktrack723/wargame",
+      "repo": "kevinmichaelchen/awesome-ai",
       "status": "error",
-      "reason": "github-http-404"
+      "reason": "github-invalid-readme"
     },
     {
-      "repo": "louloulin/upup",
+      "repo": "kotoba-lang/itonami-agent",
       "status": "error",
-      "reason": "github-http-404"
+      "reason": "github-network-or-timeout"
     },
     {
-      "repo": "mdgchamomile/pi-jev",
+      "repo": "masatoimayama/dev-workflow",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mployee-me/it-entry-level-jobs",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "nesnilnehc/ai-era-software",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "piratchai/jevonian-complete-guide-to-jev-router",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "tech-anupam/awesome-agentic-ecosystem",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "whitek0t/base-of-knowledge",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "lightdevcoder/skills",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "listepo/cox",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "maximebrmd/relanmo",
       "status": "error",
       "reason": "github-ineligible-repository"
     },
     {
-      "repo": "munod/jeba",
+      "repo": "nolane-x/jev-language",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "scarranca/emailclassifier",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "muthuishere/jevcli",
+      "repo": "tonhowtf/omniget",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "whilehq/whileai-sdk",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "navopw/laya-onnx",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "novaleolin/jev-evolve",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "orvn/typesafe-tidbits",
+      "repo": "monotykamary/pi-fabric",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "qtopie/rezrov",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "rahiseko-alt/jev-test1",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "sarthakagrawal927/meme-lab",
+      "repo": "weitianxin/jevany",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "serendptai/swiftagent-be",
+      "repo": "akashpriyadarshii/jev-scout",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "shangshuo/gentlemans-gentleman",
+      "repo": "akashpriyadarshii/jev-git",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "theoleecj/semif",
+      "repo": "itscloud0/codex-jev-native-router",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "tk1475/talaria",
-      "status": "error",
-      "reason": "github-http-409"
-    },
-    {
-      "repo": "vitorepf/traco-ios",
+      "repo": "207studio/jev-claude-tools",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "wahahjiahao/emojev",
+      "repo": "hberardi/ettore",
       "status": "error",
       "reason": "github-http-404"
+    },
+    {
+      "repo": "kyu-softmatter/autofocus-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "russfranky/jev-crawlers",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "sanketny8/ai-daily-digest",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "apolenkov/jev-codex-router-lab",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "awesomezun/flyvigilante",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "bloome-alex/mi-tienda-ya",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "bobostudio/cabinet",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "coderinpajamas/jev-mlx",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "dakotac1994/awesome-jev",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "deadpackets/unitedstatesofjev",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "facilestudio/kori",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "kellengary/jev-lint",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "leotu2008-ux/hosty",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lindagr78/openeval",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "madousho-ai/decidophobia",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "maskedband1t/rlcd",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mokuichi147/polynarrator",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "nateecho32-stack/mefi-studio",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "realxhabib/signal",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "romanpert/sancho",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "sandracam64/jev-bot",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "syedabbasshaheer-art/jev-atlas",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "technoetic/harness50",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "wayshard/wayshard",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "xnuonux/jev-reflex",
+      "status": "error",
+      "reason": "github-network-or-timeout"
     }
   ],
   "identity": {
