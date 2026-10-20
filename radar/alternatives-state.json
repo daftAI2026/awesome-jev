@@ -1,8 +1,8 @@
 {
   "version": 1,
   "pages": {
-    "topic:system-one topic:decision-model fork:false": 2,
-    "topic:typed-decisions fork:false": 2
+    "topic:system-one topic:decision-model fork:false": 1,
+    "topic:typed-decisions fork:false": 1
   },
   "metadataCursor": 0,
   "candidates": {
