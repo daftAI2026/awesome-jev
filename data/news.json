@@ -5518,5 +5518,20 @@
     "reason": null,
     "originalUrl": "https://www.inceptionlabs.ai/blog/mercury-2-named-to-time-s-best-inventions-of-2026",
     "aihotUrl": "https://aihot.news/items/hq3l67h54qtdpyer6zrkctyh9"
+  },
+  {
+    "id": "osk3jj5jltogwr6zpo09w80j8",
+    "title": "Inception Labs 发布扩散大语言模型 Mercury 3，速度达 1068 tokens/秒",
+    "originalTitle": "Diffusion at Scale: Introducing Mercury 3",
+    "summary": "Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，速度达 1068 tokens/秒，参数量较 Mercury 1 扩大 40 倍以上。",
+    "sourceName": "Inception Labs：Blog（网页）",
+    "publishedAt": "2026-10-19T07:00:00.000Z",
+    "discoveredAt": "2026-10-19T18:21:34.657Z",
+    "category": "ai-models",
+    "score": 69,
+    "selected": true,
+    "reason": "官方发布给出扩散模型规模化的关键数据，包括速度、上下文和价格，可用作评估实时 AI 应用选型的参考。",
+    "originalUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+    "aihotUrl": "https://aihot.news/items/osk3jj5jltogwr6zpo09w80j8"
   }
 ]
