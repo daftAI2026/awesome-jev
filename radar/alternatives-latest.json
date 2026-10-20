@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-20T00:39:24.516Z",
+  "at": "2026-10-20T08:52:38.023Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 159,
-      "total": 159,
+      "fetched": 165,
+      "total": 165,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 158,
-      "total": 158,
+      "fetched": 161,
+      "total": 161,
       "status": "bounded"
     }
   ],
@@ -20,181 +20,106 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 15,
+  "reviewed": 9,
   "added": 0,
-  "pending": 189,
+  "pending": 192,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "toufiqqureshi/anarkali",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.9,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.48,
-        "category": "alternatives"
-      },
-      "sha": "c2cf55dbe4e3d9df8253e0c638ca7211296a3a82",
-      "evidenceUrl": "https://github.com/toufiqqureshi/anarkali/blob/c2cf55dbe4e3d9df8253e0c638ca7211296a3a82/README.md",
-      "evidenceSha256": "90c4285b0f4290189035ffb7ea0eb0a4311a512f65d50c9df1129d22969f5c29",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "ardana-ai/ardana",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.86,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.8,
-        "category": "alternatives"
-      },
-      "sha": "445fbc945b02b641eeaef65a3ae0f0252f571aba",
-      "evidenceUrl": "https://github.com/ardana-ai/ardana/blob/445fbc945b02b641eeaef65a3ae0f0252f571aba/README.md",
-      "evidenceSha256": "460ddf5966ec1623fbc62c86509653b1d59d5927b8c16147919528daa34160c1",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "computational-social-science/limen",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.6,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.31,
-        "category": "other"
-      },
-      "sha": "f624200d9252abbda9859def6e57423b20b01c24",
-      "evidenceUrl": "https://github.com/computational-social-science/limen/blob/f624200d9252abbda9859def6e57423b20b01c24/README.md",
-      "evidenceSha256": "6599a592d061da57c1e0304675b6a0c506e15d1a372486fbcfb0a0a0dde751a2",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "jrodrigotech/reflex-system-one",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.6,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.76,
-        "category": "alternatives"
-      },
-      "sha": "5bfda7af5b1d51aae43a2cf44eabc257fd2749ab",
-      "evidenceUrl": "https://github.com/jrodrigotech/reflex-system-one/blob/5bfda7af5b1d51aae43a2cf44eabc257fd2749ab/README.md",
-      "evidenceSha256": "f49fd431670a05be7628fe8cf803fb732e585a525d54c42989f29266b060e20e",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "frederico-kluser/jev-playground",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.14,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.85,
-        "category": "other"
-      },
-      "sha": "4edca2814216a7558f600e5ebc731410fffa19e7",
-      "evidenceUrl": "https://github.com/frederico-kluser/jev-playground/blob/4edca2814216a7558f600e5ebc731410fffa19e7/README.md",
-      "evidenceSha256": "acfd2ba300100393e2c2fb19784ffdcc89a3111be68b98d17d58ffefc126d3e8",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "ken-jo/veyra",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mellob1989/laya-runpod",
+      "repo": "demet52518/coreai-kit",
       "status": "review",
       "reason": "missing-open-source-license",
-      "sha": "bc4a2f567d8e41d222dea47e435aa3225c56978e",
-      "evidenceUrl": "https://github.com/mellob1989/laya-runpod/blob/bc4a2f567d8e41d222dea47e435aa3225c56978e/README.md",
-      "evidenceSha256": "eb539c1f53edcc896e2b09f332e7616faf463dd6ac7c6b68c1f9182e23c4b197",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "mike8470/jev-style",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "86a0cd17bcae297dbae5128e2349248b77f315f7",
-      "evidenceUrl": "https://github.com/mike8470/jev-style/blob/86a0cd17bcae297dbae5128e2349248b77f315f7/README.md",
-      "evidenceSha256": "fca100ca09aac9670750bd9196da3f7cfd5e0921d6811ece91a0678d3efa7c1b",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "analee08998/jev-social",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "5c26b00c26307106390594649b5f68f9f59c77ae",
-      "evidenceUrl": "https://github.com/analee08998/jev-social/blob/5c26b00c26307106390594649b5f68f9f59c77ae/README.md",
-      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "catherinestavrou94306/jevcore",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "8a6c494d630d2b46d21a735bc84bb66e8426c4d3",
-      "evidenceUrl": "https://github.com/catherinestavrou94306/jevcore/blob/8a6c494d630d2b46d21a735bc84bb66e8426c4d3/README.md",
-      "evidenceSha256": "94823bd9731b2cafc2693cca7707972ca5477a2d8373f5d0e98fa997c86ea8af",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "evans13683/jev-social",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "f7488c0e16b6fafbe5ac34136233c8864417e66b",
-      "evidenceUrl": "https://github.com/evans13683/jev-social/blob/f7488c0e16b6fafbe5ac34136233c8864417e66b/README.md",
-      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "gpastore7188/jev-social",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "ea763c88418bcb73fe0b0e53e16cbf38f5fce7dc",
-      "evidenceUrl": "https://github.com/gpastore7188/jev-social/blob/ea763c88418bcb73fe0b0e53e16cbf38f5fce7dc/README.md",
-      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
-    },
-    {
-      "repo": "kacper630/coreai-kit",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "58c7e86c847c532df0e354aaea567d02801a9706",
-      "evidenceUrl": "https://github.com/kacper630/coreai-kit/blob/58c7e86c847c532df0e354aaea567d02801a9706/README.md",
+      "sha": "534e63be39b40ba424e65edf86c6fc1329a3ffd9",
+      "evidenceUrl": "https://github.com/demet52518/coreai-kit/blob/534e63be39b40ba424e65edf86c6fc1329a3ffd9/README.md",
       "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
       "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
+      "checkedAt": "2026-10-20T08:52:38.023Z"
     },
     {
-      "repo": "lorenzofujita94/jev-social",
+      "repo": "devrecated/jev-alternative",
       "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "3c4adfa488189bcf68f4e870e147a13d38841526",
-      "evidenceUrl": "https://github.com/lorenzofujita94/jev-social/blob/3c4adfa488189bcf68f4e870e147a13d38841526/README.md",
-      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+      "score": {
+        "jevAbout": 0.89,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.41,
+        "category": "alternatives"
+      },
+      "sha": "0ac614edd94a89576429060e74f9ade2764ec023",
+      "evidenceUrl": "https://github.com/devrecated/jev-alternative/blob/0ac614edd94a89576429060e74f9ade2764ec023/README.md",
+      "evidenceSha256": "9b8ffb5b97eb5cab0b1d2b8756b0825580bbf3e80185f2156315dd0cb3a9ae74",
       "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
+      "checkedAt": "2026-10-20T08:52:38.023Z"
     },
     {
-      "repo": "meganhalas40/jevcore",
+      "repo": "heleneioannidis5960/jevcore",
       "status": "review",
       "reason": "missing-open-source-license",
-      "sha": "09da7f85e4e0194c35392ded242f05e65433bbde",
-      "evidenceUrl": "https://github.com/meganhalas40/jevcore/blob/09da7f85e4e0194c35392ded242f05e65433bbde/README.md",
+      "sha": "789100ea677f8ac9a45ca0cde67bdc21996a5bb4",
+      "evidenceUrl": "https://github.com/heleneioannidis5960/jevcore/blob/789100ea677f8ac9a45ca0cde67bdc21996a5bb4/README.md",
       "evidenceSha256": "94823bd9731b2cafc2693cca7707972ca5477a2d8373f5d0e98fa997c86ea8af",
       "model": "jev-latest",
-      "checkedAt": "2026-10-20T00:39:24.516Z"
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "kang83957/jev-social",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "299db6462bbe1b3a721666b722a43956941d5d35",
+      "evidenceUrl": "https://github.com/kang83957/jev-social/blob/299db6462bbe1b3a721666b722a43956941d5d35/README.md",
+      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "kdunn86923/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "fcda7e188a108bac24f048c37b46fd711595d0cf",
+      "evidenceUrl": "https://github.com/kdunn86923/jevcore/blob/fcda7e188a108bac24f048c37b46fd711595d0cf/README.md",
+      "evidenceSha256": "94823bd9731b2cafc2693cca7707972ca5477a2d8373f5d0e98fa997c86ea8af",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "kittimzhe/dsh-jev-goal-judge",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "b131e316541fa95153d1160a68d33203fef009d4",
+      "evidenceUrl": "https://github.com/kittimzhe/dsh-jev-goal-judge/blob/b131e316541fa95153d1160a68d33203fef009d4/README.md",
+      "evidenceSha256": "5b03f3cf178e1e7db797bb8aea7c9ec167567e2b74842c5973c34648d2db26e8",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "lukascho22400/jevcore",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "22d0ffd9f6fd0923aa3abf84901a5acfd4927326",
+      "evidenceUrl": "https://github.com/lukascho22400/jevcore/blob/22d0ffd9f6fd0923aa3abf84901a5acfd4927326/README.md",
+      "evidenceSha256": "94823bd9731b2cafc2693cca7707972ca5477a2d8373f5d0e98fa997c86ea8af",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "luuk736/jev-social",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "b81af0185d84dfe6f3d264fcd329329142be4408",
+      "evidenceUrl": "https://github.com/luuk736/jev-social/blob/b81af0185d84dfe6f3d264fcd329329142be4408/README.md",
+      "evidenceSha256": "257b13eef5778afda1bd3716f36e9bbdaa2da2c7cb02e6a21ef759e6ffc36e48",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
+    },
+    {
+      "repo": "susanne853/coreai-kit",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "d8c2745b8b419bfb5e66324482df1ea9b725a9ae",
+      "evidenceUrl": "https://github.com/susanne853/coreai-kit/blob/d8c2745b8b419bfb5e66324482df1ea9b725a9ae/README.md",
+      "evidenceSha256": "64e157fd5fa23c439ef00455d709b1aef0a8f9ee1d96d0bd7f84a6e90da4b0b5",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-20T08:52:38.023Z"
     }
   ],
   "identity": {
@@ -205,5 +130,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3111
+  "totalProjects": 3119
 }
