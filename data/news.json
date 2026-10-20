@@ -5533,5 +5533,50 @@
     "reason": "官方发布给出扩散模型规模化的关键数据，包括速度、上下文和价格，可用作评估实时 AI 应用选型的参考。",
     "originalUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
     "aihotUrl": "https://aihot.news/items/osk3jj5jltogwr6zpo09w80j8"
+  },
+  {
+    "id": "mk4qd2rqswxcy8qlnoyfd7gjo",
+    "title": "Hamel Husain 详解如何用决策模型做自动评测",
+    "originalTitle": "How To Use Decision Models for Evals",
+    "summary": "Hamel Husain 用 100 条公寓租赁客服 trace 实测 Jev 1.13、Perplexity Decider 1.1 27B、Liquid d1 与 d1-ultra、Cloudflare Clef Flash 和 OpenAI Decisions（GPT-6 Luna）识别失败案例。",
+    "sourceName": "Hamel Husain 长文（网页）",
+    "publishedAt": "2026-10-19T16:00:00.000Z",
+    "discoveredAt": "2026-10-20T04:35:51.772Z",
+    "category": "tip",
+    "score": 66,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://hamel.dev/blog/posts/decision-model-evals/index.html",
+    "aihotUrl": "https://aihot.news/items/mk4qd2rqswxcy8qlnoyfd7gjo"
+  },
+  {
+    "id": "extjkxtqfvxz8yy22xu74nxep",
+    "title": "Cloudflare 27B 多模态决策模型 Clef 上架 Ollama",
+    "originalTitle": "Clef is available on Ollama's cloud",
+    "summary": "Clef，一个来自 Cloudflare 的 27B 多模态决策模型，现已在 Ollama 上可用，用户可在本地或 Ollama 云端运行。Clef 基于 Qwen3.8-27B 微调，采用 Apache 2.0 许可，支持文本和图像输入，可一次性对每个问题打分而非逐词生成。",
+    "sourceName": "Ollama：Blog（RSS）",
+    "publishedAt": "2026-10-19T00:00:00.000Z",
+    "discoveredAt": "2026-10-20T01:57:35.670Z",
+    "category": "ai-products",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://ollama.com/blog/clef",
+    "aihotUrl": "https://aihot.news/items/extjkxtqfvxz8yy22xu74nxep"
+  },
+  {
+    "id": "bhqzy77m0cacgwpzaacii9xi9",
+    "title": "Nace AI 发布 Drex Max 多模态决策模型，面向计算机使用智能体，Decision Index 得分 67.59",
+    "originalTitle": "Meet Drex Max: Nace AI’s Multimodal Decision Model for Computer-Use Agents with a Score 67.59",
+    "summary": "Nace AI 发布多模态决策模型 Drex Max，可读取文本与图像并返回校准概率，在公开 Decision Index 0.3.2 上得分 67.59，比 TypeSafe 的 Jev 1.14 高 6.9 分。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-20T00:03:38.000Z",
+    "discoveredAt": "2026-10-20T01:18:34.696Z",
+    "category": "ai-models",
+    "score": 43,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/19/nace-ai-drex-max-multimodal-decision-model/",
+    "aihotUrl": "https://aihot.news/items/bhqzy77m0cacgwpzaacii9xi9"
   }
 ]
