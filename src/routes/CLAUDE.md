@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+{-$locale}.mcp.tsx: 三语言公开 MCP 指南与规范元数据，不加载项目快照或协议 SDK
 _directory.{-$locale}.tags.$tag.tsx: 标签计数/每页 50 条元数据，同义地址 301、未知 404、长尾 noindex
 _directory.{-$locale}.tags.index.tsx: 三语言公开标签索引与同源元数据，App 复用展示投影
 api.og.site.ts: 全站开发 PNG/405 回退端点；生产轻入口先交付构建 PNG

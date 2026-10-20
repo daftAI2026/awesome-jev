@@ -13,6 +13,306 @@
 
 News pages contain source-attributed summaries, not full articles. Publication time is taken from the source when available. Items without summaries are excluded from this document.
 
+## Cloudflare 发布 Clairic 模型，从文档抽取数据比 LLM 更快更省
+
+[Summary page \(en\)](https://awesomejev.cc/news/cmogljyljyvsca3w4yomzmepu) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/cmogljyljyvsca3w4yomzmepu) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/cmogljyljyvsca3w4yomzmepu)
+
+[The Decoder：AI News（RSS）](https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/) · [AIHOT](https://aihot.news/items/cmogljyljyvsca3w4yomzmepu)
+
+Source publication: 2026-10-20T12:04:56.000Z
+
+Cloudflare 发布文档数据抽取模型 Clairic，已在 Workers AI 开放预览，开放权重即将推出。用户指定所需字段后，模型单次调用即返回格式化值和置信度，缺失值返回 null，不做逐 token 生成，还可处理简单计算、估算和预测。
+
+## Cloudflare 发布 System One 抽取模型 Clairic 预览版，上线 Workers AI
+
+[Summary page \(en\)](https://awesomejev.cc/news/k5fynws6ik9ilerxjmpc8cpu6) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/k5fynws6ik9ilerxjmpc8cpu6) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/k5fynws6ik9ilerxjmpc8cpu6)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/20/cloudflare-releases-clairic-a-system-one-extraction-model-on-workers-ai/) · [AIHOT](https://aihot.news/items/k5fynws6ik9ilerxjmpc8cpu6)
+
+Source publication: 2026-10-20T07:45:41.000Z
+
+Cloudflare 在 Workers AI 上发布 System One 抽取模型 Clairic 预览版，读取文本或图片并在 1 次前向传播中返回带类型的值而非生成文本，每个字段附带置信度和 p\_null。
+
+## Hamel Husain 详解如何用决策模型做自动评测
+
+[Summary page \(en\)](https://awesomejev.cc/news/mk4qd2rqswxcy8qlnoyfd7gjo) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/mk4qd2rqswxcy8qlnoyfd7gjo) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/mk4qd2rqswxcy8qlnoyfd7gjo)
+
+[Hamel Husain 长文（网页）](https://hamel.dev/blog/posts/decision-model-evals/index.html) · [AIHOT](https://aihot.news/items/mk4qd2rqswxcy8qlnoyfd7gjo)
+
+Source publication: 2026-10-19T16:00:00.000Z
+
+Hamel Husain 用 100 条公寓租赁客服 trace 实测 Jev 1.13、Perplexity Decider 1.1 27B、Liquid d1 与 d1-ultra、Cloudflare Clef Flash 和 OpenAI Decisions（GPT-6 Luna）识别失败案例。
+
+## Cloudflare 27B 多模态决策模型 Clef 上架 Ollama
+
+[Summary page \(en\)](https://awesomejev.cc/news/extjkxtqfvxz8yy22xu74nxep) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/extjkxtqfvxz8yy22xu74nxep) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/extjkxtqfvxz8yy22xu74nxep)
+
+[Ollama：Blog（RSS）](https://ollama.com/blog/clef) · [AIHOT](https://aihot.news/items/extjkxtqfvxz8yy22xu74nxep)
+
+Source publication: 2026-10-19T00:00:00.000Z
+
+Clef，一个来自 Cloudflare 的 27B 多模态决策模型，现已在 Ollama 上可用，用户可在本地或 Ollama 云端运行。Clef 基于 Qwen3.8-27B 微调，采用 Apache 2.0 许可，支持文本和图像输入，可一次性对每个问题打分而非逐词生成。
+
+## Nace AI 发布 Drex Max 多模态决策模型，面向计算机使用智能体，Decision Index 得分 67.59
+
+[Summary page \(en\)](https://awesomejev.cc/news/bhqzy77m0cacgwpzaacii9xi9) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/bhqzy77m0cacgwpzaacii9xi9) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/bhqzy77m0cacgwpzaacii9xi9)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/19/nace-ai-drex-max-multimodal-decision-model/) · [AIHOT](https://aihot.news/items/bhqzy77m0cacgwpzaacii9xi9)
+
+Source publication: 2026-10-20T00:03:38.000Z
+
+Nace AI 发布多模态决策模型 Drex Max，可读取文本与图像并返回校准概率，在公开 Decision Index 0.3.2 上得分 67.59，比 TypeSafe 的 Jev 1.14 高 6.9 分。
+
+## Inception Labs 发布扩散大语言模型 Mercury 3，速度达 1068 tokens/秒
+
+[Summary page \(en\)](https://awesomejev.cc/news/osk3jj5jltogwr6zpo09w80j8) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/osk3jj5jltogwr6zpo09w80j8) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/osk3jj5jltogwr6zpo09w80j8)
+
+[Inception Labs：Blog（网页）](https://www.inceptionlabs.ai/blog/introducing-mercury-3) · [AIHOT](https://aihot.news/items/osk3jj5jltogwr6zpo09w80j8)
+
+Source publication: 2026-10-19T07:00:00.000Z
+
+Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，速度达 1068 tokens/秒，参数量较 Mercury 1 扩大 40 倍以上。
+
+## Princeton 与 Google 论文提出 JevAgentHarness，用 4B 决策模型分担 LLM 智能体例行决策
+
+[Summary page \(en\)](https://awesomejev.cc/news/rv2gymgzw7h624dxhy098r2uo) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rv2gymgzw7h624dxhy098r2uo) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rv2gymgzw7h624dxhy098r2uo)
+
+[X：Rohan Paul \(@rohanpaul\_ai\)](https://x.com/rohanpaul_ai/status/2112107486098473471) · [AIHOT](https://aihot.news/items/rv2gymgzw7h624dxhy098r2uo)
+
+Source publication: 2026-10-19T09:04:00.000Z
+
+Princeton 与 Google 等机构的论文提出 JevAgentHarness，用小型决策模型回答智能体中的多选例行决策，仅在置信度低于阈值时交给 LLM。
+
+## 谁来评测评测者？好评测的标准
+
+[Summary page \(en\)](https://awesomejev.cc/news/op6i25a61eomfo7jbjrwtzbjp) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/op6i25a61eomfo7jbjrwtzbjp) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/op6i25a61eomfo7jbjrwtzbjp)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2111875713737380347) · [AIHOT](https://aihot.news/items/op6i25a61eomfo7jbjrwtzbjp)
+
+Source publication: 2026-10-18T17:43:01.000Z
+
+谁来评测那些评测者？ 一个好的评测是： - 短暂的。它只截取某一时刻的状态与能力。 - 有依据的。它直接衡量你关心的任务和数据上的表现。 - 具体的。它针对的是期望结果本身，而不是其某种代理指标。 记好了！
+
+## All In 播客拆解 CoreWeave 盒子结构与 AI 算力泡沫风险
+
+[Summary page \(en\)](https://awesomejev.cc/news/xk1emvwinxzt2gus03ljj47ps) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/xk1emvwinxzt2gus03ljj47ps) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/xk1emvwinxzt2gus03ljj47ps)
+
+[X：Saito 硬地骇客 \(@SaitoWu\)](https://x.com/SaitoWu/status/2111775766631657836) · [AIHOT](https://aihot.news/items/xk1emvwinxzt2gus03ljj47ps)
+
+Source publication: 2026-10-18T11:05:52.000Z
+
+作者整理 All In 播客对 AI 泡沫的讨论，核心是 CoreWeave 创始人发明的「盒子」融资结构：把客户长约、GPU 和数据中心合同打包成独立偿付单元，典型合约五年、两年半回本。
+
+## Jev 发布约 4 周内涌现 20 个替代决策模型，MarkTechPost 横向对比选型
+
+[Summary page \(en\)](https://awesomejev.cc/news/o9xe4ksnclm1w5p4wx864fy03) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/o9xe4ksnclm1w5p4wx864fy03) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/o9xe4ksnclm1w5p4wx864fy03)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/) · [AIHOT](https://aihot.news/items/o9xe4ksnclm1w5p4wx864fy03)
+
+Source publication: 2026-10-17T07:26:39.000Z
+
+MarkTechPost 盘点了 TypeSafe 于 2026 年 9 月 15 日发布决策模型 Jev 后约 4 周内出现的 20 个替代方案，来自 Cloudflare、OpenAI、Perplexity、Liquid AI、AWS Strands Labs 及独立开发者，按参数规模、许可证、硬件、定价、Jev API 兼容性和基准表现逐项比较。
+
+## 五位 AI 重度用户复盘 OpenAI DevDay：Dots、Jev 与个人助手的产品真相
+
+[Summary page \(en\)](https://awesomejev.cc/news/kehybk3xqo7kcxtqc6d90z99i) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/kehybk3xqo7kcxtqc6d90z99i) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/kehybk3xqo7kcxtqc6d90z99i)
+
+[X：邵猛 \(@shao\_\_meng\)](https://x.com/shao__meng/status/2111265013755482375) · [AIHOT](https://aihot.news/items/kehybk3xqo7kcxtqc6d90z99i)
+
+Source publication: 2026-10-17T01:16:19.000Z
+
+Latent Space 新栏目组织 Ben Hylak、Dex Horthy、Alex Volkov 等五位 AI 重度用户在 OpenAI DevDay 2026 后畅谈产品真实体验。
+
+## Jev 集群与 GPT6-Astra 侦探破案对比
+
+[Summary page \(en\)](https://awesomejev.cc/news/n49rb3lc652armikk3nwmxxpa) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/n49rb3lc652armikk3nwmxxpa) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/n49rb3lc652armikk3nwmxxpa)
+
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2111203571681353940) · [AIHOT](https://aihot.news/items/n49rb3lc652armikk3nwmxxpa)
+
+Source publication: 2026-10-16T21:12:10.000Z
+
+周五快乐！游戏开始了 🕵️🔍 一群快速决策智能体能抓住凶手吗？ 我们把三位侦探送进维多利亚晚期的伦敦调查 200 起案件：\(1\) Jev 集群单独行动，\(2\) GPT6-Astra 单独行动，\(3\) GPT6-Astra 带领 Jev 集群。 结论：集群能覆盖线索，但需要一位推理型领导者来发现矛盾并深入挖掘。 更多内容见本线程 🧵 和博客 👇 https://snyhlx.github.io/the\_irregulars\_detective\_game/blog.html
+
+## AI 侦探推理基准测试设置介绍
+
+[Summary page \(en\)](https://awesomejev.cc/news/c9poy3pnvwugi3fmuvb4m9ti3) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/c9poy3pnvwugi3fmuvb4m9ti3) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/c9poy3pnvwugi3fmuvb4m9ti3)
+
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2111203573690425434) · [AIHOT](https://aihot.news/items/c9poy3pnvwugi3fmuvb4m9ti3)
+
+Source publication: 2026-10-16T21:12:10.000Z
+
+1️⃣ 设置：每个案件有 100 个地址、10 名嫌疑人和 12 小时来指认凶手、动机和藏身之处。侦探团队包括两个角色： 🕵️ Holmes 负责推理和决策：GPT6-Astra、Jev，或一种证据计数启发式方法 👦 The Irregulars 负责搜索：Jev 智能体，或一种搜索启发式方法
+
+## GPT6-Astra 与 Jev 智能体解谜表现
+
+[Summary page \(en\)](https://awesomejev.cc/news/yqh7j3ckrfja9mmouckaesk81) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/yqh7j3ckrfja9mmouckaesk81) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/yqh7j3ckrfja9mmouckaesk81)
+
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2111203576081166506) · [AIHOT](https://aihot.news/items/yqh7j3ckrfja9mmouckaesk81)
+
+Source publication: 2026-10-16T21:12:11.000Z
+
+2️⃣ 在 100 个较简单的案例中，很少有证人撒谎： • 🏅 GPT6-Astra 带领 12 个 Jev 智能体解出 96 个 • 🥈 GPT6-Astra 单独解出 57 个 • 🥉 Jev 集群单独解出 38 个 在较简单的案例中，每个谎言都来自单个证人，而每个真实事实都会出现两次。所以一个基于规则、只统计线索的领导者加上 Jev 集群就能找到真相，解出 97/100。 “ Elementary，我亲爱的 Watson。”
+
+## GPT6-Astra 与 Jev 集群抗贿赂证人测试
+
+[Summary page \(en\)](https://awesomejev.cc/news/s6cbtxfl0kph93sb74jmmru0c) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/s6cbtxfl0kph93sb74jmmru0c) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/s6cbtxfl0kph93sb74jmmru0c)
+
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2111203581072433280) · [AIHOT](https://aihot.news/items/s6cbtxfl0kph93sb74jmmru0c)
+
+Source publication: 2026-10-16T21:12:12.000Z
+
+4️⃣ 但当证人被收买时…… 💰 在 100 个更难的案例中，被收买的证人数量超过了诚实证人。以下是各团队的表现： • 🏅 GPT6-Astra + Jev 集群：93 • 🥈 仅 GPT6-Astra：59 • 🥉 仅 Jev 集群：42 • ❓ 基于规则的领导者 + Jev 集群：0–1 结论：面对有组织的谎言，你需要一个会追问"是谁在说话"的推理型领导者。
+
+## 快智能体跑腿，强推理者思考
+
+[Summary page \(en\)](https://awesomejev.cc/news/hepv8c1obrlhywyt8t697uazq) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/hepv8c1obrlhywyt8t697uazq) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/hepv8c1obrlhywyt8t697uazq)
+
+[X：UCSD Hao AI Lab \(@haoailab\)](https://x.com/haoailab/status/2111203583010173193) · [AIHOT](https://aihot.news/items/hepv8c1obrlhywyt8t697uazq)
+
+Source publication: 2026-10-16T21:12:13.000Z
+
+5️⃣ 寓意：让快速智能体做跑腿的活，让强推理者来做思考。一个天才，多个头脑。🧠👣 回放全部 200 个案例： https://snyhlx.github.io/the\_irregulars\_detective\_game/results.html 代码，以及更多关于智能体集群行为的博弈案例研究： https://github.com/lmgame-org/Gaming-JevSwarm 祝侦探愉快！
+
+## Jev 演示解决索引与查找难题
+
+[Summary page \(en\)](https://awesomejev.cc/news/pwevrsccq2frblpstnxo16v1x) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/pwevrsccq2frblpstnxo16v1x) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/pwevrsccq2frblpstnxo16v1x)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2111204284058726801) · [AIHOT](https://aihot.news/items/pwevrsccq2frblpstnxo16v1x)
+
+Source publication: 2026-10-16T21:15:00.000Z
+
+\(cmd-\) 去他的世界 索引让你头疼？ 找不到你的钥匙？ 去他的。不，真的，去他的 Jev 来帮你搞定 （给错过 JevDay 的人准备的演示回放！）
+
+## RespanAI Span-02 上线 OpenRouter
+
+[Summary page \(en\)](https://awesomejev.cc/news/ycfihlm1n3dzio97h5wjadwdf) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ycfihlm1n3dzio97h5wjadwdf) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ycfihlm1n3dzio97h5wjadwdf)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2111181748986163580) · [AIHOT](https://aihot.news/items/ycfihlm1n3dzio97h5wjadwdf)
+
+Source publication: 2026-10-16T19:45:27.000Z
+
+RespanAI 的 Span-02 现已登陆 OpenRouter 一款开放权重决策模型：输入文本和图像，定义你的问题，返回一个选择、是/否/未知，或一个带概率的评分。 输入 $0.01/百万 tokens，输出免费，131K 上下文。
+
+## 北大三星论文：慢推理模型离线教练快模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/h28k9pkicfezo8hdr6rzjmut6) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/h28k9pkicfezo8hdr6rzjmut6) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/h28k9pkicfezo8hdr6rzjmut6)
+
+[X：Rohan Paul \(@rohanpaul\_ai\)](https://x.com/rohanpaul_ai/status/2111173824725287024) · [AIHOT](https://aihot.news/items/h28k9pkicfezo8hdr6rzjmut6)
+
+Source publication: 2026-10-16T19:13:58.000Z
+
+北京大学与三星的论文提出 TORSI，让慢推理模型在局间研究快模型的失败并写出指令，供快模型在实时游戏中执行，两轮后 Jev 平均分从 13.51 升至 24.19，6 类游戏全部提升。
+
+## Vercel 数据显示 Jev 成为其史上采用最快的 AI 模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/e5sq3ktyg84rq5fe3t5rwho0x) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/e5sq3ktyg84rq5fe3t5rwho0x) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/e5sq3ktyg84rq5fe3t5rwho0x)
+
+[TechCrunch：AI（RSS）](https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/) · [AIHOT](https://aihot.news/items/e5sq3ktyg84rq5fe3t5rwho0x)
+
+Source publication: 2026-10-16T15:33:49.000Z
+
+Vercel 周四发布的数据显示，TypeSafe AI 的决策模型 Jev 上线两周内被 35% 的付费团队使用，接近第二名 Sonnet 5.5 的两倍，是 Vercel 平台上模型首两周最快采用纪录。
+
+## Liquid AI 发布 d1-ultra，登顶 Artificial Analysis Decision Index v1.0
+
+[Summary page \(en\)](https://awesomejev.cc/news/akq3j9x64fwljgi9o0o7y8trf) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/akq3j9x64fwljgi9o0o7y8trf) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/akq3j9x64fwljgi9o0o7y8trf)
+
+[X：Artificial Analysis \(@ArtificialAnlys\)](https://x.com/ArtificialAnlys/status/2111052531166249039) · [AIHOT](https://aihot.news/items/akq3j9x64fwljgi9o0o7y8trf)
+
+Source publication: 2026-10-16T11:11:59.000Z
+
+Liquid AI 发布决策模型 d1-ultra，以 65 分登顶 Artificial Analysis Decision Index v1.0，领先 Jev 1.14 的 57 分。
+
+## Liquid AI 发布多模态决策模型 d1-ultra，Artificial Analysis 决策指数得 65 分
+
+[Summary page \(en\)](https://awesomejev.cc/news/yx3j0y0wabdlwgf9giusru2ow) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/yx3j0y0wabdlwgf9giusru2ow) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/yx3j0y0wabdlwgf9giusru2ow)
+
+[MarkTechPost（RSS）](https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/) · [AIHOT](https://aihot.news/items/yx3j0y0wabdlwgf9giusru2ow)
+
+Source publication: 2026-10-16T06:26:41.000Z
+
+Liquid AI 发布迄今最强的决策模型 d1-ultra，可读取文本、图像或两者，以概率形式回答有界问题，单次前向传播输出 0 个 token。
+
+## TypeSafe AI 发布 Jev 1.14 决策模型仅一天，Liquid AI 以 d1-ultra 全面超车
+
+[Summary page \(en\)](https://awesomejev.cc/news/hzzds5bn4m9in6co5phc0hesi) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/hzzds5bn4m9in6co5phc0hesi) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/hzzds5bn4m9in6co5phc0hesi)
+
+[IT之家·人工智能](https://www.ithome.com/1/013/794.htm) · [AIHOT](https://aihot.news/items/hzzds5bn4m9in6co5phc0hesi)
+
+Source publication: 2026-10-16T03:15:19.553Z
+
+TypeSafe AI 于太平洋时间 10 月 14 日下午 1:14 发布 Jev 决策模型 1.14 预览版，支持图像输入、更长上下文和新的 "box" 类型。仅一天后，Liquid AI 推出号称“全球最佳”的决策模型 d1-ultra，在八类任务中表现均优于 Jev 1.14，整体表现也好于 vLLM Semantic Router d3 等竞品。
+
+## TypeSafe CEO 谈 Jev 发布一月与 AI 自动化
+
+[Summary page \(en\)](https://awesomejev.cc/news/uuvbwkx0boqc6ze5t7ll9zfn5) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uuvbwkx0boqc6ze5t7ll9zfn5) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uuvbwkx0boqc6ze5t7ll9zfn5)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2110901576550547602) · [AIHOT](https://aihot.news/items/uuvbwkx0boqc6ze5t7ll9zfn5)
+
+Source publication: 2026-10-16T01:12:09.000Z
+
+我们的 CEO @CompleteSkeptic 讲述了爱因斯坦博士与憨豆先生的故事 &gt; 如果 AI 95% 的时候像爱因斯坦，5% 的时候像憨豆先生，你要怎么用它来自动化任何事情？ @mattturck 带我们回顾了 Jev 疯狂的第一个月
+
+## OpenRouter 推出 Armor 测试版
+
+[Summary page \(en\)](https://awesomejev.cc/news/kasbsqdsfuv4jt2661rcmpery) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/kasbsqdsfuv4jt2661rcmpery) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/kasbsqdsfuv4jt2661rcmpery)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2110838205654470840) · [AIHOT](https://aihot.news/items/kasbsqdsfuv4jt2661rcmpery)
+
+Source publication: 2026-10-15T21:00:20.000Z
+
+今天，我们推出 OpenRouter Armor 测试版。 工具调用让智能体能够与外部世界交互，而基于正则表达式的过滤往往不足以检测不受欢迎的工具调用。 Armor 使用 @typesafeai 的 Jev 模型，在你的智能体执行工具调用之前，拦截违反策略的调用，性能优于 Claude Code 的自动分类器，而成本仅为后者的一小部分。
+
+## Jev 1.13 在内部测试中准确率最高成本最低
+
+[Summary page \(en\)](https://awesomejev.cc/news/behni52wos7nkpkvkd9ih7nfi) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/behni52wos7nkpkvkd9ih7nfi) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/behni52wos7nkpkvkd9ih7nfi)
+
+[X：OpenRouter \(@OpenRouter\)](https://x.com/OpenRouter/status/2110838266920591515) · [AIHOT](https://aihot.news/items/behni52wos7nkpkvkd9ih7nfi)
+
+Source publication: 2026-10-15T21:00:34.000Z
+
+在我们为此任务生成的内部测试集上，与其他 Decisions 模型以及 Claude Code 使用 Sonnet 5 的情况相比，Jev 1.13 的准确率最高、成本最低。
+
+## IBM 发布 Granite Switch 4.1 模型：单端点同时支持对话、决策与语音转写
+
+[Summary page \(en\)](https://awesomejev.cc/news/i6clqpf1gxbel4trq563k8dsa) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/i6clqpf1gxbel4trq563k8dsa) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/i6clqpf1gxbel4trq563k8dsa)
+
+[Hugging Face 社区博客（混合发现）](https://huggingface.co/blog/ibm-granite/granite-switch-4-1) · [AIHOT](https://aihot.news/items/i6clqpf1gxbel4trq563k8dsa)
+
+Source publication: 2026-10-15T20:34:01.000Z
+
+IBM Granite 团队发布 Granite-Switch-4.1-8B 和 -30B 模型，将 Decision aLoRA、专用 Guardian aLoRA 和 Granite-Speech-5.0-Turbo-CTC（OpenASR 排行榜上最快的 ASR 模型）组合进单一托管端点，可在对话、通用与专用决策、语音转写之间快速切换，显存占用约等于基础模型本身。
+
+## Liquid AI 发布多模态决策模型 d1-ultra
+
+[Summary page \(en\)](https://awesomejev.cc/news/zsnps8w2j43a8ci91q2zjv9x0) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/zsnps8w2j43a8ci91q2zjv9x0) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/zsnps8w2j43a8ci91q2zjv9x0)
+
+[Liquid AI 模型与工程博客（网页）](https://www.liquid.ai/blog/d1-ultra) · [AIHOT](https://aihot.news/items/zsnps8w2j43a8ci91q2zjv9x0)
+
+Source publication: 2026-10-15T00:00:00.000Z
+
+Liquid AI 发布多模态决策模型 d1-ultra，输入文本或图像与问题，单次前向直接返回各答案概率，不生成 token。
+
+## LangChain 发布 Interrupt NYC &amp; London 全部更新：LangSmith AI Search、Managed Deep Agents v0.9 等
+
+[Summary page \(en\)](https://awesomejev.cc/news/eksi3tu4e121lwa7t93dt6q4e) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/eksi3tu4e121lwa7t93dt6q4e) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/eksi3tu4e121lwa7t93dt6q4e)
+
+[LangChain：Blog（RSS）](https://www.langchain.com/blog/october-2026-langchain-newsletter) · [AIHOT](https://aihot.news/items/eksi3tu4e121lwa7t93dt6q4e)
+
+Source publication: 2026-10-15T16:00:00.000Z
+
+LangChain 在 Interrupt NYC 和 London 活动上发布多项 LangSmith 新功能，包括可用自然语言语义检索 trace 的 AI Search、支持用户级记忆与 Slack 交互的 Managed Deep Agents v0.9、加入 Red Teaming 的 LangSmith Engine v2。
+
+## Tessl Verifiers 正式发布，用仓库内纯文本规则检查每次 Agent 代码变更
+
+[Summary page \(en\)](https://awesomejev.cc/news/virsb1x13670yw25mr9fyxqtt) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/virsb1x13670yw25mr9fyxqtt) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/virsb1x13670yw25mr9fyxqtt)
+
+[Tessl：产品与工程博客](https://tessl.io/blog/verifiers-enforce-your-repos-rules-on-every-agent-change) · [AIHOT](https://aihot.news/items/virsb1x13670yw25mr9fyxqtt)
+
+Source publication: 2026-10-14T16:00:00.000Z
+
+Tessl 发布 Verifiers，规则以 JSON 文件形式存放在仓库中，每次代码变更时由 LLM judge 逐条给出 pass 或 fail，可像 lint 或测试一样在本地、pre-commit 或 CI 中使用。
+
 ## TypeSafe AI 发布 Jev 1.14：新增图像、Box 类型与 262k 上下文
 
 [Summary page \(en\)](https://awesomejev.cc/news/j1ruta4icorq6fmq26g713938) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/j1ruta4icorq6fmq26g713938) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/j1ruta4icorq6fmq26g713938)
@@ -22,6 +322,26 @@ News pages contain source-attributed summaries, not full articles. Publication t
 Source publication: 2026-10-15T05:45:03.000Z
 
 TypeSafe AI 发布 System One 决策模型 Jev 1.14，以 jev-preview 别名上线，新增图像输入、Box 边界框类型和 262k 长上下文三项实验性“危险区”功能。
+
+## Mercury 2 入选 TIME 2026 年度最佳发明
+
+[Summary page \(en\)](https://awesomejev.cc/news/hq3l67h54qtdpyer6zrkctyh9) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/hq3l67h54qtdpyer6zrkctyh9) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/hq3l67h54qtdpyer6zrkctyh9)
+
+[Inception Labs：Blog（网页）](https://www.inceptionlabs.ai/blog/mercury-2-named-to-time-s-best-inventions-of-2026) · [AIHOT](https://aihot.news/items/hq3l67h54qtdpyer6zrkctyh9)
+
+Source publication: 2026-10-15T07:00:00.000Z
+
+Inception Labs 的 Mercury 2 入选 TIME 2026 年度最佳发明 AI 类别，被称为首个为推理而构建的扩散 LLM。它并行生成并多轮精炼 token，速度超过 1,000 tokens/秒，比领先的速度优化 LLM 快 5 倍以上。
+
+## LangChain 详解 agent 评估常见问题：从数据集搭建到 Harbor 基准
+
+[Summary page \(en\)](https://awesomejev.cc/news/qd282rx4ek0igzw3264zfal9f) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/qd282rx4ek0igzw3264zfal9f) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/qd282rx4ek0igzw3264zfal9f)
+
+[LangChain：Blog（RSS）](https://www.langchain.com/blog/common-questions-about-agent-evals) · [AIHOT](https://aihot.news/items/qd282rx4ek0igzw3264zfal9f)
+
+Source publication: 2026-10-15T19:00:00.000Z
+
+LangChain 基于 LangSmith 团队的实践经验，回答 agent 评估最常见的入门与进阶问题：agent 输出多样、路径不唯一，传统单元测试难以覆盖，需要从 trace 中抽取 10–20 个示例建数据集、跑基线并持续把线上失败加入数据集形成改进循环。
 
 ## Jev 1.14 发布：新增图像与更长上下文
 

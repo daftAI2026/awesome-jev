@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
- * [OUTPUT]: 对外提供多环境构建、有限分页/排序产物与可信更新时间配置
- * [POS]: 根级构建编排；仅公开记录进入预渲染和计数，展示虚拟模块裁剪隐藏记录与审计字段
+ * [OUTPUT]: 提供多环境构建、三语言 MCP 指南、有限查询产物与可信更新时间
+ * [POS]: 根级构建编排；公开数据同源，MCP 索引只进入服务端模块
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { execFileSync } from 'node:child_process'
@@ -55,6 +55,7 @@ const englishPrerenderPaths = [
   ...CATEGORIES.map((category) => `/category/${category}`),
   '/top100',
   '/news',
+  '/mcp',
   '/saved',
   ...projectPaths,
   ...newsPaths,
@@ -85,7 +86,7 @@ export default defineConfig({
   // 本项目构建只需 Vite define 的 catalog 时间戳，不读取 .env.local。
   envDir: false,
   plugins: [
-    directoryCatalogPlugin(path.join(root, 'data/github.json')),
+    directoryCatalogPlugin(path.join(root, 'data/github.json'), catalogUpdatedAt),
     tailwindcss(),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tanstackStart({

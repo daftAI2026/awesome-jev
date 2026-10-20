@@ -1,12 +1,49 @@
 /**
  * [INPUT]: 依赖站点界面语义
- * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
+ * 恢复页 Jev 教学图、公开标签、MCP 接入与页脚共用语言契约
  * [OUTPUT]: 对外提供 en 文案、MessageKey 和 Messages 类型
  * [POS]: i18n/locales 的英文基准，定义所有语言必须满足的文案键
  * 首页摘要保留 Jev GitHub 目录身份；长度保持 25–160 字符
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 export const en = {
+  mcpTitle: 'Connect your AI to Awesome JEV',
+  mcpDescription: 'Search Jev projects and read their recorded inclusion evidence from your AI tools. Connect once, then ask for the projects you need.',
+  mcpReadonly: 'Public and read-only. No Awesome JEV account or API key required.',
+  mcpEndpoint: 'Server address',
+  mcpCopyAddress: 'Copy address',
+  mcpCopy: 'Copy configuration',
+  mcpCopied: 'Copied',
+  mcpCopyFailed: 'Copy failed. Select and copy the text manually.',
+  mcpConnect: 'Connect a client',
+  mcpClientLabel: 'Choose an MCP client',
+  mcpClientDocs: '{client} setup guide',
+  mcpClaudeStep1: 'Open Customize → Connectors in Claude and add a custom connector.',
+  mcpClaudeStep2: 'Name it Awesome JEV, paste the server address below, and choose No sign in.',
+  mcpClaudeStep3: 'Finish adding it, then enable the connector in your conversation. Organization policies may restrict custom connectors.',
+  mcpClaudeCodeStep1: 'Open a terminal in the project where you use Claude Code.',
+  mcpClaudeCodeStep2: 'Run the command below. It adds the remote server to that project’s local configuration.',
+  mcpClaudeCodeStep3: 'Open Claude Code, check /mcp, and approve the read-only tools when prompted.',
+  mcpCursorStep1: 'Open your project’s .cursor/mcp.json in Cursor.',
+  mcpCursorStep2: 'Merge the awesome-jev entry below into mcpServers. Keep any existing server entries.',
+  mcpCursorStep3: 'Check the MCP connection in Cursor, then let Agent use the tools when prompted.',
+  mcpCodexStep1: 'Open a terminal with the Codex CLI installed.',
+  mcpCodexStep2: 'Run the command below to add Awesome JEV to your Codex MCP configuration.',
+  mcpCodexStep3: 'Start a new Codex session and check that both tools are available. Allow read-only calls when prompted.',
+  mcpHttpStep1: 'Open your client’s MCP settings and choose a remote HTTP server.',
+  mcpHttpStep2: 'Paste the address below. Use Streamable HTTP without authentication or custom headers.',
+  mcpHttpStep3: 'Connect and list tools. The server exposes search_projects and get_project; availability depends on your client’s MCP support.',
+  mcpTools: 'Two tools, one directory',
+  mcpSearchTool: 'Search by keyword, category, tag or language. Sort by stars, name or date and request a small page of results.',
+  mcpGetTool: 'Read one project’s description, recorded inclusion evidence and source links. Renamed repositories resolve to their current address.',
+  mcpTryTitle: 'Try this after connecting',
+  mcpExample: 'Use Awesome JEV to find five TypeScript SDK projects, ordered by stars. Include each project’s directory page and GitHub source, and distinguish its description from its inclusion evidence.',
+  mcpCopyExample: 'Copy example',
+  mcpBoundariesTitle: 'Data and privacy',
+  mcpSnapshot: 'Results use the published directory snapshot, not a live GitHub lookup. The response identifies its snapshot; a listing is not a security or maintenance certification.',
+  mcpPrivacy: 'Your client sends search terms and project identifiers to our server. We do not log those arguments or request bodies. Do not send secrets.',
+  mcpCost: 'Awesome JEV does not run a model for these queries. Your AI client’s plan, usage limits and tool permissions still apply. No separate Skill is required.',
+  mcpDocument: 'Read mcp.md',
   jevFigureTitle: 'Jev makes fast, typed decisions',
   jevFigureDescription: 'Send state and typed questions. Jev selects with Choice, rates with Score, and judges truth with Noul. Your code uses the results directly, without parsing a chat reply.',
   jevDemoLabel: 'Illustrative mechanism',

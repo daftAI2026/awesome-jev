@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
- * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
+ * 恢复页 Jev 教学图、公开标签、MCP 接入与页脚共用语言契约
  * [OUTPUT]: 对外提供 zh 文案
  * [POS]: i18n/locales 的简体中文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,43 @@
 import type { Messages } from './en.ts'
 
 export const zh: Messages = {
+  mcpTitle: '让你的 AI 查询 Awesome JEV',
+  mcpDescription: '在 AI 工具中搜索 Jev 项目，读取已有收录依据。连接目录后，直接询问你需要的项目。',
+  mcpReadonly: '公开、只读。无需 Awesome JEV 账号或 API Key。',
+  mcpEndpoint: '服务地址',
+  mcpCopyAddress: '复制地址',
+  mcpCopy: '复制配置',
+  mcpCopied: '已复制',
+  mcpCopyFailed: '复制失败，请选中文字后手动复制。',
+  mcpConnect: '连接客户端',
+  mcpClientLabel: '选择 MCP 客户端',
+  mcpClientDocs: '{client} 设置文档',
+  mcpClaudeStep1: '在 Claude 中打开“自定义 → 连接器”，添加自定义连接器。',
+  mcpClaudeStep2: '名称填写 Awesome JEV，粘贴下方服务地址，选择“无需登录”。',
+  mcpClaudeStep3: '完成添加后，在对话中启用连接器。组织策略可能限制自定义连接器。',
+  mcpClaudeCodeStep1: '在使用 Claude Code 的项目目录中打开终端。',
+  mcpClaudeCodeStep2: '运行下方命令，将远程服务加入当前项目的本地配置。',
+  mcpClaudeCodeStep3: '打开 Claude Code，通过 /mcp 检查连接，并按提示允许只读工具调用。',
+  mcpCursorStep1: '在 Cursor 中打开项目的 .cursor/mcp.json。',
+  mcpCursorStep2: '将下方 awesome-jev 条目合并到 mcpServers，保留已有服务配置。',
+  mcpCursorStep3: '在 Cursor 中检查 MCP 连接，并按提示允许 Agent 使用工具。',
+  mcpCodexStep1: '打开已安装 Codex CLI 的终端。',
+  mcpCodexStep2: '运行下方命令，将 Awesome JEV 加入 Codex 的 MCP 配置。',
+  mcpCodexStep3: '启动新的 Codex 会话，确认两个工具可用，并按提示允许只读调用。',
+  mcpHttpStep1: '打开客户端的 MCP 设置，选择远程 HTTP 服务。',
+  mcpHttpStep2: '粘贴下方地址，使用 Streamable HTTP，无需认证或自定义请求头。',
+  mcpHttpStep3: '连接后列出工具，应包含 search_projects 和 get_project。客户端须支持远程 MCP。',
+  mcpTools: '两个工具，一个目录',
+  mcpSearchTool: '按关键词、分类、标签或语言查找项目。支持星标、名称和日期排序，每次返回一小页结果。',
+  mcpGetTool: '读取单个项目的简介、已有收录依据及来源链接。仓库改名后返回当前地址。',
+  mcpTryTitle: '连接后这样提问',
+  mcpExample: '用 Awesome JEV 查找五个 TypeScript SDK 项目，按星标排序。附上各项目的目录详情页和 GitHub 来源，并区分作者简介与收录依据。',
+  mcpCopyExample: '复制示例',
+  mcpBoundariesTitle: '数据与隐私',
+  mcpSnapshot: '结果来自已发布的目录快照，不实时查询 GitHub。响应标明快照版本；收录不代表安全或维护状态认证。',
+  mcpPrivacy: '客户端会将搜索词和项目标识发送到本站。我们不记录这些参数或请求正文。请勿发送密钥。',
+  mcpCost: '本站查询不调用模型。你的 AI 客户端套餐、用量限制和工具权限仍然适用，无需额外安装 Skill。',
+  mcpDocument: '阅读 mcp.md',
   jevFigureTitle: 'Jev，快速判断，直接交给代码',
   jevFigureDescription: 'Jev 接收上下文与类型化问题。Choice 选项、Score 评分、Noul 判断真值，结果供代码直接使用。',
   jevDemoLabel: '原理示意',

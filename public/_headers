@@ -11,3 +11,6 @@
 /agents/*
   Content-Type: text/markdown; charset=utf-8
   X-Content-Type-Options: nosniff
+/mcp.md
+  Content-Type: text/markdown; charset=utf-8
+  X-Content-Type-Options: nosniff

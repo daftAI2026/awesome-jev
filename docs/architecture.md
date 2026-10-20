@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: Start/Vite 边界、同版本部署与免费静态交付；保留长尾 SSR 及新闻边界
+[OUTPUT]: Start/Vite、只读 MCP 与免费静态交付边界；保留长尾 SSR
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -49,6 +49,23 @@ Start 与 Router 独立编号，不强行使用相同版本号。
 依据：[官方 RC 迁移说明](https://tanstack.com/start/latest/docs/framework/react/migrate-from-release-candidate)、[配套版本与 SSR 优化](https://github.com/TanStack/router/releases/tag/release-2026-10-12-2358)、[Cloudflare 适配](https://developers.cloudflare.com/workers/framework-guides/web-apps/tanstack-start/)。
 
 Visual tokens and restraint are defined in [design.md](design.md); current page behavior is specified in [directory-ui.md](directory-ui.md).
+
+## MCP 计算边界
+
+MCP 复用网站的不可变公开快照与同版本部署。
+`directory-catalog` 构建第三份服务端投影。
+此投影直接导出 JS 对象，不在请求中解析 JSON。
+Vite 拒绝客户端加载 `virtual:mcp-catalog`。
+三个排序与身份别名表在构建时生成。
+请求只执行有界输出的单次扫描或身份查表。
+
+`src/server.ts` 先按路径分流 `/api/mcp`。
+其他路径沿用静态交付与延迟 SSR。
+官方 MCP SDK 的 workerd shim 预热协议 schema。
+预热发生在 isolate 启动期，不在首个请求内。
+这增加启动工作，不能用 Node 热查询冒充 edge CPU。
+发布须同时验收启动、MCP 与现有页面。
+协议能力、字段及限流边界见 [agents.md](agents.md)。
 
 ## 本机产物生命周期
 

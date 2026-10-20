@@ -2,6 +2,9 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+mcp-catalog.ts: MCP 白名单快照的纯查询；只扫描构建索引，不建索引、不排序、不外联
+mcp-config.ts: MCP 正式端点、Markdown 与原生客户端配置的单一来源，不加载目录
+mcp-server.ts: 官方 SDK 的无会话协议边界；两个只读工具、有界单消息、来源校验与匿名限流
 static-delivery.ts: 有限查询页与构建 PNG 的 ASSETS 快路径；条件响应不读取图片正文，未覆盖路由保留 SSR
 catalog-visibility.ts: 唯一公开可见性规则；有生命周期标记即隐藏，原记录仍供采集和去重
 og-fonts.ts: 四份固定 OG 字库的有界读取与成功字节复用，不保存跨请求 I/O 或失败

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.daftAI2026/awesome-jev",
+  "title": "Awesome JEV",
+  "description": "Search Jev / System One projects and read their recorded inclusion evidence.",
+  "version": "1.0.0",
+  "websiteUrl": "https://awesomejev.cc/mcp",
+  "repository": {
+    "url": "https://github.com/daftAI2026/awesome-jev",
+    "source": "github",
+    "id": "1375643526"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://awesomejev.cc/api/mcp"
+    }
+  ]
+}

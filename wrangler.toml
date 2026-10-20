@@ -1,6 +1,6 @@
 # [INPUT]: 依赖 TanStack Start 构建入口与 Cloudflare Workers Static Assets
-# [OUTPUT]: 提供 Worker 兼容配置、ASSETS 绑定与免费日志
-# [POS]: 根级部署边界；目录查询由轻入口读取静态页，长尾与预览保留 SSR
+# [OUTPUT]: 提供 Worker、ASSETS、匿名 MCP 限流与免费日志
+# [POS]: 根级部署边界；静态网站与只读 MCP 共用免费额度，不引入存储
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 # Cloudflare Workers — TanStack Start 预渲染与路由回退
 # GitHub main verify → 同版本 dist 产物 → production job 直接部署；切换步骤见 docs/deployment.md
@@ -14,7 +14,15 @@ compatibility_flags = ["nodejs_compat"]
 binding = "ASSETS"
 html_handling = "drop-trailing-slash"
 # --- 轻入口按查询读取有限产物；避免第一页 HTML 覆盖 ?page=2 ---
-run_worker_first = ["/", "/zh", "/ja", "/top100", "/zh/top100", "/ja/top100", "/news", "/zh/news", "/ja/news", "/category/*", "/zh/category/*", "/ja/category/*", "/tags", "/zh/tags", "/ja/tags", "/tags/*", "/zh/tags/*", "/ja/tags/*"]
+run_worker_first = ["/api/mcp", "/", "/zh", "/ja", "/top100", "/zh/top100", "/ja/top100", "/news", "/zh/news", "/ja/news", "/category/*", "/zh/category/*", "/ja/category/*", "/tags", "/zh/tags", "/ja/tags", "/tags/*", "/zh/tags/*", "/ja/tags/*"]
+
+# --- 匿名 IP 在每个边缘位置限流；不是全局账单硬上限 ---
+[[ratelimits]]
+name = "MCP_RATE_LIMITER"
+namespace_id = "1375643526"
+[ratelimits.simple]
+limit = 120
+period = 60
 
 [secrets]
 required = []

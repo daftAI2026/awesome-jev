@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as DirectoryRouteImport } from './routes/_directory'
 import { Route as OgDotpngRouteImport } from './routes/og[.]png'
 import { Route as DirectoryChar123LocaleChar125RouteImport } from './routes/_directory.{-$locale}'
+import { Route as Char123LocaleChar125McpRouteImport } from './routes/{-$locale}.mcp'
 import { Route as Char123LocaleChar125OgWorkbenchRouteImport } from './routes/{-$locale}.og-workbench'
 import { Route as DirectoryChar123LocaleChar125IndexRouteImport } from './routes/_directory.{-$locale}.index'
 import { Route as DirectoryChar123LocaleChar125NewsRouteImport } from './routes/_directory.{-$locale}.news'
@@ -41,6 +42,11 @@ const DirectoryChar123LocaleChar125Route =
     path: '/{-$locale}',
     getParentRoute: () => DirectoryRoute,
   } as any)
+const Char123LocaleChar125McpRoute = Char123LocaleChar125McpRouteImport.update({
+  id: '/{-$locale}/mcp',
+  path: '/{-$locale}/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Char123LocaleChar125OgWorkbenchRoute =
   Char123LocaleChar125OgWorkbenchRouteImport.update({
     id: '/{-$locale}/og-workbench',
@@ -122,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/': typeof DirectoryRouteWithChildren
   '/og.png': typeof OgDotpngRoute
   '/{-$locale}': typeof DirectoryChar123LocaleChar125RouteWithChildren
+  '/{-$locale}/mcp': typeof Char123LocaleChar125McpRoute
   '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof DirectoryRouteWithChildren
   '/og.png': typeof OgDotpngRoute
+  '/{-$locale}/mcp': typeof Char123LocaleChar125McpRoute
   '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/_directory': typeof DirectoryRouteWithChildren
   '/og.png': typeof OgDotpngRoute
   '/_directory/{-$locale}': typeof DirectoryChar123LocaleChar125RouteWithChildren
+  '/{-$locale}/mcp': typeof Char123LocaleChar125McpRoute
   '/{-$locale}/og-workbench': typeof Char123LocaleChar125OgWorkbenchRoute
   '/_directory/{-$locale}/news': typeof DirectoryChar123LocaleChar125NewsRoute
   '/_directory/{-$locale}/saved': typeof DirectoryChar123LocaleChar125SavedRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/'
     | '/og.png'
     | '/{-$locale}'
+    | '/{-$locale}/mcp'
     | '/{-$locale}/og-workbench'
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/og.png'
+    | '/{-$locale}/mcp'
     | '/{-$locale}/og-workbench'
     | '/{-$locale}/news'
     | '/{-$locale}/saved'
@@ -213,6 +224,7 @@ export interface FileRouteTypes {
     | '/_directory'
     | '/og.png'
     | '/_directory/{-$locale}'
+    | '/{-$locale}/mcp'
     | '/{-$locale}/og-workbench'
     | '/_directory/{-$locale}/news'
     | '/_directory/{-$locale}/saved'
@@ -231,6 +243,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   DirectoryRoute: typeof DirectoryRouteWithChildren
   OgDotpngRoute: typeof OgDotpngRoute
+  Char123LocaleChar125McpRoute: typeof Char123LocaleChar125McpRoute
   Char123LocaleChar125OgWorkbenchRoute: typeof Char123LocaleChar125OgWorkbenchRoute
   ApiOgSiteRoute: typeof ApiOgSiteRoute
   Char123LocaleChar125NewsIdRoute: typeof Char123LocaleChar125NewsIdRoute
@@ -260,6 +273,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}'
       preLoaderRoute: typeof DirectoryChar123LocaleChar125RouteImport
       parentRoute: typeof DirectoryRoute
+    }
+    '/{-$locale}/mcp': {
+      id: '/{-$locale}/mcp'
+      path: '/{-$locale}/mcp'
+      fullPath: '/{-$locale}/mcp'
+      preLoaderRoute: typeof Char123LocaleChar125McpRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/{-$locale}/og-workbench': {
       id: '/{-$locale}/og-workbench'
@@ -407,6 +427,7 @@ const DirectoryRouteWithChildren = DirectoryRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   DirectoryRoute: DirectoryRouteWithChildren,
   OgDotpngRoute: OgDotpngRoute,
+  Char123LocaleChar125McpRoute: Char123LocaleChar125McpRoute,
   Char123LocaleChar125OgWorkbenchRoute: Char123LocaleChar125OgWorkbenchRoute,
   ApiOgSiteRoute: ApiOgSiteRoute,
   Char123LocaleChar125NewsIdRoute: Char123LocaleChar125NewsIdRoute,

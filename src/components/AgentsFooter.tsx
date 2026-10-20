@@ -1,11 +1,12 @@
 /**
  * [INPUT]: 依赖路由语言、公开入口与 OpenFree 原版布局/品牌资产
- * [OUTPUT]: 提供 AgentsFooter 机器文档导航和五个品牌外链
+ * [OUTPUT]: 提供 AgentsFooter 机器文档、MCP 接入页导航和五个品牌外链
  * [POS]: components 的独立 Footer 区块；App 保留社区说明与页脚布局
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { useI18n } from '@/i18n'
 import { AGENT_DOCUMENT_PATHS, agentChatLinks } from '@/lib/agent-links'
+import { localizedPath } from '@/lib/locale-routes'
 
 export function AgentsFooter() {
   const { locale, t } = useI18n()
@@ -20,6 +21,10 @@ export function AgentsFooter() {
             {path.replace(/^\/(agents\/)?/, '')}
           </a>
         ))}
+          <a href={localizedPath('/mcp', locale)}
+            className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
+            MCP
+          </a>
         </div>
       </nav>
       <div className="flex flex-col gap-5 py-7 sm:flex-row sm:items-center sm:justify-between">

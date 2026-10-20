@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Node test、规范目录、展示投影与安装的 Vite 多环境模块图
- * [OUTPUT]: 对外提供公开目录展示等价、审计字段排除与热更新一致性的离线回归断言
+ * [OUTPUT]: 验证展示等价、MCP 服务端隔离、字段白名单与跨环境热更新
  * [POS]: scripts 的构建投影验收，不启动产品构建或调用网络/付费模型
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -16,6 +16,7 @@ import type { DirectoryCatalogItem } from './directory-catalog.ts'
 import { searchItems } from '../src/lib/search.ts'
 import { githubStarRanks, sortGithubItems } from '../src/lib/sort.ts'
 import { publicProjects } from '../src/lib/catalog-visibility.ts'
+import { buildMcpCatalog, MCP_CATALOG_ID } from './mcp-catalog.ts'
 
 const full = publicProjects(JSON.parse(readFileSync(new URL('../data/github.json', import.meta.url), 'utf8')) as DirectoryCatalogItem[])
 const metaFields = ['stars', 'forks', 'language', 'author', 'date', 'repo', 'inclusion'] as const
@@ -109,6 +110,45 @@ test('installed Vite loads only the projection and invalidates client and SSR to
       assert.ok((await environment.transformRequest('/github.json'))?.code.includes(revised.title))
     }
     assert.equal(await Reflect.apply(hook, { environment: server.environments.client }, [{ ...event, file: join(root, 'unrelated.json') }]), undefined)
+  } finally {
+    await server.close()
+    rmSync(root, { recursive: true, force: true })
+  }
+})
+
+test('MCP virtual catalog is a server-only JS object with shared history timestamp and HMR invalidation', async () => {
+  const root = realpathSync(mkdtempSync(join(tmpdir(), 'jev-mcp-plugin-')))
+  const file = join(root, 'github.json'), timestamp = '2026-10-21T00:00:00Z'
+  writeFileSync(file, JSON.stringify([full[0]]))
+  writeFileSync(join(root, 'news.json'), '[]')
+  const plugin = directoryCatalogPlugin(file, timestamp)
+  const server = await createServer({ configFile: false, root, plugins: [plugin], logLevel: 'silent',
+    server: { middlewareMode: true, watch: { ignored: ['**/*'] } }, optimizeDeps: { noDiscovery: true, include: [] } })
+  try {
+    const output = await server.environments.ssr.transformRequest(MCP_CATALOG_ID)
+    assert.ok(output?.code.includes(full[0].title))
+    assert.ok(output?.code.includes('2026-10-21T00:00:00.000Z'))
+    assert.ok(!output?.code.includes('JSON.parse'))
+    assert.ok(!output?.code.includes('jevAbout'))
+    await assert.rejects(server.environments.client.transformRequest(MCP_CATALOG_ID), /server.only/i)
+    const load = typeof plugin.load === 'function' ? plugin.load : plugin.load?.handler
+    assert.ok(load)
+    const watched: string[] = []
+    const code = await Reflect.apply(load, { environment: server.environments.ssr, addWatchFile: (path: string) => watched.push(path) }, [`\0${MCP_CATALOG_ID}`])
+    assert.equal(typeof code, 'string')
+    const module = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)
+    assert.deepEqual(module.default, buildMcpCatalog([full[0]], timestamp))
+    assert.ok(watched.includes(file))
+    const revised = structuredClone(full[0]); revised.summary = 'MCP updated snapshot'
+    writeFileSync(file, JSON.stringify([revised]))
+    const hook = typeof plugin.hotUpdate === 'function' ? plugin.hotUpdate : plugin.hotUpdate?.handler
+    assert.ok(hook)
+    const event: HotUpdateOptions = { type: 'update', file, timestamp: Date.now(), modules: [], read: () => readFileSync(file, 'utf8'), server }
+    await Reflect.apply(hook, { environment: server.environments.ssr }, [event])
+    assert.equal(server.environments.ssr.moduleGraph.getModuleById(`\0${MCP_CATALOG_ID}`)?.transformResult, null)
+    const updated = await server.environments.ssr.transformRequest(MCP_CATALOG_ID)
+    assert.ok(updated?.code.includes(revised.summary))
+    assert.ok(!updated?.code.includes('2026-10-21T00:00:00.000Z'), 'dirty development snapshots must not claim the original Git timestamp')
   } finally {
     await server.close()
     rmSync(root, { recursive: true, force: true })

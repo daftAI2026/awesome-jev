@@ -19,6 +19,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/news" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/mcp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/mcp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/mcp" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/mcp" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/category/agents</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/agents" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/agents" />
@@ -22969,6 +22975,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/news" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/mcp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/mcp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/mcp" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/mcp" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/category/agents</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/category/agents" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/category/agents" />
@@ -45917,6 +45929,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/news" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/news" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/news" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/mcp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/mcp" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/mcp" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/mcp" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/category/agents</loc>

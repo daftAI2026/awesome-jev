@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖规范项目/新闻快照、公开可见性、路径身份与语言 alternates
  * [OUTPUT]: 对外提供 buildSitemap、generateSitemap 与离线生成命令
- * [POS]: scripts 的有限索引资产边界；标签共用公开投影；不收录长尾、收藏、工作台或图片 API，不伪造 lastmod
+ * [POS]: scripts 的有限索引资产边界；收录 MCP 指南，不收录 API、长尾和私有界面
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -91,7 +91,7 @@ export function buildSitemap(items: readonly unknown[], origin = SITE_ORIGIN, ne
   const tagPaths = projectTagIndex(taggedProjects)
     .filter((entry) => entry.count >= TAG_INDEX_MIN_PROJECTS)
     .map((entry) => entry.path)
-  const englishPaths = ['/', '/top100', '/news', ...categoryPaths, ...projectPaths, ...newsPaths, '/tags', ...tagPaths]
+  const englishPaths = ['/', '/top100', '/news', '/mcp', ...categoryPaths, ...projectPaths, ...newsPaths, '/tags', ...tagPaths]
   const paths = LOCALES.flatMap((locale) => englishPaths.map((path) => localizedPath(path, locale)))
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',

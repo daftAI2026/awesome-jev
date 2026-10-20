@@ -2,7 +2,7 @@
 
 > Awesome JEV (awesome-jev): a free GitHub directory for TypeSafe Jev / System One. Find official SDKs, agent tools, open-source alternatives and Jev news.
 
-Snapshot: 2199 GitHub projects; 342 news summaries.
+Snapshot: 3103 GitHub projects; 374 news summaries.
 
 ## Public documents
 

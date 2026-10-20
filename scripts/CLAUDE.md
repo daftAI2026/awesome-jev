@@ -2,6 +2,12 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+mcp-catalog.ts: 规范快照生成公开 MCP 白名单、身份表和三种排序；单项 UTF-8 JSON 超过 4096 B 阻止构建
+mcp-catalog.test.ts: MCP 字段隔离、迁址、隐藏、新身份接管旧地址、全目录排序等价与容量边界
+mcp-config.test.ts: 正式端点、五客户端原生配置与三语言键的接入契约
+mcp-server.test.ts: 官方客户端新旧协议、只读工具、单消息容量、来源校验与失败封闭限流
+mcp-delivery.test.ts: 真实 Worker MCP、三语言静态指南、Markdown 与浏览器隔离门禁
+mcp-docs.test.ts: 客户端配置、公开 Markdown 与 Registry 元数据的一致性门禁
 generate-og.ts: Node 构建期 PNG 生成与过期版本回收；校验免费 20000 文件上限，不写 public 源文件
 generate-og.test.ts: 公开计数、隐藏身份、构建失败和免费容量的离线回归
 static-catalog.ts: 构建有限分页/排序与可索引标签清单；隔离 Start 双次解码，公开 URL 与资产身份不变
@@ -53,13 +59,13 @@ catalog.ts: GitHub 规范目录的嵌套类型/数字身份唯一与旧地址安
 category-order.test.ts: Node test 分类排序与手机版固定两行/桌面 Flex 控制栏契约，运行 npm test
 code-discovery.test.ts: Node test code-discovery 的契约与回归验证，运行 npm test
 code-discovery.ts: 代码搜索线索与固定提交内容证据提取
-directory-catalog.test.ts: 身份基线/审计字段不泄漏、全目录展示/检索/排序等价及真实 Vite client/SSR 热更新的投影回归
-directory-catalog.ts: 展示投影与静态交付双虚拟模块；两份快照热更新失效，隐藏历史与审计留在规范数据
+directory-catalog.test.ts: 展示等价、MCP 服务端隔离与真实 Vite client/SSR 热更新回归
+directory-catalog.ts: 展示/交付/MCP 三种投影；MCP 直接导出 JS 对象，共享可信时间，禁止客户端加载
 og-image.test.ts: 同键并发合并/失败重试、真实 WASM PNG、白底排版与版本/缓存边界回归
 og-delivery.test.ts: Worker 冷并发响应体独立、PNG 与缓存/条件请求、三语言项目元数据与生产工作台 GET/HEAD/查询参数的 404 隔离检查
 share-image.test.ts: 项目图片身份与共享 OG/Twitter 元数据契约
 generate-sitemap.test.ts: Node 三语言有限索引、摘要门槛、同义标签/长尾排除与身份唯一回归
-generate-sitemap.ts: 生成三种语言的有限索引与至少三项目共用的公开标签页，排除收藏和不足摘要
+generate-sitemap.ts: 三语言有限索引、MCP 指南与共用标签，排除 API、收藏和不足摘要
 github-client.test.ts: 响应头与正文共同区分主/次级限流，阶段响应体截止、读写隔离与未知写入不重试回归
 github-ref-cleanup.ts: 专用单 ref updateRefs expected SHA 删除能力，无通用 GraphQL 写入口或自动重试
 github-ref-cleanup.test.ts: 专用 CAS 删除能力的固定 mutation、expected SHA 与未知写入不重试回归
@@ -114,7 +120,7 @@ submission-intake-workflow.test.ts: Node test 执行隔离 Bash/gh 交接命令�
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
 verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理
-verify-delivery.ts: 构建后零跳过页面/OG/Agents/分页/标签 HTTP 与模块图验收，只拥有自有预览生命周期
+verify-delivery.ts: 构建后零跳过页面/OG/Agents/MCP/分页/标签验收，只拥有自有预览生命周期
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

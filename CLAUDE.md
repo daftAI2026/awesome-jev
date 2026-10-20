@@ -2,7 +2,7 @@
 React 19 + TypeScript 6 + TanStack Start 1.169.1 / Router 1.170.44 + Vite 8（安全基线 8.3.4）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24
 
 <directory>
-src/ - 路由、目录界面、共享纯工具与 OG 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
+src/ - 路由、目录界面、共享纯工具及 OG/MCP 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
 data/ - GitHub 项目与 AIHOT 新闻的独立 JSON 快照，容量告警/发布门槛见局部地图
 docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为准
 scripts/ - 同 ID 自动迁址、持续失效可逆下架与原预算身份复核、独立全目录元数据同步、残页背压/交替审核、精确状态部署等价、自动 GitHub 身份建基线、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
@@ -15,11 +15,12 @@ radar/ - 生态与替代实现的状态及发布报告
 .gitignore - 排除本机日志、构建、浏览器与 Start/Workers 缓存；不排除正式脚本和测试
 .oxlintrc.json - 本站 lint 规则；排除固定版本第三方 Anatomy 原件，不改上游源码消除告警
 package.json - Node 24、Start ^1.169.1 / Router ^1.170.44 与 Vite ^8.3.4 安全基线及构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
-vite.config.ts - 展示与交付清单、有限分页/排序及可索引标签的三语言预渲染，保留原页面身份
-wrangler.toml - awesome-jev-project Worker、查询页静态分发、ASSETS 与免费日志配置
+vite.config.ts - 展示/交付/MCP 投影、三语言有限页面与 MCP 指南预渲染
+wrangler.toml - awesome-jev-project Worker、静态分发、ASSETS、匿名 MCP 限流与免费日志
+server.json - 官方 MCP Registry 元数据；服务版本独立于网站包版本，远端指向 /api/mcp
 src/index.css - 唯一语义主题、字体与视觉 token
 src/start.ts - Start 服务端错误公开序列化边界
-src/server.ts - Worker 先读取已构建页面/PNG，未覆盖请求延迟加载 ssr-handler
+src/server.ts - MCP 启动期预热；页面读取已构建产物，未覆盖请求延迟加载 ssr-handler
 </config>
 
 仓库开启 `delete_branch_on_merge`，本仓已合并 PR 的来源分支统一由 GitHub 原生回收，不区分人工或机器人；合并后的清理不另建链路；未合并的明确不匹配纯投稿 PR 由独立拒收门关闭，本仓合格分支以原审核 head 做 CAS 回收并记终态，不管理外部 fork。权限与安全边界见 docs/collector.md。
@@ -41,6 +42,15 @@ src/server.ts - Worker 先读取已构建页面/PNG，未覆盖请求延迟加�
 公开标签由原始 tags 派生，不重写来源。明确同义名称合并，泛生态词排除。三项目共用标签进入 /tags 与 sitemap；长尾详情可导航但 noindex，未知标签返回 404。标签页复用原目录检索/排序/分页；达到索引门槛的标签进入有限预渲染，长尾仍 noindex。详情末尾单列展示分类和标签；目录/详情页脚提供分类和热门标签内链。Action bot 保留原始来源与审核门槛，不为标签新增付费请求。只统计 GitHub 出站、分类和相关项目点击，不统计搜索词或本机收藏；开发环境不加载 Umami，失败不阻塞导航。
 
 Agents 页脚复用三语言与本站主题，布局/品牌资产/按钮名称沿用 OpenFree 原版。构建从规范项目/新闻快照生成 llms.txt、llms-full.txt 和八份互链 Markdown，不输出审核分数、本机收藏或凭据。Static Assets 的 _headers 明确 TXT/Markdown 媒体类型。聊天入口仅传同一公开问题，不调用 API；五品牌端点沿用原版；只替换本站公开问题与文档地址，不增加免责声明段落。
+
+MCP 接入页为三语言 /mcp，协议入口为 /api/mcp，机器说明为 /mcp.md。
+只提供 search_projects 和 get_project，公开匿名只读，不调用 AI 或 GitHub。
+构建期投影白名单、身份别名、检索文本和排序。请求不重建索引。
+SDK 2.3.1 的 workerd 校验器在 isolate 启动期预热，避免首请求懒加载开销。
+协议拒绝批量消息，正文最多 16 KiB，单页最多 20 项。
+匿名 IP 每个边缘位置每分钟 120 次；此规则不是全局账单硬上限。
+无数据库、KV、Durable Objects、账户或新增 Workflow。仍共享 Workers Free 配额。
+MCP 不改变现有网页、README 的收录及下架规则。公开指南不保证目录收录或排名。
 
 访问地址: https://awesomejev.cc；站点地图: https://awesomejev.cc/sitemap.xml。
 本站区域已开启 Always Use HTTPS。HTTP 在边缘 301 到同路径 HTTPS，并保留查询参数；设置独立于 Worker 制品，不新增应用跳转或 HSTS。回滚与验收见 docs/deployment.md。

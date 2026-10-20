@@ -1,10 +1,43 @@
 <!--
 [INPUT]: 依赖 site 工作流、production 环境、Workers 构建触发器与区域设置
-[OUTPUT]: 提供同版本部署、免费 CPU/资产门槛、HTTPS 与区域防护边界
+[OUTPUT]: 提供同版本部署、MCP/网站免费 CPU 门槛与区域防护边界
 [POS]: docs 的站点发布契约；采集准入归 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 # 站点部署
+
+## MCP 发布门禁
+
+保留现有 `site` 同版本构建、交付和部署链。
+不新增 Action、付费套餐、模型或存储服务。
+`/mcp` 三语言页面与 `/mcp.md` 走静态资产。
+`/api/mcp` 与网站共享 Workers Free 请求额度。
+Native RateLimit 绑定为 `MCP_RATE_LIMITER`。
+namespace `1375643526` 专用于本站 MCP。
+上线前核对账号中无同 namespace 冲突。
+匿名 IP 在每个边缘位置限流 120 次/60 秒。
+本机模拟、单位置限流不证明全局防刷能力。
+
+执行 typecheck、lint、test、build、test:delivery。
+MCP 交付测试使用真实 Worker 与官方客户端。
+它覆盖新旧协议、隐藏身份、三语言和媒体类型。
+新版测试显式固定 `2026-07-28` 并断言协议版本和 era。
+SDK 版本不代表客户端实际协商的协议版本。
+SDK 与 MCP 投影不得进入浏览器 JavaScript。
+构建继续执行免费静态资产数量门禁。
+Worker isolate 启动须低于平台启动上限。
+MCP 首次请求、热请求与已有页面分别测 CPU。
+使用 CF-Ray 将主动请求对照同版本日志。
+HTTP 200、本机毫秒与缓存命中均不是 CPU 证明。
+所有主动样本必须低于免费 10ms，且 outcome 正常。
+未达到门禁时修复或回滚，不提交目录。
+
+生产验收后校验 `server.json` 并发布官方 Registry。
+服务版本独立于网站 package 的内部版本。
+读取 Registry 最新记录确认名称、版本与端点。
+Glama 另行提交公共 Connector，并读取结果。
+遇到账户注册或条款确认时请求用户操作。
+不得把已提交、审核中与已收录写成同一状态。
 
 ## 免费 CPU 与静态交付
 

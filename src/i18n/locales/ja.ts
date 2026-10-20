@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖站点界面语义与英文 Messages 键契约
- * 恢复页 Jev 教学图、公开标签与页脚共用语言契约
+ * 恢复页 Jev 教学图、公开标签、MCP 接入与页脚共用语言契约
  * [OUTPUT]: 对外提供 ja 文案
  * [POS]: i18n/locales 的日文；首页介绍与搜索摘要共用 Jev GitHub 目录定位
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,43 @@
 import type { Messages } from './en.ts'
 
 export const ja: Messages = {
+  mcpTitle: 'AI から Awesome JEV を検索',
+  mcpDescription: 'AI ツールから Jev のプロジェクトを検索し、記録された掲載根拠を確認できます。接続後は、必要なプロジェクトをそのまま質問できます。',
+  mcpReadonly: '公開・読み取り専用。Awesome JEV のアカウントや API キーは不要です。',
+  mcpEndpoint: 'サーバーのアドレス',
+  mcpCopyAddress: 'アドレスをコピー',
+  mcpCopy: '設定をコピー',
+  mcpCopied: 'コピーしました',
+  mcpCopyFailed: 'コピーできませんでした。テキストを選択してコピーしてください。',
+  mcpConnect: 'クライアントに接続',
+  mcpClientLabel: 'MCP クライアントを選択',
+  mcpClientDocs: '{client} の設定ガイド',
+  mcpClaudeStep1: 'Claude の「カスタマイズ → コネクタ」でカスタムコネクタを追加します。',
+  mcpClaudeStep2: '名前に Awesome JEV、URL に下のアドレスを入力し、サインイン不要を選択します。',
+  mcpClaudeStep3: '追加後、会話でコネクタを有効にします。組織のポリシーによって利用が制限される場合があります。',
+  mcpClaudeCodeStep1: 'Claude Code を使うプロジェクトのディレクトリでターミナルを開きます。',
+  mcpClaudeCodeStep2: '下のコマンドで、リモートサーバーをそのプロジェクトのローカル設定に追加します。',
+  mcpClaudeCodeStep3: 'Claude Code の /mcp で接続を確認し、求められたら読み取り専用ツールを許可します。',
+  mcpCursorStep1: 'Cursor でプロジェクトの .cursor/mcp.json を開きます。',
+  mcpCursorStep2: '既存の設定を残し、下の awesome-jev エントリーを mcpServers に追加します。',
+  mcpCursorStep3: 'Cursor の MCP 接続を確認し、求められたら Agent にツールの利用を許可します。',
+  mcpCodexStep1: 'Codex CLI がインストールされたターミナルを開きます。',
+  mcpCodexStep2: '下のコマンドで Awesome JEV を Codex の MCP 設定に追加します。',
+  mcpCodexStep3: '新しい Codex セッションで二つのツールを確認し、求められたら読み取り専用の呼び出しを許可します。',
+  mcpHttpStep1: 'クライアントの MCP 設定でリモート HTTP サーバーを選択します。',
+  mcpHttpStep2: '下のアドレスを入力します。認証や独自ヘッダーは不要で、Streamable HTTP を使用します。',
+  mcpHttpStep3: '接続後、search_projects と get_project が表示されることを確認します。リモート MCP に対応したクライアントが必要です。',
+  mcpTools: '二つのツール、一つのディレクトリ',
+  mcpSearchTool: 'キーワード、カテゴリ、タグ、言語で検索します。スター数、名前、日付で並べ替え、少量の結果をページ単位で取得できます。',
+  mcpGetTool: '一つのプロジェクトの説明、掲載根拠、出典リンクを取得します。改名されたリポジトリは現在のアドレスに解決されます。',
+  mcpTryTitle: '接続後に試す質問',
+  mcpExample: 'Awesome JEV で TypeScript の SDK プロジェクトをスター順に五つ探してください。各プロジェクトの詳細ページと GitHub の出典を示し、作者の説明と掲載根拠を区別してください。',
+  mcpCopyExample: '質問をコピー',
+  mcpBoundariesTitle: 'データとプライバシー',
+  mcpSnapshot: '結果は公開済みのディレクトリのスナップショットです。GitHub をその場では取得しません。応答にはバージョンを含み、掲載は安全性や保守状況の認証を意味しません。',
+  mcpPrivacy: '検索語とプロジェクト識別子は当サイトへ送信されます。これらの引数やリクエスト本文はログに記録しません。秘密情報を送らないでください。',
+  mcpCost: '当サイトの検索はモデルを呼び出しません。AI クライアント側のプラン、利用上限、ツール権限は引き続き適用されます。別の Skill は不要です。',
+  mcpDocument: 'mcp.md を読む',
   jevFigureTitle: 'Jev は素早く、型付きで判断します',
   jevFigureDescription: '文脈と型付きの質問を渡します。Jev は Choice で選択し、Score で採点し、Noul で真偽を判定します。チャット文を解析せず、コードが結果を直接使います。',
   jevDemoLabel: '仕組みの例',

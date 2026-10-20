@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有语义主题、组件原语与已验收交互
-[OUTPUT]: 页面、分享图、工作台与 Agents 页脚的视觉契约
+[OUTPUT]: 页面、分享图、工作台、Agents 页脚与 MCP 接入的视觉契约
 [POS]: docs 的视觉权威；实现 token 仍归 src/index.css
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -99,3 +99,13 @@ Use the actual source SVGs, including the four-color Gemini star and Grok app ma
 ## Directory pagination
 
 Retain card heights, masonry/list layouts, Geist and the existing neutral theme. Use the shadcn base-nova Pagination composition with our Base UI Button and Phosphor carets. Place bounded controls only below each result section, with a centered 12px tabular result range. Use existing outline active-page and ghost inactive-page variants, visible focus, and disabled boundary controls. At narrow widths, keep the complete row on one line and hide only Previous/Next visible text; localized accessible names remain. Do not add scrolling animations, page-size menus or another table/data-fetching framework.
+
+## MCP setup page
+
+`/mcp`, `/zh/mcp` and `/ja/mcp` share `McpPage`. Use the existing 56px header, theme/language menus, Geist and one continuous semantic-theme canvas. Keep the reading column within `max-w-3xl`. The address and client configuration are the visual anchors; tools and data boundaries remain plain text separated by space or a quiet divider.
+
+Use the installed `ToggleGroup` for Claude, Claude Code, Cursor, Codex and generic Streamable HTTP. Each choice shows three steps, one copyable native configuration and the client's official documentation. Keep client commands in the shared `mcp-config` module. No account dashboard, credits, API-key form, invented one-click install link or third-party logo set belongs on this public read-only page.
+
+Use the existing `Button` for copy actions. Announce copy success through a live status. Clipboard failure leaves selectable text and a manual-copy instruction. Switching clients resets its configuration's copy state. Wrap long addresses and code; let client choices wrap instead of shrinking controls. Preserve the skip link, one descriptive heading, source order, visible keyboard focus and localized footer entry.
+
+No decorative motion is added. Existing button press and focus feedback remain. Explain snapshot freshness, query transmission, read-only tools and client-side costs beside the `/mcp.md` link. Do not present the Markdown document as a required Skill or promise support on every client plan.

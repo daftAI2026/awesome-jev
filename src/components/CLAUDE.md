@@ -2,11 +2,12 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+McpPage.tsx: 公开接入页；客户端切换与复制复用原主题，无账户、连接探测或远端请求
 RecoveryPage.tsx: 404/500 共用恢复动作与 Jev 教学图；桌面 subgrid 共用分割线行，不读取目录或异常正文
 RouteErrorPage.tsx: 根路由错误/断网适配器，重载当前地址重试，不输出内部异常
 DirectoryBrowseFooter.tsx: 三语言分类与十二个热门标签内链，目录和独立详情共用
 DirectoryPagination.tsx: Router 真实页码链接、范围与翻页焦点；只归一越界请求，不用旧服务端页撤销翻页
-AgentsFooter.tsx: React 公开文档与五个聊天品牌入口，复用本站主题/路由语言与 OpenFree 原版按钮布局
+AgentsFooter.tsx: 公开文档、同语言 MCP 指南与五个聊天品牌入口，复用原版按钮布局
 AsciiWordmark.tsx: 原始字符字标，CSS 容器宽度适配
 CardMasonry.tsx: 有序项目虚拟瀑布流，预就绪保持 SSR 前缀与阅读位置，就绪提交同步接管有界窗口
 DecryptedBrand.tsx: 品牌链接与悬停解码适配，遵循减少动态效果偏好
