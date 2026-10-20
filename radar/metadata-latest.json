@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "182633c8322d1090ce7b81bf47693dbfacab0f76",
-  "at": "2026-10-20T12:41:42.087Z",
+  "baselineSha": "de29e0f57855eb5666963851a74807de90657133",
+  "at": "2026-10-20T17:57:28.057Z",
   "totalProjects": 3121,
   "metadata": {
-    "ok": 3097,
-    "failed": 24,
+    "ok": 3077,
+    "failed": 44,
     "batches": 64,
     "cost": 64,
     "other": 3021,
-    "remaining": 24,
+    "remaining": 44,
     "attempted": 3121,
-    "fresh": 3097,
-    "unavailable": 24,
+    "fresh": 3077,
+    "unavailable": 44,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -24,9 +24,24 @@
     },
     "resolved": [
       {
-        "from": "gogoymh/jev-backed-function-calling",
-        "to": "gogoymh/decision-model-guided-function-calling",
-        "databaseId": 1424144867
+        "from": "jevplays-games/jev-factorio-agent",
+        "to": "jevplay-games/jev-factorio-agent",
+        "databaseId": 1379060982
+      },
+      {
+        "from": "jevplays-games/jev-connect-four",
+        "to": "jevplay-games/jev-connect-four",
+        "databaseId": 1380948075
+      },
+      {
+        "from": "jevplays-games/jev-sudoku-analytics",
+        "to": "jevplay-games/jev-sudoku-analytics",
+        "databaseId": 1380948475
+      },
+      {
+        "from": "jevplays-games/jev-tic-tac-toe",
+        "to": "jevplay-games/jev-tic-tac-toe",
+        "databaseId": 1380948551
       }
     ]
   },
@@ -137,6 +152,21 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-18-leoniekarabacak542-jevcore",
+      "repo": "leoniekarabacak542/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-12-michelle8961-building-with-typesafe-jev",
+      "repo": "michelle8961/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-omarfischer4315-jevcore",
+      "repo": "omarfischer4315/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-5-yinjs-claude-jev",
       "repo": "yinjs/claude-jev",
       "reason": "github-unavailable-repository"
@@ -147,16 +177,101 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-18-husseinteixeira814-jevmem",
+      "repo": "husseinteixeira814/jevmem",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-11-ericpatel80-jevcore",
+      "repo": "ericpatel80/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-11-butler48171-jevmem",
+      "repo": "butler48171/jevmem",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-juliaowens06112-building-with-typesafe-jev",
+      "repo": "juliaowens06112/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-linakuznetsov47-jevcore",
+      "repo": "linakuznetsov47/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-13-sabinelin7674-jev-browser",
+      "repo": "sabinelin7674/jev-browser",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-evgenykondo7263-jev-social",
+      "repo": "evgenykondo7263/jev-social",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-16-gregorysimmons82-building-with-typesafe-jev",
+      "repo": "gregorysimmons82/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-10-samnewport-jev-reflex",
       "repo": "samnewport/jev-reflex",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-14-demetcosta2224-building-with-typesafe-jev",
+      "repo": "demetcosta2224/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-hughes941-jev-social",
+      "repo": "hughes941/jev-social",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-irene6070-building-with-typesafe-jev",
+      "repo": "irene6070/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-nomura163-jevmem",
+      "repo": "nomura163/jevmem",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-12-ruthgarcia10-jevcore",
+      "repo": "ruthgarcia10/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-12-wolfgang7570-building-with-typesafe-jev",
+      "repo": "wolfgang7570/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-11-yamamoto431-jevcore",
+      "repo": "yamamoto431/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-19-andreaesposito38663-jev-social",
+      "repo": "andreaesposito38663/jev-social",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-16-aranyatrinh61946-building-with-typesafe-jev",
+      "repo": "aranyatrinh61946/building-with-typesafe-jev",
       "reason": "github-unavailable-repository"
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 4,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
-    "checked": 22
+    "checked": 42
   }
 }
