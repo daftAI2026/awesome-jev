@@ -5593,5 +5593,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/20/cloudflare-releases-clairic-a-system-one-extraction-model-on-workers-ai/",
     "aihotUrl": "https://aihot.news/items/k5fynws6ik9ilerxjmpc8cpu6"
+  },
+  {
+    "id": "cmogljyljyvsca3w4yomzmepu",
+    "title": "Cloudflare 发布 Clairic 模型，从文档抽取数据比 LLM 更快更省",
+    "originalTitle": "Cloudflare's Clairic pulls data from documents faster and cheaper than LLMs",
+    "summary": "Cloudflare 发布文档数据抽取模型 Clairic，已在 Workers AI 开放预览，开放权重即将推出。用户指定所需字段后，模型单次调用即返回格式化值和置信度，缺失值返回 null，不做逐 token 生成，还可处理简单计算、估算和预测。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-10-20T12:04:56.000Z",
+    "discoveredAt": "2026-10-20T12:30:19.756Z",
+    "category": "ai-products",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://the-decoder.com/cloudflares-clairic-pulls-data-from-documents-faster-and-cheaper-than-llms/",
+    "aihotUrl": "https://aihot.news/items/cmogljyljyvsca3w4yomzmepu"
   }
 ]
