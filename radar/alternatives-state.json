@@ -250,7 +250,7 @@
         "checkedAt": "2026-10-15T14:24:03.550Z"
       },
       "retryAt": "2026-10-22T14:24:03.550Z",
-      "stars": 36
+      "stars": 37
     },
     "yunhai-dev/laya2typesafeapi": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-15T00:05:33.347Z"
       },
       "retryAt": "2026-10-22T00:05:33.347Z",
-      "stars": 33707
+      "stars": 33767
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-15T00:05:33.347Z"
       },
       "retryAt": "2026-10-22T00:05:33.347Z",
-      "stars": 1591
+      "stars": 1592
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-15T14:24:03.550Z"
       },
       "retryAt": "2026-10-22T14:24:03.550Z",
-      "stars": 8156
+      "stars": 8163
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1678,7 +1678,7 @@
         "checkedAt": "2026-10-20T14:29:29.350Z"
       },
       "retryAt": "2026-10-27T14:29:29.350Z",
-      "stars": 0
+      "stars": 1
     },
     "esterhuizen/system-one-on-snapdragon": {
       "status": "review",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-15T08:35:08.344Z"
       },
       "retryAt": "2026-10-22T08:35:08.344Z",
-      "stars": 217
+      "stars": 222
     },
     "phocinae/.github": {
       "status": "review",
@@ -2651,10 +2651,10 @@
       "stars": 0
     },
     "itsodeleo/mlx-zeroeffort-decider": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-14T00:36:11.509Z",
-      "attempts": 1,
-      "checkedAt": "2026-10-14T00:36:11.509Z",
+      "attempts": 2,
+      "checkedAt": "2026-10-21T08:52:53.832Z",
       "lastReview": {
         "repo": "itsodeleo/mlx-zeroeffort-decider",
         "status": "review",
@@ -2672,7 +2672,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T00:36:11.509Z"
       },
-      "retryAt": "2026-10-21T00:36:11.509Z"
+      "retryAt": "2026-10-23T08:52:53.832Z"
     },
     "sathiskumarjothi0-oss/bev-decisions-pypi": {
       "status": "review",
