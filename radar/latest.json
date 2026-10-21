@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-21T11:54:00.302Z",
+  "at": "2026-10-21T17:15:40.418Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,16 +68,251 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 48,
   "added": 0,
   "pending": 3915,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "topherchris420/james_library",
+      "repo": "tharon23/ai-exploration-2026-project",
       "status": "error",
-      "reason": "github-ineligible-repository"
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "anbeime/skill",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "sidiora-labs/codify",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "js-lee-ai/awesome-llm-agent-papers",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "straydragon/awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "rochacbruno/my-awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "rodert/awesome-mcp",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "yenanjing/awesome-harness-engineering",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "losebird/dsh-plugin-market",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "zhaojunliing/awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "maheshndev/awesome-repos",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "findscripter/everything-skills",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "lwmxiaobei/dsh-plugins",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "fire17/awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mpsuesser/starred",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "wenston-dev/awesome-dsh-plugin",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "bryanbradfo/awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "junjiangwang/awesome-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "pjdurden/claude-skills-live",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "cyandyue/auto-get-papers-pro",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "davra02/req-classifier",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "fjzzwxp/awesome-dsh-plugins",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "ganmu191/aigc",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "jev27b/jev-27b-desktop",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "mrkeyoor/honest-awesome",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "onlyoasis/awesome-jev-cases",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "sajjat4/mark58",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sin199/synterra",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "theblackcat98/github-stars",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "waroodek/fomo-ai-trading-bot",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "aiimagined/yellowpages",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "coderhema/kngfshr",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "enhansome/enhansome-awesome-agent-memory",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "enhansome/enhansome-awesome-tools",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "enhansome/enhansome-llm-agent-papers",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "enhansome/ultimate-enhansome",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "gtvet0260/job-recommendation-engine",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "iroqi/socratic-studio",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "luciferlu755/luciferlu755.github.io",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "mostafa1344/mostafa1344.github.io",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "qianyuxiang-369/pi-jev-governor",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sajjat4/000",
+      "status": "error",
+      "reason": "github-http-409"
+    },
+    {
+      "repo": "shmuelsh23a/tactical",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "sophia-phillipa/master-jev-hook",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "stevenleon30/test-triage",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "therocksss/awesome-jev",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "kavbad/potion",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
     }
   ],
   "identity": {
@@ -89,5 +324,5 @@
   },
   "backpressure": 10,
   "buffered": 0,
-  "totalProjects": 3121
+  "totalProjects": 3122
 }
