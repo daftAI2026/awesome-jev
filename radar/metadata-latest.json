@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "1f5e8105d768be70bdeef486eeb234dbbfc10453",
-  "at": "2026-10-20T22:15:38.585Z",
+  "baselineSha": "9ec999d33889260b285fc1145a6b1218036ff7fd",
+  "at": "2026-10-21T05:59:00.881Z",
   "totalProjects": 3121,
   "metadata": {
     "ok": 3042,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "schalkneethling/jev-3000",
-        "to": "schalkneethling/decision-machines-3000",
-        "databaseId": 1385171165
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -428,7 +422,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
