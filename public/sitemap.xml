@@ -18169,12 +18169,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ying8109/app-review-triage" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/yinjs/claude-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/yinjs/claude-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/yinsongxu/llm2jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinsongxu/llm2jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinsongxu/llm2jev" />
@@ -20845,16 +20839,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/benchmark" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/developer-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/developer-tools" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/open-data</loc>
@@ -21259,12 +21253,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/prompt-injection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -21305,6 +21293,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/productivity" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/prompt-injection</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/accessibility</loc>
@@ -41137,12 +41131,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ying8109/app-review-triage" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/yinjs/claude-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/yinjs/claude-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/yinsongxu/llm2jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinsongxu/llm2jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinsongxu/llm2jev" />
@@ -43813,16 +43801,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/benchmark" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/developer-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/developer-tools" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/open-data</loc>
@@ -44227,12 +44215,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/prompt-injection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -44273,6 +44255,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/productivity" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/prompt-injection</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/accessibility</loc>
@@ -64105,12 +64093,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ying8109/app-review-triage" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/yinjs/claude-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinjs/claude-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/yinjs/claude-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/yinsongxu/llm2jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/yinsongxu/llm2jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/yinsongxu/llm2jev" />
@@ -66781,16 +66763,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/benchmark" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/developer-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/developer-tools" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/developer-tools" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/open-data</loc>
@@ -67195,12 +67177,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/prompt-injection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -67241,6 +67217,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/productivity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/productivity" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/prompt-injection</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-injection" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/prompt-injection" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/accessibility</loc>
