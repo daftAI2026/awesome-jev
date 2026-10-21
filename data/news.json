@@ -5728,5 +5728,50 @@
     "reason": null,
     "originalUrl": "https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/",
     "aihotUrl": "https://aihot.news/items/gh2z6vliymwuu811sbdc9694a"
+  },
+  {
+    "id": "xyqybl2l6b2w3zlrlqkwhfbse",
+    "title": "Base Labs 发布 mammoth-1 与 elephant-1",
+    "originalTitle": "Base Labs 发布 release mammoth-1 和 elephant-1，超越 Jev，继续向前推动 decision model",
+    "summary": "Base Labs 发布 release mammoth-1 和 elephant-1，超越 Jev，继续向前推动 decision model\n\n最重要的：\n\n开放权重和 technical report！",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-10-21T21:06:07.000Z",
+    "discoveredAt": "2026-10-21T21:16:29.334Z",
+    "category": "ai-models",
+    "score": 44,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/dongxi_nlp/status/2113013987336134820",
+    "aihotUrl": "https://aihot.news/items/xyqybl2l6b2w3zlrlqkwhfbse"
+  },
+  {
+    "id": "lv1j5w1pgypndljkfkheup0tw",
+    "title": "Fireworks 开放 Muse Glimmer 30B 免费 SFT 训练，微调版在 Kalshi 预测上超过 Jev 11.2 个百分点",
+    "originalTitle": "Train Muse Glimmer for free: Our recipe for out-betting Jev",
+    "summary": "Fireworks 推出 Free Weights Club，Muse Glimmer 30B 的 SFT 训练在 11 月 30 日前免费。",
+    "sourceName": "Fireworks AI（网页）",
+    "publishedAt": "2026-10-19T16:00:00.000Z",
+    "discoveredAt": "2026-10-21T21:35:31.320Z",
+    "category": "tip",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://fireworks.ai/blog/train-muse-glimmer-for-free",
+    "aihotUrl": "https://aihot.news/items/lv1j5w1pgypndljkfkheup0tw"
+  },
+  {
+    "id": "i8cv3lz1mu06chqntgu8cgt3m",
+    "title": "Fireworks AI 免费微调 Muse Glimmer 30B，预测准确率超 Jev 11.2 个百分点",
+    "originalTitle": "Free Weights Club: Training Muse Glimmer to out-bet Jev",
+    "summary": "Fireworks AI 推出 Free Weights Club，Muse Glimmer 30B 的 SFT 训练在 11 月 30 日前免费。",
+    "sourceName": "Fireworks AI（网页）",
+    "publishedAt": "2026-10-19T16:00:00.000Z",
+    "discoveredAt": "2026-10-21T20:34:30.455Z",
+    "category": "tip",
+    "score": 44,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://fireworks.ai/blog/training-muse-glimmer-to-out-bet-jev",
+    "aihotUrl": "https://aihot.news/items/i8cv3lz1mu06chqntgu8cgt3m"
   }
 ]
