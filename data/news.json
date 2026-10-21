@@ -5638,5 +5638,20 @@
     "reason": null,
     "originalUrl": "https://x.com/dongxi_nlp/status/2112652766997103016",
     "aihotUrl": "https://aihot.news/items/nlo05yq3qck4mm6n548q2wnz8"
+  },
+  {
+    "id": "m1k5f7te2w0qkpp3da7buhaep",
+    "title": "如何用决策模型做 LLM Evals：从阈值调优到概率校准的实践解读",
+    "originalTitle": "如何用决策模型做 LLM Evals：从阈值调优到概率校准的完整实践",
+    "summary": "作者转述 @HamelHusain 关于决策模型做 LLM Evals 的博客：大多数从业者直接沿用 0.50 默认阈值，文章用 98 条真实生产 trace 对比五家决策模型，证明阈值调优、概率校准和成本-性能 Pareto 分析能带来可量化提升。",
+    "sourceName": "X：邵猛 (@shao__meng)",
+    "publishedAt": "2026-10-21T01:38:17.000Z",
+    "discoveredAt": "2026-10-21T01:41:32.627Z",
+    "category": "tip",
+    "score": 66,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/shao__meng/status/2112720094287786298",
+    "aihotUrl": "https://aihot.news/items/m1k5f7te2w0qkpp3da7buhaep"
   }
 ]
