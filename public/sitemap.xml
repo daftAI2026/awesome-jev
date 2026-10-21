@@ -13141,12 +13141,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterlimg/auto-effort" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/peterp22/jev-triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterp22/jev-triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/pewriebontal/typesafe-sdk-cpp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pewriebontal/typesafe-sdk-cpp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pewriebontal/typesafe-sdk-cpp" />
@@ -16973,12 +16967,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tymscar/hunch" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/tynamite/evaluation-behavioral-system-one</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tynamite/evaluation-behavioral-system-one" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/typellm/pijev</loc>
@@ -22069,12 +22057,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/text-classification" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/typesafe-api</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/typesafe-api" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/typesafe-api" />
@@ -22319,6 +22301,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/token-optimization" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/triage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/twitter</loc>
@@ -36109,12 +36097,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterlimg/auto-effort" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/peterp22/jev-triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterp22/jev-triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/pewriebontal/typesafe-sdk-cpp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pewriebontal/typesafe-sdk-cpp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pewriebontal/typesafe-sdk-cpp" />
@@ -39941,12 +39923,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tymscar/hunch" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/tynamite/evaluation-behavioral-system-one</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tynamite/evaluation-behavioral-system-one" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/typellm/pijev</loc>
@@ -45037,12 +45013,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/text-classification" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/typesafe-api</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/typesafe-api" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/typesafe-api" />
@@ -45287,6 +45257,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/token-optimization" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/triage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/twitter</loc>
@@ -59077,12 +59053,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterlimg/auto-effort" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/peterp22/jev-triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/peterp22/jev-triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/peterp22/jev-triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/pewriebontal/typesafe-sdk-cpp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pewriebontal/typesafe-sdk-cpp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pewriebontal/typesafe-sdk-cpp" />
@@ -62909,12 +62879,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tymscar/hunch" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tymscar/hunch" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/tynamite/evaluation-behavioral-system-one</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tynamite/evaluation-behavioral-system-one" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tynamite/evaluation-behavioral-system-one" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/typellm/pijev</loc>
@@ -68005,12 +67969,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/text-classification" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/triage</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/typesafe-api</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/typesafe-api" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/typesafe-api" />
@@ -68255,6 +68213,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/token-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/token-optimization" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/triage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/triage" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/triage" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/twitter</loc>
