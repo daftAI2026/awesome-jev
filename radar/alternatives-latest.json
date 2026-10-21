@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-20T19:34:45.422Z",
+  "at": "2026-10-21T00:08:15.946Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 30,
-      "total": 130,
+      "fetched": 121,
+      "total": 121,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 42,
-      "total": 142,
+      "fetched": 135,
+      "total": 135,
       "status": "bounded"
     }
   ],
@@ -20,12 +20,95 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 6,
   "added": 0,
-  "pending": 195,
+  "pending": 196,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "jev-engineering/typewright",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.49,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.67,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "6532cc86ba5554b8288f32629cf49ff5f7fe080a",
+      "evidenceUrl": "https://github.com/jev-engineering/typewright/blob/6532cc86ba5554b8288f32629cf49ff5f7fe080a/README.md",
+      "evidenceSha256": "e0347533deea5611b88b486299c3985fa9c3c02682fce97abbee6a823796cf64",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    },
+    {
+      "repo": "algorythm-canada/openjev-models",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.12,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.25,
+        "category": "other"
+      },
+      "sha": "ddf248ba27b47cd624114fae04447727504470bb",
+      "evidenceUrl": "https://github.com/algorythm-canada/openjev-models/blob/ddf248ba27b47cd624114fae04447727504470bb/README.md",
+      "evidenceSha256": "1f230344f6ed2117039c793bf6b13212fd12028562527923302fed8fa4e3d821",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    },
+    {
+      "repo": "marcofariasmx/jev-local-research",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "80742b7619ade5155d404636b7f1bcc9179d89e8",
+      "evidenceUrl": "https://github.com/marcofariasmx/jev-local-research/blob/80742b7619ade5155d404636b7f1bcc9179d89e8/README.md",
+      "evidenceSha256": "b21850585843de1208fe7705a26eeeecde9f97ca7a67b2776031892efb7f3ca5",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    },
+    {
+      "repo": "opendecisions/opendecisions",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.86,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.94,
+        "category": "alternatives"
+      },
+      "sha": "c9fb35b2d859170cc830815c8fee199eac3fba0f",
+      "evidenceUrl": "https://github.com/opendecisions/opendecisions/blob/c9fb35b2d859170cc830815c8fee199eac3fba0f/README.md",
+      "evidenceSha256": "e65128d8f6be66a508305bff5b8fbd64e0a6449c925d416ed5106bfaac0d7363",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    },
+    {
+      "repo": "radinravankhah/najva",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "e630d5611528b867bb1b4bea67d986bde2c94b43",
+      "evidenceUrl": "https://github.com/radinravankhah/najva/blob/e630d5611528b867bb1b4bea67d986bde2c94b43/README.md",
+      "evidenceSha256": "ab55e6be1e152be05be680bfc90746d47e6168d47a4472dc63c113159b9cc907",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    },
+    {
+      "repo": "lychee888/qwenfn-hybrid-decision-engine",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.8,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.31,
+        "category": "alternatives"
+      },
+      "sha": "0b94fabf3ff1b7875bc351b4b25c23dce0557698",
+      "evidenceUrl": "https://github.com/lychee888/qwenfn-hybrid-decision-engine/blob/0b94fabf3ff1b7875bc351b4b25c23dce0557698/README.md",
+      "evidenceSha256": "0a1b16b09bd61264b8cc08e40648a91bfc212b979e548047f4bb21969e35076b",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T00:08:15.946Z"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
@@ -34,5 +117,8 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3119
+  "totalProjects": 3121,
+  "publication": {
+    "rebasedOn": "89a0e8db7c4cbc5c458cd69bea1d26fd369b092e"
+  }
 }
