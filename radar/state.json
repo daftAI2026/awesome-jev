@@ -27961,7 +27961,7 @@
     "topherchris420/james_library": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 72,
       "codeHints": [
         {
@@ -27969,8 +27969,8 @@
           "path": "tests/test_judgment_cli.py"
         }
       ],
-      "retryAt": "2026-10-21T10:48:12.184Z",
-      "checkedAt": "2026-10-17T10:48:12.184Z",
+      "retryAt": "2026-10-28T11:54:00.302Z",
+      "checkedAt": "2026-10-21T11:54:00.302Z",
       "lastReview": {
         "repo": "topherchris420/james_library",
         "status": "review",
