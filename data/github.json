@@ -175085,5 +175085,53 @@
         "checkedAt": "2026-10-20T04:54:46.648Z"
       }
     }
+  },
+  {
+    "id": "gh-21-sathiskumarjothi0-oss-bev-decisions-pypi",
+    "type": "github",
+    "title": "bev-decisions-pypi",
+    "summary": "Beveridge: System One decision models with open weights. Typed yes/no, choice and score decisions with calibrated probabilities, on your own machines. pip install bev-decisions",
+    "tags": [
+      "beveridge",
+      "calibrated-probabilities",
+      "classification",
+      "decision-model",
+      "guardrails",
+      "open-weights",
+      "system-one",
+      "typed-decisions"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/sathiskumarjothi0-oss/bev-decisions-pypi",
+    "sourceMeta": {
+      "repo": "sathiskumarjothi0-oss/bev-decisions-pypi",
+      "author": "sathiskumarjothi0-oss",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1414927072,
+        "nodeId": "R_kgDOVFYS4A"
+      },
+      "date": "2026-10-12",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "sathiskumarjothi0-oss/bev-decisions-pypi",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "alternatives"
+        },
+        "sha": "9ffce7ed230628bb541d8b9b9b0086d432288e89",
+        "evidenceUrl": "https://github.com/sathiskumarjothi0-oss/bev-decisions-pypi/blob/9ffce7ed230628bb541d8b9b9b0086d432288e89/README.md",
+        "evidenceSha256": "8a14cc11de80c62b8b98c3cc26dc14412e6b10287ae9da6dfaff0ad19f1cbb45",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-21T14:40:09.396Z"
+      }
+    }
   }
 ]

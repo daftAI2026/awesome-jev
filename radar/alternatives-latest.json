@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-21T08:52:53.832Z",
+  "at": "2026-10-21T14:40:09.396Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 121,
-      "total": 121,
+      "fetched": 110,
+      "total": 110,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 135,
-      "total": 135,
+      "fetched": 130,
+      "total": 130,
       "status": "bounded"
     }
   ],
@@ -20,16 +20,92 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
-  "added": 0,
+  "reviewed": 6,
+  "added": 1,
   "pending": 196,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "itsodeleo/mlx-zeroeffort-decider",
+      "repo": "itsodeleo/mlx-direct-decider",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.61,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.67,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "11a8cbc4d22c6bd7d788b67300c8e9ef588c2f60",
+      "evidenceUrl": "https://github.com/itsodeleo/mlx-direct-decider/blob/11a8cbc4d22c6bd7d788b67300c8e9ef588c2f60/README.md",
+      "evidenceSha256": "cd3ae95f5c9e8c889b695008ecfb25fa5d87d1d5ea2062a58e97d6323e4cab9d",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T14:40:09.396Z"
+    },
+    {
+      "repo": "sathiskumarjothi0-oss/bev-decisions-pypi",
+      "status": "keep",
+      "score": {
+        "jevAbout": 0.9,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.94,
+        "category": "alternatives"
+      },
+      "sha": "9ffce7ed230628bb541d8b9b9b0086d432288e89",
+      "evidenceUrl": "https://github.com/sathiskumarjothi0-oss/bev-decisions-pypi/blob/9ffce7ed230628bb541d8b9b9b0086d432288e89/README.md",
+      "evidenceSha256": "8a14cc11de80c62b8b98c3cc26dc14412e6b10287ae9da6dfaff0ad19f1cbb45",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T14:40:09.396Z"
+    },
+    {
+      "repo": "sma5111/coreai-kit",
       "status": "error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "xieshaocong33ethan/ventus-2b",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.56,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.7,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "fbc9593d4aa0b6bbcf75688496f2a2bd2e9b6a43",
+      "evidenceUrl": "https://github.com/xieshaocong33ethan/ventus-2b/blob/fbc9593d4aa0b6bbcf75688496f2a2bd2e9b6a43/README.md",
+      "evidenceSha256": "2f95f217d2b0ef4efbe2a6476efcc21dd64605abbb8265810b69a211901ad6ef",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T14:40:09.396Z"
+    },
+    {
+      "repo": "hitsz-tmg/jevembed",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.8,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.83,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "d331c4b0f5a0f69b92d94b8f5b2f82853ac83277",
+      "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/d331c4b0f5a0f69b92d94b8f5b2f82853ac83277/README.md",
+      "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T14:40:09.396Z"
+    },
+    {
+      "repo": "ranpin/jevcabin",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "266db6ab782091cc60f666ada685e468ef614c45",
+      "evidenceUrl": "https://github.com/ranpin/jevcabin/blob/266db6ab782091cc60f666ada685e468ef614c45/README.md",
+      "evidenceSha256": "a7623a17aa96b955d8894d5db668ab714d26f907cb0e6817974df794c8d46773",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-21T14:40:09.396Z"
     }
   ],
   "identity": {
@@ -40,5 +116,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3119
+  "totalProjects": 3120
 }
