@@ -5623,5 +5623,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2112638503020589148",
     "aihotUrl": "https://aihot.news/items/jtchdolurbehqqq110lzqe9ly"
+  },
+  {
+    "id": "nlo05yq3qck4mm6n548q2wnz8",
+    "title": "Hamel Husain 发文讲解如何用决策模型做 Evals",
+    "originalTitle": "好文！",
+    "summary": "Hamel Husain 发布新文章《How To Use Decision Models For Evals》，讲解如何为任务选择决策模型、调优阈值（提醒不要默认 0.5）并解读分数，配有交互式图表。",
+    "sourceName": "X：马东锡 NLP (@dongxi_nlp)",
+    "publishedAt": "2026-10-20T21:10:45.000Z",
+    "discoveredAt": "2026-10-20T21:32:37.905Z",
+    "category": "tip",
+    "score": 64,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/dongxi_nlp/status/2112652766997103016",
+    "aihotUrl": "https://aihot.news/items/nlo05yq3qck4mm6n548q2wnz8"
   }
 ]
