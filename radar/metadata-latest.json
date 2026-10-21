@@ -1,14 +1,14 @@
 {
   "status": "partial",
-  "baselineSha": "cd02ed34e217b4f3f3b27a28e16046280a0826ed",
-  "at": "2026-10-21T18:00:10.803Z",
+  "baselineSha": "067e69c8bc8b67bda8bc23e5aff1f24063cca011",
+  "at": "2026-10-21T22:18:09.304Z",
   "totalProjects": 3122,
   "metadata": {
     "ok": 3027,
     "failed": 95,
-    "batches": 64,
-    "cost": 64,
-    "other": 3022,
+    "batches": 65,
+    "cost": 65,
+    "other": 3021,
     "remaining": 95,
     "attempted": 3122,
     "fresh": 3027,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "juanlentino/jev-connector",
+        "to": "juanlentino/connector-for-typesafe-jev",
+        "databaseId": 1376436820
+      }
+    ]
   },
   "receipts": [
     {
@@ -502,9 +508,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 2,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
