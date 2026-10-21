@@ -27371,14 +27371,14 @@
     "tangbl93/multica-agent-capacity": {
       "status": "error",
       "discoveredAt": "2026-09-22T16:57:22.408Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "work/multica-agent-capacity/SKILL.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-21T21:45:38.107Z",
       "lastReview": {
         "repo": "tangbl93/multica-agent-capacity",
         "status": "review",
@@ -27396,7 +27396,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-21T20:39:02.895Z"
+      "retryAt": "2026-10-28T21:45:38.107Z"
     },
     "arashari/youtube-judol-userscript-jev": {
       "status": "review",
