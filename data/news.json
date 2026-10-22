@@ -5773,5 +5773,20 @@
     "reason": null,
     "originalUrl": "https://fireworks.ai/blog/training-muse-glimmer-to-out-bet-jev",
     "aihotUrl": "https://aihot.news/items/i8cv3lz1mu06chqntgu8cgt3m"
+  },
+  {
+    "id": "uvs5g6wd0hna7sc7j0ssghr8u",
+    "title": "蚂蚁数科发布决策模型 LingDT-Decision-1.0，Token 消耗降低超 90%",
+    "originalTitle": "蚂蚁数科发布决策模型 LingDT-Decision-1.0，将 Token 消耗降低超 90%",
+    "summary": "蚂蚁数科发布决策模型 LingDT-Decision-1.0，提供 4B 和 27B 两个版本，已在 DTMaaS 平台上线并限时免费体验。该模型首创原生多选与按序决策（DAG）能力，在 23 项开源评测基准中超过 Microsoft-Decision-1、Jev 1.13 等决策模型，27B 版本在同参数模型中准确率最高。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-10-22T10:12:04.063Z",
+    "discoveredAt": "2026-10-22T10:42:33.496Z",
+    "category": "ai-models",
+    "score": 42,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/016/633.htm",
+    "aihotUrl": "https://aihot.news/items/uvs5g6wd0hna7sc7j0ssghr8u"
   }
 ]
