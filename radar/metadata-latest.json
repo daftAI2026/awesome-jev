@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "1ea8b10a7865cba32fbb93262b16118b329c80f8",
-  "at": "2026-10-22T06:05:24.367Z",
+  "baselineSha": "be7237c0d05e8d58c12d7114ae83f22a612c7316",
+  "at": "2026-10-22T12:56:27.482Z",
   "totalProjects": 3122,
   "metadata": {
     "ok": 3027,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "q93304989-bit/jev-lab",
+        "to": "zorien-ai/jev-lab",
+        "databaseId": 1378493554
+      },
+      {
+        "from": "h1code2/jev-x-blocker",
+        "to": "5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker",
+        "databaseId": 1378023072
+      }
+    ]
   },
   "receipts": [
     {
@@ -502,7 +513,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
