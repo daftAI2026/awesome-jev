@@ -13,7 +13,6 @@
       "@cloudflare/workers-types"
     ],
     "skipLibCheck": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"

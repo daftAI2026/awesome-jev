@@ -14,17 +14,18 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start 1.169.1 / Router 1.170.44 + Vite 8.3.4+ + React 19 + TypeScript |
+| UI | TanStack Start 1.169.3 / Router 1.170.45 + Vite 8.3.5+ + React 19 + TypeScript 7 |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
 | Deploy | TanStack Start prerendered HTML via `@cloudflare/vite-plugin` and Cloudflare Workers Static Assets; Worker handles non-prerendered routes |
 
-Vite 8 uses security baseline 8.3.4. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code.
+Vite 8 uses security baseline 8.3.5. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code. Wrangler stays on 4.138.0 and `@cloudflare/vite-plugin` stays on 1.59.0. Wrangler 4.151.3 pulls Miniflare 5.20261012.0-beta, and that preview returns 500 when an internal fetch fails.
 
 ## TanStack Start 稳定版基线
 
 2026-10-14 对齐 Start 1.169.1 与 Router 1.170.44。
+2026-10-22 对齐 Start 1.169.3、Router 1.170.45、Vite 8.3.5 与 TypeScript 7。Wrangler 仍为 4.138.0。
 Start 的稳定版从 1.169 开始，不回退到包版本 1.0.0。
 Start 与 Router 独立编号，不强行使用相同版本号。
 配套 Router 以 Start 发布依赖为准。
@@ -32,7 +33,7 @@ Start 与 Router 独立编号，不强行使用相同版本号。
 
 迁移检查：
 
-- Vite 构建要求 Vite 8；本站保持 8.3.4。
+- Vite 构建要求 Vite 8；本站保持 8.3.5。
 - 服务端函数已用 `.validator()`，无 `.inputValidator()`。
 - 本站不使用内置 `useSession` 或响应流所有权旧 API。
 - `src/server.ts` 先分发静态产物；`ssr-handler.ts` 保留官方 `createStartHandler(defaultStreamHandler)` 与请求作用域。

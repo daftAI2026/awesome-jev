@@ -1,5 +1,5 @@
 # Awesome JEV - TypeSafe Jev / System One 项目与新闻目录
-React 19 + TypeScript 6 + TanStack Start 1.169.1 / Router 1.170.44 + Vite 8（安全基线 8.3.4）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24
+React 19 + TypeScript 7 + TanStack Start 1.169.3 / Router 1.170.45 + Vite 8（安全基线 8.3.5）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24。Wrangler 固定 4.138.0，`@cloudflare/vite-plugin` 固定 1.59.0；4.151.3 带上的 Miniflare 5.20261012 beta 会在交付预览里把内部 fetch 失败变成 500。
 
 <directory>
 src/ - 路由、目录界面、共享纯工具及 OG/MCP 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
@@ -14,7 +14,7 @@ radar/ - 生态与替代实现的状态及发布报告
 <config>
 .gitignore - 排除本机日志、构建、浏览器与 Start/Workers 缓存；不排除正式脚本和测试
 .oxlintrc.json - 本站 lint 规则；排除固定版本第三方 Anatomy 原件，不改上游源码消除告警
-package.json - Node 24、Start ^1.169.1 / Router ^1.170.44 与 Vite ^8.3.4 安全基线及构建/检查命令的权威；构建先检查规范数据与收录依据覆盖率，无额外模型请求
+package.json - Node 24、Start ^1.169.3 / Router ^1.170.45 与 Vite ^8.3.5 安全基线及构建/检查命令的权威；Wrangler 4.138.0 与 Vite Plugin 1.59.0 不随 4.151.3 上浮；构建先检查规范数据与收录依据覆盖率，无额外模型请求
 vite.config.ts - 展示/交付/MCP 投影、三语言有限页面与 MCP 指南预渲染
 wrangler.toml - awesome-jev-project Worker、静态分发、ASSETS、匿名 MCP 限流与免费日志
 server.json - 官方 MCP Registry 元数据；服务版本独立于网站包版本，远端指向 /api/mcp
