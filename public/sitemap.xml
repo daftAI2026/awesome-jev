@@ -5827,12 +5827,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gavansmyth-arch/jev-chrome-extension" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/gazer2020/jev-btzsc</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gazer2020/jev-btzsc" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/gbesse/decisionpacks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gbesse/decisionpacks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gbesse/decisionpacks" />
@@ -8165,6 +8159,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jamalla/jev-langgraph-ticket-app" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/james-mdang/jevai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/james-mdang/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/james947/codex-jev</loc>
@@ -16511,12 +16511,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ticofab/scala-jev-sdk" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/tiendvlp/jevai</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tiendvlp/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/timbrinded/jevvy</loc>
@@ -28831,12 +28825,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gavansmyth-arch/jev-chrome-extension" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/gazer2020/jev-btzsc</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gazer2020/jev-btzsc" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/gbesse/decisionpacks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gbesse/decisionpacks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gbesse/decisionpacks" />
@@ -31169,6 +31157,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jamalla/jev-langgraph-ticket-app" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/james-mdang/jevai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/james-mdang/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/james947/codex-jev</loc>
@@ -39515,12 +39509,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ticofab/scala-jev-sdk" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/tiendvlp/jevai</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tiendvlp/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/timbrinded/jevvy</loc>
@@ -51835,12 +51823,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gavansmyth-arch/jev-chrome-extension" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/gazer2020/jev-btzsc</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gazer2020/jev-btzsc" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gazer2020/jev-btzsc" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/gbesse/decisionpacks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gbesse/decisionpacks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gbesse/decisionpacks" />
@@ -54173,6 +54155,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jamalla/jev-langgraph-ticket-app" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jamalla/jev-langgraph-ticket-app" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/james-mdang/jevai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/james-mdang/jevai" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/james-mdang/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/james947/codex-jev</loc>
@@ -62519,12 +62507,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ticofab/scala-jev-sdk" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ticofab/scala-jev-sdk" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/tiendvlp/jevai</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tiendvlp/jevai" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tiendvlp/jevai" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/timbrinded/jevvy</loc>

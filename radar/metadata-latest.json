@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "be7237c0d05e8d58c12d7114ae83f22a612c7316",
-  "at": "2026-10-22T12:56:27.482Z",
+  "baselineSha": "4cbe1aa2ea8d70f7dbcff9caa08d6d904832c7fe",
+  "at": "2026-10-22T17:57:27.588Z",
   "totalProjects": 3122,
   "metadata": {
-    "ok": 3027,
-    "failed": 95,
+    "ok": 3026,
+    "failed": 96,
     "batches": 64,
     "cost": 64,
     "other": 3022,
-    "remaining": 95,
+    "remaining": 96,
     "attempted": 3122,
-    "fresh": 3027,
-    "unavailable": 95,
+    "fresh": 3026,
+    "unavailable": 96,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -24,14 +24,9 @@
     },
     "resolved": [
       {
-        "from": "q93304989-bit/jev-lab",
-        "to": "zorien-ai/jev-lab",
-        "databaseId": 1378493554
-      },
-      {
-        "from": "h1code2/jev-x-blocker",
-        "to": "5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker",
-        "databaseId": 1378023072
+        "from": "tiendvlp/jevai",
+        "to": "james-mdang/jevai",
+        "databaseId": 1382016489
       }
     ]
   },
@@ -84,6 +79,11 @@
     {
       "id": "gh-6-x96x64-ctxjev",
       "repo": "x96x64/ctxjev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-10-alpbahadur-jevrouter",
+      "repo": "alpbahadur/jevrouter",
       "reason": "github-unavailable-repository"
     },
     {
@@ -513,9 +513,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
