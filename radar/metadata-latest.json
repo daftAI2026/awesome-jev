@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "4cbe1aa2ea8d70f7dbcff9caa08d6d904832c7fe",
-  "at": "2026-10-22T17:57:27.588Z",
+  "baselineSha": "f87b057766d84f7907503fd654ba9a05aaee4d4d",
+  "at": "2026-10-22T22:16:40.409Z",
   "totalProjects": 3122,
   "metadata": {
-    "ok": 3026,
-    "failed": 96,
+    "ok": 3025,
+    "failed": 97,
     "batches": 64,
     "cost": 64,
     "other": 3022,
-    "remaining": 96,
+    "remaining": 97,
     "attempted": 3122,
-    "fresh": 3026,
-    "unavailable": 96,
+    "fresh": 3025,
+    "unavailable": 97,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "tiendvlp/jevai",
-        "to": "james-mdang/jevai",
-        "databaseId": 1382016489
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -194,6 +188,11 @@
     {
       "id": "gh-15-omarfischer4315-jevcore",
       "repo": "omarfischer4315/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-rmandevs-vigia",
+      "repo": "rmandevs/vigia",
       "reason": "github-unavailable-repository"
     },
     {
@@ -513,9 +512,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
