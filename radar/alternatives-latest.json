@@ -1,12 +1,12 @@
 {
-  "at": "2026-10-22T00:13:32.911Z",
+  "at": "2026-10-22T08:55:34.659Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 110,
-      "total": 110,
+      "fetched": 111,
+      "total": 111,
       "status": "bounded"
     },
     {
@@ -20,103 +20,48 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 10,
+  "reviewed": 3,
   "added": 0,
-  "pending": 196,
+  "pending": 197,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "gul84571/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "nathanm49/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "nandhakishorm/laya",
-      "status": "review",
-      "reason": "suspicious-review-instructions",
-      "sha": "6f0496f797dc7127265d62e1543a62de507d943c",
-      "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/6f0496f797dc7127265d62e1543a62de507d943c/README.md",
-      "evidenceSha256": "396feb5a88d0c4ef7accdbbab97a1b3d547f1b1c61183eb354c226c333c045f3",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
-    },
-    {
-      "repo": "mizorewww/laya-coreml",
+      "repo": "phocinae/phocinae-largha-150m-v1",
       "status": "review",
       "score": {
-        "jevAbout": 0.86,
+        "jevAbout": 0.91,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.73,
+        "jevKeepConfidence": 0.49,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "7b363344ffe8da77cc50da056181be1a3c5c405c",
-      "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/7b363344ffe8da77cc50da056181be1a3c5c405c/README.md",
-      "evidenceSha256": "d16cd5266d47f5a2f3b6b1658cad41730f8dc2c43d63e972605ec665d98393d5",
+      "sha": "15c09b7ce7b2f64598f7a570bd2072521120cf80",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/15c09b7ce7b2f64598f7a570bd2072521120cf80/README.md",
+      "evidenceSha256": "7b203842957efba74626fa9db1358d39231a994d4aa889c173dcad1cb3f6535a",
       "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
+      "checkedAt": "2026-10-22T08:55:34.659Z"
     },
     {
-      "repo": "dfm88/toolhunch",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e",
-      "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e/README.md",
-      "evidenceSha256": "d93b160e92c8e23124643d37b9daeaa488afec3204e5144b0cf44a3870884a33",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
+      "repo": "itsodeleo/jev-mlx",
+      "status": "error",
+      "reason": "github-network-or-timeout"
     },
     {
-      "repo": "evandroamparo/system-one",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "cdbcc3b990c95c1817e291c59f1020e32b13c160",
-      "evidenceUrl": "https://github.com/evandroamparo/system-one/blob/cdbcc3b990c95c1817e291c59f1020e32b13c160/README.md",
-      "evidenceSha256": "064528e85b6d101550ae350b25a72d5d6cec55fc57a48820a3710ec192e20de6",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
-    },
-    {
-      "repo": "kelsonthony/laya-springboot-starter",
+      "repo": "singularity-compute/super-decider",
       "status": "review",
       "score": {
-        "jevAbout": 0.4,
+        "jevAbout": 0.92,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.59,
+        "jevKeepConfidence": 0.41,
         "category": "alternatives"
       },
-      "sha": "b37cf09dab1177299c5a34e29c8a095581eb773c",
-      "evidenceUrl": "https://github.com/kelsonthony/laya-springboot-starter/blob/b37cf09dab1177299c5a34e29c8a095581eb773c/README.md",
-      "evidenceSha256": "469fd88df4e68dea02eac0e425641b8aa17b55b4ad8b4821f73a5495e0d5317e",
+      "sha": "25f065b03ce0d21f59ce70c491e3b79daa7a324b",
+      "evidenceUrl": "https://github.com/singularity-compute/super-decider/blob/25f065b03ce0d21f59ce70c491e3b79daa7a324b/README.md",
+      "evidenceSha256": "1d8b8cd4b3db302bc6ab9820b61a22fc0d3cdd2f0c54d221c0e0929acd48ea7d",
       "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
-    },
-    {
-      "repo": "novaleolin/jev-evolve",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "rotsl/layaagent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "vicfei/jev-pipeline-skill",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "57b67e48d33272f863f548d14f4f0c4a95efaa8e",
-      "evidenceUrl": "https://github.com/vicfei/jev-pipeline-skill/blob/57b67e48d33272f863f548d14f4f0c4a95efaa8e/README.md",
-      "evidenceSha256": "3a82ff7874cb3c25060cb93152e111297eac71bb220e7502eb43edc9d2802dbd",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-22T00:13:32.911Z"
+      "checkedAt": "2026-10-22T08:55:34.659Z"
     }
   ],
   "identity": {
