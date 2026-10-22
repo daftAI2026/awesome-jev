@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-22T04:52:31.347Z",
+  "at": "2026-10-22T11:57:26.144Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,114 +68,39 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 21,
+  "reviewed": 6,
   "added": 0,
   "pending": 3915,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "nicolas-found42/awesome-typesafe-jev",
-      "status": "error",
-      "reason": "github-invalid-readme"
-    },
-    {
-      "repo": "tune-77/tune_lease_55",
+      "repo": "akashpriyadarshii/akashpriyadarshii",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "veighnsche/can-lang",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "akivet/mica-v0.1-4b",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "xyzzzh/groundingjev",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "siiick/pi-pignon",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "ttlequals0/minuspodjev",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "pareshbhangale/jev---job-hiring-content-detector",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "oozoofrog/codex-skills",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "evan-zhang/openclaw-typesafe-plugin",
+      "repo": "eddiemessiah/ai-native-company",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "kairugakuo2/jev-arena",
+      "repo": "kxuejava/travel-agent",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "mekashef/paideia-genesis",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "michaljach/jet",
+      "repo": "lasimeri/intel-phi-avx512",
       "status": "error",
       "reason": "github-network-or-timeout"
     },
     {
-      "repo": "misokina/aslan",
+      "repo": "muresanroland/orqadence",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "mizzlr/whisper-typer",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mundulabs/gradula",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "octalide/sift",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "ooo-hq/fez",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "peterwadsackett/agenticworkshop",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "simon-zj1/jev-exam",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "venkateshv1266/my-pi-setup",
+      "repo": "tomhar92/typesafe-claude-router",
       "status": "error",
       "reason": "github-network-or-timeout"
     }
