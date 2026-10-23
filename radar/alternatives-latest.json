@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-23T00:10:19.530Z",
+  "at": "2026-10-23T08:50:28.361Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -11,8 +11,8 @@
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 131,
-      "total": 131,
+      "fetched": 132,
+      "total": 132,
       "status": "bounded"
     }
   ],
@@ -20,33 +20,93 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
+  "reviewed": 6,
   "added": 0,
-  "pending": 199,
+  "pending": 200,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "amantux/mcp-router",
+      "repo": "nvkudva/ollajev",
       "status": "review",
       "score": {
-        "jevAbout": 0.28,
+        "jevAbout": 0.87,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.61,
+        "category": "alternatives"
+      },
+      "sha": "55d0149782ca772ae3208bde7d4bd31beca7cd55",
+      "evidenceUrl": "https://github.com/nvkudva/ollajev/blob/55d0149782ca772ae3208bde7d4bd31beca7cd55/README.md",
+      "evidenceSha256": "3fd02ec112a7b95732b9677ecc48f0564658c76ccc211738180672bba06801dd",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-23T08:50:28.361Z"
+    },
+    {
+      "repo": "momen-devv/multitenant-ecommerce",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "9e71bdcbbbc96d4bc587c36997055225dda13732",
+      "evidenceUrl": "https://github.com/momen-devv/multitenant-ecommerce/blob/9e71bdcbbbc96d4bc587c36997055225dda13732/README.md",
+      "evidenceSha256": "2a576046050f5d90950dddfcad4b768329dc73dfb9270c925d07d22a8a944487",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-23T08:50:28.361Z"
+    },
+    {
+      "repo": "bhushankinge/jev-laya-classification-bench",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.1,
         "jevKeep": "review",
-        "jevKeepConfidence": 0.23,
+        "jevKeepConfidence": 0.25,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "62d5b4b5e68d72956e971c81954b9725abecccc7",
-      "evidenceUrl": "https://github.com/amantux/mcp-router/blob/62d5b4b5e68d72956e971c81954b9725abecccc7/README.md",
-      "evidenceSha256": "ce7bc59498985a57fccecae724d7c58cc1b198f07d33391ec606114f53852b00",
+      "sha": "728f2eba42871fa5bbe13c09ccfcb07943366cd9",
+      "evidenceUrl": "https://github.com/bhushankinge/jev-laya-classification-bench/blob/728f2eba42871fa5bbe13c09ccfcb07943366cd9/README.md",
+      "evidenceSha256": "2375770e9154731ca156a70eefefab2c6458758ec79bc5861589883a9ad7b828",
       "model": "jev-latest",
-      "checkedAt": "2026-10-23T00:10:19.530Z"
+      "checkedAt": "2026-10-23T08:50:28.361Z"
     },
     {
-      "repo": "lang4292/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "senna-lang/qwen3-4b-system-one",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.86,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.58,
+        "category": "alternatives"
+      },
+      "sha": "043f7642d2b69dcb54f20d46edd3d54c49d11a7b",
+      "evidenceUrl": "https://github.com/senna-lang/qwen3-4b-system-one/blob/043f7642d2b69dcb54f20d46edd3d54c49d11a7b/README.md",
+      "evidenceSha256": "2a448c2e2091f976fa5aa6bd84972c5e2930d1396b57794397da7161f146cad3",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-23T08:50:28.361Z"
+    },
+    {
+      "repo": "threelightstudio/jev-laya-local-daemon",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "0c9a266cac632890abddac7e66f2ed68d649abe5",
+      "evidenceUrl": "https://github.com/threelightstudio/jev-laya-local-daemon/blob/0c9a266cac632890abddac7e66f2ed68d649abe5/README.md",
+      "evidenceSha256": "7ef7e9aa5261046e454aa4e0f9d8ec017022ca44ce9486867cbac5c2e189c61a",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-23T08:50:28.361Z"
+    },
+    {
+      "repo": "takzen/bullfinch",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.94,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.52,
+        "category": "alternatives"
+      },
+      "sha": "5d5c6ca69ec81c65956fe5e2f2d35c14d7d3ef8d",
+      "evidenceUrl": "https://github.com/takzen/bullfinch/blob/5d5c6ca69ec81c65956fe5e2f2d35c14d7d3ef8d/README.md",
+      "evidenceSha256": "7090456a5650fa542efc41aba2769e31bbba2ea6b3c4353ae2e2e7b5daefc013",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-23T08:50:28.361Z"
     }
   ],
   "identity": {
@@ -57,8 +117,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3122,
-  "publication": {
-    "rebasedOn": "829dacf24d35fbe811092d26b7bd66dad32285f9"
-  }
+  "totalProjects": 3120
 }
