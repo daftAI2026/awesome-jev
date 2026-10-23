@@ -5893,5 +5893,20 @@
     "reason": null,
     "originalUrl": "https://blog.alexewerlof.com/p/rise-and-fall-of-jev-eval-hype-vs-llm",
     "aihotUrl": "https://aihot.news/items/kqd68nsm1m0rwxn6sn4hwudty"
+  },
+  {
+    "id": "j5qm7v6182adr1zleomgiw2au",
+    "title": "Modem 推出由 Jev 驱动的智能触发器，按条件筛选事件再运行智能体",
+    "originalTitle": "Unlock new workflows with smart triggers, powered by Jev",
+    "summary": "Modem 上线智能触发器（Smart Triggers），在启动 Modem 智能体前先用 TypeSafe 的决策模型 Jev 按自然语言条件评估每个事件，条件可在 1 秒内完成评估、单次成本 1/100 美分，只有匹配的事件才触发智能体运行。该功能现已向所有用户开放，可通过应用内、Slack、Discord 或 Claude、ChatGPT、Cursor 等 MCP 客户端创建自动化。",
+    "sourceName": "Modem：Blog（RSS）",
+    "publishedAt": "2026-10-23T13:00:00.000Z",
+    "discoveredAt": "2026-10-23T16:10:33.023Z",
+    "category": "ai-products",
+    "score": 38,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://modem.ai/blog/smart-triggers",
+    "aihotUrl": "https://aihot.news/items/j5qm7v6182adr1zleomgiw2au"
   }
 ]
