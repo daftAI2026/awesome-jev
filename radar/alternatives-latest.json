@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-23T14:27:13.049Z",
+  "at": "2026-10-23T19:32:27.209Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,97 +20,31 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 8,
+  "reviewed": 4,
   "added": 0,
   "pending": 202,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "arish096/awesome-jev-use-cases",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.04,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.51,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "bdbaee23b08c15d03a7c456aa777a023cb0da54a",
-      "evidenceUrl": "https://github.com/arish096/awesome-jev-use-cases/blob/bdbaee23b08c15d03a7c456aa777a023cb0da54a/README.md",
-      "evidenceSha256": "b37d86a7d0482b37020e7b8eec8fce13384bd05ca2919f4a368e65fda6bba13c",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-23T14:27:13.049Z"
-    },
-    {
-      "repo": "luminousyyh/laya-decide",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "48f639b18199b8a7ce6f243edf2992a59f364fe5",
-      "evidenceUrl": "https://github.com/luminousyyh/laya-decide/blob/48f639b18199b8a7ce6f243edf2992a59f364fe5/README.md",
-      "evidenceSha256": "af63cd8ef5e5fba6ea11a830c4b4851c2d85516995c25fb09f63f520017664a3",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-23T14:27:13.049Z"
-    },
-    {
-      "repo": "sidneeuncharged29/jev-visual",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "2c89081bdc5f43e8bcac21f1e7b061f400efeee2",
-      "evidenceUrl": "https://github.com/sidneeuncharged29/jev-visual/blob/2c89081bdc5f43e8bcac21f1e7b061f400efeee2/README.md",
-      "evidenceSha256": "34a41b3caf4147109d5dd39cdf6d1f53b0fe6d9a4ac73daae5eec1897c6456da",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-23T14:27:13.049Z"
-    },
-    {
-      "repo": "thaovasiliou214/coreai-kit",
+      "repo": "emregarnier84628/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "tomoyar51/coreai-kit",
+      "repo": "loriyoshida/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "itsodeleo/mlx-zeroeffort-decider",
+      "repo": "eileenes/decidelint",
       "status": "error",
-      "reason": "github-network-or-timeout"
+      "reason": "github-http-404"
     },
     {
-      "repo": "ollaya-dev/ollaya",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.91,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.72,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "448edbd432b212f6f7b343da6dcaed22d4585c8f",
-      "evidenceUrl": "https://github.com/ollaya-dev/ollaya/blob/448edbd432b212f6f7b343da6dcaed22d4585c8f/README.md",
-      "evidenceSha256": "72f5a95947eb42580ed7f1b4439d98fafb8f21e5341d56face7a5eca968d2119",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-23T14:27:13.049Z"
-    },
-    {
-      "repo": "lijiawei255/jev-tune",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.83,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.56,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "f5caeabced1ea735010e3e05e14d376716e8c909",
-      "evidenceUrl": "https://github.com/lijiawei255/jev-tune/blob/f5caeabced1ea735010e3e05e14d376716e8c909/README.md",
-      "evidenceSha256": "95d9d0281d29fc8d7a6f44f553bbae2b89c2ead62923b9e46f3a6e0f3e4ece9d",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-23T14:27:13.049Z"
+      "repo": "sma5111/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
     }
   ],
   "identity": {
@@ -121,5 +55,8 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3120
+  "totalProjects": 3126,
+  "publication": {
+    "rebasedOn": "05a6908ee8edf80baf30b80d1ed9d2e943b02dcc"
+  }
 }

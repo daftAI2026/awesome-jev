@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 53
+      "stars": 54
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34057
+      "stars": 34087
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 1601
+      "stars": 1600
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8182
+      "stars": 8183
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 266
+      "stars": 272
     },
     "phocinae/.github": {
       "status": "review",
@@ -2455,8 +2455,8 @@
     "eileenes/decidelint": {
       "status": "error",
       "discoveredAt": "2026-10-10T10:07:20.118Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-19T16:38:17.720Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-23T19:32:27.209Z",
       "lastReview": {
         "repo": "eileenes/decidelint",
         "status": "review",
@@ -2474,7 +2474,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-10T10:07:20.118Z"
       },
-      "retryAt": "2026-10-23T16:38:17.720Z"
+      "retryAt": "2026-10-30T19:32:27.209Z"
     },
     "academicgowndigitalclock977/laya-coreml": {
       "status": "review",
@@ -2727,8 +2727,8 @@
     "sma5111/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-14T09:01:14.490Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-21T14:40:09.396Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-23T19:32:27.209Z",
       "lastReview": {
         "repo": "sma5111/coreai-kit",
         "status": "review",
@@ -2739,7 +2739,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T09:01:14.490Z"
       },
-      "retryAt": "2026-10-23T14:40:09.396Z",
+      "retryAt": "2026-10-27T19:32:27.209Z",
       "stars": 0
     },
     "nathanm49/coreai-kit": {
@@ -2869,11 +2869,11 @@
       "retryAt": "2026-10-25T14:27:13.049Z"
     },
     "loriyoshida/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-16T19:01:53.087Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-16T19:01:53.087Z",
+      "checkedAt": "2026-10-23T19:32:27.209Z",
       "lastReview": {
         "repo": "loriyoshida/coreai-kit",
         "status": "review",
@@ -2884,14 +2884,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-16T19:01:53.087Z"
       },
-      "retryAt": "2026-10-23T19:01:53.087Z"
+      "retryAt": "2026-10-25T19:32:27.209Z"
     },
     "emregarnier84628/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-16T19:01:53.087Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-16T19:01:53.087Z",
+      "checkedAt": "2026-10-23T19:32:27.209Z",
       "lastReview": {
         "repo": "emregarnier84628/coreai-kit",
         "status": "review",
@@ -2902,7 +2902,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-16T19:01:53.087Z"
       },
-      "retryAt": "2026-10-23T19:01:53.087Z"
+      "retryAt": "2026-10-25T19:32:27.209Z"
     },
     "gabriel4078/jev-social": {
       "status": "review",
@@ -4053,7 +4053,7 @@
       "status": "review",
       "discoveredAt": "2026-10-22T14:40:27.576Z",
       "attempts": 1,
-      "stars": 8,
+      "stars": 9,
       "checkedAt": "2026-10-22T14:40:27.576Z",
       "lastReview": {
         "repo": "leofmarciano/groot",
@@ -4119,7 +4119,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 1,
-      "stars": 1384,
+      "stars": 1386,
       "checkedAt": "2026-10-23T14:27:13.049Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
