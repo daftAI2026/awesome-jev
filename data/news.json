@@ -5878,5 +5878,20 @@
     "reason": null,
     "originalUrl": "https://latent.space/p/ainews-high-taste-testers-ep-1/",
     "aihotUrl": "https://aihot.news/items/x1glpyso2s4x42i4bxsmtxuhu"
+  },
+  {
+    "id": "kqd68nsm1m0rwxn6sn4hwudty",
+    "title": "Jev 的兴衰：从营销炒作看 AI 行业的真实创新缺口",
+    "originalTitle": "The Rise and Fall of Jev",
+    "summary": "作者复盘 TypeSafe AI 发布 33 天的通用分类器模型 Jev 的炒作与降温，指出其只是不训练、不推理的快速分类器，所谓\"不能幻觉\"仅指输出符合 schema，开放权重模型在性能成本比上反而更优。文章归纳其营销策略为蹭名字、夸大声明、术语模糊和制造戏剧性，并梳理 ChatGPT 以来的增量改进，以及抽象推理、持续学习、具身智能和 AI 运行经济性等仍未解决的根本问题。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-10-19T10:54:01.000Z",
+    "discoveredAt": "2026-10-23T12:40:33.020Z",
+    "category": "opinion",
+    "score": 55,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://blog.alexewerlof.com/p/rise-and-fall-of-jev-eval-hype-vs-llm",
+    "aihotUrl": "https://aihot.news/items/kqd68nsm1m0rwxn6sn4hwudty"
   }
 ]
