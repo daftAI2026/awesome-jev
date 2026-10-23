@@ -5863,5 +5863,20 @@
     "reason": null,
     "originalUrl": "https://x.com/testingcatalog/status/2113398273352368473",
     "aihotUrl": "https://aihot.news/items/o85h1c7hzlj53lwkijzp1smi1"
+  },
+  {
+    "id": "x1glpyso2s4x42i4bxsmtxuhu",
+    "title": "Latent Space 试点 High Taste Testers 节目并汇总 AI 新闻：Meta 开源 Muse Spark Open、Reflection Beam 1.0 等",
+    "originalTitle": "[AINews] High Taste Testers Ep. 1",
+    "summary": "Latent Space 试点新节目 High Taste Testers，并发布 2026 年 10 月 15 至 16 日的 AI 新闻汇总。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-10-17T07:47:38.000Z",
+    "discoveredAt": "2026-10-23T09:46:28.496Z",
+    "category": "industry",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://latent.space/p/ainews-high-taste-testers-ep-1/",
+    "aihotUrl": "https://aihot.news/items/x1glpyso2s4x42i4bxsmtxuhu"
   }
 ]
