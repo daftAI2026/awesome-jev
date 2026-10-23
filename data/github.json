@@ -175168,5 +175168,189 @@
         "checkedAt": "2026-10-21T14:40:09.396Z"
       }
     }
+  },
+  {
+    "id": "gh-12-jordandalton-jev-scriptc",
+    "type": "github",
+    "title": "jev-scriptc",
+    "summary": "An unofficial TypeSafe Jev CLI compiled from TypeScript with ScriptC, with Node vs native performance benchmarks.",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/JordanDalton/jev-scriptc",
+    "sourceMeta": {
+      "repo": "JordanDalton/jev-scriptc",
+      "author": "JordanDalton",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1403596897,
+        "nodeId": "R_kgDOU6kwYQ"
+      },
+      "date": "2026-10-03",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "jordandalton/jev-scriptc",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "developer"
+        },
+        "sha": "872078c43cd22871e7cf3064db91fc930b9a6593",
+        "evidenceUrl": "https://github.com/jordandalton/jev-scriptc/blob/872078c43cd22871e7cf3064db91fc930b9a6593/README.md",
+        "evidenceSha256": "d677434e28577b3a6fa8621c7b71c74c2c8b56bbb1793248f5dd40dab2670ad5",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/jordandalton/jev-scriptc/blob/872078c43cd22871e7cf3064db91fc930b9a6593/test/cli.test.mjs",
+            "path": "test/cli.test.mjs",
+            "sha256": "b1d59bbb46e513fa75deabd4182bcb5d354c927e7610b59512e4e5541e2ef40a"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-23T17:11:42.629Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-keeganfargher-auto-jev",
+    "type": "github",
+    "title": "auto-jev",
+    "summary": "auto-jev: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/KeeganFargher/auto-jev",
+    "sourceMeta": {
+      "repo": "KeeganFargher/auto-jev",
+      "author": "KeeganFargher",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1385040505,
+        "nodeId": "R_kgDOUo4KeQ"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "keeganfargher/auto-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "f69e9fc8052033ff27ac6d920f53c091757b56f8",
+        "evidenceUrl": "https://github.com/keeganfargher/auto-jev/tree/f69e9fc8052033ff27ac6d920f53c091757b56f8",
+        "evidenceSha256": "01209dd3840e26c043871fe861683378033245a621d12bd9eb36fe25905f3740",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/keeganfargher/auto-jev/blob/f69e9fc8052033ff27ac6d920f53c091757b56f8/docs/phase-status.md",
+            "path": "docs/phase-status.md",
+            "sha256": "222d6d2a652f94d87a219eb6aa2820613f31305b96e0ace124733fbfc4db0bc2"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-23T17:11:42.629Z"
+      }
+    }
+  },
+  {
+    "id": "gh-19-df-yamashitamasashi-jevnoid",
+    "type": "github",
+    "title": "jevnoid",
+    "summary": "A Tierra-inspired digital organism ecosystem driven by Jev (System One)",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/df-yamashitamasashi/jevnoid",
+    "sourceMeta": {
+      "repo": "df-yamashitamasashi/jevnoid",
+      "author": "df-yamashitamasashi",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1390965235,
+        "nodeId": "R_kgDOUuhx8w"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "df-yamashitamasashi/jevnoid",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "52ecf5f38d7fe26d7fdc2651dea5a396ba72fe86",
+        "evidenceUrl": "https://github.com/df-yamashitamasashi/jevnoid/blob/52ecf5f38d7fe26d7fdc2651dea5a396ba72fe86/README.md",
+        "evidenceSha256": "92cf0dc41cac45f8f7fe63cf9d14e5fd623950f68010e18b166b153dd4ea5e77",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-23T17:11:42.629Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-kidzik-jiffy",
+    "type": "github",
+    "title": "jiffy",
+    "summary": "Experimental typed decisions over documents and images with DiffusionGemma. Jev-style API, isolated question branches, Apache-2.0.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/kidzik/jiffy",
+    "sourceMeta": {
+      "repo": "kidzik/jiffy",
+      "author": "kidzik",
+      "stars": 9,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1379852457,
+        "nodeId": "R_kgDOUj7gqQ"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "kidzik/jiffy",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "814d705b0e7b612148af2a25c653cc9d410c6b50",
+        "evidenceUrl": "https://github.com/kidzik/jiffy/blob/814d705b0e7b612148af2a25c653cc9d410c6b50/README.md",
+        "evidenceSha256": "0dd93cdd0286c56753de4e991413963ea6149f2f9ca17c26d4f7b036a3325caa",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-23T17:11:42.629Z"
+      }
+    }
   }
 ]
