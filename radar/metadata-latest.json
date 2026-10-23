@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "f87b057766d84f7907503fd654ba9a05aaee4d4d",
-  "at": "2026-10-22T22:16:40.409Z",
+  "baselineSha": "10b546c66ba3e383c6fcc3a0239ead4de23c2b2a",
+  "at": "2026-10-23T06:00:19.960Z",
   "totalProjects": 3122,
   "metadata": {
     "ok": 3025,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "cmungall/jevotron",
+        "to": "ai4curation/jevotron",
+        "databaseId": 1384488724
+      }
+    ]
   },
   "receipts": [
     {
@@ -512,9 +518,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
