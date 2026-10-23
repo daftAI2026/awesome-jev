@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-22T21:38:58.023Z",
+  "at": "2026-10-23T04:54:45.642Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,12 +68,38 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 5,
   "added": 0,
   "pending": 3915,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "chuanqisun/memo",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "paulosuzart/awesome",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "brenchcc/awesome-llm-research-collections",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "jesseqin123/solo_unicorn_toolbox",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "ytang520/prompt_injection_research_daily_arxiv",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,

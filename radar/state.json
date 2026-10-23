@@ -90120,10 +90120,10 @@
     "paulosuzart/awesome": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 36,
-      "checkedAt": "2026-10-21T04:53:04.201Z",
-      "retryAt": "2026-10-23T04:53:04.201Z"
+      "checkedAt": "2026-10-23T04:54:45.642Z",
+      "retryAt": "2026-10-27T04:54:45.642Z"
     },
     "yib7/inployed": {
       "status": "review",
@@ -90348,10 +90348,10 @@
     "chuanqisun/memo": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 68,
-      "checkedAt": "2026-10-21T04:53:04.201Z",
-      "retryAt": "2026-10-23T04:53:04.201Z"
+      "checkedAt": "2026-10-23T04:54:45.642Z",
+      "retryAt": "2026-10-27T04:54:45.642Z"
     },
     "okoryem/invoice-guard": {
       "status": "review",
@@ -91874,10 +91874,10 @@
     "brenchcc/awesome-llm-research-collections": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 17,
-      "checkedAt": "2026-10-21T04:53:04.201Z",
-      "retryAt": "2026-10-23T04:53:04.201Z"
+      "checkedAt": "2026-10-23T04:54:45.642Z",
+      "retryAt": "2026-10-27T04:54:45.642Z"
     },
     "oraekene/task-digest": {
       "status": "review",
@@ -92364,10 +92364,10 @@
     "jesseqin123/solo_unicorn_toolbox": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 5,
-      "checkedAt": "2026-10-21T04:53:04.201Z",
-      "retryAt": "2026-10-23T04:53:04.201Z"
+      "checkedAt": "2026-10-23T04:54:45.642Z",
+      "retryAt": "2026-10-27T04:54:45.642Z"
     },
     "ericjuta/omp-optchat": {
       "status": "review",
@@ -92769,10 +92769,10 @@
     "ytang520/prompt_injection_research_daily_arxiv": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 1,
-      "checkedAt": "2026-10-21T04:53:04.201Z",
-      "retryAt": "2026-10-23T04:53:04.201Z"
+      "checkedAt": "2026-10-23T04:54:45.642Z",
+      "retryAt": "2026-10-27T04:54:45.642Z"
     },
     "jenoshimizu870/eullm": {
       "status": "review",
