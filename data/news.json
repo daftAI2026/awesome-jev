@@ -5848,5 +5848,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2113348030590267557",
     "aihotUrl": "https://aihot.news/items/rzhkoeb15x91ehklseqwgc5a3"
+  },
+  {
+    "id": "o85h1c7hzlj53lwkijzp1smi1",
+    "title": "OpenAI Decisions API 正式开放，支持 Predicate、Choice 和 Score 三种决策",
+    "originalTitle": "OPENAI 🔥: Decisions API is now in general availability and can be used via APIs and the OpenAI Platform.",
+    "summary": "OpenAI 的 Decisions API 现已正式可用（GA），可通过 API 和 OpenAI Platform 使用。该 API 用于构建基于极快决策的工作流，支持 Predicate、Choice 和 Score 三种决策类型，可在不生成完整模型响应的情况下分类文本和图像、评估输入；作者示例询问 GPT-7 系列今年发布的概率，得到 21% 的结果。",
+    "sourceName": "X：Testing Catalog (@testingcatalog)",
+    "publishedAt": "2026-10-22T22:33:08.000Z",
+    "discoveredAt": "2026-10-22T23:03:22.487Z",
+    "category": "ai-products",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/testingcatalog/status/2113398273352368473",
+    "aihotUrl": "https://aihot.news/items/o85h1c7hzlj53lwkijzp1smi1"
   }
 ]
