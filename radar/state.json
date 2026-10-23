@@ -17561,7 +17561,7 @@
     "wei-shaw/sub2api": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -17576,8 +17576,8 @@
           "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ],
-      "checkedAt": "2026-10-16T11:28:30.308Z",
-      "retryAt": "2026-10-23T11:28:30.308Z",
+      "checkedAt": "2026-10-23T11:43:33.107Z",
+      "retryAt": "2026-10-30T11:43:33.107Z",
       "stars": 44375
     },
     "lioensky/vcptoolbox": {
