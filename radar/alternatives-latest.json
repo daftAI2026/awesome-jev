@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-22T19:30:09.017Z",
+  "at": "2026-10-23T00:10:19.530Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,21 +20,33 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 2,
   "added": 0,
   "pending": 199,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "atvari-eu/opencode-system-one",
+      "repo": "amantux/mcp-router",
       "status": "review",
-      "reason": "suspicious-review-instructions",
-      "sha": "dfa38225bffce9718168859003a19542c2dbd637",
-      "evidenceUrl": "https://github.com/atvari-eu/opencode-system-one/blob/dfa38225bffce9718168859003a19542c2dbd637/README.md",
-      "evidenceSha256": "aa7c8e71f58dbc46ddce4c4d74a44171bcdfd74179b717cc731d430e2a98a1fe",
+      "score": {
+        "jevAbout": 0.28,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.23,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "62d5b4b5e68d72956e971c81954b9725abecccc7",
+      "evidenceUrl": "https://github.com/amantux/mcp-router/blob/62d5b4b5e68d72956e971c81954b9725abecccc7/README.md",
+      "evidenceSha256": "ce7bc59498985a57fccecae724d7c58cc1b198f07d33391ec606114f53852b00",
       "model": "jev-latest",
-      "checkedAt": "2026-10-22T19:30:09.017Z"
+      "checkedAt": "2026-10-23T00:10:19.530Z"
+    },
+    {
+      "repo": "lang4292/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
     }
   ],
   "identity": {
@@ -45,5 +57,8 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3120
+  "totalProjects": 3122,
+  "publication": {
+    "rebasedOn": "829dacf24d35fbe811092d26b7bd66dad32285f9"
+  }
 }

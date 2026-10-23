@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 49
+      "stars": 51
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 33967
+      "stars": 33986
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 242
+      "stars": 250
     },
     "phocinae/.github": {
       "status": "review",
@@ -2365,26 +2365,26 @@
     "amantux/mcp-router": {
       "status": "review",
       "discoveredAt": "2026-10-08T20:48:36.864Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-15T23:51:43.338Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-23T00:10:19.530Z",
       "lastReview": {
         "repo": "amantux/mcp-router",
         "status": "review",
         "score": {
-          "jevAbout": 0.42,
+          "jevAbout": 0.28,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.28,
+          "jevKeepConfidence": 0.23,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "29c3ab21180d0849c51a53deb9aa143f2fe5212f",
-        "evidenceUrl": "https://github.com/amantux/mcp-router/blob/29c3ab21180d0849c51a53deb9aa143f2fe5212f/README.md",
-        "evidenceSha256": "09108419582575fab3dafe2bee2dc921cbd4cd1a4e055ddde57238a92cbb4063",
+        "sha": "62d5b4b5e68d72956e971c81954b9725abecccc7",
+        "evidenceUrl": "https://github.com/amantux/mcp-router/blob/62d5b4b5e68d72956e971c81954b9725abecccc7/README.md",
+        "evidenceSha256": "ce7bc59498985a57fccecae724d7c58cc1b198f07d33391ec606114f53852b00",
         "model": "jev-latest",
-        "checkedAt": "2026-10-15T23:51:43.338Z"
+        "checkedAt": "2026-10-23T00:10:19.530Z"
       },
-      "retryAt": "2026-10-22T23:51:43.338Z",
+      "retryAt": "2026-10-30T00:10:19.530Z",
       "stars": 0
     },
     "itsodeleo/jev-mlx": {
@@ -2815,11 +2815,11 @@
       "stars": 2
     },
     "lang4292/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-15T23:51:43.338Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-15T23:51:43.338Z",
+      "checkedAt": "2026-10-23T00:10:19.530Z",
       "lastReview": {
         "repo": "lang4292/coreai-kit",
         "status": "review",
@@ -2830,7 +2830,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-15T23:51:43.338Z"
       },
-      "retryAt": "2026-10-22T23:51:43.338Z"
+      "retryAt": "2026-10-25T00:10:19.530Z"
     },
     "tomoyar51/coreai-kit": {
       "status": "review",
@@ -4053,7 +4053,7 @@
       "status": "review",
       "discoveredAt": "2026-10-22T14:40:27.576Z",
       "attempts": 1,
-      "stars": 6,
+      "stars": 8,
       "checkedAt": "2026-10-22T14:40:27.576Z",
       "lastReview": {
         "repo": "leofmarciano/groot",
