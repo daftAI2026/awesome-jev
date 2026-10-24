@@ -5787,7 +5787,7 @@
     "thevilledev/typesafe-scheduler-diagnostics": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -5798,7 +5798,7 @@
           "path": "README.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "thevilledev/typesafe-scheduler-diagnostics",
         "status": "review",
@@ -5819,9 +5819,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z",
+      "retryAt": "2026-10-31T20:52:57.119Z",
       "stars": 0
     },
     "thalesaugusto0/typesafe-router-pipeline": {
@@ -17196,7 +17196,7 @@
     "tbphp/gpt-load": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -17211,42 +17211,42 @@
           "path": "internal/catalog/official.go"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tbphp/gpt-load",
         "status": "review",
         "score": {
-          "jevAbout": 0.07,
+          "jevAbout": 0.08,
           "jevKeep": "drop",
-          "jevKeepConfidence": 0.2,
+          "jevKeepConfidence": 0.46,
           "category": "developer",
           "needsReview": true,
           "conflictingEvidence": true
         },
-        "sha": "1cedccf2fa6e7a45c01a5651e0bbe9aad78a4fc9",
-        "evidenceUrl": "https://github.com/tbphp/gpt-load/blob/1cedccf2fa6e7a45c01a5651e0bbe9aad78a4fc9/README.md",
-        "evidenceSha256": "2b4f1ef1dfad7a79b3bb11526cd41c4d6fe07f694e33a69f6de5f5383f08b27e",
+        "sha": "7ba66c3f7a6315a08b89bdf29f8da92c1aaede1b",
+        "evidenceUrl": "https://github.com/tbphp/gpt-load/blob/7ba66c3f7a6315a08b89bdf29f8da92c1aaede1b/README.md",
+        "evidenceSha256": "ed48b6e2f2870d9d4f14a55eb764a3212d4fca99828e7309c5fffc5cff397e11",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tbphp/gpt-load/blob/1cedccf2fa6e7a45c01a5651e0bbe9aad78a4fc9/internal/channel/modules/jev.go",
+            "url": "https://github.com/tbphp/gpt-load/blob/7ba66c3f7a6315a08b89bdf29f8da92c1aaede1b/internal/channel/modules/jev.go",
             "path": "internal/channel/modules/jev.go",
             "sha256": "efb22351dc7591caa6caa38096ebe903a5fc3dd1b5bd1cca68af7af8546b584d"
           },
           {
-            "url": "https://github.com/tbphp/gpt-load/blob/1cedccf2fa6e7a45c01a5651e0bbe9aad78a4fc9/internal/catalog/official.json",
+            "url": "https://github.com/tbphp/gpt-load/blob/7ba66c3f7a6315a08b89bdf29f8da92c1aaede1b/internal/catalog/official.json",
             "path": "internal/catalog/official.json",
             "sha256": "ed6fd81eef4eddb671353fd95fc96559afba8b4561b5d6fa260e910990faf8c8"
           },
           {
-            "url": "https://github.com/tbphp/gpt-load/blob/1cedccf2fa6e7a45c01a5651e0bbe9aad78a4fc9/internal/catalog/official.go",
+            "url": "https://github.com/tbphp/gpt-load/blob/7ba66c3f7a6315a08b89bdf29f8da92c1aaede1b/internal/catalog/official.go",
             "path": "internal/catalog/official.go",
             "sha256": "25bc8f595d7336fd42bf3ee2b9db94bad360b21b84e2027beec9fe40d5089dfc"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "crmne/ruby_llm": {
       "status": "review",
@@ -17611,7 +17611,7 @@
     "thinkinaixyz/deepchat": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -17626,84 +17626,84 @@
           "path": "src/main/provider/providers/jevProvider.ts"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "thinkinaixyz/deepchat",
         "status": "review",
         "score": {
-          "jevAbout": 0.12,
+          "jevAbout": 0.15,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.38,
+          "jevKeepConfidence": 0.18,
           "category": "agents",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "ec507626946e792ed387f1d1daf1dd5ce97e2bbf",
-        "evidenceUrl": "https://github.com/thinkinaixyz/deepchat/blob/ec507626946e792ed387f1d1daf1dd5ce97e2bbf/README.md",
-        "evidenceSha256": "e0d7f73d52ac3deade3ae063b059ef373e31c16c5b1ca5a24240f1577ced38e4",
+        "sha": "f47f4bfa0c8a614e295d5ae24de6977defd65fb8",
+        "evidenceUrl": "https://github.com/thinkinaixyz/deepchat/blob/f47f4bfa0c8a614e295d5ae24de6977defd65fb8/README.md",
+        "evidenceSha256": "047936362c757782165bef70bc3e71b1f66a6516e70066a6a353e6050091f9f0",
         "evidenceLinks": [
           {
-            "url": "https://github.com/thinkinaixyz/deepchat/blob/ec507626946e792ed387f1d1daf1dd5ce97e2bbf/docs/features/typesafe-jev-provider/spec.md",
+            "url": "https://github.com/thinkinaixyz/deepchat/blob/f47f4bfa0c8a614e295d5ae24de6977defd65fb8/docs/features/typesafe-jev-provider/spec.md",
             "path": "docs/features/typesafe-jev-provider/spec.md",
             "sha256": "eb11c6d9190a713b99a9b161a6c76c0512ba19e3e3f6c810c76464f3e42655f9"
           },
           {
-            "url": "https://github.com/thinkinaixyz/deepchat/blob/ec507626946e792ed387f1d1daf1dd5ce97e2bbf/src/main/provider/defaults.ts",
+            "url": "https://github.com/thinkinaixyz/deepchat/blob/f47f4bfa0c8a614e295d5ae24de6977defd65fb8/src/main/provider/defaults.ts",
             "path": "src/main/provider/defaults.ts",
-            "sha256": "aaa5334cd9956fe24768dfaabd59f95915a7d742ddd14001411374b8eba805d8"
+            "sha256": "68e32a3fa6a8c54e089f0dba1ab001ff6da60b3bb4e88b985f1e6884ba60c86d"
           },
           {
-            "url": "https://github.com/thinkinaixyz/deepchat/blob/ec507626946e792ed387f1d1daf1dd5ce97e2bbf/src/main/provider/providers/jevProvider.ts",
+            "url": "https://github.com/thinkinaixyz/deepchat/blob/f47f4bfa0c8a614e295d5ae24de6977defd65fb8/src/main/provider/providers/jevProvider.ts",
             "path": "src/main/provider/providers/jevProvider.ts",
             "sha256": "ea050b4bf6ee0e6066d429ae7785dc541c52d069e00f542717625a429bb88c53"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "theonedev/onedev": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "server-core/src/main/java/io/onedev/server/model/support/JevSetting.java"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "theonedev/onedev",
         "status": "review",
         "score": {
-          "jevAbout": 0.67,
+          "jevAbout": 0.71,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.59,
+          "jevKeepConfidence": 0.46,
           "category": "developer",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "47d730d4798dd94aeaa176ec113e943d2eac76f3",
-        "evidenceUrl": "https://github.com/theonedev/onedev/blob/47d730d4798dd94aeaa176ec113e943d2eac76f3/readme.md",
+        "sha": "8f64006bfb82d5ab34ca4f432660d0aa77749907",
+        "evidenceUrl": "https://github.com/theonedev/onedev/blob/8f64006bfb82d5ab34ca4f432660d0aa77749907/readme.md",
         "evidenceSha256": "5e3ef54d03bf17fedc8ce2c6cfcaed11b3fc9fe836edd8a26a2bc746c2284aef",
         "evidenceLinks": [
           {
-            "url": "https://github.com/theonedev/onedev/blob/47d730d4798dd94aeaa176ec113e943d2eac76f3/server-core/src/main/java/io/onedev/server/model/support/JevSetting.java",
+            "url": "https://github.com/theonedev/onedev/blob/8f64006bfb82d5ab34ca4f432660d0aa77749907/server-core/src/main/java/io/onedev/server/model/support/JevSetting.java",
             "path": "server-core/src/main/java/io/onedev/server/model/support/JevSetting.java",
             "sha256": "bedae6789dd6ead316e98f693640a63531e1b8e37ba5e4f3f40bf45eb8951117"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "simonschubert/linuxcommandlibrary": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -17714,37 +17714,37 @@
           "path": "assets/commands/jevchat.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "simonschubert/linuxcommandlibrary",
         "status": "review",
         "score": {
-          "jevAbout": 0.82,
+          "jevAbout": 0.67,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.23,
+          "jevKeepConfidence": 0.14,
           "category": "resources",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "c78e29e494541f288de379d5826798c57df42635",
-        "evidenceUrl": "https://github.com/simonschubert/linuxcommandlibrary/blob/c78e29e494541f288de379d5826798c57df42635/README.md",
+        "sha": "ff3c7c15cf225ac370f6bbecc38ed425648415af",
+        "evidenceUrl": "https://github.com/simonschubert/linuxcommandlibrary/blob/ff3c7c15cf225ac370f6bbecc38ed425648415af/README.md",
         "evidenceSha256": "77db2d825081f333faefaadb05975365f5785ac9d7f47d17119082510b0e8990",
         "evidenceLinks": [
           {
-            "url": "https://github.com/simonschubert/linuxcommandlibrary/blob/c78e29e494541f288de379d5826798c57df42635/assets/commands/jeff.md",
+            "url": "https://github.com/simonschubert/linuxcommandlibrary/blob/ff3c7c15cf225ac370f6bbecc38ed425648415af/assets/commands/jeff.md",
             "path": "assets/commands/jeff.md",
             "sha256": "789cd5c8f173775b93b89ef145eeea441ada7fd809e6069f83cf2dbde2b83aa5"
           },
           {
-            "url": "https://github.com/simonschubert/linuxcommandlibrary/blob/c78e29e494541f288de379d5826798c57df42635/assets/commands/jevchat.md",
+            "url": "https://github.com/simonschubert/linuxcommandlibrary/blob/ff3c7c15cf225ac370f6bbecc38ed425648415af/assets/commands/jevchat.md",
             "path": "assets/commands/jevchat.md",
             "sha256": "e71224958db53cfa12282668351ee00972b9d590c48a31bb91c0b51f539705f0"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "laravel/ai": {
       "status": "review",
@@ -17957,32 +17957,32 @@
     "symfony/ai": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "src/platform/src/Bridge/TypeSafe/Factory.php"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "symfony/ai",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "91849e5c622ea163d2a867b2cf1653ccc19a3737",
-        "evidenceUrl": "https://github.com/symfony/ai/blob/91849e5c622ea163d2a867b2cf1653ccc19a3737/README.md",
+        "sha": "23dc2ebb8ffc55b44d7456aaa3d766f6b826c545",
+        "evidenceUrl": "https://github.com/symfony/ai/blob/23dc2ebb8ffc55b44d7456aaa3d766f6b826c545/README.md",
         "evidenceSha256": "879f03e691da7f4e4d7e45a051bf1f742098f320c3d4af26388cad4ed87b21d0",
         "evidenceLinks": [
           {
-            "url": "https://github.com/symfony/ai/blob/91849e5c622ea163d2a867b2cf1653ccc19a3737/src/platform/src/Bridge/TypeSafe/Factory.php",
+            "url": "https://github.com/symfony/ai/blob/23dc2ebb8ffc55b44d7456aaa3d766f6b826c545/src/platform/src/Bridge/TypeSafe/Factory.php",
             "path": "src/platform/src/Bridge/TypeSafe/Factory.php",
             "sha256": "0e68b175e683d794c57d28db3f6efbf41396e9f133a2465f3f643f99fd24cd9f"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "aipoch/open-science": {
       "status": "review",
@@ -18125,7 +18125,7 @@
     "tanstack/ai": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -18140,42 +18140,42 @@
           "path": "docs/evaluate/evaluate.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tanstack/ai",
         "status": "review",
         "score": {
-          "jevAbout": 0.16,
+          "jevAbout": 0.14,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.46,
+          "jevKeepConfidence": 0.2,
           "category": "sdk",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "85c2956c68f3226ef409b3a4e54d5be82198931e",
-        "evidenceUrl": "https://github.com/tanstack/ai/blob/85c2956c68f3226ef409b3a4e54d5be82198931e/README.md",
-        "evidenceSha256": "dfeab31253166530f4fa86c189f45cb45784b870a3c9f360b99456c8bdeda652",
+        "sha": "98055ca01af9e449d039f61e380b0d3c158acbb1",
+        "evidenceUrl": "https://github.com/tanstack/ai/blob/98055ca01af9e449d039f61e380b0d3c158acbb1/README.md",
+        "evidenceSha256": "086e8b5b2aa188c18637829f3fc9b465e4f12e847161089bcb29ce9c41533d91",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tanstack/ai/blob/85c2956c68f3226ef409b3a4e54d5be82198931e/packages/ai-typesafe/src/utils/client.ts",
+            "url": "https://github.com/tanstack/ai/blob/98055ca01af9e449d039f61e380b0d3c158acbb1/packages/ai-typesafe/src/utils/client.ts",
             "path": "packages/ai-typesafe/src/utils/client.ts",
             "sha256": "2fabcafa42755ca439ba0bb93e1f241ede52d5099c3dcc6f33c1b2fe494d6815"
           },
           {
-            "url": "https://github.com/tanstack/ai/blob/85c2956c68f3226ef409b3a4e54d5be82198931e/docs/adapters/typesafe.md",
+            "url": "https://github.com/tanstack/ai/blob/98055ca01af9e449d039f61e380b0d3c158acbb1/docs/adapters/typesafe.md",
             "path": "docs/adapters/typesafe.md",
-            "sha256": "8d4d62ac90b965b6c9a04e3062ade63e56c27aaf7daf0747278a24d408ad6cda"
+            "sha256": "f524468cbf2f1668f32995d9d46b61c033923f9f7c10e1c2b06f57a40c2eda1d"
           },
           {
-            "url": "https://github.com/tanstack/ai/blob/85c2956c68f3226ef409b3a4e54d5be82198931e/docs/evaluate/evaluate.md",
+            "url": "https://github.com/tanstack/ai/blob/98055ca01af9e449d039f61e380b0d3c158acbb1/docs/evaluate/evaluate.md",
             "path": "docs/evaluate/evaluate.md",
-            "sha256": "47d05f30b0f8b7dac106705bc474f3f2193347bb7e4c607a9fcf141b2d658c2c"
+            "sha256": "a5b1615ccef69462d8110c2c4203ceb742cd727e1fc8c89cb27f9ec5a57d77fb"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "tonhowtf/omniget": {
       "status": "error",
@@ -18487,39 +18487,39 @@
     "tinyhumansai/tinyhivemind": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "examples/openhuman/src/bin/pe1006_hive/typesafe.rs"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tinyhumansai/tinyhivemind",
         "status": "review",
         "score": {
-          "jevAbout": 0.31,
+          "jevAbout": 0.28,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.53,
+          "jevKeepConfidence": 0.31,
           "category": "agents",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "c2ad41822936cde6154a9d52508c186f009235dc",
-        "evidenceUrl": "https://github.com/tinyhumansai/tinyhivemind/blob/c2ad41822936cde6154a9d52508c186f009235dc/README.md",
-        "evidenceSha256": "3020f511ab2b9af0647961120582341cf52936de455b25cfe6ec8fd5a13ecabb",
+        "sha": "f2f7b0ab7cf8ce2029cf8a62d71655ccc558cf0b",
+        "evidenceUrl": "https://github.com/tinyhumansai/tinyhivemind/blob/f2f7b0ab7cf8ce2029cf8a62d71655ccc558cf0b/README.md",
+        "evidenceSha256": "5f90878098c1c2b865d8d529d2ebb41d6c1d0caf185ba73a9636d58357a25648",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tinyhumansai/tinyhivemind/blob/c2ad41822936cde6154a9d52508c186f009235dc/examples/openhuman/src/bin/pe1006_hive/typesafe.rs",
+            "url": "https://github.com/tinyhumansai/tinyhivemind/blob/f2f7b0ab7cf8ce2029cf8a62d71655ccc558cf0b/examples/openhuman/src/bin/pe1006_hive/typesafe.rs",
             "path": "examples/openhuman/src/bin/pe1006_hive/typesafe.rs",
             "sha256": "7fda5a9f0a4c7e8c8d40ab6c9963bb3d440a185c1c4482dc114313def201e96a"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "anmol-srv/sigil": {
       "status": "review",
@@ -19341,39 +19341,39 @@
     "t-lind/accessor": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "src/route.rs"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "t-lind/accessor",
         "status": "review",
         "score": {
-          "jevAbout": 0.75,
+          "jevAbout": 0.66,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.45,
+          "jevKeepConfidence": 0.33,
           "category": "agents",
           "needsReview": true,
-          "conflictingEvidence": false
+          "conflictingEvidence": true
         },
-        "sha": "5235d28ddbc243bcfd2150477900fe0c8a69d666",
-        "evidenceUrl": "https://github.com/t-lind/accessor/blob/5235d28ddbc243bcfd2150477900fe0c8a69d666/README.md",
-        "evidenceSha256": "73db890d46ea12849165e4ac7c86b51bafddd8522cbcfa525ad6107aae967195",
+        "sha": "4939faadddc4ddcb682f1caf8ff4c8c9d482068b",
+        "evidenceUrl": "https://github.com/t-lind/accessor/blob/4939faadddc4ddcb682f1caf8ff4c8c9d482068b/README.md",
+        "evidenceSha256": "1e189fedbd85e4bd9ee0b8aa20282fdc816d6dfb09bf92ce824d995e832eb454",
         "evidenceLinks": [
           {
-            "url": "https://github.com/t-lind/accessor/blob/5235d28ddbc243bcfd2150477900fe0c8a69d666/src/route.rs",
+            "url": "https://github.com/t-lind/accessor/blob/4939faadddc4ddcb682f1caf8ff4c8c9d482068b/src/route.rs",
             "path": "src/route.rs",
-            "sha256": "ace73576501eb849d264d3f4ee42498bc0b78aa4434be69a709ce2073b3e5a2f"
+            "sha256": "3db2aca82ae0a15342d23c13a398d79f1ddf48d133c183aee091f18e77440bfb"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "mayonaka-ratori/60s-magic": {
       "status": "review",
@@ -19544,21 +19544,21 @@
     "soloa715/valorant-mc": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "tools/typesafe_eval.py"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "soloa715/valorant-mc",
         "status": "review",
         "score": {
-          "jevAbout": 0.69,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.19,
+          "jevAbout": 0.56,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.21,
           "category": "applications",
           "needsReview": true,
           "conflictingEvidence": false
@@ -19574,9 +19574,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "tune-77/tune_lease_55": {
       "status": "error",
@@ -20533,7 +20533,7 @@
     "thisisnsh/aithing": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -20548,7 +20548,7 @@
           "path": "aithing-desktop/package.json"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "thisisnsh/aithing",
         "status": "review",
@@ -20579,9 +20579,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "bastani-inc/atomic": {
       "status": "review",
@@ -20726,39 +20726,39 @@
     "tenuo-ai/tenuo": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "docs/blog/jev-scoped-authority.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tenuo-ai/tenuo",
         "status": "review",
         "score": {
-          "jevAbout": 0.15,
+          "jevAbout": 0.14,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.27,
-          "category": "sdk",
+          "jevKeepConfidence": 0.19,
+          "category": "agents",
           "needsReview": true,
           "conflictingEvidence": false
         },
-        "sha": "ba1efb55bb0548fdbd584b4653cdd6454b645193",
-        "evidenceUrl": "https://github.com/tenuo-ai/tenuo/blob/ba1efb55bb0548fdbd584b4653cdd6454b645193/README.md",
-        "evidenceSha256": "96cb080b2095ab323dc3725b08683a90f6a42ff04abd6be6d83e89ac61161f0a",
+        "sha": "486be68196331c2344df42c3f4d27cd5e661cbdf",
+        "evidenceUrl": "https://github.com/tenuo-ai/tenuo/blob/486be68196331c2344df42c3f4d27cd5e661cbdf/README.md",
+        "evidenceSha256": "382dcd20111a318946cf9828ffdd142319b7a05b5dc4d60dca935d4a9475f95f",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tenuo-ai/tenuo/blob/ba1efb55bb0548fdbd584b4653cdd6454b645193/docs/blog/jev-scoped-authority.md",
+            "url": "https://github.com/tenuo-ai/tenuo/blob/486be68196331c2344df42c3f4d27cd5e661cbdf/docs/blog/jev-scoped-authority.md",
             "path": "docs/blog/jev-scoped-authority.md",
             "sha256": "a7ff3a19fd1f6c2cd3fce38ebc2b2c673e1df10ee123bd95623fedd32d047808"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "papr-ai/paprwork": {
       "status": "review",
@@ -20846,21 +20846,21 @@
     "sonnylazuardi/superterminal": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "docs/plan/09-typesafe-endpoint.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "sonnylazuardi/superterminal",
         "status": "review",
         "score": {
-          "jevAbout": 0.93,
+          "jevAbout": 0.94,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.28,
+          "jevKeepConfidence": 0.37,
           "category": "applications",
           "needsReview": true,
           "conflictingEvidence": false
@@ -20876,9 +20876,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "aias/red-cliff-record": {
       "status": "review",
@@ -20931,21 +20931,21 @@
     "toyin5/reflex": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "docs/decisions.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "toyin5/reflex",
         "status": "review",
         "score": {
-          "jevAbout": 0.93,
+          "jevAbout": 0.95,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.79,
+          "jevKeepConfidence": 0.77,
           "category": "agents"
         },
         "sha": "7046b72ab0650ce9546d64de02a658269ac65d7d",
@@ -20959,9 +20959,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "up1/demo-jev-bug-serverity-assignment": {
       "status": "review",
@@ -21125,32 +21125,32 @@
     "tseitz/tunewrangler": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "deno.json"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tseitz/tunewrangler",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "3059c8fb7d32cb7ef9418966e51660941442d73a",
-        "evidenceUrl": "https://github.com/tseitz/tunewrangler/blob/3059c8fb7d32cb7ef9418966e51660941442d73a/README.md",
+        "sha": "2318ce33a87488d667770e83b4e84930da49bcd0",
+        "evidenceUrl": "https://github.com/tseitz/tunewrangler/blob/2318ce33a87488d667770e83b4e84930da49bcd0/README.md",
         "evidenceSha256": "44a38272bcb2c3092a8f8e9f2b92ff1642bb51ac96ec09081b841ef057055de0",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tseitz/tunewrangler/blob/3059c8fb7d32cb7ef9418966e51660941442d73a/deno.json",
+            "url": "https://github.com/tseitz/tunewrangler/blob/2318ce33a87488d667770e83b4e84930da49bcd0/deno.json",
             "path": "deno.json",
             "sha256": "5020d53f1e92fa9005c86e85896de3360fd98fff809fbe725319cdc2c81c5fbd"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "listepo/cox": {
       "status": "error",
@@ -21417,14 +21417,14 @@
     "skastr0/prism": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
           "path": "package.json"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "skastr0/prism",
         "status": "review",
@@ -21440,14 +21440,14 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "tu11aa/squadrant": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -21458,7 +21458,7 @@
           "path": "docs/reference.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tu11aa/squadrant",
         "status": "review",
@@ -21488,7 +21488,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "clueless-creations/brigade": {
       "status": "review",
@@ -22367,14 +22367,14 @@
     "tiandee/codex-jev-router": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "src/codex-cli.mjs"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tiandee/codex-jev-router",
         "status": "review",
@@ -22390,9 +22390,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "wodsmith/thewodapp": {
       "status": "error",
@@ -22418,7 +22418,7 @@
     "tidepool-heavy-industries/tidepool": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -22429,25 +22429,25 @@
           "path": "exomonad/jev-integration/CONTRACT.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "tidepool-heavy-industries/tidepool",
         "status": "review",
         "reason": "github-incomplete-integration-evidence",
-        "sha": "7cf5e8ac083fbbb0ed31a9ccf2fb33d0969ee164",
-        "evidenceUrl": "https://github.com/tidepool-heavy-industries/tidepool/blob/7cf5e8ac083fbbb0ed31a9ccf2fb33d0969ee164/README.md",
+        "sha": "545d9950e5c3c3940f5b6bf84dfc5d16d6b1a89d",
+        "evidenceUrl": "https://github.com/tidepool-heavy-industries/tidepool/blob/545d9950e5c3c3940f5b6bf84dfc5d16d6b1a89d/README.md",
         "evidenceSha256": "db669ecbde1d58d71789bf4d52cba623aa6132057d1e96091d1152cafcdc081d",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tidepool-heavy-industries/tidepool/blob/7cf5e8ac083fbbb0ed31a9ccf2fb33d0969ee164/exomonad/jev-integration/CONTRACT.md",
+            "url": "https://github.com/tidepool-heavy-industries/tidepool/blob/545d9950e5c3c3940f5b6bf84dfc5d16d6b1a89d/exomonad/jev-integration/CONTRACT.md",
             "path": "exomonad/jev-integration/CONTRACT.md",
             "sha256": "46398ae463c7a134b1b07c5dff9502fc79a45b3f54f914346361a15197cb84e5"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "opennekopaw/jevflow": {
       "status": "review",
@@ -22673,32 +22673,32 @@
     "sqhh99/personal-site": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "README.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "sqhh99/personal-site",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "7b302b3a6f691c47a22c4c670c9115910be60810",
-        "evidenceUrl": "https://github.com/sqhh99/personal-site/blob/7b302b3a6f691c47a22c4c670c9115910be60810/README.md",
+        "sha": "faabed3e4cd0d768ade137a87d1785bb2043af2e",
+        "evidenceUrl": "https://github.com/sqhh99/personal-site/blob/faabed3e4cd0d768ade137a87d1785bb2043af2e/README.md",
         "evidenceSha256": "19a566ade143e7a727d4501eba7f417f2b92e49534275e6dfae3a87f4d04f6e3",
         "evidenceLinks": [
           {
-            "url": "https://github.com/sqhh99/personal-site/blob/7b302b3a6f691c47a22c4c670c9115910be60810/README.md",
+            "url": "https://github.com/sqhh99/personal-site/blob/faabed3e4cd0d768ade137a87d1785bb2043af2e/README.md",
             "path": "README.md",
             "sha256": "74a234a1682e5232ecf71e463f55e0d0a23a253e424004afe73c0d0d1edd1a34"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "hanzpo/dogfight-bench": {
       "status": "review",
@@ -23544,21 +23544,21 @@
     "spheal363/opportunity_agent": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
           "path": "backend/ai/cost.py"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "spheal363/opportunity_agent",
         "status": "review",
         "score": {
-          "jevAbout": 0.91,
+          "jevAbout": 0.9,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.52,
+          "jevKeepConfidence": 0.56,
           "category": "agents",
           "needsReview": true,
           "conflictingEvidence": false
@@ -23574,9 +23574,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "jumpseat-inc/pi-council": {
       "status": "review",
@@ -27538,21 +27538,21 @@
     "sijiaoh/jevgrep": {
       "status": "review",
       "discoveredAt": "2026-09-22T16:57:22.408Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
           "path": "CLAUDE.md"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "sijiaoh/jevgrep",
         "status": "review",
         "score": {
-          "jevAbout": 0.85,
+          "jevAbout": 0.9,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.88,
+          "jevKeepConfidence": 0.82,
           "category": "developer",
           "needsReview": true,
           "conflictingEvidence": false
@@ -27568,9 +27568,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "xuehangai/jevhttp": {
       "status": "review",
@@ -31328,7 +31328,7 @@
     "siyuan-note/siyuan": {
       "status": "review",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -31343,25 +31343,25 @@
           "path": "app/appearance/langs/zh-CN.json"
         }
       ],
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-24T20:52:57.119Z",
       "lastReview": {
         "repo": "siyuan-note/siyuan",
         "status": "review",
         "reason": "github-incomplete-integration-evidence",
-        "sha": "7a7430d8a3cf362e23de004a454ddabe651dc778",
-        "evidenceUrl": "https://github.com/siyuan-note/siyuan/blob/7a7430d8a3cf362e23de004a454ddabe651dc778/README.md",
-        "evidenceSha256": "f5a927fd554e61fb60e0e9bb148e270c37ea7e4d4d09c7c042fb6eb55f55df8d",
+        "sha": "bfe36100477b7bbd66db1a8b8cff5547b2ccdb59",
+        "evidenceUrl": "https://github.com/siyuan-note/siyuan/blob/bfe36100477b7bbd66db1a8b8cff5547b2ccdb59/README.md",
+        "evidenceSha256": "39f0c4543a412287825df36e65a2f8ad2413dc6458a349897fbe03c953a9f6a6",
         "evidenceLinks": [
           {
-            "url": "https://github.com/siyuan-note/siyuan/blob/7a7430d8a3cf362e23de004a454ddabe651dc778/kernel/conf/ai.go",
+            "url": "https://github.com/siyuan-note/siyuan/blob/bfe36100477b7bbd66db1a8b8cff5547b2ccdb59/kernel/conf/ai.go",
             "path": "kernel/conf/ai.go",
-            "sha256": "0f654ba4dfe674c15667b1d98f84d9cbdf22efd48aefa5c5a5e6f34ad620731b"
+            "sha256": "5c67c2dd34efef3aa2ca8727b5c3e5ca5b405207da41eddad29500f795b388c9"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-24T20:52:57.119Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-10-31T20:52:57.119Z"
     },
     "mohitagw15856/pm-claude-skills": {
       "status": "error",
