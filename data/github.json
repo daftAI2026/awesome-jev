@@ -175452,5 +175452,197 @@
         "checkedAt": "2026-10-23T17:11:42.629Z"
       }
     }
+  },
+  {
+    "id": "gh-4-j33l-pgqna",
+    "type": "github",
+    "title": "PgQnA",
+    "summary": "Get web page AI answers of your questions. Powered by System-1 model.",
+    "tags": [
+      "jev",
+      "add-on",
+      "browser-automation",
+      "browser-extension",
+      "jev-ai",
+      "system-one-ai",
+      "system-one-models",
+      "typesafe-ai"
+    ],
+    "category": "applications",
+    "url": "https://github.com/j33l/PgQnA",
+    "sourceMeta": {
+      "repo": "j33l/PgQnA",
+      "author": "j33l",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1414809915,
+        "nodeId": "R_kgDOVFRJOw"
+      },
+      "date": "2026-10-11",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "j33l/pgqna",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "1015f6ab0f4b3d4fe74bd1f41d94b13c37d9fcd0",
+        "evidenceUrl": "https://github.com/j33l/pgqna/blob/1015f6ab0f4b3d4fe74bd1f41d94b13c37d9fcd0/README.md",
+        "evidenceSha256": "06af236d6c756787909351616524604fa08115979b636e873ee8df1fa92ec8a4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T11:05:52.530Z"
+      }
+    }
+  },
+  {
+    "id": "gh-21-jeppevammenkristensen-jev-runner",
+    "type": "github",
+    "title": "jev-runner",
+    "summary": "Code for querying Jev based on dotnet sdk 11 and C# 15",
+    "tags": [
+      "jev",
+      "jev-api",
+      "sourcegenerator",
+      "c#"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/jeppevammenkristensen/jev-runner",
+    "sourceMeta": {
+      "repo": "jeppevammenkristensen/jev-runner",
+      "author": "jeppevammenkristensen",
+      "stars": 0,
+      "forks": 0,
+      "language": "C#",
+      "githubIdentity": {
+        "databaseId": 1411884385,
+        "nodeId": "R_kgDOVCelYQ"
+      },
+      "date": "2026-10-09",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 1,
+      "jevEvidence": {
+        "repo": "jeppevammenkristensen/jev-runner",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 1,
+          "category": "sdk"
+        },
+        "sha": "c9de95c8798731eac3972f74deb49214aa9d385c",
+        "evidenceUrl": "https://github.com/jeppevammenkristensen/jev-runner/blob/c9de95c8798731eac3972f74deb49214aa9d385c/README.md",
+        "evidenceSha256": "a81d36634db689907e2ae06043970e664d48eb2a48225aa0970037383ec2aad7",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T11:05:52.530Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-saeedabdf-jev-screening-benchmark",
+    "type": "github",
+    "title": "jev-screening-benchmark",
+    "summary": "Benchmark of TypeSafe Jev (System One decision model) for systematic review title/abstract screening vs GLM/Sonnet on Cohen_2006 gold standard",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "research",
+    "url": "https://github.com/Saeedabdf/jev-screening-benchmark",
+    "sourceMeta": {
+      "repo": "Saeedabdf/jev-screening-benchmark",
+      "author": "Saeedabdf",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1379883045,
+        "nodeId": "R_kgDOUj9YJQ"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "saeedabdf/jev-screening-benchmark",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "research"
+        },
+        "sha": "b2a4fa45c875eaceb3529ba4d088ee2d2acf0a4b",
+        "evidenceUrl": "https://github.com/saeedabdf/jev-screening-benchmark/blob/b2a4fa45c875eaceb3529ba4d088ee2d2acf0a4b/README.md",
+        "evidenceSha256": "ea096cb2a93ef1e35792b8f8b683727e0bf9b769fbbc9728b0e96f186f35594a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T11:05:52.530Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-timmikeladze-jevlang",
+    "type": "github",
+    "title": "JevLang",
+    "summary": "A policy engine for LLM decisions: declare routes, gates and actions once in TypeScript or Python, and every decision comes validated, explainable, replayable and audited.",
+    "tags": [
+      "jev",
+      "agent",
+      "ai",
+      "audit",
+      "decision-engine",
+      "guardrails",
+      "jevlang",
+      "llm"
+    ],
+    "category": "agents",
+    "url": "https://github.com/TimMikeladze/JevLang",
+    "sourceMeta": {
+      "repo": "TimMikeladze/JevLang",
+      "author": "TimMikeladze",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1380601866,
+        "nodeId": "R_kgDOUkpQCg"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "timmikeladze/jevlang",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "57117673ef15f060cfdc47d09f48a89fa288146d",
+        "evidenceUrl": "https://github.com/timmikeladze/jevlang/blob/57117673ef15f060cfdc47d09f48a89fa288146d/README.md",
+        "evidenceSha256": "b1cf8c54bf08ac89cb0672bf5e8d752b375158493e8ad8f39dade6bb32e38422",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/timmikeladze/jevlang/blob/57117673ef15f060cfdc47d09f48a89fa288146d/README.md",
+            "path": "README.md",
+            "sha256": "2b65c23ec5ed5d00a5033ff53b3d45fcab3cfae223a46be5270aee2bc5bc72b6"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T11:05:52.530Z"
+      }
+    }
   }
 ]
