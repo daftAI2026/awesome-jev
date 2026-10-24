@@ -727,6 +727,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahwlsqja/clickhouse-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/ai-ascension/jev-factorio-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ai-ascension/jev-factorio-agent" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/ai13io/jev-native-mcp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai13io/jev-native-mcp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai13io/jev-native-mcp" />
@@ -1421,12 +1427,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aquental/ripwire-broker" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/aranyat25/jevmem</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aranyat25/jevmem" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/aravdharnikota/apush-debate-jev</loc>
@@ -2641,12 +2641,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carlsonchik/judging-with-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/carmen394/jevcore</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carmen394/jevcore" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/carter1111/jevcore</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carter1111/jevcore" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carter1111/jevcore" />
@@ -3353,12 +3347,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/comoc/jev-minesweeper" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/completedottech/paper-package</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/completedottech/paper-package" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/composiohq/composio</loc>
@@ -7981,12 +7969,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesgariepy/origin-civilization" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/jacquesli53093/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesli53093/jev-social" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/jakeashcraft/jev-expression-benchmark</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jakeashcraft/jev-expression-benchmark" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jakeashcraft/jev-expression-benchmark" />
@@ -8263,6 +8245,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/cookbook" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/jev-engineering/paper-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/paper-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/jev-sec/jev-ids</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-sec/jev-ids" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-sec/jev-ids" />
@@ -8297,12 +8285,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-connect-four" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/jevplay-games/jev-factorio-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-factorio-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/jevplay-games/jev-sudoku-analytics</loc>
@@ -10523,12 +10505,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manish007700/tidy" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/manonm8018/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manonm8018/jev-social" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/mansicer/jev-plays</loc>
@@ -12889,12 +12865,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pewriebontal/typesafe-sdk-cpp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/pgutierrez1222/jev-browser</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pgutierrez1222/jev-browser" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/phamhongviet/pi-ext-model-router</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/phamhongviet/pi-ext-model-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/phamhongviet/pi-ext-model-router" />
@@ -14813,12 +14783,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikaizhong-design/ego-jev-ultrafast" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/shikakufy/ipa-jev-quiz</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikakufy/ipa-jev-quiz" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/shima78/jev-chess</loc>
@@ -17465,12 +17429,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wraithyy/ilmari-plugin-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/wu10780/building-with-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wu10780/building-with-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/wustep/jev-playground</loc>
@@ -20575,16 +20533,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/rust" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/calibration</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/france</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/france" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/france" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/france" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/calibration</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/codex</loc>
@@ -20617,16 +20575,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-skills" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/browser-automation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/chrome-extension</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/chrome-extension" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/browser-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/llm-evaluation</loc>
@@ -20647,16 +20605,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/awesome-list" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/claude</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/evaluation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/evaluation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/claude</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/guardrails</loc>
@@ -20689,16 +20647,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/coding-agents" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/c%23</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/c%23" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/laya</loc>
@@ -20719,16 +20677,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh-plugin" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/deepseek-harness</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/java</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/deepseek-harness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/nextjs</loc>
@@ -20755,18 +20713,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ai-safety" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/llm-agents</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/mcp-server</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/nodejs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nodejs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nodejs" />
@@ -20777,6 +20723,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/automation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/automation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/automation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/llm-agents</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/mcp-server</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/api-client</loc>
@@ -20797,18 +20755,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/php" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/browser-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/anthropic</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/anthropic" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/anthropic" />
@@ -20821,10 +20767,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/code-review" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/dsh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
+    <loc>https://awesomejev.cc/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/browser-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/manifest-v3</loc>
@@ -20843,6 +20795,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-engine" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/dsh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/fastapi</loc>
@@ -20959,12 +20917,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/deepseek</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/dotnet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
@@ -20995,12 +20947,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/agent-memory</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -21017,6 +20963,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/deepseek</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/jupyter-notebook</loc>
@@ -21053,6 +21005,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/accessibility" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/agent-memory</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/agent-security</loc>
@@ -21107,18 +21065,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/claude-code-hooks</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/cordis</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/cursor</loc>
@@ -21185,6 +21131,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/ci" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/ci" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ci" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/claude-code-hooks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/cordis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/decision-api</loc>
@@ -21491,12 +21449,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-window" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/deep-research</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/fine-tuning</loc>
@@ -21889,6 +21841,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cybersecurity" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/tags/deep-research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/tags/edge-ai</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/edge-ai" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/edge-ai" />
@@ -22207,12 +22165,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-mod" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/claude-code-plugins</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugins" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/claude-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-skill" />
@@ -22427,12 +22379,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/incident-response" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/instagram</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/instagram" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/issue-triage</loc>
@@ -23461,6 +23407,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahwlsqja/clickhouse-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/ai-ascension/jev-factorio-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ai-ascension/jev-factorio-agent" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/ai13io/jev-native-mcp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai13io/jev-native-mcp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai13io/jev-native-mcp" />
@@ -24155,12 +24107,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aquental/ripwire-broker" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/aranyat25/jevmem</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aranyat25/jevmem" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/aravdharnikota/apush-debate-jev</loc>
@@ -25375,12 +25321,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carlsonchik/judging-with-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/carmen394/jevcore</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carmen394/jevcore" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/carter1111/jevcore</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carter1111/jevcore" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carter1111/jevcore" />
@@ -26087,12 +26027,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/comoc/jev-minesweeper" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/completedottech/paper-package</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/completedottech/paper-package" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/composiohq/composio</loc>
@@ -30715,12 +30649,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesgariepy/origin-civilization" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/jacquesli53093/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesli53093/jev-social" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/jakeashcraft/jev-expression-benchmark</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jakeashcraft/jev-expression-benchmark" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jakeashcraft/jev-expression-benchmark" />
@@ -30997,6 +30925,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/cookbook" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/jev-engineering/paper-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/paper-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/jev-sec/jev-ids</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-sec/jev-ids" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-sec/jev-ids" />
@@ -31031,12 +30965,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-connect-four" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/jevplay-games/jev-factorio-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-factorio-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/jevplay-games/jev-sudoku-analytics</loc>
@@ -33257,12 +33185,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manish007700/tidy" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/manonm8018/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manonm8018/jev-social" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/mansicer/jev-plays</loc>
@@ -35623,12 +35545,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pewriebontal/typesafe-sdk-cpp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/pgutierrez1222/jev-browser</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pgutierrez1222/jev-browser" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/phamhongviet/pi-ext-model-router</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/phamhongviet/pi-ext-model-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/phamhongviet/pi-ext-model-router" />
@@ -37547,12 +37463,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikaizhong-design/ego-jev-ultrafast" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/shikakufy/ipa-jev-quiz</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikakufy/ipa-jev-quiz" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/shima78/jev-chess</loc>
@@ -40199,12 +40109,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wraithyy/ilmari-plugin-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/wu10780/building-with-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wu10780/building-with-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/wustep/jev-playground</loc>
@@ -43309,16 +43213,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/rust" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/calibration</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/france</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/france" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/france" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/france" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/calibration</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/codex</loc>
@@ -43351,16 +43255,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-skills" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/browser-automation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/chrome-extension</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/chrome-extension" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/browser-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/llm-evaluation</loc>
@@ -43381,16 +43285,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/awesome-list" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/claude</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/evaluation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/evaluation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/claude</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/guardrails</loc>
@@ -43423,16 +43327,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/coding-agents" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/c%23</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/c%23" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/laya</loc>
@@ -43453,16 +43357,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh-plugin" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/deepseek-harness</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/java</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/deepseek-harness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/nextjs</loc>
@@ -43489,18 +43393,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ai-safety" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/llm-agents</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/mcp-server</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/nodejs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nodejs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nodejs" />
@@ -43511,6 +43403,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/automation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/automation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/automation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/llm-agents</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/mcp-server</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/api-client</loc>
@@ -43531,18 +43435,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/php" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/browser-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/anthropic</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/anthropic" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/anthropic" />
@@ -43555,10 +43447,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/code-review" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/dsh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
+    <loc>https://awesomejev.cc/zh/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/browser-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/manifest-v3</loc>
@@ -43577,6 +43475,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-engine" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/dsh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/fastapi</loc>
@@ -43693,12 +43597,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/deepseek</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/dotnet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
@@ -43729,12 +43627,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/agent-memory</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -43751,6 +43643,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/deepseek</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/jupyter-notebook</loc>
@@ -43787,6 +43685,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/accessibility" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/agent-memory</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/agent-security</loc>
@@ -43841,18 +43745,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/claude-code-hooks</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/cordis</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/cursor</loc>
@@ -43919,6 +43811,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/ci" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/ci" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ci" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/claude-code-hooks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/cordis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/decision-api</loc>
@@ -44225,12 +44129,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-window" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/deep-research</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/fine-tuning</loc>
@@ -44623,6 +44521,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cybersecurity" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/tags/deep-research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/tags/edge-ai</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/edge-ai" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/edge-ai" />
@@ -44941,12 +44845,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-mod" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/claude-code-plugins</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugins" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/claude-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-skill" />
@@ -45161,12 +45059,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/incident-response" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/instagram</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/instagram" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/issue-triage</loc>
@@ -46195,6 +46087,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahwlsqja/clickhouse-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/ai-ascension/jev-factorio-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai-ascension/jev-factorio-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ai-ascension/jev-factorio-agent" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/ai13io/jev-native-mcp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ai13io/jev-native-mcp" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ai13io/jev-native-mcp" />
@@ -46889,12 +46787,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aquental/ripwire-broker" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aquental/ripwire-broker" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/aranyat25/jevmem</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/aranyat25/jevmem" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/aranyat25/jevmem" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/aravdharnikota/apush-debate-jev</loc>
@@ -48109,12 +48001,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carlsonchik/judging-with-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/carmen394/jevcore</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carmen394/jevcore" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/carmen394/jevcore" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/carter1111/jevcore</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/carter1111/jevcore" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/carter1111/jevcore" />
@@ -48821,12 +48707,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/comoc/jev-minesweeper" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/comoc/jev-minesweeper" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/completedottech/paper-package</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/completedottech/paper-package" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/completedottech/paper-package" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/composiohq/composio</loc>
@@ -53449,12 +53329,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesgariepy/origin-civilization" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/jacquesli53093/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jacquesli53093/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jacquesli53093/jev-social" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/jakeashcraft/jev-expression-benchmark</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jakeashcraft/jev-expression-benchmark" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jakeashcraft/jev-expression-benchmark" />
@@ -53731,6 +53605,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/cookbook" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/jev-engineering/paper-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-engineering/paper-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jev-engineering/paper-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/jev-sec/jev-ids</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jev-sec/jev-ids" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jev-sec/jev-ids" />
@@ -53765,12 +53645,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-connect-four" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-connect-four" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/jevplay-games/jev-factorio-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jevplay-games/jev-factorio-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jevplay-games/jev-factorio-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/jevplay-games/jev-sudoku-analytics</loc>
@@ -55991,12 +55865,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manish007700/tidy" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manish007700/tidy" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/manonm8018/jev-social</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/manonm8018/jev-social" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/manonm8018/jev-social" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/mansicer/jev-plays</loc>
@@ -58357,12 +58225,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pewriebontal/typesafe-sdk-cpp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/pgutierrez1222/jev-browser</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pgutierrez1222/jev-browser" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pgutierrez1222/jev-browser" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/phamhongviet/pi-ext-model-router</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/phamhongviet/pi-ext-model-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/phamhongviet/pi-ext-model-router" />
@@ -60281,12 +60143,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikaizhong-design/ego-jev-ultrafast" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikaizhong-design/ego-jev-ultrafast" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/shikakufy/ipa-jev-quiz</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shikakufy/ipa-jev-quiz" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shikakufy/ipa-jev-quiz" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/shima78/jev-chess</loc>
@@ -62933,12 +62789,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wraithyy/ilmari-plugin-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wraithyy/ilmari-plugin-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/wu10780/building-with-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/wu10780/building-with-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/wu10780/building-with-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/wustep/jev-playground</loc>
@@ -66043,16 +65893,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/rust" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/calibration</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/france</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/france" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/france" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/france" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/calibration</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/calibration" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/calibration" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/codex</loc>
@@ -66085,16 +65935,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-skills" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/browser-automation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/chrome-extension</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/chrome-extension" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/chrome-extension" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/browser-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-automation" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-automation" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/llm-evaluation</loc>
@@ -66115,16 +65965,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/awesome-list" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/claude</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/evaluation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/evaluation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/evaluation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/claude</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/guardrails</loc>
@@ -66157,16 +66007,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/coding-agents" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/claude-code-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/c%23</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/c%23" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/c%23" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/claude-code-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/laya</loc>
@@ -66187,16 +66037,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh-plugin" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/deepseek-harness</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/java</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/deepseek-harness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek-harness" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek-harness" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/nextjs</loc>
@@ -66223,18 +66073,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ai-safety" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/llm-agents</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/mcp-server</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/nodejs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nodejs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nodejs" />
@@ -66245,6 +66083,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/automation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/automation" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/automation" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/llm-agents</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/llm-agents" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-agents" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/mcp-server</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/mcp-server" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/mcp-server" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/api-client</loc>
@@ -66265,18 +66115,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/php" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/browser-agent</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/anthropic</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/anthropic" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/anthropic" />
@@ -66289,10 +66127,16 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/code-review" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/dsh</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
+    <loc>https://awesomejev.cc/ja/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/browser-agent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser-agent" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser-agent" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/manifest-v3</loc>
@@ -66311,6 +66155,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-engine" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/dsh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dsh" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dsh" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/fastapi</loc>
@@ -66427,12 +66277,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/deepseek</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/dotnet</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
@@ -66463,12 +66307,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/llm-tools" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/agent-memory</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/agent-tools</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-tools" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-tools" />
@@ -66485,6 +66323,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/deepseek</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deepseek" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deepseek" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/jupyter-notebook</loc>
@@ -66521,6 +66365,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/accessibility" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/accessibility" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/agent-memory</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/agent-memory" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/agent-memory" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/agent-security</loc>
@@ -66575,18 +66425,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/browser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/browser" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/browser" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/claude-code-hooks</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/cordis</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/cursor</loc>
@@ -66653,6 +66491,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/ci" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/ci" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/ci" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/claude-code-hooks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-hooks" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-hooks" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/cordis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/cordis" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cordis" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/decision-api</loc>
@@ -66959,12 +66809,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/context-window" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-window" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/deep-research</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/fine-tuning</loc>
@@ -67357,6 +67201,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/cybersecurity" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/tags/deep-research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/deep-research" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/deep-research" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/tags/edge-ai</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/edge-ai" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/edge-ai" />
@@ -67675,12 +67525,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-mod" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/claude-code-plugins</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-code-plugins" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/claude-code-plugins" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/claude-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/claude-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/claude-skill" />
@@ -67895,12 +67739,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/incident-response" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/incident-response" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/instagram</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/instagram" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/instagram" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/issue-triage</loc>
