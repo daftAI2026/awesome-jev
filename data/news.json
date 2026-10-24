@@ -5908,5 +5908,20 @@
     "reason": null,
     "originalUrl": "https://modem.ai/blog/smart-triggers",
     "aihotUrl": "https://aihot.news/items/j5qm7v6182adr1zleomgiw2au"
+  },
+  {
+    "id": "kxw4re0l4zipexyf6wn7gu3zw",
+    "title": "Shopify 如何用 Remote Dev 给 AI Agent 搭远程手机开发机",
+    "originalTitle": "给 AI Agent 一台「远程手机开发机」：Shopify 如何用 Remote Dev 跑并行移动端",
+    "summary": "作者解读 Shopify Engineering 文章：Shopify 为 Slack 里的 AI Agent「River」搭建 Remote Dev，用远程 Mac 机群加挂载 Linux 的 Android 模拟器，让 Agent 并行编译、测试 iOS/Android、截图录屏并做 Live Preview。",
+    "sourceName": "X：邵猛 (@shao__meng)",
+    "publishedAt": "2026-10-24T01:07:54.000Z",
+    "discoveredAt": "2026-10-24T01:21:35.456Z",
+    "category": "tip",
+    "score": 71,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/shao__meng/status/2113799609671909827",
+    "aihotUrl": "https://aihot.news/items/kxw4re0l4zipexyf6wn7gu3zw"
   }
 ]
