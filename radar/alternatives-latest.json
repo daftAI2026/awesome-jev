@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-24T13:35:15.129Z",
+  "at": "2026-10-24T18:21:53.968Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,63 +20,21 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 6,
+  "reviewed": 1,
   "added": 0,
   "pending": 202,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "solvai/jevrunner",
+      "repo": "felipegenef/local-ai-system-one-lab",
       "status": "review",
-      "score": {
-        "jevAbout": 0.4,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.19,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "221e66f2c65355ad25387bfc3bd42e74f1b6b5fe",
-      "evidenceUrl": "https://github.com/solvai/jevrunner/blob/221e66f2c65355ad25387bfc3bd42e74f1b6b5fe/README.md",
-      "evidenceSha256": "0499d5d984b9782ff17d12999e367486a47351a529c4fa4f7ba4f3cc1cffa624",
+      "reason": "missing-open-source-license",
+      "sha": "28eff79b84842da5dc605c804d2375d546f24ad7",
+      "evidenceUrl": "https://github.com/felipegenef/local-ai-system-one-lab/blob/28eff79b84842da5dc605c804d2375d546f24ad7/README.md",
+      "evidenceSha256": "edf1a94071fa1c8920c45097a778b6de27dba3541c9d590199278805da49b852",
       "model": "jev-latest",
-      "checkedAt": "2026-10-24T13:35:15.129Z"
-    },
-    {
-      "repo": "kacperk15058/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kaya67812/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "paraujo692/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "talex-touch/flint",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.36,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.48,
-        "category": "alternatives"
-      },
-      "sha": "683ba4f47294d777e90297ef24df929a3a772f41",
-      "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
-      "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-24T13:35:15.129Z"
-    },
-    {
-      "repo": "theresacastillo56/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
+      "checkedAt": "2026-10-24T18:21:53.968Z"
     }
   ],
   "identity": {
@@ -87,5 +45,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3128
+  "totalProjects": 3131
 }
