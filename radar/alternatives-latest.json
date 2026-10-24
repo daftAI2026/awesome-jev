@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-24T08:24:25.050Z",
+  "at": "2026-10-24T13:35:15.129Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,106 +20,61 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 13,
+  "reviewed": 6,
   "added": 0,
   "pending": 202,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "final-bench/s1mb",
+      "repo": "solvai/jevrunner",
       "status": "review",
       "score": {
-        "jevAbout": 0.68,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.51,
-        "category": "other"
-      },
-      "sha": "ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d",
-      "evidenceUrl": "https://github.com/final-bench/s1mb/blob/ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d/README.md",
-      "evidenceSha256": "7fa4c1dd304ba3e28dc44f2fff59ff9032e4bc812c7724daf744ff461f22917b",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-24T08:24:25.050Z"
-    },
-    {
-      "repo": "donliggett/julius",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.84,
+        "jevAbout": 0.4,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.4,
-        "category": "alternatives"
-      },
-      "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
-      "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
-      "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-24T08:24:25.050Z"
-    },
-    {
-      "repo": "annikazielinski/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "apanagiotou604/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "bhill34/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ewalundberg576/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "fedorov40484/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "fransson887/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gabriel4078/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kevin12671/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lab-emi/chiplaya",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.81,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.89,
+        "jevKeepConfidence": 0.19,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "700988637f9429d180dcda50757504d41060d2bd",
-      "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
-      "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
+      "sha": "221e66f2c65355ad25387bfc3bd42e74f1b6b5fe",
+      "evidenceUrl": "https://github.com/solvai/jevrunner/blob/221e66f2c65355ad25387bfc3bd42e74f1b6b5fe/README.md",
+      "evidenceSha256": "0499d5d984b9782ff17d12999e367486a47351a529c4fa4f7ba4f3cc1cffa624",
       "model": "jev-latest",
-      "checkedAt": "2026-10-24T08:24:25.050Z"
+      "checkedAt": "2026-10-24T13:35:15.129Z"
     },
     {
-      "repo": "gul84571/coreai-kit",
+      "repo": "kacperk15058/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "nathanm49/coreai-kit",
+      "repo": "kaya67812/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "paraujo692/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "talex-touch/flint",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.36,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.48,
+        "category": "alternatives"
+      },
+      "sha": "683ba4f47294d777e90297ef24df929a3a772f41",
+      "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
+      "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-24T13:35:15.129Z"
+    },
+    {
+      "repo": "theresacastillo56/jev-social",
       "status": "error",
       "reason": "github-http-404"
     }
@@ -132,5 +87,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3124
+  "totalProjects": 3128
 }
