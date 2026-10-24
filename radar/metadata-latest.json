@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "cfccd0d5237cf927686bf6199b6ee9cc249f3924",
-  "at": "2026-10-24T05:46:43.000Z",
-  "totalProjects": 3126,
+  "baselineSha": "2b4b30cee48427bc9175ec607a7e92631f7644ee",
+  "at": "2026-10-24T11:57:59.928Z",
+  "totalProjects": 3130,
   "metadata": {
-    "ok": 3029,
-    "failed": 97,
+    "ok": 3032,
+    "failed": 98,
     "batches": 64,
     "cost": 64,
-    "other": 3026,
-    "remaining": 97,
-    "attempted": 3126,
-    "fresh": 3029,
-    "unavailable": 97,
+    "other": 3030,
+    "remaining": 98,
+    "attempted": 3130,
+    "fresh": 3032,
+    "unavailable": 98,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -113,6 +113,11 @@
     {
       "id": "gh-9-207studio-jev-skills",
       "repo": "207studio/jev-skills",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-13-pinkroosterai-systemonesharp",
+      "repo": "pinkroosterai/systemonesharp",
       "reason": "github-unavailable-repository"
     },
     {
@@ -514,7 +519,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 16,
+    "unavailable": 13,
     "restored": 0,
     "checked": 50
   }
