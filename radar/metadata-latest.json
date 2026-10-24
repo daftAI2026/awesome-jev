@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "2b4b30cee48427bc9175ec607a7e92631f7644ee",
-  "at": "2026-10-24T11:57:59.928Z",
-  "totalProjects": 3130,
+  "baselineSha": "175c736af5b5aecd60801929bf9056d1e50d56f8",
+  "at": "2026-10-24T16:34:03.610Z",
+  "totalProjects": 3133,
   "metadata": {
-    "ok": 3032,
+    "ok": 3035,
     "failed": 98,
     "batches": 64,
     "cost": 64,
-    "other": 3030,
+    "other": 3033,
     "remaining": 98,
-    "attempted": 3130,
-    "fresh": 3032,
+    "attempted": 3133,
+    "fresh": 3035,
     "unavailable": 98,
     "deferredRemaining": 0,
     "top100": {
@@ -519,7 +519,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 13,
+    "unavailable": 24,
     "restored": 0,
     "checked": 50
   }
