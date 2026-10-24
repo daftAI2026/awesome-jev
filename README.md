@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-3068-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-3071-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -702,6 +702,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 
 ## SDKs & integrations
 
+- [**fastmcp**](https://github.com/PrefectHQ/fastmcp) - 🚀 The fast, Pythonic way to build MCP servers and clients. · `Python`
 - [**langchainjs**](https://github.com/langchain-ai/langchainjs) - The agent engineering platform · `TypeScript`
 - [**effect**](https://github.com/Effect-TS/effect) - Build production-ready applications in TypeScript · `TypeScript`
 - [**pg-jev**](https://github.com/realZachi/pg-jev) - Ask your Postgres tables questions in plain language. A PostgreSQL extension powered by TypeSafe's Jev. · `Shell`
@@ -1992,6 +1993,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jev-demo**](https://github.com/ogamircs/jev-demo) - Independent demo of TypeSafe's Jev model: typed decisions with probabilities, measured side by side with OpenAI on support-ticket triage. Live local app plus a recorded replay page. · `HTML`
 - [**sem-top**](https://github.com/OkThought/sem-top) - sem-top: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**semantic-style-lab**](https://github.com/OpenScribbler/semantic-style-lab) - Compile deterministic Vale candidates and narrow decision model judgments \(Jev/Laya\) into localized documentation style audits. · `HTML`
+- [**kangaroo-systemone**](https://github.com/OscarMrZ/kangaroo-systemone) - Benchmarking TypeSafe Jev for reactive navigation of PAL's Kangaroo biped \(MuJoCo + RL locomotion + YOLO\) · `Python`
 - [**AnyLM2Jev**](https://github.com/our0boros/AnyLM2Jev) - Reproducing the Jev decision interface · `Python`
 - [**System1Doom**](https://github.com/PanikParty/System1Doom) - System One models \(TypeSafe Jev, Laya\) play DOOM via ViZDoom: typed decisions + deterministic controller · `Python`
 - [**polis-jev-impute-simulation**](https://github.com/patcon/polis-jev-impute-simulation) - Experiment to impute missing Polis votes \(AGREE / DISAGREE / PASS\) with TypeSafe's Jev · `TypeScript`
@@ -2901,6 +2903,7 @@ These repositories maintain their own collections of Jev projects and resources.
 - [**youtube-focus**](https://github.com/rhithesh/youtube-focus) - youtube-focus: TypeSafe Jev ecosystem repository. · `JavaScript`
 - [**flappy-jev**](https://github.com/rishi-raj-jain/flappy-jev) - Flappy Bird where you race Jev, TypeSafe's System One decision model, flying its own bird in real time. Built with Next.js and Neon Postgres. · `TypeScript`
 - [**ping-pong-jev**](https://github.com/rishi-raj-jain/ping-pong-jev) - ping-pong-jev: TypeSafe Jev ecosystem repository. · `TypeScript`
+- [**jevrake**](https://github.com/RKasai127/jevrake) - Selector-free scraping powered by TypeSafe AI's Jev. · `Python`
 - [**vigia**](https://github.com/rmandevs/vigia) - Moderating live-stream chat in real time \(ES/EN\) · `TypeScript`
 - [**topiclens-for-youtube**](https://github.com/rohitdevade/topiclens-for-youtube) - A smart, continuous topic filter for YouTube powered by Jev. · `TypeScript`
 - [**the-confidence-game**](https://github.com/Roshan-Kumar-Sharma/the-confidence-game) - the-confidence-game: TypeSafe Jev ecosystem repository. · `TypeScript`

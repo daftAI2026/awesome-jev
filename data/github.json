@@ -175696,5 +175696,158 @@
         "checkedAt": "2026-10-24T11:05:52.530Z"
       }
     }
+  },
+  {
+    "id": "gh-8-oscarmrz-kangaroo-systemone",
+    "type": "github",
+    "title": "kangaroo-systemone",
+    "summary": "Benchmarking TypeSafe Jev for reactive navigation of PAL's Kangaroo biped (MuJoCo + RL locomotion + YOLO)",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/OscarMrZ/kangaroo-systemone",
+    "sourceMeta": {
+      "repo": "OscarMrZ/kangaroo-systemone",
+      "author": "OscarMrZ",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1413578925,
+        "nodeId": "R_kgDOVEGArQ"
+      },
+      "date": "2026-10-10",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "oscarmrz/kangaroo-systemone",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "research"
+        },
+        "sha": "4dac16dbcf2adb7a1c1807f4a6e9c51fa133d2f6",
+        "evidenceUrl": "https://github.com/oscarmrz/kangaroo-systemone/blob/4dac16dbcf2adb7a1c1807f4a6e9c51fa133d2f6/README.md",
+        "evidenceSha256": "d7f3c5e00c5d4658af0be57aa47ff4f6f9d9a5d771f9c3762f792e745f564772",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T15:59:41.280Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-rkasai127-jevrake",
+    "type": "github",
+    "title": "jevrake",
+    "summary": "Selector-free scraping powered by TypeSafe AI's Jev.",
+    "tags": [
+      "jev",
+      "python3",
+      "scraping",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/RKasai127/jevrake",
+    "sourceMeta": {
+      "repo": "RKasai127/jevrake",
+      "author": "RKasai127",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1392901258,
+        "nodeId": "R_kgDOUwX8ig"
+      },
+      "date": "2026-09-28",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "rkasai127/jevrake",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "825e6a75ef58614ace36686e3959f9df5b44be62",
+        "evidenceUrl": "https://github.com/rkasai127/jevrake/blob/825e6a75ef58614ace36686e3959f9df5b44be62/README.md",
+        "evidenceSha256": "f98e5e4ec7ef7898121e97a39e9fee4746f5da33cd21e4eed182796cd0a33ada",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T15:59:41.280Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-prefecthq-fastmcp",
+    "type": "github",
+    "title": "fastmcp",
+    "summary": "🚀 The fast, Pythonic way to build MCP servers and clients.",
+    "tags": [
+      "jev",
+      "agents",
+      "fastmcp",
+      "llms",
+      "mcp",
+      "mcp-clients",
+      "mcp-servers",
+      "mcp-tools"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/PrefectHQ/fastmcp",
+    "sourceMeta": {
+      "repo": "PrefectHQ/fastmcp",
+      "author": "PrefectHQ",
+      "stars": 28189,
+      "forks": 2505,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 896296825,
+        "nodeId": "R_kgDONWxneQ"
+      },
+      "date": "2024-11-30",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "prefecthq/fastmcp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "sdk"
+        },
+        "sha": "6d665f0f8d2707609b9d77b2671f93e439ff2352",
+        "evidenceUrl": "https://github.com/prefecthq/fastmcp/blob/6d665f0f8d2707609b9d77b2671f93e439ff2352/README.md",
+        "evidenceSha256": "2c79b2420d6e151d86bfca2fb1b7e2fdd0da964debdb61b0dcdeac3fabb3a63a",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/prefecthq/fastmcp/blob/6d665f0f8d2707609b9d77b2671f93e439ff2352/docs/servers/transforms/tool-search.mdx",
+            "path": "docs/servers/transforms/tool-search.mdx",
+            "sha256": "199af04fae038672225e783fb9dc8c8a3a77f771776448b77f3eabd0a773f8f0"
+          },
+          {
+            "url": "https://github.com/prefecthq/fastmcp/blob/6d665f0f8d2707609b9d77b2671f93e439ff2352/fastmcp_slim/fastmcp/experimental/transforms/jev_search.py",
+            "path": "fastmcp_slim/fastmcp/experimental/transforms/jev_search.py",
+            "sha256": "ff609e5d3254479ec14792a2e0a6ca4d6e88cf870b4d4a73e1abe40a79e82731"
+          },
+          {
+            "url": "https://github.com/prefecthq/fastmcp/blob/6d665f0f8d2707609b9d77b2671f93e439ff2352/docs/python-sdk/fastmcp-experimental-transforms-jev_search.mdx",
+            "path": "docs/python-sdk/fastmcp-experimental-transforms-jev_search.mdx",
+            "sha256": "b9562c909b2f9902282cb04024db1a997f3c1c6fd8c2b67b7aa96e9849058e03"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-24T15:59:41.280Z"
+      }
+    }
   }
 ]
