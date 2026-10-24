@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34087
+      "stars": 34103
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 1600
+      "stars": 1601
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8183
+      "stars": 8184
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1159,70 +1159,70 @@
     "dexmac221/doomgemma": {
       "status": "review",
       "discoveredAt": "2026-09-25T14:44:00.381Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-16T23:52:39.368Z",
+      "attempts": 5,
+      "checkedAt": "2026-10-24T00:01:20.473Z",
       "lastReview": {
         "repo": "dexmac221/doomgemma",
         "status": "review",
         "score": {
-          "jevAbout": 0.13,
+          "jevAbout": 0.09,
           "jevKeep": "drop",
-          "jevKeepConfidence": 0.31,
+          "jevKeepConfidence": 0.28,
           "category": "other"
         },
         "sha": "a6253bf5524827a2ab5f4e764ca6feef046f8927",
         "evidenceUrl": "https://github.com/dexmac221/doomgemma/blob/a6253bf5524827a2ab5f4e764ca6feef046f8927/README.md",
         "evidenceSha256": "0c7347872e7669f29a47b6d63335cba4d382e74f77c6ea39e9d2c7184d84fbcb",
         "model": "jev-latest",
-        "checkedAt": "2026-10-16T23:52:39.368Z"
+        "checkedAt": "2026-10-24T00:01:20.473Z"
       },
-      "retryAt": "2026-10-23T23:52:39.368Z",
+      "retryAt": "2026-10-31T00:01:20.473Z",
       "stars": 1
     },
     "name0x0/jevlet": {
       "status": "review",
       "discoveredAt": "2026-09-25T14:44:00.381Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-16T23:52:39.368Z",
+      "attempts": 5,
+      "checkedAt": "2026-10-24T00:01:20.473Z",
       "lastReview": {
         "repo": "name0x0/jevlet",
         "status": "review",
         "score": {
           "jevAbout": 0.93,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.86,
+          "jevKeepConfidence": 0.8,
           "category": "alternatives"
         },
         "sha": "50db56b502c9778a768bc632a6b5b224fbf8da47",
         "evidenceUrl": "https://github.com/name0x0/jevlet/blob/50db56b502c9778a768bc632a6b5b224fbf8da47/README.md",
         "evidenceSha256": "1a8e7527b393d40248ec8a294e0aa99537b5eea6cb35d9226ebabc61a89e01a6",
         "model": "jev-latest",
-        "checkedAt": "2026-10-16T23:52:39.368Z"
+        "checkedAt": "2026-10-24T00:01:20.473Z"
       },
-      "retryAt": "2026-10-23T23:52:39.368Z",
+      "retryAt": "2026-10-31T00:01:20.473Z",
       "stars": 1
     },
     "teilomillet/kayak": {
       "status": "review",
       "discoveredAt": "2026-09-25T19:32:21.650Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-16T23:52:39.368Z",
+      "attempts": 5,
+      "checkedAt": "2026-10-24T00:01:20.473Z",
       "lastReview": {
         "repo": "teilomillet/kayak",
         "status": "review",
         "score": {
-          "jevAbout": 0.81,
+          "jevAbout": 0.83,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.83,
+          "jevKeepConfidence": 0.8,
           "category": "alternatives"
         },
         "sha": "ac8cbba15f8feea869e1517b3e0401108961d722",
         "evidenceUrl": "https://github.com/teilomillet/kayak/blob/ac8cbba15f8feea869e1517b3e0401108961d722/README.md",
         "evidenceSha256": "8be36f8c28b9bc4bf5e7cb0d8a8120f253cf5af6f4b7e409b614616e762d8d6f",
         "model": "jev-latest",
-        "checkedAt": "2026-10-16T23:52:39.368Z"
+        "checkedAt": "2026-10-24T00:01:20.473Z"
       },
-      "retryAt": "2026-10-23T23:52:39.368Z",
+      "retryAt": "2026-10-31T00:01:20.473Z",
       "stars": 0
     },
     "donliggett/julius": {
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 272
+      "stars": 276
     },
     "phocinae/.github": {
       "status": "review",
@@ -2414,8 +2414,8 @@
     "humanity-forever/decision-luna-browse-control": {
       "status": "review",
       "discoveredAt": "2026-10-09T20:19:18.547Z",
-      "attempts": 2,
-      "checkedAt": "2026-10-16T23:52:39.368Z",
+      "attempts": 3,
+      "checkedAt": "2026-10-24T00:01:20.473Z",
       "lastReview": {
         "repo": "humanity-forever/decision-luna-browse-control",
         "status": "review",
@@ -2424,9 +2424,9 @@
         "evidenceUrl": "https://github.com/humanity-forever/decision-luna-browse-control/blob/e95a9373ed38e7b18b7daa258038a91e6f625b2c/README.md",
         "evidenceSha256": "4cba2611cf35dbc4688ce7ba479d5bea9b9e895a3b27e3c2ea70f749923abf3d",
         "model": "jev-latest",
-        "checkedAt": "2026-10-16T23:52:39.368Z"
+        "checkedAt": "2026-10-24T00:01:20.473Z"
       },
-      "retryAt": "2026-10-23T23:52:39.368Z",
+      "retryAt": "2026-10-31T00:01:20.473Z",
       "stars": 0
     },
     "final-bench/s1mb": {
@@ -4053,7 +4053,7 @@
       "status": "review",
       "discoveredAt": "2026-10-22T14:40:27.576Z",
       "attempts": 1,
-      "stars": 9,
+      "stars": 12,
       "checkedAt": "2026-10-22T14:40:27.576Z",
       "lastReview": {
         "repo": "leofmarciano/groot",
