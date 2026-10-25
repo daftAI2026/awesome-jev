@@ -175985,5 +175985,230 @@
         "checkedAt": "2026-10-24T15:59:41.280Z"
       }
     }
+  },
+  {
+    "id": "gh-10-metrox-eth-moss-jev",
+    "type": "github",
+    "title": "moss-jev",
+    "summary": "MOSS × Jev: a recorded-run 3D demo of the litter-picking rover choosing targets with TypeSafe's Jev decision model.",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "research",
+    "url": "https://github.com/metrox-eth/moss-jev",
+    "sourceMeta": {
+      "repo": "metrox-eth/moss-jev",
+      "author": "metrox-eth",
+      "stars": 1,
+      "forks": 2,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1376234354,
+        "nodeId": "R_kgDOUgercg"
+      },
+      "date": "2026-09-18",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "metrox-eth/moss-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "research"
+        },
+        "sha": "31fc2f4346fa3608efa1e8d06a37bb5231a69b0e",
+        "evidenceUrl": "https://github.com/metrox-eth/moss-jev/blob/31fc2f4346fa3608efa1e8d06a37bb5231a69b0e/README.md",
+        "evidenceSha256": "68a6f8e74296dc7130f9de253615f12bc58de011e95d95012eb6bdca97bf9067",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T16:25:57.517Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-abyakod-jev_adk",
+    "type": "github",
+    "title": "JEV_ADK",
+    "summary": "Agent Development Kit for System-One AI: Sub-100ms non-autoregressive decision pipelines, guardrails, and dual-brain agent orchestrator powered by TypeSafe AI's Jev",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/abyakod/JEV_ADK",
+    "sourceMeta": {
+      "repo": "abyakod/JEV_ADK",
+      "author": "abyakod",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1388322939,
+        "nodeId": "R_kgDOUsAgew"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "abyakod/jev_adk",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "sdk"
+        },
+        "sha": "bec3469258c49d06ad00b414996df3c1e762e121",
+        "evidenceUrl": "https://github.com/abyakod/jev_adk/blob/bec3469258c49d06ad00b414996df3c1e762e121/README.md",
+        "evidenceSha256": "9ef0be293ac918f4bdbf07c6104fb420e61247cc1c45a422d31b4ea8a2d6fa61",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T16:25:57.517Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-sandipan-ai95-jev_agent",
+    "type": "github",
+    "title": "Jev_Agent",
+    "summary": "Jev_Agent: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/sandipan-ai95/Jev_Agent",
+    "sourceMeta": {
+      "repo": "sandipan-ai95/Jev_Agent",
+      "author": "sandipan-ai95",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1380578263,
+        "nodeId": "R_kgDOUknz1w"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "sandipan-ai95/jev_agent",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "6efc27e47f9fb104473384d73f3f1b70734bc7ef",
+        "evidenceUrl": "https://github.com/sandipan-ai95/jev_agent/blob/6efc27e47f9fb104473384d73f3f1b70734bc7ef/README.md",
+        "evidenceSha256": "ee03cc6fa0a5df814cb9fe8f405f445ab3e253202ff96a8f06b43b7d428fb1ee",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T16:25:57.517Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-supremedreamz-jev-fastloop",
+    "type": "github",
+    "title": "jev-fastloop",
+    "summary": "Cheap fail-open semantic edge layer for Jev (TypeSafe System One): decision service + confidence policy + decision logging + blind eval harness + skill router over 1,000+ skills. Stdlib-only Python.",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "decision-engine",
+      "llm-routing",
+      "python",
+      "typesafe"
+    ],
+    "category": "agents",
+    "url": "https://github.com/SupremeDreamZ/jev-fastloop",
+    "sourceMeta": {
+      "repo": "SupremeDreamZ/jev-fastloop",
+      "author": "SupremeDreamZ",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1378013622,
+        "nodeId": "R_kgDOUiLRtg"
+      },
+      "date": "2026-09-20",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "supremedreamz/jev-fastloop",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "a15a606e82a5765f8f20788a369c0dc8121b546f",
+        "evidenceUrl": "https://github.com/supremedreamz/jev-fastloop/blob/a15a606e82a5765f8f20788a369c0dc8121b546f/README.md",
+        "evidenceSha256": "7edb52f752c66c606d41e439be566ee2f2ad53faf46c6bc3c8a10b45609f3dc6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T16:25:57.517Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-voidning-jev-figma-design-plugin",
+    "type": "github",
+    "title": "jev-figma-design-plugin",
+    "summary": "用 Jev 把一句自然语言设计指令拆成几道选择题，再由代码在 Figma 里画出来 · Jev decides, code draws: a Figma plugin that turns one sentence into multiple-choice questions for Jev (System One)",
+    "tags": [
+      "jev",
+      "design-automation",
+      "design-tools",
+      "figma",
+      "figma-plugin",
+      "natural-language",
+      "typesafe",
+      "typesafe-ai"
+    ],
+    "category": "research",
+    "url": "https://github.com/voidning/jev-figma-design-plugin",
+    "sourceMeta": {
+      "repo": "voidning/jev-figma-design-plugin",
+      "author": "voidning",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1382756277,
+        "nodeId": "R_kgDOUmsvtQ"
+      },
+      "date": "2026-09-23",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "voidning/jev-figma-design-plugin",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "research"
+        },
+        "sha": "43b1692665e211b59c8a9d5a68d475fd3b6df73e",
+        "evidenceUrl": "https://github.com/voidning/jev-figma-design-plugin/blob/43b1692665e211b59c8a9d5a68d475fd3b6df73e/README.md",
+        "evidenceSha256": "a6edaa88e36ede488a98ac3dc8834f628fa694d19b052ba0e0cbb1177fdd4ba0",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T16:25:57.517Z"
+      }
+    }
   }
 ]
