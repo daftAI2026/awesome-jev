@@ -56225,7 +56225,7 @@
     "ryx2/slopshopper": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -56236,8 +56236,8 @@
           "path": "data/mods/kunchenguid-compact-adviser-compact-adviser.json"
         }
       ],
-      "checkedAt": "2026-10-20T21:39:59.395Z",
-      "retryAt": "2026-10-24T21:39:59.395Z"
+      "checkedAt": "2026-10-25T04:45:56.163Z",
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "xingye12/prale": {
       "status": "review",
@@ -65880,16 +65880,16 @@
     "bainianzzz/resume-writer": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "bainianzzz/resume-writer",
         "status": "review",
         "score": {
           "jevAbout": 0.92,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.69,
+          "jevKeepConfidence": 0.55,
           "category": "browser"
         },
         "sha": "77821ede6a72aa069ac22259a9e2ca4b58c48c9b",
@@ -65897,16 +65897,16 @@
         "evidenceSha256": "48b041a6e57fad4ab72de4f0a7869a9b0390799d6133aed85117918ba5f8d912",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "ekkinox/kronk-jev-game": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "ekkinox/kronk-jev-game",
         "status": "review",
@@ -65916,9 +65916,9 @@
         "evidenceSha256": "01aeb58b23aeecaf50cf58c41fe0c791405d62e3c6a76ce8c4a658a72bbe120e",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "hitsz-tmg/jevembed": {
       "status": "review",
@@ -66044,21 +66044,21 @@
     "apixly-ai/jev-harness": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "apixly-ai/jev-harness",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "472cf5089dec24659ae2cad148fda801707c7a4e",
-        "evidenceUrl": "https://github.com/apixly-ai/jev-harness/blob/472cf5089dec24659ae2cad148fda801707c7a4e/README.md",
-        "evidenceSha256": "c76822cc4d0da0745ede8c22d563eeb5e80f58786764ab152bfe0f4785513f21",
+        "sha": "d45c6d5a4f3e3c24e0e79d31a63a31de684102b7",
+        "evidenceUrl": "https://github.com/apixly-ai/jev-harness/blob/d45c6d5a4f3e3c24e0e79d31a63a31de684102b7/README.md",
+        "evidenceSha256": "eab50e4043d07e9c76b7ee954d724c0ebafbd4e55e73a8c35a57d65e91e59bd0",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "kyaulabs/kairos": {
       "status": "review",
@@ -66270,9 +66270,9 @@
     "danielscoffee/assertlens": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "danielscoffee/assertlens",
         "status": "review",
@@ -66282,23 +66282,23 @@
         "evidenceSha256": "37c820048599f6c23be9ccdf0c6b2b8d638e984df2e9bf85b8790c404b457ee5",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "zahlekhan/claudetiquette": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "zahlekhan/claudetiquette",
         "status": "review",
         "score": {
-          "jevAbout": 0.86,
+          "jevAbout": 0.85,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.41,
+          "jevKeepConfidence": 0.23,
           "category": "developer"
         },
         "sha": "31bd818885d887ce21b195c331e2e9cdb941a740",
@@ -66306,9 +66306,9 @@
         "evidenceSha256": "fdc4a36cff00b3be4bc1984e69bff32fa169bc5c57a88b294d5703a669526fcb",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "mbarc/nectra": {
       "status": "review",
@@ -66339,9 +66339,9 @@
     "agent-ix/sapho": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "agent-ix/sapho",
         "status": "review",
@@ -66351,9 +66351,9 @@
         "evidenceSha256": "30436694c090472bb5c0cc98a20dfd989dd6e37465a6ce612004b769b7db283c",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "janmrow/smart-inbox": {
       "status": "review",
@@ -66377,16 +66377,16 @@
     "cogniform/ai-decision-maker": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "cogniform/ai-decision-maker",
         "status": "review",
         "score": {
-          "jevAbout": 0.88,
+          "jevAbout": 0.9,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.49,
+          "jevKeepConfidence": 0.22,
           "category": "agents"
         },
         "sha": "51c9b4d8ae9f1afb097d64afadffd620dfda5f5a",
@@ -66394,9 +66394,9 @@
         "evidenceSha256": "937640423e5206c8674619d4bcbd996050d1fa9f88fa1719e022ab08e44a934a",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "cmaintz/classifier-bench": {
       "status": "review",
@@ -66535,9 +66535,9 @@
     "aah20/apex-decisioncore": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "aah20/apex-decisioncore",
         "status": "review",
@@ -66547,9 +66547,9 @@
         "evidenceSha256": "ce7e89ed575b64afd2a1503f6db501241995808da0160b6fc010eaad7661073c",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "hongliang-wei/jevtrainer": {
       "status": "review",
@@ -67322,28 +67322,28 @@
     "castlewuwu/ai-dailyreport": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "castlewuwu/ai-dailyreport",
         "status": "review",
         "score": {
-          "jevAbout": 0.41,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.37,
-          "category": "resources",
+          "jevAbout": 0.29,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.34,
+          "category": "other",
           "needsReview": true,
           "conflictingEvidence": true
         },
-        "sha": "4d1da38fe795e640d8a26cf2d4d14dcae22e4fd2",
-        "evidenceUrl": "https://github.com/castlewuwu/ai-dailyreport/blob/4d1da38fe795e640d8a26cf2d4d14dcae22e4fd2/README.md",
-        "evidenceSha256": "efdd35d0900b4127e83fe59f8e2926ef144e1bee671f66a9bef301915f2f1d57",
+        "sha": "ba9a83f1d2b40dc705484e7bf3c4a3694727e96f",
+        "evidenceUrl": "https://github.com/castlewuwu/ai-dailyreport/blob/ba9a83f1d2b40dc705484e7bf3c4a3694727e96f/README.md",
+        "evidenceSha256": "772942b7dc3cb1cb273dbd683147bdc74fe2a04724286e6f45384f6f5d3d3d47",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "hiouchiy/open-jev-on-databricks": {
       "status": "review",
@@ -67646,26 +67646,26 @@
     "davidhoang/davidhoang-web": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "davidhoang/davidhoang-web",
         "status": "review",
         "score": {
-          "jevAbout": 0.79,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.37,
+          "jevAbout": 0.87,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.14,
           "category": "applications"
         },
-        "sha": "ce4954df7ac4f2fb84d915fc5891e34a1526277a",
-        "evidenceUrl": "https://github.com/davidhoang/davidhoang-web/blob/ce4954df7ac4f2fb84d915fc5891e34a1526277a/README.md",
+        "sha": "aed0c36c23e9aac0c2c53ff89d4fedfe040efc62",
+        "evidenceUrl": "https://github.com/davidhoang/davidhoang-web/blob/aed0c36c23e9aac0c2c53ff89d4fedfe040efc62/README.md",
         "evidenceSha256": "f89a858d113b76fc9ef03ccda6284024f9d40b74a741992a8e46400ce6c34785",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "ismaelsoilet/synapsejs": {
       "status": "review",
@@ -67826,26 +67826,26 @@
     "tans/capi": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "tans/capi",
         "status": "review",
         "score": {
-          "jevAbout": 0.78,
+          "jevAbout": 0.8,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.53,
+          "jevKeepConfidence": 0.3,
           "category": "applications"
         },
-        "sha": "81c7840bdcdb819aebe5afc0aa0c16298ba39913",
-        "evidenceUrl": "https://github.com/tans/capi/blob/81c7840bdcdb819aebe5afc0aa0c16298ba39913/README.md",
+        "sha": "a7420552c4bc339c60fb9ad3770bf142f68cd061",
+        "evidenceUrl": "https://github.com/tans/capi/blob/a7420552c4bc339c60fb9ad3770bf142f68cd061/README.md",
         "evidenceSha256": "794b411182b9fb3b94e6eb8070ae91787339bc952f689f9ae58e3ba15f0985c6",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "alutke/pifrost": {
       "status": "review",
@@ -67869,21 +67869,21 @@
     "einverne/einverne": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "einverne/einverne",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "1d4a83170cc0a3d60e10771ef412b516a98e4a4e",
-        "evidenceUrl": "https://github.com/einverne/einverne/blob/1d4a83170cc0a3d60e10771ef412b516a98e4a4e/README.md",
+        "sha": "27371f6b434cb4895ad49a6da6a220c78d349cf7",
+        "evidenceUrl": "https://github.com/einverne/einverne/blob/27371f6b434cb4895ad49a6da6a220c78d349cf7/README.md",
         "evidenceSha256": "f873575f11c03f287c24056c06364acc84f30b06f350cad0e32930e85d67088a",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "tiffygk/jev-mode": {
       "status": "review",
@@ -67952,9 +67952,9 @@
     "zseeu1/cvehot": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "zseeu1/cvehot",
         "status": "review",
@@ -67964,9 +67964,9 @@
         "evidenceSha256": "b97f2d9610372ede7182609d6dc1c7c3a8c5af5fc42d08d039e616ef4c709565",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "jevplays-games/jev-factorio-mission-control": {
       "status": "review",
@@ -68355,16 +68355,16 @@
     "dingdinglz/semantic-find-userscript": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "dingdinglz/semantic-find-userscript",
         "status": "review",
         "score": {
-          "jevAbout": 0.96,
+          "jevAbout": 0.97,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.89,
+          "jevKeepConfidence": 0.85,
           "category": "applications"
         },
         "sha": "f1f90a824876b61d9f4829b7d0e814a148d01b58",
@@ -68372,9 +68372,9 @@
         "evidenceSha256": "c741606b937a45118f3e02a811cda8e6af12a7b44a56b61b95f6f9305f377c58",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "etshaw-zh/zotero-evidence": {
       "status": "review",
@@ -68510,9 +68510,9 @@
     "atharvabaodhankar/jev-vs-the-clock": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "atharvabaodhankar/jev-vs-the-clock",
         "status": "review",
@@ -68522,9 +68522,9 @@
         "evidenceSha256": "2a82106b7583b60278647c1ff84c214b2b3b27c8dea0b11fd3ce675ddecf3749",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "gunateja777/typesafe-mario-ai": {
       "status": "review",
@@ -68814,9 +68814,9 @@
     "s-0-a-r/typesafe-eval": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "s-0-a-r/typesafe-eval",
         "status": "review",
@@ -68826,9 +68826,9 @@
         "evidenceSha256": "713da720f7b538d81853a44e6a94d873cb9ccd0a1aa20395b9cbb82509d51349",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "pramodnm/jev_learning": {
       "status": "review",
@@ -68983,9 +68983,9 @@
     "ronitgupta138/local-jev": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "ronitgupta138/local-jev",
         "status": "review",
@@ -68995,23 +68995,23 @@
         "evidenceSha256": "3cd56350cdade4f58f31892a6a03f6703d41fb71014990aff227554a5f3917f8",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "yepher/docent_chrome_plugin": {
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 2,
-      "checkedAt": "2026-10-17T20:39:02.895Z",
+      "checkedAt": "2026-10-25T04:45:56.163Z",
       "lastReview": {
         "repo": "yepher/docent_chrome_plugin",
         "status": "review",
         "score": {
           "jevAbout": 0.93,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.85,
+          "jevKeepConfidence": 0.66,
           "category": "browser"
         },
         "sha": "c22c67476257649063df74343ad9d560d7e67e34",
@@ -69019,9 +69019,9 @@
         "evidenceSha256": "7e1c7531e981626b2e5a8c9eefdf465bf5be1b57d79fd49a73f7f68386f68716",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-17T20:39:02.895Z"
+        "checkedAt": "2026-10-25T04:45:56.163Z"
       },
-      "retryAt": "2026-10-24T20:39:02.895Z"
+      "retryAt": "2026-11-01T04:45:56.163Z"
     },
     "sirallap/agentglass-jev-inbox-plugin": {
       "status": "review",
