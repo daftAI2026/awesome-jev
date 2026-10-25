@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "7bbbb899f79923c11be756ba3892070117ff6876",
-  "at": "2026-10-25T17:02:40.651Z",
+  "baselineSha": "b0795c72ddff8659e81c20fdda47f78872941c9c",
+  "at": "2026-10-25T21:43:05.449Z",
   "totalProjects": 3138,
   "metadata": {
     "ok": 3039,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "colesmcintosh/liedar",
-        "to": "mellow-artificial-intelligence/liedar",
-        "databaseId": 1423680237
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -528,7 +522,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
