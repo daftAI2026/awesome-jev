@@ -5923,5 +5923,20 @@
     "reason": null,
     "originalUrl": "https://x.com/shao__meng/status/2113799609671909827",
     "aihotUrl": "https://aihot.news/items/kxw4re0l4zipexyf6wn7gu3zw"
+  },
+  {
+    "id": "od4wckvgmxoktt6dga7ekecnc",
+    "title": "德州大学Jev-Mem让AI记忆构建提速6.6倍",
+    "originalTitle": "University of Texas paper finds that handing small memory decisions to a fast scoring model let an AI memory system build its memory of l...",
+    "summary": "德州大学论文提出Jev-Mem，把链接、停止搜索等小决策交给快速打分模型Jev批量输出概率，LLM只在最后读取记忆并作答，使长对话记忆构建速度提升6.6倍。在LoCoMo长对话基准上，其回答得分0.777，高于最佳基线的0.700；记忆构建耗时158秒，最快对手为1,044秒，回答耗时0.93秒对1.47秒。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-10-25T14:27:26.000Z",
+    "discoveredAt": "2026-10-25T14:30:22.248Z",
+    "category": "paper",
+    "score": 42,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2114363208702275807",
+    "aihotUrl": "https://aihot.news/items/od4wckvgmxoktt6dga7ekecnc"
   }
 ]
