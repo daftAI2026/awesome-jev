@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-25T18:33:20.673Z",
+  "at": "2026-10-25T23:32:53.235Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,41 +20,21 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 5,
+  "reviewed": 2,
   "added": 0,
   "pending": 203,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "evelynm11/coreai-kit",
+      "repo": "emregarnier84628/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "rjang188/coreai-kit",
+      "repo": "loriyoshida/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
-    },
-    {
-      "repo": "thaovasiliou214/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "tomoyar51/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "pawanptu/dev-decide",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "4261929da1c952d0034d7c4704e9226cda8e9758",
-      "evidenceUrl": "https://github.com/pawanptu/dev-decide/blob/4261929da1c952d0034d7c4704e9226cda8e9758/README.md",
-      "evidenceSha256": "381a457efe6d7bd47dc1a7c055609046111f2e6983422f98bb740176dee1d725",
-      "model": "jev-latest",
-      "checkedAt": "2026-10-25T18:33:20.673Z"
     }
   ],
   "identity": {
