@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 55
+      "stars": 57
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34201
+      "stars": 34230
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8188
+      "stars": 8187
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 298
+      "stars": 307
     },
     "phocinae/.github": {
       "status": "review",
@@ -2817,9 +2817,9 @@
     "lang4292/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-15T23:51:43.338Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-23T00:10:19.530Z",
+      "checkedAt": "2026-10-25T08:43:27.106Z",
       "lastReview": {
         "repo": "lang4292/coreai-kit",
         "status": "review",
@@ -2830,7 +2830,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-15T23:51:43.338Z"
       },
-      "retryAt": "2026-10-25T00:10:19.530Z"
+      "retryAt": "2026-10-29T08:43:27.106Z"
     },
     "tomoyar51/coreai-kit": {
       "status": "error",
@@ -3308,11 +3308,11 @@
       "retryAt": "2026-10-26T23:43:10.680Z"
     },
     "kohaku8046/jev-social": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-18T08:20:12.713Z",
+      "checkedAt": "2026-10-25T08:43:27.106Z",
       "lastReview": {
         "repo": "kohaku8046/jev-social",
         "status": "review",
@@ -3323,14 +3323,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-25T08:20:12.713Z"
+      "retryAt": "2026-10-27T08:43:27.106Z"
     },
     "olivier56729/jev-social": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-18T08:20:12.713Z",
+      "checkedAt": "2026-10-25T08:43:27.106Z",
       "lastReview": {
         "repo": "olivier56729/jev-social",
         "status": "review",
@@ -3341,32 +3341,32 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-25T08:20:12.713Z"
+      "retryAt": "2026-10-27T08:43:27.106Z"
     },
     "teilomillet/wyat": {
       "status": "review",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 4,
-      "checkedAt": "2026-10-18T08:20:12.713Z",
+      "checkedAt": "2026-10-25T08:43:27.106Z",
       "lastReview": {
         "repo": "teilomillet/wyat",
         "status": "review",
         "reason": "insufficient-alternative-context",
-        "sha": "f9775f20c3928e2c319920f33d00b38112f057ff",
-        "evidenceUrl": "https://github.com/teilomillet/wyat/blob/f9775f20c3928e2c319920f33d00b38112f057ff/README.md",
-        "evidenceSha256": "7d07468a133fb33125ac0ac05bb5ed1828ef971ccc3d5a8a70397692f814aa8c",
+        "sha": "7646d95ffc166f10c14615d024e99b2d576ab9a0",
+        "evidenceUrl": "https://github.com/teilomillet/wyat/blob/7646d95ffc166f10c14615d024e99b2d576ab9a0/README.md",
+        "evidenceSha256": "58eb5894a3af91c13b47bb26c9478dbb455c7950076d99d39068fe7dea4daf27",
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T08:20:12.713Z"
+        "checkedAt": "2026-10-25T08:43:27.106Z"
       },
-      "retryAt": "2026-10-25T08:20:12.713Z"
+      "retryAt": "2026-11-01T08:43:27.106Z"
     },
     "magdalena606/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-18T08:20:12.713Z",
+      "checkedAt": "2026-10-25T08:43:27.106Z",
       "lastReview": {
         "repo": "magdalena606/coreai-kit",
         "status": "review",
@@ -3377,7 +3377,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-25T08:20:12.713Z"
+      "retryAt": "2026-10-27T08:43:27.106Z"
     },
     "evelynm11/coreai-kit": {
       "status": "review",
@@ -4119,7 +4119,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 1,
-      "stars": 1392,
+      "stars": 1395,
       "checkedAt": "2026-10-23T14:27:13.049Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
