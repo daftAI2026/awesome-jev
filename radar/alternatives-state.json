@@ -145,7 +145,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 3
+      "stars": 4
     },
     "learningbydoingnow/laya-case": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34248
+      "stars": 34275
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 1604
+      "stars": 1605
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8189
+      "stars": 8190
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 310
+      "stars": 313
     },
     "phocinae/.github": {
       "status": "review",
@@ -2835,9 +2835,9 @@
     "tomoyar51/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-16T14:15:12.569Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-23T14:27:13.049Z",
+      "checkedAt": "2026-10-25T18:33:20.673Z",
       "lastReview": {
         "repo": "tomoyar51/coreai-kit",
         "status": "review",
@@ -2848,14 +2848,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-16T14:15:12.569Z"
       },
-      "retryAt": "2026-10-25T14:27:13.049Z"
+      "retryAt": "2026-10-29T18:33:20.673Z"
     },
     "thaovasiliou214/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-16T14:15:12.569Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-23T14:27:13.049Z",
+      "checkedAt": "2026-10-25T18:33:20.673Z",
       "lastReview": {
         "repo": "thaovasiliou214/coreai-kit",
         "status": "review",
@@ -2866,7 +2866,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-16T14:15:12.569Z"
       },
-      "retryAt": "2026-10-25T14:27:13.049Z"
+      "retryAt": "2026-10-29T18:33:20.673Z"
     },
     "loriyoshida/coreai-kit": {
       "status": "error",
@@ -3380,11 +3380,11 @@
       "retryAt": "2026-10-27T08:43:27.106Z"
     },
     "evelynm11/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-18T18:16:43.477Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-18T18:16:43.477Z",
+      "checkedAt": "2026-10-25T18:33:20.673Z",
       "lastReview": {
         "repo": "evelynm11/coreai-kit",
         "status": "review",
@@ -3395,14 +3395,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T18:16:43.477Z"
       },
-      "retryAt": "2026-10-25T18:16:43.477Z"
+      "retryAt": "2026-10-27T18:33:20.673Z"
     },
     "rjang188/coreai-kit": {
-      "status": "review",
+      "status": "error",
       "discoveredAt": "2026-10-18T18:16:43.477Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-18T18:16:43.477Z",
+      "checkedAt": "2026-10-25T18:33:20.673Z",
       "lastReview": {
         "repo": "rjang188/coreai-kit",
         "status": "review",
@@ -3413,7 +3413,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T18:16:43.477Z"
       },
-      "retryAt": "2026-10-25T18:16:43.477Z"
+      "retryAt": "2026-10-27T18:33:20.673Z"
     },
     "dinosaur-mc/dsh-decision-tools": {
       "status": "review",
@@ -4164,6 +4164,24 @@
         "checkedAt": "2026-10-23T14:27:13.049Z"
       },
       "retryAt": "2026-10-30T14:27:13.049Z"
+    },
+    "pawanptu/dev-decide": {
+      "status": "review",
+      "discoveredAt": "2026-10-25T18:33:20.673Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-25T18:33:20.673Z",
+      "lastReview": {
+        "repo": "pawanptu/dev-decide",
+        "status": "review",
+        "reason": "insufficient-alternative-context",
+        "sha": "4261929da1c952d0034d7c4704e9226cda8e9758",
+        "evidenceUrl": "https://github.com/pawanptu/dev-decide/blob/4261929da1c952d0034d7c4704e9226cda8e9758/README.md",
+        "evidenceSha256": "381a457efe6d7bd47dc1a7c055609046111f2e6983422f98bb740176dee1d725",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T18:33:20.673Z"
+      },
+      "retryAt": "2026-11-01T18:33:20.673Z"
     }
   }
 }
