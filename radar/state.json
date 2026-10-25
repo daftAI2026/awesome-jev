@@ -16922,7 +16922,7 @@
     "can1357/oh-my-pi": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -16937,8 +16937,8 @@
           "path": "packages/catalog/src/compat/rules/auth/typesafe.kdl"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
-      "retryAt": "2026-10-25T04:37:49.139Z"
+      "checkedAt": "2026-10-25T11:35:30.132Z",
+      "retryAt": "2026-11-01T11:35:30.132Z"
     },
     "1jehuang/jcode": {
       "status": "review",
@@ -20362,7 +20362,7 @@
     "nicobailon/surf-cli": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"@typesafe-ai/sdk\" in:file",
@@ -20377,42 +20377,42 @@
           "path": "package.json"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "nicobailon/surf-cli",
         "status": "review",
         "score": {
-          "jevAbout": 0.09,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.23,
+          "jevAbout": 0.19,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.28,
           "category": "browser",
           "needsReview": true,
-          "conflictingEvidence": false
+          "conflictingEvidence": true
         },
-        "sha": "118fb9d23dd33346444f13b9dfab846cec978cdb",
-        "evidenceUrl": "https://github.com/nicobailon/surf-cli/blob/118fb9d23dd33346444f13b9dfab846cec978cdb/README.md",
-        "evidenceSha256": "6d5bb21e1150c9208e3377ac08e6ccddc6fef5ed3ee44342314e16357912fbde",
+        "sha": "349d937381de97017572544db136b382b55fb76d",
+        "evidenceUrl": "https://github.com/nicobailon/surf-cli/blob/349d937381de97017572544db136b382b55fb76d/README.md",
+        "evidenceSha256": "239fc1413d777752609280a4bf29b6956dc9a1864104df6ffb5622283368602e",
         "evidenceLinks": [
           {
-            "url": "https://github.com/nicobailon/surf-cli/blob/118fb9d23dd33346444f13b9dfab846cec978cdb/native/semantic-provider.cjs",
+            "url": "https://github.com/nicobailon/surf-cli/blob/349d937381de97017572544db136b382b55fb76d/native/semantic-provider.cjs",
             "path": "native/semantic-provider.cjs",
-            "sha256": "51e53702ac5d3007f9c216204644534647eec120a524e1730ef1398b5b8fed9e"
+            "sha256": "2157d3eb754bba8c8bbef079d9ddfd85a3c4abfe018a07a23a2d6a8522147e8c"
           },
           {
-            "url": "https://github.com/nicobailon/surf-cli/blob/118fb9d23dd33346444f13b9dfab846cec978cdb/native/semantic-cli.cjs",
+            "url": "https://github.com/nicobailon/surf-cli/blob/349d937381de97017572544db136b382b55fb76d/native/semantic-cli.cjs",
             "path": "native/semantic-cli.cjs",
-            "sha256": "03e2874a83a51d179080f775f936538c4cec7c712e95b3d0924f0db4f8d172a0"
+            "sha256": "3778755088fdf39e936f2e6206f5e66a7b184547360355957f4c2ed673686ee2"
           },
           {
-            "url": "https://github.com/nicobailon/surf-cli/blob/118fb9d23dd33346444f13b9dfab846cec978cdb/package.json",
+            "url": "https://github.com/nicobailon/surf-cli/blob/349d937381de97017572544db136b382b55fb76d/package.json",
             "path": "package.json",
-            "sha256": "e81bb3a5f4909449aa0c8c20baeb942f9f5f4fc42039e2bddec077a96050c91f"
+            "sha256": "35acbcb0216faaf6533f79392d22b0e013c91cc51a510d10e727d5c6f59352d8"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z",
+      "retryAt": "2026-11-01T11:35:30.132Z",
       "stars": 632
     },
     "chujianyun/skills": {
@@ -22040,7 +22040,7 @@
     "tinyhumansai/openhuman": {
       "status": "review",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -22055,25 +22055,25 @@
           "path": "gitbooks/developing/jev.md"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "tinyhumansai/openhuman",
         "status": "review",
         "reason": "github-incomplete-integration-evidence",
-        "sha": "bb096947a2319278bf83a13313d223c95eb6b863",
-        "evidenceUrl": "https://github.com/tinyhumansai/openhuman/blob/bb096947a2319278bf83a13313d223c95eb6b863/README.md",
-        "evidenceSha256": "2611b79fdbb3196c8417e905b6586418d6fab1acef21e26759e18cc1eb0df46f",
+        "sha": "a00b872a10b05dd48f95aa29d90b57b9e098215b",
+        "evidenceUrl": "https://github.com/tinyhumansai/openhuman/blob/a00b872a10b05dd48f95aa29d90b57b9e098215b/README.md",
+        "evidenceSha256": "2415cb52eb20a5785f56dcbf4ff7a4583e4f0d7718bf83b72a5066d954c5b09e",
         "evidenceLinks": [
           {
-            "url": "https://github.com/tinyhumansai/openhuman/blob/bb096947a2319278bf83a13313d223c95eb6b863/docs/plans/jev-tool-search-baseline.md",
+            "url": "https://github.com/tinyhumansai/openhuman/blob/a00b872a10b05dd48f95aa29d90b57b9e098215b/docs/plans/jev-tool-search-baseline.md",
             "path": "docs/plans/jev-tool-search-baseline.md",
-            "sha256": "2d47481eb6102dcdc183777fd41334d969687cc61f78f7d9a6882577161843dc"
+            "sha256": "d097c999ac61b901bed8f8c4c0c7dec8a7c03486ca8b2692a889fd3be863f7f2"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z",
+      "retryAt": "2026-11-01T11:35:30.132Z",
       "stars": 41540
     },
     "daveebbelaar/ai-cookbook": {
@@ -35298,9 +35298,9 @@
     "6mikao9/jev-native-agent-with-extended-options": {
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 22,
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "6mikao9/jev-native-agent-with-extended-options",
         "status": "review",
@@ -35316,9 +35316,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z",
+      "retryAt": "2026-11-01T11:35:30.132Z",
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -74454,21 +74454,21 @@
     "brandonriverott/neurolink": {
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
-      "attempts": 1,
+      "attempts": 2,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "engine/jev-rerank.mjs"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "brandonriverott/neurolink",
         "status": "review",
         "score": {
-          "jevAbout": 0.68,
+          "jevAbout": 0.75,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.66,
+          "jevKeepConfidence": 0.23,
           "category": "agents"
         },
         "sha": "42239eb20a0ea4c2f719a10d7440cb50615e5076",
@@ -74482,9 +74482,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z"
+      "retryAt": "2026-11-01T11:35:30.132Z"
     },
     "r5n-labs/clis": {
       "status": "review",
@@ -74746,26 +74746,26 @@
     "broccolito/gptr": {
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
-      "attempts": 1,
+      "attempts": 2,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "dev/plan/P05-model-layer-core.md"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "broccolito/gptr",
         "status": "review",
         "reason": "github-incomplete-integration-evidence",
-        "sha": "0c4b0003ca33a58777f9ee26f1cc268c5ddde83b",
-        "evidenceUrl": "https://github.com/broccolito/gptr/blob/0c4b0003ca33a58777f9ee26f1cc268c5ddde83b/README.md",
-        "evidenceSha256": "229b9c3a81b41bc89b67ec76ac0f5f79e56deb5c36bb3a653cbaef0b647afadb",
+        "sha": "02e93fabcc18c84ffc8c91129a8c06427a952fe9",
+        "evidenceUrl": "https://github.com/broccolito/gptr/blob/02e93fabcc18c84ffc8c91129a8c06427a952fe9/README.md",
+        "evidenceSha256": "38523a9aae74b8ef67dd2431002e10e4e1ae5b4c7ed27199f261188b12528ddb",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z"
+      "retryAt": "2026-11-01T11:35:30.132Z"
     },
     "skywalkerdarren/feed-lens": {
       "status": "review",
@@ -75079,24 +75079,24 @@
     "afg473319/afrouter": {
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
-      "attempts": 1,
+      "attempts": 2,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "tests/translator/__snapshots__/golden-url-header.test.js.snap"
         }
       ],
-      "checkedAt": "2026-10-18T04:37:49.139Z",
+      "checkedAt": "2026-10-25T11:35:30.132Z",
       "lastReview": {
         "repo": "afg473319/afrouter",
         "status": "review",
         "score": {
-          "jevAbout": 0.1,
-          "jevKeep": "review",
-          "jevKeepConfidence": 0.22,
+          "jevAbout": 0.08,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.48,
           "category": "sdk",
           "needsReview": true,
-          "conflictingEvidence": false
+          "conflictingEvidence": true
         },
         "sha": "81c0224f8c293ab146d6e0dc6f4549f3a0ef0185",
         "evidenceUrl": "https://github.com/afg473319/afrouter/blob/81c0224f8c293ab146d6e0dc6f4549f3a0ef0185/README.md",
@@ -75109,9 +75109,9 @@
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-18T04:37:49.139Z"
+        "checkedAt": "2026-10-25T11:35:30.132Z"
       },
-      "retryAt": "2026-10-25T04:37:49.139Z"
+      "retryAt": "2026-11-01T11:35:30.132Z"
     },
     "muthuishere/openjevx": {
       "status": "review",
