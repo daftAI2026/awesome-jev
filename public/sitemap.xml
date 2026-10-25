@@ -3313,12 +3313,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/cole-gillespie/typesafe-go" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/colesmcintosh/liedar</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/colesmcintosh/liedar" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/colindargent/tri-emails-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colindargent/tri-emails-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev" />
@@ -10781,6 +10775,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/meksof/spam-detector" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/mellow-artificial-intelligence/liedar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mellow-artificial-intelligence/liedar" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/memorysaver/jev-atari-lab</loc>
@@ -26011,12 +26011,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/cole-gillespie/typesafe-go" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/colesmcintosh/liedar</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/colesmcintosh/liedar" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colindargent/tri-emails-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev" />
@@ -33479,6 +33473,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/meksof/spam-detector" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/mellow-artificial-intelligence/liedar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mellow-artificial-intelligence/liedar" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/memorysaver/jev-atari-lab</loc>
@@ -48709,12 +48709,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/cole-gillespie/typesafe-go" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/colesmcintosh/liedar</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colesmcintosh/liedar" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/colesmcintosh/liedar" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/colindargent/tri-emails-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/colindargent/tri-emails-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/colindargent/tri-emails-jev" />
@@ -56177,6 +56171,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/meksof/spam-detector" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/meksof/spam-detector" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/mellow-artificial-intelligence/liedar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mellow-artificial-intelligence/liedar" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mellow-artificial-intelligence/liedar" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/memorysaver/jev-atari-lab</loc>

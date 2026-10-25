@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "4a7c461efb48bc02af426606ddbbb24063ffffb3",
-  "at": "2026-10-25T12:32:52.311Z",
-  "totalProjects": 3133,
+  "baselineSha": "7bbbb899f79923c11be756ba3892070117ff6876",
+  "at": "2026-10-25T17:02:40.651Z",
+  "totalProjects": 3138,
   "metadata": {
-    "ok": 3035,
-    "failed": 98,
+    "ok": 3039,
+    "failed": 99,
     "batches": 64,
     "cost": 64,
-    "other": 3033,
-    "remaining": 98,
-    "attempted": 3133,
-    "fresh": 3035,
-    "unavailable": 98,
+    "other": 3038,
+    "remaining": 99,
+    "attempted": 3138,
+    "fresh": 3039,
+    "unavailable": 99,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "colesmcintosh/liedar",
+        "to": "mellow-artificial-intelligence/liedar",
+        "databaseId": 1423680237
+      }
+    ]
   },
   "receipts": [
     {
@@ -138,6 +144,11 @@
     {
       "id": "gh-12-original0211-jev-perp-paper-trader",
       "repo": "original0211/jev-perp-paper-trader",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-11-contacto939-kit-jev",
+      "repo": "contacto939/kit-jev",
       "reason": "github-unavailable-repository"
     },
     {
@@ -517,7 +528,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
