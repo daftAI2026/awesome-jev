@@ -1,7 +1,7 @@
 {
   "version": 2,
   "pages": {
-    "topic:jev fork:false": 5,
+    "topic:jev fork:false": 6,
     "\"typesafe.ai\" in:readme fork:false": 1,
     "\"Jev\" \"System One\" in:readme fork:false": 4,
     "topic:typesafe-ai fork:false": 5,
@@ -78,7 +78,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-23T17:11:42.629Z"
       },
-      "stars": 41,
+      "stars": 16,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
@@ -5394,7 +5394,7 @@
         "checkedAt": "2026-10-23T17:11:42.629Z"
       },
       "retryAt": "2026-10-30T17:11:42.629Z",
-      "stars": 5
+      "stars": 6
     },
     "minilv/jev-auto-router": {
       "status": "review",
@@ -22613,7 +22613,7 @@
     "jzkk720/cubecloud-skills-bundle-kit": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -22621,8 +22621,8 @@
         }
       ],
       "stars": 4,
-      "checkedAt": "2026-10-18T11:11:00.030Z",
-      "retryAt": "2026-10-25T11:11:00.030Z"
+      "checkedAt": "2026-10-25T20:53:55.506Z",
+      "retryAt": "2026-11-01T20:53:55.506Z"
     },
     "sqhh99/personal-site": {
       "status": "review",
@@ -35101,7 +35101,7 @@
       "status": "review",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
       "attempts": 4,
-      "stars": 3,
+      "stars": 4,
       "checkedAt": "2026-10-25T16:25:57.517Z",
       "lastReview": {
         "repo": "gazelle93/decision-models-under-pressure",
@@ -42700,7 +42700,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T21:20:54.542Z",
       "attempts": 3,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-10-23T17:11:42.629Z",
       "lastReview": {
         "repo": "coasty-ai/jevcode",
@@ -45412,7 +45412,7 @@
       "status": "review",
       "discoveredAt": "2026-09-30T22:16:19.563Z",
       "attempts": 3,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-10-24T11:05:52.530Z",
       "lastReview": {
         "repo": "tak-bro/local-jev-bench",
@@ -53838,7 +53838,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
       "attempts": 2,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-10-24T11:05:52.530Z",
       "lastReview": {
         "repo": "bobbydeveaux/jev-lgtm",
@@ -70358,7 +70358,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
       "attempts": 2,
-      "stars": 5,
+      "stars": 4,
       "checkedAt": "2026-10-25T16:25:57.517Z",
       "lastReview": {
         "repo": "hsiangnianian/jev-turtle-soup",
@@ -82550,7 +82550,7 @@
       "status": "review",
       "discoveredAt": "2026-10-17T20:39:02.895Z",
       "attempts": 1,
-      "stars": 3,
+      "stars": 4,
       "checkedAt": "2026-10-19T13:22:29.275Z",
       "lastReview": {
         "repo": "s0cks/tev1-datapoint-extractor",
@@ -88594,7 +88594,7 @@
       "status": "review",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-10-19T22:23:08.720Z",
       "lastReview": {
         "repo": "aimmetal-tech/jev-skills-retrieval",
@@ -88651,7 +88651,7 @@
       "status": "review",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 1,
-      "stars": 3,
+      "stars": 6,
       "checkedAt": "2026-10-19T22:23:08.720Z",
       "lastReview": {
         "repo": "inboxpraveen/cleanframe",
@@ -88677,7 +88677,7 @@
       "status": "review",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 1,
-      "stars": 4,
+      "stars": 38,
       "checkedAt": "2026-10-19T22:23:08.720Z",
       "lastReview": {
         "repo": "caiweihan/jev-account-filter",
@@ -92479,6 +92479,181 @@
         "checkedAt": "2026-10-20T04:54:46.648Z"
       },
       "retryAt": "2026-10-27T04:54:46.648Z"
+    },
+    "lyadalachanchu/framefind": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "pc418/jev-calculator": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "smslavin/jev-industrial-samples": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "poesterlin/calendar-curator": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "wataru-fujita/jev-playground": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tardellirs/prumo": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dut00/comment-analysis-worker": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "samuelyossef/jev-openfast": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "eidast/solution-demos": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "mraad/duckdb-jev-spatial": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 3
+    },
+    "danieleteti/systemone-delphi": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "dmlab-work/module-catalog-enrich": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dmlab-work/module-typesafe-core": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "devrecated/jev-alternative": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "yarolegovich/hunch": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gorock007/jev-atlas": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "benikigai/jevgotiator": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "lexingtonhibiki/judgekit": {
+      "status": "review",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 1,
+      "stars": 4,
+      "checkedAt": "2026-10-25T20:53:55.506Z",
+      "lastReview": {
+        "repo": "lexingtonhibiki/judgekit",
+        "status": "review",
+        "reason": "insufficient-provider-context",
+        "sha": "8bd857d1fd267fc84ab7990374d6c3f005edbaa6",
+        "evidenceUrl": "https://github.com/lexingtonhibiki/judgekit/blob/8bd857d1fd267fc84ab7990374d6c3f005edbaa6/README.md",
+        "evidenceSha256": "ab5f69e4414023327f05ef13e3354177a6ec2925d56a130f57e3eca0c6af7824",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-25T20:53:55.506Z"
+      },
+      "retryAt": "2026-11-01T20:53:55.506Z"
+    },
+    "georgeykalangi/jev-ai-demo": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/semantic-plan-compiler": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/emotion-lens-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gbesse/synthcase-forge": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "swastikbhat-lab/prompt-studio": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "ludvious/ludica-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "rsinthu/jev-verified-rag": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "ricksterv/jev-chief-of-staff": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "jevplay-games/jev-arcade-hub": {
+      "status": "pending",
+      "discoveredAt": "2026-10-25T20:53:55.506Z",
+      "attempts": 0,
+      "stars": 0
     }
   },
   "nextReviewLane": "pending"
