@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "8090a83a2219f49ffd82119094a6983000f4ead0",
-  "at": "2026-10-24T21:35:12.919Z",
+  "baselineSha": "393df010e8fa7786b5581cc5c2532fae7daaa7d5",
+  "at": "2026-10-25T06:02:20.473Z",
   "totalProjects": 3133,
   "metadata": {
     "ok": 3035,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "completedottech/paper-package",
-        "to": "jev-engineering/paper-package",
-        "databaseId": 1375235429
-      },
-      {
-        "from": "jevplay-games/jev-factorio-agent",
-        "to": "ai-ascension/jev-factorio-agent",
-        "databaseId": 1379060982
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -528,9 +517,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 7,
+    "unavailable": 2,
     "restored": 0,
     "checked": 50
   }
