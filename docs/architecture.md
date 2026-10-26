@@ -1,6 +1,6 @@
 <!--
-[INPUT]: 现有路由、公开投影与 Workers 交付边界
-[OUTPUT]: Start/Vite、只读 MCP 与免费静态交付边界；保留长尾 SSR
+[INPUT]: 现有路由、公开投影、依赖锁与 Workers 交付边界
+[OUTPUT]: 工具链安全边界、只读 MCP 与免费静态交付规则；保留长尾 SSR
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -14,18 +14,53 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start 1.169.3 / Router 1.170.45 + Vite 8.3.5+ + React 19 + TypeScript 7 |
+| UI | TanStack Start 1.169.4 / Router 1.170.46 + Vite 8.3.5+ + React 19 + TypeScript 7 |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
 | Deploy | TanStack Start prerendered HTML via `@cloudflare/vite-plugin` and Cloudflare Workers Static Assets; Worker handles non-prerendered routes |
 
-Vite 8 uses security baseline 8.3.5. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code. Wrangler stays on 4.138.0 and `@cloudflare/vite-plugin` stays on 1.59.0. Wrangler 4.151.3 pulls Miniflare 5.20261012.0-beta, and that preview returns 500 when an internal fetch fails.
+Vite 8 uses security baseline 8.3.5. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code.
+
+### Cloudflare 工具链
+
+直接依赖固定插件 `1.65.0` 与 Wrangler `4.153.0`。
+插件内部仍使用其声明的 Wrangler `4.152.0`。
+保留两套官方依赖，不强行覆盖内部版本去重。
+Node 保持 `24.22.1` LTS；类型保持 Node 24 系列。
+
+旧基线曾因预览 500 固定插件 `1.59.0`。
+旧记录没有保存失败请求和堆栈，不能重建根因。
+Wrangler `4.151.3` 官方对应 Miniflare `5.20261019.1-beta`。
+此前将它记为 `5.20261012`，本次纠正。
+不能仅凭 alpha 或 beta 标签判断故障。
+隔离预览须覆盖正常 SSR、静态资产及错误恢复。
+
+Vite `preview.host` 固定为 `127.0.0.1`。
+Start 内置预渲染沿用此配置，与交付验收保持一致。
+本机 `localhost` 默认只监听 IPv6。
+Node 双栈首尝试默认超时为 250 ms。
+400 ms 事件循环停顿会触发 IPv6 超时误切换。
+后备 IPv4 未监听，产生聚合连接错误。
+`preview-host.test.ts` 用真实 Vite 与 TCP 复现此路径。
+固定 IPv4 消除该地址族切换，不增加失败重试。
+此设置只约束本机预览，不改变生产 Worker 路由。
+依据：[Vite 地址解析](https://vite.dev/config/server-options.html#server-host)、[Node 24 连接规则](https://nodejs.org/docs/latest-v24.x/api/net.html#socketconnectoptions-connectlistener)。
+
+Miniflare 的外部 Undici 用窄 override 固定 `7.30.1`。
+`toolchain.test.ts` 用畸形压缩响应验证进程不崩溃。
+该覆盖不改变插件及其内部 Wrangler 的内联副本。
+这两份 `7.29.1` 内联代码仍受 [GHSA-xjj6-f33q-929c](https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c) 影响。
+它们属于本机构建/预览工具，不是业务请求入口。
+不要把 npm audit 的零计数称为全部风险清零。
+待官方插件重发安全版本，再核对并移除冗余覆盖。
+依据：[Miniflare 官方修复](https://github.com/cloudflare/workers-sdk/pull/16476)、[Vite 插件内联副本修复进度](https://github.com/cloudflare/workers-sdk/pull/16480)。
 
 ## TanStack Start 稳定版基线
 
 2026-10-14 对齐 Start 1.169.1 与 Router 1.170.44。
 2026-10-22 对齐 Start 1.169.3、Router 1.170.45、Vite 8.3.5 与 TypeScript 7。Wrangler 仍为 4.138.0。
+2026-10-27 对齐 Start 1.169.4、Router 1.170.46 与 MCP SDK 2.4.0。
 Start 的稳定版从 1.169 开始，不回退到包版本 1.0.0。
 Start 与 Router 独立编号，不强行使用相同版本号。
 配套 Router 以 Start 发布依赖为准。

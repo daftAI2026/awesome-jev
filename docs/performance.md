@@ -1,6 +1,6 @@
 <!--
-[INPUT]: PageSpeed 基线、模块图与本地真实 HTTP 验证
-[OUTPUT]: 性能取舍、启动包与按需新闻交付边界；区分字节与用户体验指标
+[INPUT]: PageSpeed 基线、模块图、HTTP 验证与 Redact 官方契约及隔离依赖解析
+[OUTPUT]: 性能取舍、交付边界与运行时替换门槛；区分字节与用户体验指标
 [POS]: docs 的性能证据记录；路由依赖归 architecture.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -86,3 +86,62 @@ Local gzip comparisons measure build bytes, **not Cloudflare's actual on-wire co
 After all 506 verified rationale additions and integration of upstream statistics from `65f2131`, the 2,199-record canonical JSON is 5,047,586 bytes on disk. Its minified payload measures 3,963,970 bytes / 1,073,038 bytes gzip level 9; the build-time display projection is 3,113,216 / 892,497 bytes, a 180,541-byte (16.8%) gzip reduction for this same final dataset. These are combined payload measurements, not a sum of independently compressed field savings. Full localized inclusion records, their validation inputs and every current card/search/sort/preview field remain. Rich hashes/scores/receipts remain in the sole canonical store and server detail reads.
 
 The final built homepage preloaded/static-import closure measures 3,838,585 decoded bytes / 1,161,580 bytes gzip level 9; project and news detail closures measure 235,753 and 228,811 bytes gzip respectively. Closure gzip totals sum individually compressed modules. The additional rationale text grows the directory payload; comparing its gross bytes with a smaller historical dataset would not isolate an optimization benefit. The startup audit exclusion test fails against the retained pre-projection build and passes against the projected build. Exact per-field/search/sort tests and cross-environment Vite invalidation checks complement the built-module guard. This is not a new production transfer measurement, mobile/desktop PageSpeed result or claim that the homepage no longer loads its local project dataset.
+
+## Redact 运行时评估（2026-10-27）
+
+结论：依赖升级与运行时替换分开验收。
+本轮不把 Redact 随工具链升级接入生产。
+初始检查基于 `a3d86b1` 的清洁工作区。
+随后快进至 `7a5acc4`，仅同步数据及生成产物。
+
+Redact 替换 React 运行时，不是日志脱敏库。
+浏览器启动包、水合和动态 SSR 是收益候选。
+本站未完成 A/B，不能宣称具体收益。
+`src/server.ts` 在 SSR 前分流 MCP 与静态资产。
+这些请求不因替换 React 自动降低 CPU。
+
+### 初始依赖冲突与独立升级
+
+本次核对的最新发布版是 [0.2.0](https://github.com/TanStack/redact/releases/tag/%40tanstack%2Fredact%400.2.0)。
+其包声明要求 Cloudflare 插件精确为 `1.65.0`。
+初始基线因预览回归固定插件为 `1.59.0`。
+约束是可选 peer；已安装该插件时仍须满足。
+只用 `@tanstack/redact/vite` 也不能绕开解析。
+
+将本站清单和锁文件复制到临时目录，无 `node_modules`。
+仅在副本执行以下依赖解析，不安装或执行包脚本：
+
+```bash
+npm install --package-lock-only --ignore-scripts --no-audit --no-fund --save-exact @tanstack/redact@0.2.0
+```
+
+结果为 `ERESOLVE`：`peerOptional` 要求 `1.65.0`。
+失败前后，副本清单和锁文件与原文件哈希一致。
+不使用 `--force` 或 `--legacy-peer-deps` 强装。
+用户随后明确授权升级全部直接依赖。
+本轮独立升级插件为 `1.65.0`，不再保留该版本阻断。
+平台回归边界见 [architecture.md](architecture.md)。
+
+### 重新评估的验收门槛
+
+按同一锁文件建立 React 与 Redact 的隔离基线。
+初始本机安装落后于锁文件，已用 npm ci 重建。
+上游[许可证问题 #65](https://github.com/TanStack/redact/issues/65)尚未关闭。
+生产接入前须核清许可，不能沿用其他 TanStack 包的许可。
+0.2.0 已实现 transition、deferred 和异步 action。
+它仍无时间切片；旧版 no-op 结论不适用。
+以[官方兼容表](https://github.com/TanStack/redact/blob/d56d87c/docs/compatibility.md)为准。
+
+先在 React 上写浏览器回归，再运行相同的 Redact 测试。
+覆盖整页水合、快速导航、回退和客户端错误恢复。
+覆盖预览退出中复开、焦点恢复与滚动锁释放。
+覆盖慢加载阅读位置、虚拟列表、主题和 MCP Tabs。
+现有 HTTP 与源码断言不能替代这些测试。
+
+[Start 接入](https://github.com/TanStack/redact/blob/d56d87c/docs/start.md)须保留水合、Suspense 和类错误边界。
+本站还依赖 Portal；不套用精简示例禁用该能力。
+执行类型检查、lint、单测、构建和零跳过交付验收。
+检查客户端依赖图，禁止同时打包两套运行时。
+比较完整首屏依赖图、真实交互和全量预渲染耗时。
+动态 SSR 分开测冷、热 CPU；静态命中另列。
+不把运行时体积比例当作整站提速比例。

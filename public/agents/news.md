@@ -13,6 +13,206 @@
 
 News pages contain source-attributed summaries, not full articles. Publication time is taken from the source when available. Items without summaries are excluded from this document.
 
+## 德州大学Jev-Mem让AI记忆构建提速6.6倍
+
+[Summary page \(en\)](https://awesomejev.cc/news/od4wckvgmxoktt6dga7ekecnc) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/od4wckvgmxoktt6dga7ekecnc) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/od4wckvgmxoktt6dga7ekecnc)
+
+[X：Rohan Paul \(@rohanpaul\_ai\)](https://x.com/rohanpaul_ai/status/2114363208702275807) · [AIHOT](https://aihot.news/items/od4wckvgmxoktt6dga7ekecnc)
+
+Source publication: 2026-10-25T14:27:26.000Z
+
+德州大学论文提出Jev-Mem，把链接、停止搜索等小决策交给快速打分模型Jev批量输出概率，LLM只在最后读取记忆并作答，使长对话记忆构建速度提升6.6倍。在LoCoMo长对话基准上，其回答得分0.777，高于最佳基线的0.700；记忆构建耗时158秒，最快对手为1,044秒，回答耗时0.93秒对1.47秒。
+
+## Shopify 如何用 Remote Dev 给 AI Agent 搭远程手机开发机
+
+[Summary page \(en\)](https://awesomejev.cc/news/kxw4re0l4zipexyf6wn7gu3zw) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/kxw4re0l4zipexyf6wn7gu3zw) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/kxw4re0l4zipexyf6wn7gu3zw)
+
+[X：邵猛 \(@shao\_\_meng\)](https://x.com/shao__meng/status/2113799609671909827) · [AIHOT](https://aihot.news/items/kxw4re0l4zipexyf6wn7gu3zw)
+
+Source publication: 2026-10-24T01:07:54.000Z
+
+作者解读 Shopify Engineering 文章：Shopify 为 Slack 里的 AI Agent「River」搭建 Remote Dev，用远程 Mac 机群加挂载 Linux 的 Android 模拟器，让 Agent 并行编译、测试 iOS/Android、截图录屏并做 Live Preview。
+
+## Modem 推出由 Jev 驱动的智能触发器，按条件筛选事件再运行智能体
+
+[Summary page \(en\)](https://awesomejev.cc/news/j5qm7v6182adr1zleomgiw2au) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/j5qm7v6182adr1zleomgiw2au) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/j5qm7v6182adr1zleomgiw2au)
+
+[Modem：Blog（RSS）](https://modem.ai/blog/smart-triggers) · [AIHOT](https://aihot.news/items/j5qm7v6182adr1zleomgiw2au)
+
+Source publication: 2026-10-23T13:00:00.000Z
+
+Modem 上线智能触发器（Smart Triggers），在启动 Modem 智能体前先用 TypeSafe 的决策模型 Jev 按自然语言条件评估每个事件，条件可在 1 秒内完成评估、单次成本 1/100 美分，只有匹配的事件才触发智能体运行。该功能现已向所有用户开放，可通过应用内、Slack、Discord 或 Claude、ChatGPT、Cursor 等 MCP 客户端创建自动化。
+
+## OpenAI Decisions API 正式开放，支持 Predicate、Choice 和 Score 三种决策
+
+[Summary page \(en\)](https://awesomejev.cc/news/o85h1c7hzlj53lwkijzp1smi1) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/o85h1c7hzlj53lwkijzp1smi1) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/o85h1c7hzlj53lwkijzp1smi1)
+
+[X：Testing Catalog \(@testingcatalog\)](https://x.com/testingcatalog/status/2113398273352368473) · [AIHOT](https://aihot.news/items/o85h1c7hzlj53lwkijzp1smi1)
+
+Source publication: 2026-10-22T22:33:08.000Z
+
+OpenAI 的 Decisions API 现已正式可用（GA），可通过 API 和 OpenAI Platform 使用。该 API 用于构建基于极快决策的工作流，支持 Predicate、Choice 和 Score 三种决策类型，可在不生成完整模型响应的情况下分类文本和图像、评估输入；作者示例询问 GPT-7 系列今年发布的概率，得到 21% 的结果。
+
+## SubQ Snap 1.1 登顶决策指数，与 d1-ultra 并列第一
+
+[Summary page \(en\)](https://awesomejev.cc/news/xsr2pzw7pmv6jprymby8fch1f) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/xsr2pzw7pmv6jprymby8fch1f) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/xsr2pzw7pmv6jprymby8fch1f)
+
+[X：Artificial Analysis \(@ArtificialAnlys\)](https://x.com/ArtificialAnlys/status/2113360449156890662) · [AIHOT](https://aihot.news/items/xsr2pzw7pmv6jprymby8fch1f)
+
+Source publication: 2026-10-22T20:02:50.000Z
+
+Subquadratic 发布决策模型 SubQ Snap 1.1，在 Artificial Analysis Decision Index v1.0 上得分 65，与 d1-ultra、Elephant 9B 并列第一，领先第三名 Jev 1.14（57）8 分。
+
+## OpenAI 的 Decisions API 面向全部客户开放，与 TypeSafe Jev 竞争加剧
+
+[Summary page \(en\)](https://awesomejev.cc/news/m3xd1i05evmg1921gqrv4dluk) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/m3xd1i05evmg1921gqrv4dluk) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/m3xd1i05evmg1921gqrv4dluk)
+
+[TechCrunch：AI（RSS）](https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/) · [AIHOT](https://aihot.news/items/m3xd1i05evmg1921gqrv4dluk)
+
+Source publication: 2026-10-22T19:00:00.000Z
+
+OpenAI 的 Decisions API 于 9 月 29 日开发者日宣布后，周四起向所有客户开放。产品基于 ChatGPT Luna 重新配置，把响应时间从 1-3 秒缩短到 100-180 毫秒，并新增语音和视觉模态，按地区部署推理资源以降低延迟。
+
+## Composio 发布 Firewall，为 Agent 提供运行时边界防护
+
+[Summary page \(en\)](https://awesomejev.cc/news/vhof8heex59ybnxb9r0540kmk) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/vhof8heex59ybnxb9r0540kmk) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/vhof8heex59ybnxb9r0540kmk)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2113346740267143361) · [AIHOT](https://aihot.news/items/vhof8heex59ybnxb9r0540kmk)
+
+Source publication: 2026-10-22T19:08:21.000Z
+
+TypeSafe AI 转评 Composio 发布 Firewall，为 Agent 提供运行时边界。该防火墙基于 Jev 和 Composio 用真实使用数据调优的定制 SLM，双向校验 Agent 的动作与返回信息，用于保障用户意图、开发者边界并防护提示词注入，现已对所有 Composio 开发者开放。
+
+## TypeSafe AI 推定制化智能体方案
+
+[Summary page \(en\)](https://awesomejev.cc/news/rzhkoeb15x91ehklseqwgc5a3) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rzhkoeb15x91ehklseqwgc5a3) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rzhkoeb15x91ehklseqwgc5a3)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2113348030590267557) · [AIHOT](https://aihot.news/items/rzhkoeb15x91ehklseqwgc5a3)
+
+Source publication: 2026-10-22T19:13:29.000Z
+
+定制化智能体，配定制化知识库、定制化指令、定制化工具集，当然还有 Jev 的定制化路由 让你的 goon 成为你专属的！
+
+## 蚂蚁数科发布决策模型 LingDT-Decision-1.0，Token 消耗降低超 90%
+
+[Summary page \(en\)](https://awesomejev.cc/news/uvs5g6wd0hna7sc7j0ssghr8u) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/uvs5g6wd0hna7sc7j0ssghr8u) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/uvs5g6wd0hna7sc7j0ssghr8u)
+
+[IT之家·人工智能](https://www.ithome.com/1/016/633.htm) · [AIHOT](https://aihot.news/items/uvs5g6wd0hna7sc7j0ssghr8u)
+
+Source publication: 2026-10-22T10:12:04.063Z
+
+蚂蚁数科发布决策模型 LingDT-Decision-1.0，提供 4B 和 27B 两个版本，已在 DTMaaS 平台上线并限时免费体验。该模型首创原生多选与按序决策（DAG）能力，在 23 项开源评测基准中超过 Microsoft-Decision-1、Jev 1.13 等决策模型，27B 版本在同参数模型中准确率最高。
+
+## Fireworks 开放 Muse Glimmer 30B 免费 SFT 训练，微调版在 Kalshi 预测上超过 Jev 11.2 个百分点
+
+[Summary page \(en\)](https://awesomejev.cc/news/lv1j5w1pgypndljkfkheup0tw) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/lv1j5w1pgypndljkfkheup0tw) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/lv1j5w1pgypndljkfkheup0tw)
+
+[Fireworks AI（网页）](https://fireworks.ai/blog/train-muse-glimmer-for-free) · [AIHOT](https://aihot.news/items/lv1j5w1pgypndljkfkheup0tw)
+
+Source publication: 2026-10-19T16:00:00.000Z
+
+Fireworks 推出 Free Weights Club，Muse Glimmer 30B 的 SFT 训练在 11 月 30 日前免费。
+
+## Base Labs 发布 mammoth-1 与 elephant-1
+
+[Summary page \(en\)](https://awesomejev.cc/news/xyqybl2l6b2w3zlrlqkwhfbse) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/xyqybl2l6b2w3zlrlqkwhfbse) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/xyqybl2l6b2w3zlrlqkwhfbse)
+
+[X：马东锡 NLP \(@dongxi\_nlp\)](https://x.com/dongxi_nlp/status/2113013987336134820) · [AIHOT](https://aihot.news/items/xyqybl2l6b2w3zlrlqkwhfbse)
+
+Source publication: 2026-10-21T21:06:07.000Z
+
+Base Labs 发布 release mammoth-1 和 elephant-1，超越 Jev，继续向前推动 decision model 最重要的： 开放权重和 technical report！
+
+## Fireworks AI 免费微调 Muse Glimmer 30B，预测准确率超 Jev 11.2 个百分点
+
+[Summary page \(en\)](https://awesomejev.cc/news/i8cv3lz1mu06chqntgu8cgt3m) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/i8cv3lz1mu06chqntgu8cgt3m) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/i8cv3lz1mu06chqntgu8cgt3m)
+
+[Fireworks AI（网页）](https://fireworks.ai/blog/training-muse-glimmer-to-out-bet-jev) · [AIHOT](https://aihot.news/items/i8cv3lz1mu06chqntgu8cgt3m)
+
+Source publication: 2026-10-19T16:00:00.000Z
+
+Fireworks AI 推出 Free Weights Club，Muse Glimmer 30B 的 SFT 训练在 11 月 30 日前免费。
+
+## TypeSafe AI 为 UiPath 工作流引入 Jev 模型
+
+[Summary page \(en\)](https://awesomejev.cc/news/yirlno8c4ll3wgsz4hage8463) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/yirlno8c4ll3wgsz4hage8463) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/yirlno8c4ll3wgsz4hage8463)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2112971330421412292) · [AIHOT](https://aihot.news/items/yirlno8c4ll3wgsz4hage8463)
+
+Source publication: 2026-10-21T18:16:36.000Z
+
+Jev 为 @UiPath 工作流带来可靠的智能判断，成本与速度约优化一个数量级 不再需要 LLM-as-a-judge
+
+## Lightpanda 用 Jev 判断网页真实内容
+
+[Summary page \(en\)](https://awesomejev.cc/news/ro2j9ybn780d20jz80wwrtu4y) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/ro2j9ybn780d20jz80wwrtu4y) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/ro2j9ybn780d20jz80wwrtu4y)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2112969164713582978) · [AIHOT](https://aihot.news/items/ro2j9ybn780d20jz80wwrtu4y)
+
+Source publication: 2026-10-21T18:08:00.000Z
+
+说真的，cookie 横幅就是个糟糕的主意 接下来还有什么该被自动化掉？
+
+## Baseten Base Labs 发布决策模型 mammoth-1（27B）与 elephant-1（9B）并开源权重
+
+[Summary page \(en\)](https://awesomejev.cc/news/v29x2krdr0qahbvekhdsbjcct) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/v29x2krdr0qahbvekhdsbjcct) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/v29x2krdr0qahbvekhdsbjcct)
+
+[Baseten Base Labs：模型研究](https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models) · [AIHOT](https://aihot.news/items/v29x2krdr0qahbvekhdsbjcct)
+
+Source publication: 2026-10-20T16:00:00.000Z
+
+Baseten Base Labs 将 Qwen3.5-9B 和 Qwen3.5-27B 后训练为决策模型 elephant-1 与 mammoth-1 并开源权重。
+
+## Pragmatic Engineer 对谈 Will Larson：ZIRP 之后工程管理的规则改写
+
+[Summary page \(en\)](https://awesomejev.cc/news/aifzoq8j8j3ouhd3ac5db0okf) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/aifzoq8j8j3ouhd3ac5db0okf) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/aifzoq8j8j3ouhd3ac5db0okf)
+
+[Pragmatic Engineer（RSS）](https://newsletter.pragmaticengineer.com/p/the-revised-rules-of-engineering) · [AIHOT](https://aihot.news/items/aifzoq8j8j3ouhd3ac5db0okf)
+
+Source publication: 2026-10-21T16:58:21.000Z
+
+Gergely Orosz 发布与 Imprint CTO Will Larson 的播客对谈，讨论 2010 年代以来工程管理“潜规则”的变化。
+
+## Baseten 发布决策模型 mammoth-1（27B）和 elephant-1（9B），开源并免费试用一周
+
+[Summary page \(en\)](https://awesomejev.cc/news/gh2z6vliymwuu811sbdc9694a) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/gh2z6vliymwuu811sbdc9694a) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/gh2z6vliymwuu811sbdc9694a)
+
+[Baseten 工程博客（网页）](https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/) · [AIHOT](https://aihot.news/items/gh2z6vliymwuu811sbdc9694a)
+
+Source publication: 2026-10-21T16:58:52.000Z
+
+Baseten 研究实验室 Base Labs 发布开源决策模型 mammoth-1（27B）和 elephant-1（9B），基于 Qwen3.5-27B 和 Qwen3.5-9B 在 621 万决策样本上后训练而成。
+
+## 如何用决策模型做 LLM Evals：从阈值调优到概率校准的实践解读
+
+[Summary page \(en\)](https://awesomejev.cc/news/m1k5f7te2w0qkpp3da7buhaep) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/m1k5f7te2w0qkpp3da7buhaep) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/m1k5f7te2w0qkpp3da7buhaep)
+
+[X：邵猛 \(@shao\_\_meng\)](https://x.com/shao__meng/status/2112720094287786298) · [AIHOT](https://aihot.news/items/m1k5f7te2w0qkpp3da7buhaep)
+
+Source publication: 2026-10-21T01:38:17.000Z
+
+作者转述 @HamelHusain 关于决策模型做 LLM Evals 的博客：大多数从业者直接沿用 0.50 默认阈值，文章用 98 条真实生产 trace 对比五家决策模型，证明阈值调优、概率校准和成本-性能 Pareto 分析能带来可量化提升。
+
+## Hamel Husain 发文讲解如何用决策模型做 Evals
+
+[Summary page \(en\)](https://awesomejev.cc/news/nlo05yq3qck4mm6n548q2wnz8) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/nlo05yq3qck4mm6n548q2wnz8) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/nlo05yq3qck4mm6n548q2wnz8)
+
+[X：马东锡 NLP \(@dongxi\_nlp\)](https://x.com/dongxi_nlp/status/2112652766997103016) · [AIHOT](https://aihot.news/items/nlo05yq3qck4mm6n548q2wnz8)
+
+Source publication: 2026-10-20T21:10:45.000Z
+
+Hamel Husain 发布新文章《How To Use Decision Models For Evals》，讲解如何为任务选择决策模型、调优阈值（提醒不要默认 0.5）并解读分数，配有交互式图表。
+
+## CodeRabbit Jevathon 黑客松创意涌现
+
+[Summary page \(en\)](https://awesomejev.cc/news/jtchdolurbehqqq110lzqe9ly) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/jtchdolurbehqqq110lzqe9ly) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/jtchdolurbehqqq110lzqe9ly)
+
+[X：TypeSafe AI \(@typesafeai\)](https://x.com/typesafeai/status/2112638503020589148) · [AIHOT](https://aihot.news/items/jtchdolurbehqqq110lzqe9ly)
+
+Source publication: 2026-10-20T20:14:04.000Z
+
+@coderabbitai 的 Jev 黑客松产出的创意和生产力简直疯狂。 他们的视频里有很多精彩细节！
+
 ## Cloudflare 发布 Clairic 模型，从文档抽取数据比 LLM 更快更省
 
 [Summary page \(en\)](https://awesomejev.cc/news/cmogljyljyvsca3w4yomzmepu) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/cmogljyljyvsca3w4yomzmepu) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/cmogljyljyvsca3w4yomzmepu)
@@ -73,6 +273,16 @@ Source publication: 2026-10-19T07:00:00.000Z
 
 Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，速度达 1068 tokens/秒，参数量较 Mercury 1 扩大 40 倍以上。
 
+## Jev 的兴衰：从营销炒作看 AI 行业的真实创新缺口
+
+[Summary page \(en\)](https://awesomejev.cc/news/kqd68nsm1m0rwxn6sn4hwudty) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/kqd68nsm1m0rwxn6sn4hwudty) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/kqd68nsm1m0rwxn6sn4hwudty)
+
+[Hacker News：AI 热帖](https://blog.alexewerlof.com/p/rise-and-fall-of-jev-eval-hype-vs-llm) · [AIHOT](https://aihot.news/items/kqd68nsm1m0rwxn6sn4hwudty)
+
+Source publication: 2026-10-19T10:54:01.000Z
+
+作者复盘 TypeSafe AI 发布 33 天的通用分类器模型 Jev 的炒作与降温，指出其只是不训练、不推理的快速分类器，所谓"不能幻觉"仅指输出符合 schema，开放权重模型在性能成本比上反而更优。文章归纳其营销策略为蹭名字、夸大声明、术语模糊和制造戏剧性，并梳理 ChatGPT 以来的增量改进，以及抽象推理、持续学习、具身智能和 AI 运行经济性等仍未解决的根本问题。
+
 ## Princeton 与 Google 论文提出 JevAgentHarness，用 4B 决策模型分担 LLM 智能体例行决策
 
 [Summary page \(en\)](https://awesomejev.cc/news/rv2gymgzw7h624dxhy098r2uo) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/rv2gymgzw7h624dxhy098r2uo) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/rv2gymgzw7h624dxhy098r2uo)
@@ -112,6 +322,16 @@ Source publication: 2026-10-18T11:05:52.000Z
 Source publication: 2026-10-17T07:26:39.000Z
 
 MarkTechPost 盘点了 TypeSafe 于 2026 年 9 月 15 日发布决策模型 Jev 后约 4 周内出现的 20 个替代方案，来自 Cloudflare、OpenAI、Perplexity、Liquid AI、AWS Strands Labs 及独立开发者，按参数规模、许可证、硬件、定价、Jev API 兼容性和基准表现逐项比较。
+
+## Latent Space 试点 High Taste Testers 节目并汇总 AI 新闻：Meta 开源 Muse Spark Open、Reflection Beam 1.0 等
+
+[Summary page \(en\)](https://awesomejev.cc/news/x1glpyso2s4x42i4bxsmtxuhu) · [Summary page \(zh\)](https://awesomejev.cc/zh/news/x1glpyso2s4x42i4bxsmtxuhu) · [Summary page \(ja\)](https://awesomejev.cc/ja/news/x1glpyso2s4x42i4bxsmtxuhu)
+
+[Latent Space（RSS）](https://latent.space/p/ainews-high-taste-testers-ep-1/) · [AIHOT](https://aihot.news/items/x1glpyso2s4x42i4bxsmtxuhu)
+
+Source publication: 2026-10-17T07:47:38.000Z
+
+Latent Space 试点新节目 High Taste Testers，并发布 2026 年 10 月 15 至 16 日的 AI 新闻汇总。
 
 ## 五位 AI 重度用户复盘 OpenAI DevDay：Dots、Jev 与个人助手的产品真相
 

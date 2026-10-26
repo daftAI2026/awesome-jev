@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
- * [OUTPUT]: 提供多环境构建、三语言 MCP 指南、有限查询产物与可信更新时间
+ * [OUTPUT]: 提供多环境构建、IPv4 回环预览、三语言指南与有限查询产物
  * [POS]: 根级构建编排；公开数据同源，MCP 索引只进入服务端模块
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -85,6 +85,8 @@ const catalogUpdatedAt = (() => {
 export default defineConfig({
   // 本项目构建只需 Vite define 的 catalog 时间戳，不读取 .env.local。
   envDir: false,
+  // --- 预渲染与交付验收共用 IPv4，避开 localhost 双栈连接竞态 ---
+  preview: { host: '127.0.0.1' },
   plugins: [
     directoryCatalogPlugin(path.join(root, 'data/github.json'), catalogUpdatedAt),
     tailwindcss(),

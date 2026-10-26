@@ -1,7 +1,7 @@
 /**
- * [INPUT]: 依赖真实构建 Worker、官方 MCP 客户端与目录可见性规则
- * [OUTPUT]: 验证协议、三语言使用页、文档与客户端产物隔离
- * [POS]: scripts 的 MCP 上线门禁；零跳过交付由 verify-delivery 编排
+ * [INPUT]: 依赖真实构建 Worker、官方 MCP 客户端、流式 HTTP 正文与目录可见性规则
+ * [OUTPUT]: 验证协议、输入拒绝后的连续请求、三语言使用页与客户端产物隔离
+ * [POS]: scripts 的 MCP 上线门禁；完整读取边界响应，不以重试隐藏连接失败
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
@@ -55,16 +55,51 @@ test('built Worker serves modern MCP and legacy requests without sessions or SSR
 
 test('built HTTP boundary preserves origin and bounded-input rules', { skip: !origin }, async () => {
   const endpoint = `${origin}/api/mcp`
-  assert.equal((await fetch(endpoint)).status, 405)
-  const blocked = await fetch(endpoint, { method: 'POST', headers: { Origin: 'https://evil.example' }, body: '{}' })
-  assert.equal(blocked.status, 403)
+  const unsupported = await fetch(endpoint, { signal: AbortSignal.timeout(30_000) })
+  const unsupportedBody = await unsupported.text()
+  assert.equal(unsupported.status, 405, unsupportedBody)
+  const blocked = await fetch(endpoint, {
+    method: 'POST', headers: { Origin: 'https://evil.example' }, body: '{}', signal: AbortSignal.timeout(30_000),
+  })
+  const blockedBody = await blocked.text()
+  assert.equal(blocked.status, 403, blockedBody)
   assert.equal(blocked.headers.get('Access-Control-Allow-Origin'), null)
   const oversized = await fetch(endpoint, {
     method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' },
     body: JSON.stringify({ padding: 'x'.repeat(16 * 1024) }),
+    signal: AbortSignal.timeout(30_000),
   })
-  assert.equal(oversized.status, 413)
-  await oversized.body?.cancel()
+  const oversizedBody = await oversized.text()
+  assert.equal(oversized.status, 413, oversizedBody)
+})
+
+test('early Origin rejection of a chunked POST preserves consecutive healthy GET requests', { skip: !origin }, async () => {
+  // --- 无 Content-Length 的流让 Node HTTP 客户端发送 chunked 正文 ---
+  const encoder = new TextEncoder()
+  const body = new ReadableStream<Uint8Array>({
+    start(controller) {
+      for (const chunk of ['{"padding":"', 'x'.repeat(1024), '"}']) controller.enqueue(encoder.encode(chunk))
+      controller.close()
+    },
+  })
+  const blocked = await fetch(`${origin}/api/mcp`, {
+    method: 'POST', headers: { Origin: 'https://evil.example', 'Content-Type': 'application/json' },
+    body, duplex: 'half', signal: AbortSignal.timeout(30_000),
+  } as RequestInit & { duplex: 'half' })
+  const blockedBody = await blocked.text()
+  assert.equal(blocked.status, 403, blockedBody)
+  assert.equal(blocked.headers.get('Access-Control-Allow-Origin'), null)
+  assert.deepEqual(JSON.parse(blockedBody), { error: 'Origin not allowed.' })
+
+  // --- 连续请求是验收，不是失败重试；首个 500 或连接重置立即失败 ---
+  for (const pathname of ['/', '/zh', '/ja']) {
+    const response = await fetch(new URL(pathname, origin), { signal: AbortSignal.timeout(30_000) })
+    const html = await response.text()
+    assert.equal(response.status, 200, `${pathname}: ${html.slice(0, 200)}`)
+    assert.match(response.headers.get('Content-Type') ?? '', /text\/html/)
+    assert.match(html, /<main\b[^>]*id="main"/)
+    assert.doesNotMatch(html, /data-recovery-status=/)
+  }
 })
 
 test('MCP setup is a static three-language page with matching public markdown', { skip: !origin || !build }, async () => {

@@ -2,11 +2,13 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+preview-host.test.ts: 读取项目预览 host；真实 Vite/TCP 验证停顿后的 IPv4 回环连接，不启动项目插件服务器
+toolchain.test.ts: 插件实际解析的 Miniflare 外部 Undici 畸形编码回归；子进程隔离崩溃，不覆盖插件内联副本
 mcp-catalog.ts: 规范快照生成公开 MCP 白名单、身份表和三种排序；单项 UTF-8 JSON 超过 4096 B 阻止构建
 mcp-catalog.test.ts: MCP 字段隔离、迁址、隐藏、新身份接管旧地址、全目录排序等价与容量边界
 mcp-config.test.ts: 单行 Tabs/家族顺序、三种安装 URL 解码白名单、收藏后入口与品牌原字节契约
 mcp-server.test.ts: 新旧协议、纯分类预热、schema 单次转换、只读工具、输入容量与失败封闭限流
-mcp-delivery.test.ts: 真实 Worker MCP、三语言静态指南、Markdown 与浏览器隔离门禁
+mcp-delivery.test.ts: 真实 Worker MCP、流式请求早拒绝后的连续 GET、完整响应读取、三语言静态指南与浏览器隔离门禁
 mcp-docs.test.ts: 客户端配置、公开 Markdown 与 Registry 元数据的一致性门禁
 generate-og.ts: Node 构建期 PNG 生成与过期版本回收；校验免费 20000 文件上限，不写 public 源文件
 generate-og.test.ts: 公开计数、隐藏身份、构建失败和免费容量的离线回归
@@ -33,7 +35,7 @@ generate-jev-figure.mjs: 项目级 Anatomy kit 离线投影 60 实体，生成�
 jev-figure.test.ts: 本地 0.3 秒教学轨迹、自动出口轮换、真实圆角棱柱遮挡、产物重建、刻度线端与无可执行标记回归
 error-policy.test.ts: 错误状态与缺失分离、Error message/stack/cause 脱敏离线回归
 error-page-fixture.ts: 当前源码临时复制与测试专用故障路由，生产构建不含触发入口
-error-delivery.test.ts: 隔离产物十条真实错误/恢复回归，检查脱敏/状态/索引/恢复入口
+error-delivery.test.ts: 隔离产物十二条真实预览回归；禁用预渲染验证 SSR/静态资产 200，保留错误脱敏/状态/索引/恢复入口
 tag-delivery.test.ts: 真实 HTTP 三语言标签索引/详情内链、分页、同义 301、特殊字符/长尾 noindex 与未知 404
 project-tags.test.ts: 公开标签同义/按项目去重、特殊字符/注入路径、原始快照和 Action bot 候选不变回归
 pagination.test.ts: Node 每页 50 条、排名和规范地址回归；归一不撤销服务端待加载的有效页
