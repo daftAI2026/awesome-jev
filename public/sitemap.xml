@@ -1051,12 +1051,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/allenporter/home-assistant-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/alpbahadur/jevrouter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alpbahadur/jevrouter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/alpha-harper-franklin/jev-drive</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpha-harper-franklin/jev-drive" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpha-harper-franklin/jev-drive" />
@@ -8821,10 +8815,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanfabrega/jev-quiz-pilot" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/juanlentino/connector-for-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/connector-for-typesafe-jev" />
+    <loc>https://awesomejev.cc/projects/juanlentino/tribar-connector-for-typesafe-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/tribar-connector-for-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/julianoczkowski/jev-demo</loc>
@@ -9545,12 +9539,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kortexa-ai/mappity" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/kotoba-lang/typed-decisions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kotoba-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/kouyamacreate/jevtetris</loc>
@@ -11021,6 +11009,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithalouni/system-one-open" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/mithril-lang/typed-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithril-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/mithrilman/your-signal</loc>
@@ -23803,12 +23797,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/allenporter/home-assistant-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/alpbahadur/jevrouter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alpbahadur/jevrouter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/alpha-harper-franklin/jev-drive</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpha-harper-franklin/jev-drive" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpha-harper-franklin/jev-drive" />
@@ -31573,10 +31561,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanfabrega/jev-quiz-pilot" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/juanlentino/connector-for-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/connector-for-typesafe-jev" />
+    <loc>https://awesomejev.cc/zh/projects/juanlentino/tribar-connector-for-typesafe-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/tribar-connector-for-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/julianoczkowski/jev-demo</loc>
@@ -32297,12 +32285,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kortexa-ai/mappity" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/kotoba-lang/typed-decisions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kotoba-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/kouyamacreate/jevtetris</loc>
@@ -33773,6 +33755,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithalouni/system-one-open" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/mithril-lang/typed-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithril-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/mithrilman/your-signal</loc>
@@ -46555,12 +46543,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/allenporter/home-assistant-typesafe" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/alpbahadur/jevrouter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpbahadur/jevrouter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/alpbahadur/jevrouter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/alpha-harper-franklin/jev-drive</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/alpha-harper-franklin/jev-drive" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/alpha-harper-franklin/jev-drive" />
@@ -54325,10 +54307,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanfabrega/jev-quiz-pilot" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/juanlentino/connector-for-typesafe-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/connector-for-typesafe-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/connector-for-typesafe-jev" />
+    <loc>https://awesomejev.cc/ja/projects/juanlentino/tribar-connector-for-typesafe-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/juanlentino/tribar-connector-for-typesafe-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/juanlentino/tribar-connector-for-typesafe-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/julianoczkowski/jev-demo</loc>
@@ -55049,12 +55031,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kortexa-ai/mappity" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kortexa-ai/mappity" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/kotoba-lang/typed-decisions</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/kotoba-lang/typed-decisions" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/kotoba-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/kouyamacreate/jevtetris</loc>
@@ -56525,6 +56501,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithalouni/system-one-open" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithalouni/system-one-open" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/mithril-lang/typed-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/mithril-lang/typed-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/mithril-lang/typed-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/mithrilman/your-signal</loc>
