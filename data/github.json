@@ -176213,5 +176213,339 @@
         "checkedAt": "2026-10-25T16:25:57.517Z"
       }
     }
+  },
+  {
+    "id": "gh-11-danieleteti-systemone-delphi",
+    "type": "github",
+    "title": "systemone-delphi",
+    "summary": "Delphi client for System One models (Jev, tev1 and nimble on Ollama): ask typed questions about a text (choice, score, noul) and get the answer, probabilities and confidence in milliseconds. Route, triage and classify with no text to parse. One unit, RTL only, tested on Delphi 12 and 13. Apache-2.0.",
+    "tags": [
+      "jev",
+      "classification",
+      "delphi",
+      "delphi-library",
+      "object-pascal",
+      "ollama",
+      "system-one",
+      "pascal"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/danieleteti/systemone-delphi",
+    "sourceMeta": {
+      "repo": "danieleteti/systemone-delphi",
+      "author": "danieleteti",
+      "stars": 1,
+      "forks": 0,
+      "language": "Pascal",
+      "githubIdentity": {
+        "databaseId": 1426792206,
+        "nodeId": "R_kgDOVQsfDg"
+      },
+      "date": "2026-10-20",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "danieleteti/systemone-delphi",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "sdk"
+        },
+        "sha": "e2a7fd8b287d0cdab0f643428ecb0905450cbc84",
+        "evidenceUrl": "https://github.com/danieleteti/systemone-delphi/blob/e2a7fd8b287d0cdab0f643428ecb0905450cbc84/README.md",
+        "evidenceSha256": "122e70ab29b0ea0668e1a2658342ff74f18d538f9eabfbe03c0768f218a4f154",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-dmlab-work-module-typesafe-core",
+    "type": "github",
+    "title": "module-typesafe-core",
+    "summary": "TypeSafe (Jev) AI client for Magento 2 — shared connection, response cache and token budget for DMLab AI modules",
+    "tags": [
+      "jev",
+      "adobe-commerce",
+      "ai",
+      "ai-client",
+      "classification",
+      "llm",
+      "magento",
+      "magento2"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/dmlab-work/module-typesafe-core",
+    "sourceMeta": {
+      "repo": "dmlab-work/module-typesafe-core",
+      "author": "dmlab-work",
+      "stars": 0,
+      "forks": 0,
+      "language": "PHP",
+      "githubIdentity": {
+        "databaseId": 1426834728,
+        "nodeId": "R_kgDOVQvFKA"
+      },
+      "date": "2026-10-20",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "dmlab-work/module-typesafe-core",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "sdk"
+        },
+        "sha": "987c72a50c9271d45bc57326a771b18e248d2dd5",
+        "evidenceUrl": "https://github.com/dmlab-work/module-typesafe-core/blob/987c72a50c9271d45bc57326a771b18e248d2dd5/README.md",
+        "evidenceSha256": "aef4fc93f2281a55905212bf3caf864b4131cfbc70fcae5a6a2f7787fdec86d8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-georgeykalangi-jev-ai-demo",
+    "type": "github",
+    "title": "jev-ai-demo",
+    "summary": "Runnable demo of how Jev (TypeSafe System One) works: typed questions in, calibrated answers out, decisions in code",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "llm",
+      "python",
+      "typesafe"
+    ],
+    "category": "resources",
+    "url": "https://github.com/georgeykalangi/jev-ai-demo",
+    "sourceMeta": {
+      "repo": "georgeykalangi/jev-ai-demo",
+      "author": "georgeykalangi",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1426144799,
+        "nodeId": "R_kgDOVQE-Hw"
+      },
+      "date": "2026-10-19",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "georgeykalangi/jev-ai-demo",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "resources"
+        },
+        "sha": "28faa697e5ba79cf2022ac6544203a478df0d503",
+        "evidenceUrl": "https://github.com/georgeykalangi/jev-ai-demo/blob/28faa697e5ba79cf2022ac6544203a478df0d503/README.md",
+        "evidenceSha256": "97c0d21932fa9246d8226c6481b86059f11b450b555feacd5beb9d75342ba130",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-gorock007-jev-atlas",
+    "type": "github",
+    "title": "jev-atlas",
+    "summary": "An independent, evidence-first field guide to Jev (TypeSafe AI's System One model) — for people and for coding agents. Not affiliated with TypeSafe AI.",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "mcp",
+      "model-context-protocol",
+      "nextjs",
+      "research",
+      "typesafe",
+      "typescript"
+    ],
+    "category": "resources",
+    "url": "https://github.com/gorock007/jev-atlas",
+    "sourceMeta": {
+      "repo": "gorock007/jev-atlas",
+      "author": "gorock007",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1375435684,
+        "nodeId": "R_kgDOUft7pA"
+      },
+      "date": "2026-09-18",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "gorock007/jev-atlas",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "resources"
+        },
+        "sha": "c34408f3009eb1e8faf95679dcdbd2a00a9796e7",
+        "evidenceUrl": "https://github.com/gorock007/jev-atlas/blob/c34408f3009eb1e8faf95679dcdbd2a00a9796e7/README.md",
+        "evidenceSha256": "e26b7fa06724945e6a54fdd9fc16f7957bd91523f93210268add4ca86492851c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-lyadalachanchu-framefind",
+    "type": "github",
+    "title": "framefind",
+    "summary": "Find moments in videos with natural-language search. Local Python app powered by FFmpeg and TypeSafe Jev.",
+    "tags": [
+      "jev",
+      "ffmpeg",
+      "python",
+      "typesafe",
+      "video-search"
+    ],
+    "category": "applications",
+    "url": "https://github.com/Lyadalachanchu/framefind",
+    "sourceMeta": {
+      "repo": "Lyadalachanchu/framefind",
+      "author": "Lyadalachanchu",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1427567006,
+        "nodeId": "R_kgDOVRbxng"
+      },
+      "date": "2026-10-20",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "lyadalachanchu/framefind",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "7b1c6bccb46b011db3b4d7103615b2089d46771d",
+        "evidenceUrl": "https://github.com/lyadalachanchu/framefind/blob/7b1c6bccb46b011db3b4d7103615b2089d46771d/README.md",
+        "evidenceSha256": "123c443c3b6bc29d223e60b5d4b558bebecd4ef2f9152cf6f4d72f496d286061",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-5-pc418-jev-calculator",
+    "type": "github",
+    "title": "jev-calculator",
+    "summary": "It's the result, correct. *probably. - A probabilistic AI calculator powered by Jev.",
+    "tags": [
+      "jev",
+      "calculator",
+      "calculator-app",
+      "calculator-application",
+      "classifier",
+      "cloudflare-workers",
+      "probability",
+      "turnstile"
+    ],
+    "category": "applications",
+    "url": "https://github.com/pc418/jev-calculator",
+    "sourceMeta": {
+      "repo": "pc418/jev-calculator",
+      "author": "pc418",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1382464655,
+        "nodeId": "R_kgDOUma8jw"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "pc418/jev-calculator",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "applications"
+        },
+        "sha": "c6e71684991ea2dfa87381574b2e55532d04818c",
+        "evidenceUrl": "https://github.com/pc418/jev-calculator/blob/c6e71684991ea2dfa87381574b2e55532d04818c/README.md",
+        "evidenceSha256": "38cfb33398e6ba8c2936ffa078ddf67369ab62dee7123b92bfcb9f31b8767c01",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-smslavin-jev-industrial-samples",
+    "type": "github",
+    "title": "jev-industrial-samples",
+    "summary": "Some small samples using Jev for exploring its use in industrial automation AI",
+    "tags": [
+      "jev",
+      "industrial-ai",
+      "industrial-automation",
+      "typesafe",
+      "python"
+    ],
+    "category": "resources",
+    "url": "https://github.com/smslavin/jev-industrial-samples",
+    "sourceMeta": {
+      "repo": "smslavin/jev-industrial-samples",
+      "author": "smslavin",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1427313861,
+        "nodeId": "R_kgDOVRMUxQ"
+      },
+      "date": "2026-10-20",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.95,
+      "jevEvidence": {
+        "repo": "smslavin/jev-industrial-samples",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.95,
+          "category": "resources"
+        },
+        "sha": "f2c17187c09a1aa0c968cc9f81bac506304a95bf",
+        "evidenceUrl": "https://github.com/smslavin/jev-industrial-samples/blob/f2c17187c09a1aa0c968cc9f81bac506304a95bf/README.md",
+        "evidenceSha256": "f3b9450865301db5d440bd809aff5dc2d6cc6bc3540dcd47de31b65b09290b4b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T04:51:25.403Z"
+      }
+    }
   }
 ]
