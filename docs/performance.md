@@ -1,6 +1,6 @@
 <!--
 [INPUT]: PageSpeed 基线、模块图、HTTP 验证与 Redact 官方契约及隔离依赖解析
-[OUTPUT]: 性能取舍、交付边界与运行时替换门槛；区分字节与用户体验指标
+[OUTPUT]: 性能取舍、交付边界与 Redact 接入验收；区分字节与用户体验指标
 [POS]: docs 的性能证据记录；路由依赖归 architecture.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -87,10 +87,20 @@ After all 506 verified rationale additions and integration of upstream statistic
 
 The final built homepage preloaded/static-import closure measures 3,838,585 decoded bytes / 1,161,580 bytes gzip level 9; project and news detail closures measure 235,753 and 228,811 bytes gzip respectively. Closure gzip totals sum individually compressed modules. The additional rationale text grows the directory payload; comparing its gross bytes with a smaller historical dataset would not isolate an optimization benefit. The startup audit exclusion test fails against the retained pre-projection build and passes against the projected build. Exact per-field/search/sort tests and cross-environment Vite invalidation checks complement the built-module guard. This is not a new production transfer measurement, mobile/desktop PageSpeed result or claim that the homepage no longer loads its local project dataset.
 
-## Redact 运行时评估（2026-10-27）
+## Redact 运行时接入（2026-10-27）
 
-结论：依赖升级与运行时替换分开验收。
-本轮不把 Redact 随工具链升级接入生产。
+用户在工具链升级完成后明确要求接入 Redact。
+固定 `@tanstack/redact` 为 `0.2.0`，不随浮动范围升级。
+保持 React/React DOM 依赖与现有组件代码。
+按官方 Start 接法，先 Start、再 React、再 `redact()`。
+SSR 使用 `noExternal: true`，避免第三方保留真实 React。
+使用完整默认功能；本站需要 Portal、水合和类错误边界。
+不增加切换开关或双运行时回退。
+回滚时撤回接入提交，恢复锁文件并重跑现有交付流水线。
+
+### 历史评估与当前边界
+
+此前评估将依赖升级与运行时替换分开验收。
 初始检查基于 `a3d86b1` 的清洁工作区。
 随后快进至 `7a5acc4`，仅同步数据及生成产物。
 
@@ -122,17 +132,36 @@ npm install --package-lock-only --ignore-scripts --no-audit --no-fund --save-exa
 本轮独立升级插件为 `1.65.0`，不再保留该版本阻断。
 平台回归边界见 [architecture.md](architecture.md)。
 
-### 重新评估的验收门槛
+### 接入验收与许可记录
 
 按同一锁文件建立 React 与 Redact 的隔离基线。
 初始本机安装落后于锁文件，已用 npm ci 重建。
-上游[许可证问题 #65](https://github.com/TanStack/redact/issues/65)尚未关闭。
-生产接入前须核清许可，不能沿用其他 TanStack 包的许可。
+本轮核对时，上游[许可证问题 #65](https://github.com/TanStack/redact/issues/65)仍未关闭。
+仓库与发布包未声明 Redact 自身的许可证。
+已向用户说明，用户再次明确要求直接接入及上线验收。
+此决定不等于上游已补发许可，也不沿用其他 TanStack 包的许可。
 0.2.0 已实现 transition、deferred 和异步 action。
 它仍无时间切片；旧版 no-op 结论不适用。
 以[官方兼容表](https://github.com/TanStack/redact/blob/d56d87c/docs/compatibility.md)为准。
 
-先在 React 上写浏览器回归，再运行相同的 Redact 测试。
+正式回归先证明未接入时失败，再验证接入后的产物。
+`scripts/redact-runtime.test.ts` 读取真实配置并隔离打包。
+SSR 验证同一实例、Context、useState 与 useId。
+浏览器模块图确认不混入 React/React DOM 的 CJS 实现。
+水合、Portal、Context、Suspense、类组件等保留完整模块。
+此测试不是整站体积对比，也不替代浏览器交互测试。
+
+本机定向运行时/回环/工具链回归共三项通过。
+类型检查与 lint 通过；原有 lint 警告另存于工具输出。
+真实开发预览已验页签、深浅主题、目录与预览开关。
+已验预览复开、后退、搜索及关闭后的焦点与滚动恢复。
+最后一组预览/搜索交互未观察到 error 或 unhandledrejection。
+这些是开发预览结果，不等于生产构建或生产 CPU 验收。
+开发热重载期间曾出现 RouterContext 缺失的 500。
+后续稳定预览未重现；未据此宣称已定位或修复该瞬态。
+生产由现有完整构建与零跳过交付门禁单独验证。
+
+浏览器验收与后续回归覆盖以下路径：
 覆盖整页水合、快速导航、回退和客户端错误恢复。
 覆盖预览退出中复开、焦点恢复与滚动锁释放。
 覆盖慢加载阅读位置、虚拟列表、主题和 MCP Tabs。

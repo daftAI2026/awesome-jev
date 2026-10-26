@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖 Vite/Start/Cloudflare、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
- * [OUTPUT]: 提供多环境构建、IPv4 回环预览、三语言指南与有限查询产物
+ * [INPUT]: 依赖 Vite/Start/Cloudflare/Redact、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
+ * [OUTPUT]: 提供 Redact 同源运行时、多环境构建、IPv4 回环预览、三语言指南与有限查询产物
  * [POS]: 根级构建编排；公开数据同源，MCP 索引只进入服务端模块
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -13,6 +13,7 @@ import { staticCatalog, staticPrerenderPages } from './scripts/static-catalog.ts
 import { cloudflare } from '@cloudflare/vite-plugin'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import react from '@vitejs/plugin-react'
+import { redact } from '@tanstack/redact/vite'
 import tailwindcss from '@tailwindcss/vite'
 import { CATEGORIES } from './src/lib/categories.ts'
 import { normalizeCatalogUpdatedAt } from './src/lib/catalog-updated-at.ts'
@@ -87,6 +88,8 @@ export default defineConfig({
   envDir: false,
   // --- 预渲染与交付验收共用 IPv4，避开 localhost 双栈连接竞态 ---
   preview: { host: '127.0.0.1' },
+  // --- 第三方 SSR 依赖也必须经过 Redact，避免混用两套 React ---
+  ssr: { noExternal: true },
   plugins: [
     directoryCatalogPlugin(path.join(root, 'data/github.json'), catalogUpdatedAt),
     tailwindcss(),
@@ -100,6 +103,8 @@ export default defineConfig({
       pages: [...prerenderPages.values()],
     }),
     react(),
+    // 保留完整功能；本站依赖水合、Portal、Suspense 与类错误边界。
+    redact(),
   ],
   define: {
     'import.meta.env.VITE_CATALOG_UPDATED_AT': JSON.stringify(catalogUpdatedAt ?? ''),

@@ -14,7 +14,7 @@ directory-ui.md: 单列分类/标签、内链与 50 条分页 SSR；归一不撤
 reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
 inclusion-follow-up.md: 全量依据复核后当前 7 项待补证与已授权移除的 404 来源记录，区分空仓、占位及跨仓范围，禁止编造依据或自动删除
 news.md: AIHOT 新闻来源、50 条动态页/单条预览、按需静态历史搜索及独立同步流程，区分历史 HTTP 误拒绝与由共享发布器自动恢复的 main 竞争
-performance.md: 双端 PageSpeed 基线、按需新闻交付与复测方法；Redact 依赖冲突、运行时替换门槛与收益边界，不把字节缩小冒充体验收益
+performance.md: 双端 PageSpeed 基线、按需新闻交付与复测方法；Redact 完整接入、历史依赖冲突、验收与许可状态，不把字节缩小冒充体验收益
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

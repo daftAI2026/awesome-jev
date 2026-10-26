@@ -1,5 +1,5 @@
 # Awesome JEV - TypeSafe Jev / System One 项目与新闻目录
-React 19 + TypeScript 7 + TanStack Start 1.169.4 / Router 1.170.46 + Vite 8（安全基线 8.3.5）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24。Wrangler 固定 4.153.0，`@cloudflare/vite-plugin` 固定 1.65.0；工具链升级保留真实 Workers 预览回归。
+React 19 接口 + Redact 0.2.0 运行时 + TypeScript 7 + TanStack Start 1.169.4 / Router 1.170.46 + Vite 8（安全基线 8.3.5）+ Tailwind CSS 4 + Base UI/shadcn + Cloudflare Workers，Node 24。Wrangler 固定 4.153.0，`@cloudflare/vite-plugin` 固定 1.65.0；工具链升级保留真实 Workers 预览回归。
 
 <directory>
 src/ - 路由、目录界面、共享纯工具及 OG/MCP 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
@@ -15,7 +15,7 @@ radar/ - 生态与替代实现的状态及发布报告
 .gitignore - 排除本机日志、构建、浏览器与 Start/Workers 缓存；不排除正式脚本和测试
 .oxlintrc.json - 本站 lint 规则；排除固定版本第三方 Anatomy 原件，不改上游源码消除告警
 package.json - Node 24、Start ^1.169.4 / Router ^1.170.46 与 Vite ^8.3.5 安全基线及构建/检查命令的权威；Wrangler 4.153.0 与 Vite Plugin 1.65.0 精确锁定，Miniflare 外部 Undici 覆盖为 7.30.1；构建先检查规范数据与收录依据覆盖率，无额外模型请求
-vite.config.ts - 展示/交付/MCP 投影、三语言有限页面与 MCP 指南预渲染；本机预览固定 IPv4 回环
+vite.config.ts - 展示/交付/MCP 投影、三语言有限页面与 MCP 指南预渲染；完整 Redact 同时替换浏览器与 SSR，预览固定 IPv4 回环
 wrangler.toml - awesome-jev-project Worker、静态分发、ASSETS、匿名 MCP 限流与免费日志
 server.json - 官方 MCP Registry 元数据；服务版本独立于网站包版本，远端指向 /api/mcp
 src/index.css - 唯一语义主题、字体与视觉 token

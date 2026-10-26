@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+redact-runtime.test.ts: 真实配置与隔离模块图验证 Redact 顺序、SSR 同源、客户端单运行时和完整功能；不替代浏览器验收
 preview-host.test.ts: 读取项目预览 host；真实 Vite/TCP 验证停顿后的 IPv4 回环连接，不启动项目插件服务器
 toolchain.test.ts: 插件实际解析的 Miniflare 外部 Undici 畸形编码回归；子进程隔离崩溃，不覆盖插件内联副本
 mcp-catalog.ts: 规范快照生成公开 MCP 白名单、身份表和三种排序；单项 UTF-8 JSON 超过 4096 B 阻止构建

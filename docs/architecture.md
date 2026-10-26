@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 现有路由、公开投影、依赖锁与 Workers 交付边界
-[OUTPUT]: 工具链安全边界、只读 MCP 与免费静态交付规则；保留长尾 SSR
+[OUTPUT]: 完整 Redact 同源运行时、工具链安全边界、只读 MCP 与免费静态交付规则；保留长尾 SSR
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -14,13 +14,26 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start 1.169.4 / Router 1.170.46 + Vite 8.3.5+ + React 19 + TypeScript 7 |
+| UI | TanStack Start 1.169.4 / Router 1.170.46 + Vite 8.3.5+ + React 19 接口 / Redact 0.2.0 运行时 + TypeScript 7 |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
 | Deploy | TanStack Start prerendered HTML via `@cloudflare/vite-plugin` and Cloudflare Workers Static Assets; Worker handles non-prerendered routes |
 
 Vite 8 uses security baseline 8.3.5. `package-lock.json` fixes the installed version; keep all plugin resolutions on the patched version. This baseline covers the bundled launch-editor fixes and the dev-server filesystem/middleware advisories. Production Workers do not expose the Vite development server. Bind local development to loopback; a running process must restart to load patched code.
+
+### React 接口与 Redact 运行时
+
+保留 React、React DOM 与原组件导入和类型。
+`redact()` 位于 Start、React 插件之后。
+浏览器与 SSR 的 React 导入统一指向 Redact。
+`ssr.noExternal: true` 让第三方依赖同步替换。
+使用默认完整功能，不禁用水合、Portal 或错误边界。
+不使用替代 Cloudflare 插件，不改变 MCP/静态分流。
+`redact-runtime.test.ts` 验证真实配置及隔离产物。
+它验证 SSR Context/hooks，并拒绝浏览器混入 React 实现。
+浏览器交互与完整 Workers 交付仍须独立验收。
+许可声明与性能测量边界见 [performance.md](performance.md)。
 
 ### Cloudflare 工具链
 
