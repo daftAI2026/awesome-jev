@@ -5101,6 +5101,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fabric-runtime/jev-fabric" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/factbag/factbag</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/factbag/factbag" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/fagnersouza666/jev-plugin-for-hermes</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/fagnersouza666/jev-plugin-for-hermes" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/fagnersouza666/jev-plugin-for-hermes" />
@@ -22465,6 +22471,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/issue-triage" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/tags/knowledge-base</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/knowledge-base" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/tags/knowledge-distillation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-distillation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-distillation" />
@@ -22549,6 +22561,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/multimodal" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/tags/npm-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/npm-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/tags/object-detection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/object-detection" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/object-detection" />
@@ -22589,6 +22607,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/preregistration" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/provenance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/provenance" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/proxy</loc>
@@ -27857,6 +27881,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/fabric-runtime/jev-fabric" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/fabric-runtime/jev-fabric" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fabric-runtime/jev-fabric" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/factbag/factbag</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/factbag/factbag" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/fagnersouza666/jev-plugin-for-hermes</loc>
@@ -45223,6 +45253,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/issue-triage" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/tags/knowledge-base</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/knowledge-base" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/tags/knowledge-distillation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-distillation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-distillation" />
@@ -45307,6 +45343,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/multimodal" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/tags/npm-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/npm-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/tags/object-detection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/object-detection" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/object-detection" />
@@ -45347,6 +45389,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/preregistration" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/provenance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/provenance" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/proxy</loc>
@@ -50615,6 +50663,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/fabric-runtime/jev-fabric" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/fabric-runtime/jev-fabric" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/fabric-runtime/jev-fabric" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/factbag/factbag</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/factbag/factbag" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/factbag/factbag" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/fagnersouza666/jev-plugin-for-hermes</loc>
@@ -67981,6 +68035,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/issue-triage" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/tags/knowledge-base</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-base" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/knowledge-base" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/tags/knowledge-distillation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/knowledge-distillation" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/knowledge-distillation" />
@@ -68065,6 +68125,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/multimodal" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/tags/npm-package</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/npm-package" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/npm-package" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/tags/object-detection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/object-detection" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/object-detection" />
@@ -68105,6 +68171,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/preregistration" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/preregistration" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/provenance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/provenance" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/provenance" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/proxy</loc>

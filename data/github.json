@@ -176555,5 +176555,54 @@
         "checkedAt": "2026-10-26T04:51:25.403Z"
       }
     }
+  },
+  {
+    "id": "gh-7-factbag-factbag",
+    "type": "github",
+    "title": "factbag",
+    "summary": "Combine narrow judgments from System One models with explicit rules in a knowledgebase.",
+    "tags": [
+      "jev",
+      "explainability",
+      "knowledge-base",
+      "logic",
+      "npm-package",
+      "provenance",
+      "rules-engine",
+      "system-one"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/factbag/factbag",
+    "sourceMeta": {
+      "repo": "factbag/factbag",
+      "author": "factbag",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1391405454,
+        "nodeId": "R_kgDOUu8pjg"
+      },
+      "date": "2026-09-27",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "factbag/factbag",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "1f5bb1b80fc0541f62ff01ec8239d104042489da",
+        "evidenceUrl": "https://github.com/factbag/factbag/blob/1f5bb1b80fc0541f62ff01ec8239d104042489da/README.md",
+        "evidenceSha256": "c5bd6af0ed8abd88c85b456db34206f503d211e9cacfcf455c8cd43c987b70c5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-26T22:42:41.498Z"
+      }
+    }
   }
 ]
