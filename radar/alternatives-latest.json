@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-25T23:32:53.235Z",
+  "at": "2026-10-26T09:21:47.545Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,19 +20,140 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 2,
+  "reviewed": 19,
   "added": 0,
   "pending": 203,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "emregarnier84628/coreai-kit",
+      "repo": "bojansandhaus/jev-home-assistant-sentinel",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.04,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.4,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "b9de920be05360c6fac0db3e7186c7148cdb74d6",
+      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/b9de920be05360c6fac0db3e7186c7148cdb74d6/README.md",
+      "evidenceSha256": "5d7632d53137ef4a514d0d9f76724c8a62dce15321cc4620dab627bb47b30105",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-26T09:21:47.545Z"
+    },
+    {
+      "repo": "deepaortiz050/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "loriyoshida/coreai-kit",
+      "repo": "destroyerdarkness/turbojev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.77,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.8,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
+      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
+      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-26T09:21:47.545Z"
+    },
+    {
+      "repo": "dinosaur-mc/dsh-decision-tools",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.56,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.14,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
+      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
+      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-26T09:21:47.545Z"
+    },
+    {
+      "repo": "emilydavis519/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "juliauchida/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "jungwooraza20/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "naronghashimoto37/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "riyaflores7647/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "ruiz945/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "angelakomarov1194/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "annikazielinski/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "apanagiotou604/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "bhill34/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "ewalundberg576/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "fedorov40484/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "fransson887/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "gabriel4078/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kevin12671/coreai-kit",
       "status": "error",
       "reason": "github-http-404"
     }
@@ -45,5 +166,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3136
+  "totalProjects": 3143
 }
