@@ -5938,5 +5938,35 @@
     "reason": null,
     "originalUrl": "https://x.com/rohanpaul_ai/status/2114363208702275807",
     "aihotUrl": "https://aihot.news/items/od4wckvgmxoktt6dga7ekecnc"
+  },
+  {
+    "id": "kh57nu0a8qoi2iv6zxa905pry",
+    "title": "Evan Armstrong 解析 Anthropic S-1：2 万亿美元估值是否成立",
+    "originalTitle": "Is Anthropic Worth $2 Trillion?",
+    "summary": "The Leverage 创始人 Evan Armstrong 首次拆解 Anthropic 的 S-1 文件，评估其 2 万亿美元估值目标是否合理。核心数据包括累计融资 1411 亿美元、Q2 2026 收入 116 亿美元、约 900% 的净收入留存，以及 76% 的 2025 年收入来自约 1500 家年付费 10 万美元以上的企业客户。",
+    "sourceName": "Every：最新文章（网页）",
+    "publishedAt": "2026-10-25T16:00:00.000Z",
+    "discoveredAt": "2026-10-26T18:32:23.280Z",
+    "category": "opinion",
+    "score": 82,
+    "selected": true,
+    "reason": "作者基于 Anthropic S-1 数据拆解收入结构、毛利率口径与算力承诺，给出理解这家 2 万亿美元估值公司需相信什么的分析框架。",
+    "originalUrl": "https://every.to/napkin-math/is-anthropic-worth-2-trillion",
+    "aihotUrl": "https://aihot.news/items/kh57nu0a8qoi2iv6zxa905pry"
+  },
+  {
+    "id": "g60w2f9tcadzfbgm6fn1eno2h",
+    "title": "Anthropic S-1 分析：2026 上半年收入 163 亿美元与七项关键指标拆解",
+    "originalTitle": "Anthropic S-1 Analysis: How 7 Key Metrics Stack Up",
+    "summary": "Tomasz Tunguz 分析 Anthropic 于 10 月 26 日提交的 S-1 文件，称其为迄今最大 AI 上市案。",
+    "sourceName": "Tomasz Tunguz 博客（VC 分析）",
+    "publishedAt": "2026-10-26T00:00:00.000Z",
+    "discoveredAt": "2026-10-26T17:42:19.397Z",
+    "category": "industry",
+    "score": 87,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://tomtunguz.com/anthropics-s1-grew-eleven-fold/",
+    "aihotUrl": "https://aihot.news/items/g60w2f9tcadzfbgm6fn1eno2h"
   }
 ]
