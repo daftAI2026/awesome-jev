@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 61
+      "stars": 62
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34343
+      "stars": 34370
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 1605
+      "stars": 1606
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8191
+      "stars": 8193
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 324
+      "stars": 331
     },
     "phocinae/.github": {
       "status": "review",
@@ -3076,9 +3076,9 @@
     "paraujo692/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-24T13:35:15.129Z",
+      "checkedAt": "2026-10-26T16:18:49.018Z",
       "lastReview": {
         "repo": "paraujo692/jev-social",
         "status": "review",
@@ -3089,14 +3089,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T13:11:54.597Z"
       },
-      "retryAt": "2026-10-26T13:35:15.129Z"
+      "retryAt": "2026-10-30T16:18:49.018Z"
     },
     "kaya67812/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-24T13:35:15.129Z",
+      "checkedAt": "2026-10-26T16:18:49.018Z",
       "lastReview": {
         "repo": "kaya67812/jev-social",
         "status": "review",
@@ -3107,14 +3107,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T13:11:54.597Z"
       },
-      "retryAt": "2026-10-26T13:35:15.129Z"
+      "retryAt": "2026-10-30T16:18:49.018Z"
     },
     "theresacastillo56/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-24T13:35:15.129Z",
+      "checkedAt": "2026-10-26T16:18:49.018Z",
       "lastReview": {
         "repo": "theresacastillo56/jev-social",
         "status": "review",
@@ -3125,14 +3125,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T13:11:54.597Z"
       },
-      "retryAt": "2026-10-26T13:35:15.129Z"
+      "retryAt": "2026-10-30T16:18:49.018Z"
     },
     "kacperk15058/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-24T13:35:15.129Z",
+      "checkedAt": "2026-10-26T16:18:49.018Z",
       "lastReview": {
         "repo": "kacperk15058/coreai-kit",
         "status": "review",
@@ -3143,7 +3143,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T13:11:54.597Z"
       },
-      "retryAt": "2026-10-26T13:35:15.129Z"
+      "retryAt": "2026-10-30T16:18:49.018Z"
     },
     "felipegenef/local-ai-system-one-lab": {
       "status": "review",
@@ -4030,7 +4030,7 @@
       "status": "review",
       "discoveredAt": "2026-10-22T08:55:34.659Z",
       "attempts": 1,
-      "stars": 13,
+      "stars": 18,
       "checkedAt": "2026-10-22T08:55:34.659Z",
       "lastReview": {
         "repo": "singularity-compute/super-decider",
@@ -4119,7 +4119,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 1,
-      "stars": 1397,
+      "stars": 1398,
       "checkedAt": "2026-10-23T14:27:13.049Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
