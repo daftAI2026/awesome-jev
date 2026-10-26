@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "5b68a0e0ce51c193350b941eb80f2c4ef529b5d0",
-  "at": "2026-10-26T14:12:28.607Z",
-  "totalProjects": 3145,
+  "baselineSha": "371033138c97c74fabe081e42be57ff47dc3e0eb",
+  "at": "2026-10-26T23:06:00.847Z",
+  "totalProjects": 3146,
   "metadata": {
-    "ok": 3046,
+    "ok": 3047,
     "failed": 99,
     "batches": 64,
     "cost": 64,
-    "other": 3045,
+    "other": 3046,
     "remaining": 99,
-    "attempted": 3145,
-    "fresh": 3046,
+    "attempted": 3146,
+    "fresh": 3047,
     "unavailable": 99,
     "deferredRemaining": 0,
     "top100": {
@@ -24,14 +24,9 @@
     },
     "resolved": [
       {
-        "from": "kotoba-lang/typed-decisions",
-        "to": "mithril-lang/typed-decisions",
-        "databaseId": 1375505368
-      },
-      {
-        "from": "juanlentino/connector-for-typesafe-jev",
-        "to": "juanlentino/tribar-connector-for-typesafe-jev",
-        "databaseId": 1376436820
+        "from": "rhithesh/youtube-focus",
+        "to": "rhithesh/focus",
+        "databaseId": 1378680007
       }
     ]
   },
@@ -533,7 +528,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 1,
     "review": 0,
     "unavailable": 1,
     "restored": 0,
