@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "371033138c97c74fabe081e42be57ff47dc3e0eb",
-  "at": "2026-10-26T23:06:00.847Z",
+  "baselineSha": "42d0cac1eabb54f0212211918399e85e9570f883",
+  "at": "2026-10-27T06:13:55.518Z",
   "totalProjects": 3146,
   "metadata": {
     "ok": 3047,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "rhithesh/youtube-focus",
-        "to": "rhithesh/focus",
-        "databaseId": 1378680007
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -528,9 +522,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
