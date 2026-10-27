@@ -6028,5 +6028,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/10/26/vllm-semantic-router-d3-ultra-27b-multimodal-decision-model/",
     "aihotUrl": "https://aihot.news/items/oxqs7cc28mpxumkp8jdyvqh3m"
+  },
+  {
+    "id": "wrjfzia5zhfdvc3k2oftswe2z",
+    "title": "Google A2UI 推出可切换推理格式，A2UI Express 将生成式 UI 延迟最多降低 3x",
+    "originalTitle": "Fast, reliable A2UI, with swappable inference formats",
+    "summary": "Google 为面向智能体的生成式 UI 协议 A2UI 推出可切换的推理格式，新增默认格式 A2UI Express，以类 Python 语法逐行描述组件树，生成同屏 UI 所需 token 最多减少 3x、延迟最多降低 3x，并由 Agent SDK 确定性编译为 JSON 传输协议。",
+    "sourceName": "Google Developers Blog（RSS）",
+    "publishedAt": "2026-10-26T16:00:00.000Z",
+    "discoveredAt": "2026-10-27T15:40:44.332Z",
+    "category": "ai-products",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://developers.googleblog.com/fast-reliable-a2ui/",
+    "aihotUrl": "https://aihot.news/items/wrjfzia5zhfdvc3k2oftswe2z"
   }
 ]
