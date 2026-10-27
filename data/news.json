@@ -5968,5 +5968,35 @@
     "reason": null,
     "originalUrl": "https://tomtunguz.com/anthropics-s1-grew-eleven-fold/",
     "aihotUrl": "https://aihot.news/items/g60w2f9tcadzfbgm6fn1eno2h"
+  },
+  {
+    "id": "y2nhjj9sk92frsxl42xthdqq9",
+    "title": "TypeSafe AI 推广智能体 Jev",
+    "originalTitle": "every day we're getting a little better at putting machine intelligence exactly where it belongs",
+    "summary": "每一天，我们都更擅长把机器智能放到它该在的位置\n\n每一天，我们都会发现一个它该在的新地方\n\n今天就向你的智能体展示 Jev",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-27T01:14:02.000Z",
+    "discoveredAt": "2026-10-27T01:35:29.134Z",
+    "category": "opinion",
+    "score": 18,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2114888316755812532",
+    "aihotUrl": "https://aihot.news/items/y2nhjj9sk92frsxl42xthdqq9"
+  },
+  {
+    "id": "pqvn1sqsgu524ivk87prfql9w",
+    "title": "https://x.com/typesafeai/status/2114891173219500237",
+    "originalTitle": "https://x.com/typesafeai/status/2114891173219500237",
+    "summary": null,
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-27T01:25:23.000Z",
+    "discoveredAt": "2026-10-27T01:35:29.125Z",
+    "category": "ai-products",
+    "score": 31,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2114891173219500237",
+    "aihotUrl": "https://aihot.news/items/pqvn1sqsgu524ivk87prfql9w"
   }
 ]
