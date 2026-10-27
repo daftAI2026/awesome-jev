@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "42d0cac1eabb54f0212211918399e85e9570f883",
-  "at": "2026-10-27T06:13:55.518Z",
+  "baselineSha": "7aaf37068a6b9652abad1f4edbf273f97f599411",
+  "at": "2026-10-27T13:09:39.218Z",
   "totalProjects": 3146,
   "metadata": {
-    "ok": 3047,
-    "failed": 99,
+    "ok": 3046,
+    "failed": 100,
     "batches": 64,
     "cost": 64,
     "other": 3046,
-    "remaining": 99,
+    "remaining": 100,
     "attempted": 3146,
-    "fresh": 3047,
-    "unavailable": 99,
+    "fresh": 3046,
+    "unavailable": 100,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -238,6 +238,11 @@
     {
       "id": "gh-18-svetlanagrant19505-building-with-typesafe-jev",
       "repo": "svetlanagrant19505/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-6-yedran-botinversion",
+      "repo": "yedran/botinversion",
       "reason": "github-unavailable-repository"
     },
     {
@@ -524,7 +529,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }

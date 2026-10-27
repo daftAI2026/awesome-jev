@@ -12997,12 +12997,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinecone-io/using-typesafe-and-pinecone" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/pinkroosterai/systemonesharp</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinkroosterai/systemonesharp" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/pinutss/jev-plugins</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinutss/jev-plugins" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinutss/jev-plugins" />
@@ -21013,12 +21007,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/dotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/github-actions</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/github-actions" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/github-actions" />
@@ -21053,6 +21041,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/dotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/jupyter-notebook</loc>
@@ -21781,12 +21775,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moderation" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/nuget</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/prompt-caching</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-caching" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-caching" />
@@ -22043,6 +22031,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moonbit" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/nuget</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/official</loc>
@@ -22463,12 +22457,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/harness-engineering" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/http-client</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/http-client" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/incident-response</loc>
@@ -35791,12 +35779,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinecone-io/using-typesafe-and-pinecone" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/pinkroosterai/systemonesharp</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinkroosterai/systemonesharp" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/pinutss/jev-plugins</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinutss/jev-plugins" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinutss/jev-plugins" />
@@ -43807,12 +43789,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/dotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/github-actions</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/github-actions" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/github-actions" />
@@ -43847,6 +43823,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/dotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/jupyter-notebook</loc>
@@ -44575,12 +44557,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moderation" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/nuget</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/prompt-caching</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-caching" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-caching" />
@@ -44837,6 +44813,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moonbit" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/nuget</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/official</loc>
@@ -45257,12 +45239,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/harness-engineering" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/http-client</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/http-client" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/incident-response</loc>
@@ -58585,12 +58561,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinecone-io/using-typesafe-and-pinecone" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/pinkroosterai/systemonesharp</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinkroosterai/systemonesharp" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pinkroosterai/systemonesharp" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/pinutss/jev-plugins</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pinutss/jev-plugins" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pinutss/jev-plugins" />
@@ -66601,12 +66571,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/context-management" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/dotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/github-actions</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/github-actions" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/github-actions" />
@@ -66641,6 +66605,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/compaction" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/compaction" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/dotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/dotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/dotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/jupyter-notebook</loc>
@@ -67369,12 +67339,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moderation" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/nuget</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/prompt-caching</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/prompt-caching" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/prompt-caching" />
@@ -67631,6 +67595,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/moonbit" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/moonbit" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/nuget</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nuget" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/nuget" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/official</loc>
@@ -68051,12 +68021,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/harness-engineering" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/harness-engineering" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/http-client</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/http-client" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/http-client" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/incident-response</loc>
