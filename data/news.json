@@ -5998,5 +5998,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2114891173219500237",
     "aihotUrl": "https://aihot.news/items/pqvn1sqsgu524ivk87prfql9w"
+  },
+  {
+    "id": "d1o6v8imgreb2o0ki0gb5pzq8",
+    "title": "廉价验证器 Jev 核查 RAG 声明准确率逼近 GPT-6 Astra",
+    "originalTitle": "This paper finds that a cheap verifier can match a frontier LLM's accuracy at checking RAG claims, while letting more unsupported claims ...",
+    "summary": "论文测试了仅输出标签和概率的 Jev 与 GPT-6 Astra 在 495 条人工标注声明上的核查表现，Jev 准确率与 Astra 相差 0.6 个百分点以内，成本低 187 倍。但 Jev 放行了 23.2% 的无依据声明，高于 Astra 的 14.1%。级联方案虽降低 Astra 费用，但随机分流同样比例的声明也能省下差不多的钱。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-10-27T10:24:24.000Z",
+    "discoveredAt": "2026-10-27T10:52:38.085Z",
+    "category": "paper",
+    "score": 40,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2115026823377748246",
+    "aihotUrl": "https://aihot.news/items/d1o6v8imgreb2o0ki0gb5pzq8"
+  },
+  {
+    "id": "oxqs7cc28mpxumkp8jdyvqh3m",
+    "title": "vLLM Semantic Router 发布 27B 开源多模态决策模型 d3-ultra",
+    "originalTitle": "vLLM Semantic Router Releases d3-ultra: A 27B Open Multimodal Decision Model",
+    "summary": "vLLM Semantic Router 团队发布 Apache-2.0 开源的 27B 多模态决策模型 d3-ultra，属于 Decision 3.0 家族，不生成文本，而是单次读取输入后对每个问题返回概率，支持 Choice、Yes/No、Score、Box、Track 五类问题。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-27T05:50:57.000Z",
+    "discoveredAt": "2026-10-27T07:49:37.765Z",
+    "category": "ai-models",
+    "score": 52,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/26/vllm-semantic-router-d3-ultra-27b-multimodal-decision-model/",
+    "aihotUrl": "https://aihot.news/items/oxqs7cc28mpxumkp8jdyvqh3m"
   }
 ]
