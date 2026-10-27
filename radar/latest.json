@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T05:09:50.424Z",
+  "at": "2026-10-27T18:06:01.425Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,156 +68,405 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 23,
+  "reviewed": 74,
   "added": 0,
   "pending": 3918,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "chuanqisun/memo",
+      "repo": "maurobonfietti/remote-jobs",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "paulosuzart/awesome",
+      "repo": "shaftoe/awesome-pi-coding-agent",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "brenchcc/awesome-llm-research-collections",
+      "repo": "znq19/kiraai_alife_memory_z_plugin",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "jesseqin123/solo_unicorn_toolbox",
+      "repo": "rikkooo/jev-trade",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "dilneiss/alr",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "ytang520/prompt_injection_research_daily_arxiv",
+      "repo": "jdecool/stars-feed",
       "status": "error",
       "reason": "github-invalid-readme"
     },
     {
-      "repo": "arthurkatcher/jev-click-bench",
+      "repo": "songjunsub/knowledge-garden",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "zzz1yao/datajev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "007m7/jev-chat",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "a1re1/drip",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "arthrp/libre-semif-rs",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "bingchancn/omp-jev-toolkit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "deepdivekr/agent-driver",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "goldenloaf24h/browserclaw",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "hulryung-uo/anima3",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "ktrack723/wargame",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "louloulin/upup",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "mdgchamomile/pi-jev",
+      "status": "error",
+      "reason": "github-ineligible-repository"
+    },
+    {
+      "repo": "munod/jeba",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "muthuishere/jevcli",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "navopw/laya-onnx",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "novaleolin/jev-evolve",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "orvn/typesafe-tidbits",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "qtopie/rezrov",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "rahiseko-alt/jev-test1",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sarthakagrawal927/meme-lab",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "serendptai/swiftagent-be",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "shangshuo/gentlemans-gentleman",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "theoleecj/semif",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "tk1475/talaria",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "vitorepf/traco-ios",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "wahahjiahao/emojev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "bakiabaci/awesome-jev",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "jevplays-games/jev-factorio-mission-control",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "osobaosoba/japan-gtm-radar",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lightdevcoder/skills",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "listepo/cox",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "maximebrmd/relanmo",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "nolane-x/jev-language",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "scarranca/emailclassifier",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "tonhowtf/omniget",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "whilehq/whileai-sdk",
       "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "83af36a5cf5496cee5f061f898a4d32dc2970bfa",
-      "evidenceUrl": "https://github.com/arthurkatcher/jev-click-bench/blob/83af36a5cf5496cee5f061f898a4d32dc2970bfa/README.md",
-      "evidenceSha256": "95c819ead98fb53930b527770c80a0481a87d3f1d8f7614ce6c00e145d3aa063",
-      "evidenceLinks": [],
+      "score": {
+        "jevAbout": 0.13,
+        "jevKeep": "drop",
+        "jevKeepConfidence": 0.28,
+        "category": "sdk",
+        "needsReview": true,
+        "conflictingEvidence": true
+      },
+      "sha": "c3d9a845f7f869defdb68bd07fab801611fe940b",
+      "evidenceUrl": "https://github.com/whilehq/whileai-sdk/blob/c3d9a845f7f869defdb68bd07fab801611fe940b/README.md",
+      "evidenceSha256": "76070629fa7f20c3b7e6a212a5a17e6ee8747e26ed516a2b978de04e410fd253",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/whilehq/whileai-sdk/blob/c3d9a845f7f869defdb68bd07fab801611fe940b/whileai/simulations/generate/typesafe_backend.py",
+          "path": "whileai/simulations/generate/typesafe_backend.py",
+          "sha256": "97489ebca858f57c65c6e15821e26b1ced3e57f67e650a3b970fa65e5b927fb3"
+        },
+        {
+          "url": "https://github.com/whilehq/whileai-sdk/blob/c3d9a845f7f869defdb68bd07fab801611fe940b/docs/api/whileai.mdx",
+          "path": "docs/api/whileai.mdx",
+          "sha256": "af7218f248d6a2d4b6ad9f5f3897aa44cd66451034e07abd5699acde3c28c088"
+        }
+      ],
       "model": "jev-latest",
-      "checkedAt": "2026-10-27T05:09:50.424Z"
+      "checkedAt": "2026-10-27T18:06:01.425Z"
     },
     {
-      "repo": "ashp15205/jev-laya-system-1",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "5629109f7af235b70cc1609290fd2fb5473e97a1",
-      "evidenceUrl": "https://github.com/ashp15205/jev-laya-system-1/blob/5629109f7af235b70cc1609290fd2fb5473e97a1/README.md",
-      "evidenceSha256": "3cd3f85c7dd9995b8abd11ed61fd5abbd0ff7829ede1338349f44d47a1e5664c",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-27T05:09:50.424Z"
+      "repo": "monotykamary/pi-fabric",
+      "status": "error",
+      "reason": "github-network-or-timeout"
     },
     {
-      "repo": "burakbraun972/eullm",
+      "repo": "weitianxin/jevany",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "akashpriyadarshii/jev-scout",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "cenkergultekin/cenkbot",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "f80288ac31163a9b05530932648660b35b1b2f79",
-      "evidenceUrl": "https://github.com/cenkergultekin/cenkbot/blob/f80288ac31163a9b05530932648660b35b1b2f79/README.md",
-      "evidenceSha256": "df25e069da497a1e3dfed580d84facdd45d97734a412247ef157ff99de56b5ba",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-27T05:09:50.424Z"
-    },
-    {
-      "repo": "daankumar/doma",
+      "repo": "akashpriyadarshii/jev-git",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "gjones90694/gutsy",
+      "repo": "itscloud0/codex-jev-native-router",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "207studio/jev-claude-tools",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "haabdullah916/gutsy",
+      "repo": "hberardi/ettore",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "hsoto898/doma",
+      "repo": "kyu-softmatter/autofocus-jev",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "jenoshimizu870/eullm",
+      "repo": "russfranky/jev-crawlers",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "sanketny8/ai-daily-digest",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "apolenkov/jev-codex-router-lab",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "kim8554/quicksilver",
+      "repo": "awesomezun/flyvigilante",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "bloome-alex/mi-tienda-ya",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "magilliam27/sec-8k-filings-and-decision-models",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "05bbea3d01806e928b0928be258c865a464b04aa",
-      "evidenceUrl": "https://github.com/magilliam27/sec-8k-filings-and-decision-models/blob/05bbea3d01806e928b0928be258c865a464b04aa/README.md",
-      "evidenceSha256": "ead9568c79cedf327a08ac1455975a13c48a62fbb14190e24f7bd0bb821c7e1f",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-27T05:09:50.424Z"
-    },
-    {
-      "repo": "piotrl71269/gutsy",
+      "repo": "bobostudio/cabinet",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "simonet03222/gutsy",
+      "repo": "coderinpajamas/jev-mlx",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "dakotac1994/awesome-jev",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "deadpackets/unitedstatesofjev",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "facilestudio/kori",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "kellengary/jev-lint",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "stewart889/eullm",
+      "repo": "leotu2008-ux/hosty",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "svetlanarichardson90/doma",
+      "repo": "lindagr78/openeval",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "tdizhere/system3",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "904e5a234165f51f97abb1b18389903aa188e8a4",
-      "evidenceUrl": "https://github.com/tdizhere/system3/blob/904e5a234165f51f97abb1b18389903aa188e8a4/README.md",
-      "evidenceSha256": "d51164df9362e363690d300110ac77b38fde18dfde537b21301b4ed0f9e8b773",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-27T05:09:50.424Z"
+      "repo": "madousho-ai/decidophobia",
+      "status": "error",
+      "reason": "github-network-or-timeout"
     },
     {
-      "repo": "voulalee57/doma",
+      "repo": "maskedband1t/rlcd",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mokuichi147/polynarrator",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "nateecho32-stack/mefi-studio",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "vyildirim4103/jev-mem",
+      "repo": "realxhabib/signal",
       "status": "error",
       "reason": "github-http-404"
+    },
+    {
+      "repo": "romanpert/sancho",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "sandracam64/jev-bot",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "syedabbasshaheer-art/jev-atlas",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "technoetic/harness50",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "wayshard/wayshard",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "xnuonux/jev-reflex",
+      "status": "error",
+      "reason": "github-network-or-timeout"
     }
   ],
   "identity": {
