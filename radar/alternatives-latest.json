@@ -1,18 +1,18 @@
 {
-  "at": "2026-10-28T10:00:48.387Z",
+  "at": "2026-10-28T20:33:37.947Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 115,
-      "total": 115,
+      "fetched": 116,
+      "total": 116,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 135,
-      "total": 135,
+      "fetched": 136,
+      "total": 136,
       "status": "bounded"
     }
   ],
@@ -20,76 +20,102 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 11,
+  "reviewed": 6,
   "added": 0,
-  "pending": 204,
+  "pending": 206,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "gul84571/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "nathanm49/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "angelakomarov1194/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "deepaortiz050/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "emilydavis519/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "juliauchida/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "jungwooraza20/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "naronghashimoto37/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "riyaflores7647/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ruiz945/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ashaazami/dadvar",
+      "repo": "hitsz-tmg/jevembed",
       "status": "review",
       "score": {
-        "jevAbout": 0.94,
+        "jevAbout": 0.83,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.82,
+        "jevKeepConfidence": 0.83,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "d331c4b0f5a0f69b92d94b8f5b2f82853ac83277",
+      "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/d331c4b0f5a0f69b92d94b8f5b2f82853ac83277/README.md",
+      "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-28T20:33:37.947Z"
+    },
+    {
+      "repo": "itsodeleo/mlx-direct-decider",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.54,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.58,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "11a8cbc4d22c6bd7d788b67300c8e9ef588c2f60",
+      "evidenceUrl": "https://github.com/itsodeleo/mlx-direct-decider/blob/11a8cbc4d22c6bd7d788b67300c8e9ef588c2f60/README.md",
+      "evidenceSha256": "cd3ae95f5c9e8c889b695008ecfb25fa5d87d1d5ea2062a58e97d6323e4cab9d",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-28T20:33:37.947Z"
+    },
+    {
+      "repo": "ranpin/jevcabin",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.58,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.51,
         "category": "alternatives"
       },
-      "sha": "5a3a7a8b1c8136b41653c55363c55ad8366aa893",
-      "evidenceUrl": "https://github.com/ashaazami/dadvar/blob/5a3a7a8b1c8136b41653c55363c55ad8366aa893/README.md",
-      "evidenceSha256": "8e1c06dc4155126810d112e1b710da722a55e5114215a6bfc8f4f9d90e4039a8",
+      "sha": "f9aed7e3c197db2f124d8268e5b692fa3c755528",
+      "evidenceUrl": "https://github.com/ranpin/jevcabin/blob/f9aed7e3c197db2f124d8268e5b692fa3c755528/README.md",
+      "evidenceSha256": "289c6cbd4fbd04df9a92871380a08bdb2163317191cd5a53e55714cee681d9b9",
       "model": "jev-latest",
-      "checkedAt": "2026-10-28T10:00:48.387Z"
+      "checkedAt": "2026-10-28T20:33:37.947Z"
+    },
+    {
+      "repo": "xieshaocong33ethan/ventus-2b",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.56,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.66,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "fbc9593d4aa0b6bbcf75688496f2a2bd2e9b6a43",
+      "evidenceUrl": "https://github.com/xieshaocong33ethan/ventus-2b/blob/fbc9593d4aa0b6bbcf75688496f2a2bd2e9b6a43/README.md",
+      "evidenceSha256": "2f95f217d2b0ef4efbe2a6476efcc21dd64605abbb8265810b69a211901ad6ef",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-28T20:33:37.947Z"
+    },
+    {
+      "repo": "parasite6/noullama",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.54,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.79,
+        "category": "alternatives"
+      },
+      "sha": "921a0f93d9f0a304ac2dea4f9d87771e4e71026e",
+      "evidenceUrl": "https://github.com/parasite6/noullama/blob/921a0f93d9f0a304ac2dea4f9d87771e4e71026e/README.md",
+      "evidenceSha256": "0ebb5d8313c927bfdd15b5d2d721d74e57ce6dd444dfc7816bbfd617fef47c6c",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-28T20:33:37.947Z"
+    },
+    {
+      "repo": "nflavioquatraro/mutations",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "ed91160a52f0cb54a2c6797879f200ce6a961ca8",
+      "evidenceUrl": "https://github.com/nflavioquatraro/mutations/blob/ed91160a52f0cb54a2c6797879f200ce6a961ca8/README.md",
+      "evidenceSha256": "5c8036aa133237fccf8f84bed1a9b3dfd58cdb7be6abc86d7ae5e78bef717c3e",
+      "model": "jev-latest",
+      "checkedAt": "2026-10-28T20:33:37.947Z"
     }
   ],
   "identity": {
