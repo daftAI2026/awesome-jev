@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "edc4d6c563d85c577083f4569854b1b875134d81",
-  "at": "2026-10-28T06:49:52.827Z",
+  "baselineSha": "a74e1cd9c2a14f5211d8491524535da385f0f221",
+  "at": "2026-10-28T13:58:48.524Z",
   "totalProjects": 3146,
   "metadata": {
     "ok": 3045,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "damvolkov/e-jev",
+        "to": "edamlabs/e-jev",
+        "databaseId": 1398650859
+      },
+      {
+        "from": "hendrik77/cap-jev",
+        "to": "hendrik77/cap-decisions",
+        "databaseId": 1425874350
+      }
+    ]
   },
   "receipts": [
     {
@@ -532,7 +543,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
     "unavailable": 0,
     "restored": 0,

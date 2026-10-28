@@ -3703,12 +3703,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damingerdai/typesafe-jev-app" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/damvolkov/e-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damvolkov/e-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/danekkalivoda/jev-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/danekkalivoda/jev-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/danekkalivoda/jev-skill" />
@@ -4649,6 +4643,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/edamlabs/e-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/edamlabs/e-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/edgartapara/clasificador-noticias-jev</loc>
@@ -7141,10 +7141,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hemanth/swaraga" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/hendrik77/cap-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-jev" />
+    <loc>https://awesomejev.cc/projects/hendrik77/cap-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/henriquekieckbusch/henriquekieckbusch-module-jev</loc>
@@ -26539,12 +26539,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damingerdai/typesafe-jev-app" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/damvolkov/e-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damvolkov/e-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/danekkalivoda/jev-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/danekkalivoda/jev-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/danekkalivoda/jev-skill" />
@@ -27485,6 +27479,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/edamlabs/e-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/edamlabs/e-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/edgartapara/clasificador-noticias-jev</loc>
@@ -29977,10 +29977,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hemanth/swaraga" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/hendrik77/cap-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-jev" />
+    <loc>https://awesomejev.cc/zh/projects/hendrik77/cap-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/henriquekieckbusch/henriquekieckbusch-module-jev</loc>
@@ -49375,12 +49375,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damingerdai/typesafe-jev-app" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/damvolkov/e-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/damvolkov/e-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/damvolkov/e-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/danekkalivoda/jev-skill</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/danekkalivoda/jev-skill" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/danekkalivoda/jev-skill" />
@@ -50321,6 +50315,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/echohello-dev/jevctl" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/edamlabs/e-jev</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/edamlabs/e-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/edgartapara/clasificador-noticias-jev</loc>
@@ -52813,10 +52813,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hemanth/swaraga" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/hendrik77/cap-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-jev" />
+    <loc>https://awesomejev.cc/ja/projects/hendrik77/cap-decisions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hendrik77/cap-decisions" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hendrik77/cap-decisions" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/henriquekieckbusch/henriquekieckbusch-module-jev</loc>
