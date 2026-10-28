@@ -6118,5 +6118,50 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenBMB/status/2115124474882469955",
     "aihotUrl": "https://aihot.news/items/ejz6be5t4ritwgmrctdqq5w6x"
+  },
+  {
+    "id": "x3ox06spp61if0ukibj3vcqtt",
+    "title": "Jev Router 用单一 MCP 接入万级工具与模型",
+    "originalTitle": "Tool selection is becoming one of the most important decisions an agent makes, often more than which model writes the final answer.",
+    "summary": "aimlapi 推出 Jev Router，将 10,000+ 工具和模型接入单个 MCP server，由 Typesafe 的 Jev 为每个任务挑选执行方，智能体只需连接一次即可拿到结果。官方称其每美元可完成的任务量是 Claude 的 28 倍，每分钟答案数是 Claude 的 4 倍，成本比 Claude 低 96%。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-10-27T23:11:41.000Z",
+    "discoveredAt": "2026-10-27T23:14:11.210Z",
+    "category": "ai-products",
+    "score": 38,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2115219914013471089",
+    "aihotUrl": "https://aihot.news/items/x3ox06spp61if0ukibj3vcqtt"
+  },
+  {
+    "id": "fl79yv2lapb68ldso3jcpudlc",
+    "title": "Jev Router 为智能体挑选工具",
+    "originalTitle": "ever thought your agent was being a tool?",
+    "summary": "有没有想过你的智能体其实在充当工具？\n\n不如让 Jev 为任务递上合适的工具！",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-27T22:19:29.000Z",
+    "discoveredAt": "2026-10-27T22:43:29.184Z",
+    "category": "ai-products",
+    "score": 30,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2115206780515192929",
+    "aihotUrl": "https://aihot.news/items/fl79yv2lapb68ldso3jcpudlc"
+  },
+  {
+    "id": "u5rwmjy8h6beo1oky4oam8q6k",
+    "title": "TypeSafe AI 每周更新 Jev 教程",
+    "originalTitle": "you too can learn to Jev the way @allietheicon Jevs!",
+    "summary": "你也可以学会像 @allietheicon 那样 Jev！\n\n全新 cookbook 每周新鲜出炉。",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-10-27T22:31:56.000Z",
+    "discoveredAt": "2026-10-27T22:43:29.177Z",
+    "category": "tip",
+    "score": 34,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2115209914541039656",
+    "aihotUrl": "https://aihot.news/items/u5rwmjy8h6beo1oky4oam8q6k"
   }
 ]
