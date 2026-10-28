@@ -6163,5 +6163,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2115209914541039656",
     "aihotUrl": "https://aihot.news/items/u5rwmjy8h6beo1oky4oam8q6k"
+  },
+  {
+    "id": "v2nseardpkyqdl3gnnyi8ff06",
+    "title": "MiniCPM5-2B 改造为结构化决策模型 Jev",
+    "originalTitle": "What if your model could make a structured choice instead of writing another paragraph? 🎯",
+    "summary": "开发者基于 OpenBMB 的 MiniCPM5-2B 微调出 System 1 决策模型 MiniCPM5-2B-Jev，输入文档和问题后直接返回预定义选项的概率，不生成自由文本。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-10-28T13:01:19.000Z",
+    "discoveredAt": "2026-10-28T13:05:33.272Z",
+    "category": "ai-products",
+    "score": 34,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2115428701982908585",
+    "aihotUrl": "https://aihot.news/items/v2nseardpkyqdl3gnnyi8ff06"
+  },
+  {
+    "id": "a9uxxjazluqxrcsu2vvedo4k6",
+    "title": "面壁智能 OpenBMB 回应第三方对 MiniCPM-OCR 的评测",
+    "originalTitle": "Love seeing MiniCPM-OCR put to the test! 🔥",
+    "summary": "面壁智能 OpenBMB 转评 @wikiwayne 对 MiniCPM-OCR 的评测，感谢其透明对比并分享了结果与注意事项，表示期待该模型在 GX10 上的本地测试表现，称这类真实反馈会推动模型持续改进。引用内容提到 MiniCPM-OCR 1.0 为开源 13 亿参数 OCR 模型，与评估结果可靠性的 MiniCPM-OCR Jev 配套，权重已开放于 GitHub 和 Hugging Face。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-10-28T06:03:08.000Z",
+    "discoveredAt": "2026-10-28T06:23:30.800Z",
+    "category": "ai-models",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2115323459173806210",
+    "aihotUrl": "https://aihot.news/items/a9uxxjazluqxrcsu2vvedo4k6"
   }
 ]
