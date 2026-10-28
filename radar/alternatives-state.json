@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 66
+      "stars": 68
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -145,7 +145,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 4
+      "stars": 5
     },
     "learningbydoingnow/laya-case": {
       "status": "review",
@@ -181,7 +181,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 27
+      "stars": 28
     },
     "m0rphtail/papaya": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 34483
+      "stars": 34514
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -713,7 +713,7 @@
         "checkedAt": "2026-10-22T00:13:32.911Z"
       },
       "retryAt": "2026-10-29T00:13:32.911Z",
-      "stars": 1606
+      "stars": 1608
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-22T14:40:27.576Z"
       },
       "retryAt": "2026-10-29T14:40:27.576Z",
-      "stars": 8201
+      "stars": 8202
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1464,7 +1464,7 @@
         "checkedAt": "2026-10-27T00:49:45.134Z"
       },
       "retryAt": "2026-11-03T00:49:45.134Z",
-      "stars": 8
+      "stars": 9
     },
     "rosariodibartolo/jev-agent-skill": {
       "status": "review",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-22T08:55:34.659Z"
       },
       "retryAt": "2026-10-29T08:55:34.659Z",
-      "stars": 359
+      "stars": 363
     },
     "phocinae/.github": {
       "status": "review",
@@ -2745,8 +2745,8 @@
     "nathanm49/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-14T19:41:10.024Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-24T08:24:25.050Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "nathanm49/coreai-kit",
         "status": "review",
@@ -2757,14 +2757,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T19:41:10.024Z"
       },
-      "retryAt": "2026-10-28T08:24:25.050Z",
+      "retryAt": "2026-11-04T10:00:48.387Z",
       "stars": 0
     },
     "gul84571/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-14T19:41:10.024Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-24T08:24:25.050Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "gul84571/coreai-kit",
         "status": "review",
@@ -2775,7 +2775,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T19:41:10.024Z"
       },
-      "retryAt": "2026-10-28T08:24:25.050Z",
+      "retryAt": "2026-11-04T10:00:48.387Z",
       "stars": 0
     },
     "evandroamparo/system-one": {
@@ -3443,9 +3443,9 @@
     "ruiz945/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "ruiz945/coreai-kit",
         "status": "review",
@@ -3456,14 +3456,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "emilydavis519/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "emilydavis519/coreai-kit",
         "status": "review",
@@ -3474,14 +3474,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "naronghashimoto37/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "naronghashimoto37/coreai-kit",
         "status": "review",
@@ -3492,14 +3492,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "riyaflores7647/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "riyaflores7647/coreai-kit",
         "status": "review",
@@ -3510,14 +3510,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "juliauchida/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "juliauchida/coreai-kit",
         "status": "review",
@@ -3528,14 +3528,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "deepaortiz050/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "deepaortiz050/coreai-kit",
         "status": "review",
@@ -3546,14 +3546,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "jungwooraza20/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T23:39:34.126Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "jungwooraza20/coreai-kit",
         "status": "review",
@@ -3564,14 +3564,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T23:39:34.126Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "angelakomarov1194/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-19T09:18:23.719Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T09:21:47.545Z",
+      "checkedAt": "2026-10-28T10:00:48.387Z",
       "lastReview": {
         "repo": "angelakomarov1194/coreai-kit",
         "status": "review",
@@ -3582,7 +3582,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-19T09:18:23.719Z"
       },
-      "retryAt": "2026-10-28T09:21:47.545Z"
+      "retryAt": "2026-11-01T10:00:48.387Z"
     },
     "sofiajohansson4765/coreai-kit": {
       "status": "error",
@@ -4119,7 +4119,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 1,
-      "stars": 1408,
+      "stars": 1411,
       "checkedAt": "2026-10-23T14:27:13.049Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4182,6 +4182,29 @@
         "checkedAt": "2026-10-25T18:33:20.673Z"
       },
       "retryAt": "2026-11-01T18:33:20.673Z"
+    },
+    "ashaazami/dadvar": {
+      "status": "review",
+      "discoveredAt": "2026-10-28T10:00:48.387Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-10-28T10:00:48.387Z",
+      "lastReview": {
+        "repo": "ashaazami/dadvar",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.82,
+          "category": "alternatives"
+        },
+        "sha": "5a3a7a8b1c8136b41653c55363c55ad8366aa893",
+        "evidenceUrl": "https://github.com/ashaazami/dadvar/blob/5a3a7a8b1c8136b41653c55363c55ad8366aa893/README.md",
+        "evidenceSha256": "8e1c06dc4155126810d112e1b710da722a55e5114215a6bfc8f4f9d90e4039a8",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-28T10:00:48.387Z"
+      },
+      "retryAt": "2026-11-04T10:00:48.387Z"
     }
   }
 }
