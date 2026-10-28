@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "a74e1cd9c2a14f5211d8491524535da385f0f221",
-  "at": "2026-10-28T13:58:48.524Z",
+  "baselineSha": "8cf68cbf0b8d91ec08f280df61c30d3f8d477d20",
+  "at": "2026-10-28T23:10:01.684Z",
   "totalProjects": 3146,
   "metadata": {
-    "ok": 3045,
-    "failed": 101,
+    "ok": 3044,
+    "failed": 102,
     "batches": 64,
     "cost": 64,
     "other": 3046,
-    "remaining": 101,
+    "remaining": 102,
     "attempted": 3146,
-    "fresh": 3045,
-    "unavailable": 101,
+    "fresh": 3044,
+    "unavailable": 102,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "damvolkov/e-jev",
-        "to": "edamlabs/e-jev",
-        "databaseId": 1398650859
-      },
-      {
-        "from": "hendrik77/cap-jev",
-        "to": "hendrik77/cap-decisions",
-        "databaseId": 1425874350
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -94,6 +83,11 @@
     {
       "id": "gh-10-alpbahadur-jevrouter",
       "repo": "alpbahadur/jevrouter",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-realdubb-jev-playground",
+      "repo": "realdubb/jev-playground",
       "reason": "github-unavailable-repository"
     },
     {
@@ -543,7 +537,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
