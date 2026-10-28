@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-28T05:46:04.919Z",
+  "at": "2026-10-28T12:59:32.710Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,135 +68,16 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 21,
+  "reviewed": 1,
   "added": 0,
   "pending": 3918,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "rbrown101010/agent-native-images",
+      "repo": "topherchris420/james_library",
       "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "covre81/jev-app-pc",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "getainode/ainode",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.12,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.3,
-        "category": "developer",
-        "needsReview": true,
-        "conflictingEvidence": true
-      },
-      "sha": "c360f1b603129489e246cce2797653c842f7248e",
-      "evidenceUrl": "https://github.com/getainode/ainode/blob/c360f1b603129489e246cce2797653c842f7248e/README.md",
-      "evidenceSha256": "449d7882ff7cdede8794a3b57d1d7cd22f45853d466ad160441d10fa5572f954",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/getainode/ainode/blob/c360f1b603129489e246cce2797653c842f7248e/ainode/bench/decide/suite.py",
-          "path": "ainode/bench/decide/suite.py",
-          "sha256": "1281e80b025394fd4bccf78c586040615c29a667de463e0c23880997bd226762"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-28T05:46:04.919Z"
-    },
-    {
-      "repo": "01burark-oss/systemcel",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "zlzayn/ai-decision-maker",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "fz2000/android-phone-control",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "levi-qiao/semaloom",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ravenrepo/jevengineeringgate",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "youshinh/md-memo",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "afraiz-tariq/ai-browser-agent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "emirfs/ai-news-hub",
-      "status": "error",
-      "reason": "github-invalid-readme"
-    },
-    {
-      "repo": "frederico-kluser/anonymous-browser",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "freepeak/agentloop",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gowthxm07/smart-home-automation-using-jev",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "hermeticormus/ormus-jev-cua-linux",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "jawauntb/lattice-animal",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "neilmc81/qwen-omarchy-control",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "pranav252005/linkedinclassifier",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "rdb420/groundwork",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "sebdallais-git/pharmait_chat_and_digest",
-      "status": "error",
-      "reason": "github-invalid-readme"
-    },
-    {
-      "repo": "sisodias/jev-agent-skills",
-      "status": "error",
-      "reason": "github-http-404"
+      "reason": "github-ineligible-repository"
     }
   ],
   "identity": {
