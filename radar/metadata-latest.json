@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "3b3f60ee6287cfb19413878b0545ee787055ea49",
-  "at": "2026-10-27T22:55:37.492Z",
+  "baselineSha": "edc4d6c563d85c577083f4569854b1b875134d81",
+  "at": "2026-10-28T06:49:52.827Z",
   "totalProjects": 3146,
   "metadata": {
-    "ok": 3046,
-    "failed": 100,
+    "ok": 3045,
+    "failed": 101,
     "batches": 64,
     "cost": 64,
     "other": 3046,
-    "remaining": 100,
+    "remaining": 101,
     "attempted": 3146,
-    "fresh": 3046,
-    "unavailable": 100,
+    "fresh": 3045,
+    "unavailable": 101,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -63,6 +63,11 @@
     {
       "id": "gh-11-sionex-code-bx",
       "repo": "sionex-code/bx",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-stifler7-jev-llm-playground",
+      "repo": "stifler7/jev-llm-playground",
       "reason": "github-unavailable-repository"
     },
     {
