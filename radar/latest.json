@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-28T12:59:32.710Z",
+  "at": "2026-10-28T22:38:14.211Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,16 +68,26 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 3,
   "added": 0,
   "pending": 3918,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "topherchris420/james_library",
+      "repo": "necdetoskay/lumi-model-lab",
       "status": "error",
-      "reason": "github-ineligible-repository"
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kavbad/potion",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
     }
   ],
   "identity": {

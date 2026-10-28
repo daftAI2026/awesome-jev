@@ -16821,7 +16821,7 @@
     "sickn33/agentic-awesome-skills": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -16836,7 +16836,7 @@
           "path": "AGENTS.md"
         }
       ],
-      "checkedAt": "2026-10-21T17:15:40.418Z",
+      "checkedAt": "2026-10-28T22:38:14.211Z",
       "lastReview": {
         "repo": "sickn33/agentic-awesome-skills",
         "status": "review",
@@ -16871,7 +16871,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-28T17:15:40.418Z"
+      "retryAt": "2026-11-04T22:38:14.211Z"
     },
     "can1357/oh-my-pi": {
       "status": "error",
@@ -23308,14 +23308,14 @@
     "kavbad/potion": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 4,
+      "attempts": 5,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
           "path": "artifacts/jev-trial/README.md"
         }
       ],
-      "checkedAt": "2026-10-21T17:15:40.418Z",
+      "checkedAt": "2026-10-28T22:38:14.211Z",
       "lastReview": {
         "repo": "kavbad/potion",
         "status": "review",
@@ -23333,7 +23333,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-10-28T17:15:40.418Z"
+      "retryAt": "2026-11-04T22:38:14.211Z"
     },
     "jacoblincool/weave-in": {
       "status": "review",
@@ -76344,9 +76344,9 @@
     "necdetoskay/lumi-model-lab": {
       "status": "error",
       "discoveredAt": "2026-10-16T11:28:30.308Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-26T13:08:35.881Z",
+      "checkedAt": "2026-10-28T22:38:14.211Z",
       "lastReview": {
         "repo": "necdetoskay/lumi-model-lab",
         "status": "review",
@@ -76358,7 +76358,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T15:54:35.834Z"
       },
-      "retryAt": "2026-10-28T13:08:35.881Z"
+      "retryAt": "2026-11-01T22:38:14.211Z"
     },
     "nvr0x5/claude-deck": {
       "status": "review",
