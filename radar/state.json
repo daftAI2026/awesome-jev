@@ -39730,9 +39730,9 @@
     "kxuejava/travel-agent": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "kxuejava/travel-agent",
         "status": "review",
@@ -39749,7 +39749,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "perpetualsoftware/pad": {
       "status": "review",
@@ -40398,9 +40398,9 @@
     "tomhar92/typesafe-claude-router": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "tomhar92/typesafe-claude-router",
         "status": "review",
@@ -40417,7 +40417,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "dhirajpatra/agentic-payments-demo-x402-vs-acp-vs-ap2-langgraph-": {
       "status": "review",
@@ -40582,9 +40582,9 @@
     "muresanroland/orqadence": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "muresanroland/orqadence",
         "status": "review",
@@ -40596,7 +40596,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "tuwiliyt/decisionmodelbench": {
       "status": "review",
@@ -41644,9 +41644,9 @@
     "akashpriyadarshii/akashpriyadarshii": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 1,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "akashpriyadarshii/akashpriyadarshii",
         "status": "review",
@@ -41663,7 +41663,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "g0-0000/pi-subagent-jev": {
       "status": "review",
@@ -41923,9 +41923,9 @@
     "lasimeri/intel-phi-avx512": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "lasimeri/intel-phi-avx512",
         "status": "review",
@@ -41937,7 +41937,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "msaad53407/ibm-bob-2.0-hackathon": {
       "status": "review",
@@ -41968,9 +41968,9 @@
     "eddiemessiah/ai-native-company": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-22T11:57:26.144Z",
+      "checkedAt": "2026-10-29T13:06:43.001Z",
       "lastReview": {
         "repo": "eddiemessiah/ai-native-company",
         "status": "review",
@@ -41982,7 +41982,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-10-29T11:57:26.144Z"
+      "retryAt": "2026-11-05T13:06:43.001Z"
     },
     "frodi-karlsson/onesie": {
       "status": "review",
