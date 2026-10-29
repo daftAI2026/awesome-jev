@@ -6268,5 +6268,50 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2115590372927889553",
     "aihotUrl": "https://aihot.news/items/vh2428ab53afa5rz0jqm0q2h5"
+  },
+  {
+    "id": "tfmm9810e9zh9ejtna59qih7d",
+    "title": "IBM Granite Switch 4.1.1 补丁发布：像更新软件一样更新模型",
+    "originalTitle": "Granite Switch 4.1.1 — Update models like you update software",
+    "summary": "IBM 发布 Granite Switch 4.1.1 补丁版本，与 4.1 完全向后兼容、无需迁移，基础模型未重算，仅更新适配器。此次更新了支持 10 种语言、带原生标点与大小写的 Granite Speech ASR 模型，以及 granitelib-core 中在 Jev Decision Index 测试集上表现提升的 Decision 适配器。",
+    "sourceName": "Hugging Face 社区博客（混合发现）",
+    "publishedAt": "2026-10-29T13:37:07.000Z",
+    "discoveredAt": "2026-10-29T13:46:15.097Z",
+    "category": "ai-models",
+    "score": 34,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+    "aihotUrl": "https://aihot.news/items/tfmm9810e9zh9ejtna59qih7d"
+  },
+  {
+    "id": "yn4lnmvxmm2y828n7v5xgjv5a",
+    "title": "Pragmatic Engineer 对谈 Titus Winters：Google 大规模重构经验与 CS 教育改革",
+    "originalTitle": "Software engineering at Google & CS education with Titus Winters",
+    "summary": "Gergely Orosz 在播客中访谈《Software Engineering at Google》主笔 Titus Winters，回顾其领导 Google 2.5 亿行 C++ 代码库重构、构建 Abseil 和 readability 项目的经历。",
+    "sourceName": "Pragmatic Engineer（RSS）",
+    "publishedAt": "2026-10-29T13:37:13.000Z",
+    "discoveredAt": "2026-10-29T13:45:14.019Z",
+    "category": "opinion",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://newsletter.pragmaticengineer.com/p/software-engineering-at-google-and",
+    "aihotUrl": "https://aihot.news/items/yn4lnmvxmm2y828n7v5xgjv5a"
+  },
+  {
+    "id": "qw0zch8o5lobchfe0yijo1d4m",
+    "title": "Hugging Face 发布 AnySpeechRecognizer 与 AnyDecisionModel 两个 Swift 开源包",
+    "originalTitle": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+    "summary": "Hugging Face 社区博客发布 AnySpeechRecognizer 0.1.0 和 AnyDecisionModel 0.6.0 两个 Swift 包，让开发者在 Apple 平台上以统一 API 选择语音识别和决策引擎。",
+    "sourceName": "Hugging Face 社区博客（混合发现）",
+    "publishedAt": "2026-10-29T00:00:00.000Z",
+    "discoveredAt": "2026-10-29T12:45:15.052Z",
+    "category": "ai-products",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://huggingface.co/blog/anydecisionmodel",
+    "aihotUrl": "https://aihot.news/items/qw0zch8o5lobchfe0yijo1d4m"
   }
 ]
