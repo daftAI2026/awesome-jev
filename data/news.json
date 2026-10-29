@@ -6313,5 +6313,35 @@
     "reason": null,
     "originalUrl": "https://huggingface.co/blog/anydecisionmodel",
     "aihotUrl": "https://aihot.news/items/qw0zch8o5lobchfe0yijo1d4m"
+  },
+  {
+    "id": "z3bx8uvft8wfwg89lxk1wbkok",
+    "title": "Baseten 发布 2B 决策模型 joey-1，定价 $0.01 per 1M tokens",
+    "originalTitle": "Baseten Releases joey-1, a 2B Decision Model at $0.01 per 1M Tokens",
+    "summary": "Baseten 旗下 Base Labs 发布 2B 决策模型 joey-1，由 Qwen3.5-2B 后训练而来，返回标签和校准概率而非生成文本，面向高流量路由、分类和 guardrail 检查。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-10-29T21:20:29.000Z",
+    "discoveredAt": "2026-10-29T21:40:39.753Z",
+    "category": "ai-models",
+    "score": 52,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/10/29/baseten-joey-1-2b-decision-model/",
+    "aihotUrl": "https://aihot.news/items/z3bx8uvft8wfwg89lxk1wbkok"
+  },
+  {
+    "id": "wygbthk0xrrq7ekjpe9vyubio",
+    "title": "Google A2UI 搭配 CopilotKit 构建 Generative UI 应用教程",
+    "originalTitle": "Build Generative UI Apps with A2UI & CopilotKit Agents",
+    "summary": "Google Developers Blog 讲解如何用 A2UI（Agent-to-UI）与 CopilotKit 构建生成式 UI 应用：A2UI 是框架无关的开放标准，智能体以声明式 JSON 描述界面，由客户端已有组件渲染。",
+    "sourceName": "Google Developers Blog（RSS）",
+    "publishedAt": "2026-10-28T16:00:00.000Z",
+    "discoveredAt": "2026-10-29T19:18:36.015Z",
+    "category": "tip",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/",
+    "aihotUrl": "https://aihot.news/items/wygbthk0xrrq7ekjpe9vyubio"
   }
 ]
