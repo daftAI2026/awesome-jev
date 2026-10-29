@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "fec7898a001127f5b5bf3d75ee4f0c45feddaaa4",
-  "at": "2026-10-29T07:00:23.647Z",
+  "baselineSha": "0f62d89ebfabbcd5f39ae941471d6e881a08d24d",
+  "at": "2026-10-29T14:12:54.671Z",
   "totalProjects": 3146,
   "metadata": {
     "ok": 3043,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "anil-matcha/open-spaces",
+        "to": "anil-matcha/open-genjutsu",
+        "databaseId": 642065600
+      },
+      {
+        "from": "gambetaclub/model-router",
+        "to": "gambetaclub/claude-mods",
+        "databaseId": 1410463873
+      }
+    ]
   },
   "receipts": [
     {
@@ -542,9 +553,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
