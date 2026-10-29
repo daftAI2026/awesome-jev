@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "0f62d89ebfabbcd5f39ae941471d6e881a08d24d",
-  "at": "2026-10-29T14:12:54.671Z",
-  "totalProjects": 3146,
+  "baselineSha": "4a6797de5889e0f8a90ef1641741d6cd5e094242",
+  "at": "2026-10-29T23:15:24.028Z",
+  "totalProjects": 3147,
   "metadata": {
     "ok": 3043,
-    "failed": 103,
+    "failed": 104,
     "batches": 64,
     "cost": 64,
-    "other": 3046,
-    "remaining": 103,
-    "attempted": 3146,
+    "other": 3047,
+    "remaining": 104,
+    "attempted": 3147,
     "fresh": 3043,
-    "unavailable": 103,
+    "unavailable": 104,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -24,14 +24,14 @@
     },
     "resolved": [
       {
-        "from": "anil-matcha/open-spaces",
-        "to": "anil-matcha/open-genjutsu",
-        "databaseId": 642065600
+        "from": "5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker",
+        "to": "ed25519pub/jev-x-blocker",
+        "databaseId": 1378023072
       },
       {
-        "from": "gambetaclub/model-router",
-        "to": "gambetaclub/claude-mods",
-        "databaseId": 1410463873
+        "from": "flupkede/fast-compaction",
+        "to": "flupkede/lossless-compaction",
+        "databaseId": 1420970636
       }
     ]
   },
@@ -234,6 +234,11 @@
     {
       "id": "gh-5-yinjs-claude-jev",
       "repo": "yinjs/claude-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-10-iamvazghen-jev-governor",
+      "repo": "iamvazghen/jev-governor",
       "reason": "github-unavailable-repository"
     },
     {
@@ -555,7 +560,7 @@
   "lifecycle": {
     "migrated": 2,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }

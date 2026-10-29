@@ -295,12 +295,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/54yyyu/rev" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/7hemas7er/jev-hooks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/7hemas7er/jev-hooks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/7hemas7er/jev-hooks" />
@@ -4639,6 +4633,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/ed25519pub/jev-x-blocker</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ed25519pub/jev-x-blocker" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/edamlabs/e-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
@@ -5329,10 +5329,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flow-steward/ext-typesafe-ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/flupkede/fast-compaction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/fast-compaction" />
+    <loc>https://awesomejev.cc/projects/flupkede/lossless-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/lossless-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/flx-20/crossy-road-jev</loc>
@@ -23185,12 +23185,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/54yyyu/rev" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/7hemas7er/jev-hooks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/7hemas7er/jev-hooks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/7hemas7er/jev-hooks" />
@@ -27529,6 +27523,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/ed25519pub/jev-x-blocker</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ed25519pub/jev-x-blocker" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/edamlabs/e-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
@@ -28219,10 +28219,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flow-steward/ext-typesafe-ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/flupkede/fast-compaction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/fast-compaction" />
+    <loc>https://awesomejev.cc/zh/projects/flupkede/lossless-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/lossless-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/flx-20/crossy-road-jev</loc>
@@ -46075,12 +46075,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/54yyyu/rev" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/7hemas7er/jev-hooks</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/7hemas7er/jev-hooks" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/7hemas7er/jev-hooks" />
@@ -50419,6 +50413,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/echohello-dev/jevctl" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/ed25519pub/jev-x-blocker</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ed25519pub/jev-x-blocker" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ed25519pub/jev-x-blocker" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/edamlabs/e-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/edamlabs/e-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/edamlabs/e-jev" />
@@ -51109,10 +51109,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flow-steward/ext-typesafe-ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/flupkede/fast-compaction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/fast-compaction" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/fast-compaction" />
+    <loc>https://awesomejev.cc/ja/projects/flupkede/lossless-compaction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/flupkede/lossless-compaction" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/flupkede/lossless-compaction" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/flx-20/crossy-road-jev</loc>
