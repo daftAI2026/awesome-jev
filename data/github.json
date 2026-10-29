@@ -176629,5 +176629,53 @@
         "checkedAt": "2026-10-26T22:42:41.498Z"
       }
     }
+  },
+  {
+    "id": "gh-12-leofmarciano-groot",
+    "type": "github",
+    "title": "groot",
+    "summary": "🌳 Groot 1 — open typed-decision model. Calibrated choice/score/yes-no answers over 64k-token states, System One API compatible, with a pure Bend engine. Beats Jev on zero-shot Folha news (87.8% vs 85.8%) and typed decisions (75.3% vs 73.7%).",
+    "tags": [
+      "bend",
+      "bend-lang",
+      "calibration",
+      "decision-model",
+      "jev",
+      "llm-routing",
+      "long-context",
+      "machine-learning"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/leofmarciano/groot",
+    "sourceMeta": {
+      "repo": "leofmarciano/groot",
+      "author": "leofmarciano",
+      "stars": 13,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1429785504,
+        "nodeId": "R_kgDOVTjLoA"
+      },
+      "date": "2026-10-22",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "leofmarciano/groot",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "b237b60ac57195fc34fbe0ba7e911c9e6c0de49a",
+        "evidenceUrl": "https://github.com/leofmarciano/groot/blob/b237b60ac57195fc34fbe0ba7e911c9e6c0de49a/README.md",
+        "evidenceSha256": "6b5dcc5b17d7093ac8d74908f2c666fe61e8542951a311acc28d7e75196cbc1b",
+        "model": "jev-latest",
+        "checkedAt": "2026-10-29T20:35:47.969Z"
+      }
+    }
   }
 ]
