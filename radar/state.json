@@ -397,25 +397,25 @@
     "alexei-led/pi-model-router": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-22T17:13:52.350Z",
+      "attempts": 5,
+      "checkedAt": "2026-10-29T22:47:24.566Z",
       "stars": 9,
       "lastReview": {
         "repo": "alexei-led/pi-model-router",
         "status": "review",
         "reason": "insufficient-provider-context",
-        "sha": "e0d1350860c5ede581b4a6a65287c34252b6c93d",
-        "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/e0d1350860c5ede581b4a6a65287c34252b6c93d/README.md",
-        "evidenceSha256": "1ce368cccd28ec98aac0a4afa340db2c7c372ac4fffbdf35df4311b4e2fe2a47",
+        "sha": "b81ddcf5bc252527785ace8a25f88bb3480c556b",
+        "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/b81ddcf5bc252527785ace8a25f88bb3480c556b/README.md",
+        "evidenceSha256": "e529e323745c90ce048d6d221ad2cf28e04efa14de8dc7f38483d8bb9f36a0aa",
         "evidenceLinks": [
           {
-            "url": "https://github.com/alexei-led/pi-model-router/blob/e0d1350860c5ede581b4a6a65287c34252b6c93d/docs/jev-advisor.md",
+            "url": "https://github.com/alexei-led/pi-model-router/blob/b81ddcf5bc252527785ace8a25f88bb3480c556b/docs/jev-advisor.md",
             "path": "docs/jev-advisor.md",
             "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-22T17:13:52.350Z"
+        "checkedAt": "2026-10-29T22:47:24.566Z"
       },
       "codeHints": [
         {
@@ -423,7 +423,7 @@
           "path": "docs/jev-advisor.md"
         }
       ],
-      "retryAt": "2026-10-29T17:13:52.350Z"
+      "retryAt": "2026-11-05T22:47:24.566Z"
     },
     "akashpriyadarshii/jev-scout": {
       "status": "error",
@@ -1272,32 +1272,32 @@
     "alexkarpandrus/tickettrain": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-22T17:13:52.350Z",
+      "attempts": 5,
+      "checkedAt": "2026-10-29T22:47:24.566Z",
       "stars": 1,
       "lastReview": {
         "repo": "alexkarpandrus/tickettrain",
         "status": "review",
         "score": {
-          "jevAbout": 0.2,
+          "jevAbout": 0.21,
           "jevKeep": "drop",
-          "jevKeepConfidence": 0.3,
+          "jevKeepConfidence": 0.26,
           "category": "developer",
           "needsReview": true,
           "conflictingEvidence": true
         },
-        "sha": "e7c6713eaddd5f417e87ea405a29e3b26e42965a",
-        "evidenceUrl": "https://github.com/alexkarpandrus/tickettrain/blob/e7c6713eaddd5f417e87ea405a29e3b26e42965a/README.md",
+        "sha": "df94ae2ca5a41beb7e64454a24470664cc452156",
+        "evidenceUrl": "https://github.com/alexkarpandrus/tickettrain/blob/df94ae2ca5a41beb7e64454a24470664cc452156/README.md",
         "evidenceSha256": "afafc791a3294eee20224471021dece5c68273452f5175c0d934c6fe30df965e",
         "evidenceLinks": [
           {
-            "url": "https://github.com/alexkarpandrus/tickettrain/blob/e7c6713eaddd5f417e87ea405a29e3b26e42965a/llm.txt",
+            "url": "https://github.com/alexkarpandrus/tickettrain/blob/df94ae2ca5a41beb7e64454a24470664cc452156/llm.txt",
             "path": "llm.txt",
             "sha256": "cd2d2bd9939a76522b05aff54ffa9e411990d77985a261d8b2aa56b38696c1ba"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-22T17:13:52.350Z"
+        "checkedAt": "2026-10-29T22:47:24.566Z"
       },
       "codeHints": [
         {
@@ -1305,7 +1305,7 @@
           "path": "llm.txt"
         }
       ],
-      "retryAt": "2026-10-29T17:13:52.350Z"
+      "retryAt": "2026-11-05T22:47:24.566Z"
     },
     "reticlehq/reticle": {
       "status": "review",
@@ -45618,9 +45618,9 @@
     "asertyui1/decide.js": {
       "status": "review",
       "discoveredAt": "2026-10-01T13:14:43.978Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-22T17:13:52.350Z",
+      "checkedAt": "2026-10-29T22:47:24.566Z",
       "lastReview": {
         "repo": "asertyui1/decide.js",
         "status": "review",
@@ -45635,9 +45635,9 @@
         "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-22T17:13:52.350Z"
+        "checkedAt": "2026-10-29T22:47:24.566Z"
       },
-      "retryAt": "2026-10-29T17:13:52.350Z"
+      "retryAt": "2026-11-05T22:47:24.566Z"
     },
     "stefafafan/jev-fzf": {
       "status": "review",
