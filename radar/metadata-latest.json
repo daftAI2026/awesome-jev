@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "8cf68cbf0b8d91ec08f280df61c30d3f8d477d20",
-  "at": "2026-10-28T23:10:01.684Z",
+  "baselineSha": "fec7898a001127f5b5bf3d75ee4f0c45feddaaa4",
+  "at": "2026-10-29T07:00:23.647Z",
   "totalProjects": 3146,
   "metadata": {
-    "ok": 3044,
-    "failed": 102,
+    "ok": 3043,
+    "failed": 103,
     "batches": 64,
     "cost": 64,
     "other": 3046,
-    "remaining": 102,
+    "remaining": 103,
     "attempted": 3146,
-    "fresh": 3044,
-    "unavailable": 102,
+    "fresh": 3043,
+    "unavailable": 103,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -168,6 +168,11 @@
     {
       "id": "gh-14-jacquesli53093-jev-social",
       "repo": "jacquesli53093/jev-social",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-17-jessieangelicauni-hire-rank",
+      "repo": "jessieangelicauni/hire-rank",
       "reason": "github-unavailable-repository"
     },
     {
