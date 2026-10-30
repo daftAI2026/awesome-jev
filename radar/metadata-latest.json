@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "03b421a28092ccae42e1c3cdb7834b86eca968c9",
-  "at": "2026-10-30T07:03:16.050Z",
+  "baselineSha": "c04870d75a0b3028b4fff211ba3392a4e0a45ce0",
+  "at": "2026-10-30T14:04:13.293Z",
   "totalProjects": 3147,
   "metadata": {
-    "ok": 3043,
-    "failed": 104,
+    "ok": 3041,
+    "failed": 106,
     "batches": 64,
     "cost": 64,
     "other": 3047,
-    "remaining": 104,
+    "remaining": 106,
     "attempted": 3147,
-    "fresh": 3043,
-    "unavailable": 104,
+    "fresh": 3041,
+    "unavailable": 106,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -116,6 +116,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-8-codepawl-tacet",
+      "repo": "codepawl/tacet",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-17-akashpriyadarshii-jev-curate",
       "repo": "akashpriyadarshii/jev-curate",
       "reason": "github-unavailable-repository"
@@ -163,6 +168,11 @@
     {
       "id": "gh-9-aranyat25-jevmem",
       "repo": "aranyat25/jevmem",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-11-gabe4coding-plain",
+      "repo": "gabe4coding/plain",
       "reason": "github-unavailable-repository"
     },
     {
@@ -549,7 +559,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
