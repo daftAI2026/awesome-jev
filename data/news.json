@@ -6343,5 +6343,35 @@
     "reason": null,
     "originalUrl": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/",
     "aihotUrl": "https://aihot.news/items/wygbthk0xrrq7ekjpe9vyubio"
+  },
+  {
+    "id": "bry803cnfn1evvyjmi6m3wb3n",
+    "title": "OpenBMB 转发展示 MiniCPM-OCR 识别手写物理笔记效果",
+    "originalTitle": "Love seeing MiniCPM-OCR put to the test on real handwritten notes! 💙 Thanks for sharing this example and helping spread the word about M...",
+    "summary": "OpenBMB 转发用户对 MiniCPM-OCR 的实测示例，展示其将手写物理笔记（点电荷电场等内容）转成结构化笔记的识别效果。引用内容称 MiniCPM-OCR 采用双模型设计，一个模型读取文档、另一个模型评估输出中可能出错的部分，并以 Apache 2.0 协议 100% 开源。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-10-30T09:06:11.000Z",
+    "discoveredAt": "2026-10-30T09:23:16.651Z",
+    "category": "ai-products",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2116094302430605362",
+    "aihotUrl": "https://aihot.news/items/bry803cnfn1evvyjmi6m3wb3n"
+  },
+  {
+    "id": "lueq9md30yv1wb9htvb1ehwte",
+    "title": "Latent Space 揭秘 AIE CODE：2026 年编程智能体大会的三大主题",
+    "originalTitle": "[AINews] Building AIE CODE: The top Coding Agent Conference",
+    "summary": "Latent Space 介绍了年度旗舰大会 AIE CODE 的策划思路，这是面向全球 1000 名智能体工程师的单轨邀请制峰会，将回顾 2026 年编程领域主题并预览 2027 年趋势。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-10-30T08:24:29.000Z",
+    "discoveredAt": "2026-10-30T09:05:14.663Z",
+    "category": null,
+    "score": 27,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
+    "aihotUrl": "https://aihot.news/items/lueq9md30yv1wb9htvb1ehwte"
   }
 ]
