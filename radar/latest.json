@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-29T22:47:24.566Z",
+  "at": "2026-10-30T05:53:35.233Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,70 +68,12 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 3,
+  "reviewed": 0,
   "added": 0,
   "pending": 3918,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [
-    {
-      "repo": "alexei-led/pi-model-router",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "b81ddcf5bc252527785ace8a25f88bb3480c556b",
-      "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/b81ddcf5bc252527785ace8a25f88bb3480c556b/README.md",
-      "evidenceSha256": "e529e323745c90ce048d6d221ad2cf28e04efa14de8dc7f38483d8bb9f36a0aa",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/alexei-led/pi-model-router/blob/b81ddcf5bc252527785ace8a25f88bb3480c556b/docs/jev-advisor.md",
-          "path": "docs/jev-advisor.md",
-          "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-29T22:47:24.566Z"
-    },
-    {
-      "repo": "alexkarpandrus/tickettrain",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.21,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.26,
-        "category": "developer",
-        "needsReview": true,
-        "conflictingEvidence": true
-      },
-      "sha": "df94ae2ca5a41beb7e64454a24470664cc452156",
-      "evidenceUrl": "https://github.com/alexkarpandrus/tickettrain/blob/df94ae2ca5a41beb7e64454a24470664cc452156/README.md",
-      "evidenceSha256": "afafc791a3294eee20224471021dece5c68273452f5175c0d934c6fe30df965e",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/alexkarpandrus/tickettrain/blob/df94ae2ca5a41beb7e64454a24470664cc452156/llm.txt",
-          "path": "llm.txt",
-          "sha256": "cd2d2bd9939a76522b05aff54ffa9e411990d77985a261d8b2aa56b38696c1ba"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-29T22:47:24.566Z"
-    },
-    {
-      "repo": "asertyui1/decide.js",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.88,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.83,
-        "category": "sdk"
-      },
-      "sha": "51df04a8c95574088d47d123560e6540fa5f800d",
-      "evidenceUrl": "https://github.com/asertyui1/decide.js/blob/51df04a8c95574088d47d123560e6540fa5f800d/README.md",
-      "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-10-29T22:47:24.566Z"
-    }
-  ],
+  "receipts": [],
   "identity": {
     "ok": 0,
     "failed": 0,
