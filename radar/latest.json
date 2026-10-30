@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-30T05:53:35.233Z",
+  "at": "2026-10-30T12:59:29.904Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,12 +68,18 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 1,
   "added": 0,
   "pending": 3918,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "wei-shaw/sub2api",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
