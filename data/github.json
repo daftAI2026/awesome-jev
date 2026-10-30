@@ -176685,5 +176685,152 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       }
     }
+  },
+  {
+    "id": "gh-10-darkmatter-adhere",
+    "type": "github",
+    "title": "adhere",
+    "summary": "A linter for rules a normal linter can't check. (powered by Typesafe)",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/darkmatter/adhere",
+    "sourceMeta": {
+      "repo": "darkmatter/adhere",
+      "author": "darkmatter",
+      "stars": 35,
+      "forks": 13,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1381555193,
+        "nodeId": "R_kgDOUljb-Q"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "darkmatter/adhere",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "developer"
+        },
+        "sha": "617ed4e60e6d6efd4c6dbee1bd7bcf5eb428a62b",
+        "evidenceUrl": "https://github.com/darkmatter/adhere/blob/617ed4e60e6d6efd4c6dbee1bd7bcf5eb428a62b/README.md",
+        "evidenceSha256": "530a9fad4884b67ca30b06d5ae06eba5295f6fb52e5ca89e5312ac3df4fde4ea",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/darkmatter/adhere/blob/617ed4e60e6d6efd4c6dbee1bd7bcf5eb428a62b/eval/studies/pinpoint.ts",
+            "path": "eval/studies/pinpoint.ts",
+            "sha256": "d9ee726dd25ddee13f3d97ccab03b8e1ca421cfc17bb2bf307de93026c5d841d"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-30T22:24:01.825Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-13rac1-ufa-2026-09-spaceinvaders",
+    "type": "github",
+    "title": "ufa-2026-09-spaceinvaders",
+    "summary": "Ultimate Agents - Space Invaders - A 27B parameter LLM loses to pressing FIRE and code beats everyone",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/13rac1/ufa-2026-09-spaceinvaders",
+    "sourceMeta": {
+      "repo": "13rac1/ufa-2026-09-spaceinvaders",
+      "author": "13rac1",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1394385860,
+        "nodeId": "R_kgDOUxyjxA"
+      },
+      "date": "2026-09-29",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "13rac1/ufa-2026-09-spaceinvaders",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "research"
+        },
+        "sha": "7e0222def659ba48a130f4a97375fb67cbc50c53",
+        "evidenceUrl": "https://github.com/13rac1/ufa-2026-09-spaceinvaders/blob/7e0222def659ba48a130f4a97375fb67cbc50c53/README.md",
+        "evidenceSha256": "8d7673109e6a368e0ddc751f94c6c2881c3329b54c822ea8c84102576640ca40",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/13rac1/ufa-2026-09-spaceinvaders/blob/7e0222def659ba48a130f4a97375fb67cbc50c53/tests/test_systemone_player.py",
+            "path": "tests/test_systemone_player.py",
+            "sha256": "6a93c10f976d6b8d570522837e1768063c326312cc56fbb83af8d12eaac825a3"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-30T22:24:01.825Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-numerous-com-dgp",
+    "type": "github",
+    "title": "dgp",
+    "summary": "Decision Graph Protocol (DGP) by Numerous ApS: open-source contracts for decision-based AI agents, TypeSafe Jev orchestration, guarded actions, and assessment batching.",
+    "tags": [
+      "jev",
+      "agent-protocol",
+      "ai-agents",
+      "decision-based-agents",
+      "decision-based-ai",
+      "decision-graph-protocol",
+      "json-schema",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/numerous-com/dgp",
+    "sourceMeta": {
+      "repo": "numerous-com/dgp",
+      "author": "numerous-com",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1377676952,
+        "nodeId": "R_kgDOUh2umA"
+      },
+      "date": "2026-09-19",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "numerous-com/dgp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "a9cb3c4bca14689ec524d2203084df058f0f3a88",
+        "evidenceUrl": "https://github.com/numerous-com/dgp/blob/a9cb3c4bca14689ec524d2203084df058f0f3a88/README.md",
+        "evidenceSha256": "9a40f63f24a30f6fa7d9c2e6687fd846579b2e3f4834c78c3bb35ea2ef1280f5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-30T22:24:01.825Z"
+      }
+    }
   }
 ]
