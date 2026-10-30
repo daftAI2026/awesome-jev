@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "4a6797de5889e0f8a90ef1641741d6cd5e094242",
-  "at": "2026-10-29T23:15:24.028Z",
+  "baselineSha": "03b421a28092ccae42e1c3cdb7834b86eca968c9",
+  "at": "2026-10-30T07:03:16.050Z",
   "totalProjects": 3147,
   "metadata": {
     "ok": 3043,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "5fd857b17c405664e91a9ba88664ef1f/jev-x-blocker",
-        "to": "ed25519pub/jev-x-blocker",
-        "databaseId": 1378023072
-      },
-      {
-        "from": "flupkede/fast-compaction",
-        "to": "flupkede/lossless-compaction",
-        "databaseId": 1420970636
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -558,7 +547,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
