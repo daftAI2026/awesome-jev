@@ -12,8 +12,8 @@
     ],
     "url": "https://github.com/browser-use/jev-ultrafast",
     "sourceMeta": {
-      "stars": 23966,
-      "forks": 1836,
+      "stars": 23985,
+      "forks": 1837,
       "language": "Python",
       "author": "browser-use",
       "repo": "browser-use/jev-ultrafast",
@@ -59,8 +59,8 @@
     ],
     "url": "https://github.com/TheoLeeCJ/SemIf-OpenJev",
     "sourceMeta": {
-      "stars": 4912,
-      "forks": 357,
+      "stars": 4915,
+      "forks": 358,
       "language": "Python",
       "author": "TheoLeeCJ",
       "repo": "TheoLeeCJ/SemIf-OpenJev",
@@ -107,7 +107,7 @@
     ],
     "url": "https://github.com/vinnylarouge/jevlike",
     "sourceMeta": {
-      "stars": 1362,
+      "stars": 1364,
       "forks": 121,
       "language": "Python",
       "author": "vinnylarouge",
@@ -154,8 +154,8 @@
     ],
     "url": "https://github.com/jarrodwatts/jev-trader",
     "sourceMeta": {
-      "stars": 3108,
-      "forks": 598,
+      "stars": 3111,
+      "forks": 599,
       "language": "TypeScript",
       "author": "jarrodwatts",
       "repo": "jarrodwatts/jev-trader",
@@ -201,7 +201,7 @@
     ],
     "url": "https://github.com/Anil-matcha/open-genjutsu",
     "sourceMeta": {
-      "stars": 968,
+      "stars": 974,
       "forks": 203,
       "language": "JavaScript",
       "author": "Anil-matcha",
@@ -294,7 +294,7 @@
     ],
     "url": "https://github.com/thruwire/foreman",
     "sourceMeta": {
-      "stars": 801,
+      "stars": 802,
       "forks": 69,
       "language": "Python",
       "author": "thruwire",
@@ -426,7 +426,7 @@
     ],
     "url": "https://github.com/typesafe-ai/skills",
     "sourceMeta": {
-      "stars": 2857,
+      "stars": 2858,
       "forks": 184,
       "language": null,
       "author": "typesafe-ai",
@@ -511,7 +511,7 @@
     ],
     "url": "https://github.com/gargpratyush/jev-router",
     "sourceMeta": {
-      "stars": 640,
+      "stars": 644,
       "forks": 100,
       "language": "JavaScript",
       "author": "gargpratyush",
@@ -555,7 +555,7 @@
     "url": "https://github.com/typesafe-ai/typesafe-sdk-js",
     "sourceMeta": {
       "stars": 285,
-      "forks": 46,
+      "forks": 47,
       "language": "TypeScript",
       "author": "typesafe-ai",
       "repo": "typesafe-ai/typesafe-sdk-js",
@@ -685,7 +685,7 @@
     ],
     "url": "https://github.com/realZachi/pg-jev",
     "sourceMeta": {
-      "stars": 1234,
+      "stars": 1238,
       "forks": 104,
       "language": "Shell",
       "author": "realZachi",
@@ -728,7 +728,7 @@
     ],
     "url": "https://github.com/yibie/awesome-jev",
     "sourceMeta": {
-      "stars": 2515,
+      "stars": 2517,
       "forks": 374,
       "language": "Python",
       "author": "yibie",
@@ -945,7 +945,7 @@
     ],
     "url": "https://github.com/RomanSlack/jev-drone",
     "sourceMeta": {
-      "stars": 296,
+      "stars": 295,
       "forks": 42,
       "language": "Python",
       "author": "RomanSlack",
@@ -1032,7 +1032,7 @@
     "url": "https://github.com/DevMortimer/pi-warden",
     "sourceMeta": {
       "stars": 177,
-      "forks": 31,
+      "forks": 32,
       "language": "TypeScript",
       "author": "DevMortimer",
       "repo": "DevMortimer/pi-warden",
@@ -1169,7 +1169,7 @@
     ],
     "url": "https://github.com/AnotiaWang/awesome-decision-models",
     "sourceMeta": {
-      "stars": 679,
+      "stars": 680,
       "forks": 146,
       "language": "Python",
       "author": "AnotiaWang",
@@ -1653,7 +1653,7 @@
     ],
     "url": "https://github.com/bnsd55/jevmlx",
     "sourceMeta": {
-      "stars": 76,
+      "stars": 77,
       "forks": 8,
       "language": "Python",
       "author": "bnsd55",
@@ -2043,7 +2043,7 @@
     ],
     "url": "https://github.com/GhalebDweikat/winnow",
     "sourceMeta": {
-      "stars": 116,
+      "stars": 115,
       "forks": 13,
       "language": "Python",
       "author": "GhalebDweikat",
@@ -2133,8 +2133,8 @@
     ],
     "url": "https://github.com/Mapika/decider",
     "sourceMeta": {
-      "stars": 1166,
-      "forks": 52,
+      "stars": 1167,
+      "forks": 53,
       "language": "Python",
       "author": "Mapika",
       "repo": "Mapika/decider",
@@ -2268,7 +2268,7 @@
     ],
     "url": "https://github.com/logicrw/awesome-jev-projects",
     "sourceMeta": {
-      "stars": 706,
+      "stars": 707,
       "forks": 61,
       "language": "JavaScript",
       "author": "logicrw",
@@ -2795,7 +2795,7 @@
     ],
     "url": "https://github.com/TypeSafeAI/typesafe-playground",
     "sourceMeta": {
-      "stars": 26,
+      "stars": 27,
       "forks": 8,
       "language": "TypeScript",
       "author": "TypeSafeAI",
@@ -3785,7 +3785,7 @@
     ],
     "url": "https://github.com/TheoOliveira/pi-jev",
     "sourceMeta": {
-      "stars": 69,
+      "stars": 71,
       "forks": 14,
       "language": "TypeScript",
       "author": "TheoOliveira",
@@ -6093,7 +6093,7 @@
     ],
     "url": "https://github.com/leepokai/jev-guard",
     "sourceMeta": {
-      "stars": 140,
+      "stars": 141,
       "forks": 22,
       "language": "JavaScript",
       "author": "leepokai",
@@ -8833,7 +8833,7 @@
     ],
     "url": "https://github.com/agent-labs-dev/fastbrowse",
     "sourceMeta": {
-      "stars": 163,
+      "stars": 167,
       "forks": 19,
       "language": "Rust",
       "author": "agent-labs-dev",
@@ -11445,7 +11445,7 @@
     ],
     "url": "https://github.com/awun8191/jev-resume-analyzer",
     "sourceMeta": {
-      "stars": 1,
+      "stars": 3,
       "forks": 0,
       "language": "Python",
       "author": "awun8191",
@@ -16225,7 +16225,7 @@
     ],
     "url": "https://github.com/heyjunpenn/awesome-jev",
     "sourceMeta": {
-      "stars": 1016,
+      "stars": 1017,
       "forks": 78,
       "language": "Astro",
       "author": "heyjunpenn",
@@ -16623,7 +16623,7 @@
     ],
     "url": "https://github.com/qkal/Canny",
     "sourceMeta": {
-      "stars": 130,
+      "stars": 131,
       "forks": 18,
       "language": "TypeScript",
       "author": "qkal",
@@ -17286,8 +17286,8 @@
     ],
     "url": "https://github.com/YuanKJing/Jev-as-Policy",
     "sourceMeta": {
-      "stars": 49,
-      "forks": 2,
+      "stars": 50,
+      "forks": 3,
       "language": "Python",
       "author": "YuanKJing",
       "repo": "YuanKJing/Jev-as-Policy",
@@ -24584,7 +24584,7 @@
     "sourceMeta": {
       "repo": "fstandhartinger/jevbench",
       "author": "fstandhartinger",
-      "stars": 324,
+      "stars": 327,
       "forks": 29,
       "language": "Python",
       "date": "2026-09-19",
@@ -28225,8 +28225,8 @@
     "sourceMeta": {
       "repo": "IslamBaraka90/jev-typesafe-real-financial-use-cases",
       "author": "IslamBaraka90",
-      "stars": 4,
-      "forks": 0,
+      "stars": 5,
+      "forks": 1,
       "language": "JavaScript",
       "date": "2026-09-19",
       "jevAbout": 0.95,
@@ -28676,8 +28676,8 @@
     "sourceMeta": {
       "repo": "jaredpalmer/kev",
       "author": "jaredpalmer",
-      "stars": 9733,
-      "forks": 666,
+      "stars": 9734,
+      "forks": 668,
       "language": "Python",
       "date": "2026-09-17",
       "jevAbout": 0.91,
@@ -29064,7 +29064,7 @@
     "sourceMeta": {
       "repo": "jkrup/jeveryword",
       "author": "jkrup",
-      "stars": 15,
+      "stars": 16,
       "forks": 1,
       "language": "JavaScript",
       "date": "2026-09-19",
@@ -35277,7 +35277,7 @@
     "sourceMeta": {
       "repo": "Premo-Cloud/typesafe-sdk-java",
       "author": "Premo-Cloud",
-      "stars": 13,
+      "stars": 12,
       "forks": 5,
       "language": "Java",
       "date": "2026-09-18",
@@ -40723,7 +40723,7 @@
     "sourceMeta": {
       "repo": "walidboulanouar/awesome-jev-use-cases",
       "author": "walidboulanouar",
-      "stars": 471,
+      "stars": 472,
       "forks": 73,
       "language": null,
       "date": "2026-09-19",
@@ -49616,7 +49616,7 @@
     "sourceMeta": {
       "repo": "kerpopule/hermes-jev-skills",
       "author": "kerpopule",
-      "stars": 1266,
+      "stars": 1268,
       "forks": 124,
       "language": "Python",
       "date": "2026-09-18",
@@ -51994,7 +51994,7 @@
     "sourceMeta": {
       "repo": "OmniJev/awesome-jev-gallery",
       "author": "OmniJev",
-      "stars": 479,
+      "stars": 481,
       "forks": 37,
       "language": "Python",
       "date": "2026-09-17",
@@ -53458,7 +53458,7 @@
     "sourceMeta": {
       "repo": "razorback16/openjev",
       "author": "razorback16",
-      "stars": 766,
+      "stars": 767,
       "forks": 68,
       "language": "Python",
       "date": "2026-09-18",
@@ -58654,7 +58654,7 @@
     "sourceMeta": {
       "repo": "andyrewlee/awesome-system-one",
       "author": "andyrewlee",
-      "stars": 35,
+      "stars": 37,
       "forks": 12,
       "language": null,
       "date": "2026-09-19",
@@ -61320,8 +61320,8 @@
     "sourceMeta": {
       "repo": "mizorewww/laya-mlx",
       "author": "mizorewww",
-      "stars": 7049,
-      "forks": 571,
+      "stars": 7053,
+      "forks": 572,
       "language": "Python",
       "date": "2026-09-19",
       "jevAbout": 0.91,
@@ -61387,8 +61387,8 @@
     "sourceMeta": {
       "repo": "nokia-applied-research/AnyJev",
       "author": "nokia-applied-research",
-      "stars": 1545,
-      "forks": 176,
+      "stars": 1547,
+      "forks": 177,
       "language": "Python",
       "date": "2026-09-21",
       "inclusion": {
@@ -62088,7 +62088,7 @@
     "sourceMeta": {
       "repo": "Contrastive-LM/CLM",
       "author": "Contrastive-LM",
-      "stars": 3138,
+      "stars": 3140,
       "forks": 271,
       "language": "Python",
       "date": "2026-09-23",
@@ -63204,8 +63204,8 @@
     "sourceMeta": {
       "repo": "langchain-ai/langchainjs",
       "author": "langchain-ai",
-      "stars": 18307,
-      "forks": 3461,
+      "stars": 18311,
+      "forks": 3462,
       "language": "TypeScript",
       "date": "2023-02-06",
       "jevAbout": 0.97,
@@ -63490,7 +63490,7 @@
     "sourceMeta": {
       "repo": "mrmps/classifier-dev",
       "author": "mrmps",
-      "stars": 435,
+      "stars": 436,
       "forks": 34,
       "language": "TypeScript",
       "date": "2026-08-13",
@@ -64861,8 +64861,8 @@
     "sourceMeta": {
       "repo": "tamaratran/fast-jev-compaction",
       "author": "tamaratran",
-      "stars": 7814,
-      "forks": 570,
+      "stars": 7816,
+      "forks": 571,
       "language": "TypeScript",
       "date": "2026-09-17",
       "jevAbout": 0.96,
@@ -66792,7 +66792,7 @@
     "sourceMeta": {
       "repo": "ekzhang/openjev-sglang",
       "author": "ekzhang",
-      "stars": 334,
+      "stars": 333,
       "forks": 45,
       "language": "Python",
       "date": "2026-09-17",
@@ -72675,7 +72675,7 @@
     "sourceMeta": {
       "repo": "kevinbadi/jev-voice",
       "author": "kevinbadi",
-      "stars": 128,
+      "stars": 129,
       "forks": 23,
       "language": "Python",
       "date": "2026-09-18",
@@ -74109,8 +74109,8 @@
     "sourceMeta": {
       "repo": "AgriciDaniel/jev-seo",
       "author": "AgriciDaniel",
-      "stars": 728,
-      "forks": 112,
+      "stars": 733,
+      "forks": 114,
       "language": "Python",
       "date": "2026-09-22",
       "jevAbout": 0.95,
@@ -84321,7 +84321,7 @@
     "sourceMeta": {
       "repo": "jev-chat/jev-chat-windows",
       "author": "jev-chat",
-      "stars": 865,
+      "stars": 864,
       "forks": 191,
       "language": "Python",
       "date": "2026-09-21",
@@ -84542,7 +84542,7 @@
     "sourceMeta": {
       "repo": "spring-ai-community/spring-ai-typesafe",
       "author": "spring-ai-community",
-      "stars": 63,
+      "stars": 62,
       "forks": 18,
       "language": "Java",
       "date": "2026-09-20",
@@ -95257,8 +95257,8 @@
     "sourceMeta": {
       "repo": "ComposioHQ/composio",
       "author": "ComposioHQ",
-      "stars": 30839,
-      "forks": 4912,
+      "stars": 30848,
+      "forks": 4913,
       "language": "TypeScript",
       "date": "2024-02-23",
       "jevAbout": 0.95,
@@ -96672,8 +96672,8 @@
     "sourceMeta": {
       "repo": "pydantic/pydantic-ai",
       "author": "pydantic",
-      "stars": 20968,
-      "forks": 3072,
+      "stars": 20971,
+      "forks": 3074,
       "language": "Python",
       "date": "2024-06-21",
       "jevAbout": 0.96,
@@ -98585,7 +98585,7 @@
     "sourceMeta": {
       "repo": "mohit67890/imajev",
       "author": "mohit67890",
-      "stars": 418,
+      "stars": 419,
       "forks": 48,
       "language": "Python",
       "date": "2026-09-23",
@@ -112833,8 +112833,8 @@
     "sourceMeta": {
       "repo": "feder-cr/jev",
       "author": "feder-cr",
-      "stars": 940,
-      "forks": 143,
+      "stars": 944,
+      "forks": 144,
       "language": "C++",
       "date": "2026-09-27",
       "inclusion": {
@@ -117713,8 +117713,8 @@
     "sourceMeta": {
       "repo": "2456868764/jevguide",
       "author": "2456868764",
-      "stars": 9,
-      "forks": 1,
+      "stars": 10,
+      "forks": 2,
       "language": null,
       "date": "2026-09-21",
       "jevAbout": 0.95,
@@ -118299,7 +118299,7 @@
     "sourceMeta": {
       "repo": "BeatAPI/awesome-jev",
       "author": "BeatAPI",
-      "stars": 69,
+      "stars": 70,
       "forks": 8,
       "language": "JavaScript",
       "date": "2026-09-20",
@@ -119880,8 +119880,8 @@
     "sourceMeta": {
       "repo": "jev-chat/jev-chat-jarvis",
       "author": "jev-chat",
-      "stars": 8198,
-      "forks": 1317,
+      "stars": 8200,
+      "forks": 1319,
       "language": "Kotlin",
       "date": "2026-09-21",
       "jevAbout": 0.92,
@@ -130567,7 +130567,7 @@
     "sourceMeta": {
       "repo": "ImChong/Robotics_Notebooks",
       "author": "ImChong",
-      "stars": 649,
+      "stars": 651,
       "forks": 51,
       "language": "Python",
       "githubIdentity": {
@@ -130632,8 +130632,8 @@
     "sourceMeta": {
       "repo": "trycua/cua",
       "author": "trycua",
-      "stars": 31406,
-      "forks": 2315,
+      "stars": 31428,
+      "forks": 2321,
       "language": "Rust",
       "githubIdentity": {
         "databaseId": 925270205,
@@ -132698,8 +132698,8 @@
     "sourceMeta": {
       "repo": "BoundaryML/baml",
       "author": "BoundaryML",
-      "stars": 9461,
-      "forks": 504,
+      "stars": 9463,
+      "forks": 506,
       "language": "Rust",
       "githubIdentity": {
         "databaseId": 701494311,
@@ -140604,7 +140604,7 @@
     "sourceMeta": {
       "repo": "OmniJev/OneJev",
       "author": "OmniJev",
-      "stars": 217,
+      "stars": 216,
       "forks": 19,
       "language": "Python",
       "githubIdentity": {
@@ -140794,7 +140794,7 @@
     "sourceMeta": {
       "repo": "Ordo-Engine/Ordo",
       "author": "Ordo-Engine",
-      "stars": 40,
+      "stars": 41,
       "forks": 9,
       "language": "Rust",
       "githubIdentity": {
@@ -148632,7 +148632,7 @@
     "sourceMeta": {
       "repo": "BudEcosystem/Bud-Decision-Studio",
       "author": "BudEcosystem",
-      "stars": 107,
+      "stars": 108,
       "forks": 8,
       "language": "HTML",
       "githubIdentity": {
@@ -148675,7 +148675,7 @@
     "sourceMeta": {
       "repo": "InterfazeAI/lev",
       "author": "InterfazeAI",
-      "stars": 26,
+      "stars": 27,
       "forks": 2,
       "language": "Python",
       "githubIdentity": {
@@ -165692,7 +165692,7 @@
     "sourceMeta": {
       "repo": "1arley/jev-advisor-gateway",
       "author": "1arley",
-      "stars": 1,
+      "stars": 9,
       "forks": 1,
       "language": "TypeScript",
       "githubIdentity": {
@@ -175989,8 +175989,8 @@
     "sourceMeta": {
       "repo": "PrefectHQ/fastmcp",
       "author": "PrefectHQ",
-      "stars": 28252,
-      "forks": 2544,
+      "stars": 28251,
+      "forks": 2548,
       "language": "Python",
       "githubIdentity": {
         "databaseId": 896296825,
