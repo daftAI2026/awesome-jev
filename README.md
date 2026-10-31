@@ -1,5 +1,5 @@
 <!-- PROJECT_COUNT:START -->
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-3049-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Site](https://img.shields.io/badge/site-awesomejev.cc-000?style=classic)](https://awesomejev.cc) ![Projects](https://img.shields.io/badge/projects-3051-10b981?style=classic) [![Checks](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml/badge.svg?branch=main&event=push)](https://github.com/daftAI2026/awesome-jev/actions/workflows/site.yml) [![Stars](https://img.shields.io/github/stars/daftAI2026/awesome-jev?style=classic)](https://github.com/daftAI2026/awesome-jev/stargazers) [![Last Update](https://img.shields.io/github/last-commit/daftAI2026/awesome-jev?label=Last%20update&style=classic)](https://github.com/daftAI2026/awesome-jev/commits/main)
 <!-- PROJECT_COUNT:END -->
 
 # Awesome JEV
@@ -327,6 +327,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**gavel**](https://github.com/shivanathd/gavel) - Governed AI judgments for Salesforce. Works with TypeSafe Jev. · `Apex`
 - [**openclaw-jev-compaction**](https://github.com/SqaaSSL/openclaw-jev-compaction) - Verbatim context compaction for OpenClaw: a context engine powered by TypeSafe's Jev. Drops stale tool calls and results, never summarizes. · `TypeScript`
 - [**jev-fastloop**](https://github.com/SupremeDreamZ/jev-fastloop) - Cheap fail-open semantic edge layer for Jev \(TypeSafe System One\): decision service + confidence policy + decision logging + blind eval harness + skill router over 1,000+ skills. Stdlib-only Python. · `Python`
+- [**r2r-jev**](https://github.com/Thneoly/r2r-jev) - Persistent governance for AI agents — turn Jev judgments into replayable relation state with R2R. · `Rust`
 - [**agy-cli-jev-auto-mode**](https://github.com/thomas-chong/agy-cli-jev-auto-mode) - A conservative Jev-backed auto-mode safety gate for Antigravity CLI tool calls · `JavaScript`
 - [**jevguard**](https://github.com/Timileyin-Agbaje/jevguard) - Runtime guardrails for long-running AI agents · `TypeScript`
 - [**JevLang**](https://github.com/TimMikeladze/JevLang) - A policy engine for LLM decisions: declare routes, gates and actions once in TypeScript or Python, and every decision comes validated, explainable, replayable and audited. · `JavaScript`
@@ -846,6 +847,7 @@ A curated list of **TypeSafe [Jev](https://typesafe.ai/blog/introducing-system-o
 - [**jod**](https://github.com/mateonunez/jod) - Semantic schemas over TypeSafe's Jev — validate the state locally, then project typed answers. · `TypeScript`
 - [**nf-jev**](https://github.com/nextflow-io/nf-jev) - TypeSafe Jev plugin for example · `Groovy`
 - [**dsh-jev**](https://github.com/noetion/dsh-jev) - DSH bundle that registers jev\_ask for TypeSafe Jev noul, choice, and score answers. · `TypeScript`
+- [**s1sdk**](https://github.com/olanigan/s1sdk) - s1sdk: TypeSafe Jev ecosystem repository. · `TypeScript`
 - [**typesafe-sdk-cpp**](https://github.com/pewriebontal/typesafe-sdk-cpp) - An unofficial CPP 20 SDK for the TypeSafe API · `C++`
 - [**llm-schema-lite**](https://github.com/rohitgarud/llm-schema-lite) - “LLM-ify” your JSON schemas · `Python`
 - [**jev-relevance**](https://github.com/saksham-malhotra-27/jev-relevance) - Drop-in relevance filter for LangChain RAG retrievers powered by TypeSafe Jev. · `Python`

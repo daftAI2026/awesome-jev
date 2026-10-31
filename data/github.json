@@ -176836,5 +176836,103 @@
         "checkedAt": "2026-10-30T22:24:01.825Z"
       }
     }
+  },
+  {
+    "id": "gh-8-olanigan-s1sdk",
+    "type": "github",
+    "title": "s1sdk",
+    "summary": "s1sdk: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "ai-governance",
+      "cloudflare-workers-ai",
+      "decision-router",
+      "finops",
+      "openrouter",
+      "system-1",
+      "typesafe-ai"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/olanigan/s1sdk",
+    "sourceMeta": {
+      "repo": "olanigan/s1sdk",
+      "author": "olanigan",
+      "stars": 3,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1403870480,
+        "nodeId": "R_kgDOU61dEA"
+      },
+      "date": "2026-10-04",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "olanigan/s1sdk",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "sdk"
+        },
+        "sha": "c0f923d1d2f4ec4d12caa1f98f449ce1eec83baf",
+        "evidenceUrl": "https://github.com/olanigan/s1sdk/blob/c0f923d1d2f4ec4d12caa1f98f449ce1eec83baf/README.md",
+        "evidenceSha256": "28327e79e1e6065052389e4be44fc9358df360d6d5b0a5b9f1c4a649ba76a78f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-31T21:38:26.094Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-thneoly-r2r-jev",
+    "type": "github",
+    "title": "r2r-jev",
+    "summary": "Persistent governance for AI agents — turn Jev judgments into replayable relation state with R2R.",
+    "tags": [
+      "jev",
+      "agent-governance",
+      "agent-security",
+      "ai-agents",
+      "mcp",
+      "mcp-security",
+      "policy-engine",
+      "runtime-governance"
+    ],
+    "category": "agents",
+    "url": "https://github.com/Thneoly/r2r-jev",
+    "sourceMeta": {
+      "repo": "Thneoly/r2r-jev",
+      "author": "Thneoly",
+      "stars": 1,
+      "forks": 1,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1379794631,
+        "nodeId": "R_kgDOUj3-xw"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "thneoly/r2r-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "fc6cfd4bdf6c2efcfdcfe778ff29993ab3456775",
+        "evidenceUrl": "https://github.com/thneoly/r2r-jev/blob/fc6cfd4bdf6c2efcfdcfe778ff29993ab3456775/README.md",
+        "evidenceSha256": "8af24f792d0a74dcb146cbfc2cda37c3ebf6a3a692004da2ac17b1bc8949708f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-10-31T21:38:26.094Z"
+      }
+    }
   }
 ]
