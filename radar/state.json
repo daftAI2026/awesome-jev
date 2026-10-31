@@ -2567,7 +2567,7 @@
     "comet-ml/opik": {
       "status": "review",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -2582,42 +2582,42 @@
           "path": "apps/opik-frontend/src/constants/decisionModels.ts"
         }
       ],
-      "checkedAt": "2026-10-24T04:40:53.417Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "comet-ml/opik",
         "status": "review",
         "score": {
           "jevAbout": 0.06,
           "jevKeep": "drop",
-          "jevKeepConfidence": 0.31,
+          "jevKeepConfidence": 0.26,
           "category": "developer",
           "needsReview": true,
           "conflictingEvidence": true
         },
-        "sha": "763a2ec2568f71f7957aa33e0a9b10cb2b2d3ba2",
-        "evidenceUrl": "https://github.com/comet-ml/opik/blob/763a2ec2568f71f7957aa33e0a9b10cb2b2d3ba2/README.md",
+        "sha": "01aa2c92872326888ea3b33f0e91d9eef14a1afd",
+        "evidenceUrl": "https://github.com/comet-ml/opik/blob/01aa2c92872326888ea3b33f0e91d9eef14a1afd/README.md",
         "evidenceSha256": "be70b39acc42dc67d438e8fa1bfac834ae5dca79d8c0d38e4060a23215172bac",
         "evidenceLinks": [
           {
-            "url": "https://github.com/comet-ml/opik/blob/763a2ec2568f71f7957aa33e0a9b10cb2b2d3ba2/apps/opik-documentation/documentation/fern/docs-v2/integrations/typesafe.mdx",
+            "url": "https://github.com/comet-ml/opik/blob/01aa2c92872326888ea3b33f0e91d9eef14a1afd/apps/opik-documentation/documentation/fern/docs-v2/integrations/typesafe.mdx",
             "path": "apps/opik-documentation/documentation/fern/docs-v2/integrations/typesafe.mdx",
             "sha256": "3a127e563f7f6dbca37afa3156ada481a09923924edf12806f321b169b4badda"
           },
           {
-            "url": "https://github.com/comet-ml/opik/blob/763a2ec2568f71f7957aa33e0a9b10cb2b2d3ba2/sdks/python/tests/library_integration/typesafe/constants.py",
+            "url": "https://github.com/comet-ml/opik/blob/01aa2c92872326888ea3b33f0e91d9eef14a1afd/sdks/python/tests/library_integration/typesafe/constants.py",
             "path": "sdks/python/tests/library_integration/typesafe/constants.py",
             "sha256": "5cc1ae06158e27301f7aefd1e4ead7dd256284bf9a1a2c734a3e746aec27807f"
           },
           {
-            "url": "https://github.com/comet-ml/opik/blob/763a2ec2568f71f7957aa33e0a9b10cb2b2d3ba2/apps/opik-frontend/src/constants/decisionModels.ts",
+            "url": "https://github.com/comet-ml/opik/blob/01aa2c92872326888ea3b33f0e91d9eef14a1afd/apps/opik-frontend/src/constants/decisionModels.ts",
             "path": "apps/opik-frontend/src/constants/decisionModels.ts",
             "sha256": "43913e0823cfcafe1c34d540e666613f8d5a963ab5c3b1e378a3b9a0a8645890"
           }
         ],
         "model": "jev-latest",
-        "checkedAt": "2026-10-24T04:40:53.417Z"
+        "checkedAt": "2026-10-31T05:46:53.789Z"
       },
-      "retryAt": "2026-10-31T04:40:53.417Z",
+      "retryAt": "2026-11-07T05:46:53.789Z",
       "stars": 22700
     },
     "dhanushnehru/dhanushnehru": {
@@ -5199,7 +5199,7 @@
     "openbyteinc/quantdinger": {
       "status": "error",
       "discoveredAt": "2026-09-21T18:30:35.157Z",
-      "attempts": 6,
+      "attempts": 7,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -5210,8 +5210,8 @@
           "path": "backend_api_python/app/routes/settings.py"
         }
       ],
-      "checkedAt": "2026-10-24T04:40:53.417Z",
-      "retryAt": "2026-10-31T04:40:53.417Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
+      "retryAt": "2026-11-07T05:46:53.789Z",
       "stars": 12933
     },
     "akanthed/jev-migrate": {
@@ -45849,9 +45849,9 @@
     "vyupfqkjey/quicksilver": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-26T22:42:41.498Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "vyupfqkjey/quicksilver",
         "status": "review",
@@ -45868,7 +45868,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T15:38:35.025Z"
       },
-      "retryAt": "2026-10-30T22:42:41.498Z"
+      "retryAt": "2026-11-07T05:46:53.789Z"
     },
     "lauren166/eullm": {
       "status": "error",
@@ -45911,9 +45911,9 @@
     "robertobutt/eullm": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-26T22:42:41.498Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "robertobutt/eullm",
         "status": "review",
@@ -45925,7 +45925,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T10:48:12.184Z"
       },
-      "retryAt": "2026-10-30T22:42:41.498Z"
+      "retryAt": "2026-11-07T05:46:53.789Z"
     },
     "laurengeorgiou98/quicksilver": {
       "status": "error",
@@ -46411,9 +46411,9 @@
     "vanessav85943/gutsy": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-26T22:42:41.498Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "vanessav85943/gutsy",
         "status": "review",
@@ -46425,7 +46425,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T15:38:35.025Z"
       },
-      "retryAt": "2026-10-30T22:42:41.498Z"
+      "retryAt": "2026-11-07T05:46:53.789Z"
     },
     "jatingargiitk/decision-shadow": {
       "status": "review",
@@ -47641,9 +47641,9 @@
     "pmkol/sub2api": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-26T22:42:41.498Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "pmkol/sub2api",
         "status": "review",
@@ -47662,7 +47662,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T10:48:12.184Z"
       },
-      "retryAt": "2026-10-30T22:42:41.498Z"
+      "retryAt": "2026-11-07T05:46:53.789Z"
     },
     "lien0219/modurelay": {
       "status": "review",
@@ -49014,9 +49014,9 @@
     "patchouli-cn/gensokyoai-rewrite": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-26T22:42:41.498Z",
+      "checkedAt": "2026-10-31T05:46:53.789Z",
       "lastReview": {
         "repo": "patchouli-cn/gensokyoai-rewrite",
         "status": "review",
@@ -49033,7 +49033,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-17T10:48:12.184Z"
       },
-      "retryAt": "2026-10-30T22:42:41.498Z"
+      "retryAt": "2026-11-07T05:46:53.789Z"
     },
     "lim6112j/ciel-system-one": {
       "status": "error",
