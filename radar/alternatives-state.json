@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 84
+      "stars": 86
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-29T01:13:57.518Z"
       },
       "retryAt": "2026-11-05T01:13:57.518Z",
-      "stars": 34712
+      "stars": 34730
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 8209
+      "stars": 8210
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1228,24 +1228,24 @@
     "donliggett/julius": {
       "status": "review",
       "discoveredAt": "2026-09-26T00:08:50.699Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-24T08:24:25.050Z",
+      "attempts": 6,
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "donliggett/julius",
         "status": "review",
         "score": {
           "jevAbout": 0.84,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.4,
+          "jevKeepConfidence": 0.46,
           "category": "alternatives"
         },
         "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
         "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
         "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
         "model": "jev-latest",
-        "checkedAt": "2026-10-24T08:24:25.050Z"
+        "checkedAt": "2026-10-31T09:57:25.964Z"
       },
-      "retryAt": "2026-10-31T08:24:25.050Z",
+      "retryAt": "2026-11-07T09:57:25.964Z",
       "stars": 1
     },
     "talex-touch/flint": {
@@ -1297,8 +1297,8 @@
     "lab-emi/chiplaya": {
       "status": "review",
       "discoveredAt": "2026-09-26T18:42:48.900Z",
-      "attempts": 6,
-      "checkedAt": "2026-10-24T08:24:25.050Z",
+      "attempts": 7,
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "lab-emi/chiplaya",
         "status": "review",
@@ -1314,9 +1314,9 @@
         "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
         "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
         "model": "jev-latest",
-        "checkedAt": "2026-10-24T08:24:25.050Z"
+        "checkedAt": "2026-10-31T09:57:25.964Z"
       },
-      "retryAt": "2026-10-31T08:24:25.050Z",
+      "retryAt": "2026-11-07T09:57:25.964Z",
       "stars": 0
     },
     "lakoreai/sev": {
@@ -1678,7 +1678,7 @@
         "checkedAt": "2026-10-27T15:32:59.857Z"
       },
       "retryAt": "2026-11-03T15:32:59.857Z",
-      "stars": 2
+      "stars": 4
     },
     "esterhuizen/system-one-on-snapdragon": {
       "status": "review",
@@ -1907,7 +1907,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 9
+      "stars": 10
     },
     "momen-devv/multitenant-ecommerce": {
       "status": "review",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-29T10:25:20.732Z"
       },
       "retryAt": "2026-11-05T10:25:20.732Z",
-      "stars": 426
+      "stars": 432
     },
     "phocinae/.github": {
       "status": "review",
@@ -2432,24 +2432,24 @@
     "final-bench/s1mb": {
       "status": "review",
       "discoveredAt": "2026-10-10T01:14:07.107Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-24T08:24:25.050Z",
+      "attempts": 4,
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "final-bench/s1mb",
         "status": "review",
         "score": {
-          "jevAbout": 0.68,
+          "jevAbout": 0.66,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.51,
+          "jevKeepConfidence": 0.49,
           "category": "other"
         },
         "sha": "ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d",
         "evidenceUrl": "https://github.com/final-bench/s1mb/blob/ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d/README.md",
         "evidenceSha256": "7fa4c1dd304ba3e28dc44f2fff59ff9032e4bc812c7724daf744ff461f22917b",
         "model": "jev-latest",
-        "checkedAt": "2026-10-24T08:24:25.050Z"
+        "checkedAt": "2026-10-31T09:57:25.964Z"
       },
-      "retryAt": "2026-10-31T08:24:25.050Z",
+      "retryAt": "2026-11-07T09:57:25.964Z",
       "stars": 2
     },
     "eileenes/decidelint": {
@@ -3310,9 +3310,9 @@
     "kohaku8046/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-27T09:20:49.598Z",
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "kohaku8046/jev-social",
         "status": "review",
@@ -3323,14 +3323,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-31T09:20:49.598Z"
+      "retryAt": "2026-11-07T09:57:25.964Z"
     },
     "olivier56729/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-27T09:20:49.598Z",
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "olivier56729/jev-social",
         "status": "review",
@@ -3341,7 +3341,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-31T09:20:49.598Z"
+      "retryAt": "2026-11-07T09:57:25.964Z"
     },
     "teilomillet/wyat": {
       "status": "review",
@@ -3364,9 +3364,9 @@
     "magdalena606/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-27T09:20:49.598Z",
+      "checkedAt": "2026-10-31T09:57:25.964Z",
       "lastReview": {
         "repo": "magdalena606/coreai-kit",
         "status": "review",
@@ -3377,7 +3377,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-10-31T09:20:49.598Z"
+      "retryAt": "2026-11-07T09:57:25.964Z"
     },
     "evelynm11/coreai-kit": {
       "status": "error",
@@ -3858,7 +3858,7 @@
       "status": "review",
       "discoveredAt": "2026-10-20T08:52:38.023Z",
       "attempts": 2,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-10-27T09:20:49.598Z",
       "lastReview": {
         "repo": "kittimzhe/dsh-jev-goal-judge",
@@ -4099,7 +4099,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 2,
-      "stars": 1422,
+      "stars": 1425,
       "checkedAt": "2026-10-30T20:08:32.638Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
