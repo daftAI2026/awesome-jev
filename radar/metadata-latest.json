@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "92e5343b4697b572cd5a0835a41855f957ba9e2a",
-  "at": "2026-11-01T18:24:28.889Z",
+  "baselineSha": "d5b1e7571714b3d2502ee3f0af9565f005deede3",
+  "at": "2026-11-01T22:45:51.303Z",
   "totalProjects": 3152,
   "metadata": {
     "ok": 3045,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "attentionfs/jev-playground",
-        "to": "laaaaksh/jev-playground",
-        "databaseId": 1390700108
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -568,7 +562,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
