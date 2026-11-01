@@ -6388,5 +6388,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2116260977247453221",
     "aihotUrl": "https://aihot.news/items/wetzo143ofptkmokb9qsc7z1k"
+  },
+  {
+    "id": "d3y4oo7iorcxq4jr94obcjvvs",
+    "title": "Nace AI 开源 27B 决策模型 Drex Max v1，可在 Apple Silicon 本地运行",
+    "originalTitle": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+    "summary": "Nace AI 以 Nace.AI Open RAIL-M 许可开源其决策模型 Drex Max v1，权重含 bf16、Q8_0 GGUF 与 affine Q4 检查点，并提供 llama.cpp 和 Ollama fork。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-11-01T08:10:07.000Z",
+    "discoveredAt": "2026-11-01T08:20:12.502Z",
+    "category": "ai-models",
+    "score": 53,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+    "aihotUrl": "https://aihot.news/items/d3y4oo7iorcxq4jr94obcjvvs"
   }
 ]
