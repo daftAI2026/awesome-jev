@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "4d2b92800102bfd047dd6ec3c9a4444ed984c6d4",
-  "at": "2026-10-31T22:26:08.905Z",
+  "baselineSha": "2ff8469496ed0689f1a79d864be7ab4a0bcfbbbd",
+  "at": "2026-11-01T07:28:34.911Z",
   "totalProjects": 3152,
   "metadata": {
-    "ok": 3046,
-    "failed": 106,
+    "ok": 3045,
+    "failed": 107,
     "batches": 65,
     "cost": 65,
     "other": 3052,
-    "remaining": 106,
+    "remaining": 107,
     "attempted": 3152,
-    "fresh": 3046,
-    "unavailable": 106,
+    "fresh": 3045,
+    "unavailable": 107,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "laaaaksh/jev-playground",
+        "to": "attentionfs/jev-playground",
+        "databaseId": 1390700108
+      }
+    ]
   },
   "receipts": [
     {
@@ -138,6 +144,11 @@
     {
       "id": "gh-7-haxudev-jev-benchmark",
       "repo": "haxudev/jev-benchmark",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-7-jamalla-jev-langgraph-ticket-app",
+      "repo": "jamalla/jev-langgraph-ticket-app",
       "reason": "github-unavailable-repository"
     },
     {
@@ -557,7 +568,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
