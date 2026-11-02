@@ -176982,5 +176982,195 @@
         "checkedAt": "2026-11-02T01:02:02.741Z"
       }
     }
+  },
+  {
+    "id": "gh-8-00200200-jev-judge",
+    "type": "github",
+    "title": "jev-judge",
+    "summary": "YAML-based evaluation runner for recorded LLM outputs, with TypeSafe Jev API integration, offline mock mode, and CI reports.",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "ci-cd",
+      "evals",
+      "llm-as-a-judge",
+      "rag",
+      "testing",
+      "typesafe"
+    ],
+    "category": "developer",
+    "url": "https://github.com/00200200/jev-judge",
+    "sourceMeta": {
+      "repo": "00200200/jev-judge",
+      "author": "00200200",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1405655406,
+        "nodeId": "R_kgDOU8iZbg"
+      },
+      "date": "2026-10-05",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "00200200/jev-judge",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "developer"
+        },
+        "sha": "a8242a617b676c19349755ee61fb4d4fd0c125ca",
+        "evidenceUrl": "https://github.com/00200200/jev-judge/blob/a8242a617b676c19349755ee61fb4d4fd0c125ca/README.md",
+        "evidenceSha256": "7b96f89b822ec9427cb4710cbe5532d06d9b582295a2bf0a96e743bf63b5bffd",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-02T06:11:18.263Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-drgekoz-pi-laya-bridge",
+    "type": "github",
+    "title": "pi-laya-bridge",
+    "summary": "Local typed decisions for Pi: the TypeSafe Jev /v1/systemone wire protocol as a Pi tool, backed by Laya for Agents on your own machine. Choice, Score and Noul judgments in ~0.5s, offline, no API key.",
+    "tags": [
+      "jev",
+      "decisions",
+      "laya",
+      "local-first",
+      "offline",
+      "pi",
+      "pi-coding-agent",
+      "pi-extension"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/DrGekoz/pi-laya-bridge",
+    "sourceMeta": {
+      "repo": "DrGekoz/pi-laya-bridge",
+      "author": "DrGekoz",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1408616747,
+        "nodeId": "R_kgDOU_XJKw"
+      },
+      "date": "2026-10-07",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "drgekoz/pi-laya-bridge",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "sdk"
+        },
+        "sha": "012340a8dd9e11ec7c92b738b1aa80d417ca20e2",
+        "evidenceUrl": "https://github.com/drgekoz/pi-laya-bridge/blob/012340a8dd9e11ec7c92b738b1aa80d417ca20e2/README.md",
+        "evidenceSha256": "7e7bacb40e368ec78c961a5401be05ac9c0a6c55526938794e383508c803c65f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-02T06:11:18.263Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-intellidean-reflexgate",
+    "type": "github",
+    "title": "reflexgate",
+    "summary": "Ultra-fast, sub-100ms API & webhook guardrail and triage gateway powered by TypeSafe AI System One (Jev). Parallel 7-dimension speculative evaluation, deterministic policy router, zero-dependency SQLite audit trail, and automated outbound dispatch.",
+    "tags": [
+      "jev",
+      "ai-security",
+      "api-gateway",
+      "content-moderation",
+      "express",
+      "guardrails",
+      "llm-guardrails",
+      "real-time"
+    ],
+    "category": "applications",
+    "url": "https://github.com/intelliDean/reflexgate",
+    "sourceMeta": {
+      "repo": "intelliDean/reflexgate",
+      "author": "intelliDean",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1384139458,
+        "nodeId": "R_kgDOUoBKwg"
+      },
+      "date": "2026-09-23",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "intellidean/reflexgate",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "b9239879a0f81e4e8152858bfb1abc269ed9e5c1",
+        "evidenceUrl": "https://github.com/intellidean/reflexgate/blob/b9239879a0f81e4e8152858bfb1abc269ed9e5c1/README.md",
+        "evidenceSha256": "848681f6f3c2103b365bdc901c899ed24807dc9f2b3cf2c9810831b70875b1b1",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-02T06:11:18.263Z"
+      }
+    }
+  },
+  {
+    "id": "gh-19-madheshvivekanandan-jev-vs-cosine",
+    "type": "github",
+    "title": "jev-vs-cosine",
+    "summary": "Do you need TypeSafe's Jev, or is cosine similarity enough? A $0, reproducible benchmark on Banking77 intent routing.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/Madheshvivekanandan/jev-vs-cosine",
+    "sourceMeta": {
+      "repo": "Madheshvivekanandan/jev-vs-cosine",
+      "author": "Madheshvivekanandan",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1385012002,
+        "nodeId": "R_kgDOUo2bIg"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "madheshvivekanandan/jev-vs-cosine",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "research"
+        },
+        "sha": "911e91b1093622c605c10067b960c0aff660fc1d",
+        "evidenceUrl": "https://github.com/madheshvivekanandan/jev-vs-cosine/blob/911e91b1093622c605c10067b960c0aff660fc1d/README.md",
+        "evidenceSha256": "3291a40719583597fc0ff3c25a2c4fced6af37ed514f9a673a685c48bc6b30eb",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-02T06:11:18.263Z"
+      }
+    }
   }
 ]
