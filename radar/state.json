@@ -18935,7 +18935,7 @@
     "tickernelz/sub2api": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 6,
+      "attempts": 7,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -18950,8 +18950,8 @@
           "path": "backend/internal/service/content_moderation_typesafe_live_test.go"
         }
       ],
-      "checkedAt": "2026-10-26T04:51:25.403Z",
-      "retryAt": "2026-11-02T04:51:25.403Z",
+      "checkedAt": "2026-11-02T16:00:17.921Z",
+      "retryAt": "2026-11-09T16:00:17.921Z",
       "stars": 11
     },
     "piyush97/piyushmehta.com": {
@@ -75991,9 +75991,9 @@
     "necdetoskay/lumi-model-lab": {
       "status": "error",
       "discoveredAt": "2026-10-16T11:28:30.308Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-28T22:38:14.211Z",
+      "checkedAt": "2026-11-02T16:00:17.921Z",
       "lastReview": {
         "repo": "necdetoskay/lumi-model-lab",
         "status": "review",
@@ -76005,7 +76005,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T15:54:35.834Z"
       },
-      "retryAt": "2026-11-01T22:38:14.211Z"
+      "retryAt": "2026-11-09T16:00:17.921Z"
     },
     "nvr0x5/claude-deck": {
       "status": "review",
@@ -92327,9 +92327,9 @@
     "lexingtonhibiki/judgekit": {
       "status": "review",
       "discoveredAt": "2026-10-25T20:53:55.506Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 4,
-      "checkedAt": "2026-10-25T20:53:55.506Z",
+      "checkedAt": "2026-11-02T16:00:17.921Z",
       "lastReview": {
         "repo": "lexingtonhibiki/judgekit",
         "status": "review",
@@ -92339,9 +92339,9 @@
         "evidenceSha256": "ab5f69e4414023327f05ef13e3354177a6ec2925d56a130f57e3eca0c6af7824",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-25T20:53:55.506Z"
+        "checkedAt": "2026-11-02T16:00:17.921Z"
       },
-      "retryAt": "2026-11-01T20:53:55.506Z"
+      "retryAt": "2026-11-09T16:00:17.921Z"
     },
     "gbesse/semantic-plan-compiler": {
       "status": "review",
