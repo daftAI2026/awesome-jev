@@ -6403,5 +6403,50 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
     "aihotUrl": "https://aihot.news/items/d3y4oo7iorcxq4jr94obcjvvs"
+  },
+  {
+    "id": "yoozfdzpl3yhzuviyg2oefj48",
+    "title": "Tomasz Tunguz 解析 AI 四层架构各自面临的核心问题",
+    "originalTitle": "The Four Questions of AI",
+    "summary": "Tomasz Tunguz 提出 AI 产业链四层（应用、Harness 与上下文、模型、数据中心），并指出每层的核心问题。",
+    "sourceName": "Tomasz Tunguz 博客（VC 分析）",
+    "publishedAt": "2026-11-02T00:00:00.000Z",
+    "discoveredAt": "2026-11-02T15:43:33.566Z",
+    "category": "opinion",
+    "score": 67,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://tomtunguz.com/the-four-questions-of-ai/",
+    "aihotUrl": "https://aihot.news/items/yoozfdzpl3yhzuviyg2oefj48"
+  },
+  {
+    "id": "d62el4shlwqhjxtfhs4mvrbfc",
+    "title": "面壁智能启动 MiniCPM Spark Program S2 开发者计划",
+    "originalTitle": "🔥 MiniCPM Spark Program S2: Build What’s Next.",
+    "summary": "面壁智能开启 MiniCPM Spark Program S2，邀请开发者与研究者提交基于 MiniCPM 的可运行项目，分 Open Build Track 与 On-Device Agent Challenge 两条赛道。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-02T13:30:10.000Z",
+    "discoveredAt": "2026-11-02T13:54:45.791Z",
+    "category": "industry",
+    "score": 29,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2117247900845769084",
+    "aihotUrl": "https://aihot.news/items/d62el4shlwqhjxtfhs4mvrbfc"
+  },
+  {
+    "id": "x53huj8i6evlofrs9e6pubhsp",
+    "title": "社区演示探索 MiniCPM-OCR 与 Jev",
+    "originalTitle": "Great to see MiniCPM-OCR and Jev being explored in community demos! 💙 Thanks for sharing this! 🙌",
+    "summary": "很高兴看到 MiniCPM-OCR 和 Jev 在社区演示中被探索！💙 感谢分享！🙌",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-02T09:07:02.000Z",
+    "discoveredAt": "2026-11-02T09:17:45.601Z",
+    "category": "opinion",
+    "score": 23,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2117181681639850208",
+    "aihotUrl": "https://aihot.news/items/x53huj8i6evlofrs9e6pubhsp"
   }
 ]
