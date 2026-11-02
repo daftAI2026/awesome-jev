@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "347639fe07c760f77ed14fa2e0669b6c44567c96",
-  "at": "2026-11-02T07:37:23.174Z",
+  "baselineSha": "fbd203e15e312e7a3c300a4ddb00b760acc26f86",
+  "at": "2026-11-02T22:17:29.331Z",
   "totalProjects": 3157,
   "metadata": {
-    "ok": 3050,
-    "failed": 107,
+    "ok": 3038,
+    "failed": 119,
     "batches": 65,
     "cost": 65,
     "other": 3057,
-    "remaining": 107,
+    "remaining": 119,
     "attempted": 3157,
-    "fresh": 3050,
-    "unavailable": 107,
+    "fresh": 3038,
+    "unavailable": 119,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "bodepudimuneendra-netizen/laya-jev-graphrag",
+        "to": "bodepudimuneendra-netizen/consciousdb",
+        "databaseId": 1383351011
+      }
+    ]
   },
   "receipts": [
     {
@@ -31,8 +37,38 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-ndolinschi-lanebreak",
+      "repo": "ndolinschi/lanebreak",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-mcpmatch",
+      "repo": "ndolinschi/mcpmatch",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-pulselane",
+      "repo": "ndolinschi/pulselane",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-ivorpad-skillranker",
       "repo": "ivorpad/skillranker",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-spendbrake",
+      "repo": "ndolinschi/spendbrake",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-swarmrouter",
+      "repo": "ndolinschi/swarmrouter",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-trustgate",
+      "repo": "ndolinschi/trustgate",
       "reason": "github-unavailable-repository"
     },
     {
@@ -88,6 +124,11 @@
     {
       "id": "gh-8-realdubb-jev-playground",
       "repo": "realdubb/jev-playground",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-13-czinegeroland-review-gate",
+      "repo": "czinegeroland/review-gate",
       "reason": "github-unavailable-repository"
     },
     {
@@ -559,12 +600,37 @@
       "id": "gh-11-seanjeong42-jevcore",
       "repo": "seanjeong42/jevcore",
       "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-toolgate",
+      "repo": "ndolinschi/toolgate",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-cartshield",
+      "repo": "ndolinschi/cartshield",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-harnessjudge",
+      "repo": "ndolinschi/harnessjudge",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-hiresignal",
+      "repo": "ndolinschi/hiresignal",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-ndolinschi-jevplay",
+      "repo": "ndolinschi/jevplay",
+      "reason": "github-unavailable-repository"
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
