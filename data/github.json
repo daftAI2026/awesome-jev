@@ -12,8 +12,8 @@
     ],
     "url": "https://github.com/browser-use/jev-ultrafast",
     "sourceMeta": {
-      "stars": 24039,
-      "forks": 1839,
+      "stars": 24062,
+      "forks": 1842,
       "language": "Python",
       "author": "browser-use",
       "repo": "browser-use/jev-ultrafast",
@@ -59,7 +59,7 @@
     ],
     "url": "https://github.com/TheoLeeCJ/SemIf-OpenJev",
     "sourceMeta": {
-      "stars": 4915,
+      "stars": 4919,
       "forks": 358,
       "language": "Python",
       "author": "TheoLeeCJ",
@@ -154,7 +154,7 @@
     ],
     "url": "https://github.com/jarrodwatts/jev-trader",
     "sourceMeta": {
-      "stars": 3114,
+      "stars": 3116,
       "forks": 599,
       "language": "TypeScript",
       "author": "jarrodwatts",
@@ -201,7 +201,7 @@
     ],
     "url": "https://github.com/Anil-matcha/open-genjutsu",
     "sourceMeta": {
-      "stars": 992,
+      "stars": 994,
       "forks": 205,
       "language": "JavaScript",
       "author": "Anil-matcha",
@@ -379,7 +379,7 @@
     ],
     "url": "https://github.com/awlevin/typesafe-computer-use",
     "sourceMeta": {
-      "stars": 1280,
+      "stars": 1281,
       "forks": 123,
       "language": "Python",
       "author": "awlevin",
@@ -511,7 +511,7 @@
     ],
     "url": "https://github.com/gargpratyush/jev-router",
     "sourceMeta": {
-      "stars": 647,
+      "stars": 649,
       "forks": 101,
       "language": "JavaScript",
       "author": "gargpratyush",
@@ -728,7 +728,7 @@
     ],
     "url": "https://github.com/yibie/awesome-jev",
     "sourceMeta": {
-      "stars": 2522,
+      "stars": 2526,
       "forks": 375,
       "language": "Python",
       "author": "yibie",
@@ -904,7 +904,7 @@
     ],
     "url": "https://github.com/jkudish/jev-mcp",
     "sourceMeta": {
-      "stars": 562,
+      "stars": 564,
       "forks": 66,
       "language": "JavaScript",
       "author": "jkudish",
@@ -2133,7 +2133,7 @@
     ],
     "url": "https://github.com/Mapika/decider",
     "sourceMeta": {
-      "stars": 1168,
+      "stars": 1170,
       "forks": 53,
       "language": "Python",
       "author": "Mapika",
@@ -3785,7 +3785,7 @@
     ],
     "url": "https://github.com/TheoOliveira/pi-jev",
     "sourceMeta": {
-      "stars": 71,
+      "stars": 72,
       "forks": 14,
       "language": "TypeScript",
       "author": "TheoOliveira",
@@ -4183,7 +4183,7 @@
     ],
     "url": "https://github.com/raihankhan-rk/diffjury",
     "sourceMeta": {
-      "stars": 7,
+      "stars": 8,
       "forks": 2,
       "language": "TypeScript",
       "author": "raihankhan-rk",
@@ -6093,7 +6093,7 @@
     ],
     "url": "https://github.com/leepokai/jev-guard",
     "sourceMeta": {
-      "stars": 143,
+      "stars": 144,
       "forks": 22,
       "language": "JavaScript",
       "author": "leepokai",
@@ -7768,7 +7768,7 @@
     ],
     "url": "https://github.com/Hiwoniu/Jev-Case",
     "sourceMeta": {
-      "stars": 97,
+      "stars": 98,
       "forks": 5,
       "language": "TypeScript",
       "author": "Hiwoniu",
@@ -8833,7 +8833,7 @@
     ],
     "url": "https://github.com/agent-labs-dev/fastbrowse",
     "sourceMeta": {
-      "stars": 173,
+      "stars": 172,
       "forks": 20,
       "language": "Rust",
       "author": "agent-labs-dev",
@@ -16401,8 +16401,8 @@
     ],
     "url": "https://github.com/Zefan-Cai/Open-Jev",
     "sourceMeta": {
-      "stars": 438,
-      "forks": 64,
+      "stars": 439,
+      "forks": 65,
       "language": "Python",
       "author": "Zefan-Cai",
       "repo": "Zefan-Cai/Open-Jev",
@@ -24584,7 +24584,7 @@
     "sourceMeta": {
       "repo": "fstandhartinger/jevbench",
       "author": "fstandhartinger",
-      "stars": 326,
+      "stars": 327,
       "forks": 29,
       "language": "Python",
       "date": "2026-09-19",
@@ -28676,7 +28676,7 @@
     "sourceMeta": {
       "repo": "jaredpalmer/kev",
       "author": "jaredpalmer",
-      "stars": 9752,
+      "stars": 9756,
       "forks": 668,
       "language": "Python",
       "date": "2026-09-17",
@@ -29064,7 +29064,7 @@
     "sourceMeta": {
       "repo": "jkrup/jeveryword",
       "author": "jkrup",
-      "stars": 37,
+      "stars": 39,
       "forks": 3,
       "language": "JavaScript",
       "date": "2026-09-19",
@@ -37665,7 +37665,7 @@
     "sourceMeta": {
       "repo": "shaharia-lab/jev-cli",
       "author": "shaharia-lab",
-      "stars": 40,
+      "stars": 41,
       "forks": 6,
       "language": "Rust",
       "date": "2026-09-19",
@@ -38050,7 +38050,7 @@
     "sourceMeta": {
       "repo": "shitianfang/jev-use",
       "author": "shitianfang",
-      "stars": 64,
+      "stars": 65,
       "forks": 14,
       "language": "JavaScript",
       "date": "2026-09-19",
@@ -40723,7 +40723,7 @@
     "sourceMeta": {
       "repo": "walidboulanouar/awesome-jev-use-cases",
       "author": "walidboulanouar",
-      "stars": 474,
+      "stars": 475,
       "forks": 74,
       "language": null,
       "date": "2026-09-19",
@@ -41226,7 +41226,7 @@
     "sourceMeta": {
       "repo": "wizicer/jev_info_site",
       "author": "wizicer",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
       "language": "Astro",
       "date": "2026-09-19",
@@ -41806,7 +41806,7 @@
     "sourceMeta": {
       "repo": "yijunyu/jev-rs",
       "author": "yijunyu",
-      "stars": 20,
+      "stars": 21,
       "forks": 4,
       "language": "Rust",
       "date": "2026-09-21",
@@ -41940,7 +41940,7 @@
     "sourceMeta": {
       "repo": "yzfly/edgejev",
       "author": "yzfly",
-      "stars": 34,
+      "stars": 35,
       "forks": 4,
       "language": "Python",
       "date": "2026-09-20",
@@ -45338,7 +45338,7 @@
     "sourceMeta": {
       "repo": "chy4pro/jev-for-chrome",
       "author": "chy4pro",
-      "stars": 45,
+      "stars": 46,
       "forks": 12,
       "language": "TypeScript",
       "date": "2026-09-18",
@@ -49616,7 +49616,7 @@
     "sourceMeta": {
       "repo": "kerpopule/hermes-jev-skills",
       "author": "kerpopule",
-      "stars": 1275,
+      "stars": 1278,
       "forks": 124,
       "language": "Python",
       "date": "2026-09-18",
@@ -53458,7 +53458,7 @@
     "sourceMeta": {
       "repo": "razorback16/openjev",
       "author": "razorback16",
-      "stars": 769,
+      "stars": 770,
       "forks": 68,
       "language": "Python",
       "date": "2026-09-18",
@@ -58654,7 +58654,7 @@
     "sourceMeta": {
       "repo": "andyrewlee/awesome-system-one",
       "author": "andyrewlee",
-      "stars": 37,
+      "stars": 38,
       "forks": 12,
       "language": null,
       "date": "2026-09-19",
@@ -59053,7 +59053,7 @@
     "sourceMeta": {
       "repo": "autonomous-ai/openharness",
       "author": "autonomous-ai",
-      "stars": 1406,
+      "stars": 1408,
       "forks": 133,
       "language": "TypeScript",
       "date": "2026-08-04",
@@ -61320,8 +61320,8 @@
     "sourceMeta": {
       "repo": "mizorewww/laya-mlx",
       "author": "mizorewww",
-      "stars": 7056,
-      "forks": 572,
+      "stars": 7060,
+      "forks": 573,
       "language": "Python",
       "date": "2026-09-19",
       "jevAbout": 0.91,
@@ -61387,7 +61387,7 @@
     "sourceMeta": {
       "repo": "nokia-applied-research/AnyJev",
       "author": "nokia-applied-research",
-      "stars": 1548,
+      "stars": 1550,
       "forks": 177,
       "language": "Python",
       "date": "2026-09-21",
@@ -64862,7 +64862,7 @@
       "repo": "tamaratran/fast-jev-compaction",
       "author": "tamaratran",
       "stars": 7827,
-      "forks": 574,
+      "forks": 575,
       "language": "TypeScript",
       "date": "2026-09-17",
       "jevAbout": 0.96,
@@ -65204,8 +65204,8 @@
     "sourceMeta": {
       "repo": "TypeSafeAI/clarity-judge",
       "author": "TypeSafeAI",
-      "stars": 2,
-      "forks": 2,
+      "stars": 3,
+      "forks": 3,
       "language": "TypeScript",
       "date": "2026-09-16",
       "jevAbout": 0.95,
@@ -74109,8 +74109,8 @@
     "sourceMeta": {
       "repo": "AgriciDaniel/jev-seo",
       "author": "AgriciDaniel",
-      "stars": 747,
-      "forks": 118,
+      "stars": 749,
+      "forks": 119,
       "language": "Python",
       "date": "2026-09-22",
       "jevAbout": 0.95,
@@ -84321,7 +84321,7 @@
     "sourceMeta": {
       "repo": "jev-chat/jev-chat-windows",
       "author": "jev-chat",
-      "stars": 866,
+      "stars": 868,
       "forks": 191,
       "language": "Python",
       "date": "2026-09-21",
@@ -95257,8 +95257,8 @@
     "sourceMeta": {
       "repo": "ComposioHQ/composio",
       "author": "ComposioHQ",
-      "stars": 30867,
-      "forks": 4914,
+      "stars": 30873,
+      "forks": 4913,
       "language": "TypeScript",
       "date": "2024-02-23",
       "jevAbout": 0.95,
@@ -96672,7 +96672,7 @@
     "sourceMeta": {
       "repo": "pydantic/pydantic-ai",
       "author": "pydantic",
-      "stars": 20984,
+      "stars": 20992,
       "forks": 3079,
       "language": "Python",
       "date": "2024-06-21",
@@ -97161,7 +97161,7 @@
     "sourceMeta": {
       "repo": "legostin/jev-mcp",
       "author": "legostin",
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "language": "TypeScript",
       "date": "2026-09-23",
@@ -97498,8 +97498,8 @@
     "sourceMeta": {
       "repo": "PromptEngineer48/langchain-jev-tutorial",
       "author": "PromptEngineer48",
-      "stars": 1,
-      "forks": 0,
+      "stars": 2,
+      "forks": 1,
       "language": "Python",
       "date": "2026-09-24",
       "jevAbout": 0.98,
@@ -101676,7 +101676,7 @@
     "sourceMeta": {
       "repo": "bladedevoff/stuntd",
       "author": "bladedevoff",
-      "stars": 73,
+      "stars": 74,
       "forks": 5,
       "language": "Python",
       "date": "2026-09-23",
@@ -112833,7 +112833,7 @@
     "sourceMeta": {
       "repo": "feder-cr/jev",
       "author": "feder-cr",
-      "stars": 945,
+      "stars": 948,
       "forks": 145,
       "language": "C++",
       "date": "2026-09-27",
@@ -113073,7 +113073,7 @@
     "sourceMeta": {
       "repo": "datawhalechina/jev-cookbook",
       "author": "datawhalechina",
-      "stars": 559,
+      "stars": 562,
       "forks": 63,
       "language": "Jupyter Notebook",
       "date": "2026-09-20",
@@ -118303,7 +118303,7 @@
       "repo": "BeatAPI/awesome-jev",
       "author": "BeatAPI",
       "stars": 71,
-      "forks": 8,
+      "forks": 9,
       "language": "JavaScript",
       "date": "2026-09-20",
       "jevAbout": 0.92,
@@ -118365,7 +118365,7 @@
     "sourceMeta": {
       "repo": "deepanwadhwa/OpenDecision",
       "author": "deepanwadhwa",
-      "stars": 114,
+      "stars": 115,
       "forks": 3,
       "language": "Python",
       "date": "2026-09-17",
@@ -119883,8 +119883,8 @@
     "sourceMeta": {
       "repo": "jev-chat/jev-chat-jarvis",
       "author": "jev-chat",
-      "stars": 8206,
-      "forks": 1318,
+      "stars": 8210,
+      "forks": 1319,
       "language": "Kotlin",
       "date": "2026-09-21",
       "jevAbout": 0.92,
@@ -129675,7 +129675,7 @@
     "sourceMeta": {
       "repo": "vicfei/awesome-jev-prompts",
       "author": "vicfei",
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "language": "Python",
       "date": "2026-09-28",
@@ -129806,8 +129806,8 @@
     "sourceMeta": {
       "repo": "Effect-TS/effect",
       "author": "Effect-TS",
-      "stars": 17455,
-      "forks": 890,
+      "stars": 17457,
+      "forks": 891,
       "language": "TypeScript",
       "date": "2019-11-13",
       "jevAbout": 0.96,
@@ -130570,7 +130570,7 @@
     "sourceMeta": {
       "repo": "ImChong/Robotics_Notebooks",
       "author": "ImChong",
-      "stars": 657,
+      "stars": 662,
       "forks": 52,
       "language": "Python",
       "githubIdentity": {
@@ -130635,8 +130635,8 @@
     "sourceMeta": {
       "repo": "trycua/cua",
       "author": "trycua",
-      "stars": 31506,
-      "forks": 2328,
+      "stars": 31549,
+      "forks": 2332,
       "language": "Rust",
       "githubIdentity": {
         "databaseId": 925270205,
@@ -132014,7 +132014,7 @@
     "sourceMeta": {
       "repo": "aifabrice/jev-rag",
       "author": "aifabrice",
-      "stars": 16,
+      "stars": 17,
       "forks": 4,
       "language": "Python",
       "githubIdentity": {
@@ -132369,7 +132369,7 @@
     "sourceMeta": {
       "repo": "alanhuangyoo/OpenJev",
       "author": "alanhuangyoo",
-      "stars": 69,
+      "stars": 70,
       "forks": 4,
       "language": "Python",
       "githubIdentity": {
@@ -132701,7 +132701,7 @@
     "sourceMeta": {
       "repo": "BoundaryML/baml",
       "author": "BoundaryML",
-      "stars": 9468,
+      "stars": 9470,
       "forks": 508,
       "language": "Rust",
       "githubIdentity": {
@@ -135149,7 +135149,7 @@
     "sourceMeta": {
       "repo": "UditAkhourii/quicksilver",
       "author": "UditAkhourii",
-      "stars": 141,
+      "stars": 142,
       "forks": 11,
       "language": "JavaScript",
       "githubIdentity": {
@@ -139728,7 +139728,7 @@
     "sourceMeta": {
       "repo": "Yinsongxu/LLM2Jev",
       "author": "Yinsongxu",
-      "stars": 477,
+      "stars": 478,
       "forks": 51,
       "language": "Python",
       "githubIdentity": {
@@ -140558,7 +140558,7 @@
     "sourceMeta": {
       "repo": "luobosibing2/dsh-jev-plugin",
       "author": "luobosibing2",
-      "stars": 200,
+      "stars": 201,
       "forks": 20,
       "language": "JavaScript",
       "githubIdentity": {
@@ -141536,7 +141536,7 @@
     "sourceMeta": {
       "repo": "romeromarcelo/jev-retrieval",
       "author": "romeromarcelo",
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "language": "Rust",
       "githubIdentity": {
@@ -146242,7 +146242,7 @@
       "repo": "Mikachiyo/astrbot_plugin_smart_wake",
       "author": "Mikachiyo",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "language": "Python",
       "githubIdentity": {
         "databaseId": 1409168075,
@@ -164643,7 +164643,7 @@
       "author": "saikawaniania",
       "stars": 0,
       "forks": 0,
-      "language": "HTML",
+      "language": "JavaScript",
       "githubIdentity": {
         "databaseId": 1391692111,
         "nodeId": "R_kgDOUvOJTw"
@@ -169374,7 +169374,7 @@
     "sourceMeta": {
       "repo": "shibing624/train-jev",
       "author": "shibing624",
-      "stars": 17,
+      "stars": 18,
       "forks": 3,
       "language": "Python",
       "githubIdentity": {
@@ -175992,7 +175992,7 @@
     "sourceMeta": {
       "repo": "PrefectHQ/fastmcp",
       "author": "PrefectHQ",
-      "stars": 28268,
+      "stars": 28270,
       "forks": 2552,
       "language": "Python",
       "githubIdentity": {
@@ -176665,8 +176665,8 @@
     "sourceMeta": {
       "repo": "leofmarciano/groot",
       "author": "leofmarciano",
-      "stars": 13,
-      "forks": 1,
+      "stars": 14,
+      "forks": 2,
       "language": "Python",
       "githubIdentity": {
         "databaseId": 1429785504,
