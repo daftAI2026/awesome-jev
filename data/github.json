@@ -176937,5 +176937,50 @@
         "checkedAt": "2026-10-31T21:38:26.094Z"
       }
     }
+  },
+  {
+    "id": "gh-8-debuffjp-decidekit",
+    "type": "github",
+    "title": "decidekit",
+    "summary": "A System One model in the browser: typed, calibrated text decisions on the user's device. Learns from an LLM when it isn't sure.",
+    "tags": [
+      "classification",
+      "decision-model",
+      "llm",
+      "system-one",
+      "typescript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/debuffjp/decidekit",
+    "sourceMeta": {
+      "repo": "debuffjp/decidekit",
+      "author": "debuffjp",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1440598060,
+        "nodeId": "R_kgDOVd3ILA"
+      },
+      "date": "2026-10-31",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "debuffjp/decidekit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "alternatives"
+        },
+        "sha": "d73ffb8f4ac2fab61e048a348676f615dca7a6ca",
+        "evidenceUrl": "https://github.com/debuffjp/decidekit/blob/d73ffb8f4ac2fab61e048a348676f615dca7a6ca/README.md",
+        "evidenceSha256": "6e2a38d87198dddbeb0ffe80151916254aeb425532e3b078aebb9b4cd98707aa",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-02T01:02:02.741Z"
+      }
+    }
   }
 ]
