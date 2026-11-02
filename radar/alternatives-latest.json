@@ -1,18 +1,18 @@
 {
-  "at": "2026-11-02T01:02:02.741Z",
+  "at": "2026-11-02T11:41:04.572Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 120,
-      "total": 120,
+      "fetched": 121,
+      "total": 121,
       "status": "bounded"
     },
     {
       "query": "topic:typed-decisions fork:false",
-      "fetched": 138,
-      "total": 138,
+      "fetched": 139,
+      "total": 139,
       "status": "bounded"
     }
   ],
@@ -20,26 +20,172 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
-  "added": 1,
-  "pending": 209,
+  "reviewed": 22,
+  "added": 0,
+  "pending": 211,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "debuffjp/decidekit",
-      "status": "keep",
+      "repo": "bojansandhaus/jev-home-assistant-sentinel",
+      "status": "review",
       "score": {
-        "jevAbout": 0.94,
+        "jevAbout": 0.05,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.24,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "b9de920be05360c6fac0db3e7186c7148cdb74d6",
+      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/b9de920be05360c6fac0db3e7186c7148cdb74d6/README.md",
+      "evidenceSha256": "5d7632d53137ef4a514d0d9f76724c8a62dce15321cc4620dab627bb47b30105",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-02T11:41:04.572Z"
+    },
+    {
+      "repo": "destroyerdarkness/turbojev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.75,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.91,
+        "jevKeepConfidence": 0.85,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
+      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
+      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-02T11:41:04.572Z"
+    },
+    {
+      "repo": "dinosaur-mc/dsh-decision-tools",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.52,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.24,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
+      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
+      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-02T11:41:04.572Z"
+    },
+    {
+      "repo": "analee08998/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "catherinestavrou94306/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "evans13683/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "gpastore7188/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "gunduz58439/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kacper630/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lorenzofujita94/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "meganhalas40/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "mustafadupuis/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sofiajohansson4765/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "demet52518/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "heleneioannidis5960/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kang83957/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kdunn86923/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lukascho22400/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "luuk736/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "susanne853/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "baldellimtt/systemone-lab",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.54,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.44,
         "category": "alternatives"
       },
-      "sha": "d73ffb8f4ac2fab61e048a348676f615dca7a6ca",
-      "evidenceUrl": "https://github.com/debuffjp/decidekit/blob/d73ffb8f4ac2fab61e048a348676f615dca7a6ca/README.md",
-      "evidenceSha256": "6e2a38d87198dddbeb0ffe80151916254aeb425532e3b078aebb9b4cd98707aa",
+      "sha": "eb23defc7a2fb87bcc88df3f750b5b4d207b5aff",
+      "evidenceUrl": "https://github.com/baldellimtt/systemone-lab/blob/eb23defc7a2fb87bcc88df3f750b5b4d207b5aff/README.md",
+      "evidenceSha256": "0905603db201096e3bf9b040c45439ac5f5506dda4bbbf6e4b1cccaec7ee4d11",
       "model": "jev-latest",
-      "checkedAt": "2026-11-02T01:02:02.741Z"
+      "checkedAt": "2026-11-02T11:41:04.572Z"
+    },
+    {
+      "repo": "huzjie/drexforge",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "2a028b591320eb6ceca66f237722b05acf0ce248",
+      "evidenceUrl": "https://github.com/huzjie/drexforge/blob/2a028b591320eb6ceca66f237722b05acf0ce248/README.md",
+      "evidenceSha256": "63d5f87de53efab7593d8d6134a8f3b7a63dad38e6615b27f502994118b1a9af",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-02T11:41:04.572Z"
     }
   ],
   "identity": {
@@ -50,5 +196,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3151
+  "totalProjects": 3155
 }
