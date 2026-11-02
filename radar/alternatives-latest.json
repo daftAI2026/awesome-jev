@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-02T11:41:04.572Z",
+  "at": "2026-11-02T23:13:23.158Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,172 +20,41 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 22,
+  "reviewed": 4,
   "added": 0,
-  "pending": 211,
+  "pending": 212,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "bojansandhaus/jev-home-assistant-sentinel",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.05,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.24,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "b9de920be05360c6fac0db3e7186c7148cdb74d6",
-      "evidenceUrl": "https://github.com/bojansandhaus/jev-home-assistant-sentinel/blob/b9de920be05360c6fac0db3e7186c7148cdb74d6/README.md",
-      "evidenceSha256": "5d7632d53137ef4a514d0d9f76724c8a62dce15321cc4620dab627bb47b30105",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-02T11:41:04.572Z"
+      "repo": "aliliu604/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
     },
     {
-      "repo": "destroyerdarkness/turbojev",
+      "repo": "kpetit760/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "witthayaryu/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "justanotherkevin/awol",
       "status": "review",
       "score": {
-        "jevAbout": 0.75,
+        "jevAbout": 0.67,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.85,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
-      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
-      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-02T11:41:04.572Z"
-    },
-    {
-      "repo": "dinosaur-mc/dsh-decision-tools",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.52,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.24,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
-      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
-      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-02T11:41:04.572Z"
-    },
-    {
-      "repo": "analee08998/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "catherinestavrou94306/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "evans13683/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gpastore7188/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gunduz58439/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kacper630/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lorenzofujita94/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "meganhalas40/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mustafadupuis/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "sofiajohansson4765/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "demet52518/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "heleneioannidis5960/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kang83957/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kdunn86923/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lukascho22400/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "luuk736/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "susanne853/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "baldellimtt/systemone-lab",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.54,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.44,
+        "jevKeepConfidence": 0.74,
         "category": "alternatives"
       },
-      "sha": "eb23defc7a2fb87bcc88df3f750b5b4d207b5aff",
-      "evidenceUrl": "https://github.com/baldellimtt/systemone-lab/blob/eb23defc7a2fb87bcc88df3f750b5b4d207b5aff/README.md",
-      "evidenceSha256": "0905603db201096e3bf9b040c45439ac5f5506dda4bbbf6e4b1cccaec7ee4d11",
+      "sha": "ce827dbceee08dbaccfab90e3749bb6fc2708850",
+      "evidenceUrl": "https://github.com/justanotherkevin/awol/blob/ce827dbceee08dbaccfab90e3749bb6fc2708850/README.md",
+      "evidenceSha256": "ad6f209c7e914a04928f33191a14f777029089a1f4f44f64e0e4a728d5a155b1",
       "model": "jev-latest",
-      "checkedAt": "2026-11-02T11:41:04.572Z"
-    },
-    {
-      "repo": "huzjie/drexforge",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "2a028b591320eb6ceca66f237722b05acf0ce248",
-      "evidenceUrl": "https://github.com/huzjie/drexforge/blob/2a028b591320eb6ceca66f237722b05acf0ce248/README.md",
-      "evidenceSha256": "63d5f87de53efab7593d8d6134a8f3b7a63dad38e6615b27f502994118b1a9af",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-02T11:41:04.572Z"
+      "checkedAt": "2026-11-02T23:13:23.158Z"
     }
   ],
   "identity": {
