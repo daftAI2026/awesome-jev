@@ -6466,9 +6466,9 @@
   },
   {
     "id": "i2ikoodus815p086ug1mkcqbw",
-    "title": "Pragmatic Engineer 刊发获奖文章：工程师月度 PR 产出提升 11 倍的 AI 原生工作方式",
+    "title": "Pragmatic Engineer 刊发获奖文章：工程师从 PostHog 到 AI 原生创业公司 Tano，月合并 PR 提升约 11 倍",
     "originalTitle": "How software engineering is changing: a tale of two eras",
-    "summary": "The Pragmatic Engineer 全文刊出征文挑战获奖文章，工程师 Neil Kakkar 讲述加入 AI 原生创业公司 Tano 后月度 PR 从 8-20 个升至 200+，约为 PostHog 时期的 11 倍。",
+    "summary": "Pragmatic Engineer 刊发征文挑战获奖文章，作者 Neil Kakkar 对比自己月均合并 8-20 个 PR 的 PostHog 时期与如今在 AI 原生创业公司 Tano 月均 200+ 个 PR 的工作变化。",
     "sourceName": "Pragmatic Engineer（RSS）",
     "publishedAt": "2026-11-03T16:58:22.000Z",
     "discoveredAt": "2026-11-03T17:20:26.027Z",
@@ -6508,5 +6508,50 @@
     "reason": null,
     "originalUrl": "https://www.oreilly.com/radar/radar-trends-to-watch-november-2026/",
     "aihotUrl": "https://aihot.news/items/tze7761vri5477qa3mj94sqmj"
+  },
+  {
+    "id": "hhl7ir87l80gaojrl9x809j30",
+    "title": "Modem 上线应用内反馈表单：用户提交即可触发智能体自动建功能",
+    "originalTitle": "Add a feedback form that builds what users asked for",
+    "summary": "Modem 向所有用户开放应用内反馈功能，可在 Settings > Integrations > In-app feedback 配置，或把起始提示词粘贴给编码智能体自动接入。",
+    "sourceName": "Modem：Blog（RSS）",
+    "publishedAt": "2026-11-03T14:00:00.000Z",
+    "discoveredAt": "2026-11-03T19:17:41.754Z",
+    "category": "ai-products",
+    "score": 44,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://modem.ai/blog/capture-user-feedback-with-modem",
+    "aihotUrl": "https://aihot.news/items/hhl7ir87l80gaojrl9x809j30"
+  },
+  {
+    "id": "n4rkxeuykp1kv5624zq4dux79",
+    "title": "Google 实测用轻量分类器在 Gemini 模型和思考档位间路由以降低每任务成本",
+    "originalTitle": "Cost per task: Using cheap classifiers to route across Gemini models and thinking levels",
+    "summary": "Google Developers Blog 发布实测，主张以每成功任务成本而非每 token 价格衡量编码 Agent 的生产经济性，并用 TypeSafe 的 Jev 分类器在 Gemini 模型间做路由。",
+    "sourceName": "Google Developers Blog（RSS）",
+    "publishedAt": "2026-11-02T16:00:00.000Z",
+    "discoveredAt": "2026-11-03T18:17:38.670Z",
+    "category": "tip",
+    "score": 69,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/",
+    "aihotUrl": "https://aihot.news/items/n4rkxeuykp1kv5624zq4dux79"
+  },
+  {
+    "id": "yhn1xzay70v5llxvtmbjrtxs4",
+    "title": "LangChain 讲解如何为 Deep Agents 优化浏览器工具，Stagehand 在 WebVoyager 上以 $1.98 通过 90% 任务",
+    "originalTitle": "How We Optimized Browser Use for Deep Agents",
+    "summary": "LangChain 为 Managed Deep Agents 选型浏览器工具，对比七个工具集后在 WebVoyager 100 个任务上选用 Stagehand（90% 通过、总成本 $1.98、中位 17.4s），Playwright MCP 为 78%、$26.71。",
+    "sourceName": "LangChain：Blog（RSS）",
+    "publishedAt": "2026-11-03T16:00:00.000Z",
+    "discoveredAt": "2026-11-03T18:14:21.863Z",
+    "category": "tip",
+    "score": 64,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
+    "aihotUrl": "https://aihot.news/items/yhn1xzay70v5llxvtmbjrtxs4"
   }
 ]
