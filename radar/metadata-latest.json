@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "fbd203e15e312e7a3c300a4ddb00b760acc26f86",
-  "at": "2026-11-02T22:17:29.331Z",
-  "totalProjects": 3157,
+  "baselineSha": "3a1422f0696478f84bc1d009d8fc7c1dcc56836c",
+  "at": "2026-11-03T07:52:27.744Z",
+  "totalProjects": 3160,
   "metadata": {
-    "ok": 3038,
-    "failed": 119,
+    "ok": 3040,
+    "failed": 120,
     "batches": 65,
     "cost": 65,
-    "other": 3057,
-    "remaining": 119,
-    "attempted": 3157,
-    "fresh": 3038,
-    "unavailable": 119,
+    "other": 3060,
+    "remaining": 120,
+    "attempted": 3160,
+    "fresh": 3040,
+    "unavailable": 120,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "bodepudimuneendra-netizen/laya-jev-graphrag",
-        "to": "bodepudimuneendra-netizen/consciousdb",
-        "databaseId": 1383351011
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -149,6 +143,11 @@
     {
       "id": "gh-8-aviletek-jev-flow-harness",
       "repo": "aviletek/jev-flow-harness",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-johncari-rossrecall",
+      "repo": "johncari/rossrecall",
       "reason": "github-unavailable-repository"
     },
     {
@@ -628,7 +627,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
     "unavailable": 1,
     "restored": 0,
