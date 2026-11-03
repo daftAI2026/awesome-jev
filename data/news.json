@@ -6463,5 +6463,50 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenBMB/status/2117428017538736308",
     "aihotUrl": "https://aihot.news/items/acvxsgbyprtzu2dasqc62c8px"
+  },
+  {
+    "id": "i2ikoodus815p086ug1mkcqbw",
+    "title": "Pragmatic Engineer 刊发获奖文章：工程师月度 PR 产出提升 11 倍的 AI 原生工作方式",
+    "originalTitle": "How software engineering is changing: a tale of two eras",
+    "summary": "The Pragmatic Engineer 全文刊出征文挑战获奖文章，工程师 Neil Kakkar 讲述加入 AI 原生创业公司 Tano 后月度 PR 从 8-20 个升至 200+，约为 PostHog 时期的 11 倍。",
+    "sourceName": "Pragmatic Engineer（RSS）",
+    "publishedAt": "2026-11-03T16:58:22.000Z",
+    "discoveredAt": "2026-11-03T17:20:26.027Z",
+    "category": "tip",
+    "score": 69,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://newsletter.pragmaticengineer.com/p/how-software-engineering-is-changing",
+    "aihotUrl": "https://aihot.news/items/i2ikoodus815p086ug1mkcqbw"
+  },
+  {
+    "id": "t6w7hpxie9dwbsto59yxpvzep",
+    "title": "Sarvam AI 发布决策模型 Sarvam Prism 并开放权重",
+    "originalTitle": "Introducing Sarvam Prism",
+    "summary": "Sarvam AI 发布基于 Sarvam 105B 的 System One 决策模型 Sarvam Prism，在自测的 25 个决策模型中以 71.8 分、44 ms 响应（B200 GPU）成为 100 ms 内得分最高的模型。",
+    "sourceName": "Sarvam AI（网页）",
+    "publishedAt": "2026-11-02T16:00:00.000Z",
+    "discoveredAt": "2026-11-03T13:16:28.834Z",
+    "category": "ai-models",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.sarvam.ai/blogs/sarvam-prism",
+    "aihotUrl": "https://aihot.news/items/t6w7hpxie9dwbsto59yxpvzep"
+  },
+  {
+    "id": "tze7761vri5477qa3mj94sqmj",
+    "title": "O'Reilly Radar 2026 年 11 月趋势：Kimi 3.1 Pro、Gemini 4 与开源权重模型追赶前沿",
+    "originalTitle": "Radar Trends to Watch: November 2026",
+    "summary": "O'Reilly Radar 11 月趋势盘点称，Kimi 3.1 Pro 以 3T tokens 成为领先开源权重模型，仅略落后于最新前沿模型，月之暗面同时发布速度提升 2-3 倍的 Kimi K3.1 Pro Highspeed。",
+    "sourceName": "O'Reilly Radar（热点 RSS）",
+    "publishedAt": "2026-11-03T11:54:30.000Z",
+    "discoveredAt": "2026-11-03T12:06:25.103Z",
+    "category": "industry",
+    "score": 46,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.oreilly.com/radar/radar-trends-to-watch-november-2026/",
+    "aihotUrl": "https://aihot.news/items/tze7761vri5477qa3mj94sqmj"
   }
 ]
