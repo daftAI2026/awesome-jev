@@ -89076,10 +89076,10 @@
     "paulosuzart/awesome": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 36,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "checkedAt": "2026-11-03T14:20:16.978Z",
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "yib7/inployed": {
       "status": "review",
@@ -89302,10 +89302,10 @@
     "chuanqisun/memo": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 68,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "checkedAt": "2026-11-03T14:20:16.978Z",
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "okoryem/invoice-guard": {
       "status": "review",
@@ -90808,10 +90808,10 @@
     "brenchcc/awesome-llm-research-collections": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 17,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "checkedAt": "2026-11-03T14:20:16.978Z",
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "oraekene/task-digest": {
       "status": "review",
@@ -91286,10 +91286,10 @@
     "jesseqin123/solo_unicorn_toolbox": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 5,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "checkedAt": "2026-11-03T14:20:16.978Z",
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "ericjuta/omp-optchat": {
       "status": "review",
@@ -91691,10 +91691,10 @@
     "ytang520/prompt_injection_research_daily_arxiv": {
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 1,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "checkedAt": "2026-11-03T14:20:16.978Z",
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "jenoshimizu870/eullm": {
       "status": "error",
@@ -91718,9 +91718,9 @@
     "cenkergultekin/cenkbot": {
       "status": "review",
       "discoveredAt": "2026-10-20T04:54:46.648Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
+      "checkedAt": "2026-11-03T14:20:16.978Z",
       "lastReview": {
         "repo": "cenkergultekin/cenkbot",
         "status": "review",
@@ -91730,16 +91730,16 @@
         "evidenceSha256": "df25e069da497a1e3dfed580d84facdd45d97734a412247ef157ff99de56b5ba",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-27T05:09:50.424Z"
+        "checkedAt": "2026-11-03T14:20:16.978Z"
       },
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "magilliam27/sec-8k-filings-and-decision-models": {
       "status": "review",
       "discoveredAt": "2026-10-20T04:54:46.648Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
+      "checkedAt": "2026-11-03T14:20:16.978Z",
       "lastReview": {
         "repo": "magilliam27/sec-8k-filings-and-decision-models",
         "status": "review",
@@ -91749,9 +91749,9 @@
         "evidenceSha256": "ead9568c79cedf327a08ac1455975a13c48a62fbb14190e24f7bd0bb821c7e1f",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-27T05:09:50.424Z"
+        "checkedAt": "2026-11-03T14:20:16.978Z"
       },
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "svetlanarichardson90/doma": {
       "status": "error",
@@ -91832,9 +91832,9 @@
     "ashp15205/jev-laya-system-1": {
       "status": "review",
       "discoveredAt": "2026-10-20T04:54:46.648Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
+      "checkedAt": "2026-11-03T14:20:16.978Z",
       "lastReview": {
         "repo": "ashp15205/jev-laya-system-1",
         "status": "review",
@@ -91844,9 +91844,9 @@
         "evidenceSha256": "3cd3f85c7dd9995b8abd11ed61fd5abbd0ff7829ede1338349f44d47a1e5664c",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-27T05:09:50.424Z"
+        "checkedAt": "2026-11-03T14:20:16.978Z"
       },
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "hsoto898/doma": {
       "status": "error",
@@ -91927,9 +91927,9 @@
     "tdizhere/system3": {
       "status": "review",
       "discoveredAt": "2026-10-20T04:54:46.648Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
+      "checkedAt": "2026-11-03T14:20:16.978Z",
       "lastReview": {
         "repo": "tdizhere/system3",
         "status": "review",
@@ -91939,16 +91939,16 @@
         "evidenceSha256": "d51164df9362e363690d300110ac77b38fde18dfde537b21301b4ed0f9e8b773",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-27T05:09:50.424Z"
+        "checkedAt": "2026-11-03T14:20:16.978Z"
       },
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "arthurkatcher/jev-click-bench": {
       "status": "review",
       "discoveredAt": "2026-10-20T04:54:46.648Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-27T05:09:50.424Z",
+      "checkedAt": "2026-11-03T14:20:16.978Z",
       "lastReview": {
         "repo": "arthurkatcher/jev-click-bench",
         "status": "review",
@@ -91958,9 +91958,9 @@
         "evidenceSha256": "95c819ead98fb53930b527770c80a0481a87d3f1d8f7614ce6c00e145d3aa063",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-27T05:09:50.424Z"
+        "checkedAt": "2026-11-03T14:20:16.978Z"
       },
-      "retryAt": "2026-11-03T05:09:50.424Z"
+      "retryAt": "2026-11-10T14:20:16.978Z"
     },
     "voulalee57/doma": {
       "status": "error",
