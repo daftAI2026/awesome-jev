@@ -177179,5 +177179,144 @@
         "checkedAt": "2026-11-02T06:11:18.263Z"
       }
     }
+  },
+  {
+    "id": "gh-9-benikigai-jevgotiator",
+    "type": "github",
+    "title": "JEVgotiator",
+    "summary": "Text an agent about a used Tesla, get five Jev-scored picks with decision traces and a deal plan. JEVathon 2026 build (Next.js, Eve/iMessage, TypeSafe Jev).",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "hackathon",
+      "nextjs",
+      "typesafe-ai",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/benikigai/JEVgotiator",
+    "sourceMeta": {
+      "repo": "benikigai/JEVgotiator",
+      "author": "benikigai",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1389730391,
+        "nodeId": "R_kgDOUtWaVw"
+      },
+      "date": "2026-09-26",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "benikigai/jevgotiator",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "61349df56894defccd23d899f8299d92834d08a7",
+        "evidenceUrl": "https://github.com/benikigai/jevgotiator/blob/61349df56894defccd23d899f8299d92834d08a7/README.md",
+        "evidenceSha256": "6ea1af3677f8ff7b4353d82cadf005688ef19d7b4e22e07552ce4e8a738de2b5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-03T01:00:30.186Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-slavabars-decision-cascade",
+    "type": "github",
+    "title": "decision-cascade",
+    "summary": "Local decision engine with typed, calibrated outputs (Noul/Choice/Score): cheap→strong cascade, ECE/Brier calibration, SystemOne protocol interop. Apache-2.0.",
+    "tags": [
+      "jev",
+      "calibration",
+      "cascade",
+      "decision-making",
+      "fastapi",
+      "llm",
+      "model-routing",
+      "pytorch"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/slavabars/decision-cascade",
+    "sourceMeta": {
+      "repo": "slavabars/decision-cascade",
+      "author": "slavabars",
+      "stars": 78,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1416658094,
+        "nodeId": "R_kgDOVHB8rg"
+      },
+      "date": "2026-10-13",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "slavabars/decision-cascade",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "alternatives"
+        },
+        "sha": "e619213de24edaaebb86bb0a2702630367d468c3",
+        "evidenceUrl": "https://github.com/slavabars/decision-cascade/blob/e619213de24edaaebb86bb0a2702630367d468c3/README.md",
+        "evidenceSha256": "44727166000521f31b2924bd333964f0e7decc1c4b988403faf8884aeaae7b43",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-03T01:00:30.186Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-superinstance-gitpp-sheet",
+    "type": "github",
+    "title": "gitpp-sheet",
+    "summary": "A git.pp fold as a spreadsheet with cell-level confidence, and the graph that shows where the confidence came from",
+    "tags": [
+      "jev",
+      "javascript"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/SuperInstance/gitpp-sheet",
+    "sourceMeta": {
+      "repo": "SuperInstance/gitpp-sheet",
+      "author": "SuperInstance",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1423525145,
+        "nodeId": "R_kgDOVNlFGQ"
+      },
+      "date": "2026-10-17",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "superinstance/gitpp-sheet",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "sdk"
+        },
+        "sha": "d6906c0ff4b44020cc9e692aee9f9140824522fd",
+        "evidenceUrl": "https://github.com/superinstance/gitpp-sheet/blob/d6906c0ff4b44020cc9e692aee9f9140824522fd/README.md",
+        "evidenceSha256": "8e118e069d52df41bc37e22b712de4aa1f93b09405d17c01be0cbc57237ed7a6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-03T01:00:30.186Z"
+      }
+    }
   }
 ]
