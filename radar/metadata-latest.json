@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "0b8e90da9f9d3ca790f079df60e79e5c3eda11da",
-  "at": "2026-11-04T07:28:33.924Z",
+  "baselineSha": "ad5d3ada338218054149721d3435ea2f93b2b6d1",
+  "at": "2026-11-04T20:25:12.061Z",
   "totalProjects": 3160,
   "metadata": {
-    "ok": 3039,
-    "failed": 121,
+    "ok": 3038,
+    "failed": 122,
     "batches": 65,
     "cost": 65,
     "other": 3060,
-    "remaining": 121,
+    "remaining": 122,
     "attempted": 3160,
-    "fresh": 3039,
-    "unavailable": 121,
+    "fresh": 3038,
+    "unavailable": 122,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "shailesh-svg/jev-poc-lead-gen",
-        "to": "versehem/jev-poc-lead-gen",
-        "databaseId": 1375493971
-      },
-      {
-        "from": "pekth/draftpulse",
-        "to": "pbember/draftpulse",
-        "databaseId": 1374609487
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -149,6 +138,11 @@
     {
       "id": "gh-17-akashpriyadarshii-jev-superpowers",
       "repo": "akashpriyadarshii/jev-superpowers",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-dingw530-playwright-jev",
+      "repo": "dingw530/playwright-jev",
       "reason": "github-unavailable-repository"
     },
     {
@@ -643,9 +637,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
