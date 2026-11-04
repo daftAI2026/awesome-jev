@@ -12805,6 +12805,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pb-crackers/jev-cognigy-qa-suite" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/pbember/draftpulse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pbember/draftpulse" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/pc-style/jev-effort</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pc-style/jev-effort" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pc-style/jev-effort" />
@@ -12887,12 +12893,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pedrorau/feedback-radar-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/pekth/draftpulse</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pekth/draftpulse" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/pendraga/paperless-jev</loc>
@@ -14711,12 +14711,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shaifulshabuj/jev-test" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/shailesh-svg/jev-poc-lead-gen</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shailesh-svg/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/shakibuzzaman3104/claude-jev-funnel</loc>
@@ -17057,6 +17051,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/veronalabs/spamlens" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/versehem/jev-poc-lead-gen</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/versehem/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/vgeshel/prose-check</loc>
@@ -35851,6 +35851,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pb-crackers/jev-cognigy-qa-suite" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/pbember/draftpulse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pbember/draftpulse" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/pc-style/jev-effort</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pc-style/jev-effort" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pc-style/jev-effort" />
@@ -35933,12 +35939,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pedrorau/feedback-radar-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/pekth/draftpulse</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pekth/draftpulse" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/pendraga/paperless-jev</loc>
@@ -37757,12 +37757,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shaifulshabuj/jev-test" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/shailesh-svg/jev-poc-lead-gen</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shailesh-svg/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/shakibuzzaman3104/claude-jev-funnel</loc>
@@ -40103,6 +40097,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/veronalabs/spamlens" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/versehem/jev-poc-lead-gen</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/versehem/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/vgeshel/prose-check</loc>
@@ -58897,6 +58897,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pb-crackers/jev-cognigy-qa-suite" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/pbember/draftpulse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pbember/draftpulse" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pbember/draftpulse" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/pc-style/jev-effort</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pc-style/jev-effort" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pc-style/jev-effort" />
@@ -58979,12 +58985,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pedrorau/feedback-radar-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pedrorau/feedback-radar-jev" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/pekth/draftpulse</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/pekth/draftpulse" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/pekth/draftpulse" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/pendraga/paperless-jev</loc>
@@ -60803,12 +60803,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shaifulshabuj/jev-test" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shaifulshabuj/jev-test" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/shailesh-svg/jev-poc-lead-gen</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/shailesh-svg/jev-poc-lead-gen" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/shailesh-svg/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/shakibuzzaman3104/claude-jev-funnel</loc>
@@ -63149,6 +63143,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/veronalabs/spamlens" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/veronalabs/spamlens" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/versehem/jev-poc-lead-gen</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/versehem/jev-poc-lead-gen" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/versehem/jev-poc-lead-gen" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/vgeshel/prose-check</loc>

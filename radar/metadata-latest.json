@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "93d1c6098ed4ea67d79cd0f8f66852ebc038fa57",
-  "at": "2026-11-03T20:04:38.098Z",
+  "baselineSha": "0b8e90da9f9d3ca790f079df60e79e5c3eda11da",
+  "at": "2026-11-04T07:28:33.924Z",
   "totalProjects": 3160,
   "metadata": {
-    "ok": 3040,
-    "failed": 120,
+    "ok": 3039,
+    "failed": 121,
     "batches": 65,
     "cost": 65,
     "other": 3060,
-    "remaining": 120,
+    "remaining": 121,
     "attempted": 3160,
-    "fresh": 3040,
-    "unavailable": 120,
+    "fresh": 3039,
+    "unavailable": 121,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "shailesh-svg/jev-poc-lead-gen",
+        "to": "versehem/jev-poc-lead-gen",
+        "databaseId": 1375493971
+      },
+      {
+        "from": "pekth/draftpulse",
+        "to": "pbember/draftpulse",
+        "databaseId": 1374609487
+      }
+    ]
   },
   "receipts": [
     {
@@ -178,6 +189,11 @@
     {
       "id": "gh-7-haxudev-jev-benchmark",
       "repo": "haxudev/jev-benchmark",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-14-nitish-kumar30-jev",
+      "repo": "nitish-kumar30/jev",
       "reason": "github-unavailable-repository"
     },
     {
@@ -627,7 +643,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
