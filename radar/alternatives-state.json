@@ -52,7 +52,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 92
+      "stars": 93
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-29T01:13:57.518Z"
       },
       "retryAt": "2026-11-05T01:13:57.518Z",
-      "stars": 34966
+      "stars": 34984
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -576,7 +576,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 24
+      "stars": 25
     },
     "notsointresting/sift": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 8261
+      "stars": 8263
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-29T10:25:20.732Z"
       },
       "retryAt": "2026-11-05T10:25:20.732Z",
-      "stars": 495
+      "stars": 501
     },
     "phocinae/.github": {
       "status": "review",
@@ -2745,8 +2745,8 @@
     "nathanm49/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-14T19:41:10.024Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-28T10:00:48.387Z",
+      "attempts": 5,
+      "checkedAt": "2026-11-04T11:34:46.956Z",
       "lastReview": {
         "repo": "nathanm49/coreai-kit",
         "status": "review",
@@ -2757,14 +2757,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T19:41:10.024Z"
       },
-      "retryAt": "2026-11-04T10:00:48.387Z",
+      "retryAt": "2026-11-11T11:34:46.956Z",
       "stars": 0
     },
     "gul84571/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-14T19:41:10.024Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-28T10:00:48.387Z",
+      "attempts": 5,
+      "checkedAt": "2026-11-04T11:34:46.956Z",
       "lastReview": {
         "repo": "gul84571/coreai-kit",
         "status": "review",
@@ -2775,7 +2775,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-14T19:41:10.024Z"
       },
-      "retryAt": "2026-11-04T10:00:48.387Z",
+      "retryAt": "2026-11-11T11:34:46.956Z",
       "stars": 0
     },
     "evandroamparo/system-one": {
@@ -4173,25 +4173,25 @@
     "ashaazami/dadvar": {
       "status": "review",
       "discoveredAt": "2026-10-28T10:00:48.387Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-28T10:00:48.387Z",
+      "checkedAt": "2026-11-04T11:34:46.956Z",
       "lastReview": {
         "repo": "ashaazami/dadvar",
         "status": "review",
         "score": {
           "jevAbout": 0.94,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.82,
+          "jevKeepConfidence": 0.86,
           "category": "alternatives"
         },
-        "sha": "5a3a7a8b1c8136b41653c55363c55ad8366aa893",
-        "evidenceUrl": "https://github.com/ashaazami/dadvar/blob/5a3a7a8b1c8136b41653c55363c55ad8366aa893/README.md",
-        "evidenceSha256": "8e1c06dc4155126810d112e1b710da722a55e5114215a6bfc8f4f9d90e4039a8",
+        "sha": "06415b344685709399767c9a4202ae610b816ed2",
+        "evidenceUrl": "https://github.com/ashaazami/dadvar/blob/06415b344685709399767c9a4202ae610b816ed2/README.md",
+        "evidenceSha256": "fd8239ca10e2efb98b5b57fbeec2494d03c4546d457829c30f30ea279c839691",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T10:00:48.387Z"
+        "checkedAt": "2026-11-04T11:34:46.956Z"
       },
-      "retryAt": "2026-11-04T10:00:48.387Z"
+      "retryAt": "2026-11-11T11:34:46.956Z"
     },
     "nflavioquatraro/mutations": {
       "status": "review",
@@ -4286,7 +4286,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 1,
-      "stars": 900,
+      "stars": 901,
       "checkedAt": "2026-10-29T10:25:20.732Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4424,6 +4424,24 @@
         "checkedAt": "2026-11-03T21:16:22.900Z"
       },
       "retryAt": "2026-11-10T21:16:22.900Z"
+    },
+    "sebastianrodaaa/haltgate": {
+      "status": "review",
+      "discoveredAt": "2026-11-04T11:34:46.956Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-11-04T11:34:46.956Z",
+      "lastReview": {
+        "repo": "sebastianrodaaa/haltgate",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "ffff02f38923e256886f0ccc2c6d8c0a3b94043c",
+        "evidenceUrl": "https://github.com/sebastianrodaaa/haltgate/blob/ffff02f38923e256886f0ccc2c6d8c0a3b94043c/README.md",
+        "evidenceSha256": "95ade156c9e2b9c1d65f1e7852b0acbf900180ad346d88262d12f2bbc890b57b",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-04T11:34:46.956Z"
+      },
+      "retryAt": "2026-11-11T11:34:46.956Z"
     }
   }
 }
