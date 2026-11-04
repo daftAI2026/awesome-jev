@@ -391,7 +391,7 @@
         "checkedAt": "2026-10-29T01:13:57.518Z"
       },
       "retryAt": "2026-11-05T01:13:57.518Z",
-      "stars": 34984
+      "stars": 35008
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1059,7 +1059,7 @@
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
       "retryAt": "2026-11-05T20:35:47.969Z",
-      "stars": 8263
+      "stars": 8264
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1819,15 +1819,15 @@
     "hitsz-tmg/jevembed": {
       "status": "review",
       "discoveredAt": "2026-09-30T09:59:31.148Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "hitsz-tmg/jevembed",
         "status": "review",
         "score": {
           "jevAbout": 0.83,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.83,
+          "jevKeepConfidence": 0.85,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
@@ -1836,9 +1836,9 @@
         "evidenceUrl": "https://github.com/hitsz-tmg/jevembed/blob/d331c4b0f5a0f69b92d94b8f5b2f82853ac83277/README.md",
         "evidenceSha256": "c49eeaf6de9d266d33fa7afb3b57f75b5a6a2960b74e7b3545a3bea38aa9213d",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z",
+      "retryAt": "2026-11-11T21:29:42.942Z",
       "stars": 75
     },
     "dfm88/toolhunch": {
@@ -2324,7 +2324,7 @@
         "checkedAt": "2026-10-29T10:25:20.732Z"
       },
       "retryAt": "2026-11-05T10:25:20.732Z",
-      "stars": 501
+      "stars": 508
     },
     "phocinae/.github": {
       "status": "review",
@@ -2677,15 +2677,15 @@
     "xieshaocong33ethan/ventus-2b": {
       "status": "review",
       "discoveredAt": "2026-10-14T09:01:14.490Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "attempts": 4,
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "xieshaocong33ethan/ventus-2b",
         "status": "review",
         "score": {
           "jevAbout": 0.56,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.66,
+          "jevKeepConfidence": 0.67,
           "category": "other",
           "needsReview": true,
           "conflictingEvidence": false
@@ -2694,21 +2694,21 @@
         "evidenceUrl": "https://github.com/xieshaocong33ethan/ventus-2b/blob/fbc9593d4aa0b6bbcf75688496f2a2bd2e9b6a43/README.md",
         "evidenceSha256": "2f95f217d2b0ef4efbe2a6476efcc21dd64605abbb8265810b69a211901ad6ef",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z",
+      "retryAt": "2026-11-11T21:29:42.942Z",
       "stars": 0
     },
     "itsodeleo/mlx-direct-decider": {
       "status": "review",
       "discoveredAt": "2026-10-14T09:01:14.490Z",
-      "attempts": 3,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "attempts": 4,
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "itsodeleo/mlx-direct-decider",
         "status": "review",
         "score": {
-          "jevAbout": 0.54,
+          "jevAbout": 0.49,
           "jevKeep": "keep",
           "jevKeepConfidence": 0.58,
           "category": "alternatives",
@@ -2719,9 +2719,9 @@
         "evidenceUrl": "https://github.com/itsodeleo/mlx-direct-decider/blob/11a8cbc4d22c6bd7d788b67300c8e9ef588c2f60/README.md",
         "evidenceSha256": "cd3ae95f5c9e8c889b695008ecfb25fa5d87d1d5ea2062a58e97d6323e4cab9d",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z",
+      "retryAt": "2026-11-11T21:29:42.942Z",
       "stars": 5
     },
     "sma5111/coreai-kit": {
@@ -4011,25 +4011,25 @@
     "ranpin/jevcabin": {
       "status": "review",
       "discoveredAt": "2026-10-21T14:40:09.396Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "ranpin/jevcabin",
         "status": "review",
         "score": {
-          "jevAbout": 0.58,
+          "jevAbout": 0.56,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.51,
+          "jevKeepConfidence": 0.56,
           "category": "alternatives"
         },
-        "sha": "f9aed7e3c197db2f124d8268e5b692fa3c755528",
-        "evidenceUrl": "https://github.com/ranpin/jevcabin/blob/f9aed7e3c197db2f124d8268e5b692fa3c755528/README.md",
-        "evidenceSha256": "289c6cbd4fbd04df9a92871380a08bdb2163317191cd5a53e55714cee681d9b9",
+        "sha": "fa94895313385fa3a85053817207f33d9eb09480",
+        "evidenceUrl": "https://github.com/ranpin/jevcabin/blob/fa94895313385fa3a85053817207f33d9eb09480/README.md",
+        "evidenceSha256": "dad30751a5d308615bfadd6a63ff32a76f2879e516e5e18b63c311601a7b0943",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z"
+      "retryAt": "2026-11-11T21:29:42.942Z"
     },
     "singularity-compute/super-decider": {
       "status": "review",
@@ -4099,7 +4099,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 2,
-      "stars": 1438,
+      "stars": 1437,
       "checkedAt": "2026-10-30T20:08:32.638Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4196,9 +4196,9 @@
     "nflavioquatraro/mutations": {
       "status": "review",
       "discoveredAt": "2026-10-28T20:33:37.947Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "nflavioquatraro/mutations",
         "status": "review",
@@ -4207,32 +4207,34 @@
         "evidenceUrl": "https://github.com/nflavioquatraro/mutations/blob/ed91160a52f0cb54a2c6797879f200ce6a961ca8/README.md",
         "evidenceSha256": "5c8036aa133237fccf8f84bed1a9b3dfd58cdb7be6abc86d7ae5e78bef717c3e",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z"
+      "retryAt": "2026-11-11T21:29:42.942Z"
     },
     "parasite6/noullama": {
       "status": "review",
       "discoveredAt": "2026-10-28T20:33:37.947Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 1,
-      "checkedAt": "2026-10-28T20:33:37.947Z",
+      "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "parasite6/noullama",
         "status": "review",
         "score": {
-          "jevAbout": 0.54,
+          "jevAbout": 0.5,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.79,
-          "category": "alternatives"
+          "jevKeepConfidence": 0.83,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
         },
-        "sha": "921a0f93d9f0a304ac2dea4f9d87771e4e71026e",
-        "evidenceUrl": "https://github.com/parasite6/noullama/blob/921a0f93d9f0a304ac2dea4f9d87771e4e71026e/README.md",
-        "evidenceSha256": "0ebb5d8313c927bfdd15b5d2d721d74e57ce6dd444dfc7816bbfd617fef47c6c",
+        "sha": "3195403324adfedb94d6055938ba0010bc655405",
+        "evidenceUrl": "https://github.com/parasite6/noullama/blob/3195403324adfedb94d6055938ba0010bc655405/README.md",
+        "evidenceSha256": "52566930f0cb6e5a7f3fb440ae812fda5fef6e7f0f2bbd8a9b88304b1bc55db4",
         "model": "jev-latest",
-        "checkedAt": "2026-10-28T20:33:37.947Z"
+        "checkedAt": "2026-11-04T21:29:42.942Z"
       },
-      "retryAt": "2026-11-04T20:33:37.947Z"
+      "retryAt": "2026-11-11T21:29:42.942Z"
     },
     "hellotest006/decide": {
       "status": "review",
@@ -4442,6 +4444,56 @@
         "checkedAt": "2026-11-04T11:34:46.956Z"
       },
       "retryAt": "2026-11-11T11:34:46.956Z"
+    },
+    "lawrence3699/jev-style": {
+      "status": "review",
+      "discoveredAt": "2026-11-04T21:29:42.942Z",
+      "attempts": 1,
+      "stars": 53,
+      "checkedAt": "2026-11-04T21:29:42.942Z",
+      "lastReview": {
+        "repo": "lawrence3699/jev-style",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.86,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.8,
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "2beb622846b5c6bf7ed9479f2778a8b441bb0d11",
+        "evidenceUrl": "https://github.com/lawrence3699/jev-style/blob/2beb622846b5c6bf7ed9479f2778a8b441bb0d11/README.md",
+        "evidenceSha256": "82d9f5122dc0fec89a0953d20541afce033481e6e0c2a15d5a7f2f7ca106a002",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-04T21:29:42.942Z"
+      },
+      "retryAt": "2026-11-11T21:29:42.942Z"
+    },
+    "vortezwohl/jevner": {
+      "status": "review",
+      "discoveredAt": "2026-11-04T21:29:42.942Z",
+      "attempts": 1,
+      "stars": 1,
+      "checkedAt": "2026-11-04T21:29:42.942Z",
+      "lastReview": {
+        "repo": "vortezwohl/jevner",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.06,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.25,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "716f55c443e68b8533d0cf65bffa4ab1e06e86c1",
+        "evidenceUrl": "https://github.com/vortezwohl/jevner/blob/716f55c443e68b8533d0cf65bffa4ab1e06e86c1/README.md",
+        "evidenceSha256": "2e227c30af9be7d77e692de6e432efac9cd4a28f398d961e185b52d44a97ab72",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-04T21:29:42.942Z"
+      },
+      "retryAt": "2026-11-11T21:29:42.942Z"
     }
   }
 }
