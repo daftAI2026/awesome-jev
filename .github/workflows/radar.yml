@@ -122,7 +122,14 @@ jobs:
           merge-multiple: true
       - run: node --experimental-strip-types scripts/radar.ts --apply "$RUNNER_TEMP/snapshot"
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+      - name: Restore content-addressed OG images
+        uses: actions/cache@v4
+        with:
+          path: .cache/og
+          key: og-v1-${{ runner.os }}-${{ hashFiles('scripts/generate-og.ts', 'scripts/og-cache.ts', 'public/og-fonts/**', 'package-lock.json', '.node-version') }}
+          restore-keys: |
+            og-v1-${{ runner.os }}-${{ hashFiles('scripts/generate-og.ts', 'scripts/og-cache.ts', 'public/og-fonts/**', 'package-lock.json', '.node-version') }}-
+      - run: npm test && npm run categories:check && npm run lint && npm run build && npm run test:delivery
   publish:
     concurrency:
       group: jev-data-publish

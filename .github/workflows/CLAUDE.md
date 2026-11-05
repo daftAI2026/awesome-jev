@@ -6,7 +6,7 @@ alternatives.yml: 独立替代实现发现与增量发布，独立开关/预算�
 news-sync.yml: AIHOT 新闻验证与 ID 增量发布；实际推送后派发 main 校验，不修改项目快照或持有部署凭据
 radar.yml: 核心候选发现与审核，保留原预算身份与付费步骤；无前置统计探针，采集器严格校验身份
 metadata-sync.yml: 全目录统计错峰同步，无模型；独占统计状态，发布阶段共用有限原生队列
-site.yml: 精确 PR/main 交付与同次 artifact 部署；允许纯状态后继提交，通知可信 main 收录控制器
+site.yml: PR 只保留最新运行，main 每运行独立；纯说明 PR 快速成功，完整交付复用内容寻址 OG 后按同次 artifact 部署，通知可信 main 收录控制器
 submission-review.yml: 可信 main 上的 Issue/PR 建议性审查与恢复，允许写评论但不改目录或合并 PR
 submission-intake.yml: 独立可信 main 条件写入；自动 keep 或维护者 /ok 分类收据生成数据 PR，精确 CI 后合并/关闭；完整不匹配纯投稿的拒收/CAS 回收与有界恢复，无 Jev 凭据
 
@@ -22,3 +22,4 @@ GITHUB_TOKEN 推送不触发普通 push Actions。四采集器仅在 status=publ
 
 法则: 可信代码·权限隔离·发布前验证
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+

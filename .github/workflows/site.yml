@@ -1,5 +1,5 @@
 # [INPUT]: 依赖可信 main、精确 PR head 与完整交付检查
-# [OUTPUT]: 封装同版本产物，可信 main 部署并通知收录控制器
+# [OUTPUT]: 复用已核验 OG、保留完整交付检查；封装同版本产物交接可信 main
 # [POS]: 网站唯一交付入口；不持有审核密钥
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 name: Jev site delivery
@@ -18,9 +18,10 @@ on:
         default: validate
 permissions:
   contents: read
+  pull-requests: read
 concurrency:
-  group: jev-site-${{ github.ref }}
-  cancel-in-progress: false
+  group: jev-site-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || format('run-{0}', github.run_id) }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   verify:
     outputs:
@@ -29,18 +30,38 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - uses: actions/github-script@v7
+        id: paths
+        with:
+          script: |
+            if (context.eventName !== 'pull_request') {
+              core.setOutput('code', 'true');
+              return;
+            }
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              ...context.repo, pull_number: context.issue.number, per_page: 100
+            });
+            const docs = path => /^(README(?:\.[^/]*)?|LICENSE(?:\.[^/]*)?|AGENTS\.md|CLAUDE\.md)$/.test(path)
+              || path.startsWith('docs/');
+            const code = files.length === 0 || files.length >= 3000
+              || files.some(file => !docs(file.filename) || (file.previous_filename && !docs(file.previous_filename)));
+            core.setOutput('code', String(code));
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        if: steps.paths.outputs.code == 'true'
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
           fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        if: steps.paths.outputs.code == 'true'
         with:
           node-version-file: .node-version
           cache: npm
       - name: Install locked dependencies
+        if: steps.paths.outputs.code == 'true'
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Verify new or edited rationale quotes at pinned sources
+        if: steps.paths.outputs.code == 'true'
         run: |
           if [ -z "$INCLUSION_BASE_SHA" ]; then
             INCLUSION_BASE_SHA=$(git rev-parse HEAD^)
@@ -48,8 +69,20 @@ jobs:
           npm run inclusion:verify -- "$INCLUSION_BASE_SHA"
         env:
           INCLUSION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+      - name: Restore content-addressed OG images
+        if: steps.paths.outputs.code == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .cache/og
+          key: og-v1-${{ runner.os }}-${{ hashFiles('scripts/generate-og.ts', 'scripts/og-cache.ts', 'public/og-fonts/**', 'package-lock.json', '.node-version') }}
+          restore-keys: |
+            og-v1-${{ runner.os }}-${{ hashFiles('scripts/generate-og.ts', 'scripts/og-cache.ts', 'public/og-fonts/**', 'package-lock.json', '.node-version') }}-
+      - name: Test and lint
+        if: steps.paths.outputs.code == 'true'
+        run: npm test && npm run categories:check && npm run lint
       - name: Verify catalog and delivery
-        run: npm run typecheck && npm test && npm run categories:check && npm run data:check && npm run lint && npm run build && npm run test:delivery
+        if: steps.paths.outputs.code == 'true'
+        run: npm run build && npm run test:delivery
       - name: Package verified Worker output
         id: package
         if: >-

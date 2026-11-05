@@ -5,6 +5,8 @@
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { readFile, mkdir, writeFile, readdir, rm, lstat } from 'node:fs/promises'
+import { createHash } from 'node:crypto'
+import { cachedPng } from './og-cache.ts'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { Resvg } from '@cf-wasm/resvg/node'
@@ -49,18 +51,31 @@ async function buildOgAssets(root: string) {
   const rows = JSON.parse(await readFile(path.join(root, 'data/github.json'), 'utf8')) as DirectoryItem[]
   const names = ['Geist-Regular.ttf', 'Geist-SemiBold.ttf', 'GeistMono-Regular.ttf', 'NotoSansSC.ttf']
   const fonts = await Promise.all(names.map((name) => readFile(path.join(root, 'public/og-fonts', name))))
-  const count = await generateOgAssets(root, rows, async (svg) => {
+  const inputs = await Promise.all(['scripts/generate-og.ts', 'scripts/og-cache.ts', 'package-lock.json', '.node-version'].map(file => readFile(path.join(root, file))))
+  const identity = createHash('sha256').update(JSON.stringify([process.versions.node, process.platform, process.arch]))
+  for (const input of [...inputs, ...fonts]) identity.update(input).update('\0')
+  const cacheIdentity = identity.digest('hex')
+  const cacheDirectory = path.join(root, '.cache/og')
+  const used = new Set<string>()
+  let rendered = 0
+  const count = await generateOgAssets(root, rows, async (svg) => cachedPng(cacheDirectory, cacheIdentity, svg, async (svg) => {
+    rendered++
     const cjk = /[\u2e80-\u9fff\uac00-\ud7ff\uf900-\ufaff\uff00-\uffef\u3040-\u30ff]/u.test(svg)
     const renderer = await Resvg.async(svg, { font: { fontBuffers: cjk ? fonts : fonts.slice(0, 3), defaultFontFamily: 'Geist' } })
     try {
       const image = renderer.render()
       try { return new Uint8Array(image.asPng()) } finally { image.free() }
     } finally { renderer.free() }
-  })
+  }, used))
+  await mkdir(cacheDirectory, { recursive: true })
+  for (const file of await readdir(cacheDirectory)) {
+    if (/^[a-f0-9]{64}\.bin$/.test(file) && !used.has(file)) await rm(path.join(cacheDirectory, file))
+  }
   const files = await readdir(path.join(root, 'dist/client'), { recursive: true, withFileTypes: true })
   const assets = files.filter((file) => file.isFile()).length
   assertFreeAssetCount(assets)
-  process.stdout.write(`Generated ${count} public OG PNGs; ${assets}/20000 static files.\n`)
+  process.stdout.write(`Generated ${count} public OG PNGs (${count - rendered} reused, ${rendered} rendered); ${assets}/20000 static files.\n`)
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) await buildOgAssets(process.cwd())
+
