@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-04T19:48:28.393Z",
+  "at": "2026-11-05T06:52:08.464Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,16 +68,61 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 10,
   "added": 0,
   "pending": 3906,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "topherchris420/james_library",
+      "repo": "teleai-uagi/awesome-agent-memory",
       "status": "error",
-      "reason": "github-ineligible-repository"
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mihaicristianfarcas/pingpong",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "lien0219/modurelay",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "arcj137442/jev-switch",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "assadawut170537cake-art/a.tom",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "jascenn/local-software-update-monitor",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "anandtharad/project",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "farhaduneci/mail-watcher",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "kavbad/potion",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
     }
   ],
   "identity": {
