@@ -14245,8 +14245,8 @@
     "evan-zhang/openclaw-typesafe-plugin": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "evan-zhang/openclaw-typesafe-plugin",
         "status": "review",
@@ -14263,7 +14263,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "ericmaddox/system1-mcp": {
       "status": "review",
@@ -14704,8 +14704,8 @@
     "mekashef/paideia-genesis": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "mekashef/paideia-genesis",
         "status": "review",
@@ -14722,7 +14722,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "gualican/jev-model-router": {
       "status": "review",
@@ -15205,8 +15205,8 @@
     "mundulabs/gradula": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "mundulabs/gradula",
         "status": "review",
@@ -15218,7 +15218,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "timrogers/formanator": {
       "status": "review",
@@ -19452,14 +19452,14 @@
     "tune-77/tune_lease_55": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
           "path": "typesafe_asset_guard.py"
         }
       ],
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "tune-77/tune_lease_55",
         "status": "review",
@@ -19484,7 +19484,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "colazeta/criminal_infiltration_in_legal_economy_review": {
       "status": "review",
@@ -23531,7 +23531,7 @@
     "veighnsche/can-lang": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"jev-latest\" in:file",
@@ -23546,7 +23546,7 @@
           "path": "docs/implementation/evidence/2026-09-21/i46-jev/request-1.json"
         }
       ],
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "veighnsche/can-lang",
         "status": "review",
@@ -23574,7 +23574,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "glowbom/glowbom-oss": {
       "status": "review",
@@ -24979,8 +24979,8 @@
     "kairugakuo2/jev-arena": {
       "status": "error",
       "discoveredAt": "2026-09-22T11:39:00.649Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "kairugakuo2/jev-arena",
         "status": "review",
@@ -24992,7 +24992,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "revsmoke/leisurelarry": {
       "status": "review",
@@ -27015,14 +27015,14 @@
     "tangbl93/multica-agent-capacity": {
       "status": "error",
       "discoveredAt": "2026-09-22T16:57:22.408Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
           "path": "work/multica-agent-capacity/SKILL.md"
         }
       ],
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "tangbl93/multica-agent-capacity",
         "status": "review",
@@ -27040,7 +27040,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "arashari/youtube-judol-userscript-jev": {
       "status": "review",
@@ -28581,9 +28581,9 @@
     "ttlequals0/minuspodjev": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 3,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "ttlequals0/minuspodjev",
         "status": "review",
@@ -28595,7 +28595,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "jul1en-lin/pi-jev-compaction": {
       "status": "review",
@@ -28794,8 +28794,8 @@
     "mizzlr/whisper-typer": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "mizzlr/whisper-typer",
         "status": "review",
@@ -28807,7 +28807,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "kvmmn/_kavian": {
       "status": "error",
@@ -28900,8 +28900,8 @@
     "octalide/sift": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "octalide/sift",
         "status": "review",
@@ -28918,7 +28918,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "lazy-importer/cerberus-jev": {
       "status": "error",
@@ -29356,8 +29356,8 @@
     "peterwadsackett/agenticworkshop": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "peterwadsackett/agenticworkshop",
         "status": "review",
@@ -29376,7 +29376,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "karl-michaud/jevpire": {
       "status": "review",
@@ -29876,9 +29876,9 @@
     "venkateshv1266/my-pi-setup": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "venkateshv1266/my-pi-setup",
         "status": "review",
@@ -29890,7 +29890,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "rust4ai/spice": {
       "status": "review",
@@ -30950,9 +30950,9 @@
     "simon-zj1/jev-exam": {
       "status": "error",
       "discoveredAt": "2026-09-22T21:18:58.791Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "simon-zj1/jev-exam",
         "status": "review",
@@ -30964,7 +30964,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "promptengineer48/laya-vs-jev-arena": {
       "status": "review",
@@ -32628,9 +32628,9 @@
     "pareshbhangale/jev---job-hiring-content-detector": {
       "status": "error",
       "discoveredAt": "2026-09-24T21:31:04.130Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 2,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "pareshbhangale/jev---job-hiring-content-detector",
         "status": "review",
@@ -32642,7 +32642,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "dgu0323/xcrystal": {
       "status": "review",
@@ -32942,9 +32942,9 @@
     "siiick/pi-pignon": {
       "status": "error",
       "discoveredAt": "2026-09-24T21:31:04.130Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 3,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "siiick/pi-pignon",
         "status": "review",
@@ -32961,7 +32961,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "jevforge/jev-cloud-cost-guardian": {
       "status": "review",
@@ -34026,9 +34026,9 @@
     "misokina/aslan": {
       "status": "error",
       "discoveredAt": "2026-09-25T17:11:29.590Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "misokina/aslan",
         "status": "review",
@@ -34045,7 +34045,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "youkiti/tiab-review-plugin": {
       "status": "review",
@@ -34524,9 +34524,9 @@
     "akivet/mica-v0.1-4b": {
       "status": "error",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 30,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "akivet/mica-v0.1-4b",
         "status": "review",
@@ -34538,7 +34538,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "holasoymalva/jev-test-impact": {
       "status": "review",
@@ -34562,9 +34562,9 @@
     "michaljach/jet": {
       "status": "error",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "michaljach/jet",
         "status": "review",
@@ -34576,7 +34576,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "munod/jeba": {
       "status": "error",
@@ -35174,9 +35174,9 @@
     "ooo-hq/fez": {
       "status": "error",
       "discoveredAt": "2026-09-25T21:35:11.406Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "ooo-hq/fez",
         "status": "review",
@@ -35188,7 +35188,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "ericflo/pairsort": {
       "status": "review",
@@ -36251,9 +36251,9 @@
     "xyzzzh/groundingjev": {
       "status": "error",
       "discoveredAt": "2026-09-26T04:58:02.853Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 8,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "xyzzzh/groundingjev",
         "status": "review",
@@ -36270,7 +36270,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "psygns/osenv.io": {
       "status": "review",
@@ -37836,9 +37836,9 @@
     "oozoofrog/codex-skills": {
       "status": "error",
       "discoveredAt": "2026-09-26T11:24:52.568Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 1,
-      "checkedAt": "2026-10-29T05:51:52.831Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "oozoofrog/codex-skills",
         "status": "review",
@@ -37850,7 +37850,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-04T05:52:14.397Z"
       },
-      "retryAt": "2026-11-05T05:51:52.831Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "backmeupplz/plainwallet": {
       "status": "review",
@@ -39602,9 +39602,9 @@
     "kxuejava/travel-agent": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "kxuejava/travel-agent",
         "status": "review",
@@ -39621,7 +39621,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "perpetualsoftware/pad": {
       "status": "review",
@@ -40270,9 +40270,9 @@
     "tomhar92/typesafe-claude-router": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "tomhar92/typesafe-claude-router",
         "status": "review",
@@ -40289,7 +40289,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "dhirajpatra/agentic-payments-demo-x402-vs-acp-vs-ap2-langgraph-": {
       "status": "review",
@@ -40454,9 +40454,9 @@
     "muresanroland/orqadence": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "muresanroland/orqadence",
         "status": "review",
@@ -40468,7 +40468,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "tuwiliyt/decisionmodelbench": {
       "status": "review",
@@ -41514,28 +41514,23 @@
       "retryAt": "2026-11-10T01:00:30.186Z"
     },
     "akashpriyadarshii/akashpriyadarshii": {
-      "status": "error",
+      "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 1,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "akashpriyadarshii/akashpriyadarshii",
         "status": "review",
-        "score": {
-          "jevAbout": 0.89,
-          "jevKeep": "keep",
-          "jevKeepConfidence": 0.36,
-          "category": "agents"
-        },
-        "sha": "ba55dfffe0d422573b0bcdaf9bebf86b199f2729",
-        "evidenceUrl": "https://github.com/akashpriyadarshii/akashpriyadarshii/blob/ba55dfffe0d422573b0bcdaf9bebf86b199f2729/README.md",
-        "evidenceSha256": "ee18d25adf49c17626320bcbecfed0553fb8479864055a3f2ef590331e65b9e8",
+        "reason": "insufficient-provider-context",
+        "sha": "d5189bd0231ab676115d98c69bdf034ae59301e8",
+        "evidenceUrl": "https://github.com/akashpriyadarshii/akashpriyadarshii/blob/d5189bd0231ab676115d98c69bdf034ae59301e8/README.md",
+        "evidenceSha256": "9ef74f7654511ecb178bf0f38f880226b0f4a9f21de1c24c481f4db4dd9c434d",
         "evidenceLinks": [],
         "model": "jev-latest",
-        "checkedAt": "2026-10-05T14:38:34.294Z"
+        "checkedAt": "2026-11-05T19:59:37.779Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "g0-0000/pi-subagent-jev": {
       "status": "review",
@@ -41795,9 +41790,9 @@
     "lasimeri/intel-phi-avx512": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "lasimeri/intel-phi-avx512",
         "status": "review",
@@ -41809,7 +41804,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "msaad53407/ibm-bob-2.0-hackathon": {
       "status": "review",
@@ -41840,9 +41835,9 @@
     "eddiemessiah/ai-native-company": {
       "status": "error",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-10-29T13:06:43.001Z",
+      "checkedAt": "2026-11-05T19:59:37.779Z",
       "lastReview": {
         "repo": "eddiemessiah/ai-native-company",
         "status": "review",
@@ -41854,7 +41849,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-05T14:38:34.294Z"
       },
-      "retryAt": "2026-11-05T13:06:43.001Z"
+      "retryAt": "2026-11-12T19:59:37.779Z"
     },
     "frodi-karlsson/onesie": {
       "status": "review",
