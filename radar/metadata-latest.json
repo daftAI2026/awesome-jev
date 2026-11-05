@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "ad5d3ada338218054149721d3435ea2f93b2b6d1",
-  "at": "2026-11-04T20:25:12.061Z",
+  "baselineSha": "ea7ca725113436d035228c3b0c124cd04b3a882b",
+  "at": "2026-11-05T07:52:59.712Z",
   "totalProjects": 3160,
   "metadata": {
-    "ok": 3038,
-    "failed": 122,
+    "ok": 3041,
+    "failed": 119,
     "batches": 65,
     "cost": 65,
     "other": 3060,
-    "remaining": 122,
+    "remaining": 119,
     "attempted": 3160,
-    "fresh": 3038,
-    "unavailable": 122,
+    "fresh": 3041,
+    "unavailable": 119,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -136,11 +136,6 @@
       "reason": "github-unavailable-repository"
     },
     {
-      "id": "gh-17-akashpriyadarshii-jev-superpowers",
-      "repo": "akashpriyadarshii/jev-superpowers",
-      "reason": "github-unavailable-repository"
-    },
-    {
       "id": "gh-8-dingw530-playwright-jev",
       "repo": "dingw530/playwright-jev",
       "reason": "github-unavailable-repository"
@@ -163,11 +158,6 @@
     {
       "id": "gh-8-codepawl-tacet",
       "repo": "codepawl/tacet",
-      "reason": "github-unavailable-repository"
-    },
-    {
-      "id": "gh-17-akashpriyadarshii-jev-curate",
-      "repo": "akashpriyadarshii/jev-curate",
       "reason": "github-unavailable-repository"
     },
     {
@@ -198,11 +188,6 @@
     {
       "id": "gh-10-keysersoft-jev-mcp-server",
       "repo": "keysersoft/jev-mcp-server",
-      "reason": "github-unavailable-repository"
-    },
-    {
-      "id": "gh-17-akashpriyadarshii-jev-seo",
-      "repo": "akashpriyadarshii/jev-seo",
       "reason": "github-unavailable-repository"
     },
     {
@@ -639,8 +624,8 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 1,
-    "restored": 0,
+    "unavailable": 2,
+    "restored": 3,
     "checked": 50
   }
 }
