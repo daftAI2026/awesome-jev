@@ -6553,5 +6553,35 @@
     "reason": null,
     "originalUrl": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
     "aihotUrl": "https://aihot.news/items/yhn1xzay70v5llxvtmbjrtxs4"
+  },
+  {
+    "id": "shd82xocfhmrai4ieou2gacsp",
+    "title": "Perplexity 的 decider 流量进展",
+    "originalTitle": "Making good progress. More to come.",
+    "summary": "进展不错。后续还有更多。",
+    "sourceName": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+    "publishedAt": "2026-11-04T21:53:09.000Z",
+    "discoveredAt": "2026-11-04T22:02:29.173Z",
+    "category": "industry",
+    "score": 29,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/AravSrinivas/status/2118099255810490451",
+    "aihotUrl": "https://aihot.news/items/shd82xocfhmrai4ieou2gacsp"
+  },
+  {
+    "id": "qh3yf0i9zuqo0m7sgo601taho",
+    "title": "Latent Space 幕后访谈：Kill My SaaS、Jev 与 2026 年 AI 展望及 AI Engineer 上海站",
+    "originalTitle": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+    "summary": "Latent Space 发布幕后访谈，聊 Kill My SaaS、Jev 与 2026 年 AI 趋势，并收录 AI Engineer 上海站内容。本期 AI News 覆盖 11/02-11/03 动态：腾讯 Hy4 在 APEX-Agents 得 75.2，API 定价 $0.834/$2.501 每百万 token 并计划开源权重；Kimi K3.1 Pro 权重定于周三发布。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-11-04T19:17:30.000Z",
+    "discoveredAt": "2026-11-04T19:43:29.550Z",
+    "category": "industry",
+    "score": 42,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
+    "aihotUrl": "https://aihot.news/items/qh3yf0i9zuqo0m7sgo601taho"
   }
 ]
