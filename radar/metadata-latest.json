@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "ea7ca725113436d035228c3b0c124cd04b3a882b",
-  "at": "2026-11-05T07:52:59.712Z",
+  "baselineSha": "af1c824d9834ce6c0725866ff598d671c6a40659",
+  "at": "2026-11-05T20:38:15.233Z",
   "totalProjects": 3160,
   "metadata": {
-    "ok": 3041,
-    "failed": 119,
+    "ok": 3040,
+    "failed": 120,
     "batches": 65,
     "cost": 65,
     "other": 3060,
-    "remaining": 119,
+    "remaining": 120,
     "attempted": 3160,
-    "fresh": 3041,
-    "unavailable": 119,
+    "fresh": 3040,
+    "unavailable": 120,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "keepglide/master-jev-hook",
+        "to": "keepglide/askaway-model",
+        "databaseId": 1387532085
+      }
+    ]
   },
   "receipts": [
     {
@@ -123,6 +129,11 @@
     {
       "id": "gh-13-czinegeroland-review-gate",
       "repo": "czinegeroland/review-gate",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-7-jyeswak-jev_playground",
+      "repo": "jyeswak/jev_playground",
       "reason": "github-unavailable-repository"
     },
     {
@@ -622,10 +633,10 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 2,
-    "restored": 3,
+    "unavailable": 0,
+    "restored": 0,
     "checked": 50
   }
 }
