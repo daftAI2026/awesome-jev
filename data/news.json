@@ -6598,5 +6598,20 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenBMB/status/2118156551072710709",
     "aihotUrl": "https://aihot.news/items/jl3qj6bzz9u5hu6tdw5fq07kj"
+  },
+  {
+    "id": "rifbsuwh2qe2ffsoeck0z1ces",
+    "title": "腾讯发布 Hy4：首次支持图像理解与计算机操作，权重后续开放",
+    "originalTitle": "Tencent releases Hy4 with vision and computer use, claims second place among Chinese AI models",
+    "summary": "腾讯在预览约两个月后正式发布大语言模型 Hy4，首次支持图像理解和自主操作软件，权重将在未定日期开放，目前可通过 Tencent Cloud、OpenRouter 和元宝使用。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-11-05T16:06:31.000Z",
+    "discoveredAt": "2026-11-05T17:03:45.663Z",
+    "category": "ai-models",
+    "score": 69,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://the-decoder.com/tencent-releases-hy4-with-vision-and-computer-use-claims-second-place-among-chinese-ai-models/",
+    "aihotUrl": "https://aihot.news/items/rifbsuwh2qe2ffsoeck0z1ces"
   }
 ]
