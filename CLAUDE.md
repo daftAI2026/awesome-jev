@@ -63,3 +63,7 @@ MCP 不改变现有网页、README 的收录及下架规则。公开指南不保
 可信 site main 校验封装同版本 dist，production job 按 artifact ID 部署，不重复构建。快照验证与最终 main 交付仍各构建一次。仅六条精确状态文件推进不使旧产物过期；逐提交检查完整 Git 历史，非状态变更及 revert 均拒绝旧产物。部署凭据仅存 production Secret，环境仅允许 main；PR/采集器不持有此凭据。最终 site_changed=true 的数据推送显式派发 site 校验；纯状态保存不派发。部署开关与 Cloudflare Git 构建切换/恢复见 docs/deployment.md。
 
 法则: 极简·稳定·导航·版本精确；修改后按文件头部 → 局部地图 → 全局地图检查。
+
+
+CI 的 main 校验每次独立运行；仅 PR 取消旧版本。PR 纯根说明与 docs/ 改动保留轻量 verify 成功检查。
+OG 构建缓存位于 .cache/og，以完整 SVG、字体、渲染源码、锁文件与运行时寻址，并校验字节摘要；失配或损坏重新渲染，完整交付检查仍每次运行。

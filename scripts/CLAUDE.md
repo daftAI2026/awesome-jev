@@ -127,3 +127,6 @@ verify-delivery.ts: 构建后零跳过页面/OG/Agents/MCP/分页/标签验收�
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+
+
+og-cache.ts / og-cache.test.ts: 构建期 PNG 内容寻址缓存；SVG、字体、渲染器与锁文件参与身份，校验 PNG 签名和字节摘要，损坏重建。缓存不在 dist，构建后裁剪旧键。
