@@ -6583,5 +6583,20 @@
     "reason": null,
     "originalUrl": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
     "aihotUrl": "https://aihot.news/items/qh3yf0i9zuqo0m7sgo601taho"
+  },
+  {
+    "id": "jl3qj6bzz9u5hu6tdw5fq07kj",
+    "title": "面壁智能回应 MiniCPM-OCR 与 Jev 可靠文档 AI 拆解",
+    "originalTitle": "Thanks for the great breakdown! 💙🙌 Reliable document AI isn't just about extracting information, but also knowing when to double-check ...",
+    "summary": "面壁智能 OpenBMB 转发并感谢一篇关于 MiniCPM-OCR 的拆解，表示可靠的文档 AI 不只是抽取信息，还要知道何时复核。该拆解介绍 MiniCPM-OCR 用 1.3B 参数解析中英文扫描件、手机照片、弯曲和倾斜页面，配合 MiniCPM-OCR Jev 为抽取文本、公式和表格的可靠性评分，低置信结果可转人工复核，Jev 只标记不可靠输出而不自动修正，项目提供开放权重、微调支持及 llama.cpp、vLLM、SGLang、Ollama 推理兼容。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-05T01:40:49.000Z",
+    "discoveredAt": "2026-11-05T01:43:32.177Z",
+    "category": "ai-products",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2118156551072710709",
+    "aihotUrl": "https://aihot.news/items/jl3qj6bzz9u5hu6tdw5fq07kj"
   }
 ]
