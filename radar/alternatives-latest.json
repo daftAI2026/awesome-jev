@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-05T01:48:37.461Z",
+  "at": "2026-11-05T11:29:49.963Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,91 +20,102 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 8,
+  "reviewed": 7,
   "added": 0,
   "pending": 217,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "nandhakishorm/laya",
-      "status": "review",
-      "reason": "suspicious-review-instructions",
-      "sha": "462c2644e654add83516e53c7a65909f8072d529",
-      "evidenceUrl": "https://github.com/nandhakishorm/laya/blob/462c2644e654add83516e53c7a65909f8072d529/README.md",
-      "evidenceSha256": "a0bc64cdf62b6a8b5bf069c439847537261dd759479195abe2c5c38017789747",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
-    },
-    {
-      "repo": "mizorewww/laya-coreml",
+      "repo": "valen-team/valen",
       "status": "review",
       "score": {
-        "jevAbout": 0.66,
+        "jevAbout": 0.86,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.73,
-        "category": "alternatives"
+        "jevKeepConfidence": 0.76,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
       },
-      "sha": "a51fa1751fbb90c4a322bd1d42eed941179a2573",
-      "evidenceUrl": "https://github.com/mizorewww/laya-coreml/blob/a51fa1751fbb90c4a322bd1d42eed941179a2573/README.md",
-      "evidenceSha256": "f5d0000b96ea0e33b3076e8b082f295161aaa2edd13508b0848c9388c18d24c5",
+      "sha": "e47eb2b5e6af9d1c5b86f72bbac7fafcc31c8373",
+      "evidenceUrl": "https://github.com/valen-team/valen/blob/e47eb2b5e6af9d1c5b86f72bbac7fafcc31c8373/README.md",
+      "evidenceSha256": "dd01514d01897f4dcd872893c5902e1a583ece50e00c399eebd6efc54c708850",
       "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
+      "checkedAt": "2026-11-05T11:29:49.963Z"
     },
     {
-      "repo": "dfm88/toolhunch",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e",
-      "evidenceUrl": "https://github.com/dfm88/toolhunch/blob/8373a8b7c21d9e93b9f5c39ea4dce5b29a30bf2e/README.md",
-      "evidenceSha256": "d93b160e92c8e23124643d37b9daeaa488afec3204e5144b0cf44a3870884a33",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
-    },
-    {
-      "repo": "evandroamparo/system-one",
-      "status": "review",
-      "reason": "missing-open-source-license",
-      "sha": "f5f1d71e5485356b3dcc1bf0aff5562da1c6a967",
-      "evidenceUrl": "https://github.com/evandroamparo/system-one/blob/f5f1d71e5485356b3dcc1bf0aff5562da1c6a967/README.md",
-      "evidenceSha256": "064528e85b6d101550ae350b25a72d5d6cec55fc57a48820a3710ec192e20de6",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
-    },
-    {
-      "repo": "kelsonthony/laya-springboot-starter",
+      "repo": "phocinae/phocinae-largha-150m-v1",
       "status": "review",
       "score": {
-        "jevAbout": 0.52,
+        "jevAbout": 0.92,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.68,
+        "jevKeepConfidence": 0.48,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "15c09b7ce7b2f64598f7a570bd2072521120cf80",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-largha-150m-v1/blob/15c09b7ce7b2f64598f7a570bd2072521120cf80/README.md",
+      "evidenceSha256": "7b203842957efba74626fa9db1358d39231a994d4aa889c173dcad1cb3f6535a",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-05T11:29:49.963Z"
+    },
+    {
+      "repo": "singularity-compute/super-decider",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.92,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.42,
         "category": "alternatives"
       },
-      "sha": "b37cf09dab1177299c5a34e29c8a095581eb773c",
-      "evidenceUrl": "https://github.com/kelsonthony/laya-springboot-starter/blob/b37cf09dab1177299c5a34e29c8a095581eb773c/README.md",
-      "evidenceSha256": "469fd88df4e68dea02eac0e425641b8aa17b55b4ad8b4821f73a5495e0d5317e",
+      "sha": "d1a96b10504bf4ca774d657d74612ced8e330679",
+      "evidenceUrl": "https://github.com/singularity-compute/super-decider/blob/d1a96b10504bf4ca774d657d74612ced8e330679/README.md",
+      "evidenceSha256": "cf225b145f29ed1668fbc2b940a862ad470abf1871bb8f36baa79f95cfedfb7d",
       "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
+      "checkedAt": "2026-11-05T11:29:49.963Z"
     },
     {
-      "repo": "novaleolin/jev-evolve",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "rotsl/layaagent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "vicfei/jev-pipeline-skill",
+      "repo": "uxiaohan/jevos-docker",
       "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "57b67e48d33272f863f548d14f4f0c4a95efaa8e",
-      "evidenceUrl": "https://github.com/vicfei/jev-pipeline-skill/blob/57b67e48d33272f863f548d14f4f0c4a95efaa8e/README.md",
-      "evidenceSha256": "3a82ff7874cb3c25060cb93152e111297eac71bb220e7502eb43edc9d2802dbd",
+      "score": {
+        "jevAbout": 0.05,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.11,
+        "category": "alternatives"
+      },
+      "sha": "a1bae7fda44bcd883a8a7a054f9f644a7d6319b2",
+      "evidenceUrl": "https://github.com/uxiaohan/jevos-docker/blob/a1bae7fda44bcd883a8a7a054f9f644a7d6319b2/README.md",
+      "evidenceSha256": "01b9224a868502c3971673b32e41bb9cc25f769f25d155ddef5548b24537ff38",
       "model": "jev-latest",
-      "checkedAt": "2026-11-05T01:48:37.461Z"
+      "checkedAt": "2026-11-05T11:29:49.963Z"
+    },
+    {
+      "repo": "hellotest006/decide",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.91,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.86,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "f6a99ae3effc5b33780fd9f5207cfd4716f289f7",
+      "evidenceUrl": "https://github.com/hellotest006/decide/blob/f6a99ae3effc5b33780fd9f5207cfd4716f289f7/README.md",
+      "evidenceSha256": "4279909d48b4b9bff4546df6d91a0265e37f9b46d21e86be1cd83acef1ed7a2f",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-05T11:29:49.963Z"
+    },
+    {
+      "repo": "itsodeleo/jev-mlx",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "lang4292/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
     }
   ],
   "identity": {
