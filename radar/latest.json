@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-05T19:59:37.779Z",
+  "at": "2026-11-06T06:51:45.546Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,152 +68,59 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 27,
+  "reviewed": 5,
   "added": 0,
   "pending": 3906,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "tangbl93/multica-agent-capacity",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "tune-77/tune_lease_55",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "veighnsche/can-lang",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "akivet/mica-v0.1-4b",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "xyzzzh/groundingjev",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "siiick/pi-pignon",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "ttlequals0/minuspodjev",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "pareshbhangale/jev---job-hiring-content-detector",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "oozoofrog/codex-skills",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "evan-zhang/openclaw-typesafe-plugin",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kairugakuo2/jev-arena",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mekashef/paideia-genesis",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "michaljach/jet",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "misokina/aslan",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mizzlr/whisper-typer",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mundulabs/gradula",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "octalide/sift",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "ooo-hq/fez",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "peterwadsackett/agenticworkshop",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "simon-zj1/jev-exam",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "venkateshv1266/my-pi-setup",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "akashpriyadarshii/akashpriyadarshii",
+      "repo": "alexei-led/pi-model-router",
       "status": "review",
       "reason": "insufficient-provider-context",
-      "sha": "d5189bd0231ab676115d98c69bdf034ae59301e8",
-      "evidenceUrl": "https://github.com/akashpriyadarshii/akashpriyadarshii/blob/d5189bd0231ab676115d98c69bdf034ae59301e8/README.md",
-      "evidenceSha256": "9ef74f7654511ecb178bf0f38f880226b0f4a9f21de1c24c481f4db4dd9c434d",
+      "sha": "339e9b12aec1dcaed0313f07ca42d97a2cc94ad3",
+      "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/339e9b12aec1dcaed0313f07ca42d97a2cc94ad3/README.md",
+      "evidenceSha256": "39e91359947c4e6f34d39ebb47ef0433a48d53ad034ed13bd44aaf2f1f3047ce",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/alexei-led/pi-model-router/blob/339e9b12aec1dcaed0313f07ca42d97a2cc94ad3/docs/jev-advisor.md",
+          "path": "docs/jev-advisor.md",
+          "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-06T06:51:45.546Z"
+    },
+    {
+      "repo": "alexkarpandrus/tickettrain",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "asertyui1/decide.js",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.89,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.86,
+        "category": "sdk"
+      },
+      "sha": "51df04a8c95574088d47d123560e6540fa5f800d",
+      "evidenceUrl": "https://github.com/asertyui1/decide.js/blob/51df04a8c95574088d47d123560e6540fa5f800d/README.md",
+      "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
       "evidenceLinks": [],
       "model": "jev-latest",
-      "checkedAt": "2026-11-05T19:59:37.779Z"
+      "checkedAt": "2026-11-06T06:51:45.546Z"
     },
     {
-      "repo": "eddiemessiah/ai-native-company",
+      "repo": "chonamdoo/agents-memory",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "kxuejava/travel-agent",
+      "repo": "janmrow/smart-inbox",
       "status": "error",
       "reason": "github-http-404"
-    },
-    {
-      "repo": "lasimeri/intel-phi-avx512",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "muresanroland/orqadence",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "tomhar92/typesafe-claude-router",
-      "status": "error",
-      "reason": "github-network-or-timeout"
     }
   ],
   "identity": {
