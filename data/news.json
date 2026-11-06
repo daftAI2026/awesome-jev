@@ -6628,5 +6628,50 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2118522339235389607",
     "aihotUrl": "https://aihot.news/items/xjgrqy7vdyf4rmhivpqilbikd"
+  },
+  {
+    "id": "b85bjkzbqi7g5h26iw7h173hn",
+    "title": "Ramp 数据显示 AI token 支出增长放缓，正值 Anthropic 临近 IPO",
+    "originalTitle": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+    "summary": "Ramp 数据显示企业 AI token 支出在 8 月和 9 月合计仅增长 1.5%，远低于 7 月的 42%，尽管 token 用量仍在上升；10 月数据回升至环比 8.9%。",
+    "sourceName": "TechCrunch：AI（RSS）",
+    "publishedAt": "2026-11-06T15:54:47.000Z",
+    "discoveredAt": "2026-11-06T17:54:08.632Z",
+    "category": "industry",
+    "score": 72,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+    "aihotUrl": "https://aihot.news/items/b85bjkzbqi7g5h26iw7h173hn"
+  },
+  {
+    "id": "w1m4i8js5jw6iz5plr9s3scfl",
+    "title": "Frontier Radar #5：如果 AGI 已近，为何大量核心研究者出走大厂创办 neolabs",
+    "originalTitle": "Frontier Radar #5: If AGI is so close, why is everyone leaving? The neolabs and their bets",
+    "summary": "The Decoder 分析了 27 家主要由 OpenAI、Google DeepMind、Meta 等大厂离任核心研究员创办的 AI 实验室（neolabs），指出尽管 Jensen Huang 和 Greg Brockman 在 GPT-6 Astra 发布后宣称 AGI 已至，许多模型缔造者却选择另立门户。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-11-06T15:55:23.000Z",
+    "discoveredAt": "2026-11-06T16:24:09.610Z",
+    "category": "opinion",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://the-decoder.com/frontier-radar-5-if-agi-is-so-close-why-is-everyone-leaving-the-neolabs-and-their-bets/",
+    "aihotUrl": "https://aihot.news/items/w1m4i8js5jw6iz5plr9s3scfl"
+  },
+  {
+    "id": "ed4gnfu2f09xz5t7ur690iadn",
+    "title": "OpenRouter 发布新一代 Auto Router 与 Auto Code 路由器",
+    "originalTitle": "Introducing the New Auto and Auto Code Routers",
+    "summary": "OpenRouter 发布新一代 Auto Router，并推出专为编码场景的 Auto Code（openrouter/auto-code），替换 openrouter/auto 即可使用。",
+    "sourceName": "OpenRouter：Announcements（RSS）",
+    "publishedAt": "2026-11-06T00:00:00.000Z",
+    "discoveredAt": "2026-11-06T16:09:10.921Z",
+    "category": "ai-products",
+    "score": 73,
+    "selected": true,
+    "reason": "官方公布新旧路由器基准对比和真实流量数据，编码场景成本比 Claude Opus 5.5 低 74%，可用于评估自动选型是否替代手动选模型。",
+    "originalUrl": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
+    "aihotUrl": "https://aihot.news/items/ed4gnfu2f09xz5t7ur690iadn"
   }
 ]
