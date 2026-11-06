@@ -6613,5 +6613,20 @@
     "reason": null,
     "originalUrl": "https://the-decoder.com/tencent-releases-hy4-with-vision-and-computer-use-claims-second-place-among-chinese-ai-models/",
     "aihotUrl": "https://aihot.news/items/rifbsuwh2qe2ffsoeck0z1ces"
+  },
+  {
+    "id": "xjgrqy7vdyf4rmhivpqilbikd",
+    "title": "TypeSafe AI 谈可靠决策需靠代码",
+    "originalTitle": "so we heard you like decision models",
+    "summary": "听说你们喜欢决策模型\n\n但如何用模型对复杂数据做出可靠决策？\n\n答案是不能：可靠性需要代码，因此可靠的决策是通过在代码中组合可靠的判断来实现的\n\nJev 做出可靠的判断",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-06T01:54:20.000Z",
+    "discoveredAt": "2026-11-06T02:23:33.697Z",
+    "category": "opinion",
+    "score": 24,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2118522339235389607",
+    "aihotUrl": "https://aihot.news/items/xjgrqy7vdyf4rmhivpqilbikd"
   }
 ]
