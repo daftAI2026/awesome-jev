@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "af1c824d9834ce6c0725866ff598d671c6a40659",
-  "at": "2026-11-05T20:38:15.233Z",
+  "baselineSha": "70cdffebc5b757584775bb5287f82ac80a7e06ad",
+  "at": "2026-11-06T07:53:12.040Z",
   "totalProjects": 3160,
   "metadata": {
     "ok": 3040,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "keepglide/master-jev-hook",
-        "to": "keepglide/askaway-model",
-        "databaseId": 1387532085
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -633,9 +627,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 14,
     "restored": 0,
     "checked": 50
   }
