@@ -6673,5 +6673,50 @@
     "reason": "官方公布新旧路由器基准对比和真实流量数据，编码场景成本比 Claude Opus 5.5 低 74%，可用于评估自动选型是否替代手动选模型。",
     "originalUrl": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
     "aihotUrl": "https://aihot.news/items/ed4gnfu2f09xz5t7ur690iadn"
+  },
+  {
+    "id": "daqv4oxofxilxnha9d4l11b7s",
+    "title": "OpenRouter 限免 Parallel Decisions 一周",
+    "originalTitle": "What's better than the highest accuracy web-grounded decisions model? How about a week of free requests?",
+    "summary": "还有什么比准确率最高的网络依据决策模型更好？免费请求一周怎么样？\n\n试试 Parallel Decisions，针对实时网络获取快速的结构化答案，附带概率和引用，OpenRouter 用户专享 7 天免费！",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-11-06T21:32:28.000Z",
+    "discoveredAt": "2026-11-06T21:55:29.070Z",
+    "category": "ai-products",
+    "score": 41,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2118818826859225525",
+    "aihotUrl": "https://aihot.news/items/daqv4oxofxilxnha9d4l11b7s"
+  },
+  {
+    "id": "yb1906f1x93f3c5tnsoixz404",
+    "title": "DeepSeek V4.1 Flash 领跑任务榜",
+    "originalTitle": "7/ On the task leaderboard, DeepSeek V4.1 Flash leads most coding and agent tasks by tokens. By spend, Claude Opus 5.5 leads most of the ...",
+    "summary": "7/ 在任务排行榜上，按 token 计，DeepSeek V4.1 Flash 在多数编程和智能体任务中领先。按花费计，Claude Opus 5.5 在榜单多数项目中领先。\n\nJev 1.13 和 GLM 5.3 Flash 在数据提取和数据转换方面表现强劲。",
+    "sourceName": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-11-06T20:28:09.000Z",
+    "discoveredAt": "2026-11-06T20:54:13.424Z",
+    "category": "ai-models",
+    "score": 40,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenRouter/status/2118802638800404565",
+    "aihotUrl": "https://aihot.news/items/yb1906f1x93f3c5tnsoixz404"
+  },
+  {
+    "id": "yrfzimitvmw2amm4ajhw3so1m",
+    "title": "Hightouch 实测混合评估器：Jev 转发低置信案例给 Opus，以超 4 倍低成本逼近其准确率",
+    "originalTitle": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+    "summary": "Hightouch 发布身份解析（IDR）结果评估的实测研究，用 pseudopeople 模拟数据构建含过合并案例的 1,000 条身份基准，测试决策模型 Jev、GPT-6 Luna 与 Claude Opus 5.5 等前沿模型。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-11-04T14:44:00.000Z",
+    "discoveredAt": "2026-11-06T21:28:14.277Z",
+    "category": "paper",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://hightouch.com/blog/llm-judges-identity-resolution",
+    "aihotUrl": "https://aihot.news/items/yrfzimitvmw2amm4ajhw3so1m"
   }
 ]
