@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35140
+      "stars": 35177
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -711,7 +711,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 1631
+      "stars": 1630
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1057,7 +1057,7 @@
         "checkedAt": "2026-11-05T21:34:31.834Z"
       },
       "retryAt": "2026-11-12T21:34:31.834Z",
-      "stars": 8275
+      "stars": 8277
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1249,24 +1249,24 @@
     "talex-touch/flint": {
       "status": "review",
       "discoveredAt": "2026-09-26T08:49:12.120Z",
-      "attempts": 6,
-      "checkedAt": "2026-10-31T19:32:43.631Z",
+      "attempts": 7,
+      "checkedAt": "2026-11-07T19:37:11.192Z",
       "lastReview": {
         "repo": "talex-touch/flint",
         "status": "review",
         "score": {
-          "jevAbout": 0.44,
+          "jevAbout": 0.4,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.48,
+          "jevKeepConfidence": 0.52,
           "category": "alternatives"
         },
         "sha": "683ba4f47294d777e90297ef24df929a3a772f41",
         "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
         "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T19:32:43.631Z"
+        "checkedAt": "2026-11-07T19:37:11.192Z"
       },
-      "retryAt": "2026-11-07T19:32:43.631Z",
+      "retryAt": "2026-11-14T19:37:11.192Z",
       "stars": 0
     },
     "thegovind/blink": {
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 550
+      "stars": 561
     },
     "phocinae/.github": {
       "status": "review",
@@ -3049,16 +3049,16 @@
     "solvai/jevrunner": {
       "status": "review",
       "discoveredAt": "2026-10-17T13:11:54.597Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 1,
-      "checkedAt": "2026-10-31T19:32:43.631Z",
+      "checkedAt": "2026-11-07T19:37:11.192Z",
       "lastReview": {
         "repo": "solvai/jevrunner",
         "status": "review",
         "score": {
-          "jevAbout": 0.3,
+          "jevAbout": 0.37,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.13,
+          "jevKeepConfidence": 0.42,
           "category": "alternatives",
           "needsReview": true,
           "conflictingEvidence": false
@@ -3067,9 +3067,9 @@
         "evidenceUrl": "https://github.com/solvai/jevrunner/blob/221e66f2c65355ad25387bfc3bd42e74f1b6b5fe/README.md",
         "evidenceSha256": "0499d5d984b9782ff17d12999e367486a47351a529c4fa4f7ba4f3cc1cffa624",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T19:32:43.631Z"
+        "checkedAt": "2026-11-07T19:37:11.192Z"
       },
-      "retryAt": "2026-11-07T19:32:43.631Z"
+      "retryAt": "2026-11-14T19:37:11.192Z"
     },
     "paraujo692/jev-social": {
       "status": "error",
@@ -3146,9 +3146,9 @@
     "felipegenef/local-ai-system-one-lab": {
       "status": "review",
       "discoveredAt": "2026-10-17T17:55:33.058Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 0,
-      "checkedAt": "2026-10-31T19:32:43.631Z",
+      "checkedAt": "2026-11-07T19:37:11.192Z",
       "lastReview": {
         "repo": "felipegenef/local-ai-system-one-lab",
         "status": "review",
@@ -3157,9 +3157,9 @@
         "evidenceUrl": "https://github.com/felipegenef/local-ai-system-one-lab/blob/28eff79b84842da5dc605c804d2375d546f24ad7/README.md",
         "evidenceSha256": "edf1a94071fa1c8920c45097a778b6de27dba3541c9d590199278805da49b852",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T19:32:43.631Z"
+        "checkedAt": "2026-11-07T19:37:11.192Z"
       },
-      "retryAt": "2026-11-07T19:32:43.631Z"
+      "retryAt": "2026-11-14T19:37:11.192Z"
     },
     "anned799/jev-social": {
       "status": "error",
@@ -4097,7 +4097,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 3,
-      "stars": 1442,
+      "stars": 1443,
       "checkedAt": "2026-11-06T21:03:54.975Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4447,7 +4447,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 1,
-      "stars": 83,
+      "stars": 89,
       "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
@@ -4515,6 +4515,31 @@
         "checkedAt": "2026-11-07T10:41:04.169Z"
       },
       "retryAt": "2026-11-14T10:41:04.169Z"
+    },
+    "webmaster-ramos/jev-multilingual-benchmark": {
+      "status": "review",
+      "discoveredAt": "2026-11-07T19:37:11.192Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-11-07T19:37:11.192Z",
+      "lastReview": {
+        "repo": "webmaster-ramos/jev-multilingual-benchmark",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.04,
+          "jevKeep": "drop",
+          "jevKeepConfidence": 0.34,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": true
+        },
+        "sha": "ae0ccdcaa7b4f3026debb23331acee1154b3257b",
+        "evidenceUrl": "https://github.com/webmaster-ramos/jev-multilingual-benchmark/blob/ae0ccdcaa7b4f3026debb23331acee1154b3257b/README.md",
+        "evidenceSha256": "1ee815ad6a13449a80dbd8d6f707c8853ad14e45d1f2866e93ad55911f39901c",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-07T19:37:11.192Z"
+      },
+      "retryAt": "2026-11-14T19:37:11.192Z"
     }
   }
 }
