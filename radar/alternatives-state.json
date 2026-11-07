@@ -52,7 +52,7 @@
         "checkedAt": "2026-11-05T21:34:31.834Z"
       },
       "retryAt": "2026-11-12T21:34:31.834Z",
-      "stars": 93
+      "stars": 94
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -250,7 +250,7 @@
         "checkedAt": "2026-11-05T21:34:31.834Z"
       },
       "retryAt": "2026-11-12T21:34:31.834Z",
-      "stars": 38
+      "stars": 39
     },
     "yunhai-dev/laya2typesafeapi": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35125
+      "stars": 35140
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1057,7 +1057,7 @@
         "checkedAt": "2026-11-05T21:34:31.834Z"
       },
       "retryAt": "2026-11-12T21:34:31.834Z",
-      "stars": 8273
+      "stars": 8275
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1226,24 +1226,24 @@
     "donliggett/julius": {
       "status": "review",
       "discoveredAt": "2026-09-26T00:08:50.699Z",
-      "attempts": 6,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "attempts": 7,
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "donliggett/julius",
         "status": "review",
         "score": {
-          "jevAbout": 0.84,
+          "jevAbout": 0.86,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.46,
+          "jevKeepConfidence": 0.35,
           "category": "alternatives"
         },
         "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
         "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
         "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T09:57:25.964Z"
+        "checkedAt": "2026-11-07T10:41:04.169Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z",
+      "retryAt": "2026-11-14T10:41:04.169Z",
       "stars": 1
     },
     "talex-touch/flint": {
@@ -1295,13 +1295,13 @@
     "lab-emi/chiplaya": {
       "status": "review",
       "discoveredAt": "2026-09-26T18:42:48.900Z",
-      "attempts": 7,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "attempts": 8,
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "lab-emi/chiplaya",
         "status": "review",
         "score": {
-          "jevAbout": 0.81,
+          "jevAbout": 0.82,
           "jevKeep": "keep",
           "jevKeepConfidence": 0.89,
           "category": "alternatives",
@@ -1312,9 +1312,9 @@
         "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
         "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T09:57:25.964Z"
+        "checkedAt": "2026-11-07T10:41:04.169Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z",
+      "retryAt": "2026-11-14T10:41:04.169Z",
       "stars": 0
     },
     "lakoreai/sev": {
@@ -1837,7 +1837,7 @@
         "checkedAt": "2026-11-04T21:29:42.942Z"
       },
       "retryAt": "2026-11-11T21:29:42.942Z",
-      "stars": 77
+      "stars": 78
     },
     "dfm88/toolhunch": {
       "status": "review",
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 545
+      "stars": 550
     },
     "phocinae/.github": {
       "status": "review",
@@ -2430,8 +2430,8 @@
     "final-bench/s1mb": {
       "status": "review",
       "discoveredAt": "2026-10-10T01:14:07.107Z",
-      "attempts": 4,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "attempts": 5,
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "final-bench/s1mb",
         "status": "review",
@@ -2445,9 +2445,9 @@
         "evidenceUrl": "https://github.com/final-bench/s1mb/blob/ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d/README.md",
         "evidenceSha256": "7fa4c1dd304ba3e28dc44f2fff59ff9032e4bc812c7724daf744ff461f22917b",
         "model": "jev-latest",
-        "checkedAt": "2026-10-31T09:57:25.964Z"
+        "checkedAt": "2026-11-07T10:41:04.169Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z",
+      "retryAt": "2026-11-14T10:41:04.169Z",
       "stars": 2
     },
     "eileenes/decidelint": {
@@ -3308,9 +3308,9 @@
     "kohaku8046/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "kohaku8046/jev-social",
         "status": "review",
@@ -3321,14 +3321,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z"
+      "retryAt": "2026-11-14T10:41:04.169Z"
     },
     "olivier56729/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "olivier56729/jev-social",
         "status": "review",
@@ -3339,7 +3339,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z"
+      "retryAt": "2026-11-14T10:41:04.169Z"
     },
     "teilomillet/wyat": {
       "status": "review",
@@ -3362,9 +3362,9 @@
     "magdalena606/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-10-31T09:57:25.964Z",
+      "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "magdalena606/coreai-kit",
         "status": "review",
@@ -3375,7 +3375,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-07T09:57:25.964Z"
+      "retryAt": "2026-11-14T10:41:04.169Z"
     },
     "evelynm11/coreai-kit": {
       "status": "error",
@@ -4097,7 +4097,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 3,
-      "stars": 1438,
+      "stars": 1442,
       "checkedAt": "2026-11-06T21:03:54.975Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4286,7 +4286,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 2,
-      "stars": 903,
+      "stars": 904,
       "checkedAt": "2026-11-05T11:29:49.963Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4447,7 +4447,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 1,
-      "stars": 73,
+      "stars": 83,
       "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
@@ -4492,6 +4492,29 @@
         "checkedAt": "2026-11-04T21:29:42.942Z"
       },
       "retryAt": "2026-11-11T21:29:42.942Z"
+    },
+    "sgstq0811/verdictad-jev-ad": {
+      "status": "review",
+      "discoveredAt": "2026-11-07T10:41:04.169Z",
+      "attempts": 1,
+      "stars": 12,
+      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "lastReview": {
+        "repo": "sgstq0811/verdictad-jev-ad",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.3,
+          "jevKeep": "review",
+          "jevKeepConfidence": 0.25,
+          "category": "alternatives"
+        },
+        "sha": "7a57de0a191d751fb04188dbd5ca1c9cedba5a02",
+        "evidenceUrl": "https://github.com/sgstq0811/verdictad-jev-ad/blob/7a57de0a191d751fb04188dbd5ca1c9cedba5a02/README.md",
+        "evidenceSha256": "7818603bd61b44d89adfdf19a7c0b11bd5f5ff0f39283649b512d0f635519973",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-07T10:41:04.169Z"
+      },
+      "retryAt": "2026-11-14T10:41:04.169Z"
     }
   }
 }
