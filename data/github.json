@@ -177387,5 +177387,97 @@
         "checkedAt": "2026-11-03T01:00:30.186Z"
       }
     }
+  },
+  {
+    "id": "gh-9-zafer-liu-jev-demo-router",
+    "type": "github",
+    "title": "jev-demo-router",
+    "summary": "Support-ticket routing MVP adapted for TypeSafe Jev - 100/100 classification with confidence-gated dispatch",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/Zafer-Liu/jev-demo-router",
+    "sourceMeta": {
+      "repo": "Zafer-Liu/jev-demo-router",
+      "author": "Zafer-Liu",
+      "stars": 1,
+      "forks": 1,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1378964439,
+        "nodeId": "R_kgDOUjFT1w"
+      },
+      "date": "2026-09-21",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "zafer-liu/jev-demo-router",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "52515898362e7ce2c06d0561855c4d6f460bee47",
+        "evidenceUrl": "https://github.com/zafer-liu/jev-demo-router/blob/52515898362e7ce2c06d0561855c4d6f460bee47/README.md",
+        "evidenceSha256": "e22dd3ad3dcc14f99cef949e4c1e8d775c9a84abab680d91934e2c141062ff7e",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/zafer-liu/jev-demo-router/blob/52515898362e7ce2c06d0561855c4d6f460bee47/README.zh-CN.md",
+            "path": "README.zh-CN.md",
+            "sha256": "a458ad6fc1e5c0bc3d490bae05d2bab8fb40604d891ddc3e0a7c3b0521c110e5"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-07T21:54:12.980Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-lu-zero-systemone",
+    "type": "github",
+    "title": "systemone",
+    "summary": "Rust client for the TypeSafe AI systemone API",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/lu-zero/systemone",
+    "sourceMeta": {
+      "repo": "lu-zero/systemone",
+      "author": "lu-zero",
+      "stars": 0,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1375416024,
+        "nodeId": "R_kgDOUfsu2A"
+      },
+      "date": "2026-09-18",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "lu-zero/systemone",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "sdk"
+        },
+        "sha": "26fd38e15ad078e676bea3c14539c6ee622e4b2d",
+        "evidenceUrl": "https://github.com/lu-zero/systemone/blob/26fd38e15ad078e676bea3c14539c6ee622e4b2d/README.md",
+        "evidenceSha256": "b89dfbe5fe0bbf4b59595693ea1e095e36ffd89a8eb7dacfa641652e6768aee1",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-07T21:54:12.980Z"
+      }
+    }
   }
 ]
