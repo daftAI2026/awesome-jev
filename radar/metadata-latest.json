@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "894fe3f78279c7a05e98dad03fe592b8e68e6419",
-  "at": "2026-11-06T19:56:17.583Z",
+  "baselineSha": "4fda4ccf149f6db2465372b78f98304f0aef3f0c",
+  "at": "2026-11-07T07:03:43.804Z",
   "totalProjects": 3160,
   "metadata": {
-    "ok": 3040,
-    "failed": 120,
+    "ok": 3039,
+    "failed": 121,
     "batches": 65,
     "cost": 65,
     "other": 3060,
-    "remaining": 120,
+    "remaining": 121,
     "attempted": 3160,
-    "fresh": 3040,
-    "unavailable": 120,
+    "fresh": 3039,
+    "unavailable": 121,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -168,6 +168,11 @@
     {
       "id": "gh-9-207studio-jev-skills",
       "repo": "207studio/jev-skills",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-13-yoshibatakumu-everything-jev",
+      "repo": "yoshibatakumu/everything-jev",
       "reason": "github-unavailable-repository"
     },
     {
