@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "1057887acdae4804b5fc04935e09d9f8e679d6bd",
-  "at": "2026-11-07T13:56:42.025Z",
-  "totalProjects": 3160,
+  "baselineSha": "9a7d068e32e1202a9c561e37156c8f3cb84106fd",
+  "at": "2026-11-07T22:41:25.871Z",
+  "totalProjects": 3162,
   "metadata": {
-    "ok": 3039,
-    "failed": 121,
+    "ok": 3040,
+    "failed": 122,
     "batches": 65,
     "cost": 65,
-    "other": 3060,
-    "remaining": 121,
-    "attempted": 3160,
-    "fresh": 3039,
-    "unavailable": 121,
+    "other": 3062,
+    "remaining": 122,
+    "attempted": 3162,
+    "fresh": 3040,
+    "unavailable": 122,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -163,6 +163,11 @@
     {
       "id": "gh-8-codepawl-tacet",
       "repo": "codepawl/tacet",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-13-patrick-sch03-jev-issue-radar",
+      "repo": "patrick-sch03/jev-issue-radar",
       "reason": "github-unavailable-repository"
     },
     {
@@ -634,7 +639,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 2,
     "restored": 0,
     "checked": 50
   }

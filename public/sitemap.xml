@@ -4381,12 +4381,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dimweaker/jev-libero" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/dingw530/playwright-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dingw530/playwright-jev" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/dipeshtripathi13/jevmatch</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dipeshtripathi13/jevmatch" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dipeshtripathi13/jevmatch" />
@@ -11927,12 +11921,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nithin0620/jev-issuepilot" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/nitish-kumar30/jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nitish-kumar30/jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/nitoba/opencode-jev-router</loc>
@@ -21085,12 +21073,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/model-routing" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/tags/decision-engine</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
@@ -21107,6 +21089,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/manifest-v3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/rag</loc>
@@ -27413,12 +27401,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dimweaker/jev-libero" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dimweaker/jev-libero" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dimweaker/jev-libero" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/dingw530/playwright-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dingw530/playwright-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/dipeshtripathi13/jevmatch</loc>
@@ -34961,12 +34943,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nithin0620/jev-issuepilot" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/nitish-kumar30/jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nitish-kumar30/jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/nitoba/opencode-jev-router</loc>
@@ -44119,12 +44095,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/model-routing" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/tags/decision-engine</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
@@ -44141,6 +44111,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/manifest-v3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/rag</loc>
@@ -50447,12 +50423,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dimweaker/jev-libero" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dimweaker/jev-libero" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dimweaker/jev-libero" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/dingw530/playwright-jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dingw530/playwright-jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dingw530/playwright-jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/dipeshtripathi13/jevmatch</loc>
@@ -57995,12 +57965,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nithin0620/jev-issuepilot" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nithin0620/jev-issuepilot" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/nitish-kumar30/jev</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/nitish-kumar30/jev" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/nitish-kumar30/jev" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/nitoba/opencode-jev-router</loc>
@@ -67153,12 +67117,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/model-routing" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/tags/playwright</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/tags/decision-engine</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/decision-engine" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/decision-engine" />
@@ -67175,6 +67133,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/manifest-v3" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/manifest-v3" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/tags/playwright</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/playwright" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/playwright" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/rag</loc>
