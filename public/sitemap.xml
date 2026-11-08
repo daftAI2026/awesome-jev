@@ -727,12 +727,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahmadswalih/jev-chess-test" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/ahtoooxa/jev-cyrillic-audit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahtoooxa/jev-cyrillic-audit" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/ahwlsqja/clickhouse-jev</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahwlsqja/clickhouse-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahwlsqja/clickhouse-jev" />
@@ -16369,6 +16363,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tontoko/jev-browser" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/tonysafonov/jev-cyrillic-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tonysafonov/jev-cyrillic-audit" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/tornikegomareli/typesafe-sdk-rust</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tornikegomareli/typesafe-sdk-rust" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tornikegomareli/typesafe-sdk-rust" />
@@ -23747,12 +23747,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahmadswalih/jev-chess-test" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahmadswalih/jev-chess-test" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahmadswalih/jev-chess-test" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/ahtoooxa/jev-cyrillic-audit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahtoooxa/jev-cyrillic-audit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/ahwlsqja/clickhouse-jev</loc>
@@ -39391,6 +39385,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tontoko/jev-browser" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/tonysafonov/jev-cyrillic-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tonysafonov/jev-cyrillic-audit" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/tornikegomareli/typesafe-sdk-rust</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tornikegomareli/typesafe-sdk-rust" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tornikegomareli/typesafe-sdk-rust" />
@@ -46769,12 +46769,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahmadswalih/jev-chess-test" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahmadswalih/jev-chess-test" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahmadswalih/jev-chess-test" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/ahtoooxa/jev-cyrillic-audit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/ahtoooxa/jev-cyrillic-audit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/ahtoooxa/jev-cyrillic-audit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/ahwlsqja/clickhouse-jev</loc>
@@ -62411,6 +62405,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tontoko/jev-browser" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tontoko/jev-browser" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tontoko/jev-browser" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/tonysafonov/jev-cyrillic-audit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tonysafonov/jev-cyrillic-audit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tonysafonov/jev-cyrillic-audit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/tornikegomareli/typesafe-sdk-rust</loc>

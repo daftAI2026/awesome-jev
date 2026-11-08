@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "9a7d068e32e1202a9c561e37156c8f3cb84106fd",
-  "at": "2026-11-07T22:41:25.871Z",
+  "baselineSha": "7206aac7f59c7859c1ded92a76c40776564976cb",
+  "at": "2026-11-08T18:19:49.620Z",
   "totalProjects": 3162,
   "metadata": {
-    "ok": 3040,
-    "failed": 122,
+    "ok": 3038,
+    "failed": 124,
     "batches": 65,
     "cost": 65,
     "other": 3062,
-    "remaining": 122,
+    "remaining": 124,
     "attempted": 3162,
-    "fresh": 3040,
-    "unavailable": 122,
+    "fresh": 3038,
+    "unavailable": 124,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "ahtoooxa/jev-cyrillic-audit",
+        "to": "tonysafonov/jev-cyrillic-audit",
+        "databaseId": 1378191807
+      }
+    ]
   },
   "receipts": [
     {
@@ -168,6 +174,11 @@
     {
       "id": "gh-13-patrick-sch03-jev-issue-radar",
       "repo": "patrick-sch03/jev-issue-radar",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-4-fol2-jev-playground",
+      "repo": "fol2/jev-playground",
       "reason": "github-unavailable-repository"
     },
     {
@@ -511,6 +522,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-7-gogoymh-jev-backed-function-calling",
+      "repo": "gogoymh/decision-model-guided-function-calling",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-9-hughes941-jev-social",
       "repo": "hughes941/jev-social",
       "reason": "github-unavailable-repository"
@@ -637,9 +653,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 2,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
