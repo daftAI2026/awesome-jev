@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35177
+      "stars": 35182
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1272,24 +1272,24 @@
     "thegovind/blink": {
       "status": "review",
       "discoveredAt": "2026-09-26T13:52:54.166Z",
-      "attempts": 6,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "attempts": 7,
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "thegovind/blink",
         "status": "review",
         "score": {
-          "jevAbout": 0.89,
+          "jevAbout": 0.87,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.79,
+          "jevKeepConfidence": 0.83,
           "category": "alternatives"
         },
         "sha": "b726d6588d63db3ae94c46ee724b3e555334ee0d",
         "evidenceUrl": "https://github.com/thegovind/blink/blob/b726d6588d63db3ae94c46ee724b3e555334ee0d/README.md",
         "evidenceSha256": "3c63768ac8b2990a3349a5f2874818912b0227754ffc618c1f4bc7ccc78ddb1e",
         "model": "jev-latest",
-        "checkedAt": "2026-11-01T00:26:12.741Z"
+        "checkedAt": "2026-11-08T00:54:49.992Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z",
+      "retryAt": "2026-11-15T00:54:49.992Z",
       "stars": 0
     },
     "lab-emi/chiplaya": {
@@ -1320,24 +1320,24 @@
     "lakoreai/sev": {
       "status": "review",
       "discoveredAt": "2026-09-26T18:42:48.900Z",
-      "attempts": 6,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "attempts": 7,
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "lakoreai/sev",
         "status": "review",
         "score": {
-          "jevAbout": 0.87,
+          "jevAbout": 0.85,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.79,
+          "jevKeepConfidence": 0.8,
           "category": "alternatives"
         },
         "sha": "fefcfc33d01c08104dc3de0374ad4e5daf07f923",
         "evidenceUrl": "https://github.com/lakoreai/sev/blob/fefcfc33d01c08104dc3de0374ad4e5daf07f923/README.md",
         "evidenceSha256": "a292dc1d15402941d9467956c2749021635c988d017576d13a2ffdf2ac65ac64",
         "model": "jev-latest",
-        "checkedAt": "2026-11-01T00:26:12.741Z"
+        "checkedAt": "2026-11-08T00:54:49.992Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z",
+      "retryAt": "2026-11-15T00:54:49.992Z",
       "stars": 0
     },
     "manjunathshiva/opendecider": {
@@ -2017,8 +2017,8 @@
     "laurentvv/compare-ia-decision": {
       "status": "review",
       "discoveredAt": "2026-10-03T14:24:54.800Z",
-      "attempts": 5,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "laurentvv/compare-ia-decision",
         "status": "review",
@@ -2027,9 +2027,9 @@
         "evidenceUrl": "https://github.com/laurentvv/compare-ia-decision/blob/dd703bf5e0eb21f67a8e907293cd072b77848177/README.md",
         "evidenceSha256": "ffbc5e4d62b60e36626adb1586727bc39760603c41aa68f38b40a58ef493ec85",
         "model": "jev-latest",
-        "checkedAt": "2026-11-01T00:26:12.741Z"
+        "checkedAt": "2026-11-08T00:54:49.992Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z",
+      "retryAt": "2026-11-15T00:54:49.992Z",
       "stars": 0
     },
     "wuchengwei1996/jev-zh-tw-eval": {
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 561
+      "stars": 567
     },
     "phocinae/.github": {
       "status": "review",
@@ -2477,8 +2477,8 @@
     "academicgowndigitalclock977/laya-coreml": {
       "status": "review",
       "discoveredAt": "2026-10-10T19:30:28.998Z",
-      "attempts": 4,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "attempts": 5,
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "academicgowndigitalclock977/laya-coreml",
         "status": "review",
@@ -2487,9 +2487,9 @@
         "evidenceUrl": "https://github.com/academicgowndigitalclock977/laya-coreml/blob/337e4eae68b08a33e66343b16dae5e419a2493f5/README.md",
         "evidenceSha256": "77440c0e1c783391bbd27192fbdd2e109fd375816ca54fa4c1796b1c282748de",
         "model": "jev-latest",
-        "checkedAt": "2026-11-01T00:26:12.741Z"
+        "checkedAt": "2026-11-08T00:54:49.992Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z",
+      "retryAt": "2026-11-15T00:54:49.992Z",
       "stars": 0
     },
     "destroyerdarkness/turbojev": {
@@ -3380,9 +3380,9 @@
     "evelynm11/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T18:16:43.477Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "evelynm11/coreai-kit",
         "status": "review",
@@ -3393,14 +3393,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T18:16:43.477Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z"
+      "retryAt": "2026-11-15T00:54:49.992Z"
     },
     "rjang188/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T18:16:43.477Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-11-01T00:26:12.741Z",
+      "checkedAt": "2026-11-08T00:54:49.992Z",
       "lastReview": {
         "repo": "rjang188/coreai-kit",
         "status": "review",
@@ -3411,7 +3411,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T18:16:43.477Z"
       },
-      "retryAt": "2026-11-08T00:26:12.741Z"
+      "retryAt": "2026-11-15T00:54:49.992Z"
     },
     "dinosaur-mc/dsh-decision-tools": {
       "status": "review",
@@ -4447,7 +4447,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 1,
-      "stars": 89,
+      "stars": 91,
       "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
