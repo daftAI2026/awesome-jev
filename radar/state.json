@@ -55932,7 +55932,7 @@
     "ryx2/slopshopper": {
       "status": "error",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
-      "attempts": 5,
+      "attempts": 6,
       "codeHints": [
         {
           "query": "\"api.typesafe.ai\" in:file",
@@ -55943,8 +55943,8 @@
           "path": "data/mods/kunchenguid-compact-adviser-compact-adviser.json"
         }
       ],
-      "checkedAt": "2026-11-01T06:11:01.835Z",
-      "retryAt": "2026-11-08T06:11:01.835Z"
+      "checkedAt": "2026-11-08T13:29:20.551Z",
+      "retryAt": "2026-11-15T13:29:20.551Z"
     },
     "xingye12/prale": {
       "status": "review",

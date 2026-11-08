@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-08T06:06:08.345Z",
+  "at": "2026-11-08T13:29:20.551Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,12 +68,18 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 1,
   "added": 0,
   "pending": 3904,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "ryx2/slopshopper",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
