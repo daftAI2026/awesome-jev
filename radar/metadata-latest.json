@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "be06c2a31e5f4d34d871d459086892bbe68865cb",
-  "at": "2026-11-09T07:54:04.079Z",
-  "totalProjects": 3162,
+  "baselineSha": "d475423f584ea1c0d5d21ffaa35bfe2f8ac76916",
+  "at": "2026-11-09T22:58:10.234Z",
+  "totalProjects": 3163,
   "metadata": {
-    "ok": 3038,
+    "ok": 3039,
     "failed": 124,
     "batches": 65,
     "cost": 65,
-    "other": 3062,
+    "other": 3063,
     "remaining": 124,
-    "attempted": 3162,
-    "fresh": 3038,
+    "attempted": 3163,
+    "fresh": 3039,
     "unavailable": 124,
     "deferredRemaining": 0,
     "top100": {
@@ -22,23 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "ferxalbs/aether-hold",
-        "to": "ferxalb/aether-hold",
-        "databaseId": 1375296267
-      },
-      {
-        "from": "ferxalbs/needle-lens",
-        "to": "ferxalb/needle-lens",
-        "databaseId": 1379011312
-      },
-      {
-        "from": "gudcks0305/jev-java",
-        "to": "gudcks/jev-java",
-        "databaseId": 1377313758
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -663,9 +647,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 3,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
