@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35221
+      "stars": 35235
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 584
+      "stars": 590
     },
     "phocinae/.github": {
       "status": "review",
@@ -4097,7 +4097,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 3,
-      "stars": 1444,
+      "stars": 1446,
       "checkedAt": "2026-11-06T21:03:54.975Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4447,7 +4447,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 1,
-      "stars": 105,
+      "stars": 110,
       "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
@@ -4497,7 +4497,7 @@
       "status": "review",
       "discoveredAt": "2026-11-07T10:41:04.169Z",
       "attempts": 1,
-      "stars": 12,
+      "stars": 13,
       "checkedAt": "2026-11-07T10:41:04.169Z",
       "lastReview": {
         "repo": "sgstq0811/verdictad-jev-ad",
