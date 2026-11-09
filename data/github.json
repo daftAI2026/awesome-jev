@@ -177506,5 +177506,48 @@
         "checkedAt": "2026-11-07T21:54:12.980Z"
       }
     }
+  },
+  {
+    "id": "gh-13-bulldozer2003-opencode-calibrated-access",
+    "type": "github",
+    "title": "opencode-calibrated-access",
+    "summary": "opencode-calibrated-access: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/bulldozer2003/opencode-calibrated-access",
+    "sourceMeta": {
+      "repo": "bulldozer2003/opencode-calibrated-access",
+      "author": "bulldozer2003",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1382312420,
+        "nodeId": "R_kgDOUmRp5A"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "bulldozer2003/opencode-calibrated-access",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "developer"
+        },
+        "sha": "ea5ca50d13b8b90c40fcc0602eab30040291e7cc",
+        "evidenceUrl": "https://github.com/bulldozer2003/opencode-calibrated-access/blob/ea5ca50d13b8b90c40fcc0602eab30040291e7cc/README.md",
+        "evidenceSha256": "d4d06456f6584f5db5c68052f92d9b7490bc966e296ab52e05517e9d89ed5c29",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-09T22:24:37.538Z"
+      }
+    }
   }
 ]

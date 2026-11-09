@@ -2485,6 +2485,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bufbuild/protoc-gen-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/bulldozer2003/opencode-calibrated-access</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bulldozer2003/opencode-calibrated-access" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/bulldozer2003/typesafe-ai</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bulldozer2003/typesafe-ai" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bulldozer2003/typesafe-ai" />
@@ -25507,6 +25513,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bufbuild/protoc-gen-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/bulldozer2003/opencode-calibrated-access</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bulldozer2003/opencode-calibrated-access" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/bulldozer2003/typesafe-ai</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bulldozer2003/typesafe-ai" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bulldozer2003/typesafe-ai" />
@@ -48527,6 +48539,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bufbuild/protoc-gen-jev" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bufbuild/protoc-gen-jev" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bufbuild/protoc-gen-jev" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/bulldozer2003/opencode-calibrated-access</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/bulldozer2003/opencode-calibrated-access" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/bulldozer2003/opencode-calibrated-access" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/bulldozer2003/typesafe-ai</loc>
