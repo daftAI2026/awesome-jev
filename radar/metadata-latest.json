@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "609e408ead9f70692a7dbfd85ae584a02ce85a34",
-  "at": "2026-11-08T22:50:12.805Z",
+  "baselineSha": "be06c2a31e5f4d34d871d459086892bbe68865cb",
+  "at": "2026-11-09T07:54:04.079Z",
   "totalProjects": 3162,
   "metadata": {
     "ok": 3038,
@@ -24,9 +24,19 @@
     },
     "resolved": [
       {
-        "from": "goodboybeau/system-one-playground",
-        "to": "jeffclimbsbikes/system-one-playground",
-        "databaseId": 1390267686
+        "from": "ferxalbs/aether-hold",
+        "to": "ferxalb/aether-hold",
+        "databaseId": 1375296267
+      },
+      {
+        "from": "ferxalbs/needle-lens",
+        "to": "ferxalb/needle-lens",
+        "databaseId": 1379011312
+      },
+      {
+        "from": "gudcks0305/jev-java",
+        "to": "gudcks/jev-java",
+        "databaseId": 1377313758
       }
     ]
   },
@@ -653,9 +663,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 3,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
