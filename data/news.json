@@ -6718,5 +6718,20 @@
     "reason": null,
     "originalUrl": "https://hightouch.com/blog/llm-judges-identity-resolution",
     "aihotUrl": "https://aihot.news/items/yrfzimitvmw2amm4ajhw3so1m"
+  },
+  {
+    "id": "r07jwhiucydzuxej4dv6v2jb5",
+    "title": "Artificial Analysis 发布 Decision Index v2：新增私有数据集与校准型 Decision Score",
+    "originalTitle": "Introducing the Artificial Analysis Decision Index v2",
+    "summary": "Artificial Analysis 发布 Decision Index v2，45% 的指数改由私有数据集构成（v1 为 25%），并采用同时奖励正确率与置信度校准的新指标 Decision Score。",
+    "sourceName": "Artificial Analysis 完整文章（网页）",
+    "publishedAt": "2026-11-07T16:00:00.000Z",
+    "discoveredAt": "2026-11-09T00:49:18.066Z",
+    "category": "ai-models",
+    "score": 47,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://artificialanalysis.ai/articles/decision-index-v2",
+    "aihotUrl": "https://aihot.news/items/r07jwhiucydzuxej4dv6v2jb5"
   }
 ]
