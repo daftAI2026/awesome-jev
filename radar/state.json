@@ -22496,7 +22496,7 @@
     "jzkk720/cubecloud-skills-bundle-kit": {
       "status": "error",
       "discoveredAt": "2026-09-22T04:56:17.783Z",
-      "attempts": 7,
+      "attempts": 8,
       "codeHints": [
         {
           "query": "\"TYPESAFE_API_KEY\" in:file",
@@ -22504,8 +22504,8 @@
         }
       ],
       "stars": 4,
-      "checkedAt": "2026-11-02T06:11:18.263Z",
-      "retryAt": "2026-11-09T06:11:18.263Z"
+      "checkedAt": "2026-11-09T06:38:18.691Z",
+      "retryAt": "2026-11-16T06:38:18.691Z"
     },
     "sqhh99/personal-site": {
       "status": "review",
