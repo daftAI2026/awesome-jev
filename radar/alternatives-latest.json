@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-09T12:07:57.392Z",
+  "at": "2026-11-09T23:51:26.820Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -20,175 +20,48 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 23,
+  "reviewed": 5,
   "added": 0,
   "pending": 220,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "baldellimtt/systemone-lab",
+      "repo": "aliliu604/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "justanotherkevin/awol",
       "status": "review",
       "score": {
-        "jevAbout": 0.58,
+        "jevAbout": 0.69,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.46,
-        "category": "alternatives"
-      },
-      "sha": "eb23defc7a2fb87bcc88df3f750b5b4d207b5aff",
-      "evidenceUrl": "https://github.com/baldellimtt/systemone-lab/blob/eb23defc7a2fb87bcc88df3f750b5b4d207b5aff/README.md",
-      "evidenceSha256": "0905603db201096e3bf9b040c45439ac5f5506dda4bbbf6e4b1cccaec7ee4d11",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-09T12:07:57.392Z"
-    },
-    {
-      "repo": "bojansandhaus/jev-home-assistant-sentinel",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "analee08998/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "catherinestavrou94306/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "demet52518/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "destroyerdarkness/turbojev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.8,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.77,
+        "jevKeepConfidence": 0.74,
         "category": "alternatives",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
-      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
-      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
+      "sha": "31844ca0cc4c2950e8f39e07449458013e9dba7f",
+      "evidenceUrl": "https://github.com/justanotherkevin/awol/blob/31844ca0cc4c2950e8f39e07449458013e9dba7f/README.md",
+      "evidenceSha256": "5af68102f0f08e2a4e79a763ab34f0a3b4d8aae31c8410b3801b9b602184c1b0",
       "model": "jev-latest",
-      "checkedAt": "2026-11-09T12:07:57.392Z"
+      "checkedAt": "2026-11-09T23:51:26.820Z"
     },
     {
-      "repo": "dinosaur-mc/dsh-decision-tools",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.53,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.22,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
-      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
-      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-09T12:07:57.392Z"
-    },
-    {
-      "repo": "evans13683/jev-social",
+      "repo": "kpetit760/jevcore",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "gpastore7188/jev-social",
+      "repo": "witthayaryu/jevcore",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "gunduz58439/coreai-kit",
+      "repo": "atvari-eu/opencode-system-one",
       "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "heleneioannidis5960/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "huzjie/drexforge",
-      "status": "review",
-      "reason": "insufficient-alternative-context",
-      "sha": "2a028b591320eb6ceca66f237722b05acf0ce248",
-      "evidenceUrl": "https://github.com/huzjie/drexforge/blob/2a028b591320eb6ceca66f237722b05acf0ce248/README.md",
-      "evidenceSha256": "63d5f87de53efab7593d8d6134a8f3b7a63dad38e6615b27f502994118b1a9af",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-09T12:07:57.392Z"
-    },
-    {
-      "repo": "kacper630/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kang83957/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kdunn86923/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lorenzofujita94/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lukascho22400/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "luuk736/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "meganhalas40/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mustafadupuis/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "sofiajohansson4765/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "susanne853/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "ahly15-max/phocinae-largha-150m-v1",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.73,
-        "jevKeep": "review",
-        "jevKeepConfidence": 0.22,
-        "category": "alternatives"
-      },
-      "sha": "f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b",
-      "evidenceUrl": "https://github.com/ahly15-max/phocinae-largha-150m-v1/blob/f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b/README.md",
-      "evidenceSha256": "4f066d29a2f2e8c0d3986915fab80d37ce8858a222c267aafa5725e71dc5a412",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-09T12:07:57.392Z"
+      "reason": "github-network-or-timeout"
     }
   ],
   "identity": {
@@ -199,5 +72,5 @@
     "resolved": []
   },
   "buffered": 0,
-  "totalProjects": 3160
+  "totalProjects": 3161
 }

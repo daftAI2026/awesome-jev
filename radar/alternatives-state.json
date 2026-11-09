@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35271
+      "stars": 35292
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1057,7 +1057,7 @@
         "checkedAt": "2026-11-05T21:34:31.834Z"
       },
       "retryAt": "2026-11-12T21:34:31.834Z",
-      "stars": 8284
+      "stars": 8286
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 598
+      "stars": 606
     },
     "phocinae/.github": {
       "status": "review",
@@ -3932,9 +3932,9 @@
     "witthayaryu/jevcore": {
       "status": "error",
       "discoveredAt": "2026-10-20T14:29:29.350Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-11-02T23:13:23.158Z",
+      "checkedAt": "2026-11-09T23:51:26.820Z",
       "lastReview": {
         "repo": "witthayaryu/jevcore",
         "status": "review",
@@ -3945,14 +3945,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-20T14:29:29.350Z"
       },
-      "retryAt": "2026-11-09T23:13:23.158Z"
+      "retryAt": "2026-11-16T23:51:26.820Z"
     },
     "kpetit760/jevcore": {
       "status": "error",
       "discoveredAt": "2026-10-20T14:29:29.350Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-11-02T23:13:23.158Z",
+      "checkedAt": "2026-11-09T23:51:26.820Z",
       "lastReview": {
         "repo": "kpetit760/jevcore",
         "status": "review",
@@ -3963,14 +3963,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-20T14:29:29.350Z"
       },
-      "retryAt": "2026-11-09T23:13:23.158Z"
+      "retryAt": "2026-11-16T23:51:26.820Z"
     },
     "aliliu604/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-20T14:29:29.350Z",
-      "attempts": 4,
+      "attempts": 5,
       "stars": 0,
-      "checkedAt": "2026-11-02T23:13:23.158Z",
+      "checkedAt": "2026-11-09T23:51:26.820Z",
       "lastReview": {
         "repo": "aliliu604/jev-social",
         "status": "review",
@@ -3981,7 +3981,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-20T14:29:29.350Z"
       },
-      "retryAt": "2026-11-09T23:13:23.158Z"
+      "retryAt": "2026-11-16T23:51:26.820Z"
     },
     "lychee888/qwenfn-hybrid-decision-engine": {
       "status": "review",
@@ -4055,9 +4055,9 @@
     "atvari-eu/opencode-system-one": {
       "status": "error",
       "discoveredAt": "2026-10-22T19:30:09.017Z",
-      "attempts": 3,
+      "attempts": 4,
       "stars": 1,
-      "checkedAt": "2026-11-05T21:34:31.834Z",
+      "checkedAt": "2026-11-09T23:51:26.820Z",
       "lastReview": {
         "repo": "atvari-eu/opencode-system-one",
         "status": "review",
@@ -4068,7 +4068,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-29T20:35:47.969Z"
       },
-      "retryAt": "2026-11-09T21:34:31.834Z"
+      "retryAt": "2026-11-16T23:51:26.820Z"
     },
     "takzen/bullfinch": {
       "status": "review",
@@ -4286,7 +4286,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 2,
-      "stars": 904,
+      "stars": 906,
       "checkedAt": "2026-11-05T11:29:49.963Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4369,25 +4369,27 @@
     "justanotherkevin/awol": {
       "status": "review",
       "discoveredAt": "2026-11-02T23:13:23.158Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 0,
-      "checkedAt": "2026-11-02T23:13:23.158Z",
+      "checkedAt": "2026-11-09T23:51:26.820Z",
       "lastReview": {
         "repo": "justanotherkevin/awol",
         "status": "review",
         "score": {
-          "jevAbout": 0.67,
+          "jevAbout": 0.69,
           "jevKeep": "keep",
           "jevKeepConfidence": 0.74,
-          "category": "alternatives"
+          "category": "alternatives",
+          "needsReview": true,
+          "conflictingEvidence": false
         },
-        "sha": "ce827dbceee08dbaccfab90e3749bb6fc2708850",
-        "evidenceUrl": "https://github.com/justanotherkevin/awol/blob/ce827dbceee08dbaccfab90e3749bb6fc2708850/README.md",
-        "evidenceSha256": "ad6f209c7e914a04928f33191a14f777029089a1f4f44f64e0e4a728d5a155b1",
+        "sha": "31844ca0cc4c2950e8f39e07449458013e9dba7f",
+        "evidenceUrl": "https://github.com/justanotherkevin/awol/blob/31844ca0cc4c2950e8f39e07449458013e9dba7f/README.md",
+        "evidenceSha256": "5af68102f0f08e2a4e79a763ab34f0a3b4d8aae31c8410b3801b9b602184c1b0",
         "model": "jev-latest",
-        "checkedAt": "2026-11-02T23:13:23.158Z"
+        "checkedAt": "2026-11-09T23:51:26.820Z"
       },
-      "retryAt": "2026-11-09T23:13:23.158Z"
+      "retryAt": "2026-11-16T23:51:26.820Z"
     },
     "sebastianrodaaa/prefixgate": {
       "status": "review",
@@ -4447,7 +4449,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 1,
-      "stars": 118,
+      "stars": 126,
       "checkedAt": "2026-11-04T21:29:42.942Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",
