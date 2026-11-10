@@ -177549,5 +177549,145 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       }
     }
+  },
+  {
+    "id": "gh-10-apexyash11-gatewise",
+    "type": "github",
+    "title": "Gatewise",
+    "summary": "Decision infrastructure for autonomous software engineering, powered by typed System-1 decision models (Jev). No heuristic fallbacks - real, auditable model decisions.",
+    "tags": [
+      "jev",
+      "ai",
+      "autonomous-agents",
+      "decision-making",
+      "fastapi",
+      "github-app",
+      "llm",
+      "observability"
+    ],
+    "category": "agents",
+    "url": "https://github.com/ApexYash11/Gatewise",
+    "sourceMeta": {
+      "repo": "ApexYash11/Gatewise",
+      "author": "ApexYash11",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1393312554,
+        "nodeId": "R_kgDOUwxDKg"
+      },
+      "date": "2026-09-28",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "apexyash11/gatewise",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "8b7987c9ca4be78c6f41d04b735f89e25225fc02",
+        "evidenceUrl": "https://github.com/apexyash11/gatewise/blob/8b7987c9ca4be78c6f41d04b735f89e25225fc02/README.md",
+        "evidenceSha256": "3663638062be2c70f102164dc817ef4685a0af7251c4521fdb7c22d998290305",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T07:23:12.148Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-poesterlin-calendar-curator",
+    "type": "github",
+    "title": "calendar-curator",
+    "summary": "Home Assistant integration that mirrors calendar events matching criteria, decided by Jev (System One)",
+    "tags": [
+      "jev",
+      "calendar",
+      "hacs",
+      "home-assistant",
+      "home-assistant-integration",
+      "opencode",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/poesterlin/calendar-curator",
+    "sourceMeta": {
+      "repo": "poesterlin/calendar-curator",
+      "author": "poesterlin",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1427229823,
+        "nodeId": "R_kgDOVRHMfw"
+      },
+      "date": "2026-10-20",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "poesterlin/calendar-curator",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "applications"
+        },
+        "sha": "bba8875d8682b5d5d260a38544b7d21e89fc463b",
+        "evidenceUrl": "https://github.com/poesterlin/calendar-curator/blob/bba8875d8682b5d5d260a38544b7d21e89fc463b/README.md",
+        "evidenceSha256": "fd63b1d3c65eb8499683b25782652ea0c40c2a819703661c797221c8d07904c5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T07:23:12.148Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-svilupp-flightplan",
+    "type": "github",
+    "title": "flightplan",
+    "summary": "flightplan: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "browser",
+    "url": "https://github.com/svilupp/flightplan",
+    "sourceMeta": {
+      "repo": "svilupp/flightplan",
+      "author": "svilupp",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1284222577,
+        "nodeId": "R_kgDOTIuucQ"
+      },
+      "date": "2026-06-29",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "svilupp/flightplan",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "browser"
+        },
+        "sha": "97f5ae6ccba3d1a747f6064e5009db2104750885",
+        "evidenceUrl": "https://github.com/svilupp/flightplan/blob/97f5ae6ccba3d1a747f6064e5009db2104750885/README.md",
+        "evidenceSha256": "e59a88e46e097a01726f17327e7d9e5ea6f6d264a5e651990a7f4ee5b134bc18",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T07:23:12.148Z"
+      }
+    }
   }
 ]
