@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "00266b5140486809af9ee1b134abca5794006e81",
-  "at": "2026-11-10T08:22:47.560Z",
-  "totalProjects": 3166,
+  "baselineSha": "84589d2940e7535ea1032c9760fb51bc70e147f3",
+  "at": "2026-11-10T20:26:48.087Z",
+  "totalProjects": 3176,
   "metadata": {
-    "ok": 3042,
+    "ok": 3052,
     "failed": 124,
     "batches": 65,
     "cost": 65,
-    "other": 3066,
+    "other": 3076,
     "remaining": 124,
-    "attempted": 3166,
-    "fresh": 3042,
+    "attempted": 3176,
+    "fresh": 3052,
     "unavailable": 124,
     "deferredRemaining": 0,
     "top100": {
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "tommylegen/jev-laya-toolkit",
+        "to": "codelivin/jev-laya-toolkit",
+        "databaseId": 1422317093
+      }
+    ]
   },
   "receipts": [
     {
@@ -647,8 +653,8 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
-    "review": 0,
+    "migrated": 1,
+    "review": 1,
     "unavailable": 0,
     "restored": 0,
     "checked": 50

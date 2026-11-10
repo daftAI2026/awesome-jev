@@ -3295,6 +3295,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codeitlikemiley/typesafe-sdk-rust" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/codelivin/jev-laya-toolkit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codelivin/jev-laya-toolkit" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/codenamev/ruby-laya</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codenamev/ruby-laya" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codenamev/ruby-laya" />
@@ -6629,12 +6635,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/gokulnair2001/convoy</loc>
@@ -16403,12 +16403,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tomhar92/tierwise" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/tommylegen/jev-laya-toolkit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tommylegen/jev-laya-toolkit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/tomohiro-owada/jev-mem</loc>
@@ -26419,6 +26413,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codeitlikemiley/typesafe-sdk-rust" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/codelivin/jev-laya-toolkit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codelivin/jev-laya-toolkit" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/codenamev/ruby-laya</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codenamev/ruby-laya" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codenamev/ruby-laya" />
@@ -29753,12 +29753,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/gokulnair2001/convoy</loc>
@@ -39527,12 +39521,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tomhar92/tierwise" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/tommylegen/jev-laya-toolkit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tommylegen/jev-laya-toolkit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/tomohiro-owada/jev-mem</loc>
@@ -49543,6 +49531,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codeitlikemiley/typesafe-sdk-rust" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/codelivin/jev-laya-toolkit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codelivin/jev-laya-toolkit" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/codelivin/jev-laya-toolkit" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/codenamev/ruby-laya</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/codenamev/ruby-laya" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/codenamev/ruby-laya" />
@@ -52877,12 +52871,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/gokulnair2001/convoy</loc>
@@ -62651,12 +62639,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tomhar92/tierwise" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tomhar92/tierwise" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/tommylegen/jev-laya-toolkit</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tommylegen/jev-laya-toolkit" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tommylegen/jev-laya-toolkit" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/tomohiro-owada/jev-mem</loc>
