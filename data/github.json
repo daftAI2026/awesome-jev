@@ -177689,5 +177689,491 @@
         "checkedAt": "2026-11-10T07:23:12.148Z"
       }
     }
+  },
+  {
+    "id": "gh-7-rushab1-gr-jev",
+    "type": "github",
+    "title": "gr-jev",
+    "summary": "Code for 'When Multiple Choices Are Correct: Asymmetric Probability Allocation in Jev and Other Decision Models' (arXiv:2610.29217)",
+    "tags": [
+      "jev",
+      "arxiv",
+      "calibration",
+      "chaosnli",
+      "decision-models",
+      "ecthr",
+      "hotpotqa",
+      "llm-evaluation"
+    ],
+    "category": "research",
+    "url": "https://github.com/Rushab1/gr-jev",
+    "sourceMeta": {
+      "repo": "Rushab1/gr-jev",
+      "author": "Rushab1",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1396783188,
+        "nodeId": "R_kgDOU0E4VA"
+      },
+      "date": "2026-09-30",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "rushab1/gr-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "research"
+        },
+        "sha": "61ecc7854a37dbc55b831df999f23f78c24ebdc6",
+        "evidenceUrl": "https://github.com/rushab1/gr-jev/blob/61ecc7854a37dbc55b831df999f23f78c24ebdc6/README.md",
+        "evidenceSha256": "f9ed2e5c304c1c6db66c908a077191ddb009747a434407cf5a46211f41599aa3",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-hugo-alves-jev-router-playground",
+    "type": "github",
+    "title": "jev-router-playground",
+    "summary": "Interactive playground for testing Jev model-routing decisions against OpenRouter models",
+    "tags": [
+      "jev",
+      "ai",
+      "javascript",
+      "model-routing",
+      "openrouter",
+      "typesafe"
+    ],
+    "category": "research",
+    "url": "https://github.com/hugo-alves/jev-router-playground",
+    "sourceMeta": {
+      "repo": "hugo-alves/jev-router-playground",
+      "author": "hugo-alves",
+      "stars": 2,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1375223445,
+        "nodeId": "R_kgDOUfg-lQ"
+      },
+      "date": "2026-09-18",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "hugo-alves/jev-router-playground",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "0377a6762f84548cb0b213f0ef2bd1733c720bdd",
+        "evidenceUrl": "https://github.com/hugo-alves/jev-router-playground/blob/0377a6762f84548cb0b213f0ef2bd1733c720bdd/README.md",
+        "evidenceSha256": "7015dd15e8ed8893e9661b1230fad086e4520c0faff4109d638bc426f7c09bff",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-eliot5566-s1kit",
+    "type": "github",
+    "title": "s1kit",
+    "summary": "Test, calibrate and route System One decision models (Jev, Laya, kev, llama.cpp, Ollama) on your own data.",
+    "tags": [
+      "jev",
+      "calibration",
+      "cli",
+      "decision-models",
+      "github-actions",
+      "laya",
+      "llm-evaluation",
+      "llm-routing"
+    ],
+    "category": "developer",
+    "url": "https://github.com/Eliot5566/s1kit",
+    "sourceMeta": {
+      "repo": "Eliot5566/s1kit",
+      "author": "Eliot5566",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1436728153,
+        "nodeId": "R_kgDOVaK7WQ"
+      },
+      "date": "2026-10-28",
+      "jevAbout": 0.93,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "eliot5566/s1kit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.93,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "developer"
+        },
+        "sha": "9948b2d0665dedbeaa3071c7ea040d0922285c22",
+        "evidenceUrl": "https://github.com/eliot5566/s1kit/blob/9948b2d0665dedbeaa3071c7ea040d0922285c22/README.md",
+        "evidenceSha256": "7cda3900fdfb2e675e62bf8b3a7eccc781bca472546606b6c51d93744e09236b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-harmanbassi-jev-agent-browser",
+    "type": "github",
+    "title": "jev-agent-browser",
+    "summary": "Jev-powered browser automation for agents through Python, CLI, MCP and Hermes; optional visual browsing and proxy support.",
+    "tags": [
+      "jev",
+      "ai-agent",
+      "ai-agents",
+      "browser-automation",
+      "camofox",
+      "camoufox",
+      "jev-ai",
+      "jev-compatible"
+    ],
+    "category": "browser",
+    "url": "https://github.com/harmanbassi/jev-agent-browser",
+    "sourceMeta": {
+      "repo": "harmanbassi/jev-agent-browser",
+      "author": "harmanbassi",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1428499740,
+        "nodeId": "R_kgDOVSUtHA"
+      },
+      "date": "2026-10-21",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "harmanbassi/jev-agent-browser",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "browser"
+        },
+        "sha": "09cae55be7b430c52a53a7d98a6daee3e002ffb8",
+        "evidenceUrl": "https://github.com/harmanbassi/jev-agent-browser/blob/09cae55be7b430c52a53a7d98a6daee3e002ffb8/README.md",
+        "evidenceSha256": "de1c0392f6fd62e7e6bcad7069317cd6e22fb940e8cfe2af855e1c79581a3d08",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-kittimzhe-dsh-jev-goal-judge",
+    "type": "github",
+    "title": "dsh-jev-goal-judge",
+    "summary": "Jev progress judgment between DeepSeek Harness goal rounds — one fan-out per round end, budgeted steer nudges, shadow mode by default, fail-open everywhere",
+    "tags": [
+      "jev",
+      "cordis",
+      "decision-model",
+      "deepseek-harness",
+      "dsh",
+      "plugin",
+      "system-one",
+      "typesafe"
+    ],
+    "category": "agents",
+    "url": "https://github.com/kittimzhe/dsh-jev-goal-judge",
+    "sourceMeta": {
+      "repo": "kittimzhe/dsh-jev-goal-judge",
+      "author": "kittimzhe",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1415328729,
+        "nodeId": "R_kgDOVFwz2Q"
+      },
+      "date": "2026-10-12",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "kittimzhe/dsh-jev-goal-judge",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "d9a6222406680750fa06b50a608676e5ce7f26a7",
+        "evidenceUrl": "https://github.com/kittimzhe/dsh-jev-goal-judge/blob/d9a6222406680750fa06b50a608676e5ce7f26a7/README.md",
+        "evidenceSha256": "15e8c9adef288b66ec84c7f3326d8c2dbf6e25455e83e78a7aaca20592b8dda9",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-rickcrawford-jev-relevancy",
+    "type": "github",
+    "title": "jev-relevancy",
+    "summary": "Search evaluation with Jev as the judge. turbopuffer does the retrieval and hosted reranking, and DuckDB keeps every run and computes the metrics in SQL.",
+    "tags": [
+      "jev",
+      "bm25",
+      "duckdb",
+      "esci",
+      "hybrid-search",
+      "information-retrieval",
+      "llm-as-a-judge",
+      "ndcg"
+    ],
+    "category": "research",
+    "url": "https://github.com/rickcrawford/jev-relevancy",
+    "sourceMeta": {
+      "repo": "rickcrawford/jev-relevancy",
+      "author": "rickcrawford",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1433455715,
+        "nodeId": "R_kgDOVXDMYw"
+      },
+      "date": "2026-10-25",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "rickcrawford/jev-relevancy",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "research"
+        },
+        "sha": "a90cd79b79016a4559339a4161b2b05b85d8bc2a",
+        "evidenceUrl": "https://github.com/rickcrawford/jev-relevancy/blob/a90cd79b79016a4559339a4161b2b05b85d8bc2a/README.md",
+        "evidenceSha256": "d5f2ab36bda348e5ce1ff45921abde1c622a41800739881f7727b085d969ffb2",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-isaacbitran-darwins-world",
+    "type": "github",
+    "title": "darwins-world",
+    "summary": "An evolution simulation whose only law of nature is an AI judgment model's yes/no answers. Islands evolve what common sense expects; a predator-prey arms race appears only when predators alone select prey, tested against no-interaction, fixed-predator and shuffled controls.",
+    "tags": [
+      "jev",
+      "ai-research",
+      "artificial-life",
+      "coevolution",
+      "evolution",
+      "evolutionary-simulation",
+      "judgment-model",
+      "llm-evaluation"
+    ],
+    "category": "research",
+    "url": "https://github.com/isaacbitran/darwins-world",
+    "sourceMeta": {
+      "repo": "isaacbitran/darwins-world",
+      "author": "isaacbitran",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1428967401,
+        "nodeId": "R_kgDOVSxP6Q"
+      },
+      "date": "2026-10-21",
+      "jevAbout": 0.91,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "isaacbitran/darwins-world",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.91,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "research"
+        },
+        "sha": "940e02dc5c6833b748e774c7a8ff8c5fe1ac7399",
+        "evidenceUrl": "https://github.com/isaacbitran/darwins-world/blob/940e02dc5c6833b748e774c7a8ff8c5fe1ac7399/README.md",
+        "evidenceSha256": "1045209b18098bd2f9c04f350484f4ddeb85d80db80eba70403e9d3d1d7bf625",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-koltyakov-decide",
+    "type": "github",
+    "title": "decide",
+    "summary": "🧠 Typed AI decisions for agent workflows. CLI and MCP server powered by Jev.",
+    "tags": [
+      "jev",
+      "ai",
+      "ai-agents",
+      "automation",
+      "classification",
+      "cli",
+      "decision-making",
+      "developer-tools"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/koltyakov/decide",
+    "sourceMeta": {
+      "repo": "koltyakov/decide",
+      "author": "koltyakov",
+      "stars": 0,
+      "forks": 0,
+      "language": "Go",
+      "githubIdentity": {
+        "databaseId": 1435145226,
+        "nodeId": "R_kgDOVYqUCg"
+      },
+      "date": "2026-10-27",
+      "jevAbout": 0.9,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "koltyakov/decide",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.9,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "alternatives"
+        },
+        "sha": "267714dad26972141fda05cd9ad9e7bde73b2ebe",
+        "evidenceUrl": "https://github.com/koltyakov/decide/blob/267714dad26972141fda05cd9ad9e7bde73b2ebe/README.md",
+        "evidenceSha256": "0c69fb6a28215e36202c6e659856d5c7ff30f6a84ccc62bac8565396b735fc96",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-5-n9omi-jev-calibration-audit",
+    "type": "github",
+    "title": "jev-calibration-audit",
+    "summary": "Independent calibration audit of TypeSafe AI's Jev: when it says 80%, is it right 80% of the time? Tested on EIA weekly petroleum reports against an LLM classifier via LangChain, with exact ground truth from EIA data.",
+    "tags": [
+      "jev",
+      "calibration",
+      "commodities",
+      "eia",
+      "energy-markets",
+      "forecast-verification",
+      "langchain",
+      "llm-evaluation"
+    ],
+    "category": "research",
+    "url": "https://github.com/n9omi/jev-calibration-audit",
+    "sourceMeta": {
+      "repo": "n9omi/jev-calibration-audit",
+      "author": "n9omi",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1436629586,
+        "nodeId": "R_kgDOVaE6Ug"
+      },
+      "date": "2026-10-28",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "n9omi/jev-calibration-audit",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "research"
+        },
+        "sha": "0b6d814bfd6ebd77ca776d2ca4a58a3055fafa30",
+        "evidenceUrl": "https://github.com/n9omi/jev-calibration-audit/blob/0b6d814bfd6ebd77ca776d2ca4a58a3055fafa30/README.md",
+        "evidenceSha256": "a1fa850c01841ba4aa0bb9c2be3dca6a780253ea5c5841bfbe267f3681f3b42b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-shohei81-jev-tos-checker",
+    "type": "github",
+    "title": "jev-tos-checker",
+    "summary": "Chrome extension that flags terms-of-service clauses that may work against you, using TypeSafe's Jev model",
+    "tags": [
+      "jev",
+      "chrome-extension",
+      "privacy",
+      "terms-of-service",
+      "typesafe",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/shohei81/jev-tos-checker",
+    "sourceMeta": {
+      "repo": "shohei81/jev-tos-checker",
+      "author": "shohei81",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1434370609,
+        "nodeId": "R_kgDOVX7CMQ"
+      },
+      "date": "2026-10-26",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "shohei81/jev-tos-checker",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "applications"
+        },
+        "sha": "75e76b410a4d8d76ebce048317263ccd7c180fea",
+        "evidenceUrl": "https://github.com/shohei81/jev-tos-checker/blob/75e76b410a4d8d76ebce048317263ccd7c180fea/README.md",
+        "evidenceSha256": "1ddc9fe63060f55661a22d4630e0107fb136ddffcb1151d51a32edcf366a120f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
   }
 ]
