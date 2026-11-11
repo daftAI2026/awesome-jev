@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 35355
+      "stars": 35364
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -711,7 +711,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-12T01:48:37.461Z",
-      "stars": 1631
+      "stars": 1632
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -2322,7 +2322,7 @@
         "checkedAt": "2026-11-05T11:29:49.963Z"
       },
       "retryAt": "2026-11-12T11:29:49.963Z",
-      "stars": 627
+      "stars": 630
     },
     "phocinae/.github": {
       "status": "review",
