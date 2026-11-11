@@ -6637,6 +6637,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/gokulnair2001/convoy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gokulnair2001/convoy" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gokulnair2001/convoy" />
@@ -21055,6 +21061,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-making" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/tags/java</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/tags/nextjs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nextjs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nextjs" />
@@ -21065,12 +21077,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/computer-use" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/tags/java</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
   </url>
   <url>
     <loc>https://awesomejev.cc/tags/deepseek-harness</loc>
@@ -29759,6 +29765,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/gokulnair2001/convoy</loc>
@@ -44179,6 +44191,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-making" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/tags/java</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/tags/nextjs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nextjs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nextjs" />
@@ -44189,12 +44207,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/computer-use" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/tags/java</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/tags/deepseek-harness</loc>
@@ -52883,6 +52895,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/godsboy/jev-agent-skill-router" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/godsboy/jev-agent-skill-router" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/gogoymh/decision-model-guided-function-calling" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/gogoymh/decision-model-guided-function-calling" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/gokulnair2001/convoy</loc>
@@ -67303,6 +67321,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/decision-making" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/tags/java</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/tags/nextjs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/nextjs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/nextjs" />
@@ -67313,12 +67337,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/computer-use" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/computer-use" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/tags/java</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/tags/java" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/tags/java" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/tags/java" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/tags/deepseek-harness</loc>

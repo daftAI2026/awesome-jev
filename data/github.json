@@ -173879,7 +173879,7 @@
         "https://github.com/gogoymh/jev-backed-function-calling"
       ],
       "lifecycle": {
-        "state": "review",
+        "state": "replaced",
         "since": "2026-11-10T20:26:48.087Z",
         "reason": "identity-changed",
         "target": {
@@ -178186,6 +178186,49 @@
         "evidenceLinks": [],
         "model": "jev-latest",
         "checkedAt": "2026-11-10T19:46:41.581Z"
+      }
+    }
+  },
+  {
+    "id": "gh-repo-1450236954",
+    "type": "github",
+    "title": "decision-model-guided-function-calling",
+    "summary": "decision-model-guided-function-calling: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "java"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/gogoymh/decision-model-guided-function-calling",
+    "sourceMeta": {
+      "repo": "gogoymh/decision-model-guided-function-calling",
+      "author": "gogoymh",
+      "stars": 1,
+      "forks": 0,
+      "language": "Java",
+      "githubIdentity": {
+        "databaseId": 1450236954,
+        "nodeId": "R_kgDOVnDcGg"
+      },
+      "date": "2026-11-08",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "gogoymh/decision-model-guided-function-calling",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "sdk"
+        },
+        "sha": "71ca8cf1810541dd0c43af4a01eea78cea3f99fe",
+        "evidenceUrl": "https://github.com/gogoymh/decision-model-guided-function-calling/blob/71ca8cf1810541dd0c43af4a01eea78cea3f99fe/README.md",
+        "evidenceSha256": "d6080a059c7df3598f37c66b2b3d2ff16272a2a10dd951eca12a6a9696801348",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-11T06:29:00.523Z"
       }
     }
   }
