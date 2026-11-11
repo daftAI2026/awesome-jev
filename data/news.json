@@ -6763,5 +6763,20 @@
     "reason": null,
     "originalUrl": "https://huggingface.co/inclusionAI/SingVL_S1_4B",
     "aihotUrl": "https://aihot.news/items/xi84x0rxlxpsuarnk6s8m4uwl"
+  },
+  {
+    "id": "u3o318lycxljjc4zu9kotbux8",
+    "title": "社区开发者基于 MiniCPM 推出可溯源文档校验智能体 TraceCell",
+    "originalTitle": "📄 Can your document agent show why a result should be trusted and flag what needs another look?",
+    "summary": "OpenBMB 介绍社区开发者 @mucerx 基于 MiniCPM 构建的本地优先文档解析与校验智能体 TraceCell。三个模型协作：MiniCPM-OCR 1.0 解析文档，MiniCPM-OCR Jev 为识别候选打分，MiniCPM-V 4.7 复核模糊区域；每个字段回链源图坐标、置信度和复审状态，不确定结果触发重新解析、模型复核或人工介入，还可校验算术并对账。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-11T13:30:07.000Z",
+    "discoveredAt": "2026-11-11T13:32:32.452Z",
+    "category": "tip",
+    "score": 51,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2120509377220337937",
+    "aihotUrl": "https://aihot.news/items/u3o318lycxljjc4zu9kotbux8"
   }
 ]
