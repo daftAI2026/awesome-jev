@@ -6748,5 +6748,20 @@
     "reason": "OpenRouter 用 24 条客服消息在多款模型上实测三种结构化输出路线，给出严格 schema 写法、require_parameters 和决策模型等可直接复用的要点。",
     "originalUrl": "https://openrouter.ai/blog/tutorials/structured-output-llm/",
     "aihotUrl": "https://aihot.news/items/b44e0p0xgg4j6d7wyei4fy5rl"
+  },
+  {
+    "id": "xi84x0rxlxpsuarnk6s8m4uwl",
+    "title": "蚂蚁 inclusionAI 开源 SingVL_S1_4B 多模态决策模型",
+    "originalTitle": "inclusionAI/SingVL_S1_4B",
+    "summary": "蚂蚁 inclusionAI 在 HuggingFace 发布基于 Qwen3.5 的 4B 多模态决策模型 SingVL_S1_4B，支持对文本或 JSON 及最多四张图片按 choice、noul、score 三类问题单次前向打分。",
+    "sourceName": "蚂蚁 inclusionAI：HuggingFace 新模型",
+    "publishedAt": "2026-11-11T03:58:51.000Z",
+    "discoveredAt": "2026-11-11T07:22:29.070Z",
+    "category": "ai-models",
+    "score": 44,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://huggingface.co/inclusionAI/SingVL_S1_4B",
+    "aihotUrl": "https://aihot.news/items/xi84x0rxlxpsuarnk6s8m4uwl"
   }
 ]
