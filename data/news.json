@@ -6853,5 +6853,35 @@
     "reason": null,
     "originalUrl": "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
     "aihotUrl": "https://aihot.news/items/p5rr5frjt4gu8u6gjao2r3o53"
+  },
+  {
+    "id": "shb2cxiblvq7iuzx5ug97p4vi",
+    "title": "Latent Space AINews：Google 发布 Gemini Decision 1 决策模型，Claude Fable 5.2 登顶 Agent Arena",
+    "originalTitle": "[AINews] D-Day (Decision Models Day)",
+    "summary": "Latent Space 发布 AI 要闻汇总，核心是 Google 抢先 Anthropic 推出生产级校准多模态决策模型 Gemini Decision 1，单次前向完成封闭集决策，支持每请求最多 1000 个问题、256K 上下文，输入 $0.10/1M tokens 且输出免费，端到端延迟约 150–250ms。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-11-12T05:26:54.000Z",
+    "discoveredAt": "2026-11-12T06:12:23.298Z",
+    "category": "industry",
+    "score": 67,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://latent.space/p/ainews-d-day-decision-models-day/",
+    "aihotUrl": "https://aihot.news/items/shb2cxiblvq7iuzx5ug97p4vi"
+  },
+  {
+    "id": "dowxo743tplwe294zg6p2g12n",
+    "title": "AI Engineer Code Summit 峰会展示工程师如何用 Jev 等 System One 模型构建智能软件",
+    "originalTitle": "The Jev Revolution: What Engineers Are Already Building with System One Models",
+    "summary": "AI Engineer Code Summit 上，Jev 主创、TypeSafe AI CEO Diogo Almeida 呼吁把比推理 LLM 更快更便宜的 system one 模型融入代码，实现可靠自动化。",
+    "sourceName": "Latent Space（RSS）",
+    "publishedAt": "2026-11-12T05:08:20.000Z",
+    "discoveredAt": "2026-11-12T05:11:22.969Z",
+    "category": "industry",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://latent.space/p/jev-revolution/",
+    "aihotUrl": "https://aihot.news/items/dowxo743tplwe294zg6p2g12n"
   }
 ]
