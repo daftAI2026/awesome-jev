@@ -6883,5 +6883,35 @@
     "reason": null,
     "originalUrl": "https://latent.space/p/jev-revolution/",
     "aihotUrl": "https://aihot.news/items/dowxo743tplwe294zg6p2g12n"
+  },
+  {
+    "id": "ggwj4n7rbyhyjbrm7fck4ictb",
+    "title": "Jev 帮你省下挑选度假房源的时间",
+    "originalTitle": "was the most expensive part of your last vacation rental the four evenings you spent picking it?",
+    "summary": "你上次度假租房最贵的部分，是不是花在挑选上的那四个晚上？\n\nJev 帮你把这些晚上还回来\n\nhttps://x.com/mathfax/status/2120969705330520075",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-12T20:12:07.000Z",
+    "discoveredAt": "2026-11-12T20:30:32.515Z",
+    "category": "ai-products",
+    "score": 26,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2120972933375869140",
+    "aihotUrl": "https://aihot.news/items/ggwj4n7rbyhyjbrm7fck4ictb"
+  },
+  {
+    "id": "db1th96a4vrnbrdefr4mmcb4c",
+    "title": "Newcomer 与 Bessemer 发布首届 AI 100 榜单，Anthropic 位列第一",
+    "originalTitle": "The AI 100: The 100 Private Companies Defining the Age of AI",
+    "summary": "Newcomer 与 Bessemer Venture Partners 在 Cerebral Valley AI Summit 上发布首届 AI 100 榜单，评选 100 家最具前景的私人 AI 公司，Anthropic、OpenAI、Databricks 排名前三，Anthropic 在其预期下周 IPO 之前夺冠。",
+    "sourceName": "Newcomer 新闻长文（RSS）",
+    "publishedAt": "2026-11-12T19:28:46.000Z",
+    "discoveredAt": "2026-11-12T20:05:30.768Z",
+    "category": "industry",
+    "score": 59,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.newcomer.co/p/the-ai-100",
+    "aihotUrl": "https://aihot.news/items/db1th96a4vrnbrdefr4mmcb4c"
   }
 ]
