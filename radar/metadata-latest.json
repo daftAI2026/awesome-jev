@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "02adf8fd6cdf3b162bb2c535a399c5a01928b1c6",
-  "at": "2026-11-11T07:43:03.735Z",
+  "baselineSha": "f1918775cd346c9564a90a9984323cd6b6417036",
+  "at": "2026-11-12T08:14:53.822Z",
   "totalProjects": 3177,
   "metadata": {
-    "ok": 3053,
-    "failed": 124,
+    "ok": 3051,
+    "failed": 126,
     "batches": 65,
     "cost": 65,
     "other": 3077,
-    "remaining": 124,
+    "remaining": 126,
     "attempted": 3177,
-    "fresh": 3053,
-    "unavailable": 124,
+    "fresh": 3051,
+    "unavailable": 126,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,13 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "rominirani/gcp-typesafe-jev-hybrid-gateway",
+        "to": "rominirani/gcp-gemini-decisions-hybrid-gateway",
+        "databaseId": 1409744147
+      }
+    ]
   },
   "receipts": [
     {
@@ -131,6 +137,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-13-kieran-a-egan-pi-software-factory",
+      "repo": "kieran-a-egan/pi-software-factory",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-13-paulsonnentag-scrap",
       "repo": "paulsonnentag/scrap",
       "reason": "github-unavailable-repository"
@@ -188,6 +199,11 @@
     {
       "id": "gh-13-pinkroosterai-systemonesharp",
       "repo": "pinkroosterai/systemonesharp",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-6-gitchw-lct",
+      "repo": "gitchw/lct",
       "reason": "github-unavailable-repository"
     },
     {
@@ -647,9 +663,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 1,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 3,
     "restored": 0,
     "checked": 50
   }
