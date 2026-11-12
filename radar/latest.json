@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-11T19:40:46.330Z",
+  "at": "2026-11-12T07:15:03.428Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -68,12 +68,97 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 11,
   "added": 0,
   "pending": 3931,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "topherchris420/james_library",
+      "status": "error",
+      "reason": "github-ineligible-repository"
+    },
+    {
+      "repo": "kavbad/potion",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.87,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.35,
+        "category": "resources",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "00f9c4077878be6ffcc093c099f05a6cccaf1b95",
+      "evidenceUrl": "https://github.com/sickn33/agentic-awesome-skills/tree/00f9c4077878be6ffcc093c099f05a6cccaf1b95",
+      "evidenceSha256": "43722ddc4e99060bc40d13d400844f00851fc9a319e68f81e2c4bc32541b4dd2",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/sickn33/agentic-awesome-skills/blob/00f9c4077878be6ffcc093c099f05a6cccaf1b95/tools/scripts/jev_maintainer_hints.py",
+          "path": "tools/scripts/jev_maintainer_hints.py",
+          "sha256": "13126941c5e5a0510c94cc1320e545f47f6c848642f95706208916485542eb34"
+        },
+        {
+          "url": "https://github.com/sickn33/agentic-awesome-skills/blob/00f9c4077878be6ffcc093c099f05a6cccaf1b95/docs/maintainers/jev-hints.md",
+          "path": "docs/maintainers/jev-hints.md",
+          "sha256": "ff99592123e356e9ca4e4ca6de21a9ad60ef3be6694114b496022dcd6d948fd9"
+        },
+        {
+          "url": "https://github.com/sickn33/agentic-awesome-skills/blob/00f9c4077878be6ffcc093c099f05a6cccaf1b95/AGENTS.md",
+          "path": "AGENTS.md",
+          "sha256": "45c99ff63f8fb1e9066c125c6cb58de6b4602959c23bfb238612ae77e7c3f032"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-12T07:15:03.428Z"
+    },
+    {
+      "repo": "teleai-uagi/awesome-agent-memory",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "mihaicristianfarcas/pingpong",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "lien0219/modurelay",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "arcj137442/jev-switch",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "assadawut170537cake-art/a.tom",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "jascenn/local-software-update-monitor",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "anandtharad/project",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "farhaduneci/mail-watcher",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
