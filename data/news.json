@@ -6928,5 +6928,20 @@
     "reason": null,
     "originalUrl": "https://huggingface.co/inclusionAI/SingVL_S1_4B_GGUF",
     "aihotUrl": "https://aihot.news/items/yquabw2hxjgg8a6vtg5pfsbrk"
+  },
+  {
+    "id": "a9e7zjju2dou6wij6kug9ksei",
+    "title": "Perplexity 发布开源权重决策模型 Decider v1.3，新增 Locate 功能",
+    "originalTitle": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
+    "summary": "Perplexity 发布开源权重的 pplx-decider-v1.3 与 pplx-decider-flash-v1.3 决策模型，以 Apache 2.0 上架 Hugging Face，并可通过 Perplexity Decisions API 和 OpenRouter 使用。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-11-13T16:10:02.000Z",
+    "discoveredAt": "2026-11-13T16:32:21.021Z",
+    "category": "ai-models",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
+    "aihotUrl": "https://aihot.news/items/a9e7zjju2dou6wij6kug9ksei"
   }
 ]
