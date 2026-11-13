@@ -14,7 +14,7 @@ Searchable directory of curated **GitHub projects** with a separate, source-attr
 
 | Layer | Choice |
 | --- | --- |
-| UI | TanStack Start 1.169.4 / Router 1.170.46 + Vite 8.3.5+ + React 19 接口 / Redact 0.2.0 运行时 + TypeScript 7 |
+| UI | TanStack Start 1.169.5 / Router 1.170.46 + Vite+ 1.6.0 / Vite 8.3.7 + React 19 接口 / Redact 0.3.1 运行时 + TypeScript 7 |
 | Styling | Tailwind CSS 4 + shadcn **base-nova** (Base UI primitives under `@/components/ui/*`) |
 | Icons | Phosphor (`@phosphor-icons/react`) |
 | Search | Fuse.js over `data/github.json` |
@@ -37,10 +37,18 @@ Vite 8 uses security baseline 8.3.5. `package-lock.json` fixes the installed ver
 
 ### Cloudflare 工具链
 
-直接依赖固定插件 `1.65.0` 与 Wrangler `4.153.0`。
-插件内部仍使用其声明的 Wrangler `4.152.0`。
+直接依赖固定官方插件 `1.69.1` 与 Wrangler `4.162.0`。
+插件内部使用其声明的 Wrangler `4.160.0`。
 保留两套官方依赖，不强行覆盖内部版本去重。
-Node 保持 `24.22.1` LTS；类型保持 Node 24 系列。
+Node 保持 `24.22.1` LTS；最低 `24.11.0`，类型保持 Node 24 系列。
+Redact `0.3.1` 的包声明仍将可选 peer 锁为 `1.65.0`。
+该精确运行时检查属于未使用的 `/cloudflare` 特殊适配器。
+本站只用官方插件与 Redact `/vite`，不使用其内置插件副本。
+仅在 `@tanstack/redact@0.3.1` 范围覆盖该 peer 为根插件版本。
+根插件精确固定，保留 strict-peer-deps，不使用 force 或 legacy-peer-deps。
+这限定本站组合，不代表特殊适配器或未来版本通用兼容。
+回归读取真实配置，禁止误切换到特殊适配器。
+依据：[上游问题 #166](https://github.com/TanStack/redact/issues/166)；该报告尚无维护者回复，不当作官方兼容承诺。
 
 旧基线曾因预览 500 固定插件 `1.59.0`。
 旧记录没有保存失败请求和堆栈，不能重建根因。
@@ -60,20 +68,54 @@ Node 双栈首尝试默认超时为 250 ms。
 此设置只约束本机预览，不改变生产 Worker 路由。
 依据：[Vite 地址解析](https://vite.dev/config/server-options.html#server-host)、[Node 24 连接规则](https://nodejs.org/docs/latest-v24.x/api/net.html#socketconnectoptions-connectlistener)。
 
-Miniflare 的外部 Undici 用窄 override 固定 `7.30.1`。
+Miniflare 的外部 Undici 用窄 override 固定 `7.30.2`。
 `toolchain.test.ts` 用畸形压缩响应验证进程不崩溃。
 该覆盖不改变插件及其内部 Wrangler 的内联副本。
-这两份 `7.29.1` 内联代码仍受 [GHSA-xjj6-f33q-929c](https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c) 影响。
+插件、内部 Wrangler 与根 Wrangler 的内联副本均为 `7.30.1`。
+旧 `7.29.1` 的畸形压缩响应问题随官方工具链升级修复。
+这些内联副本仍不包含 `7.30.2` 的缓存与完整性修复。
 它们属于本机构建/预览工具，不是业务请求入口。
 不要把 npm audit 的零计数称为全部风险清零。
-待官方插件重发安全版本，再核对并移除冗余覆盖。
+升级插件不等于 npm override 能改写内联代码。
+核对所有实际副本及真实行为后，再移除冗余覆盖。
+Node 内置 fetch 是独立副本，不受 npm override 影响。
+`.npmrc` 使既有 Actions 的 npm ci 也执行严格 peer 解析。
+2026-11-14 的 npm audit 从 8 项降至 6 项，无 high/critical。
+剩余项来自 shadcn CLI 的 deepmerge/minimatch 依赖链。
+这些项在升级前已存在；不把 CLI 引入 Worker 请求链。
+不采纳 audit 建议的 shadcn 1.0.0 降级或强跨主版本覆盖。
+该计数不包含上文内联副本，也不代表全仓安全认证。
 依据：[Miniflare 官方修复](https://github.com/cloudflare/workers-sdk/pull/16476)、[Vite 插件内联副本修复进度](https://github.com/cloudflare/workers-sdk/pull/16480)。
+
+### Vite+ 构建入口
+
+项目本地固定 Vite+ `1.6.0`，底层 Vite 为 `8.3.7`。
+`vite` 依赖别名指向同版 `@voidzero-dev/vite-plus-core`。
+npm 的 vite override 使第三方插件共用该内核。
+配置从 vite-plus 导入 defineConfig。
+脚本中的 Vite 程序接口继续从 vite 导入，经别名解析。
+不把未导出的 loadConfigFromFile 等接口改成 vite-plus 导入。
+
+npm run build 保留原数据检查、产物生成与类型检查。
+仅其中的 vite build 改成 vp build，预览也用 vp preview。
+故障夹具与交付编排器启动同一本地 Vite+ CLI。
+Node test、现有 lint 规则及类型检查保持原命令。
+不为了使用捆绑 Vitest 重写已有测试。
+不增加任务缓存、Git hook、编辑器配置或运行时下载器。
+
+GitHub Actions 保持 setup-node、npm ci 与原验收/部署任务。
+不引入 setup-vp，不改变触发、权限、密钥或云端构建位置。
+最终同份 dist 制品仍只部署一次。
+依据：[官方迁移规则](https://viteplus.dev/guide/migrate-rules)、[构建入口](https://viteplus.dev/guide/build)。
 
 ## TanStack Start 稳定版基线
 
 2026-10-14 对齐 Start 1.169.1 与 Router 1.170.44。
 2026-10-22 对齐 Start 1.169.3、Router 1.170.45、Vite 8.3.5 与 TypeScript 7。Wrangler 仍为 4.138.0。
 2026-10-27 对齐 Start 1.169.4、Router 1.170.46 与 MCP SDK 2.4.0。
+2026-11-14 对齐 Start 1.169.5、Vite+ 1.6.0 与 Redact 0.3.1。
+本轮升级 14 项既有直接依赖，新增 Vite+，更新兼容传递依赖。
+React、Router、MCP 和 TypeScript 已是对应稳定基线，保持不变。
 Start 的稳定版从 1.169 开始，不回退到包版本 1.0.0。
 Start 与 Router 独立编号，不强行使用相同版本号。
 配套 Router 以 Start 发布依赖为准。
@@ -81,7 +123,7 @@ Start 与 Router 独立编号，不强行使用相同版本号。
 
 迁移检查：
 
-- Vite 构建要求 Vite 8；本站保持 8.3.5。
+- Vite 构建要求 Vite 8；Vite+ 1.6.0 内置 8.3.7。
 - 服务端函数已用 `.validator()`，无 `.inputValidator()`。
 - 本站不使用内置 `useSession` 或响应流所有权旧 API。
 - `src/server.ts` 先分发静态产物；`ssr-handler.ts` 保留官方 `createStartHandler(defaultStreamHandler)` 与请求作用域。

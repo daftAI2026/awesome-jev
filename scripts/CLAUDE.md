@@ -3,9 +3,9 @@
 
 成员清单
 candidate-queue.test.ts: 两条采集链的历史占位复现、真实待审背压与付费判断复用；离线替身不发模型请求
-redact-runtime.test.ts: 真实配置与隔离模块图验证 Redact 顺序、SSR 同源、客户端单运行时和完整功能；不替代浏览器验收
+redact-runtime.test.ts: 真实配置与隔离模块图验证 Redact 顺序、SSR 同源/状态订阅默认导入、客户端单运行时和完整功能；不替代浏览器验收
 preview-host.test.ts: 读取项目预览 host；真实 Vite/TCP 验证停顿后的 IPv4 回环连接，不启动项目插件服务器
-toolchain.test.ts: 插件实际解析的 Miniflare 外部 Undici 畸形编码回归；子进程隔离崩溃，不覆盖插件内联副本
+toolchain.test.ts: Vite+ 单一内核/原验收链与 Miniflare 外部 Undici 畸形编码回归；不覆盖插件内联副本
 mcp-catalog.ts: 规范快照生成公开 MCP 白名单、身份表和三种排序；单项 UTF-8 JSON 超过 4096 B 阻止构建
 mcp-catalog.test.ts: MCP 字段隔离、迁址、隐藏、新身份接管旧地址、全目录排序等价与容量边界
 mcp-config.test.ts: 单行 Tabs/家族顺序、三种安装 URL 解码白名单、收藏后入口与品牌原字节契约
@@ -36,7 +36,7 @@ news-page.test.ts: 递增历史下 50 条服务端交付、计数/排序/越界�
 generate-jev-figure.mjs: 项目级 Anatomy kit 离线投影 60 实体，生成可信路径和投影；--geometry 输出同源圆角实体与顺序，不在构建请求链运行
 jev-figure.test.ts: 本地 0.3 秒教学轨迹、自动出口轮换、真实圆角棱柱遮挡、产物重建、刻度线端与无可执行标记回归
 error-policy.test.ts: 错误状态与缺失分离、Error message/stack/cause 脱敏离线回归
-error-page-fixture.ts: 当前源码临时复制与测试专用故障路由，生产构建不含触发入口
+error-page-fixture.ts: Vite+ CLI 构建当前源码复制品与测试专用故障路由，生产构建不含触发入口
 error-delivery.test.ts: 隔离产物十二条真实预览回归；禁用预渲染验证 SSR/静态资产 200，保留错误脱敏/状态/索引/恢复入口
 tag-delivery.test.ts: 真实 HTTP 三语言标签索引/详情内链、分页、同义 301、特殊字符/长尾 noindex 与未知 404
 project-tags.test.ts: 公开标签同义/按项目去重、特殊字符/注入路径、原始快照和 Action bot 候选不变回归
@@ -123,8 +123,8 @@ submission-intake.test.ts: Node test 模拟 GitHub 状态转换、CI 来源、�
 submission-intake-workflow.test.ts: Node test 执行隔离 Bash/gh 交接命令，约束成功 CI、自建分支编号、可信 main 与 Actions-only 权限
 ui-transitions.test.ts: Node test UI 过渡与编译后 CSS、真实卡片端点/滚动重测/来源失效纯几何、官方 arc-presence 接法/完成回调稳定性/复开来源与焦点回落护栏；真实轨迹/历史/焦点另做浏览器验收
 
-verify-delivery.test.ts: 真实子进程验证交付编排的失败/跳过/取消与自有进程清理
-verify-delivery.ts: 构建后零跳过页面/OG/Agents/MCP/分页/标签验收，只拥有自有预览生命周期
+verify-delivery.test.ts: 默认 Vite+ CLI 真实预览及子进程失败/跳过/取消、自有进程清理回归
+verify-delivery.ts: Vite+ CLI 预览下的零跳过页面/OG/Agents/MCP/分页/标签验收，只拥有自有预览生命周期
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

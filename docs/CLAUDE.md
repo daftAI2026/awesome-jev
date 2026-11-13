@@ -5,7 +5,7 @@
 workflow-verification.md: Workflow 解耦、历史占位故障与生命周期 TDD/投产验收；保留原始红绿证据，不伪造失效观察
 jev-figure.md: Jev 事实与机械分选器隐喻、60 零件、项目级 skill 来源、减少动态效果与错误恢复边界
 agents.md: Agents 页脚、机器文档与匿名 MCP 的公开字段、协议、隐私和目录发布边界
-architecture.md: 免费有限查询/构建 PNG 与开发渲染边界；新闻有界交付；Start 配套版本、Cloudflare 工具链与 Undici 覆盖/内联副本边界；404/500 恢复、脱敏与平台异常边界；标签 SSR/长尾 noindex 与有界页脚投影，技术栈/交付边界、目录分页 SSR、站内推荐与统计契约、单一工作台白名单/生产隔离及同源探针边界
+architecture.md: Vite+ 同版内核/标准 Cloudflare 与原 GitHub 交付；免费有限查询/构建 PNG 与开发渲染边界；新闻有界交付；Start 配套版本、Cloudflare 工具链与 Undici 覆盖/内联副本边界；404/500 恢复、脱敏与平台异常边界；标签 SSR/长尾 noindex 与有界页脚投影，技术栈/交付边界、目录分页 SSR、站内推荐与统计契约、单一工作台白名单/生产隔离及同源探针边界
 deployment.md: MCP/网站免费 CPU 与资产门禁、同版本制品、Registry/Glama 回读；区域规则与 production 隔离
 collector.md: 七条 Workflow 的活跃队列/历史分界、判断复用与日预算；保留候选证据、身份生命周期、精确 CI/CAS 和最新 main 增量发布
 data-model.md: 候选 v2 的活跃/历史分界、请求指纹和发现阶段计数；统计单写者、身份迁址/下架与字段保护，区分审计和浏览器投影
@@ -14,7 +14,7 @@ directory-ui.md: 单列分类/标签、内链与 50 条分页 SSR；归一不撤
 reliability-review.md: 2026-10-01 外部 R1–R14 的修复/保留/延期裁决及诚实边界
 inclusion-follow-up.md: 全量依据复核后当前 7 项待补证与已授权移除的 404 来源记录，区分空仓、占位及跨仓范围，禁止编造依据或自动删除
 news.md: AIHOT 新闻来源、50 条动态页/单条预览、按需静态历史搜索及独立同步流程，区分历史 HTTP 误拒绝与由共享发布器自动恢复的 main 竞争
-performance.md: 双端 PageSpeed 基线、按需新闻交付与复测方法；Redact 完整接入、历史依赖冲突、验收与许可状态，不把字节缩小冒充体验收益
+performance.md: 双端 PageSpeed 基线、按需新闻交付与复测方法；Redact 完整接入和稳定依赖升级的实际能力、历史冲突与许可状态，不把字节缩小冒充体验收益
 
 法则: 成员完整·依赖单向·数据来源明确
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

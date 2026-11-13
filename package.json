@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": ">=24 <25"
+    "node": ">=24.11.0 <25"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && npm run agents:generate && vite build && node --experimental-strip-types scripts/generate-og.ts && tsc -b",
+    "dev": "vp dev",
+    "build": "npm run data:check && npm run inclusion:check && npm run news:check && npm run build:history && node --experimental-strip-types scripts/generate-sitemap.ts && npm run agents:generate && vp build && node --experimental-strip-types scripts/generate-og.ts && tsc -b",
     "lint": "oxlint",
-    "preview": "vite preview",
+    "preview": "vp preview",
     "deploy": "npm run build && wrangler deploy",
     "score:sources": "node --experimental-strip-types scripts/score-sources.ts",
     "categories:classify": "node --experimental-strip-types scripts/score-sources.ts --classify",
@@ -38,38 +38,43 @@
     "@modelcontextprotocol/server": "2.4.0",
     "@phosphor-icons/react": "^2.1.10",
     "@tanstack/react-router": "^1.170.46",
-    "@tanstack/react-start": "^1.169.4",
-    "@tanstack/react-virtual": "^3.14.23",
-    "@tanstack/redact": "0.2.0",
+    "@tanstack/react-start": "^1.169.5",
+    "@tanstack/react-virtual": "^3.14.26",
+    "@tanstack/redact": "0.3.1",
     "class-variance-authority": "^0.7.1",
-    "cn": "^0.5.0",
+    "cn": "^0.5.2",
     "fuse.js": "^7.5.0",
-    "motion": "^14.6.0",
+    "motion": "^14.14.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "shadcn": "^4.22.1",
+    "shadcn": "^4.23.0",
     "tw-animate-css": "^1.4.0",
     "zod": "4.6.7"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.65.0",
-    "@cloudflare/workers-types": "5.20261026.1",
+    "@cloudflare/vite-plugin": "1.69.1",
+    "@cloudflare/workers-types": "5.20261113.1",
     "@modelcontextprotocol/client": "2.4.0",
-    "@tailwindcss/vite": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "oxlint": "^1.89.0",
-    "tailwindcss": "^4.3.3",
+    "@vitejs/plugin-react": "^6.3.0",
+    "oxlint": "^1.93.0",
+    "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
-    "vite": "^8.3.5",
-    "wrangler": "4.153.0"
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0",
+    "vite-plus": "1.6.0",
+    "wrangler": "4.162.0"
   },
   "overrides": {
     "miniflare": {
-      "undici": "7.30.1"
-    }
+      "undici": "7.30.2"
+    },
+    "@tanstack/redact@0.3.1": {
+      "@cloudflare/vite-plugin": "$@cloudflare/vite-plugin"
+    },
+    "vite": "$vite"
   },
   "description": "Curated GitHub projects and Jev news about TypeSafe AI's System One model Jev — typed decisions, SDKs, demos, and integrations."
 }

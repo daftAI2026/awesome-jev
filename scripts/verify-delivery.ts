@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 Vite 预览、构建产物与页面/OG/Agents/MCP 交付测试
+ * [INPUT]: 依赖 Vite+ 本机 CLI 预览、构建产物与页面/OG/Agents/MCP 交付测试
  * [OUTPUT]: 对外提供 runDelivery、可取消命令入口与零跳过集成验收
  * [POS]: scripts 的构建后验收编排器；只拥有并清理自己启动的进程组
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -79,7 +79,7 @@ export async function runDelivery(options: DeliveryOptions = {}): Promise<string
   // --- 子进程是独立测试运行器，不能继承父测试的递归标记 ---
   delete env.NODE_TEST_CONTEXT
   const output = options.onOutput ?? (() => {})
-  const preview = launch(options.previewCommand ?? [process.execPath, 'node_modules/vite/bin/vite.js', 'preview', '--host', '127.0.0.1', '--port', String(port), '--strictPort'], cwd, env, output)
+  const preview = launch(options.previewCommand ?? [process.execPath, 'node_modules/vite-plus/bin/vp', 'preview', '--host', '127.0.0.1', '--port', String(port), '--strictPort'], cwd, env, output)
   let tests: ReturnType<typeof launch> | undefined
   try {
     const deadline = Date.now() + (options.startupTimeoutMs ?? 60_000)

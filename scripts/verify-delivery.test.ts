@@ -1,17 +1,36 @@
 /**
- * [INPUT]: 依赖真实 Node 子进程、临时 HTTP 服务与交付验收编排器
- * [OUTPUT]: 对外提供服务启动、测试失败/跳过拒绝及进程清理的回归验证
+ * [INPUT]: 依赖本地 Vite+ CLI、真实 Node 子进程、临时 HTTP 与交付编排器
+ * [OUTPUT]: 验证默认 Vite+ 预览、测试失败/跳过拒绝及自有进程清理
  * [POS]: scripts 的 CI 编排护栏，验证生命周期而非匹配工作流字符串
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { runDelivery } from './verify-delivery.ts'
 import { spawn } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
+
+test('default Vite+ delivery preview serves and closes without a site build', { timeout: 20_000 }, async () => {
+  const cwd = mkdtempSync(path.join(tmpdir(), 'jev-delivery-viteplus-'))
+  const originFile = path.join(cwd, 'origin.txt')
+  try {
+    symlinkSync(path.join(process.cwd(), 'node_modules'), path.join(cwd, 'node_modules'), 'dir')
+    mkdirSync(path.join(cwd, 'dist'))
+    writeFileSync(path.join(cwd, 'dist/index.html'), '<!doctype html><title>Preview fixture</title>')
+    writeFileSync(path.join(cwd, 'package.json'), '{"private":true,"type":"module"}')
+    writeFileSync(path.join(cwd, 'vite.config.ts'), `import { defineConfig } from 'vite-plus'; export default defineConfig({envDir:false})`)
+    const code = `require('node:fs').writeFileSync(${JSON.stringify(originFile)},process.env.TEST_SITE_ORIGIN);
+console.log('TAP version 13\\n1..1\\n# tests 1\\n# pass 1\\n# fail 0\\n# skipped 0')`
+    await runDelivery({ cwd, startupTimeoutMs: 10_000, testTimeoutMs: 5000,
+      testCommand: [process.execPath, '-e', code] })
+    const origin = readFileSync(originFile, 'utf8')
+    assert.match(origin, /^http:\/\/127\.0\.0\.1:\d+$/)
+    await assert.rejects(fetch(origin, { signal: AbortSignal.timeout(1000) }), '验收结束必须关闭真实预览服务')
+  } finally { rmSync(cwd, { recursive: true, force: true }) }
+})
 
 for (const mode of ['pass', 'fail', 'skip', 'startup-fail', 'startup-timeout', 'test-timeout']) {
   test(`delivery runner ${mode} cleans up its own preview`, async () => {

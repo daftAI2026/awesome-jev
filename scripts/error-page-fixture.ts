@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖当前源码、Vite 配置和 Node 临时目录；不读取凭据
+ * [INPUT]: 依赖当前源码、Vite+ 配置/本机 CLI 和 Node 临时目录；不读取凭据
  * [OUTPUT]: 提供 buildErrorFixture，复制真实页面并注入仅测试用失败路由
  * [POS]: scripts 的故障隔离夹具；生产源码和构建产物均不含故障入口
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -59,7 +59,7 @@ const load = createServerFn({ method: 'GET' }).handler(() => {
 })
 export const Route = createFileRoute('/{-$locale}/fault-retry')({ loader: () => load(), component: () => <h1>Recovered successfully</h1> })`)
     // --- 仅复制品接受失败注入；不在正式路由增加开关 ---
-    await promisify(execFile)(process.execPath, [path.join(root, 'node_modules/vite/bin/vite.js'), 'build'], {
+    await promisify(execFile)(process.execPath, [path.join(root, 'node_modules/vite-plus/bin/vp'), 'build'], {
       cwd, env: { ...process.env, CLOUDFLARE_SEND_METRICS: 'false', WRANGLER_SEND_METRICS: 'false' }, timeout: 180_000, maxBuffer: 8 * 1024 * 1024,
     })
     return { cwd, cleanup }

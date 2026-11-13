@@ -1,11 +1,11 @@
 /**
  * [INPUT]: 依赖真实 Vite 配置、已锁定的运行时与 Vite 隔离打包
- * [OUTPUT]: 验证 Redact 插件顺序、SSR 同源替换与客户端完整功能模块
+ * [OUTPUT]: 验证插件顺序、SSR 同源/状态订阅默认导入与客户端完整功能模块
  * [POS]: scripts 的运行时接入回归；不构建目录页面，不替代浏览器交互验收
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
-import { mkdtemp, rm, symlink, writeFile } from 'node:fs/promises'
+import { mkdtemp, readFile, rm, symlink, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
@@ -21,6 +21,9 @@ function bundledFiles(result: Awaited<ReturnType<typeof build>>) {
 
 test('configured Redact shares one runtime across SSR and a full-featured client', { timeout: 60_000 }, async (t) => {
   const projectRoot = fileURLToPath(new URL('../', import.meta.url))
+  const configSource = await readFile(path.join(projectRoot, 'vite.config.ts'), 'utf8')
+  assert.match(configSource, /import \{ cloudflare \} from '@cloudflare\/vite-plugin'/)
+  assert.ok(!configSource.includes('@tanstack/redact/cloudflare'), '普通 Vite 接法不得切换到精确锁定旧插件的特殊适配器')
   const loaded = await loadConfigFromFile({ command: 'build', mode: 'production' },
     path.join(projectRoot, 'vite.config.ts'), projectRoot, 'silent')
   assert.ok(loaded)
@@ -39,6 +42,7 @@ test('configured Redact shares one runtime across SSR and a full-featured client
 import { createElement, createContext, useContext, useId, useState } from 'react'
 import { createElement as runtimeElement } from '@tanstack/redact'
 import { renderToString } from 'react-dom/server'
+import selectorShim from 'use-sync-external-store/shim/with-selector'
 const Context = createContext('wrong')
 function Child() {
   const value = useContext(Context)
@@ -46,6 +50,7 @@ function Child() {
   return createElement('span', { id: useId() }, value + ':' + count)
 }
 export const shared = createElement === runtimeElement
+export const selectorType = typeof selectorShim.useSyncExternalStoreWithSelector
 export const html = renderToString(createElement(Context.Provider, { value: 'ready' }, createElement(Child)))
 `)
     // --- 复用真实插件对象与 SSR 配置；不启动 Start/Workers 或抓取全站 ---
@@ -55,6 +60,7 @@ export const html = renderToString(createElement(Context.Provider, { value: 'rea
     assert.ok(server?.type === 'chunk')
     const rendered = await import(`data:text/javascript;base64,${Buffer.from(server.code).toString('base64')}`)
     assert.equal(rendered.shared, true, 'SSR 的 React 导入必须使用同一个 Redact 实例')
+    assert.equal(rendered.selectorType, 'function', '状态订阅默认导入必须保留选择器，不能只暴露命名导出')
     assert.match(rendered.html, /<span id="[^"]+">ready:7<\/span>/)
 
     await writeFile(entry, `export { hydrateRoot } from 'react-dom/client'; export { createPortal } from 'react-dom';`)

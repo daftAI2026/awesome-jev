@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖 Vite/Start/Cloudflare/Redact、规范快照、公开可见性、展示投影、分享图身份与 Git 历史
+ * [INPUT]: 依赖 Vite+ 单一内核、Start、官方 Cloudflare 插件、Redact 普通 Vite 入口与规范快照
  * [OUTPUT]: 提供 Redact 同源运行时、多环境构建、IPv4 回环预览、三语言指南与有限查询产物
  * [POS]: 根级构建编排；公开数据同源，MCP 索引只进入服务端模块
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -7,7 +7,7 @@
 import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite-plus'
 import { directoryCatalogPlugin } from './scripts/directory-catalog.ts'
 import { staticCatalog, staticPrerenderPages } from './scripts/static-catalog.ts'
 import { cloudflare } from '@cloudflare/vite-plugin'

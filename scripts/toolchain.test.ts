@@ -1,11 +1,12 @@
 /**
- * [INPUT]: 依赖插件解析的 Miniflare、Node 子进程与随机端口回环 HTTP
- * [OUTPUT]: 验证畸形编码响应被拒绝且外部 Undici 不终止进程
+ * [INPUT]: 依赖 Vite+ 单一内核、安装/构建脚本、Miniflare 与回环 HTTP
+ * [OUTPUT]: 验证 Vite+ 真实接入、既有 Node 验收保留和外部 Undici 不崩溃
  * [POS]: scripts 的工具链安全回归；不覆盖插件内联的 Undici 副本
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import assert from 'node:assert/strict'
 import { execFile } from 'node:child_process'
+import { readFileSync } from 'node:fs'
 import { createServer } from 'node:http'
 import { createRequire } from 'node:module'
 import test from 'node:test'
@@ -14,6 +15,30 @@ import { promisify } from 'node:util'
 
 const runNode = promisify(execFile)
 const CHILD_TIMEOUT_MS = 15_000
+
+test('Vite+ owns the build without replacing Node tests or the GitHub delivery chain', async () => {
+  const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
+  const version = pkg.devDependencies['vite-plus']
+  assert.match(version ?? '', /^\d+\.\d+\.\d+$/, '必须实际安装固定版本 Vite+，不是只改脚本名')
+  assert.equal(pkg.devDependencies.vite, `npm:@voidzero-dev/vite-plus-core@${version}`)
+  assert.equal(pkg.overrides.vite, '$vite', '第三方 Vite 消费方必须复用同一内核')
+  assert.match(pkg.scripts.build, /&& vp build &&/)
+  assert.match(pkg.scripts.test, /^node --experimental-strip-types --test /)
+  const workflow = readFileSync(new URL('../.github/workflows/site.yml', import.meta.url), 'utf8')
+  assert.match(workflow, /run: npm run build && npm run test:delivery/)
+  assert.match(workflow, /npm ci --ignore-scripts/)
+  assert.ok(!workflow.includes('voidzero-dev/setup-vp'), '原 GitHub 安装与验收链不迁移到另一套 Action')
+  const config = readFileSync(new URL('../vite.config.ts', import.meta.url), 'utf8')
+  assert.match(config, /import \{ defineConfig \} from 'vite-plus'/)
+  for (const name of ['verify-delivery.ts', 'error-page-fixture.ts']) {
+    assert.ok(!readFileSync(new URL(name, import.meta.url), 'utf8').includes('node_modules/vite/bin/vite.js'), '交付与故障验收不能启动旧 Vite CLI')
+  }
+  const plus = await import('vite-plus')
+  const core = await import('vite')
+  assert.equal(typeof plus.defineConfig, 'function')
+  assert.equal(typeof core.build, 'function')
+  assert.match(core.version, /^8\./)
+})
 
 test('plugin Miniflare rejects excessive content encodings without crashing its process', {
   timeout: CHILD_TIMEOUT_MS + 5_000,

@@ -90,7 +90,8 @@ The final built homepage preloaded/static-import closure measures 3,838,585 deco
 ## Redact 运行时接入（2026-10-27）
 
 用户在工具链升级完成后明确要求接入 Redact。
-固定 `@tanstack/redact` 为 `0.2.0`，不随浮动范围升级。
+首次接入固定 `@tanstack/redact` 为 `0.2.0`。
+2026-11-14 升为 `0.3.1`，仍不随浮动范围升级。
 保持 React/React DOM 依赖与现有组件代码。
 按官方 Start 接法，先 Start、再 React、再 `redact()`。
 SSR 使用 `noExternal: true`，避免第三方保留真实 React。
@@ -112,7 +113,7 @@ Redact 替换 React 运行时，不是日志脱敏库。
 
 ### 初始依赖冲突与独立升级
 
-本次核对的最新发布版是 [0.2.0](https://github.com/TanStack/redact/releases/tag/%40tanstack%2Fredact%400.2.0)。
+首次接入时的最新发布版是 [0.2.0](https://github.com/TanStack/redact/releases/tag/%40tanstack%2Fredact%400.2.0)。
 其包声明要求 Cloudflare 插件精确为 `1.65.0`。
 初始基线因预览回归固定插件为 `1.59.0`。
 约束是可选 peer；已安装该插件时仍须满足。
@@ -136,13 +137,44 @@ npm install --package-lock-only --ignore-scripts --no-audit --no-fund --save-exa
 
 按同一锁文件建立 React 与 Redact 的隔离基线。
 初始本机安装落后于锁文件，已用 npm ci 重建。
-本轮核对时，上游[许可证问题 #65](https://github.com/TanStack/redact/issues/65)仍未关闭。
+2026-10-27 核对时，上游[许可证问题 #65](https://github.com/TanStack/redact/issues/65)仍未关闭。
 仓库与发布包未声明 Redact 自身的许可证。
 已向用户说明，用户再次明确要求直接接入及上线验收。
 此决定不等于上游已补发许可，也不沿用其他 TanStack 包的许可。
 0.2.0 已实现 transition、deferred 和异步 action。
 它仍无时间切片；旧版 no-op 结论不适用。
 以[官方兼容表](https://github.com/TanStack/redact/blob/d56d87c/docs/compatibility.md)为准。
+
+### 2026-11-14 稳定依赖与已有能力
+
+Redact 升为 [0.3.1](https://github.com/TanStack/redact/releases/tag/%40tanstack/redact%400.3.1)。
+该发布包已声明 MIT，并包含完整 LICENSE。
+上文许可证缺失记录只描述 0.2.0 的历史状态。
+本轮不再将“上游未声明许可”作为当前状态。
+
+新版本修复外部状态订阅的默认导入、水合与错误边界。
+已为默认导入增加真实配置下的隔离打包回归。
+旧版返回 undefined；升级后必须提供选择器函数。
+保留浏览器与 SSR 的同源替换和完整功能。
+不启用新的单端替换开关，也不切换 Webpack/Rspack。
+
+Motion `14.14.0` 自动覆盖现有 AnimatePresence 退出/重开。
+它包含退出卡住及 WebKit 动画清理的上游修复。
+保留现有 arc 轨迹、焦点恢复和动态减少动效偏好。
+本站无多指旋转或长按需求，不为新增 API 增加界面。
+依据：[官方变更日志](https://github.com/motiondivision/motion/blob/main/CHANGELOG.md)。
+
+Virtual `3.14.26` 使用 core `3.19.11`。
+当前测量定位、列表缩短与 ResizeObserver 修复随升级生效。
+保留既有阅读位置和 SSR 前缀，不加第二套滚动补偿。
+依据：[官方变更日志](https://github.com/TanStack/virtual/blob/main/packages/virtual-core/CHANGELOG.md)。
+
+Vite+ 1.6.0 只接管构建、开发和预览入口。
+原 GitHub 构建位置、Node 验收与部署规则不变。
+未启用任务结果缓存，不跳过完整验收。
+
+这些是上游行为修复，不是本站生产性能测量。
+版本升级不能冒称 CPU、内存或交互延迟已下降。
 
 正式回归先证明未接入时失败，再验证接入后的产物。
 `scripts/redact-runtime.test.ts` 读取真实配置并隔离打包。
