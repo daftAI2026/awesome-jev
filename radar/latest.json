@@ -1,219 +1,140 @@
 {
-  "at": "2026-11-13T06:49:33.129Z",
+  "at": "2026-11-13T18:34:49.934Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 3008,
+      "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 11145,
+      "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 9532,
+      "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 622,
+      "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 737,
+      "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
-      "fetched": 0,
-      "total": 0,
-      "status": "backpressure"
+      "fetched": 200,
+      "total": 4206,
+      "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
       "fetched": 0,
       "total": 0,
-      "status": "backpressure"
+      "status": "github-phase-deadline"
     },
     {
       "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 0,
       "total": 0,
-      "status": "backpressure"
+      "status": "github-phase-deadline"
     },
     {
       "query": "code:\"TYPESAFE_API_KEY\" in:file",
       "fetched": 0,
       "total": 0,
-      "status": "backpressure"
+      "status": "github-phase-deadline"
     },
     {
       "query": "code:\"jev-latest\" in:file",
       "fetched": 0,
       "total": 0,
-      "status": "backpressure"
+      "status": "github-phase-deadline"
     }
   ],
   "metadata": {
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 27,
+  "reviewed": 5,
   "added": 0,
-  "pending": 3931,
+  "pending": 4325,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "tangbl93/multica-agent-capacity",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "tune-77/tune_lease_55",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "veighnsche/can-lang",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "akivet/mica-v0.1-4b",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "xyzzzh/groundingjev",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "siiick/pi-pignon",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "ttlequals0/minuspodjev",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "pareshbhangale/jev---job-hiring-content-detector",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "akashpriyadarshii/akashpriyadarshii",
+      "repo": "amitshekhariitbhu/ai-engineering-interview-questions",
       "status": "review",
       "reason": "insufficient-provider-context",
-      "sha": "d5189bd0231ab676115d98c69bdf034ae59301e8",
-      "evidenceUrl": "https://github.com/akashpriyadarshii/akashpriyadarshii/blob/d5189bd0231ab676115d98c69bdf034ae59301e8/README.md",
-      "evidenceSha256": "9ef74f7654511ecb178bf0f38f880226b0f4a9f21de1c24c481f4db4dd9c434d",
+      "sha": "a887ff98478874eba43dab7d8d6b0e1075acf6e9",
+      "evidenceUrl": "https://github.com/amitshekhariitbhu/ai-engineering-interview-questions/blob/a887ff98478874eba43dab7d8d6b0e1075acf6e9/README.md",
+      "evidenceSha256": "df1d39a465e4f35cf961f30ca22af9d53a6f8f3cc82786c8eeafeea15c7729f1",
       "evidenceLinks": [],
       "model": "jev-latest",
-      "checkedAt": "2026-11-13T06:49:33.129Z"
+      "checkedAt": "2026-11-13T18:34:49.934Z"
     },
     {
-      "repo": "oozoofrog/codex-skills",
-      "status": "error",
-      "reason": "github-network-or-timeout"
+      "repo": "alexei-led/pi-model-router",
+      "status": "review",
+      "reason": "insufficient-provider-context",
+      "sha": "0bd1390257c9bc75c32c23448f6e7fec1b69a4bf",
+      "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/0bd1390257c9bc75c32c23448f6e7fec1b69a4bf/README.md",
+      "evidenceSha256": "dccfef4776d754454de2deaf82448996bafb661c1ac5535d652ba0953cc43234",
+      "evidenceLinks": [
+        {
+          "url": "https://github.com/alexei-led/pi-model-router/blob/0bd1390257c9bc75c32c23448f6e7fec1b69a4bf/docs/jev-advisor.md",
+          "path": "docs/jev-advisor.md",
+          "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
+        }
+      ],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-13T18:34:49.934Z"
     },
     {
-      "repo": "eddiemessiah/ai-native-company",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "cameroncooke/axe",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.16,
+        "jevKeep": "drop",
+        "jevKeepConfidence": 0.38,
+        "category": "developer",
+        "needsReview": true,
+        "conflictingEvidence": true
+      },
+      "sha": "e39e3d6ea3f53962685e7fcffacb815903612628",
+      "evidenceUrl": "https://github.com/cameroncooke/axe/blob/e39e3d6ea3f53962685e7fcffacb815903612628/README.md",
+      "evidenceSha256": "8f14279e56f1886a08cd483691980414e79a962c0d865919ee45b8e8dea64919",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-13T18:34:49.934Z"
     },
     {
-      "repo": "evan-zhang/openclaw-typesafe-plugin",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kairugakuo2/jev-arena",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "kxuejava/travel-agent",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "lasimeri/intel-phi-avx512",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "mekashef/paideia-genesis",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "michaljach/jet",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "misokina/aslan",
+      "repo": "alexkarpandrus/tickettrain",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "mizzlr/whisper-typer",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "mundulabs/gradula",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "muresanroland/orqadence",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "octalide/sift",
-      "status": "error",
-      "reason": "github-ineligible-repository"
-    },
-    {
-      "repo": "ooo-hq/fez",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "peterwadsackett/agenticworkshop",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "simon-zj1/jev-exam",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "tomhar92/typesafe-claude-router",
-      "status": "error",
-      "reason": "github-network-or-timeout"
-    },
-    {
-      "repo": "venkateshv1266/my-pi-setup",
-      "status": "error",
-      "reason": "github-network-or-timeout"
+      "repo": "xnhyacinth/awesome-llm-long-context-modeling",
+      "status": "review",
+      "reason": "insufficient-provider-context",
+      "sha": "c3b9ed7059db9d279966818dbca8484a8da02f8f",
+      "evidenceUrl": "https://github.com/xnhyacinth/awesome-llm-long-context-modeling/blob/c3b9ed7059db9d279966818dbca8484a8da02f8f/README.md",
+      "evidenceSha256": "2c699f2ad91f6a19ebf1ca1f4766efc7eda6aa4bcf3da1e506a299127883c15e",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-13T18:34:49.934Z"
     }
   ],
   "identity": {
@@ -223,7 +144,14 @@
     "cost": 0,
     "resolved": []
   },
-  "backpressure": 10,
+  "discoveryPending": 394,
   "buffered": 0,
+  "queue": {
+    "pending": 391,
+    "review": 3371,
+    "error": 563,
+    "drop": 0,
+    "buffered": 0
+  },
   "totalProjects": 3177
 }
