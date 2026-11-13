@@ -6943,5 +6943,35 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
     "aihotUrl": "https://aihot.news/items/a9e7zjju2dou6wij6kug9ksei"
+  },
+  {
+    "id": "obrivwq8dvc16kszi9xtyzyes",
+    "title": "Jev 模式之推测性提问：把追问合并进同一次调用",
+    "originalTitle": "can’t get answers to questions you don’t ask! Jev first, figure it out later.",
+    "summary": "作者转发 allietheicon 的 Jev 模式最佳实践，介绍推测性提问：在多数情况下把问题批量合并进单次调用更快且往往更便宜，即使还不确定是否需要答案。原因包括单次调用可完成整个任务、只需为状态中的 token 付费一次从而避免重复支付状态成本、同一调用中问题互不影响输出因此准确性不受损；图中建议在初始调用中随 gate 一起加入追问，代码先检查 gate，只使用需要的追问答案并忽略其余。",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-13T22:14:15.000Z",
+    "discoveredAt": "2026-11-13T22:15:34.524Z",
+    "category": "tip",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2121366055184748946",
+    "aihotUrl": "https://aihot.news/items/obrivwq8dvc16kszi9xtyzyes"
+  },
+  {
+    "id": "o9uub3tapw9ejj0uphm6d2juv",
+    "title": "Jev 拍照判断速度达 Sol 的 30 倍",
+    "originalTitle": "blurry photo in the field? Jev makes a snap judgment to find out.",
+    "summary": "野外照片模糊？Jev 快速判断一探究竟。\n\n@elise_ai 实测 Jev 每张照片耗时 94ms：比 Sol 快约 30 倍，同等成本下判断次数约多 50 倍",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-13T19:07:48.000Z",
+    "discoveredAt": "2026-11-13T19:11:33.990Z",
+    "category": "ai-products",
+    "score": 22,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2121319134202126571",
+    "aihotUrl": "https://aihot.news/items/o9uub3tapw9ejj0uphm6d2juv"
   }
 ]
