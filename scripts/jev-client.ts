@@ -1,10 +1,11 @@
 /**
- * [INPUT]: 依赖 模型请求契约与有界等待、调用前预算持久化 hook
- * [OUTPUT]: 对外提供 Jev 相关性/分类评估、原子取证及类型验证
+ * [INPUT]: 依赖模型请求契约、Node crypto、有界等待与调用前预算持久化 hook
+ * [OUTPUT]: 对外提供 Jev 评估、完整请求指纹、原子取证及类型验证
  * [POS]: 共享付费边界；调用方拥有预算与恢复状态，浏览器不引用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 import { setTimeout as sleep } from 'node:timers/promises'
+import { createHash } from 'node:crypto'
 import type {
   EvidencePartBody,
   FactScores,
@@ -129,6 +130,14 @@ export interface EvaluateOptions {
   partial?: boolean
   alternative?: boolean
   attempts?: number
+}
+
+export function reviewFingerprint(row: JevRow, evidence: string, alternative = false): string {
+  const parts = evidenceParts(evidence)
+  if (parts.length > MAX_EVIDENCE_PARTS) throw new Error('jev-evidence-too-large')
+  // 指纹包含实际分段、完整问题/模型参数；只保留摘要，不额外存源码或请求正文。
+  return createHash('sha256').update(JSON.stringify({ about: MIN_ABOUT, keep: MIN_KEEP_CONFIDENCE,
+    requests: parts.map(part => reviewBody(row, part, parts.length > 1, alternative)) })).digest('hex')
 }
 
 async function evaluatePart(

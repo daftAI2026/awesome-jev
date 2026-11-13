@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+candidate-queue.test.ts: 两条采集链的历史占位复现、真实待审背压与付费判断复用；离线替身不发模型请求
 redact-runtime.test.ts: 真实配置与隔离模块图验证 Redact 顺序、SSR 同源、客户端单运行时和完整功能；不替代浏览器验收
 preview-host.test.ts: 读取项目预览 host；真实 Vite/TCP 验证停顿后的 IPv4 回环连接，不启动项目插件服务器
 toolchain.test.ts: 插件实际解析的 Miniflare 外部 Undici 畸形编码回归；子进程隔离崩溃，不覆盖插件内联副本
@@ -26,7 +27,7 @@ catalog-review.test.ts: 身份竞态、旧预算、持久冷却、分类和替�
 public-visibility.test.ts: 真实投影和服务端入口验证全部隐藏状态不进入公开出口
 metadata-sync.ts: 无模型统计和生命周期入口，独占续点与失效观察；诊断不能应用
 metadata-sync.test.ts: 无模型刷新、编辑保护、统计状态迁移与非法诊断拒收回归
-candidate-queue.ts: 两条发现链共用的残页缓冲与背压，显式容量策略；核心额外使用交替审核排序
+candidate-queue.ts: 两条发现链共用活跃槽位/残页背压、公平排序、队列报告与状态序列化；保留历史，完整输入的未收录判断有期复用，不复用批准
 site-publication.ts: 发布与部署共用六条精确状态白名单；按完整提交历史拒绝旧产物
 site-publication.test.ts: 真实临时 Git 验证状态推进、revert、合并、重命名和失败关闭
 
@@ -80,7 +81,7 @@ github-metadata.ts: 同一只读客户端的 50 项身份批读，默认遍历�
 github-evidence.ts: 固定提交的 GitHub 来源与替代实现证据
 inclusion.test.ts: Node test inclusion 的契约与回归验证，运行 npm test
 inclusion.ts: 采集侧收录证据校验与改动验证
-jev-client.ts: 仅服务端的 Jev 审核请求和决策契约
+jev-client.ts: 仅服务端的 Jev 请求/决策与实际分段输入指纹；不把星数等未送入模型的字段误算为新证据
 locale-routes.test.ts: Node test 三语言路径、hreflang 与首页 GitHub 目录搜索/分享文案契约
 masonry.test.ts: Node test 通道/间距和水合前滚动的窗口/位置契约，避免自然流丢失虚拟前缀
 model-types.ts: 原始 tags 与公开投影分界，采集、GitHub 来源与模型审核共享类型；GitHubIdentity 区分数字身份与不透明查询地址，previousUrls 只记录地址历史，GitHubApi 支持阶段截止；GitHubQuery 仅声明只读 GraphQL
@@ -94,7 +95,7 @@ project-routes.test.ts: Node test 路径安全、精确项目查找与清洗旧�
 radar-budget.test.ts: Node test radar-budget 的契约与回归验证，运行 npm test
 radar-budget.ts: 审核请求预算与持久化边界
 radar.test.ts: Node test radar 的契约与回归验证，运行 npm test
-radar.ts: 核心发现与审核，共享来源失败分类；v1 无损升级 v2；五分钟发现窗口、交替审核、身份去重与诊断拒收，目录复核共用原预算，统计由 metadata-sync 独占
+radar.ts: 核心发现/目录复核与独立日预算；活跃槽位和历史分开计数、16 MiB 状态保护、判断复用及无待审却全路背压的失败出口；保留身份/来源隔离
 repository-review.test.ts: Node test repository-review 的契约与回归验证，运行 npm test
 repository-review.ts: 固定提交的整仓审核与文件排除策略
 review-checkpoint.ts: 核对可信 workflow/attempt/jobs，按 collect 时序定位预算；已知 verify/部署无采集，未知任务与当日缺失账本拒绝回退

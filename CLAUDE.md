@@ -5,7 +5,7 @@ React 19 接口 + Redact 0.2.0 运行时 + TypeScript 7 + TanStack Start 1.169.4
 src/ - 路由、目录界面、共享纯工具及 OG/MCP 服务端边界 (5 子目录: components, hooks, i18n, lib, routes)
 data/ - GitHub 项目与 AIHOT 新闻的独立 JSON 快照，容量告警/发布门槛见局部地图
 docs/ - 架构、视觉、数据与运行规范；视觉以 docs/design.md 为准
-scripts/ - 同 ID 自动迁址、持续失效可逆下架与原预算身份复核、独立全目录元数据同步、残页背压/交替审核、精确状态部署等价、自动 GitHub 身份建基线、服务端采集/审核、构建期展示投影、索引资产生成与最新 main 增量叠加发布、Node test，不进入前端请求链
+scripts/ - 同 ID 自动迁址、可逆下架与原预算复核、独立元数据同步、活跃候选/历史分开计数及同输入有期判断复用、残页背压/公平审核、精确状态部署等价、构建投影与最新 main 增量发布；Node test，不进入前端请求链
 public/ - 静态 favicon、索引、机器文档、原版品牌与许可完备字库 (3 子目录: agents, agent-logos, og-fonts)
 radar/ - 生态与替代实现的状态及发布报告
 .agents/ - 项目专用 Agent 复核与 Anatomy SVG skill 与独立分类收据交接 (1 子目录: skills)，不部署云端 Agent

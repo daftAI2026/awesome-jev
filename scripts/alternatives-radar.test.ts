@@ -225,17 +225,17 @@ test('legacy renamed alternative is anchored before discovery without evidence o
   assert.equal(result.rows[0].sourceMeta.githubIdentity?.databaseId, repo.id)
 })
 
-test('alternative queue retains its independent 2000 total cap and never advances search under backpressure', async () => {
+test('alternative queue bounds real pending work and never advances search under backpressure', async () => {
   const state = emptyAlternativesState()
-  for (let i = 0; i < 1950; i++) state.candidates[`test/q-${i}`] = { status: 'review', discoveredAt: now.toISOString(), retryAt: '2099-01-01T00:00:00Z', attempts: 1 }
+  for (let i = 0; i < 2000; i++) state.candidates[`test/q-${i}`] = { status: 'pending', discoveredAt: now.toISOString(), retryAt: '2099-01-01T00:00:00Z', attempts: 0 }
   let searches = 0
   const result = await runAlternatives({ catalog: catalog(), state, now, queries: ['query'], api: async () => { searches++; return { items: [alternatives[0]], total_count: 200 } }, review: async () => assert.fail('No eligible review') })
   assert.equal(searches, 0)
   assert.equal(result.state.pages.query, undefined)
-  assert.equal(Object.keys(result.state.candidates).length, 1950)
+  assert.equal(Object.keys(result.state.candidates).length, 2000)
   assert.equal(result.report.backpressure, 1)
   const oversized = { ...result.state, candidates: { ...result.state.candidates } }
-  for (let i = 1950; i < 2001; i++) oversized.candidates[`test/q-${i}`] = { status: 'review', discoveredAt: now.toISOString(), attempts: 0 }
+  oversized.candidates['test/q-2000'] = { status: 'pending', discoveredAt: now.toISOString(), attempts: 0 }
   assert.throws(() => validateAlternativesState(oversized), /overflow/)
 })
 

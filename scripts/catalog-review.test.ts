@@ -180,7 +180,7 @@ test('catalog drop cooldown is never evicted to make room for ordinary discovery
   const result = await runRadar({ catalog: catalog(), now, queries: [], api: evidence(), review: async () => ({ ...keep, jevKeep: 'drop' }) })
   const before = structuredClone(result.state.candidates)
   const queue = candidateQueue(result.state, new Set(), new Set(), result.report, now.toISOString(), 100)
-  assert.equal(queue.reserve(), false); assert.deepEqual(result.state.candidates, before)
+  assert.equal(queue.reserve(), true); assert.deepEqual(result.state.candidates, before)
 })
 
 test('a full ordinary pending pool defers importing catalog reviews rather than deleting candidates', async () => {

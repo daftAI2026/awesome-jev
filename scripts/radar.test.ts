@@ -249,7 +249,7 @@ test('repository search retains star priority across queue checkpoints', async (
   assert.equal(result.state.candidates['test/low'].attempts, 0)
 })
 
-test('terminal rejection cache cannot permanently block new discovery at queue capacity', async () => {
+test('terminal rejection history does not block discovery and is not deleted to make room', async () => {
   const state = emptyState()
   for (let i = 0; i < 4000; i++) state.candidates[`old/rejected-${i}`] = {
     status: 'drop', discoveredAt: now.toISOString(), checkedAt: now.toISOString(),
@@ -257,9 +257,9 @@ test('terminal rejection cache cannot permanently block new discovery at queue c
   }
   const result = await runRadar({ ...options(), state })
   assert.equal(result.report.added, 1)
-  assert.equal(result.report.evicted, 100)
-  assert.equal(result.report.status, 'partial')
-  assert.ok(Object.keys(result.state.candidates).length < 4000)
+  assert.equal(result.report.evicted, 0)
+  assert.equal(result.report.status, 'complete')
+  assert.equal(Object.keys(result.state.candidates).length, 4000)
 })
 
 test('persisted timestamps must be ISO strings, not Date.parse-coercible numbers', () => {
@@ -634,12 +634,12 @@ test('pending cap buffers the remainder of an observed page and replays it befor
   assert.equal(next.state.pendingSearchPage?.items.length, 98)
 })
 
-test('candidate storage has independent pending/total bounds and rejects extra buffered payloads before requests', () => {
+test('candidate storage bounds pending work and rejects extra buffered payloads before requests', () => {
   const state = emptyState()
   for (let i = 0; i < 4000; i++) state.candidates[`test/r-${i}`] = { status: i < 2000 ? 'pending' : 'review', discoveredAt: now.toISOString(), attempts: 0 }
   validateState(state)
   state.candidates['test/overflow'] = { status: 'review', discoveredAt: now.toISOString(), attempts: 0 }
-  assert.throws(() => validateState(state), /overflow/)
+  assert.doesNotThrow(() => validateState(state))
   delete state.candidates['test/overflow']
   state.candidates['test/r-2000'].status = 'pending'
   assert.throws(() => validateState(state), /overflow/)

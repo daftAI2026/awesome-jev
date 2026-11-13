@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 依赖采集/审核、生命周期、GitHub Actions 与离线测试
-[OUTPUT]: 提供采集发布、可逆下架、迁址与原预算重审规则
+[OUTPUT]: 提供活跃队列/历史分界、判断复用、采集发布、可逆下架与原预算重审规则
 [POS]: docs 的自动化运维契约，连接工作流权限隔离与目录数据发布，不作为运行时代码依赖
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -88,14 +88,19 @@ Repository, README and code search use the workflow's built-in `GITHUB_TOKEN`. C
 
 核心状态使用 version 2，兼容读取 version 1。
 候选仍保留一个 map，不另建生命周期数据库。
-pending 最多 2000，候选与残页合计最多 4000。
-4000 是有限存储保护，不是永远不会满的保证。
-review 保留七天，drop 保留三十天。
+首次待审 pending 最多 2000，残页最多 100。
+活跃容量只计算 pending 与残页，不计算已处理历史。
+旧的“全部候选合计 4000”规则已替换。
+历史仍在原 map，不新增数据库、文件格式或手工迁移。
+完整状态按最终写盘字节最多 16 MiB。
+校验与写入共用序列化，计入缩进和末尾换行。
+这是实际存储保护，不是每日额度或项目数限制。
+超过字节上限明确失败，不删除历史或假装采集正常。
+review 七天后复检，drop 三十天后复检。
 error 继续采用 1/2/4/7 天退避。
-只淘汰原规则允许的终态 drop 缓存。
-不删除 pending/review/error 来制造空位。
+不删除 pending/review/error/drop 来制造发现空位。
 
-每次搜索前预留 100 个总容量槽。
+每次搜索前预留一页活跃槽位。
 pending 已满时停止发现，已有审核继续。
 已观察页面的剩余导航保存为 pendingSearchPage。
 缓冲只保存仓库、数字 ID、星数与最多三条代码线索。
@@ -109,9 +114,32 @@ nextReviewLane 保存下一审核组。
 预算或期限中断恢复原状态，不虚记审核次数。
 核心整轮 25 分钟，发现阶段最多五分钟。
 两个阶段复用同一个 GitHub client。
-替代实现显式保持独立的 2000 总容量。
+替代实现使用相同活跃容量与公平排序，保留独立状态和预算。
 
-Radar permits **2,000 actual Jev HTTP attempts per UTC day**, including retries; requests are reserved before sending. Its counter is restored from a trusted same-workflow Actions artifact and uploaded even for previews, with seven-day retention. PR/Issue review and alternatives discovery each have a **separate 2,000-attempt daily budget**: three domains permit up to **6,000 attempts per UTC day**, not a shared 2,000. This counts HTTP attempts including retries, not successful reviews, tokens or money; explicit local audit/backfill commands are outside these scheduled counters. Exhausting radar time or requests defers remaining candidates rather than rejecting them. Abrupt runner loss before artifact upload can lose the latest counter checkpoint; this is not a provider-enforced billing cap. No additional version-fingerprint cache is used: reviewed versions and evidence are audit records, while the existing 30/7-day delays prevent routine repeat review.
+实际模型输入指纹覆盖完整证据分段、问题、模型与准入阈值。
+冷却到期先读取当前 GitHub 证据，再比较指纹。
+相同输入的未收录判断最多复用三十天。
+复用不更新 modelReviewedAt，不伪造新的模型调用。
+输入或审核问题改变时重新调用模型。
+jev-latest 是可变别名，三十天到期也重新调用。
+不复用合格 keep，不能用缓存绕过实时身份和准入校验。
+旧状态没有指纹时正常审核，逐步补齐，不清空账本。
+
+报告 queue 分列 pending/review/error/drop/buffered。
+reusedReviews 只计复用判断，不冒称节省了同等数量的 HTTP 请求。
+旧 pending 字段保留全部未收录计数，避免破坏旧报告消费方。
+发现阶段首次待审为零且全部搜索背压时，collect 明确失败。
+discoveryPending 保存发现阶段计数，不使用审核后的队列判断。
+本轮正常审完一整批任务不能误判为发现停滞。
+诊断保留快照，但失败快照仍不得自动发布。
+
+回退发现或复用策略时，必须保留新容量规则的状态读取能力。
+新状态的历史条数能超过旧 4000 条上限。
+不得用旧检查点覆盖新候选，也不得直接恢复旧总条数校验。
+发生运行故障时先暂停原采集开关，保留状态与预算收据。
+修复兼容读取后再续跑，不通过清空历史恢复绿灯。
+
+Radar permits **2,000 actual Jev HTTP attempts per UTC day**, including retries; requests are reserved before sending. Its counter is restored from a trusted same-workflow Actions artifact and uploaded even for previews, with seven-day retention. PR/Issue review and alternatives discovery each have a **separate 2,000-attempt daily budget**: three domains permit up to **6,000 attempts per UTC day**, not a shared 2,000. This counts HTTP attempts including retries, not successful reviews, tokens or money; explicit local audit/backfill commands are outside these scheduled counters. Exhausting radar time or requests defers remaining candidates rather than rejecting them. Abrupt runner loss before artifact upload can lose the latest counter checkpoint; this is not a provider-enforced billing cap. Reused judgments never call the request reservation hook. The next execution after a UTC date change resets the daily counter; the China Standard Time boundary is 08:00, not every workflow start.
 
 ### Permission and failure boundaries
 

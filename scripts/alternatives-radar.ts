@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖共享目录、GitHub 取证、模型审核与核心来源失败分类/状态契约
- * [OUTPUT]: 对外提供替代实现采集、状态校验和快照写入
+ * [INPUT]: 依赖共享目录、活跃队列/公平排序、请求指纹、GitHub 取证与独立模型预算
+ * [OUTPUT]: 提供不受历史占位的替代采集、判断复用、分类队列报告和快照写入
  * [POS]: scripts 的独立替代实现队列，复用请求及付费边界，用数字 ID 排除改名后的已收录对象
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -14,10 +14,10 @@ import { createGitHubClient, isGitHubRunDeferred } from './github-client.ts'
 import { knownGitHubIds } from './github-identity.ts'
 import { bootstrapIdentities } from './github-metadata.ts'
 import { alternativeEvidenceIssue, githubEvidence } from './github-evidence.ts'
-import { evaluateJev, JEV_MODEL, reviewDecision } from './jev-client.ts'
+import { evaluateJev, JEV_MODEL, reviewDecision, reviewFingerprint } from './jev-client.ts'
 import { createRadarBudget } from './radar-budget.ts'
 import { isDiscoverySourceFailure, RADAR_EXECUTION_MS, validateState } from './radar.ts'
-import { candidateQueue } from './candidate-queue.ts'
+import { candidateCounts, candidateQueue, candidateQueueSummary, discoveryStalled, fairReviewQueue, reusableReview, serializeRadarState, CORE_ACTIVE_LIMIT } from './candidate-queue.ts'
 import type { SearchLead } from './candidate-queue.ts'
 import type { Candidate, RadarReviewOptions, RadarReport, RadarState, Receipt } from './radar.ts'
 import type { Catalog, DirectoryItem, GitHubApi, GitHubRepository, JevRow, JevScore } from './model-types.ts'
@@ -27,7 +27,6 @@ export const ALTERNATIVE_QUERIES = [
   'topic:typed-decisions fork:false',
 ]
 const DAY = 86400000
-const MAX_QUEUE = 2000
 const stateFile = 'radar/alternatives-state.json'
 const reportFile = 'radar/alternatives-latest.json'
 const deferred = (error: unknown): boolean => error instanceof Error &&
@@ -36,7 +35,7 @@ const safeReason = (error: unknown): string => error instanceof Error && /^(gith
   ? error.message : 'candidate-invalid-evidence'
 
 export const emptyAlternativesState = (): RadarState => ({ version: 1, metadataCursor: 0, pages: {}, candidates: {} })
-export const validateAlternativesState = (state: RadarState) => validateState(state, MAX_QUEUE)
+export const validateAlternativesState = (state: RadarState) => validateState(state)
 
 export interface AlternativesOptions {
   catalog: Catalog
@@ -79,7 +78,7 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
   report.identity = await bootstrapIdentities(rows, api)
   if (report.identity.deferred) report.deferred = { phase: 'identity', reason: report.identity.deferred }
   const knownIds = knownGitHubIds(rows)
-  const navigation = candidateQueue(state, known, knownIds, report, started, MAX_QUEUE)
+  const navigation = candidateQueue(state, known, knownIds, report, started, CORE_ACTIVE_LIMIT)
   navigation.drain()
 
   for (const query of queries) {
@@ -114,10 +113,8 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
     report.sources.push(source)
   }
 
-  const queue = Object.entries(state.candidates)
-    .filter(([, entry]) => !entry.retryAt || Date.parse(entry.retryAt) <= now.getTime())
-    .sort(([a, x], [b, y]) => (x.checkedAt ?? x.discoveredAt).localeCompare(y.checkedAt ?? y.discoveredAt) ||
-      (y.stars ?? 0) - (x.stars ?? 0) || a.localeCompare(b))
+  report.discoveryPending = candidateCounts(state).pending
+  const queue = fairReviewQueue(state, now.getTime())
   for (const [key, entry] of queue) {
     if (report.deferred) break
     if (expired()) { report.deferred = { phase: 'review', reason: 'github-deadline' }; break }
@@ -134,7 +131,9 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
       const candidate = candidateRow(repo, {}, { alternative: true })
       const license = repo.license?.spdx_id
       const reason = !license || license === 'NOASSERTION' ? 'missing-open-source-license' : alternativeEvidenceIssue(repo, text)
-      const score = reason ? undefined : await review(candidate, text, {
+      const fingerprint = reason ? undefined : reviewFingerprint(candidate, text, true)
+      const cached = fingerprint ? reusableReview(entry, fingerprint, now.getTime()) : undefined
+      const score = reason ? undefined : cached ?? await review(candidate, text, {
         beforeRequest: async () => {
           if (expired()) throw new Error('radar-deadline')
           await beforeRequest?.()
@@ -147,6 +146,7 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
         reason: reason ?? (rawDecision === 'keep' && decision === 'review' ? 'category-not-alternative' : undefined), score, sha, evidenceUrl,
         evidenceSha256: createHash('sha256').update(text).digest('hex'), model: JEV_MODEL, checkedAt: started }
       report.receipts.push(receipt)
+      state.nextReviewLane = previous.status === 'pending' ? 'retry' : 'pending'
       if (decision === 'keep' && score?.category === 'alternatives') {
         if (rows.some((row) => row.id === candidate.id)) throw new Error('github-id-collision')
         const { category, ...reviewScore } = score
@@ -162,6 +162,11 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
         entry.status = decision === 'drop' ? 'drop' : 'review'
         entry.lastReview = receipt
         entry.retryAt = new Date(now.getTime() + (entry.status === 'drop' ? 30 : 7) * DAY).toISOString()
+        if (fingerprint) {
+          entry.reviewFingerprint = fingerprint
+          if (!cached) entry.modelReviewedAt = started
+          else report.reusedReviews = (report.reusedReviews ?? 0) + 1
+        }
       }
     } catch (error) {
       if (deferred(error) || expired()) {
@@ -174,11 +179,13 @@ export async function runAlternatives({ catalog, state = emptyAlternativesState(
       entry.status = 'error'
       entry.retryAt = new Date(now.getTime() + Math.min(7, 2 ** Math.min(entry.attempts - 1, 3)) * DAY).toISOString()
       report.receipts.push({ repo: key, status: 'error', reason })
+      state.nextReviewLane = previous.status === 'pending' ? 'retry' : 'pending'
       if (reason.startsWith('jev-')) break
     }
   }
   report.buffered = state.pendingSearchPage?.items.length ?? 0
   report.pending = Object.values(state.candidates).filter((entry) => entry.status !== 'drop').length
+  report.queue = candidateCounts(state)
   report.totalProjects = known.size
   report.status = !report.deferred && report.sources.every((source) => source.status === 'complete') && !report.pending &&
     !report.buffered && !report.backpressure && !report.overflow && !report.receipts.some((receipt) => receipt.status === 'error') ? 'complete' : 'partial'
@@ -195,7 +202,7 @@ export function writeAlternativesSnapshot(root: string, output: string, result: 
     writeFileSync(join(output, 'data', file), content)
   }
   writeFileSync(join(output, 'README.md'), renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), result.rows))
-  writeFileSync(join(output, stateFile), `${JSON.stringify(result.state, null, 2)}\n`)
+  writeFileSync(join(output, stateFile), serializeRadarState(result.state))
   writeFileSync(join(output, reportFile), `${JSON.stringify(result.report, null, 2)}\n`)
 }
 
@@ -230,9 +237,13 @@ async function main(): Promise<void> {
   })
   writeAlternativesSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}.\n${result.report.identity ? `Identity baseline: ${result.report.identity.ok} added; ${result.report.identity.failed} unavailable; GraphQL cost: ${result.report.identity.cost ?? 'unknown'}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}.\n` : ''}\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Open-source alternatives\n\nAdded: ${result.report.added}; checked: ${result.report.reviewed}; outstanding (all lanes): ${result.report.pending}.\n${candidateQueueSummary(result.report)}${result.report.identity ? `Identity baseline: ${result.report.identity.ok} added; ${result.report.identity.failed} unavailable; GraphQL cost: ${result.report.identity.cost ?? 'unknown'}.\n` : ''}${result.report.deferred ? `Deferred: ${result.report.deferred.phase} / ${result.report.deferred.reason}.\n` : ''}\nJev requests today (UTC): ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary)
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })
+  if (discoveryStalled(result.report)) {
+    process.stderr.write('::error::Alternative discovery stalled with no first-review work; checkpoint retained for diagnosis.\n')
+    process.exitCode = 1
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

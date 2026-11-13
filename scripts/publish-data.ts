@@ -32,7 +32,7 @@ const ownedFiles = (mode: Mode) => mode === 'news' ? ['data/news.json', 'public/
 function validateCheckpoint(mode: Mode, state: unknown, report: unknown): void {
   if (mode === 'metadata') { validateMetadataState(state as MetadataState); validateMetadataReport(report as MetadataRunReport) }
   else {
-    validateState(state as RadarState, mode === 'alternatives' ? 2000 : undefined)
+    validateState(state as RadarState)
     if (!isRecord(report) || !['complete', 'partial'].includes(String(report.status)) || !Array.isArray(report.receipts) || isRecord(report.deferred) && report.deferred.phase === 'identity') throw new Error('publication-invalid-report')
   }
 }

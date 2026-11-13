@@ -1,6 +1,6 @@
 <!--
 [INPUT]: 依赖规范快照、生命周期、公开投影与采集状态
-[OUTPUT]: 提供可见性、身份迁移、收录依据与运行状态边界
+[OUTPUT]: 提供可见性、身份迁移、收录依据与候选活跃容量/判断复用边界
 [POS]: docs 的数据权威地图；采集步骤与权限另见 collector.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
@@ -175,7 +175,11 @@ New Action bot candidates already obtain repository topics through `candidateRow
 ## 自动采集运行状态
 
 核心 radar/state.json 使用 v2，兼容读取旧 v1。
-候选 map 与搜索残页共用 4000 总容量，pending 最多 2000。
+候选 map 保留历史，但只有 pending 占首次待审槽位。
+pending 最多 2000，搜索残页最多 100。
+完整状态按最终写盘字节最多 16 MiB，超限明确失败。
+校验与写入共用序列化，计入缩进和末尾换行。
+旧 4000 总条数限制已替换，不通过删除历史腾位。
 残页仅保存导航线索，最多 100 条，不保存源码。
 nextReviewLane 记录首次待审与到期复核的下一组。
 统计续点独占 radar/metadata-state.json，不再双写。
@@ -186,6 +190,11 @@ metadata-latest 初始 not-run，运行后记录原基线覆盖。
 旧报告可缺少 id；新轮恢复不能按 URL 合并身份。
 统计状态兼容旧 v1，新增失败观察而不重置续点。
 生命周期字段留在规范记录，不进入公开投影。
-替代队列显式保持独立的 2000 总容量与原预算。
+替代队列保留独立状态和预算，复用同一活跃容量与公平排序。
+reviewFingerprint 只存完整模型输入的 SHA-256 摘要。
+modelReviewedAt 记录真实付费判断时间，复用时不修改。
+queue 分列首次待审、复核、错误、拒绝与残页。
+discoveryPending 固定发现阶段计数，避免将审核进展误报停滞。
+旧 pending 仍表示全部未收录记录，不作为首次待审数。
 这些运行状态不进入浏览器展示投影。
 迁移保留全部收据与候选，不回退或裁剪旧状态。

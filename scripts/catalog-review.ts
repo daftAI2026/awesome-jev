@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖规范目录的复核请求、GitHub 对象身份与核心候选契约
- * [OUTPUT]: 提供请求导入、身份复核、同对象迁移和新对象独立收录
+ * [OUTPUT]: 提供按活跃容量导入请求、身份复核、同对象迁移和新对象独立收录
  * [POS]: 核心雷达的目录复核边界；复用原审核队列，不拥有网络预算或模型调用
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -44,7 +44,7 @@ export function catalogReviewSource(rows: readonly DirectoryItem[], request: Cat
 }
 
 // --- 只导入规范目录的显式请求；同一请求不能因轮次推进而清空冷却与账本 ---
-export function importCatalogReviews(rows: readonly DirectoryItem[], state: RadarState, pendingLimit: number, totalLimit: number): number {
+export function importCatalogReviews(rows: readonly DirectoryItem[], state: RadarState, pendingLimit: number, activeLimit: number): number {
   for (const [key, entry] of Object.entries(state.candidates)) {
     if (entry.catalogReview && !catalogReviewSource(rows, entry.catalogReview)) delete state.candidates[key]
   }
@@ -56,8 +56,8 @@ export function importCatalogReviews(rows: readonly DirectoryItem[], state: Rada
     const existing = state.candidates[key]
     if (existing?.catalogReview) { if (!equal(existing.catalogReview, request)) blocked++; continue }
     const pending = Object.values(state.candidates).filter(candidate => candidate.status === 'pending').length
-    const total = Object.keys(state.candidates).length + (state.pendingSearchPage?.items.length ?? 0)
-    if ((!existing || existing.status !== 'pending') && pending >= pendingLimit || !existing && total >= totalLimit) { blocked++; continue }
+    const active = pending + (state.pendingSearchPage?.items.length ?? 0)
+    if ((!existing || existing.status !== 'pending') && pending >= pendingLimit || !existing && active >= activeLimit) { blocked++; continue }
     state.candidates[key] = { status: 'pending', discoveredAt: request.since, attempts: 0, catalogReview: request }
   }
   return blocked

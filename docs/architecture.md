@@ -1,5 +1,5 @@
 <!--
-[INPUT]: 现有路由、公开投影、依赖锁与 Workers 交付边界
+[INPUT]: 现有路由、公开投影、依赖锁、Actions 采集状态与 Workers 交付边界
 [OUTPUT]: 完整 Redact 同源运行时、工具链安全边界、只读 MCP 与免费静态交付规则；保留长尾 SSR
 [POS]: docs 的交付地图；目录交互归 directory-ui.md
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -211,7 +211,28 @@ Scroll restoration uses the installed Router's public callback option. The first
 
 ## Scheduled collection
 
-GitHub Actions runs the server-side ecosystem radar through read-only collection, secret-free validation, and data-only publishing jobs. A second workflow applies a distinct open-source-alternative admission policy with its own candidate state, while sharing the GitHub catalog, README renderer and Jev client. Jev credentials never reach Vite or the browser. Each resulting commit contains directory data, generated README, refreshed sitemap together; deployed runtime OG endpoints read that same snapshot. See [collector.md](collector.md) for setup, admission thresholds, retry behavior, concurrency safety and the disabled-by-default schedules.
+### Actions 采集与发布闭环
+
+```text
+核心 / 替代发现 → 身份去重 → 首次待审 → 原预算 Jev 审核
+                                 │          ├─ 合格 → 规范目录
+                                 │          └─ 存疑 / 错误 → 历史与冷却
+                                 └──────────── 到期取证后复检 ←┘
+独立统计 / 身份检查 ───────────────────────────→ 规范目录
+用户投稿 → 审核 → 可信收录控制器 ──────────────→ 规范目录
+新闻同步 ────────────────────────────────────→ 新闻快照
+公开数据变化 → 最新 main 增量发布 → site 验证 → 同份制品部署
+仅状态变化 ──→ 保存检查点，不触发网站部署
+```
+
+复用现有七条 Workflow，不新增服务或状态数据库。
+历史保留在原候选 map，不占首次待审工作槽位。
+活跃任务、历史字节与模型日预算分别约束不同资源。
+付费复用只覆盖未收录判断，不能批准新项目。
+发现是否停滞使用发现阶段状态，不使用审核后的计数。
+状态与运行规则见 [data-model.md](data-model.md) 和 [collector.md](collector.md)。
+
+GitHub Actions separates read-only collection, secret-free validation and trusted publishing. Ecosystem discovery and alternatives keep independent states and model budgets; metadata refresh and news sync run separately. They share the latest-main incremental publisher. Public changes dispatch site validation explicitly; checkpoint-only changes do not deploy. The production build generates OG images from that same public snapshot, and deployment consumes its verified artifact. Jev credentials never reach Vite or the browser. See [collector.md](collector.md) for setup, admission thresholds, retry behavior and concurrency safety.
 
 The independent [news integration](news.md) uses AIHOT's public API in a separate hourly Action and commits `data/news.json` and the regenerated sitemap when `AIHOT_NEWS_ENABLED=true`. It never spends Jev review quota.
 

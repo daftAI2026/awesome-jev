@@ -1,6 +1,6 @@
 /**
- * [INPUT]: 依赖目录复核请求、GitHub 取证、模型审核和 radar-budget 的可信采集能力
- * [OUTPUT]: 提供共享预算的发现/目录复核；身份或分类未定则保持隐藏
+ * [INPUT]: 依赖目录复核请求、活跃队列、完整请求指纹、GitHub 取证与独立日预算
+ * [OUTPUT]: 提供不受历史占位的发现/目录复核、分类队列报告和有期判断复用；身份未定保持隐藏
  * [POS]: 核心发现与审核编排；两条队列共用来源隔离，统计由独立入口负责
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -15,9 +15,9 @@ import { knownGitHubIds } from './github-identity.ts'
 import { bootstrapIdentities } from './github-metadata.ts'
 import type { IdentityBootstrapReport, MetadataReport } from './github-metadata.ts'
 import { githubEvidence, evidenceIssue, alternativeEvidenceIssue } from './github-evidence.ts'
-import { evaluateJev, reviewDecision, JEV_MODEL } from './jev-client.ts'
+import { evaluateJev, reviewDecision, reviewFingerprint, JEV_MODEL } from './jev-client.ts'
 
-import { candidateQueue, fairReviewQueue, migrateCoreState, validatePendingPage, CORE_TOTAL_LIMIT } from './candidate-queue.ts'
+import { candidateCounts, candidateQueue, candidateQueueSummary, discoveryStalled, fairReviewQueue, migrateCoreState, reusableReview, serializeRadarState, validatePendingPage, CORE_ACTIVE_LIMIT, MAX_RADAR_STATE_BYTES } from './candidate-queue.ts'
 import type { PendingSearchPage, SearchLead } from './candidate-queue.ts'
 import { CODE_QUERIES, searchCodePage, integrationEvidence } from './code-discovery.ts'
 import type { CodeHint, EvidenceLink } from './code-discovery.ts'
@@ -32,11 +32,11 @@ export interface RadarReviewOptions {
   alternative?: boolean
 }
 
-export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt; catalogReview?: CatalogReviewRequest }
+export interface Candidate { status: 'pending' | 'review' | 'error' | 'drop'; discoveredAt: string; checkedAt?: string; retryAt?: string; attempts: number; stars?: number; codeHints?: CodeHint[]; lastReview?: Receipt; catalogReview?: CatalogReviewRequest; reviewFingerprint?: string; modelReviewedAt?: string }
 export interface RadarState { version: number; pages: Record<string, number>; metadataCursor?: number; metadataNext?: string; nextReviewLane?: 'pending' | 'retry'; pendingSearchPage?: PendingSearchPage; candidates: Record<string, Candidate> }
 interface Source { query: string; fetched: number; total: number; status: string }
 export interface Receipt { repo: string | null; status: string; reason?: string; score?: JevScore; sha?: string; evidenceUrl?: string; evidenceSha256?: string; evidenceLinks?: EvidenceLink[]; model?: string; checkedAt?: string }
-export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number } & Partial<Omit<MetadataReport, 'ok' | 'failed'>>; identity?: IdentityBootstrapReport; reviewed: number; added: number; pending: number; overflow: number; evicted: number; backpressure?: number; buffered?: number; receipts: Receipt[]; totalProjects?: number; deferred?: { phase: string; reason: string; metadataRemaining?: number } }
+export interface RadarReport { at: string; model: string; status: string; sources: Source[]; metadata: { ok: number; failed: number } & Partial<Omit<MetadataReport, 'ok' | 'failed'>>; identity?: IdentityBootstrapReport; reviewed: number; added: number; pending: number; overflow: number; evicted: number; backpressure?: number; buffered?: number; receipts: Receipt[]; totalProjects?: number; queue?: ReturnType<typeof candidateCounts>; discoveryPending?: number; reusedReviews?: number; deferred?: { phase: string; reason: string; metadataRemaining?: number } }
 export interface RadarOptions { catalog: Catalog; state?: RadarState; api: GitHubApi; review: (row: JevRow, text: string, options?: RadarReviewOptions) => Promise<JevScore>; now?: Date; limit?: number; queries?: string[]; codeQueries?: string[]; deadline?: number; clock?: () => number; beforeRequest?: () => Promise<void> }
 interface RadarResult { files: Map<string, DirectoryItem[]>; rows: DirectoryItem[]; state: RadarState; report: RadarReport }
 
@@ -56,7 +56,7 @@ const isDeferredRunError = (error: unknown): boolean => error instanceof Error &
 const isTimestamp = (value: unknown) => typeof value === 'string' &&
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(value) && Number.isFinite(Date.parse(value))
 
-export function validateState(state: RadarState, maxTotal = state?.version === 2 ? CORE_TOTAL_LIMIT : MAX_QUEUE) {
+export function validateState(state: RadarState, maxActive = CORE_ACTIVE_LIMIT) {
   if (![1, 2].includes(state?.version) || !state.pages || Array.isArray(state.pages) || typeof state.pages !== 'object' ||
     !state.candidates || typeof state.candidates !== 'object' || Array.isArray(state.candidates) ||
     state.version === 1 && (!Number.isSafeInteger(state.metadataCursor) || state.metadataCursor! < 0) ||
@@ -64,7 +64,9 @@ export function validateState(state: RadarState, maxTotal = state?.version === 2
     state.version === 2 && (state.metadataCursor !== undefined || state.metadataNext !== undefined || !['pending', 'retry'].includes(state.nextReviewLane!)) ||
     state.metadataNext !== undefined && (typeof state.metadataNext !== 'string' || !repoKey(`https://github.com/${state.metadataNext}`))) throw new Error('Invalid radar state')
   validatePendingPage(state.pendingSearchPage)
-  if (Object.keys(state.candidates).length + (state.pendingSearchPage?.items.length ?? 0) > maxTotal || Object.values(state.candidates).filter(entry => entry.status === 'pending').length > MAX_QUEUE) throw new Error('Radar queue overflow')
+  const counts = candidateCounts(state)
+  if (counts.pending + counts.buffered > maxActive || counts.pending > MAX_QUEUE) throw new Error('Radar queue overflow')
+  if (Buffer.byteLength(serializeRadarState(state)) > MAX_RADAR_STATE_BYTES) throw new Error('Radar state storage capacity exceeded')
   for (const page of Object.values(state.pages)) {
     if (!Number.isSafeInteger(page) || page < 1 || page > 10) throw new Error('Invalid search cursor')
   }
@@ -74,6 +76,9 @@ export function validateState(state: RadarState, maxTotal = state?.version === 2
       !isTimestamp(entry.discoveredAt) ||
       (entry.checkedAt != null && !isTimestamp(entry.checkedAt)) ||
       (entry.retryAt != null && !isTimestamp(entry.retryAt)) ||
+      (entry.reviewFingerprint !== undefined && !/^[a-f0-9]{64}$/.test(entry.reviewFingerprint)) ||
+      (entry.modelReviewedAt !== undefined && !isTimestamp(entry.modelReviewedAt)) ||
+      (entry.reviewFingerprint === undefined) !== (entry.modelReviewedAt === undefined) ||
       !Number.isSafeInteger(entry.attempts) || entry.attempts < 0 ||
       (entry.stars != null && (!Number.isSafeInteger(entry.stars) || entry.stars < 0)) ||
       (entry.codeHints != null && (!Array.isArray(entry.codeHints) || entry.codeHints.length > 3 || entry.codeHints.some((hint) => !hint || typeof hint.path !== 'string' || hint.path.length > 4096 || typeof hint.query !== 'string' || hint.query.length > 500)))) throw new Error('Invalid candidate state')
@@ -118,8 +123,8 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.deferred = { phase, reason: safeReason(error) }
   }
   const knownIds = knownGitHubIds(rows)
-  report.backpressure = importCatalogReviews(rows, state, MAX_QUEUE, CORE_TOTAL_LIMIT) || undefined
-  const queue = candidateQueue(state, known, knownIds, report, started, CORE_TOTAL_LIMIT)
+  report.backpressure = importCatalogReviews(rows, state, MAX_QUEUE, CORE_ACTIVE_LIMIT) || undefined
+  const queue = candidateQueue(state, known, knownIds, report, started, CORE_ACTIVE_LIMIT)
   queue.drain()
 
   // --- 每个查询每轮两页；游标轮转到第十页，显式报告 GitHub 搜索上限 ---
@@ -184,6 +189,8 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
     report.sources.push(source)
   }
 
+  // 判定发现是否停滞必须使用发现阶段状态，不能把后续清空任务误报为失败。
+  report.discoveryPending = candidateCounts(state).pending
   const batch = fairReviewQueue(state, now.getTime()).slice(0, limit)
   for (const [key, entry] of batch) {
     if (report.deferred) break
@@ -213,7 +220,9 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
       const reason = integration.incomplete ? 'github-incomplete-integration-evidence' : alternative
         ? !license || license === 'NOASSERTION' ? 'missing-open-source-license' : alternativeEvidenceIssue(repo, text)
         : evidenceIssue(repo, text)
-      const score = reason ? undefined : await review(candidate, text, {
+      const fingerprint = reason ? undefined : reviewFingerprint(candidate, text, !!alternative)
+      const cached = fingerprint ? reusableReview(entry, fingerprint, now.getTime()) : undefined
+      const score = reason ? undefined : cached ?? await review(candidate, text, {
         ...(alternative ? { alternative: true } : {}),
         beforeRequest: async () => {
           if (deadlineReached()) throw new Error('radar-deadline')
@@ -245,6 +254,11 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
         entry.status = decision as 'review' | 'drop'
         entry.lastReview = receipt
         entry.retryAt = new Date(now.getTime() + (decision === 'drop' ? 30 : 7) * DAY).toISOString()
+        if (fingerprint) {
+          entry.reviewFingerprint = fingerprint
+          if (!cached) entry.modelReviewedAt = started
+          else report.reusedReviews = (report.reusedReviews ?? 0) + 1
+        }
       }
       report.receipts.push(receipt)
       state.nextReviewLane = previous.status === 'pending' ? 'retry' : 'pending'
@@ -273,6 +287,7 @@ export async function runRadar({ catalog, state = emptyState(), api, review, now
   }
   report.buffered = state.pendingSearchPage?.items.length ?? 0
   report.pending = Object.values(state.candidates).filter((e) => e.status !== 'drop').length
+  report.queue = candidateCounts(state)
   report.totalProjects = rows.length
   report.status = !report.deferred && report.sources.every((s) => s.status === 'complete') && !report.buffered && !report.backpressure && !report.pending && !report.overflow && !report.evicted && !report.receipts.some((r) => r.status === 'error') ? 'complete' : 'partial'
   validateState(state)
@@ -289,7 +304,7 @@ export function writeSnapshot(root: string, output: string, result: RadarResult)
     writeFileSync(join(output, 'data', file), content)
   }
   writeFileSync(join(output, 'README.md'), renderReadme(readFileSync(join(root, 'README.md'), 'utf8'), result.rows))
-  writeFileSync(join(output, 'radar/state.json'), JSON.stringify(result.state, null, 2) + '\n')
+  writeFileSync(join(output, 'radar/state.json'), serializeRadarState(result.state))
   writeFileSync(join(output, 'radar/latest.json'), JSON.stringify(result.report, null, 2) + '\n')
 }
 
@@ -304,7 +319,7 @@ async function main() {
     const nextState = migrateCoreState(JSON.parse(readFileSync(join(snapshot, 'radar/state.json'), 'utf8')))
     validateState(nextState)
     applySnapshot(root, snapshot)
-    writeFileSync(join(root, 'radar/state.json'), `${JSON.stringify(nextState, null, 2)}\n`)
+    writeFileSync(join(root, 'radar/state.json'), serializeRadarState(nextState))
     return
   }
   // Action 显式传入 Secrets；绝不自动读取开发者的 .env.local。
@@ -334,10 +349,14 @@ async function main() {
   }
   writeSnapshot(root, resolve(output), result)
   const budgetState = budget.snapshot()
-  const summary = `## Jev radar\n\nAdded: ${result.report.added}; reviewed: ${result.report.reviewed}; pending: ${result.report.pending}; buffered: ${result.report.buffered ?? 0}; backpressure: ${result.report.backpressure ?? 0}.\nJev requests: ${budgetState.used}/${budgetState.limit}.\n`
+  const summary = `## Jev radar\n\nAdded: ${result.report.added}; checked: ${result.report.reviewed}; outstanding (all lanes): ${result.report.pending}; backpressure: ${result.report.backpressure ?? 0}.\n${candidateQueueSummary(result.report)}Jev requests today (UTC): ${budgetState.used}/${budgetState.limit}.\n`
   process.stdout.write(summary +
     result.report.sources.map((source) => `${source.query}: ${source.status}; fetched ${source.fetched} / ${source.total}\n`).join(''))
   if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, summary, { flag: 'a' })
+  if (discoveryStalled(result.report)) {
+    process.stderr.write('::error::Discovery stalled with no first-review work; checkpoint retained for diagnosis.\n')
+    process.exitCode = 1
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
