@@ -10,6 +10,17 @@
 
 Searchable directory of curated **GitHub projects** with a separate, source-attributed Jev news view about TypeSafe AI’s System One model **[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)** — typed decisions, SDKs, demos, and integrations.
 
+## 免费资产物理布局
+
+公开 URL 与物理文件数分离。
+预渲染仍生成完整 HTML，保留所有语言、排序和页码。
+离线阶段仅将内部查询页聚合为固定槽位 gzip 条目包。
+`page-packs.ts` 共用构建/运行时的 v1 布局。
+每次目录请求读一个包，仅解压选中 HTML，不重建页面。
+规范首屏和详情、PNG 仍是独立资产。
+已有 Worker-first 范围不扩大，无新增数据库或付费服务。
+文件额度和失败边界见 [deployment.md](deployment.md)。
+
 ## Stack
 
 | Layer | Choice |

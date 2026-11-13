@@ -1,6 +1,6 @@
 /**
  * [INPUT]: 依赖公开目录、固定字库与 Node WASM 渲染器
- * [OUTPUT]: 提供构建 PNG 生成器与免费资产容量检查
+ * [OUTPUT]: 提供构建 PNG、免费容量门禁与剩余文件额度
  * [POS]: scripts 的离线图片阶段；失败阻止交付，不在请求中栅格化
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -75,6 +75,8 @@ async function buildOgAssets(root: string) {
   const assets = files.filter((file) => file.isFile()).length
   assertFreeAssetCount(assets)
   process.stdout.write(`Generated ${count} public OG PNGs (${count - rendered} reused, ${rendered} rendered); ${assets}/20000 static files.\n`)
+  process.stdout.write(`Static asset headroom: ${20_000 - assets} files (${(assets / 200).toFixed(1)}% used).\n`)
+  if (assets >= 18_000) process.stderr.write('WARNING: Workers Free static assets exceed 90%; reduce physical build files before the 20000 hard limit.\n')
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) await buildOgAssets(process.cwd())

@@ -87,6 +87,7 @@ test('a cold directory request reads its exact built page instead of invoking SS
     ['/?page=invalid', '/'], ['/news?page=3', staticPagePath('/news', 3, 'stars')],
   ]) {
     const response = await staticDelivery(request(path), catalog, async (r) => {
+      if (new URL(r.url).pathname.startsWith('/_page-packs/')) return new Response(null, { status: 404 })
       calls.push(new URL(r.url).pathname)
       assert.equal(new URL(r.url).pathname, asset)
       return new Response('correct page', { headers: { 'Content-Type': 'text/html' } })
@@ -155,6 +156,7 @@ test('OG aliases, versions, missing membership and missing artifacts fail closed
 test('JSON-form search values retain TanStack page and sort interpretation', async () => {
   for (const query of ['?page=2e0&sort=name', '?page=%222%22&sort=%22name%22', '?page=2.0&sort=name']) {
     const result = await staticDelivery(request('/' + query), catalog, async (asset) => {
+      if (new URL(asset.url).pathname.startsWith('/_page-packs/')) return new Response(null, { status: 404 })
       assert.equal(new URL(asset.url).pathname, staticPagePath('/', 2, 'name'))
       return new Response('page two by name')
     })

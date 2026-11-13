@@ -17,6 +17,8 @@ import { projectPathFromUrl } from '../src/lib/project-routes.ts'
 import { localizedPath, LOCALES } from '../src/lib/locale-routes.ts'
 import snapshot from '../data/github.json' with { type: 'json' }
 import news from '../data/news.json' with { type: 'json' }
+import { pagePackLocation, packedPageEntry } from '../src/lib/page-packs.ts'
+import { gunzipSync } from 'node:zlib'
 
 const origin = process.env.TEST_SITE_ORIGIN
 const build = process.env.TEST_BUILD_OUTPUT
@@ -64,11 +66,33 @@ test('all planned finite pages and public PNGs exist inside the free asset allow
   const files = await readdir(root, { recursive: true, withFileTypes: true })
   assertFreeAssetCount(files.filter((file) => file.isFile()).length)
   for (const page of staticPrerenderPages(catalog)) {
-    const filename = path.join(root, page.prerender.outputPath, 'index.html')
-    assert.ok((await readFile(filename)).length > 1000, page.path)
+    const pack = pagePackLocation(page.prerender.outputPath)
+    if (pack) {
+      const entry = packedPageEntry(new Uint8Array(await readFile(path.join(root, pack.path))), pack.slot)
+      const html = gunzipSync(entry.gzip)
+      assert.equal(html.length, entry.htmlLength)
+      assert.ok(html.length > 1000, page.path)
+    } else {
+      assert.ok((await readFile(path.join(root, page.prerender.outputPath, 'index.html'))).length > 1000, page.path)
+    }
   }
   for (const image of Object.values(catalog.images)) {
     const png = await readFile(path.join(root, image.asset))
     assert.deepEqual([...png.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10])
   }
+})
+
+test('packed query HTTP validators use the selected HTML, not the storage pack', { skip: !origin }, async () => {
+  const url = `${origin}/zh?page=2&sort=name`
+  const head = await fetch(url, { method: 'HEAD' })
+  assert.equal(head.status, 200)
+  assert.equal(head.headers.get('X-Jev-Delivery'), 'static')
+  assert.equal(await head.text(), '')
+  const etag = head.headers.get('ETag')
+  assert.ok(etag)
+  const cached = await fetch(url, { headers: { 'If-None-Match': etag } })
+  assert.equal(cached.status, 304)
+  assert.equal(await cached.text(), '')
+  const different = await fetch(`${origin}/zh?page=2&sort=date`, { method: 'HEAD' })
+  assert.notEqual(different.headers.get('ETag'), etag)
 })

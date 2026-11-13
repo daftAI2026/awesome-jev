@@ -12,11 +12,13 @@ mcp-config.test.ts: 单行 Tabs/家族顺序、三种安装 URL 解码白名单�
 mcp-server.test.ts: 新旧协议、纯分类预热、schema 单次转换、只读工具、输入容量与失败封闭限流
 mcp-delivery.test.ts: 真实 Worker MCP、流式请求早拒绝后的连续 GET、完整响应读取、三语言静态指南与浏览器隔离门禁
 mcp-docs.test.ts: 客户端配置、公开 Markdown 与 Registry 元数据的一致性门禁
-generate-og.ts: Node 构建期 PNG 生成与过期版本回收；校验免费 20000 文件上限，不写 public 源文件
+generate-og.ts: Node 构建期 PNG 与过期版本回收；校验免费 20000 文件上限，报告余量并在 90% 告警，不写 public
+pack-static-pages.ts: 预渲染后将内部查询页聚合为有界 gzip 条目包；落盘逐字节验证完成后才删除清单原件
+page-packs.test.ts: 离线临时 HTML 验证字节等价、文件节省、页面条件响应、损坏失败封闭和失败保留原件
 generate-og.test.ts: 公开计数、隐藏身份、构建失败和免费容量的离线回归
 static-catalog.ts: 构建有限分页/排序与可索引标签清单；隔离 Start 双次解码，公开 URL 与资产身份不变
 static-delivery.test.ts: 冷请求、逐页身份、真实框架编码归一与 PNG 条件响应回归
-static-delivery-http.test.ts: 真实 Worker 验证三语言查询页不走 SSR，全部有限页面/PNG 存在且未超免费容量
+static-delivery-http.test.ts: 真实 Worker 验证三语言查询页与包条目、逐页 HEAD/304、全部 HTML/PNG 存在且未超免费容量
 catalog-lifecycle.ts: 数字身份复核、固定证据迁址和可逆下架；异常不累加失效，回滚保留已证实恢复
 catalog-lifecycle.test.ts: 假时钟与离线 API 验证 72 小时、多周期、证据连续性和身份隔离
 catalog-mutation.ts: 按采集角色授权字段；地址、证据和生命周期原子叠加，保留人工并发编辑

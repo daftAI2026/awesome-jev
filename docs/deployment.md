@@ -94,11 +94,27 @@ HTTP 不接收该片段或合成查询项。
 预览、长尾标签、收藏和 RPC 保留原 SSR。
 这些入口仍需发布后观察，不承诺全站零超限。
 
-`npm run build` 在 Vite 后生成全部公开 OG PNG。
+`npm run build` 在 Vite 后先聚合内部查询 HTML，再生成 OG PNG。
+每个 v1 包最多含同一路径四页的三种排序。
+每页单独 gzip，包上限 4 MiB，原 HTML 上限 2 MiB。
+构建验证落盘条目与原 HTML 逐字节一致，再删除原件。
+只回收清单中的 `/_pages` HTML，不删除规范首屏或未知文件。
+Worker 有界读取一个包，只解压选中条目。
+HEAD/304 使用该 HTML 的摘要，不使用整个包的 ETag。
+包缺失时保留原件回退，支持尚未完成的预渲染。
+传输或布局错误返回 no-store 503，不回落 SSR。
+GET 解压或长度校验失败也返回 503。
+HEAD/304 只校验布局与身份，不解压正文。
+详情、新闻详情与 PNG 保持 Assets-first。
+既有目录 Worker-first 范围不变，不增加正常页面调用次数。
 PNG 与 HTML 随同一份 dist 验证、上传和部署。
 无运行时外部图片服务，无额外部署步骤。
 生成失败或超过 20000 静态文件时拒绝交付。
 不通过删数据、删检查或自动付费绕过容量门槛。
+文件数包含 HTML、PNG、JS、CSS、字体等，不等于项目数。
+构建报告剩余额度，达到 18000 时输出 90% 告警。
+聚合只推迟文件数上限，不承诺免费容量无限增长。
+依据：[Cloudflare 限制](https://developers.cloudflare.com/workers/platform/limits/)。
 
 Wrangler 源配置开启 invocation logs 并隐藏查询字符串。
 当前 Free 包含每日 200000 个日志事件，保留三天。

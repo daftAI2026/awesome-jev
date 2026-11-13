@@ -1,5 +1,5 @@
 /**
- * [INPUT]: 依赖构建期清单、Router 查询解析、仓库白名单与 ASSETS
+ * [INPUT]: 依赖构建期清单、HTML 包、Router 查询解析与 ASSETS
  * [OUTPUT]: 提供静态页地址、图片清单类型和请求交付入口
  * [POS]: lib 的免费交付边界；未覆盖的请求交还原路由
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
@@ -8,6 +8,7 @@ import { directorySearch, paginationRange } from './pagination.ts'
 import { serveOgAsset } from './og-response.ts'
 import { defaultParseSearch } from '@tanstack/react-router'
 import { projectPath } from './project-routes.ts'
+import { servePackedPage } from './page-packs.ts'
 
 export interface StaticCatalog {
   pages: Record<string, number>
@@ -50,7 +51,12 @@ export async function staticDelivery(request: Request, catalog: StaticCatalog, a
     if (value) headers.set(key, value)
   }
   let response: Response
-  try { response = await assets(new Request(assetUrl, { method: request.method, headers })) }
+  try {
+    const packed = await servePackedPage(request, assetUrl.pathname, assets)
+    if (packed) return packed
+    // --- 预渲染时包尚未生成；保留原件读取与原 SSR 回退 ---
+    response = await assets(new Request(assetUrl, { method: request.method, headers }))
+  }
   catch {
     return new Response(request.method === 'HEAD' ? null : 'Page unavailable', {
       status: 503, headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex', 'Content-Type': 'text/plain; charset=utf-8' },
