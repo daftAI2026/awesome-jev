@@ -1,42 +1,42 @@
 {
-  "at": "2026-11-13T18:34:49.934Z",
+  "at": "2026-11-13T19:46:04.048Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 3008,
+      "total": 3009,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 11145,
+      "total": 11147,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 9532,
+      "total": 9534,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 200,
+      "fetched": 22,
       "total": 622,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 200,
+      "fetched": 137,
       "total": 737,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 4206,
+      "total": 4208,
       "status": "search-cap"
     },
     {
@@ -68,73 +68,69 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 5,
+  "reviewed": 7,
   "added": 0,
-  "pending": 4325,
+  "pending": 4591,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "amitshekhariitbhu/ai-engineering-interview-questions",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "a887ff98478874eba43dab7d8d6b0e1075acf6e9",
-      "evidenceUrl": "https://github.com/amitshekhariitbhu/ai-engineering-interview-questions/blob/a887ff98478874eba43dab7d8d6b0e1075acf6e9/README.md",
-      "evidenceSha256": "df1d39a465e4f35cf961f30ca22af9d53a6f8f3cc82786c8eeafeea15c7729f1",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-11-13T18:34:49.934Z"
-    },
-    {
-      "repo": "alexei-led/pi-model-router",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "0bd1390257c9bc75c32c23448f6e7fec1b69a4bf",
-      "evidenceUrl": "https://github.com/alexei-led/pi-model-router/blob/0bd1390257c9bc75c32c23448f6e7fec1b69a4bf/README.md",
-      "evidenceSha256": "dccfef4776d754454de2deaf82448996bafb661c1ac5535d652ba0953cc43234",
-      "evidenceLinks": [
-        {
-          "url": "https://github.com/alexei-led/pi-model-router/blob/0bd1390257c9bc75c32c23448f6e7fec1b69a4bf/docs/jev-advisor.md",
-          "path": "docs/jev-advisor.md",
-          "sha256": "00aa43b608930963131986f38ebfe04a3127b3d799a3815b3716c486124d7a2c"
-        }
-      ],
-      "model": "jev-latest",
-      "checkedAt": "2026-11-13T18:34:49.934Z"
-    },
-    {
-      "repo": "cameroncooke/axe",
+      "repo": "asertyui1/decide.js",
       "status": "review",
       "score": {
-        "jevAbout": 0.16,
-        "jevKeep": "drop",
-        "jevKeepConfidence": 0.38,
-        "category": "developer",
-        "needsReview": true,
-        "conflictingEvidence": true
+        "jevAbout": 0.89,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.88,
+        "category": "sdk"
       },
-      "sha": "e39e3d6ea3f53962685e7fcffacb815903612628",
-      "evidenceUrl": "https://github.com/cameroncooke/axe/blob/e39e3d6ea3f53962685e7fcffacb815903612628/README.md",
-      "evidenceSha256": "8f14279e56f1886a08cd483691980414e79a962c0d865919ee45b8e8dea64919",
+      "sha": "51df04a8c95574088d47d123560e6540fa5f800d",
+      "evidenceUrl": "https://github.com/asertyui1/decide.js/blob/51df04a8c95574088d47d123560e6540fa5f800d/README.md",
+      "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
       "evidenceLinks": [],
       "model": "jev-latest",
-      "checkedAt": "2026-11-13T18:34:49.934Z"
+      "checkedAt": "2026-11-13T19:46:04.048Z"
     },
     {
-      "repo": "alexkarpandrus/tickettrain",
+      "repo": "frutik/awesome-search",
+      "status": "review",
+      "reason": "insufficient-provider-context",
+      "sha": "d0bc7e77c1c8ad6c0ab838ae39446bdfeb63c158",
+      "evidenceUrl": "https://github.com/frutik/awesome-search/blob/d0bc7e77c1c8ad6c0ab838ae39446bdfeb63c158/README.md",
+      "evidenceSha256": "c68bae99747d1e6bce89f0409c0df5cca766579ddf9643e62b892c88447224f6",
+      "evidenceLinks": [],
+      "model": "jev-latest",
+      "checkedAt": "2026-11-13T19:46:04.048Z"
+    },
+    {
+      "repo": "chonamdoo/agents-memory",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "xnhyacinth/awesome-llm-long-context-modeling",
+      "repo": "duriantaco/skylos",
       "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "c3b9ed7059db9d279966818dbca8484a8da02f8f",
-      "evidenceUrl": "https://github.com/xnhyacinth/awesome-llm-long-context-modeling/blob/c3b9ed7059db9d279966818dbca8484a8da02f8f/README.md",
-      "evidenceSha256": "2c699f2ad91f6a19ebf1ca1f4766efc7eda6aa4bcf3da1e506a299127883c15e",
+      "reason": "instruction-like-evidence",
+      "sha": "017365e64b19109199fc9d037c80b7f795e2087b",
+      "evidenceUrl": "https://github.com/duriantaco/skylos/blob/017365e64b19109199fc9d037c80b7f795e2087b/README.md",
+      "evidenceSha256": "50230d79295b5070052b7e7b7aae43ce92004262073f16932e2cd56a6e906a2a",
       "evidenceLinks": [],
       "model": "jev-latest",
-      "checkedAt": "2026-11-13T18:34:49.934Z"
+      "checkedAt": "2026-11-13T19:46:04.048Z"
+    },
+    {
+      "repo": "janmrow/smart-inbox",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "amitshekhariitbhu/ai-engineering-course",
+      "status": "error",
+      "reason": "github-invalid-readme"
+    },
+    {
+      "repo": "wei-shaw/sub2api",
+      "status": "error",
+      "reason": "jev-evidence-too-large"
     }
   ],
   "identity": {
@@ -144,14 +140,17 @@
     "cost": 0,
     "resolved": []
   },
-  "discoveryPending": 394,
+  "discoveryPending": 657,
   "buffered": 0,
   "queue": {
-    "pending": 391,
-    "review": 3371,
-    "error": 563,
+    "pending": 654,
+    "review": 3373,
+    "error": 564,
     "drop": 0,
     "buffered": 0
   },
-  "totalProjects": 3177
+  "totalProjects": 3177,
+  "publication": {
+    "rebasedOn": "9909465873d225d8a41696663e9e7e4df5b5f841"
+  }
 }
