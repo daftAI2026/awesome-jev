@@ -6913,5 +6913,20 @@
     "reason": null,
     "originalUrl": "https://www.newcomer.co/p/the-ai-100",
     "aihotUrl": "https://aihot.news/items/db1th96a4vrnbrdefr4mmcb4c"
+  },
+  {
+    "id": "yquabw2hxjgg8a6vtg5pfsbrk",
+    "title": "蚂蚁 inclusionAI 发布 SingVL-4B GGUF 量化版本",
+    "originalTitle": "inclusionAI/SingVL_S1_4B_GGUF",
+    "summary": "蚂蚁 inclusionAI 在 HuggingFace 发布 SingVL-4B 的 GGUF 版本，这是基于 Qwen3.5 的 4B 参数多模态决策模型 Sing VL S1 的量化发布。",
+    "sourceName": "蚂蚁 inclusionAI：HuggingFace 新模型",
+    "publishedAt": "2026-11-12T02:58:53.000Z",
+    "discoveredAt": "2026-11-13T01:56:14.974Z",
+    "category": "ai-models",
+    "score": 40,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://huggingface.co/inclusionAI/SingVL_S1_4B_GGUF",
+    "aihotUrl": "https://aihot.news/items/yquabw2hxjgg8a6vtg5pfsbrk"
   }
 ]
