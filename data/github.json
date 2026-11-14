@@ -178246,5 +178246,107 @@
         "checkedAt": "2026-11-11T06:29:00.523Z"
       }
     }
+  },
+  {
+    "id": "gh-9-akurganow-model-router",
+    "type": "github",
+    "title": "model-router",
+    "summary": "Picks a model for each subagent, judged by Jev on TypeSafe or OpenRouter. Plugins for Claude Code, Oh My Pi, OpenClaw and Hermes Agent.",
+    "tags": [
+      "jev",
+      "claude-code",
+      "claude-code-plugin",
+      "hermes-agent",
+      "model-routing",
+      "oh-my-pi",
+      "openclaw",
+      "openrouter"
+    ],
+    "category": "agents",
+    "url": "https://github.com/Akurganow/model-router",
+    "sourceMeta": {
+      "repo": "Akurganow/model-router",
+      "author": "Akurganow",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1410943628,
+        "nodeId": "R_kgDOVBlKjA"
+      },
+      "date": "2026-10-08",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "akurganow/model-router",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "agents"
+        },
+        "sha": "a72c257bb785fa9817a6c494ea99dcc37bb605da",
+        "evidenceUrl": "https://github.com/akurganow/model-router/blob/a72c257bb785fa9817a6c494ea99dcc37bb605da/README.md",
+        "evidenceSha256": "2d6c5bc681e078767b0a1c3bee9c19672133f5675a37cf692e82c59944d85a0e",
+        "evidenceLinks": [
+          {
+            "url": "https://github.com/akurganow/model-router/blob/a72c257bb785fa9817a6c494ea99dcc37bb605da/plugins/model-router-omp/PRIVACY.md",
+            "path": "plugins/model-router-omp/PRIVACY.md",
+            "sha256": "d7d294f9b3cb59cd070a389880d23a3dcd02d073075c0913af327977ccc67c36"
+          }
+        ],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-14T18:07:52.067Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-yikangy873-gif-jev-desktop",
+    "type": "github",
+    "title": "jev-desktop",
+    "summary": "TypeSafe Jev action selection inside Codex Computer Use",
+    "tags": [
+      "jev",
+      "codex",
+      "computer-use",
+      "desktop-automation",
+      "macos",
+      "javascript"
+    ],
+    "category": "agents",
+    "url": "https://github.com/yikangy873-gif/jev-desktop",
+    "sourceMeta": {
+      "repo": "yikangy873-gif/jev-desktop",
+      "author": "yikangy873-gif",
+      "stars": 80,
+      "forks": 2,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1376720831,
+        "nodeId": "R_kgDOUg8Xvw"
+      },
+      "date": "2026-09-19",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "yikangy873-gif/jev-desktop",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "bfc766cc98853f5fb0093b37b3cb126e148c5a73",
+        "evidenceUrl": "https://github.com/yikangy873-gif/jev-desktop/blob/bfc766cc98853f5fb0093b37b3cb126e148c5a73/README.md",
+        "evidenceSha256": "ae85f05c114aff7e02d422b523a67f8f8e131c2b786b27e8e7d530ef94e1fb65",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-14T18:07:52.067Z"
+      }
+    }
   }
 ]
