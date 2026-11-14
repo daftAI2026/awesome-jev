@@ -1,138 +1,67 @@
 {
-  "at": "2026-11-13T19:46:04.048Z",
+  "at": "2026-11-14T06:28:29.913Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 3009,
+      "total": 3011,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 11147,
+      "total": 11161,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 9534,
+      "total": 9554,
       "status": "search-cap"
     },
     {
       "query": "topic:typesafe-ai fork:false",
-      "fetched": 22,
-      "total": 622,
+      "fetched": 200,
+      "total": 623,
       "status": "bounded"
     },
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
-      "fetched": 137,
-      "total": 737,
+      "fetched": 200,
+      "total": 739,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 4208,
+      "total": 4213,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 0,
-      "total": 0,
-      "status": "github-phase-deadline"
+      "fetched": 200,
+      "total": 48576,
+      "status": "search-cap"
     },
     {
       "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 0,
       "total": 0,
-      "status": "github-phase-deadline"
-    },
-    {
-      "query": "code:\"TYPESAFE_API_KEY\" in:file",
-      "fetched": 0,
-      "total": 0,
-      "status": "github-phase-deadline"
-    },
-    {
-      "query": "code:\"jev-latest\" in:file",
-      "fetched": 0,
-      "total": 0,
-      "status": "github-phase-deadline"
+      "status": "github-http-408"
     }
   ],
   "metadata": {
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 7,
+  "reviewed": 0,
   "added": 0,
-  "pending": 4591,
+  "pending": 5020,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [
-    {
-      "repo": "asertyui1/decide.js",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.89,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.88,
-        "category": "sdk"
-      },
-      "sha": "51df04a8c95574088d47d123560e6540fa5f800d",
-      "evidenceUrl": "https://github.com/asertyui1/decide.js/blob/51df04a8c95574088d47d123560e6540fa5f800d/README.md",
-      "evidenceSha256": "bcbc983b377c4913432d8543f4a360dc1ab5dd22ce4700dce7b1a54f3fc63f2e",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-11-13T19:46:04.048Z"
-    },
-    {
-      "repo": "frutik/awesome-search",
-      "status": "review",
-      "reason": "insufficient-provider-context",
-      "sha": "d0bc7e77c1c8ad6c0ab838ae39446bdfeb63c158",
-      "evidenceUrl": "https://github.com/frutik/awesome-search/blob/d0bc7e77c1c8ad6c0ab838ae39446bdfeb63c158/README.md",
-      "evidenceSha256": "c68bae99747d1e6bce89f0409c0df5cca766579ddf9643e62b892c88447224f6",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-11-13T19:46:04.048Z"
-    },
-    {
-      "repo": "chonamdoo/agents-memory",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "duriantaco/skylos",
-      "status": "review",
-      "reason": "instruction-like-evidence",
-      "sha": "017365e64b19109199fc9d037c80b7f795e2087b",
-      "evidenceUrl": "https://github.com/duriantaco/skylos/blob/017365e64b19109199fc9d037c80b7f795e2087b/README.md",
-      "evidenceSha256": "50230d79295b5070052b7e7b7aae43ce92004262073f16932e2cd56a6e906a2a",
-      "evidenceLinks": [],
-      "model": "jev-latest",
-      "checkedAt": "2026-11-13T19:46:04.048Z"
-    },
-    {
-      "repo": "janmrow/smart-inbox",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "amitshekhariitbhu/ai-engineering-course",
-      "status": "error",
-      "reason": "github-invalid-readme"
-    },
-    {
-      "repo": "wei-shaw/sub2api",
-      "status": "error",
-      "reason": "jev-evidence-too-large"
-    }
-  ],
+  "receipts": [],
   "identity": {
     "ok": 0,
     "failed": 0,
@@ -140,17 +69,18 @@
     "cost": 0,
     "resolved": []
   },
-  "discoveryPending": 657,
+  "deferred": {
+    "phase": "discovery",
+    "reason": "github-http-408"
+  },
+  "discoveryPending": 1083,
   "buffered": 0,
   "queue": {
-    "pending": 654,
+    "pending": 1083,
     "review": 3373,
     "error": 564,
     "drop": 0,
     "buffered": 0
   },
-  "totalProjects": 3177,
-  "publication": {
-    "rebasedOn": "9909465873d225d8a41696663e9e7e4df5b5f841"
-  }
+  "totalProjects": 3177
 }
