@@ -52,7 +52,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 97
+      "stars": 99
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 35510
+      "stars": 35514
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -709,7 +709,7 @@
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 1636
+      "stars": 1638
     },
     "godmodeai2025/jevcoreml": {
       "status": "review",
@@ -1055,7 +1055,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 8295
+      "stars": 8298
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1230,25 +1230,27 @@
     "donliggett/julius": {
       "status": "review",
       "discoveredAt": "2026-09-26T00:08:50.699Z",
-      "attempts": 7,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "attempts": 8,
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "donliggett/julius",
         "status": "review",
         "score": {
-          "jevAbout": 0.86,
+          "jevAbout": 0.84,
           "jevKeep": "keep",
-          "jevKeepConfidence": 0.35,
+          "jevKeepConfidence": 0.4,
           "category": "alternatives"
         },
         "sha": "11bcd48587672bd9de16b4fc9e6fa4441c1e5176",
         "evidenceUrl": "https://github.com/donliggett/julius/blob/11bcd48587672bd9de16b4fc9e6fa4441c1e5176/README.md",
         "evidenceSha256": "6f26bedb54eafa27bc621d9eb5b18c206b41e65d8c9d6ae8ab1cceb5f80757ad",
         "model": "jev-latest",
-        "checkedAt": "2026-11-07T10:41:04.169Z"
+        "checkedAt": "2026-11-14T10:56:05.428Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z",
-      "stars": 1
+      "retryAt": "2026-11-21T10:56:05.428Z",
+      "stars": 1,
+      "reviewFingerprint": "34e8286765afe5a0396c561ab06b6cd4236164c37b24c808299df80ce5b5b695",
+      "modelReviewedAt": "2026-11-14T10:56:05.428Z"
     },
     "talex-touch/flint": {
       "status": "review",
@@ -1299,13 +1301,13 @@
     "lab-emi/chiplaya": {
       "status": "review",
       "discoveredAt": "2026-09-26T18:42:48.900Z",
-      "attempts": 8,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "attempts": 9,
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "lab-emi/chiplaya",
         "status": "review",
         "score": {
-          "jevAbout": 0.82,
+          "jevAbout": 0.83,
           "jevKeep": "keep",
           "jevKeepConfidence": 0.89,
           "category": "alternatives",
@@ -1316,10 +1318,12 @@
         "evidenceUrl": "https://github.com/lab-emi/chiplaya/blob/700988637f9429d180dcda50757504d41060d2bd/README.md",
         "evidenceSha256": "dcc2949ab80e04d592d99f3ef68be876eebf0d37a1b76a3476fd98fadc8f5878",
         "model": "jev-latest",
-        "checkedAt": "2026-11-07T10:41:04.169Z"
+        "checkedAt": "2026-11-14T10:56:05.428Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z",
-      "stars": 0
+      "retryAt": "2026-11-21T10:56:05.428Z",
+      "stars": 0,
+      "reviewFingerprint": "74a52d4466323d77dd1a0a184698468b682afe6aa953852618181d7371f20c26",
+      "modelReviewedAt": "2026-11-14T10:56:05.428Z"
     },
     "lakoreai/sev": {
       "status": "review",
@@ -2328,7 +2332,7 @@
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 683
+      "stars": 696
     },
     "phocinae/.github": {
       "status": "review",
@@ -2436,25 +2440,27 @@
     "final-bench/s1mb": {
       "status": "review",
       "discoveredAt": "2026-10-10T01:14:07.107Z",
-      "attempts": 5,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "attempts": 6,
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "final-bench/s1mb",
         "status": "review",
         "score": {
-          "jevAbout": 0.66,
+          "jevAbout": 0.68,
           "jevKeep": "review",
-          "jevKeepConfidence": 0.49,
+          "jevKeepConfidence": 0.5,
           "category": "other"
         },
         "sha": "ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d",
         "evidenceUrl": "https://github.com/final-bench/s1mb/blob/ea8a6f0879e7af38501564fcdc68f2b2b8ebf04d/README.md",
         "evidenceSha256": "7fa4c1dd304ba3e28dc44f2fff59ff9032e4bc812c7724daf744ff461f22917b",
         "model": "jev-latest",
-        "checkedAt": "2026-11-07T10:41:04.169Z"
+        "checkedAt": "2026-11-14T10:56:05.428Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z",
-      "stars": 2
+      "retryAt": "2026-11-21T10:56:05.428Z",
+      "stars": 2,
+      "reviewFingerprint": "9e1fafaee95089b48e8858cfc414d35d5fe431fa682f075d1b91886c41958004",
+      "modelReviewedAt": "2026-11-14T10:56:05.428Z"
     },
     "eileenes/decidelint": {
       "status": "error",
@@ -3314,9 +3320,9 @@
     "kohaku8046/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "kohaku8046/jev-social",
         "status": "review",
@@ -3327,14 +3333,14 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z"
+      "retryAt": "2026-11-21T10:56:05.428Z"
     },
     "olivier56729/jev-social": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "olivier56729/jev-social",
         "status": "review",
@@ -3345,7 +3351,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z"
+      "retryAt": "2026-11-21T10:56:05.428Z"
     },
     "teilomillet/wyat": {
       "status": "review",
@@ -3368,9 +3374,9 @@
     "magdalena606/coreai-kit": {
       "status": "error",
       "discoveredAt": "2026-10-18T08:20:12.713Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "magdalena606/coreai-kit",
         "status": "review",
@@ -3381,7 +3387,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-10-18T08:20:12.713Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z"
+      "retryAt": "2026-11-21T10:56:05.428Z"
     },
     "evelynm11/coreai-kit": {
       "status": "error",
@@ -4085,7 +4091,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 4,
-      "stars": 1460,
+      "stars": 1463,
       "checkedAt": "2026-11-13T21:37:47.279Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4495,25 +4501,27 @@
     "sgstq0811/verdictad-jev-ad": {
       "status": "review",
       "discoveredAt": "2026-11-07T10:41:04.169Z",
-      "attempts": 1,
+      "attempts": 2,
       "stars": 16,
-      "checkedAt": "2026-11-07T10:41:04.169Z",
+      "checkedAt": "2026-11-14T10:56:05.428Z",
       "lastReview": {
         "repo": "sgstq0811/verdictad-jev-ad",
         "status": "review",
         "score": {
-          "jevAbout": 0.3,
+          "jevAbout": 0.29,
           "jevKeep": "review",
           "jevKeepConfidence": 0.25,
-          "category": "alternatives"
+          "category": "other"
         },
-        "sha": "7a57de0a191d751fb04188dbd5ca1c9cedba5a02",
-        "evidenceUrl": "https://github.com/sgstq0811/verdictad-jev-ad/blob/7a57de0a191d751fb04188dbd5ca1c9cedba5a02/README.md",
+        "sha": "ea8180a566d00cbd790ea9fffa3252e5ead127ec",
+        "evidenceUrl": "https://github.com/sgstq0811/verdictad-jev-ad/blob/ea8180a566d00cbd790ea9fffa3252e5ead127ec/README.md",
         "evidenceSha256": "7818603bd61b44d89adfdf19a7c0b11bd5f5ff0f39283649b512d0f635519973",
         "model": "jev-latest",
-        "checkedAt": "2026-11-07T10:41:04.169Z"
+        "checkedAt": "2026-11-14T10:56:05.428Z"
       },
-      "retryAt": "2026-11-14T10:41:04.169Z"
+      "retryAt": "2026-11-21T10:56:05.428Z",
+      "reviewFingerprint": "95b2f73a9910b86c057f23ff9f4373c48021fad4f67101334157226c8df027b2",
+      "modelReviewedAt": "2026-11-14T10:56:05.428Z"
     },
     "webmaster-ramos/jev-multilingual-benchmark": {
       "status": "review",
