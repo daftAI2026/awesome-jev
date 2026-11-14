@@ -6973,5 +6973,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2121319134202126571",
     "aihotUrl": "https://aihot.news/items/o9uub3tapw9ejj0uphm6d2juv"
+  },
+  {
+    "id": "gdygbwddb6ne9njlq8r6elqnk",
+    "title": "浙大研究：弱模型也能当教练提升智能体表现",
+    "originalTitle": "AI model that is itself bad at a task can still train another AI to do it well.",
+    "summary": "浙江大学论文提出，本身不擅长任务的决策模型 JEV 单独执行 ALFWorld 任务成功率仅 42.9%，但作为步骤评分器可将 Qwen2.5-1.5B 策略的成功率从 72.8% 提升至 82.9%。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-11-14T18:59:28.000Z",
+    "discoveredAt": "2026-11-14T19:19:13.973Z",
+    "category": "paper",
+    "score": 44,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2121679426194718837",
+    "aihotUrl": "https://aihot.news/items/gdygbwddb6ne9njlq8r6elqnk"
   }
 ]
