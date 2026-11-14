@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "85e89b59e3bc31d148e26a4e9830a18051772c39",
-  "at": "2026-11-14T07:34:32.515Z",
-  "totalProjects": 3177,
+  "baselineSha": "b721d598d16bd01ce6da60bf9ff90d6fb3563240",
+  "at": "2026-11-14T18:42:57.606Z",
+  "totalProjects": 3179,
   "metadata": {
-    "ok": 3050,
-    "failed": 127,
+    "ok": 3051,
+    "failed": 128,
     "batches": 65,
     "cost": 65,
-    "other": 3077,
-    "remaining": 127,
-    "attempted": 3177,
-    "fresh": 3050,
-    "unavailable": 127,
+    "other": 3079,
+    "remaining": 128,
+    "attempted": 3179,
+    "fresh": 3051,
+    "unavailable": 128,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -458,6 +458,11 @@
     {
       "id": "gh-13-sabinelin7674-jev-browser",
       "repo": "sabinelin7674/jev-browser",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-divingsbysangam-typesafe-jev-salesforce",
+      "repo": "divingsbysangam/typesafe-jev-salesforce",
       "reason": "github-unavailable-repository"
     },
     {
