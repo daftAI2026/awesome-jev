@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "d5085fcf08cbd86cc582ad9c6712bf6e14b7b4aa",
-  "at": "2026-11-14T22:56:39.642Z",
+  "baselineSha": "ccb3cacf7496e5da6ffb1408ee698fe0b5df3abd",
+  "at": "2026-11-15T07:48:29.569Z",
   "totalProjects": 3179,
   "metadata": {
-    "ok": 3051,
-    "failed": 128,
+    "ok": 3050,
+    "failed": 129,
     "batches": 65,
     "cost": 65,
     "other": 3079,
-    "remaining": 128,
+    "remaining": 129,
     "attempted": 3179,
-    "fresh": 3051,
-    "unavailable": 128,
+    "fresh": 3050,
+    "unavailable": 129,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -303,6 +303,11 @@
     {
       "id": "gh-5-yinjs-claude-jev",
       "repo": "yinjs/claude-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-14-chainlesschain-chainlesschain",
+      "repo": "chainlesschain/chainlesschain",
       "reason": "github-unavailable-repository"
     },
     {
