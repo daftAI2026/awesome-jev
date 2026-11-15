@@ -52,7 +52,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 99
+      "stars": 100
     },
     "manavarya09/verdict": {
       "status": "review",
@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 35531
+      "stars": 35552
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1055,7 +1055,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 8299
+      "stars": 8301
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2338,7 +2338,7 @@
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 709
+      "stars": 721
     },
     "phocinae/.github": {
       "status": "review",
@@ -4292,7 +4292,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 3,
-      "stars": 914,
+      "stars": 915,
       "checkedAt": "2026-11-12T11:50:48.337Z",
       "lastReview": {
         "repo": "valen-team/valen",
