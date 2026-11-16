@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 35571
+      "stars": 35590
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -549,7 +549,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 0
+      "stars": 1
     },
     "9pings/notjev": {
       "status": "review",
@@ -597,7 +597,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 0
+      "stars": 1
     },
     "naklitechie/verdict": {
       "status": "review",
@@ -1055,7 +1055,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 8304
+      "stars": 8309
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2340,7 +2340,7 @@
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 731
+      "stars": 742
     },
     "phocinae/.github": {
       "status": "review",
@@ -4101,7 +4101,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 4,
-      "stars": 1464,
+      "stars": 1467,
       "checkedAt": "2026-11-13T21:37:47.279Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4296,7 +4296,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 3,
-      "stars": 915,
+      "stars": 916,
       "checkedAt": "2026-11-12T11:50:48.337Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4464,7 +4464,7 @@
       "status": "review",
       "discoveredAt": "2026-11-04T21:29:42.942Z",
       "attempts": 2,
-      "stars": 135,
+      "stars": 136,
       "checkedAt": "2026-11-11T22:15:53.666Z",
       "lastReview": {
         "repo": "lawrence3699/jev-style",

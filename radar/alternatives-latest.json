@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-16T01:23:09.918Z",
+  "at": "2026-11-16T12:03:13.224Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
@@ -42,5 +42,8 @@
     "drop": 0,
     "buffered": 0
   },
-  "totalProjects": 3176
+  "totalProjects": 3179,
+  "publication": {
+    "rebasedOn": "f1de9194a29c96740f1eac7931530e7c6868e764"
+  }
 }
