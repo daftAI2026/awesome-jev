@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "9c3883ea844e49484c19c3f21a5ecd779b55d485",
-  "at": "2026-11-16T07:55:58.174Z",
+  "baselineSha": "7ed052ef89daff1a88657e71c01b98c21f63e98e",
+  "at": "2026-11-16T22:51:46.943Z",
   "totalProjects": 3179,
   "metadata": {
-    "ok": 3049,
-    "failed": 130,
+    "ok": 3048,
+    "failed": 131,
     "batches": 65,
     "cost": 65,
     "other": 3079,
-    "remaining": 130,
+    "remaining": 131,
     "attempted": 3179,
-    "fresh": 3049,
-    "unavailable": 130,
+    "fresh": 3048,
+    "unavailable": 131,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "trufyrelabs/tru-jev-harness",
-        "to": "trufyreai/tru-jev-harness",
-        "databaseId": 1375824355
-      },
-      {
-        "from": "iamno1special/typesafe-sdk-godot",
-        "to": "magitech-ai/typesafe-sdk-godot",
-        "databaseId": 1384649812
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -224,6 +213,11 @@
     {
       "id": "gh-14-nitish-kumar30-jev",
       "repo": "nitish-kumar30/jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-16-prof-fabiosantos-ai-incident-atlas",
+      "repo": "prof-fabiosantos/ai-incident-atlas",
       "reason": "github-unavailable-repository"
     },
     {
@@ -688,9 +682,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 2,
     "restored": 0,
     "checked": 50
   }
