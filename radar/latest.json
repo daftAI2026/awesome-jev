@@ -1,24 +1,24 @@
 {
-  "at": "2026-11-15T18:53:42.597Z",
+  "at": "2026-11-16T06:34:38.382Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 3018,
+      "total": 3019,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 11210,
+      "total": 11221,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 9611,
+      "total": 9624,
       "status": "search-cap"
     },
     {
@@ -36,7 +36,7 @@
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 4216,
+      "total": 4220,
       "status": "search-cap"
     },
     {
@@ -52,7 +52,7 @@
   },
   "reviewed": 0,
   "added": 0,
-  "pending": 5636,
+  "pending": 5706,
   "overflow": 0,
   "evicted": 0,
   "receipts": [],
@@ -67,10 +67,10 @@
     "phase": "discovery",
     "reason": "github-rate-limited"
   },
-  "discoveryPending": 1686,
+  "discoveryPending": 1756,
   "buffered": 0,
   "queue": {
-    "pending": 1686,
+    "pending": 1756,
     "review": 3382,
     "error": 568,
     "drop": 0,
