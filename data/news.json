@@ -7018,5 +7018,50 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenBMB/status/2122217150882500974",
     "aihotUrl": "https://aihot.news/items/duk6m1x96u9c9c2uhlc5bs30t"
+  },
+  {
+    "id": "cxh5tf6loagkjodsqgz4iqvh2",
+    "title": "Jev 计费用法解析：state 只计费一次，多问题并行更省钱",
+    "originalTitle": "how to Jev",
+    "summary": "TypeSafe AI 讲解 Jev 的计费机制：请求按 state 加全部问题计费，state 部分无论并行问多少个问题都只收一次费。因此通常先一次性提出所有可能需要的问题再用代码筛选结果更便宜；引用内容补充，成本敏感时可按使用频率省略低频追问，速度优先时批量提问基本总是更快，但超大追问可能拖慢单次调用，需视频率拆分。",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-16T21:17:59.000Z",
+    "discoveredAt": "2026-11-16T21:43:36.521Z",
+    "category": "tip",
+    "score": 60,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2122439061378085193",
+    "aihotUrl": "https://aihot.news/items/cxh5tf6loagkjodsqgz4iqvh2"
+  },
+  {
+    "id": "jqeuhc55ie28v7s0s7pura2yx",
+    "title": "Liquid AI 发布 d1.2 与 d1.2-ultra 全模态决策模型，新增音频输入和五类任务",
+    "originalTitle": "d1.2: State-of-the-Art Omnimodal Decision Models",
+    "summary": "Liquid AI 发布决策模型 d1.2 和 d1.2-ultra，新增音频输入，并在 Liquid API 上增加读取数值、查找文本片段、图片定位、数量估计、多选五类新任务。",
+    "sourceName": "Liquid AI 模型与工程博客（网页）",
+    "publishedAt": "2026-11-15T16:00:00.000Z",
+    "discoveredAt": "2026-11-16T15:13:24.474Z",
+    "category": "ai-models",
+    "score": 55,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.liquid.ai/blog/d1-2",
+    "aihotUrl": "https://aihot.news/items/jqeuhc55ie28v7s0s7pura2yx"
+  },
+  {
+    "id": "xb0i6rqkh8n8dx40rpfcr9hdr",
+    "title": "Gergely Orosz 对谈 Satya Nadella：代码变便宜后软件工程的新形态",
+    "originalTitle": "Software engineering after code becomes cheap with Satya Nadella",
+    "summary": "Pragmatic Engineer 发布与 Microsoft CEO Satya Nadella 的访谈，探讨代码生成变廉价后验证成为难点时软件工程的走向。Nadella 承认 IDE 形态在约六个月内式微使 GitHub Copilot 一度落后于 Claude Code，并提出软件工厂、混合智能、把模型当作内部风险对待等观点，还谈及自愿离职计划与初级岗位招聘放缓的原因。",
+    "sourceName": "Pragmatic Engineer（RSS）",
+    "publishedAt": "2026-11-16T13:33:48.000Z",
+    "discoveredAt": "2026-11-16T14:13:16.914Z",
+    "category": "opinion",
+    "score": 70,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://newsletter.pragmaticengineer.com/p/software-engineering-after-code-becomes",
+    "aihotUrl": "https://aihot.news/items/xb0i6rqkh8n8dx40rpfcr9hdr"
   }
 ]
