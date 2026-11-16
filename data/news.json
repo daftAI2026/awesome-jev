@@ -6988,5 +6988,35 @@
     "reason": null,
     "originalUrl": "https://x.com/rohanpaul_ai/status/2121679426194718837",
     "aihotUrl": "https://aihot.news/items/gdygbwddb6ne9njlq8r6elqnk"
+  },
+  {
+    "id": "y68xh1e0v0t0rnhea6jn3qwsp",
+    "title": "面壁智能 MiniCPM-OCR 1.0 原生支持 vLLM 与 SGLang 推理框架",
+    "originalTitle": "🚀 MiniCPM-OCR 🤝 vLLM & SGLang",
+    "summary": "OpenBMB 宣布 MiniCPM-OCR 原生支持 vLLM 与 SGLang 两大开源推理框架，便于开发者将 MiniCPM-OCR 集成到现有工作流中。作者强调其 OCR 能力强、部署灵活、开源生态持续扩大。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-16T06:43:31.000Z",
+    "discoveredAt": "2026-11-16T07:10:44.187Z",
+    "category": "ai-products",
+    "score": 61,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2122218994325447163",
+    "aihotUrl": "https://aihot.news/items/y68xh1e0v0t0rnhea6jn3qwsp"
+  },
+  {
+    "id": "duk6m1x96u9c9c2uhlc5bs30t",
+    "title": "MiniCPM-OCR 1.0 获得 vLLM 和 SGLang 原生支持",
+    "originalTitle": "🚀 MiniCPM-OCR 1.0 now has native support for vLLM and SGLang!",
+    "summary": "面壁智能 OpenBMB 宣布 MiniCPM-OCR 1.0 已原生支持 vLLM 和 SGLang，代码已合并、可直接部署，将模型接入两个主流 LLM 推理框架。作者称这带来更简单的集成和更灵活的部署，OCR 能力保持不变。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-16T06:36:12.000Z",
+    "discoveredAt": "2026-11-16T06:39:44.009Z",
+    "category": "ai-products",
+    "score": 58,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2122217150882500974",
+    "aihotUrl": "https://aihot.news/items/duk6m1x96u9c9c2uhlc5bs30t"
   }
 ]
