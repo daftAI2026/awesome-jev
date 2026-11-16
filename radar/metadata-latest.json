@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "e954e046d020e30d90399244de51e8afb9ca3307",
-  "at": "2026-11-15T19:21:12.224Z",
+  "baselineSha": "9c3883ea844e49484c19c3f21a5ecd779b55d485",
+  "at": "2026-11-16T07:55:58.174Z",
   "totalProjects": 3179,
   "metadata": {
-    "ok": 3050,
-    "failed": 129,
+    "ok": 3049,
+    "failed": 130,
     "batches": 65,
     "cost": 65,
     "other": 3079,
-    "remaining": 129,
+    "remaining": 130,
     "attempted": 3179,
-    "fresh": 3050,
-    "unavailable": 129,
+    "fresh": 3049,
+    "unavailable": 130,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "trufyrelabs/tru-jev-harness",
+        "to": "trufyreai/tru-jev-harness",
+        "databaseId": 1375824355
+      },
+      {
+        "from": "iamno1special/typesafe-sdk-godot",
+        "to": "magitech-ai/typesafe-sdk-godot",
+        "databaseId": 1384649812
+      }
+    ]
   },
   "receipts": [
     {
@@ -78,6 +89,11 @@
     {
       "id": "gh-6-inverx-jevre",
       "repo": "inverx/jevre",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-10-kenhuangus-jev-usecases",
+      "repo": "kenhuangus/jev-usecases",
       "reason": "github-unavailable-repository"
     },
     {
@@ -672,9 +688,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
