@@ -391,7 +391,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 35567
+      "stars": 35571
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1055,7 +1055,7 @@
         "checkedAt": "2026-11-12T21:55:29.297Z"
       },
       "retryAt": "2026-11-19T21:55:29.297Z",
-      "stars": 8303
+      "stars": 8304
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2340,7 +2340,7 @@
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
       "retryAt": "2026-11-19T11:50:48.337Z",
-      "stars": 730
+      "stars": 731
     },
     "phocinae/.github": {
       "status": "review",
