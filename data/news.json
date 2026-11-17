@@ -7063,5 +7063,20 @@
     "reason": null,
     "originalUrl": "https://newsletter.pragmaticengineer.com/p/software-engineering-after-code-becomes",
     "aihotUrl": "https://aihot.news/items/xb0i6rqkh8n8dx40rpfcr9hdr"
+  },
+  {
+    "id": "ws668sr2p0amuvzb18w29awwd",
+    "title": "Liquid AI 发布 d1.2 与 d1.2-ultra 全模态决策模型，登顶 AA Decision Index",
+    "originalTitle": "Liquid AI Releases d1.2 and d1.2-ultra: Omnimodal Decision Models That Top the AA Decision Index",
+    "summary": "Liquid AI 发布决策模型 d1.2 和 d1.2-ultra，支持文本、图像和音频输入，返回概率而非生成文本，d1.2-ultra 以 75 分位列 Artificial Analysis Decision Index v2.1 决策模型榜首。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-11-17T09:20:57.000Z",
+    "discoveredAt": "2026-11-17T09:33:29.443Z",
+    "category": "ai-models",
+    "score": 52,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/11/17/liquid-ai-d1-2-omnimodal-decision-models/",
+    "aihotUrl": "https://aihot.news/items/ws668sr2p0amuvzb18w29awwd"
   }
 ]
