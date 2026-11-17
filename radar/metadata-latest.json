@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "4932fbbf6eec62336dde8d37c768c0be18b23d8d",
-  "at": "2026-11-17T09:09:55.040Z",
-  "totalProjects": 3179,
+  "baselineSha": "27c1e07408b22957cc0e6ad1dd510387229317dc",
+  "at": "2026-11-17T21:44:20.951Z",
+  "totalProjects": 3248,
   "metadata": {
-    "ok": 3048,
-    "failed": 131,
-    "batches": 65,
-    "cost": 65,
-    "other": 3079,
-    "remaining": 131,
-    "attempted": 3179,
-    "fresh": 3048,
-    "unavailable": 131,
+    "ok": 3116,
+    "failed": 132,
+    "batches": 66,
+    "cost": 66,
+    "other": 3148,
+    "remaining": 132,
+    "attempted": 3248,
+    "fresh": 3116,
+    "unavailable": 132,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -648,6 +648,11 @@
     {
       "id": "gh-11-seanjeong42-jevcore",
       "repo": "seanjeong42/jevcore",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-12-rickcrawford-jev-relevancy",
+      "repo": "rickcrawford/jev-relevancy",
       "reason": "github-unavailable-repository"
     },
     {
