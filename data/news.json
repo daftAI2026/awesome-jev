@@ -7111,9 +7111,9 @@
   },
   {
     "id": "y7f42y59ahf4hjlf4ptoprfq3",
-    "title": "Microsoft Ignite 2026 MAI 主题演讲发布 Code 2 等模型并推出 Licensed Weights",
+    "title": "Microsoft Ignite 2026：MAI 发布多款模型并推出 Licensed Weights",
     "originalTitle": "Microsoft Ignite 2026: MAI keynote transcript",
-    "summary": "Microsoft AI 在 Ignite 2026 MAI 主题演讲中介绍以性价比为核心的模型系列。",
+    "summary": "Microsoft 在 Ignite 2026 主题演讲中介绍 MAI 系列模型的高性价比策略。",
     "sourceName": "Microsoft AI：官方博客（RSS）",
     "publishedAt": "2026-11-17T18:14:55.000Z",
     "discoveredAt": "2026-11-17T20:06:34.408Z",
@@ -7141,16 +7141,16 @@
   },
   {
     "id": "z9zhvfj8o8zp2yp433eizf3uk",
-    "title": "Microsoft MAI 发布七个新模型，主打价格性能比",
-    "originalTitle": "Seven new world class models at scalable price-performance",
-    "summary": "Microsoft MAI 在 Ignite 2026 发布七个新模型，涵盖网络安全防御、编码、图像、实时语音、转录与决策路由。",
+    "title": "Microsoft Ignite 2026 发布 MAI 系列 7 个新模型",
+    "originalTitle": "Seven new world-class models at scalable price-performance",
+    "summary": "微软在 Ignite 2026 上发布 7 个 MAI 系列新模型，主打性价比。",
     "sourceName": "Microsoft AI：官方博客（RSS）",
     "publishedAt": "2026-11-17T18:16:05.000Z",
     "discoveredAt": "2026-11-17T19:05:33.581Z",
     "category": "ai-models",
-    "score": 73,
+    "score": 75,
     "selected": true,
-    "reason": "官方一次性列出七个新模型在各自基准上的对标成绩和定价，读者可以直接比较这些模型与竞品的价格性能差。",
+    "reason": "微软官方给出七个新模型的具体基准对比和价格数据，读者可据此评估在不同任务下的性价比选择。",
     "originalUrl": "https://microsoft.ai/news/microsoft-ignite-2026/",
     "aihotUrl": "https://aihot.news/items/z9zhvfj8o8zp2yp433eizf3uk"
   },
@@ -7243,5 +7243,20 @@
     "reason": null,
     "originalUrl": "https://www.ithome.com/1/028/593.htm",
     "aihotUrl": "https://aihot.news/items/i0pfi62xzvx8skqobopfjgt8r"
+  },
+  {
+    "id": "naof59ntjawophgssp05e4mrn",
+    "title": "Microsoft Ignite 发布七款 MAI 模型，以更低价格对标 OpenAI",
+    "originalTitle": "Microsoft is replacing outside AI models in its own products with cheaper in-house alternatives",
+    "summary": "Microsoft AI 在 Ignite 大会一次性发布七款 MAI 模型，覆盖代码、安全、图像、语音和路由，主打性价比，基准主要对标 OpenAI。",
+    "sourceName": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-11-18T18:47:36.000Z",
+    "discoveredAt": "2026-11-18T19:47:18.584Z",
+    "category": "ai-models",
+    "score": 75,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/",
+    "aihotUrl": "https://aihot.news/items/naof59ntjawophgssp05e4mrn"
   }
 ]
