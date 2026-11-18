@@ -7111,16 +7111,16 @@
   },
   {
     "id": "y7f42y59ahf4hjlf4ptoprfq3",
-    "title": "Microsoft Ignite 2026：MAI 发布多款模型并推出 Licensed Weights 可控权重方案",
+    "title": "Microsoft Ignite 2026 MAI 主题演讲发布 Code 2 等模型并推出 Licensed Weights",
     "originalTitle": "Microsoft Ignite 2026: MAI keynote transcript",
-    "summary": "微软 MAI 在 Ignite 2026 主题演讲中发布一系列强调性价比的模型，并推出 MAI Licensed Weights，可定制后在自己的 Azure 环境中运行、掌控权重与数据。",
+    "summary": "Microsoft AI 在 Ignite 2026 MAI 主题演讲中介绍以性价比为核心的模型系列。",
     "sourceName": "Microsoft AI：官方博客（RSS）",
     "publishedAt": "2026-11-17T18:14:55.000Z",
     "discoveredAt": "2026-11-17T20:06:34.408Z",
     "category": "ai-models",
-    "score": 75,
-    "selected": true,
-    "reason": "官方主题演讲给出各模型相对竞品的价格与性能对比数字，并宣布可控权重的 Licensed Weights 交付方式，便于评估成本取舍。",
+    "score": 69,
+    "selected": false,
+    "reason": null,
     "originalUrl": "https://microsoft.ai/news/microsoft-ignite-2026-mai-keynote/",
     "aihotUrl": "https://aihot.news/items/y7f42y59ahf4hjlf4ptoprfq3"
   },
@@ -7141,16 +7141,16 @@
   },
   {
     "id": "z9zhvfj8o8zp2yp433eizf3uk",
-    "title": "Microsoft MAI 发布七款新模型，主打极致性价比",
+    "title": "Microsoft MAI 发布七个新模型，主打价格性能比",
     "originalTitle": "Seven new world class models at scalable price-performance",
-    "summary": "Microsoft MAI 在 Ignite 2026 发布七款新模型。MAI Code 2 在四个编码基准平均达到 GPT-6.1 Sol 98% 的性能、价格约 40%，达到 Claude Opus 5.5 的 96% 性能、价格仅 5%；MAI Cyber 2 Flash 在 CyberGymE2E 上以不到 2% 的单任务成本匹配 GPT-6 Astra。",
+    "summary": "Microsoft MAI 在 Ignite 2026 发布七个新模型，涵盖网络安全防御、编码、图像、实时语音、转录与决策路由。",
     "sourceName": "Microsoft AI：官方博客（RSS）",
     "publishedAt": "2026-11-17T18:16:05.000Z",
     "discoveredAt": "2026-11-17T19:05:33.581Z",
     "category": "ai-models",
-    "score": 74,
+    "score": 73,
     "selected": true,
-    "reason": "官方公布七款 MAI 模型的基准对比和定价，读者可据此评估其在编码、图像、语音等场景替代现有模型的成本收益。",
+    "reason": "官方一次性列出七个新模型在各自基准上的对标成绩和定价，读者可以直接比较这些模型与竞品的价格性能差。",
     "originalUrl": "https://microsoft.ai/news/microsoft-ignite-2026/",
     "aihotUrl": "https://aihot.news/items/z9zhvfj8o8zp2yp433eizf3uk"
   },
@@ -7228,5 +7228,20 @@
     "reason": null,
     "originalUrl": "https://latent.space/p/cloudflare/",
     "aihotUrl": "https://aihot.news/items/iswc1ql543kzkzajtlo2bo2i9"
+  },
+  {
+    "id": "i0pfi62xzvx8skqobopfjgt8r",
+    "title": "微软发布 Microsoft-Decision-1.1 决策模型，基准得分领先 GPT-6 Luna 与 Gemini",
+    "originalTitle": "微软决策模型 Microsoft-Decision-1.1 登场，跑赢 GPT-6 Luna 与 Gemini",
+    "summary": "微软于 11 月 17 日正式推出 Microsoft-Decision-1.1 决策 AI 模型，已在 Microsoft Foundry、OpenRouter 和 Vercel 上线，面向路由、分类、优先级排序、内容核验和工作流控制等企业决策场景。",
+    "sourceName": "IT之家·人工智能",
+    "publishedAt": "2026-11-17T23:40:07.063Z",
+    "discoveredAt": "2026-11-18T00:07:29.817Z",
+    "category": "ai-models",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.ithome.com/1/028/593.htm",
+    "aihotUrl": "https://aihot.news/items/i0pfi62xzvx8skqobopfjgt8r"
   }
 ]
