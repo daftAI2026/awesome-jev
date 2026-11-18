@@ -1,12 +1,12 @@
 {
   "version": 2,
   "pages": {
-    "topic:jev fork:false": 9,
-    "\"typesafe.ai\" in:readme fork:false": 3,
-    "\"Jev\" \"System One\" in:readme fork:false": 3,
-    "topic:typesafe-ai fork:false": 1,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 1,
-    "\"TypeSafe\" \"Jev\" fork:false": 9,
+    "topic:jev fork:false": 1,
+    "\"typesafe.ai\" in:readme fork:false": 5,
+    "\"Jev\" \"System One\" in:readme fork:false": 6,
+    "topic:typesafe-ai fork:false": 3,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 3,
+    "\"TypeSafe\" \"Jev\" fork:false": 1,
     "code:\"api.typesafe.ai\" in:file": 7,
     "code:\"@typesafe-ai/sdk\" in:file": 9,
     "code:\"TYPESAFE_API_KEY\" in:file": 10,
@@ -4127,7 +4127,7 @@
         "checkedAt": "2026-11-17T20:58:28.739Z"
       },
       "retryAt": "2026-11-24T20:58:28.739Z",
-      "stars": 14
+      "stars": 15
     },
     "prakash5284/jev-vs-llm-resume-jd-eval": {
       "status": "review",
@@ -5921,7 +5921,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-11-07T13:06:57.555Z"
       },
-      "stars": 66,
+      "stars": 68,
       "retryAt": "2026-11-14T13:06:57.555Z"
     },
     "ufec/jev-block-android-ad": {
@@ -6042,7 +6042,7 @@
         "checkedAt": "2026-11-17T20:58:28.739Z"
       },
       "retryAt": "2026-11-24T20:58:28.739Z",
-      "stars": 1322,
+      "stars": 1323,
       "reviewFingerprint": "65744593f71e158ea6bf66b5fbc50ac4e4631b0c2b5309e12e9a3f606bea3087",
       "modelReviewedAt": "2026-11-17T20:58:28.739Z"
     },
@@ -20412,7 +20412,7 @@
         "checkedAt": "2026-11-08T22:09:50.047Z"
       },
       "retryAt": "2026-11-15T22:09:50.047Z",
-      "stars": 702
+      "stars": 703
     },
     "chujianyun/skills": {
       "status": "review",
@@ -24206,7 +24206,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 70
+      "stars": 75
     },
     "lph12168x/free-llm-daily": {
       "status": "error",
@@ -26619,7 +26619,7 @@
       "status": "error",
       "discoveredAt": "2026-09-22T11:39:00.649Z",
       "attempts": 8,
-      "stars": 12,
+      "stars": 13,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "retryAt": "2026-11-24T20:58:28.739Z"
     },
@@ -30104,7 +30104,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 166
+      "stars": 167
     },
     "benevalterjr/branch.dev": {
       "status": "review",
@@ -30414,7 +30414,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 11
+      "stars": 12
     },
     "bakertony-hash/aiconnect4": {
       "status": "error",
@@ -39120,7 +39120,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 7,
-      "stars": 8313,
+      "stars": 8317,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "yaoapp/yao",
@@ -47794,7 +47794,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
       "attempts": 4,
-      "stars": 2228,
+      "stars": 2415,
       "checkedAt": "2026-11-07T21:54:12.980Z",
       "lastReview": {
         "repo": "theagentrouter/agent-router",
@@ -50821,7 +50821,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
       "attempts": 4,
-      "stars": 2,
+      "stars": 6,
       "checkedAt": "2026-11-07T21:54:12.980Z",
       "lastReview": {
         "repo": "rohinrohin/awesome-clef",
@@ -69386,7 +69386,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
       "attempts": 4,
-      "stars": 607,
+      "stars": 609,
       "checkedAt": "2026-11-07T21:54:12.980Z",
       "lastReview": {
         "repo": "qybaihe/mu",
@@ -72247,7 +72247,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
       "attempts": 4,
-      "stars": 91,
+      "stars": 94,
       "checkedAt": "2026-11-09T22:24:37.538Z",
       "lastReview": {
         "repo": "rikinshah787/dotpals",
@@ -77313,7 +77313,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T11:28:30.308Z",
       "attempts": 4,
-      "stars": 285,
+      "stars": 296,
       "checkedAt": "2026-11-09T22:24:37.538Z",
       "lastReview": {
         "repo": "mohitsoni48/turbollm",
@@ -79251,7 +79251,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T21:13:04.435Z",
       "attempts": 4,
-      "stars": 137,
+      "stars": 138,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "simplejev/jevany",
@@ -79341,7 +79341,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T21:13:04.435Z",
       "attempts": 4,
-      "stars": 108,
+      "stars": 109,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "initial-d/ml-quant-trading",
@@ -86843,7 +86843,7 @@
       "status": "review",
       "discoveredAt": "2026-10-18T11:11:00.030Z",
       "attempts": 4,
-      "stars": 0,
+      "stars": 5,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "temikus/lgtm",
@@ -89756,7 +89756,7 @@
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 6,
-      "stars": 68,
+      "stars": 74,
       "checkedAt": "2026-11-10T19:46:41.581Z",
       "retryAt": "2026-11-17T19:46:41.581Z"
     },
@@ -91231,7 +91231,7 @@
       "status": "error",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 6,
-      "stars": 17,
+      "stars": 18,
       "checkedAt": "2026-11-10T19:46:41.581Z",
       "retryAt": "2026-11-17T19:46:41.581Z"
     },
@@ -93243,7 +93243,7 @@
       "status": "review",
       "discoveredAt": "2026-11-10T19:46:41.581Z",
       "attempts": 1,
-      "stars": 766,
+      "stars": 772,
       "checkedAt": "2026-11-10T19:46:41.581Z",
       "lastReview": {
         "repo": "zerotang05/videoadguard",
@@ -97177,7 +97177,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T18:34:49.934Z",
       "attempts": 1,
-      "stars": 63,
+      "stars": 67,
       "checkedAt": "2026-11-14T18:07:52.067Z",
       "lastReview": {
         "repo": "gpillon/ignis",
@@ -98159,7 +98159,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T18:34:49.934Z",
       "attempts": 1,
-      "stars": 513,
+      "stars": 515,
       "checkedAt": "2026-11-14T18:07:52.067Z",
       "lastReview": {
         "repo": "horace-maxwell/horosa-skill",
@@ -99421,7 +99421,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T18:34:49.934Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "ar39/decisionpentest",
@@ -102983,7 +102983,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 545,
+      "stars": 560,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "anteloc/ldraw-nova",
@@ -106396,7 +106396,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-14T06:28:29.913Z",
       "attempts": 0,
-      "stars": 4
+      "stars": 5
     },
     "kalizi/adv-laya-experiment": {
       "status": "pending",
@@ -110724,13 +110724,13 @@
       "status": "pending",
       "discoveredAt": "2026-11-14T22:28:00.367Z",
       "attempts": 0,
-      "stars": 801
+      "stars": 804
     },
     "higress-group/hiroute": {
       "status": "pending",
       "discoveredAt": "2026-11-14T22:28:00.367Z",
       "attempts": 0,
-      "stars": 471
+      "stars": 472
     },
     "louiscalata/nisi": {
       "status": "pending",
@@ -111744,7 +111744,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-15T06:37:47.704Z",
       "attempts": 0,
-      "stars": 2
+      "stars": 7
     },
     "chlangjou/dexinode": {
       "status": "pending",
@@ -112572,7 +112572,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-16T06:34:38.382Z",
       "attempts": 0,
-      "stars": 22
+      "stars": 23
     },
     "himanshu231204/jev_model": {
       "status": "pending",
@@ -113370,7 +113370,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T07:58:16.007Z",
       "attempts": 0,
-      "stars": 0
+      "stars": 1
     },
     "bigai-nlco/gs1": {
       "status": "pending",
@@ -113544,7 +113544,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T07:58:16.007Z",
       "attempts": 0,
-      "stars": 0
+      "stars": 1
     },
     "pramodklal/jev": {
       "status": "pending",
@@ -113634,7 +113634,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T07:58:16.007Z",
       "attempts": 0,
-      "stars": 57
+      "stars": 59
     },
     "nimbalyst/nimbalyst": {
       "status": "pending",
@@ -114254,7 +114254,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T20:58:28.739Z",
       "attempts": 0,
-      "stars": 1
+      "stars": 2
     },
     "khaalidrafi/agent-team-ci": {
       "status": "pending",
@@ -114344,7 +114344,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T20:58:28.739Z",
       "attempts": 0,
-      "stars": 2707
+      "stars": 2710
     },
     "qhf7/rec-agent": {
       "status": "pending",
@@ -114459,500 +114459,553 @@
       "discoveredAt": "2026-11-17T20:58:28.739Z",
       "attempts": 0,
       "stars": 18611
+    },
+    "kayroalexandre/jev-jove": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "enhansome/enhansome-ossdrop": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "isaac-richie/footballlab": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "shawnbaako/production-agent-experiments": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dragsoshuvo/awesome-clairic": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "cpave3/chimera": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "vurihuang/magpie-plugin-openai-decisions": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "visitworld123/awesome-robot-use-agent": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 107
+    },
+    "gfratmct/archimede": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "guan0923/praxis-rag": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 6
+    },
+    "computer-whisperer/within-reason": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "artnagh/openshelf": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "rxho/sub2api-langfuse": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jorzaiy/fly-in-a-jar": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "ref4rain/sub2carpool": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "abozaralizadeh/abozaralizadeh.github.io": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "razmser/openrouter-docs": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "leoweigand/nix": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "vicfei/dsh-plugin-atlas": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "jmschnei/n4c-decision-broker": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dearcaat/mineruplus": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "symthink/prompts": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "adriaansaeez/adriaansaeez": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "zhaozhaozz/witden": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "enhansome/enhansome-awesome-llm-long-context-modeling": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "ajbmachon/jev-navigator": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jeryi-sun/llm-and-law": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 338
+    },
+    "lolotam/postora_browser_agent": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dabaige53/dabaige-skills": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "rheannemcintosh/calendar-cockpit": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "xbajci/agent-kit": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "yudidifei/scripts": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "haha0e/fund-quant-tool": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "shun0624/si": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "atanycosts/sub2api-customizations": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "peberwang/openclaw-desk": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "vatsa10/pointer": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "shuaibai-usc/philocafe": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "asusoda/jev-workshop": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "contrastiskey/eetc-claude-code": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dimples9527/sub2api": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jimbanks/ad-library-saver": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "flow-steward/extensions": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "javocruz/devopsassignment": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sreenivasanac/deskrecall": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jcsoftdev/project-brain": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jonasjancarik/pearwrite": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tbmsindemnify/claude-optimize-mod": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "bludragon-ai/all41n14lla": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "trmquang93/safari-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "feuersteiner/agentests": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 3
+    },
+    "0xshugo/hardshell": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "qts2218346424-cyber/aether-quant-studio": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "m-rk/agentmux": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "bebecap/frontier-orchestration": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "enkay01/opencode-fast-context": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "kara-aiassistant-aquelegabes/dsh-systemone-tools": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "felvieira/claude-skills-fv": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 28
+    },
+    "aparlak88/alps-agy-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "gumieri/nenya": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 38
+    },
+    "tadstratford/ai_wfp_host": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "talalkashar/systemone": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "gabrieleghisleni/freeway": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "aalricc/tim-mi": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "ovsw/sally": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "pridkett/simple-llm-proxy": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "mytecor/llm-gateway": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "zanuka/orto": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "styrir/skills": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "nehalvaghasiya/systemone-guard": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "rishab-agrawal/enrage": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "uran-lajci/system-one-multilingual-sentiment": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "x66666hj/rsi": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "carlosjmarq/chismosito-app": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "aidreamy/aiface": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 2
+    },
+    "putraridho/jev-switch": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "pouriarouzrokh/lattereview": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 127
+    },
+    "ihpolash/system-one-testing-for-bengali": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "trustworthy-ai-group/adversarial_examples_papers": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 379
+    },
+    "fxmaxvl/bf": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "arcreactor81/doc-classifier-public": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "eklakhdewan/hcad": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "samferwerda/agentic-setup": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "maddymedia123-jpg/quant-dashboard": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "onprs/pi-fusion": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tadiwachirambamhanda-cyber/tadiwachirambamhanda-cyber": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sodazheng/system-one-model": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tauari/projeto-seminario": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "simkaz12/tabularium": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "manassoni-2009/project-jarvis": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "dariush-tasdighi/dt_learning_python_ai_jev_laya": {
+      "status": "pending",
+      "discoveredAt": "2026-11-18T07:33:18.890Z",
+      "attempts": 0,
+      "stars": 0
     }
   },
-  "nextReviewLane": "retry",
-  "pendingSearchPage": {
-    "query": "\"Jev\" \"System One\" in:readme fork:false",
-    "page": 3,
-    "nextPage": 4,
-    "sourceStatus": "search-cap",
-    "items": [
-      {
-        "repo": "kayroalexandre/jev-jove",
-        "databaseId": 1461529367,
-        "stars": 0
-      },
-      {
-        "repo": "sbayer2/crowd-calibration",
-        "databaseId": 1398450851,
-        "stars": 0
-      },
-      {
-        "repo": "gradient30/typesafe-handbook",
-        "databaseId": 1378182666,
-        "stars": 0
-      },
-      {
-        "repo": "kenz1117/dsh-engram",
-        "databaseId": 1353296006,
-        "stars": 75
-      },
-      {
-        "repo": "izam-mohammed/decisionsmith",
-        "databaseId": 1387209242,
-        "stars": 0
-      },
-      {
-        "repo": "obekt/obekt-terminal",
-        "databaseId": 1405118664,
-        "stars": 0
-      },
-      {
-        "repo": "bradheitmann/model-tier-drop",
-        "databaseId": 1426125980,
-        "stars": 0
-      },
-      {
-        "repo": "chrisjainsley/claude-dotnet-workflow-kit",
-        "databaseId": 1367347539,
-        "stars": 1
-      },
-      {
-        "repo": "mertguvencli/aifomoindex",
-        "databaseId": 1282955823,
-        "stars": 1
-      },
-      {
-        "repo": "andysolomon/arc-reader",
-        "databaseId": 1446395863,
-        "stars": 1
-      },
-      {
-        "repo": "oraekene/task-digest",
-        "databaseId": 1425630593,
-        "stars": 0
-      },
-      {
-        "repo": "daftai2026/awesome-jev",
-        "databaseId": 1375643526,
-        "stars": 13
-      },
-      {
-        "repo": "ajaysurya1221/agent-reliability-ci",
-        "databaseId": 1379303835,
-        "stars": 0
-      },
-      {
-        "repo": "tak-bro/local-jev-bench",
-        "databaseId": 1391719801,
-        "stars": 5
-      },
-      {
-        "repo": "davide-desio-eleva/kirograph",
-        "databaseId": 1193581660,
-        "stars": 167
-      },
-      {
-        "repo": "enhansome/enhansome-ossdrop",
-        "databaseId": 1331864611,
-        "stars": 0
-      },
-      {
-        "repo": "mannyadc/voc-demo",
-        "databaseId": 1435727562,
-        "stars": 0
-      },
-      {
-        "repo": "hayaenfj/shikii",
-        "databaseId": 1428995606,
-        "stars": 1
-      },
-      {
-        "repo": "hailports/stackmini",
-        "databaseId": 1459025375,
-        "stars": 0
-      },
-      {
-        "repo": "yuda-lyu/w-dispatch-ai",
-        "databaseId": 1328889773,
-        "stars": 0
-      },
-      {
-        "repo": "yueyongsheng/subtoapi",
-        "databaseId": 1264129276,
-        "stars": 1
-      },
-      {
-        "repo": "isaac-richie/footballlab",
-        "databaseId": 1432880258,
-        "stars": 0
-      },
-      {
-        "repo": "therocksss/therocksss",
-        "databaseId": 1378879508,
-        "stars": 0
-      },
-      {
-        "repo": "facilestudio/bulle",
-        "databaseId": 1344278755,
-        "stars": 0
-      },
-      {
-        "repo": "shawnbaako/production-agent-experiments",
-        "databaseId": 1458855877,
-        "stars": 0
-      },
-      {
-        "repo": "fendouai/awesome-deepseek-harness",
-        "databaseId": 1334296858,
-        "stars": 58
-      },
-      {
-        "repo": "dragsoshuvo/awesome-clairic",
-        "databaseId": 1439237296,
-        "stars": 0
-      },
-      {
-        "repo": "billjr99/llmproxy",
-        "databaseId": 1237039385,
-        "stars": 0
-      },
-      {
-        "repo": "rohinrohin/awesome-clef",
-        "databaseId": 1409289430,
-        "stars": 6
-      },
-      {
-        "repo": "cpave3/chimera",
-        "databaseId": 1219617004,
-        "stars": 0
-      },
-      {
-        "repo": "qybaihe/mu",
-        "databaseId": 1381412852,
-        "stars": 609
-      },
-      {
-        "repo": "ai-ecoverse/slicc-ortllama",
-        "databaseId": 1405724508,
-        "stars": 0
-      },
-      {
-        "repo": "jhd3197/prompture",
-        "databaseId": 1052321064,
-        "stars": 16
-      },
-      {
-        "repo": "vurihuang/magpie-plugin-openai-decisions",
-        "databaseId": 1461511573,
-        "stars": 0
-      },
-      {
-        "repo": "visitworld123/awesome-robot-use-agent",
-        "databaseId": 1365180956,
-        "stars": 107
-      },
-      {
-        "repo": "debanjanbasu/grr-cli",
-        "databaseId": 1328811257,
-        "stars": 1
-      },
-      {
-        "repo": "clouatre-labs/decisions-judge-mcp",
-        "databaseId": 1378812039,
-        "stars": 5
-      },
-      {
-        "repo": "superinstance/superinstance",
-        "databaseId": 1208077902,
-        "stars": 7
-      },
-      {
-        "repo": "davidhoang/davidhoang-web",
-        "databaseId": 906832205,
-        "stars": 1
-      },
-      {
-        "repo": "gfratmct/archimede",
-        "databaseId": 1460263903,
-        "stars": 0
-      },
-      {
-        "repo": "guan0923/praxis-rag",
-        "databaseId": 1348167364,
-        "stars": 6
-      },
-      {
-        "repo": "yangpeng366/openeyes",
-        "databaseId": 1330614239,
-        "stars": 2
-      },
-      {
-        "repo": "computer-whisperer/within-reason",
-        "databaseId": 1377555080,
-        "stars": 0
-      },
-      {
-        "repo": "shmuelsh23a/tactical",
-        "databaseId": 1293563458,
-        "stars": 0
-      },
-      {
-        "repo": "artnagh/openshelf",
-        "databaseId": 1449584976,
-        "stars": 0
-      },
-      {
-        "repo": "brainwagon/ai-brief",
-        "databaseId": 1336826619,
-        "stars": 0
-      },
-      {
-        "repo": "aminry/decisio",
-        "databaseId": 1398256866,
-        "stars": 10
-      },
-      {
-        "repo": "rxho/sub2api-langfuse",
-        "databaseId": 1271502058,
-        "stars": 0
-      },
-      {
-        "repo": "try-works/tool-mode",
-        "databaseId": 1417132069,
-        "stars": 1
-      },
-      {
-        "repo": "raitoxlol/everett",
-        "databaseId": 1387405103,
-        "stars": 3
-      },
-      {
-        "repo": "narutofyy/sub2-fwq2",
-        "databaseId": 1345717080,
-        "stars": 0
-      },
-      {
-        "repo": "xarleyn/dsh-plugins",
-        "databaseId": 1350898564,
-        "stars": 3
-      },
-      {
-        "repo": "dsaad68/fuzzy-jev",
-        "databaseId": 1382161178,
-        "stars": 2
-      },
-      {
-        "repo": "jorzaiy/fly-in-a-jar",
-        "databaseId": 1442002431,
-        "stars": 0
-      },
-      {
-        "repo": "chfr19820610-cell/aicomics",
-        "databaseId": 1305155356,
-        "stars": 24
-      },
-      {
-        "repo": "unbraind/pm-jev",
-        "databaseId": 1405226190,
-        "stars": 0
-      },
-      {
-        "repo": "amal-david/awesome-jev",
-        "databaseId": 1375815381,
-        "stars": 247
-      },
-      {
-        "repo": "ozers/jevsome-projects",
-        "databaseId": 1375753984,
-        "stars": 1
-      },
-      {
-        "repo": "omnijev/onejev",
-        "databaseId": 1390958360,
-        "stars": 274
-      },
-      {
-        "repo": "ref4rain/sub2carpool",
-        "databaseId": 1445119086,
-        "stars": 0
-      },
-      {
-        "repo": "abozaralizadeh/abozaralizadeh.github.io",
-        "databaseId": 1419084365,
-        "stars": 1
-      },
-      {
-        "repo": "yaoapp/yao",
-        "databaseId": 403559729,
-        "stars": 8316
-      },
-      {
-        "repo": "rokbenko/quackd",
-        "databaseId": 1349410105,
-        "stars": 297
-      },
-      {
-        "repo": "xtrm-dev/core",
-        "databaseId": 1145991412,
-        "stars": 2
-      },
-      {
-        "repo": "dyoshikawa/opencode-auto-approval-plugin",
-        "databaseId": 1322362278,
-        "stars": 8
-      },
-      {
-        "repo": "razmser/openrouter-docs",
-        "databaseId": 1444461136,
-        "stars": 0
-      },
-      {
-        "repo": "amscotti/janus",
-        "databaseId": 1352770565,
-        "stars": 0
-      },
-      {
-        "repo": "ar39/decisionpentest",
-        "databaseId": 1452114216,
-        "stars": 0
-      },
-      {
-        "repo": "dongtsi/awesome-trustworthy-jev",
-        "databaseId": 1401569845,
-        "stars": 7
-      },
-      {
-        "repo": "juw12/buddy",
-        "databaseId": 1445028240,
-        "stars": 1
-      },
-      {
-        "repo": "aikeluargalee-tech/jev-v8",
-        "databaseId": 1413871427,
-        "stars": 0
-      },
-      {
-        "repo": "gpustack/loopwright",
-        "databaseId": 1454766145,
-        "stars": 0
-      },
-      {
-        "repo": "leoweigand/nix",
-        "databaseId": 1091770680,
-        "stars": 0
-      },
-      {
-        "repo": "albakarz/my-tools-dashboard",
-        "databaseId": 1387097636,
-        "stars": 0
-      },
-      {
-        "repo": "frostloom/ai-gateway",
-        "databaseId": 1386648788,
-        "stars": 0
-      },
-      {
-        "repo": "vicfei/dsh-plugin-atlas",
-        "databaseId": 1442030349,
-        "stars": 2
-      },
-      {
-        "repo": "unbraind/pm-rl",
-        "databaseId": 1319265962,
-        "stars": 1
-      },
-      {
-        "repo": "jmschnei/n4c-decision-broker",
-        "databaseId": 1461224221,
-        "stars": 0
-      },
-      {
-        "repo": "asktheway/dsh-jev-interceptor",
-        "databaseId": 1382292535,
-        "stars": 33
-      },
-      {
-        "repo": "dearcaat/mineruplus",
-        "databaseId": 1439210325,
-        "stars": 2
-      },
-      {
-        "repo": "123456zhe/cli-sanguosha-online",
-        "databaseId": 1313802958,
-        "stars": 2
-      },
-      {
-        "repo": "paulodantasii/curadoria-carreiras-juridicas",
-        "databaseId": 1219218978,
-        "stars": 0
-      },
-      {
-        "repo": "c10dev/canon",
-        "databaseId": 1429439582,
-        "stars": 0
-      },
-      {
-        "repo": "nyo16/llama_cpp_ex",
-        "databaseId": 1165142527,
-        "stars": 9
-      },
-      {
-        "repo": "moontechnica/orochi",
-        "databaseId": 1376226734,
-        "stars": 0
-      },
-      {
-        "repo": "symthink/prompts",
-        "databaseId": 1432280546,
-        "stars": 0
-      },
-      {
-        "repo": "willjohnson/sleeper-service",
-        "databaseId": 1320457059,
-        "stars": 4
-      },
-      {
-        "repo": "hypathia/votum",
-        "databaseId": 1451423982,
-        "stars": 1
-      },
-      {
-        "repo": "mrjev/awesome-jev",
-        "databaseId": 1375554513,
-        "stars": 21
-      },
-      {
-        "repo": "adriaansaeez/adriaansaeez",
-        "databaseId": 1260423788,
-        "stars": 0
-      },
-      {
-        "repo": "zhaozhaozz/witden",
-        "databaseId": 1414416955,
-        "stars": 1
-      },
-      {
-        "repo": "wizicer/jev_info_site",
-        "databaseId": 1376714411,
-        "stars": 3
-      },
-      {
-        "repo": "higress-group/hiroute",
-        "databaseId": 1366906256,
-        "stars": 472
-      },
-      {
-        "repo": "enhansome/enhansome-awesome-llm-long-context-modeling",
-        "databaseId": 1331672027,
-        "stars": 0
-      },
-      {
-        "repo": "ajbmachon/jev-navigator",
-        "databaseId": 1391903674,
-        "stars": 0
-      },
-      {
-        "repo": "jeryi-sun/llm-and-law",
-        "databaseId": 614464281,
-        "stars": 338
-      },
-      {
-        "repo": "lolotam/postora_browser_agent",
-        "databaseId": 1409458754,
-        "stars": 0
-      }
-    ]
-  }
+  "nextReviewLane": "retry"
 }
