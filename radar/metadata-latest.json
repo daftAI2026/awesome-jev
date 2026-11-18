@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "6b31c69e418c53507cdddebb51dd6eb590a4bfd0",
-  "at": "2026-11-18T08:30:10.475Z",
+  "baselineSha": "a12fc41245a130b36b9674a6d661ba420353d6f7",
+  "at": "2026-11-18T21:22:49.257Z",
   "totalProjects": 3248,
   "metadata": {
-    "ok": 3116,
-    "failed": 132,
+    "ok": 3112,
+    "failed": 136,
     "batches": 66,
     "cost": 66,
     "other": 3148,
-    "remaining": 132,
+    "remaining": 136,
     "attempted": 3248,
-    "fresh": 3116,
-    "unavailable": 132,
+    "fresh": 3112,
+    "unavailable": 136,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -136,6 +136,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-13-satiricalguru-fast-jev-agents",
+      "repo": "satiricalguru/fast-jev-agents",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-13-kieran-a-egan-pi-software-factory",
       "repo": "kieran-a-egan/pi-software-factory",
       "reason": "github-unavailable-repository"
@@ -178,6 +183,11 @@
     {
       "id": "gh-13-patrick-sch03-jev-issue-radar",
       "repo": "patrick-sch03/jev-issue-radar",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-12-jly-engineer-claude-jev",
+      "repo": "jly-engineer/claude-jev",
       "reason": "github-unavailable-repository"
     },
     {
@@ -241,8 +251,18 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-13-satiricalguru-hinge-jev",
+      "repo": "satiricalguru/hinge-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-8-tynamite-evaluation-behavioral-system-one",
       "repo": "tynamite/evaluation-behavioral-system-one",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-15-charlie-wang-03-jev-testbench",
+      "repo": "charlie-wang-03/jev-testbench",
       "reason": "github-unavailable-repository"
     },
     {
