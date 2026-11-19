@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "a12fc41245a130b36b9674a6d661ba420353d6f7",
-  "at": "2026-11-18T21:22:49.257Z",
-  "totalProjects": 3248,
+  "baselineSha": "7c73f2455e92ae7bdda90304db88c0b76d4e12af",
+  "at": "2026-11-19T08:42:36.587Z",
+  "totalProjects": 3258,
   "metadata": {
-    "ok": 3112,
-    "failed": 136,
-    "batches": 66,
-    "cost": 66,
-    "other": 3148,
-    "remaining": 136,
-    "attempted": 3248,
-    "fresh": 3112,
-    "unavailable": 136,
+    "ok": 3120,
+    "failed": 138,
+    "batches": 67,
+    "cost": 67,
+    "other": 3158,
+    "remaining": 138,
+    "attempted": 3258,
+    "fresh": 3120,
+    "unavailable": 138,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -118,6 +118,11 @@
     {
       "id": "gh-10-alpbahadur-jevrouter",
       "repo": "alpbahadur/jevrouter",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-14-omaralaaeldein-jev-verifier-skill",
+      "repo": "omaralaaeldein/jev-verifier-skill",
       "reason": "github-unavailable-repository"
     },
     {
@@ -248,6 +253,11 @@
     {
       "id": "gh-11-contacto939-kit-jev",
       "repo": "contacto939/kit-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-7-hraness-sys1",
+      "repo": "hraness/sys1",
       "reason": "github-unavailable-repository"
     },
     {
