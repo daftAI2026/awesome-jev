@@ -7258,5 +7258,20 @@
     "reason": null,
     "originalUrl": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/",
     "aihotUrl": "https://aihot.news/items/naof59ntjawophgssp05e4mrn"
+  },
+  {
+    "id": "feii8mk4rj20bwknsonu093hf",
+    "title": "Nutrient Data Extraction API 支持按 JSON Schema 提取并附带逐字段引用与置信度",
+    "originalTitle": "Nutrient Data Extraction API: JSON Matching Your Schema With Per-Field Citations and Confidence",
+    "summary": "Nutrient（原 PSPDFKit）的 Data Extraction API 将 PDF、扫描件、图片和 Office 文件解析为空间 JSON 或 Markdown，每个字段附页码、边界框、match 标签和置信度。",
+    "sourceName": "MarkTechPost（RSS）",
+    "publishedAt": "2026-11-19T03:23:50.000Z",
+    "discoveredAt": "2026-11-19T04:08:19.969Z",
+    "category": "ai-products",
+    "score": 55,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://www.marktechpost.com/2026/11/18/nutrient-data-extraction-api-citations-confidence/",
+    "aihotUrl": "https://aihot.news/items/feii8mk4rj20bwknsonu093hf"
   }
 ]
