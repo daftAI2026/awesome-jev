@@ -1,17 +1,17 @@
 {
   "status": "partial",
-  "baselineSha": "7c73f2455e92ae7bdda90304db88c0b76d4e12af",
-  "at": "2026-11-19T08:42:36.587Z",
-  "totalProjects": 3258,
+  "baselineSha": "fbae40ec7ef7a29cc72f2eb0d79014418cc11745",
+  "at": "2026-11-19T21:27:00.537Z",
+  "totalProjects": 3283,
   "metadata": {
-    "ok": 3120,
+    "ok": 3145,
     "failed": 138,
     "batches": 67,
     "cost": 67,
-    "other": 3158,
+    "other": 3183,
     "remaining": 138,
-    "attempted": 3258,
-    "fresh": 3120,
+    "attempted": 3283,
+    "fresh": 3145,
     "unavailable": 138,
     "deferredRemaining": 0,
     "top100": {
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "ai-ascension/jev-factorio-agent",
+        "to": "jevplay-games/jev-factorio-agent",
+        "databaseId": 1379060982
+      },
+      {
+        "from": "peach-zhang/typesafe-go",
+        "to": "tao-1abs/typesafe-go",
+        "databaseId": 1378943313
+      }
+    ]
   },
   "receipts": [
     {
@@ -717,9 +728,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
