@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "fbae40ec7ef7a29cc72f2eb0d79014418cc11745",
-  "at": "2026-11-19T21:27:00.537Z",
+  "baselineSha": "630a285a18fb3f1c86a1420ff0f3e650f009a22a",
+  "at": "2026-11-20T08:28:45.242Z",
   "totalProjects": 3283,
   "metadata": {
-    "ok": 3145,
-    "failed": 138,
+    "ok": 3144,
+    "failed": 139,
     "batches": 67,
     "cost": 67,
     "other": 3183,
-    "remaining": 138,
+    "remaining": 139,
     "attempted": 3283,
-    "fresh": 3145,
-    "unavailable": 138,
+    "fresh": 3144,
+    "unavailable": 139,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "ai-ascension/jev-factorio-agent",
-        "to": "jevplay-games/jev-factorio-agent",
-        "databaseId": 1379060982
-      },
-      {
-        "from": "peach-zhang/typesafe-go",
-        "to": "tao-1abs/typesafe-go",
-        "databaseId": 1378943313
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -139,6 +128,11 @@
     {
       "id": "gh-8-realdubb-jev-playground",
       "repo": "realdubb/jev-playground",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-8-bodila51-jev-hft-model-router",
+      "repo": "bodila51/jev-hft-model-router",
       "reason": "github-unavailable-repository"
     },
     {
@@ -728,7 +722,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
     "unavailable": 1,
     "restored": 0,
