@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "630a285a18fb3f1c86a1420ff0f3e650f009a22a",
-  "at": "2026-11-20T08:28:45.242Z",
-  "totalProjects": 3283,
+  "baselineSha": "35829e0532f8bdffced9f6cbf76c69c03777c7a1",
+  "at": "2026-11-20T21:02:10.600Z",
+  "totalProjects": 3356,
   "metadata": {
-    "ok": 3144,
-    "failed": 139,
-    "batches": 67,
-    "cost": 67,
-    "other": 3183,
-    "remaining": 139,
-    "attempted": 3283,
-    "fresh": 3144,
-    "unavailable": 139,
+    "ok": 3216,
+    "failed": 140,
+    "batches": 69,
+    "cost": 69,
+    "other": 3256,
+    "remaining": 140,
+    "attempted": 3356,
+    "fresh": 3216,
+    "unavailable": 140,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -706,6 +706,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-lamplighterpaul-forma-system1-experiment",
+      "repo": "lamplighterpaul/forma-system1-experiment",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-ndolinschi-harnessjudge",
       "repo": "ndolinschi/harnessjudge",
       "reason": "github-unavailable-repository"
@@ -724,7 +729,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
