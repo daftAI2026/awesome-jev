@@ -7273,5 +7273,20 @@
     "reason": null,
     "originalUrl": "https://www.marktechpost.com/2026/11/18/nutrient-data-extraction-api-citations-confidence/",
     "aihotUrl": "https://aihot.news/items/feii8mk4rj20bwknsonu093hf"
+  },
+  {
+    "id": "mhz0mlhmguzz6x7fh9yxkj9dc",
+    "title": "面壁智能开源 PaperReview：Mac 本地批改手写作文",
+    "originalTitle": "📝 Class is over. You’re at your Mac with a stack of handwritten English essays to review.",
+    "summary": "面壁智能 OpenBMB 介绍开源应用 PaperReview，面向 Apple Silicon Mac，可转录手写英文作文并把批改建议关联到原文，由教师逐条接受或忽略。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-20T13:30:12.000Z",
+    "discoveredAt": "2026-11-20T13:49:46.556Z",
+    "category": "ai-products",
+    "score": 46,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2123770889573666942",
+    "aihotUrl": "https://aihot.news/items/mhz0mlhmguzz6x7fh9yxkj9dc"
   }
 ]
