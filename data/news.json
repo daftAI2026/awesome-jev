@@ -7288,5 +7288,35 @@
     "reason": null,
     "originalUrl": "https://x.com/OpenBMB/status/2123770889573666942",
     "aihotUrl": "https://aihot.news/items/mhz0mlhmguzz6x7fh9yxkj9dc"
+  },
+  {
+    "id": "emq1xgctdtey2f157crq9tvff",
+    "title": "Jev 为 Strala Group 提供 9 个 9 可靠性",
+    "originalTitle": "Jev gives @stralagroup the 9s of reliability they need to power decision-making for insurance, where quantifying risk is as critical as i...",
+    "summary": "Jev 为 @stralagroup 提供其所需的 9 个 9 可靠性，用于支撑保险领域的决策——在保险业，量化风险至关重要。\n\n来看 @EGafni 与 @armandostrala 和 @flohop_dev 的对话",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-20T22:10:56.000Z",
+    "discoveredAt": "2026-11-20T22:36:21.774Z",
+    "category": null,
+    "score": 16,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2123901935258636543",
+    "aihotUrl": "https://aihot.news/items/emq1xgctdtey2f157crq9tvff"
+  },
+  {
+    "id": "e9orv8bso6bqp2scz16sf7c9w",
+    "title": "NaceAI 发布 Drex Router：57-87ms 为每次 LLM 调用选模型",
+    "originalTitle": "A model decision in under 90 ms is fast enough to put a router in front of almost any LLM call.",
+    "summary": "@NaceAI 发布 Drex Router，一个小型路由模型，读取提示词和模型列表后约 57 到 87 ms 返回选择，基于 Gemma 的 12B 模型构建。在 1,400 道常识考题测试中准确率 87.6%，价格为每 1,000 题 $0.10；对比的 Jev Router 为 86.4%、$1.09。它还会为每个候选模型返回概率和简短理由，而不只返回模型名。",
+    "sourceName": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-11-20T21:48:34.000Z",
+    "discoveredAt": "2026-11-20T22:19:20.280Z",
+    "category": "ai-products",
+    "score": 54,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/rohanpaul_ai/status/2123896307811246550",
+    "aihotUrl": "https://aihot.news/items/e9orv8bso6bqp2scz16sf7c9w"
   }
 ]
