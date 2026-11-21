@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "35829e0532f8bdffced9f6cbf76c69c03777c7a1",
-  "at": "2026-11-20T21:02:10.600Z",
-  "totalProjects": 3356,
+  "baselineSha": "dfa88c7ab303658a6d8235a2c606c87d04280933",
+  "at": "2026-11-21T08:14:25.606Z",
+  "totalProjects": 3390,
   "metadata": {
-    "ok": 3216,
-    "failed": 140,
+    "ok": 3248,
+    "failed": 142,
     "batches": 69,
     "cost": 69,
-    "other": 3256,
-    "remaining": 140,
-    "attempted": 3356,
-    "fresh": 3216,
-    "unavailable": 140,
+    "other": 3290,
+    "remaining": 142,
+    "attempted": 3390,
+    "fresh": 3248,
+    "unavailable": 142,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -103,6 +103,11 @@
     {
       "id": "gh-8-stifler7-jev-llm-playground",
       "repo": "stifler7/jev-llm-playground",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-7-tpellet-jevify",
+      "repo": "tpellet/jevify",
       "reason": "github-unavailable-repository"
     },
     {
@@ -383,6 +388,11 @@
     {
       "id": "gh-15-giuliacosta9680-building-with-typesafe-jev",
       "repo": "giuliacosta9680/building-with-typesafe-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-10-hirosichen-jev-workshop",
+      "repo": "hirosichen/jev-workshop",
       "reason": "github-unavailable-repository"
     },
     {
@@ -729,7 +739,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
