@@ -413,7 +413,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 35758
+      "stars": 35778
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -488,7 +488,7 @@
         "checkedAt": "2026-11-19T22:46:15.671Z"
       },
       "retryAt": "2026-11-26T22:46:15.671Z",
-      "stars": 126,
+      "stars": 127,
       "reviewFingerprint": "5abe50a4d8e48fb33de6ade71369490ba3b65d0b6d28fb96230a51fe47145a36",
       "modelReviewedAt": "2026-11-19T22:46:15.671Z"
     },
@@ -1323,8 +1323,8 @@
     "talex-touch/flint": {
       "status": "review",
       "discoveredAt": "2026-09-26T08:49:12.120Z",
-      "attempts": 8,
-      "checkedAt": "2026-11-14T20:05:07.418Z",
+      "attempts": 9,
+      "checkedAt": "2026-11-21T21:09:27.479Z",
       "lastReview": {
         "repo": "talex-touch/flint",
         "status": "review",
@@ -1338,9 +1338,9 @@
         "evidenceUrl": "https://github.com/talex-touch/flint/blob/683ba4f47294d777e90297ef24df929a3a772f41/README.md",
         "evidenceSha256": "f01d71f1e308ee4caa4f718be453710dc0dbbacf5c8929b6997042baeaa6e558",
         "model": "jev-latest",
-        "checkedAt": "2026-11-14T20:05:07.418Z"
+        "checkedAt": "2026-11-21T21:09:27.479Z"
       },
-      "retryAt": "2026-11-21T20:05:07.418Z",
+      "retryAt": "2026-11-28T21:09:27.479Z",
       "stars": 0,
       "reviewFingerprint": "219b73008e2be5167c88367ef271a30d1e507bc732e223a5e93c55f038962c6d",
       "modelReviewedAt": "2026-11-14T20:05:07.418Z"
@@ -2454,7 +2454,7 @@
         "checkedAt": "2026-11-19T12:08:50.626Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 796,
+      "stars": 800,
       "reviewFingerprint": "c5a6b871f742d057e8082fb4ff47cc8fd83a116f77d2d09324686b7a5ad935b3",
       "modelReviewedAt": "2026-11-19T12:08:50.626Z"
     },
@@ -3267,9 +3267,9 @@
     "felipegenef/local-ai-system-one-lab": {
       "status": "review",
       "discoveredAt": "2026-10-17T17:55:33.058Z",
-      "attempts": 5,
+      "attempts": 6,
       "stars": 0,
-      "checkedAt": "2026-11-14T20:05:07.418Z",
+      "checkedAt": "2026-11-21T21:09:27.479Z",
       "lastReview": {
         "repo": "felipegenef/local-ai-system-one-lab",
         "status": "review",
@@ -3278,9 +3278,9 @@
         "evidenceUrl": "https://github.com/felipegenef/local-ai-system-one-lab/blob/28eff79b84842da5dc605c804d2375d546f24ad7/README.md",
         "evidenceSha256": "edf1a94071fa1c8920c45097a778b6de27dba3541c9d590199278805da49b852",
         "model": "jev-latest",
-        "checkedAt": "2026-11-14T20:05:07.418Z"
+        "checkedAt": "2026-11-21T21:09:27.479Z"
       },
-      "retryAt": "2026-11-21T20:05:07.418Z"
+      "retryAt": "2026-11-28T21:09:27.479Z"
     },
     "anned799/jev-social": {
       "status": "error",
@@ -4415,7 +4415,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 4,
-      "stars": 932,
+      "stars": 933,
       "checkedAt": "2026-11-19T12:08:50.626Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4617,9 +4617,9 @@
     "webmaster-ramos/jev-multilingual-benchmark": {
       "status": "review",
       "discoveredAt": "2026-11-07T19:37:11.192Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-11-14T20:05:07.418Z",
+      "checkedAt": "2026-11-21T21:09:27.479Z",
       "lastReview": {
         "repo": "webmaster-ramos/jev-multilingual-benchmark",
         "status": "review",
@@ -4635,9 +4635,9 @@
         "evidenceUrl": "https://github.com/webmaster-ramos/jev-multilingual-benchmark/blob/ae0ccdcaa7b4f3026debb23331acee1154b3257b/README.md",
         "evidenceSha256": "1ee815ad6a13449a80dbd8d6f707c8853ad14e45d1f2866e93ad55911f39901c",
         "model": "jev-latest",
-        "checkedAt": "2026-11-14T20:05:07.418Z"
+        "checkedAt": "2026-11-21T21:09:27.479Z"
       },
-      "retryAt": "2026-11-21T20:05:07.418Z",
+      "retryAt": "2026-11-28T21:09:27.479Z",
       "reviewFingerprint": "a6455da6501c791b491d935b86a0334e0e1dfdace4b9bc0c1e9ff81e9c83b9d0",
       "modelReviewedAt": "2026-11-14T20:05:07.418Z"
     },
@@ -4669,9 +4669,9 @@
     "caelum0x/umpirix": {
       "status": "error",
       "discoveredAt": "2026-11-12T11:50:48.337Z",
-      "attempts": 2,
+      "attempts": 3,
       "stars": 0,
-      "checkedAt": "2026-11-19T12:08:50.626Z",
+      "checkedAt": "2026-11-21T21:09:27.479Z",
       "lastReview": {
         "repo": "caelum0x/umpirix",
         "status": "review",
@@ -4689,7 +4689,7 @@
         "model": "jev-latest",
         "checkedAt": "2026-11-12T11:50:48.337Z"
       },
-      "retryAt": "2026-11-21T12:08:50.626Z"
+      "retryAt": "2026-11-25T21:09:27.479Z"
     },
     "dreamblooms/jev-autolaya": {
       "status": "review",
