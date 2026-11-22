@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "afe0cd9e8926837d2902a6ef651bdce71d3c3e2c",
-  "at": "2026-11-22T07:57:39.571Z",
+  "baselineSha": "7d30640e099d5d88235caa6b9c80b78f7c9e2631",
+  "at": "2026-11-22T20:18:00.099Z",
   "totalProjects": 3390,
   "metadata": {
-    "ok": 3248,
-    "failed": 142,
+    "ok": 3247,
+    "failed": 143,
     "batches": 69,
     "cost": 69,
     "other": 3290,
-    "remaining": 142,
+    "remaining": 143,
     "attempted": 3390,
-    "fresh": 3248,
-    "unavailable": 142,
+    "fresh": 3247,
+    "unavailable": 143,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "cyvid7-darus10/docfriction",
-        "to": "cyruspastelero/docfriction",
-        "databaseId": 1378105505
-      },
-      {
-        "from": "emoubarak/jev-voice",
-        "to": "emoubarak/voice-browser",
-        "databaseId": 1411476359
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -114,6 +103,11 @@
     {
       "id": "gh-8-stifler7-jev-llm-playground",
       "repo": "stifler7/jev-llm-playground",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-supprocom-typesafeai-sdk",
+      "repo": "supprocom/typesafeai-sdk",
       "reason": "github-unavailable-repository"
     },
     {
@@ -748,9 +742,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 1,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
