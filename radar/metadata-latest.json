@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "793b3c4a3b890fec54fa287859c8814fc25c2a86",
-  "at": "2026-11-21T20:03:41.429Z",
+  "baselineSha": "afe0cd9e8926837d2902a6ef651bdce71d3c3e2c",
+  "at": "2026-11-22T07:57:39.571Z",
   "totalProjects": 3390,
   "metadata": {
     "ok": 3248,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "cyvid7-darus10/docfriction",
+        "to": "cyruspastelero/docfriction",
+        "databaseId": 1378105505
+      },
+      {
+        "from": "emoubarak/jev-voice",
+        "to": "emoubarak/voice-browser",
+        "databaseId": 1411476359
+      }
+    ]
   },
   "receipts": [
     {
@@ -737,9 +748,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }
