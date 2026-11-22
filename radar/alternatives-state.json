@@ -413,7 +413,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 35790
+      "stars": 35824
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1121,7 +1121,7 @@
         "checkedAt": "2026-11-19T22:46:15.671Z"
       },
       "retryAt": "2026-11-26T22:46:15.671Z",
-      "stars": 8332
+      "stars": 8335
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -2454,7 +2454,7 @@
         "checkedAt": "2026-11-19T12:08:50.626Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 802,
+      "stars": 808,
       "reviewFingerprint": "c5a6b871f742d057e8082fb4ff47cc8fd83a116f77d2d09324686b7a5ad935b3",
       "modelReviewedAt": "2026-11-19T12:08:50.626Z"
     },
@@ -4212,7 +4212,7 @@
       "status": "review",
       "discoveredAt": "2026-10-23T14:27:13.049Z",
       "attempts": 5,
-      "stars": 1473,
+      "stars": 1474,
       "checkedAt": "2026-11-20T22:20:56.198Z",
       "lastReview": {
         "repo": "ollaya-dev/ollaya",
@@ -4530,7 +4530,7 @@
       "status": "review",
       "discoveredAt": "2026-11-03T21:16:22.900Z",
       "attempts": 3,
-      "stars": 3,
+      "stars": 4,
       "checkedAt": "2026-11-17T23:09:44.372Z",
       "lastReview": {
         "repo": "atvari-eu/opencode-decisions",
@@ -4839,7 +4839,25 @@
       "retryAt": "2026-11-27T12:11:00.897Z",
       "reviewFingerprint": "46693cde8c74aa9d8dad35bd09b786c6d19e0641fe85cb7335bd08d8f3274af4",
       "modelReviewedAt": "2026-11-20T12:11:00.897Z"
+    },
+    "ronak-jain-afk/nirnay": {
+      "status": "review",
+      "discoveredAt": "2026-11-22T11:59:06.569Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-11-22T11:59:06.569Z",
+      "lastReview": {
+        "repo": "ronak-jain-afk/nirnay",
+        "status": "review",
+        "reason": "missing-open-source-license",
+        "sha": "83a8960d384fab2b32b129820956420888226d64",
+        "evidenceUrl": "https://github.com/ronak-jain-afk/nirnay/blob/83a8960d384fab2b32b129820956420888226d64/README.md",
+        "evidenceSha256": "d44bc172f6cbca44fb6532f98db00cbc97c5af3c6a024410aa95dcab0cad8298",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-22T11:59:06.569Z"
+      },
+      "retryAt": "2026-11-29T11:59:06.569Z"
     }
   },
-  "nextReviewLane": "pending"
+  "nextReviewLane": "retry"
 }
