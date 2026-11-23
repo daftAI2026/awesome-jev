@@ -1,12 +1,12 @@
 {
-  "at": "2026-11-23T01:58:12.623Z",
+  "at": "2026-11-23T13:39:34.632Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 128,
-      "total": 128,
+      "fetched": 129,
+      "total": 129,
       "status": "bounded"
     },
     {
@@ -20,12 +20,30 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 0,
+  "reviewed": 1,
   "added": 0,
-  "pending": 224,
+  "pending": 225,
   "overflow": 0,
   "evicted": 0,
-  "receipts": [],
+  "receipts": [
+    {
+      "repo": "phoenix1331/laravel-system-one-fc",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.65,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.16,
+        "category": "other",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd",
+      "evidenceUrl": "https://github.com/phoenix1331/laravel-system-one-fc/blob/e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd/README.md",
+      "evidenceSha256": "68164eb40a188c407d80fbf96abb3b73cc94a18b4767dc0becf9afe3b9bc7ae1",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-23T13:39:34.632Z"
+    }
+  ],
   "identity": {
     "ok": 0,
     "failed": 0,
@@ -33,11 +51,11 @@
     "cost": 0,
     "resolved": []
   },
-  "discoveryPending": 0,
+  "discoveryPending": 1,
   "buffered": 0,
   "queue": {
     "pending": 0,
-    "review": 149,
+    "review": 150,
     "error": 75,
     "drop": 0,
     "buffered": 0

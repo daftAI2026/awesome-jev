@@ -153,7 +153,7 @@
         "checkedAt": "2026-11-19T22:46:15.671Z"
       },
       "retryAt": "2026-11-26T22:46:15.671Z",
-      "stars": 7,
+      "stars": 8,
       "reviewFingerprint": "e4ab27f53cf5cd86ba15ab70e43576ed3c38c0bfcd8a85d36fa9a366c94300b3",
       "modelReviewedAt": "2026-11-19T22:46:15.671Z"
     },
@@ -413,7 +413,7 @@
         "checkedAt": "2026-11-05T01:48:37.461Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 35836
+      "stars": 35844
     },
     "pai-cuhk/sleepjev": {
       "status": "review",
@@ -1121,7 +1121,7 @@
         "checkedAt": "2026-11-19T22:46:15.671Z"
       },
       "retryAt": "2026-11-26T22:46:15.671Z",
-      "stars": 8337
+      "stars": 8341
     },
     "rotsl/layaagent": {
       "status": "error",
@@ -1438,7 +1438,7 @@
         "checkedAt": "2026-11-22T21:15:51.411Z"
       },
       "retryAt": "2026-11-29T21:15:51.411Z",
-      "stars": 41
+      "stars": 42
     },
     "eastriverlee/julia.swift": {
       "status": "review",
@@ -2456,7 +2456,7 @@
         "checkedAt": "2026-11-19T12:08:50.626Z"
       },
       "retryAt": "2026-11-26T12:08:50.626Z",
-      "stars": 819,
+      "stars": 831,
       "reviewFingerprint": "c5a6b871f742d057e8082fb4ff47cc8fd83a116f77d2d09324686b7a5ad935b3",
       "modelReviewedAt": "2026-11-19T12:08:50.626Z"
     },
@@ -4417,7 +4417,7 @@
       "status": "review",
       "discoveredAt": "2026-10-29T10:25:20.732Z",
       "attempts": 4,
-      "stars": 934,
+      "stars": 935,
       "checkedAt": "2026-11-19T12:08:50.626Z",
       "lastReview": {
         "repo": "valen-team/valen",
@@ -4859,7 +4859,34 @@
         "checkedAt": "2026-11-22T11:59:06.569Z"
       },
       "retryAt": "2026-11-29T11:59:06.569Z"
+    },
+    "phoenix1331/laravel-system-one-fc": {
+      "status": "review",
+      "discoveredAt": "2026-11-23T13:39:34.632Z",
+      "attempts": 1,
+      "stars": 0,
+      "checkedAt": "2026-11-23T13:39:34.632Z",
+      "lastReview": {
+        "repo": "phoenix1331/laravel-system-one-fc",
+        "status": "review",
+        "score": {
+          "jevAbout": 0.65,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.16,
+          "category": "other",
+          "needsReview": true,
+          "conflictingEvidence": false
+        },
+        "sha": "e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd",
+        "evidenceUrl": "https://github.com/phoenix1331/laravel-system-one-fc/blob/e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd/README.md",
+        "evidenceSha256": "68164eb40a188c407d80fbf96abb3b73cc94a18b4767dc0becf9afe3b9bc7ae1",
+        "model": "jev-latest",
+        "checkedAt": "2026-11-23T13:39:34.632Z"
+      },
+      "retryAt": "2026-11-30T13:39:34.632Z",
+      "reviewFingerprint": "4d03b0f24c8e049c9b49c0b9f8d322b62abc689f5bd1e00086dd0f6c56d6b1f4",
+      "modelReviewedAt": "2026-11-23T13:39:34.632Z"
     }
   },
-  "nextReviewLane": "pending"
+  "nextReviewLane": "retry"
 }
