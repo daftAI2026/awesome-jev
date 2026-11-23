@@ -1,24 +1,24 @@
 {
-  "at": "2026-11-22T19:43:55.503Z",
+  "at": "2026-11-23T07:43:29.332Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:jev fork:false",
       "fetched": 200,
-      "total": 3044,
+      "total": 3047,
       "status": "search-cap"
     },
     {
       "query": "\"typesafe.ai\" in:readme fork:false",
       "fetched": 200,
-      "total": 11438,
+      "total": 11447,
       "status": "search-cap"
     },
     {
       "query": "\"Jev\" \"System One\" in:readme fork:false",
       "fetched": 200,
-      "total": 9841,
+      "total": 9850,
       "status": "search-cap"
     },
     {
@@ -30,23 +30,17 @@
     {
       "query": "\"@typesafe-ai/sdk\" in:readme fork:false",
       "fetched": 200,
-      "total": 755,
+      "total": 756,
       "status": "bounded"
     },
     {
       "query": "\"TypeSafe\" \"Jev\" fork:false",
       "fetched": 200,
-      "total": 4249,
+      "total": 4252,
       "status": "search-cap"
     },
     {
       "query": "code:\"api.typesafe.ai\" in:file",
-      "fetched": 100,
-      "total": 57344,
-      "status": "search-cap"
-    },
-    {
-      "query": "code:\"@typesafe-ai/sdk\" in:file",
       "fetched": 0,
       "total": 0,
       "status": "github-rate-limited"
@@ -58,7 +52,7 @@
   },
   "reviewed": 0,
   "added": 0,
-  "pending": 6619,
+  "pending": 6652,
   "overflow": 0,
   "evicted": 0,
   "receipts": [],
@@ -73,10 +67,10 @@
     "phase": "discovery",
     "reason": "github-rate-limited"
   },
-  "discoveryPending": 1409,
+  "discoveryPending": 1442,
   "buffered": 0,
   "queue": {
-    "pending": 1409,
+    "pending": 1442,
     "review": 4560,
     "error": 650,
     "drop": 0,
