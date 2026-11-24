@@ -7348,5 +7348,35 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2124933358669156473",
     "aihotUrl": "https://aihot.news/items/uwl2xeteqae1t1hgyvfkzrqtc"
+  },
+  {
+    "id": "pm2jngujjs7d92ya3cqibd8o9",
+    "title": "面壁智能社区开发者用 MiniCPM 做闭店检查应用",
+    "originalTitle": "🌙 The last customer has left. Before locking up, have you checked the gas valve, power panel, and door?",
+    "summary": "社区开发者 HankGuo 基于 MiniCPM 构建了闭店检查应用 Closing Guard，用 Android 手机拍照后由本地电脑上的 MiniCPM-V 4.7 1B 判断设备状态，MiniCPM-OCR 1.0 读取燃气表、MiniCPM-OCR Jev 核对读数与图像。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-24T13:30:12.000Z",
+    "discoveredAt": "2026-11-24T13:32:33.241Z",
+    "category": "ai-products",
+    "score": 40,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2125220440318890238",
+    "aihotUrl": "https://aihot.news/items/pm2jngujjs7d92ya3cqibd8o9"
+  },
+  {
+    "id": "xaf3ec3vdvz496quwv3qvo58e",
+    "title": "AI 的 Jevons 悖论：更便宜的 token 无法支撑巨额资本开支",
+    "originalTitle": "Jevons Paradox in AI: Cheaper Tokens Won't Pay for Capex",
+    "summary": "作者检验超大规模厂商用 Jevons 悖论为巨额 capex 辩护的说法，指出 token 销量增长与价格下跌速度相当，短期价格弹性仅略高于 1，收入未必随用量增长。",
+    "sourceName": "Hacker News：AI 热帖",
+    "publishedAt": "2026-11-21T23:00:00.000Z",
+    "discoveredAt": "2026-11-24T14:11:32.120Z",
+    "category": "opinion",
+    "score": 73,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://philippdubach.com/posts/cheaper-ai-tokens-wont-pay-for-capex/",
+    "aihotUrl": "https://aihot.news/items/xaf3ec3vdvz496quwv3qvo58e"
   }
 ]
