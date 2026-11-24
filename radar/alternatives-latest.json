@@ -1,12 +1,12 @@
 {
-  "at": "2026-11-24T02:35:14.226Z",
+  "at": "2026-11-24T14:16:34.489Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 130,
-      "total": 130,
+      "fetched": 131,
+      "total": 131,
       "status": "bounded"
     },
     {
@@ -20,224 +20,283 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 26,
+  "reviewed": 25,
   "added": 0,
-  "pending": 226,
+  "pending": 227,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "dreamblooms/dohnuts.cpp",
+      "repo": "yuvraaj2002/building-decision-model",
       "status": "review",
-      "score": {
-        "jevAbout": 0.88,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.55,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "7439e1deaa75c6eeb41e91c11d3670423af447cc",
-      "evidenceUrl": "https://github.com/dreamblooms/dohnuts.cpp/blob/7439e1deaa75c6eeb41e91c11d3670423af447cc/README.md",
-      "evidenceSha256": "4efb24cb5d0572049bfb06c4fd444ed091292a49d1e5f349313cdf52df94b2d1",
+      "reason": "missing-open-source-license",
+      "sha": "136184b60282a0e05b5aa9d1ed378aa23e0558c8",
+      "evidenceUrl": "https://github.com/yuvraaj2002/building-decision-model/blob/136184b60282a0e05b5aa9d1ed378aa23e0558c8/README.md",
+      "evidenceSha256": "45bab0fc337b31243695270023bf5c4d0d49fe4d85e4043717e2dbe9a9ec3347",
       "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "samstealth/system-one-model-tweaks",
+      "repo": "omnijev/awesome-jev-papers",
       "status": "review",
-      "score": {
-        "jevAbout": 0.39,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.11,
-        "category": "other",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "01d12089323c76c73832580b165f98fa747f8b0d",
-      "evidenceUrl": "https://github.com/samstealth/system-one-model-tweaks/blob/01d12089323c76c73832580b165f98fa747f8b0d/README.md",
-      "evidenceSha256": "8174bb9a421641f243f10692f93af5879da9d36bddb5bdafe8d7c279cc54611f",
+      "reason": "missing-open-source-license",
+      "sha": "6139c514d54a7e7f04724052137c58ad76dc4d64",
+      "evidenceUrl": "https://github.com/omnijev/awesome-jev-papers/blob/6139c514d54a7e7f04724052137c58ad76dc4d64/README.md",
+      "evidenceSha256": "23d04ca15dd991c53540724e7121ee374e04a034f86ee125d416699cc5eeaf73",
       "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "dreamblooms/jev-autolaya",
+      "repo": "toufiqqureshi/anarkali",
       "status": "review",
       "score": {
-        "jevAbout": 0.51,
+        "jevAbout": 0.91,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.4,
+        "jevKeepConfidence": 0.68,
         "category": "alternatives"
       },
-      "sha": "f6f26c629bd186e19acea62209793aee80013212",
-      "evidenceUrl": "https://github.com/dreamblooms/jev-autolaya/blob/f6f26c629bd186e19acea62209793aee80013212/README.md",
-      "evidenceSha256": "8bd407fb18fe2c20af86b4641e124aafc38cff37189985c1bc6d172522c90d3d",
+      "sha": "c2cf55dbe4e3d9df8253e0c638ca7211296a3a82",
+      "evidenceUrl": "https://github.com/toufiqqureshi/anarkali/blob/c2cf55dbe4e3d9df8253e0c638ca7211296a3a82/README.md",
+      "evidenceSha256": "90c4285b0f4290189035ffb7ea0eb0a4311a512f65d50c9df1129d22969f5c29",
       "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "bojansandhaus/jev-home-assistant-sentinel",
+      "repo": "ardana-ai/ardana",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "dreamblooms/ifreflex.cpp",
+      "repo": "computational-social-science/limen",
       "status": "review",
       "score": {
-        "jevAbout": 0.95,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.77,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "df33724b234a3ff67b3388679b672c9bd4cff0cf",
-      "evidenceUrl": "https://github.com/dreamblooms/ifreflex.cpp/blob/df33724b234a3ff67b3388679b672c9bd4cff0cf/README.md",
-      "evidenceSha256": "79ba7985189e694dbb44aadfcd8ac01c1f4d4972e7245c9633123f42dbe9d21a",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
-    },
-    {
-      "repo": "ahly15-max/phocinae-largha-150m-v1",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.73,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.16,
+        "jevAbout": 0.44,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.4,
         "category": "other"
       },
-      "sha": "f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b",
-      "evidenceUrl": "https://github.com/ahly15-max/phocinae-largha-150m-v1/blob/f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b/README.md",
-      "evidenceSha256": "4f066d29a2f2e8c0d3986915fab80d37ce8858a222c267aafa5725e71dc5a412",
+      "sha": "f624200d9252abbda9859def6e57423b20b01c24",
+      "evidenceUrl": "https://github.com/computational-social-science/limen/blob/f624200d9252abbda9859def6e57423b20b01c24/README.md",
+      "evidenceSha256": "6599a592d061da57c1e0304675b6a0c506e15d1a372486fbcfb0a0a0dde751a2",
       "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "analee08998/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "catherinestavrou94306/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "demet52518/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "destroyerdarkness/turbojev",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.79,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.77,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
-      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
-      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
-    },
-    {
-      "repo": "dinosaur-mc/dsh-decision-tools",
-      "status": "review",
-      "score": {
-        "jevAbout": 0.55,
-        "jevKeep": "keep",
-        "jevKeepConfidence": 0.11,
-        "category": "alternatives",
-        "needsReview": true,
-        "conflictingEvidence": false
-      },
-      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
-      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
-      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
-      "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
-    },
-    {
-      "repo": "evans13683/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gpastore7188/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "gunduz58439/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "heleneioannidis5960/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
-    },
-    {
-      "repo": "huzjie/drexforge",
+      "repo": "yeyan00/jev-decision",
       "status": "review",
       "reason": "insufficient-alternative-context",
-      "sha": "2a028b591320eb6ceca66f237722b05acf0ce248",
-      "evidenceUrl": "https://github.com/huzjie/drexforge/blob/2a028b591320eb6ceca66f237722b05acf0ce248/README.md",
-      "evidenceSha256": "63d5f87de53efab7593d8d6134a8f3b7a63dad38e6615b27f502994118b1a9af",
+      "sha": "811bf5083a12622b0e63a98084312a91ac119b80",
+      "evidenceUrl": "https://github.com/yeyan00/jev-decision/blob/811bf5083a12622b0e63a98084312a91ac119b80/README.md",
+      "evidenceSha256": "85206fb32c24069bf97323b07221f257e03e1efc5ce97ff1e56dac961781d0f9",
       "model": "jev-latest",
-      "checkedAt": "2026-11-24T02:35:14.226Z"
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "kacper630/coreai-kit",
+      "repo": "atvari-eu/opencode-system-one",
+      "status": "error",
+      "reason": "github-network-or-timeout"
+    },
+    {
+      "repo": "faycall1l/bouncer",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "7b1f44ac62b1a78a9815182b31ea88423e2234a0",
+      "evidenceUrl": "https://github.com/faycall1l/bouncer/blob/7b1f44ac62b1a78a9815182b31ea88423e2234a0/README.md",
+      "evidenceSha256": "3391e4b6ad298ac83e59ded29c96d993e93bee5c76b411bef8b12d0983579c37",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "jrodrigotech/reflex-system-one",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.67,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.77,
+        "category": "alternatives"
+      },
+      "sha": "5bfda7af5b1d51aae43a2cf44eabc257fd2749ab",
+      "evidenceUrl": "https://github.com/jrodrigotech/reflex-system-one/blob/5bfda7af5b1d51aae43a2cf44eabc257fd2749ab/README.md",
+      "evidenceSha256": "f49fd431670a05be7628fe8cf803fb732e585a525d54c42989f29266b060e20e",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "aliliu604/jev-social",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "kang83957/jev-social",
+      "repo": "devrecated/jev-alternative",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.89,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.25,
+        "category": "alternatives"
+      },
+      "sha": "0ac614edd94a89576429060e74f9ade2764ec023",
+      "evidenceUrl": "https://github.com/devrecated/jev-alternative/blob/0ac614edd94a89576429060e74f9ade2764ec023/README.md",
+      "evidenceSha256": "9b8ffb5b97eb5cab0b1d2b8756b0825580bbf3e80185f2156315dd0cb3a9ae74",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "donthash/laya-nepali",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.86,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.5,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "df7668380cc607efe21a2cc25826d60021b9ebc5",
+      "evidenceUrl": "https://github.com/donthash/laya-nepali/blob/df7668380cc607efe21a2cc25826d60021b9ebc5/README.md",
+      "evidenceSha256": "9da685f4ad9518e64a17d1f7f6ae443c775314d2ef1cd4ba61a373c7225cf99c",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "frederico-kluser/jev-playground",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.14,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.7,
+        "category": "other"
+      },
+      "sha": "4edca2814216a7558f600e5ebc731410fffa19e7",
+      "evidenceUrl": "https://github.com/frederico-kluser/jev-playground/blob/4edca2814216a7558f600e5ebc731410fffa19e7/README.md",
+      "evidenceSha256": "acfd2ba300100393e2c2fb19784ffdcc89a3111be68b98d17d58ffefc126d3e8",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "justanotherkevin/awol",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.7,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.73,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "31844ca0cc4c2950e8f39e07449458013e9dba7f",
+      "evidenceUrl": "https://github.com/justanotherkevin/awol/blob/31844ca0cc4c2950e8f39e07449458013e9dba7f/README.md",
+      "evidenceSha256": "5af68102f0f08e2a4e79a763ab34f0a3b4d8aae31c8410b3801b9b602184c1b0",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "ken-jo/veyra",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "kdunn86923/jevcore",
+      "repo": "kpetit760/jevcore",
       "status": "error",
       "reason": "github-http-404"
     },
     {
-      "repo": "lorenzofujita94/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "mellob1989/laya-runpod",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "bc4a2f567d8e41d222dea47e435aa3225c56978e",
+      "evidenceUrl": "https://github.com/mellob1989/laya-runpod/blob/bc4a2f567d8e41d222dea47e435aa3225c56978e/README.md",
+      "evidenceSha256": "eb539c1f53edcc896e2b09f332e7616faf463dd6ac7c6b68c1f9182e23c4b197",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "lukascho22400/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "mike8470/jev-style",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "86a0cd17bcae297dbae5128e2349248b77f315f7",
+      "evidenceUrl": "https://github.com/mike8470/jev-style/blob/86a0cd17bcae297dbae5128e2349248b77f315f7/README.md",
+      "evidenceSha256": "fca100ca09aac9670750bd9196da3f7cfd5e0921d6811ece91a0678d3efa7c1b",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "luuk736/jev-social",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "muthuishere/openjevx",
+      "status": "review",
+      "reason": "missing-open-source-license",
+      "sha": "ef92b8b2059c85e203e857d18cae55011555ed1f",
+      "evidenceUrl": "https://github.com/muthuishere/openjevx/blob/ef92b8b2059c85e203e857d18cae55011555ed1f/README.md",
+      "evidenceSha256": "120e682cb27b6d0f807fad30f3ce68382674e42846ed13467b3956c898333f16",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "meganhalas40/jevcore",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "phocinae/phocinae-cli",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "5a175bb205a521a22cc8fabe1eec65f68174cd25",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-cli/blob/5a175bb205a521a22cc8fabe1eec65f68174cd25/README.md",
+      "evidenceSha256": "eed08ca7be92d7fb5ad066e21c228ae96392acc82f0922c1ef1e8cf0a9a45481",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "mustafadupuis/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "phocinae/phocinae-js",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.33,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.33,
+        "category": "other"
+      },
+      "sha": "ee6098d3c44c683105e0e0ee64647872cca02401",
+      "evidenceUrl": "https://github.com/phocinae/phocinae-js/blob/ee6098d3c44c683105e0e0ee64647872cca02401/README.md",
+      "evidenceSha256": "932369ee3a2f268b7a4a38717c1dc774417b57f677b0720697303936059cd066",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "sofiajohansson4765/coreai-kit",
-      "status": "error",
-      "reason": "github-http-404"
+      "repo": "ponce8/typed-lm",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "456afc9bbbfc0f68b4d8cb48ec97bf4209c5771e",
+      "evidenceUrl": "https://github.com/ponce8/typed-lm/blob/456afc9bbbfc0f68b4d8cb48ec97bf4209c5771e/README.md",
+      "evidenceSha256": "d931ba8550a1c1db904d9e9d038952177be7c77147ca83f7efbb55315ac558ee",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
     },
     {
-      "repo": "susanne853/coreai-kit",
+      "repo": "rosariodibartolo/jev-agent-skill",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.08,
+        "jevKeep": "review",
+        "jevKeepConfidence": 0.33,
+        "category": "other"
+      },
+      "sha": "8054f9a7c6f595ea074ae819cc78df05b7146fda",
+      "evidenceUrl": "https://github.com/rosariodibartolo/jev-agent-skill/blob/8054f9a7c6f595ea074ae819cc78df05b7146fda/README.md",
+      "evidenceSha256": "f28b9691ac065aa80a59782c5d19377aad19548f658672ca7714a6af1b726b91",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "sebastianrodaaa/prefixgate",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.89,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.6,
+        "category": "alternatives"
+      },
+      "sha": "a5abd3a0f6b61e248d1b9d78cad9eeaeb7ae1417",
+      "evidenceUrl": "https://github.com/sebastianrodaaa/prefixgate/blob/a5abd3a0f6b61e248d1b9d78cad9eeaeb7ae1417/README.md",
+      "evidenceSha256": "82645964b7be653bdc3880e97ccf6d072da59283f29918627bdc20c7b1287b12",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T14:16:34.489Z"
+    },
+    {
+      "repo": "witthayaryu/jevcore",
       "status": "error",
       "reason": "github-http-404"
     }
@@ -250,12 +309,12 @@
     "resolved": []
   },
   "discoveryPending": 1,
-  "reusedReviews": 6,
+  "reusedReviews": 10,
   "buffered": 0,
   "queue": {
     "pending": 0,
     "review": 151,
-    "error": 75,
+    "error": 76,
     "drop": 0,
     "buffered": 0
   },
