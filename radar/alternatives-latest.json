@@ -1,12 +1,12 @@
 {
-  "at": "2026-11-23T13:39:34.632Z",
+  "at": "2026-11-24T02:35:14.226Z",
   "model": "jev-latest",
   "status": "partial",
   "sources": [
     {
       "query": "topic:system-one topic:decision-model fork:false",
-      "fetched": 129,
-      "total": 129,
+      "fetched": 130,
+      "total": 130,
       "status": "bounded"
     },
     {
@@ -20,28 +20,226 @@
     "ok": 0,
     "failed": 0
   },
-  "reviewed": 1,
+  "reviewed": 26,
   "added": 0,
-  "pending": 225,
+  "pending": 226,
   "overflow": 0,
   "evicted": 0,
   "receipts": [
     {
-      "repo": "phoenix1331/laravel-system-one-fc",
+      "repo": "dreamblooms/dohnuts.cpp",
       "status": "review",
       "score": {
-        "jevAbout": 0.65,
+        "jevAbout": 0.88,
         "jevKeep": "keep",
-        "jevKeepConfidence": 0.16,
+        "jevKeepConfidence": 0.55,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "7439e1deaa75c6eeb41e91c11d3670423af447cc",
+      "evidenceUrl": "https://github.com/dreamblooms/dohnuts.cpp/blob/7439e1deaa75c6eeb41e91c11d3670423af447cc/README.md",
+      "evidenceSha256": "4efb24cb5d0572049bfb06c4fd444ed091292a49d1e5f349313cdf52df94b2d1",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "samstealth/system-one-model-tweaks",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.39,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.11,
         "category": "other",
         "needsReview": true,
         "conflictingEvidence": false
       },
-      "sha": "e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd",
-      "evidenceUrl": "https://github.com/phoenix1331/laravel-system-one-fc/blob/e46eaf1dccf0885dc69a672f86a0e6aef46ac8cd/README.md",
-      "evidenceSha256": "68164eb40a188c407d80fbf96abb3b73cc94a18b4767dc0becf9afe3b9bc7ae1",
+      "sha": "01d12089323c76c73832580b165f98fa747f8b0d",
+      "evidenceUrl": "https://github.com/samstealth/system-one-model-tweaks/blob/01d12089323c76c73832580b165f98fa747f8b0d/README.md",
+      "evidenceSha256": "8174bb9a421641f243f10692f93af5879da9d36bddb5bdafe8d7c279cc54611f",
       "model": "jev-latest",
-      "checkedAt": "2026-11-23T13:39:34.632Z"
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "dreamblooms/jev-autolaya",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.51,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.4,
+        "category": "alternatives"
+      },
+      "sha": "f6f26c629bd186e19acea62209793aee80013212",
+      "evidenceUrl": "https://github.com/dreamblooms/jev-autolaya/blob/f6f26c629bd186e19acea62209793aee80013212/README.md",
+      "evidenceSha256": "8bd407fb18fe2c20af86b4641e124aafc38cff37189985c1bc6d172522c90d3d",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "bojansandhaus/jev-home-assistant-sentinel",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "dreamblooms/ifreflex.cpp",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.95,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.77,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "df33724b234a3ff67b3388679b672c9bd4cff0cf",
+      "evidenceUrl": "https://github.com/dreamblooms/ifreflex.cpp/blob/df33724b234a3ff67b3388679b672c9bd4cff0cf/README.md",
+      "evidenceSha256": "79ba7985189e694dbb44aadfcd8ac01c1f4d4972e7245c9633123f42dbe9d21a",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "ahly15-max/phocinae-largha-150m-v1",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.73,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.16,
+        "category": "other"
+      },
+      "sha": "f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b",
+      "evidenceUrl": "https://github.com/ahly15-max/phocinae-largha-150m-v1/blob/f3d1f485866ba7b214ba2653be0e91c2b9dc8a4b/README.md",
+      "evidenceSha256": "4f066d29a2f2e8c0d3986915fab80d37ce8858a222c267aafa5725e71dc5a412",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "analee08998/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "catherinestavrou94306/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "demet52518/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "destroyerdarkness/turbojev",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.79,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.77,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "5b0a5b6b838be20e7fced367e808dc5060b0a0dc",
+      "evidenceUrl": "https://github.com/destroyerdarkness/turbojev/blob/5b0a5b6b838be20e7fced367e808dc5060b0a0dc/README.md",
+      "evidenceSha256": "b06a7a996a1b1784af7885e065b1ef2bdc3173039c9a6aa681b4f9076e754dd7",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "dinosaur-mc/dsh-decision-tools",
+      "status": "review",
+      "score": {
+        "jevAbout": 0.55,
+        "jevKeep": "keep",
+        "jevKeepConfidence": 0.11,
+        "category": "alternatives",
+        "needsReview": true,
+        "conflictingEvidence": false
+      },
+      "sha": "302b876c8b9110e4d4a6a6e7f8fad95e34addd33",
+      "evidenceUrl": "https://github.com/dinosaur-mc/dsh-decision-tools/blob/302b876c8b9110e4d4a6a6e7f8fad95e34addd33/README.md",
+      "evidenceSha256": "dadad5de936c95340848b62920d6b0217a4f1e7cd1f941eea8fe36d4dc0cf445",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "evans13683/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "gpastore7188/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "gunduz58439/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "heleneioannidis5960/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "huzjie/drexforge",
+      "status": "review",
+      "reason": "insufficient-alternative-context",
+      "sha": "2a028b591320eb6ceca66f237722b05acf0ce248",
+      "evidenceUrl": "https://github.com/huzjie/drexforge/blob/2a028b591320eb6ceca66f237722b05acf0ce248/README.md",
+      "evidenceSha256": "63d5f87de53efab7593d8d6134a8f3b7a63dad38e6615b27f502994118b1a9af",
+      "model": "jev-latest",
+      "checkedAt": "2026-11-24T02:35:14.226Z"
+    },
+    {
+      "repo": "kacper630/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kang83957/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "kdunn86923/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lorenzofujita94/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "lukascho22400/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "luuk736/jev-social",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "meganhalas40/jevcore",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "mustafadupuis/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "sofiajohansson4765/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
+    },
+    {
+      "repo": "susanne853/coreai-kit",
+      "status": "error",
+      "reason": "github-http-404"
     }
   ],
   "identity": {
@@ -52,10 +250,11 @@
     "resolved": []
   },
   "discoveryPending": 1,
+  "reusedReviews": 6,
   "buffered": 0,
   "queue": {
     "pending": 0,
-    "review": 150,
+    "review": 151,
     "error": 75,
     "drop": 0,
     "buffered": 0
