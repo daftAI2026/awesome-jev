@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "b1915b201fd4da478e9b1db6ed19a8c345e2a0d9",
-  "at": "2026-11-23T08:57:51.061Z",
+  "baselineSha": "9f16a55e693c056fe720f69c2d223e8b24a97524",
+  "at": "2026-11-24T00:47:32.240Z",
   "totalProjects": 3390,
   "metadata": {
-    "ok": 3247,
-    "failed": 143,
+    "ok": 3246,
+    "failed": 144,
     "batches": 69,
     "cost": 69,
     "other": 3290,
-    "remaining": 143,
+    "remaining": 144,
     "attempted": 3390,
-    "fresh": 3247,
-    "unavailable": 143,
+    "fresh": 3246,
+    "unavailable": 144,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "tao-1abs/typesafe-go",
-        "to": "tao1abs/typesafe-go",
-        "databaseId": 1378943313
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -204,6 +198,11 @@
     {
       "id": "gh-8-codepawl-tacet",
       "repo": "codepawl/tacet",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-9-kofanlabs-jev-browser-chrome",
+      "repo": "kofanlabs/jev-browser-chrome",
       "reason": "github-unavailable-repository"
     },
     {
@@ -748,7 +747,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
