@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "d6c8ca0356b983eb8251fe64486e948f85379620",
-  "at": "2026-11-24T10:52:02.593Z",
+  "baselineSha": "eb4034238f5c9f7a992c722865925e5c2cc3c0f4",
+  "at": "2026-11-24T22:59:48.042Z",
   "totalProjects": 3390,
   "metadata": {
     "ok": 3246,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "hfnissum-byte/hunkpick",
+        "to": "tronkster/hunkpick",
+        "databaseId": 1380218382
+      },
+      {
+        "from": "jabbakadabra/systemonedotnet",
+        "to": "daniel-nordstein/systemonedotnet",
+        "databaseId": 1376862758
+      }
+    ]
   },
   "receipts": [
     {
@@ -747,9 +758,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 2,
+    "unavailable": 1,
     "restored": 0,
     "checked": 50
   }

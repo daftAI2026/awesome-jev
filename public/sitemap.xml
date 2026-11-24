@@ -4069,6 +4069,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-farina/nitro" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/daniel-nordstein/systemonedotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-nordstein/systemonedotnet" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/daniel4x/jevemon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel4x/jevemon" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel4x/jevemon" />
@@ -7777,12 +7783,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfiguera/typesafe_ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/hfnissum-byte/hunkpick</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfnissum-byte/hunkpick" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/hgavert/system-one-bench</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hgavert/system-one-bench" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hgavert/system-one-bench" />
@@ -8555,12 +8555,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/j341nono/jev-prompt-optimization" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/jabbakadabra/systemonedotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jabbakadabra/systemonedotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/jacintofleta/geojev</loc>
@@ -10559,12 +10553,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamhotsiagian/jev-model-labs" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/projects/lamplighterpaul/forma-system1-experiment</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamplighterpaul/forma-system1-experiment" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/landfill/anton</loc>
@@ -17675,6 +17663,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/trivektor/english-2-sql" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/projects/tronkster/hunkpick</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tronkster/hunkpick" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/trufyreai/tru-jev-harness</loc>
@@ -28747,6 +28741,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-farina/nitro" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/daniel-nordstein/systemonedotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-nordstein/systemonedotnet" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/daniel4x/jevemon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel4x/jevemon" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel4x/jevemon" />
@@ -32455,12 +32455,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfiguera/typesafe_ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/hfnissum-byte/hunkpick</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfnissum-byte/hunkpick" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/hgavert/system-one-bench</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hgavert/system-one-bench" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hgavert/system-one-bench" />
@@ -33233,12 +33227,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/j341nono/jev-prompt-optimization" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/jabbakadabra/systemonedotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jabbakadabra/systemonedotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/jacintofleta/geojev</loc>
@@ -35237,12 +35225,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamhotsiagian/jev-model-labs" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/zh/projects/lamplighterpaul/forma-system1-experiment</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamplighterpaul/forma-system1-experiment" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/landfill/anton</loc>
@@ -42353,6 +42335,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/trivektor/english-2-sql" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/zh/projects/tronkster/hunkpick</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tronkster/hunkpick" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/trufyreai/tru-jev-harness</loc>
@@ -53425,6 +53413,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-farina/nitro" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/daniel-nordstein/systemonedotnet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel-nordstein/systemonedotnet" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/daniel-nordstein/systemonedotnet" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/daniel4x/jevemon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/daniel4x/jevemon" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/daniel4x/jevemon" />
@@ -57133,12 +57127,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfiguera/typesafe_ai" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/hfnissum-byte/hunkpick</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hfnissum-byte/hunkpick" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/hfnissum-byte/hunkpick" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/hgavert/system-one-bench</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/hgavert/system-one-bench" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/hgavert/system-one-bench" />
@@ -57911,12 +57899,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/j341nono/jev-prompt-optimization" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/j341nono/jev-prompt-optimization" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/jabbakadabra/systemonedotnet</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jabbakadabra/systemonedotnet" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jabbakadabra/systemonedotnet" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/jacintofleta/geojev</loc>
@@ -59915,12 +59897,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamhotsiagian/jev-model-labs" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamhotsiagian/jev-model-labs" />
-  </url>
-  <url>
-    <loc>https://awesomejev.cc/ja/projects/lamplighterpaul/forma-system1-experiment</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/lamplighterpaul/forma-system1-experiment" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/lamplighterpaul/forma-system1-experiment" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/landfill/anton</loc>
@@ -67031,6 +67007,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/trivektor/english-2-sql" />
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/trivektor/english-2-sql" />
+  </url>
+  <url>
+    <loc>https://awesomejev.cc/ja/projects/tronkster/hunkpick</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/tronkster/hunkpick" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/tronkster/hunkpick" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/trufyreai/tru-jev-harness</loc>
