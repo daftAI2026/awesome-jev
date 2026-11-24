@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "9f16a55e693c056fe720f69c2d223e8b24a97524",
-  "at": "2026-11-24T00:47:32.240Z",
+  "baselineSha": "d6c8ca0356b983eb8251fe64486e948f85379620",
+  "at": "2026-11-24T10:52:02.593Z",
   "totalProjects": 3390,
   "metadata": {
     "ok": 3246,
@@ -749,7 +749,7 @@
   "lifecycle": {
     "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 2,
     "restored": 0,
     "checked": 50
   }
