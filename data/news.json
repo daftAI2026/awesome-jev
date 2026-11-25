@@ -7393,5 +7393,50 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2125362000893280730",
     "aihotUrl": "https://aihot.news/items/mykqhlcujdskoxzyxb8yh2x24"
+  },
+  {
+    "id": "jfbztfata8mv58zmm623rysw5",
+    "title": "Jev 与 LangChain 的集成用法",
+    "originalTitle": "Jev and @LangChain fit together like peas in a pod!",
+    "summary": "Jev 和 @LangChain 简直是天作之合！\n\n让 @sydneyrunkle 和我们自己的 @hackgoofer 来向你展示一切皆有可能",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-25T02:40:25.000Z",
+    "discoveredAt": "2026-11-25T02:52:25.132Z",
+    "category": "opinion",
+    "score": 18,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2125419306964152688",
+    "aihotUrl": "https://aihot.news/items/jfbztfata8mv58zmm623rysw5"
+  },
+  {
+    "id": "l1948jefti3pcbs1b4x9tyfh8",
+    "title": "TypeSafeClassifier 接入智能体指南",
+    "originalTitle": "get started with their TypeSafeClassifier to bring Jev's judgment right to your agent",
+    "summary": "使用他们的 TypeSafeClassifier 开始，将 Jev 的判断力直接带入你的智能体\nhttps://docs.typesafe.ai/cookbooks/langchain_quickstart",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-25T02:40:26.000Z",
+    "discoveredAt": "2026-11-25T02:52:25.122Z",
+    "category": "tip",
+    "score": 22,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2125419308931223877",
+    "aihotUrl": "https://aihot.news/items/l1948jefti3pcbs1b4x9tyfh8"
+  },
+  {
+    "id": "em6mb3wadv3uv26d32ac96oz2",
+    "title": "Jev 智能体构建指南",
+    "originalTitle": "then dive right in to build your own custom Jev-powered agent",
+    "summary": "然后直接动手构建你自己的、由 Jev 驱动的自定义智能体\nhttps://docs.typesafe.ai/cookbooks/langchain_safety_gate",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-25T02:40:26.000Z",
+    "discoveredAt": "2026-11-25T02:52:25.115Z",
+    "category": "tip",
+    "score": 14,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2125419310197960971",
+    "aihotUrl": "https://aihot.news/items/em6mb3wadv3uv26d32ac96oz2"
   }
 ]
