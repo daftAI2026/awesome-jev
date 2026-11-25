@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "1088e10781eee60cc6a9f9b5a38712bb442560dc",
-  "at": "2026-11-25T09:47:21.235Z",
+  "baselineSha": "1ecb8938f7ad4b4dc958462deae6d61252227ff0",
+  "at": "2026-11-25T22:27:54.755Z",
   "totalProjects": 3390,
   "metadata": {
-    "ok": 3246,
-    "failed": 144,
+    "ok": 3245,
+    "failed": 145,
     "batches": 69,
     "cost": 69,
     "other": 3290,
-    "remaining": 144,
+    "remaining": 145,
     "attempted": 3390,
-    "fresh": 3246,
-    "unavailable": 144,
+    "fresh": 3245,
+    "unavailable": 145,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "yehuitang0316/jev-nlgrep",
+        "to": "yehui-tang/jev-nlgrep",
+        "databaseId": 1378288811
+      },
+      {
+        "from": "bramvr/jev-cli",
+        "to": "bramvr/jev-batch",
+        "databaseId": 1457451465
+      }
+    ]
   },
   "receipts": [
     {
@@ -531,6 +542,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-14-danlayton-cmyk-ltppxt",
+      "repo": "danlayton-cmyk/ltppxt",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-15-divingsbysangam-typesafe-jev-salesforce",
       "repo": "divingsbysangam/typesafe-jev-salesforce",
       "reason": "github-unavailable-repository"
@@ -747,9 +763,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 2,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }
