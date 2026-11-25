@@ -7378,5 +7378,20 @@
     "reason": null,
     "originalUrl": "https://philippdubach.com/posts/cheaper-ai-tokens-wont-pay-for-capex/",
     "aihotUrl": "https://aihot.news/items/xaf3ec3vdvz496quwv3qvo58e"
+  },
+  {
+    "id": "mykqhlcujdskoxzyxb8yh2x24",
+    "title": "Jev 让智能体每次运行都被评估",
+    "originalTitle": "how many of your agent's runs did anyone actually read last week?",
+    "summary": "上周你的智能体有多少次运行是有人真正读过的？\n\n如果你能说“全部都读过！”呢？\n\n@JudgmentLabs 就做到了，用 Jev 在 0.15 秒内回答每个评估问题，这样你就不用抽样，而是给每一次运行打分\n\n然后 ✨ 你的评估就成了一个搜索索引",
+    "sourceName": "X：TypeSafe AI (@typesafeai)",
+    "publishedAt": "2026-11-24T22:52:42.000Z",
+    "discoveredAt": "2026-11-24T23:16:38.207Z",
+    "category": "ai-products",
+    "score": 32,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/typesafeai/status/2125362000893280730",
+    "aihotUrl": "https://aihot.news/items/mykqhlcujdskoxzyxb8yh2x24"
   }
 ]
