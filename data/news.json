@@ -7438,5 +7438,20 @@
     "reason": null,
     "originalUrl": "https://x.com/typesafeai/status/2125419310197960971",
     "aihotUrl": "https://aihot.news/items/em6mb3wadv3uv26d32ac96oz2"
+  },
+  {
+    "id": "iyquor5et1e224151mjn8fcj5",
+    "title": "AI 会像灯泡一样通缩还是像铜一样复利增长：Tomasz Tunguz 分析 token 价格弹性",
+    "originalTitle": "Will AI Deflate Like Lightbulbs or Compound Like Copper?",
+    "summary": "Tomasz Tunguz 分析 AI token 价格弹性，判断行业更接近铜而非灯泡：Ramp 上价格每降 1% 带动 token 量增 4.3%，OpenRouter 为 6.8%；Anthropic 上半年收入 13.6 倍增至 163 亿美元，Opus 4.5 降本后季度增速从 48% 跳到 132%。",
+    "sourceName": "Tomasz Tunguz 博客（VC 分析）",
+    "publishedAt": "2026-11-24T00:00:00.000Z",
+    "discoveredAt": "2026-11-25T18:20:36.500Z",
+    "category": "opinion",
+    "score": 59,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://tomtunguz.com/jevons-works-on-tokens-not-on-dollars/",
+    "aihotUrl": "https://aihot.news/items/iyquor5et1e224151mjn8fcj5"
   }
 ]
