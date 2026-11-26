@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "1ecb8938f7ad4b4dc958462deae6d61252227ff0",
-  "at": "2026-11-25T22:27:54.755Z",
-  "totalProjects": 3390,
+  "baselineSha": "e9f64af92d932b63f11bf09080683511948bdd3a",
+  "at": "2026-11-26T09:27:52.540Z",
+  "totalProjects": 3422,
   "metadata": {
-    "ok": 3245,
-    "failed": 145,
-    "batches": 69,
-    "cost": 69,
-    "other": 3290,
-    "remaining": 145,
-    "attempted": 3390,
-    "fresh": 3245,
-    "unavailable": 145,
+    "ok": 3276,
+    "failed": 146,
+    "batches": 70,
+    "cost": 70,
+    "other": 3322,
+    "remaining": 146,
+    "attempted": 3422,
+    "fresh": 3276,
+    "unavailable": 146,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -24,14 +24,9 @@
     },
     "resolved": [
       {
-        "from": "yehuitang0316/jev-nlgrep",
-        "to": "yehui-tang/jev-nlgrep",
-        "databaseId": 1378288811
-      },
-      {
-        "from": "bramvr/jev-cli",
-        "to": "bramvr/jev-batch",
-        "databaseId": 1457451465
+        "from": "tao1abs/typesafe-go",
+        "to": "taomakes/typesafe-go",
+        "databaseId": 1378943313
       }
     ]
   },
@@ -572,6 +567,11 @@
       "reason": "github-unavailable-repository"
     },
     {
+      "id": "gh-6-numaan-automation-jev",
+      "repo": "numaan/automation-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
       "id": "gh-10-samnewport-jev-reflex",
       "repo": "samnewport/jev-reflex",
       "reason": "github-unavailable-repository"
@@ -763,7 +763,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 1,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
