@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "e9f64af92d932b63f11bf09080683511948bdd3a",
-  "at": "2026-11-26T09:27:52.540Z",
+  "baselineSha": "f4e397482eda1b37466dbad6f4e12245ae7c5d14",
+  "at": "2026-11-26T22:16:50.144Z",
   "totalProjects": 3422,
   "metadata": {
     "ok": 3276,
@@ -22,13 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "tao1abs/typesafe-go",
-        "to": "taomakes/typesafe-go",
-        "databaseId": 1378943313
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -763,9 +757,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 1,
+    "migrated": 0,
     "review": 0,
-    "unavailable": 0,
+    "unavailable": 5,
     "restored": 0,
     "checked": 50
   }
