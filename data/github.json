@@ -187895,5 +187895,1428 @@
         "checkedAt": "2026-11-21T07:13:41.471Z"
       }
     }
+  },
+  {
+    "id": "gh-14-sanketmuchhala-claimsignal",
+    "type": "github",
+    "title": "ClaimSignal",
+    "summary": "Reproducible research on Jev decision primitives, calibration, abstention, and model comparisons on historical insurance claims.",
+    "tags": [
+      "jev",
+      "ai-evaluation",
+      "calibration",
+      "insurance",
+      "llm-evaluation",
+      "model-evaluation",
+      "reproducible-research",
+      "responsible-ai"
+    ],
+    "category": "research",
+    "url": "https://github.com/sanketmuchhala/ClaimSignal",
+    "sourceMeta": {
+      "repo": "sanketmuchhala/ClaimSignal",
+      "author": "sanketmuchhala",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1431163939,
+        "nodeId": "R_kgDOVU3UIw"
+      },
+      "date": "2026-10-23",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "sanketmuchhala/claimsignal",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "research"
+        },
+        "sha": "6444620034925b615dc340a4c1008e4afa1081bb",
+        "evidenceUrl": "https://github.com/sanketmuchhala/claimsignal/blob/6444620034925b615dc340a4c1008e4afa1081bb/README.md",
+        "evidenceSha256": "e3ed294fb6cbfb5982be3c247df26818f4f137144f4b7025f1725371f1ac2fda",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-sanketmuchhala-jevgate",
+    "type": "github",
+    "title": "jevgate",
+    "summary": "Calibrated policy triage and institutional risk routing: a hybrid System-1/System-2 engine on TypeSafe's Jev 1.14 with FastAPI, Pydantic, and the Vercel AI SDK",
+    "tags": [
+      "jev",
+      "ai-governance",
+      "calibration",
+      "fastapi",
+      "pydantic",
+      "typesafe",
+      "vercel-ai-sdk",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/sanketmuchhala/jevgate",
+    "sourceMeta": {
+      "repo": "sanketmuchhala/jevgate",
+      "author": "sanketmuchhala",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1431162685,
+        "nodeId": "R_kgDOVU3PPQ"
+      },
+      "date": "2026-10-23",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "sanketmuchhala/jevgate",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "b344c8e358c62a7d96fdb0fab16924bfb6a5a1cf",
+        "evidenceUrl": "https://github.com/sanketmuchhala/jevgate/blob/b344c8e358c62a7d96fdb0fab16924bfb6a5a1cf/README.md",
+        "evidenceSha256": "b0ee5fb55985aaa7b8f95d2b2dd206fea80cf1088c08c40b39d58b363b1f39c1",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-some45bucks-jev-guide",
+    "type": "github",
+    "title": "jev-guide",
+    "summary": "Chrome extension that highlights the next thing to click to reach a goal on a website, using Jev (TypeSafe System One). The person does the clicking.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "browser",
+    "url": "https://github.com/some45bucks/jev-guide",
+    "sourceMeta": {
+      "repo": "some45bucks/jev-guide",
+      "author": "some45bucks",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1436302833,
+        "nodeId": "R_kgDOVZw98Q"
+      },
+      "date": "2026-10-27",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "some45bucks/jev-guide",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "browser"
+        },
+        "sha": "2964f5cd588e274f78b0061601eb62a99d2d688a",
+        "evidenceUrl": "https://github.com/some45bucks/jev-guide/blob/2964f5cd588e274f78b0061601eb62a99d2d688a/README.md",
+        "evidenceSha256": "299bb62037e424ada039f84432f304e8bd1bd78813b5b2fcf0814a5aad3ffb9f",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-16-sukritisehgal-28-jev-dashboards",
+    "type": "github",
+    "title": "jev-dashboards",
+    "summary": "Live data-monitoring dashboards with TypeSafe Jev as the decision engine, plus an independent evaluation of Jev",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/sukritisehgal-28/jev-dashboards",
+    "sourceMeta": {
+      "repo": "sukritisehgal-28/jev-dashboards",
+      "author": "sukritisehgal-28",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1424875857,
+        "nodeId": "R_kgDOVO3hUQ"
+      },
+      "date": "2026-10-18",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "sukritisehgal-28/jev-dashboards",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "bfc92e41a7f9fa34a5838810eb132e277565eb98",
+        "evidenceUrl": "https://github.com/sukritisehgal-28/jev-dashboards/blob/bfc92e41a7f9fa34a5838810eb132e277565eb98/README.md",
+        "evidenceSha256": "b9850e516a6261d01b13574d22bd8983f9d0f4ea05efd6db1480ff24a7a04e77",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-vstaln-systemone",
+    "type": "github",
+    "title": "systemone",
+    "summary": "systemone: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/vstaln/systemone",
+    "sourceMeta": {
+      "repo": "vstaln/systemone",
+      "author": "vstaln",
+      "stars": 0,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1405994856,
+        "nodeId": "R_kgDOU83HaA"
+      },
+      "date": "2026-10-05",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "vstaln/systemone",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "sdk"
+        },
+        "sha": "9f5d56b100f3fc4d0db71d605b6d4452f3590210",
+        "evidenceUrl": "https://github.com/vstaln/systemone/blob/9f5d56b100f3fc4d0db71d605b6d4452f3590210/README.md",
+        "evidenceSha256": "2e2815a7bdcb8cddeebb67766df9f08d95ae2333b31fcf230ea93612f270b86a",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-18-wordsbyvaclav-boop-jev-triage",
+    "type": "github",
+    "title": "jev-triage",
+    "summary": "Agent skill: let Claude Code sort, filter, classify and score large data with TypeSafe Jev instead of reading it into context",
+    "tags": [
+      "jev",
+      "agent-skills",
+      "claude-code",
+      "claude-skill",
+      "llm",
+      "triage",
+      "typesafe",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/wordsbyvaclav-boop/jev-triage",
+    "sourceMeta": {
+      "repo": "wordsbyvaclav-boop/jev-triage",
+      "author": "wordsbyvaclav-boop",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1433328669,
+        "nodeId": "R_kgDOVW7cHQ"
+      },
+      "date": "2026-10-25",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "wordsbyvaclav-boop/jev-triage",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "2a360acc6965ce5bf225b8776b9cf025f3a3a878",
+        "evidenceUrl": "https://github.com/wordsbyvaclav-boop/jev-triage/blob/2a360acc6965ce5bf225b8776b9cf025f3a3a878/README.md",
+        "evidenceSha256": "fe9d2f036d25d83fe7b2fff88588bc27e934aa05a2d943914215bdd7777dce1e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-crzidea-banhammerbot",
+    "type": "github",
+    "title": "BanHammerBot",
+    "summary": "Telegram spam moderation bot with Jev multimodal decisions and per-group management",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/crzidea/BanHammerBot",
+    "sourceMeta": {
+      "repo": "crzidea/BanHammerBot",
+      "author": "crzidea",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1458444760,
+        "nodeId": "R_kgDOVu4Z2A"
+      },
+      "date": "2026-11-15",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "crzidea/banhammerbot",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "6ca0893f87c4e75405e0734513620238efa8c84f",
+        "evidenceUrl": "https://github.com/crzidea/banhammerbot/blob/6ca0893f87c4e75405e0734513620238efa8c84f/README.md",
+        "evidenceSha256": "7a347701e739424802e51551aec8a122be7e8557bbee89310d19b61ea40243f4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-3-es7-jev-from-scratch",
+    "type": "github",
+    "title": "JEV-from-Scratch",
+    "summary": "In this repository, I have tried to build JEV model from TypeSafe AI from scratch",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/ES7/JEV-from-Scratch",
+    "sourceMeta": {
+      "repo": "ES7/JEV-from-Scratch",
+      "author": "ES7",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1428403200,
+        "nodeId": "R_kgDOVSO0AA"
+      },
+      "date": "2026-10-21",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "es7/jev-from-scratch",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "alternatives"
+        },
+        "sha": "2adeeb134c8c7d1d53226ac5b214a15890e6c063",
+        "evidenceUrl": "https://github.com/es7/jev-from-scratch/blob/2adeeb134c8c7d1d53226ac5b214a15890e6c063/README.md",
+        "evidenceSha256": "88e86ab150271d3fc5e20945426d710b42142a5c07844a67c396a9bccfa2ad6e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-filippo9292-ai-self-evaluation-module",
+    "type": "github",
+    "title": "AI-self-evaluation-module",
+    "summary": "AI-self-evaluation-module: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "research",
+    "url": "https://github.com/Filippo9292/AI-self-evaluation-module",
+    "sourceMeta": {
+      "repo": "Filippo9292/AI-self-evaluation-module",
+      "author": "Filippo9292",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1455546544,
+        "nodeId": "R_kgDOVsHgsA"
+      },
+      "date": "2026-11-12",
+      "jevAbout": 0.92,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "filippo9292/ai-self-evaluation-module",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.92,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "research"
+        },
+        "sha": "d28516e0c370284d03ae964db7d7be35bd173eec",
+        "evidenceUrl": "https://github.com/filippo9292/ai-self-evaluation-module/blob/d28516e0c370284d03ae964db7d7be35bd173eec/README.md",
+        "evidenceSha256": "25432146b9822b08cc7f4ebd6839fa4e2e5cc9982e04f81b96f27bebbfd21e51",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-liodali-jev-cmdline-classifier",
+    "type": "github",
+    "title": "jev-cmdline-classifier",
+    "summary": "codex opencode pi cmd classifier skill",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/liodali/jev-cmdline-classifier",
+    "sourceMeta": {
+      "repo": "liodali/jev-cmdline-classifier",
+      "author": "liodali",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1381856796,
+        "nodeId": "R_kgDOUl12HA"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "liodali/jev-cmdline-classifier",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "alternatives"
+        },
+        "sha": "69dab4cf3a57143da598f3729c8a832e60263c17",
+        "evidenceUrl": "https://github.com/liodali/jev-cmdline-classifier/blob/69dab4cf3a57143da598f3729c8a832e60263c17/README.md",
+        "evidenceSha256": "26dfc4840a17dfeba9d6f070e7fa264efce848c16f0577066df12ad437ea4813",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-diegoag64-jev-inspector",
+    "type": "github",
+    "title": "jev-inspector",
+    "summary": "Native desktop inspector for TypeSafe API traffic, built in Rust with Rune",
+    "tags": [
+      "jev",
+      "desktop-app",
+      "devtools",
+      "inspector",
+      "rust",
+      "typesafe"
+    ],
+    "category": "developer",
+    "url": "https://github.com/diegoag64/jev-inspector",
+    "sourceMeta": {
+      "repo": "diegoag64/jev-inspector",
+      "author": "diegoag64",
+      "stars": 4,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1457311357,
+        "nodeId": "R_kgDOVtzOfQ"
+      },
+      "date": "2026-11-14",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.98,
+      "jevEvidence": {
+        "repo": "diegoag64/jev-inspector",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.98,
+          "category": "developer"
+        },
+        "sha": "27a3de3c13f74f28834d8b67bac9ea01e9f86ad2",
+        "evidenceUrl": "https://github.com/diegoag64/jev-inspector/blob/27a3de3c13f74f28834d8b67bac9ea01e9f86ad2/README.md",
+        "evidenceSha256": "d3716a972c396725968f8b1ea822724e53769a40b470b79577fd98a3433081e6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-danvega-jev-feedback-triage",
+    "type": "github",
+    "title": "jev-feedback-triage",
+    "summary": "Triage customer feedback with the Spring AI 2.1 Decision API and TypeSafe Jev",
+    "tags": [
+      "jev",
+      "java"
+    ],
+    "category": "resources",
+    "url": "https://github.com/danvega/jev-feedback-triage",
+    "sourceMeta": {
+      "repo": "danvega/jev-feedback-triage",
+      "author": "danvega",
+      "stars": 2,
+      "forks": 0,
+      "language": "Java",
+      "githubIdentity": {
+        "databaseId": 1457075533,
+        "nodeId": "R_kgDOVtk1TQ"
+      },
+      "date": "2026-11-13",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "danvega/jev-feedback-triage",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "resources"
+        },
+        "sha": "755e57532e4e78086ca4f62e9667a20e63a5f549",
+        "evidenceUrl": "https://github.com/danvega/jev-feedback-triage/blob/755e57532e4e78086ca4f62e9667a20e63a5f549/README.md",
+        "evidenceSha256": "7965702448ed75f3676e683eeeb8dd15ef33bc8219d812e7b3ceac96f98389e8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-anandrajaram21-jev-browser",
+    "type": "github",
+    "title": "jev-browser",
+    "summary": "Jev integrated with agent-browser",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "browser",
+    "url": "https://github.com/anandrajaram21/jev-browser",
+    "sourceMeta": {
+      "repo": "anandrajaram21/jev-browser",
+      "author": "anandrajaram21",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1458932721,
+        "nodeId": "R_kgDOVvWL8Q"
+      },
+      "date": "2026-11-15",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "anandrajaram21/jev-browser",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "browser"
+        },
+        "sha": "ea8ee30bf8cbec2137e09a88c14219d09c7b0a3d",
+        "evidenceUrl": "https://github.com/anandrajaram21/jev-browser/blob/ea8ee30bf8cbec2137e09a88c14219d09c7b0a3d/README.md",
+        "evidenceSha256": "e7456c6a14e4d60bd8380126a6e88963b80c14b73ee0e7438a2855055bbd4913",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-6-avi720-jev-chromium-use",
+    "type": "github",
+    "title": "jev-chromium-use",
+    "summary": "Browser automation where a small decision model (TypeSafe Jev), not a frontier LLM, picks every step. Runs in your signed-in Chromium browser (Edge or Chrome), in a background tab; works on Hebrew sites.",
+    "tags": [
+      "jev",
+      "ai-agent",
+      "browser-automation",
+      "chrome-extension",
+      "claude",
+      "edge-extension",
+      "hebrew",
+      "typesafe"
+    ],
+    "category": "browser",
+    "url": "https://github.com/avi720/jev-chromium-use",
+    "sourceMeta": {
+      "repo": "avi720/jev-chromium-use",
+      "author": "avi720",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1457857868,
+        "nodeId": "R_kgDOVuUlTA"
+      },
+      "date": "2026-11-14",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "avi720/jev-chromium-use",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "browser"
+        },
+        "sha": "889415aad6f3f626a83cf80b566e8485ec9a463d",
+        "evidenceUrl": "https://github.com/avi720/jev-chromium-use/blob/889415aad6f3f626a83cf80b566e8485ec9a463d/README.md",
+        "evidenceSha256": "4716d49aa81ca36a44a85379e61d307a4bd2ef34cd3f93ecf78c5de5a1dfec6c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-chrishuffman5-jev",
+    "type": "github",
+    "title": "jev",
+    "summary": "PowerShell module and training deck for TypeSafe's jev decision model.",
+    "tags": [
+      "jev",
+      "html"
+    ],
+    "category": "sdk",
+    "url": "https://github.com/chrishuffman5/jev",
+    "sourceMeta": {
+      "repo": "chrishuffman5/jev",
+      "author": "chrishuffman5",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "githubIdentity": {
+        "databaseId": 1453464557,
+        "nodeId": "R_kgDOVqIb7Q"
+      },
+      "date": "2026-11-11",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "chrishuffman5/jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "sdk"
+        },
+        "sha": "08fe6ef84ceebccf2ac4f68fd912219382a132d9",
+        "evidenceUrl": "https://github.com/chrishuffman5/jev/blob/08fe6ef84ceebccf2ac4f68fd912219382a132d9/README.md",
+        "evidenceSha256": "42b79c9d70035ff6a7967f500b41289a5d15973168478a203c6b098cc84f47a5",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-15-farahabuhmaidan-jev-bouncer",
+    "type": "github",
+    "title": "jev-bouncer",
+    "summary": "jev-bouncer: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/farahabuhmaidan/jev-bouncer",
+    "sourceMeta": {
+      "repo": "farahabuhmaidan/jev-bouncer",
+      "author": "farahabuhmaidan",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1457603131,
+        "nodeId": "R_kgDOVuFCOw"
+      },
+      "date": "2026-11-14",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "farahabuhmaidan/jev-bouncer",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "applications"
+        },
+        "sha": "ea60f169f997b44cede5c87f2068ab4af26462a6",
+        "evidenceUrl": "https://github.com/farahabuhmaidan/jev-bouncer/blob/ea60f169f997b44cede5c87f2068ab4af26462a6/README.md",
+        "evidenceSha256": "1f481b21f85c1c9cc6151b8128fd9053c269fa1d642731f80a89343020721414",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-10-hierichhsu-your-cto-jev",
+    "type": "github",
+    "title": "your-cto-jev",
+    "summary": "A sharp-tongued CTO that blocks leaked secrets and destructive commands from AI coding agents (Claude Code, Cursor, Gemini CLI, Codex)",
+    "tags": [
+      "jev",
+      "ai-agents",
+      "claude-code",
+      "cli",
+      "codex",
+      "cursor",
+      "gemini-cli",
+      "git-hooks"
+    ],
+    "category": "developer",
+    "url": "https://github.com/hierichhsu/your-cto-jev",
+    "sourceMeta": {
+      "repo": "hierichhsu/your-cto-jev",
+      "author": "hierichhsu",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1399905690,
+        "nodeId": "R_kgDOU3Ddmg"
+      },
+      "date": "2026-10-01",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "hierichhsu/your-cto-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "developer"
+        },
+        "sha": "6b9c1c1938142f57f062192bdbc53dfce705b14b",
+        "evidenceUrl": "https://github.com/hierichhsu/your-cto-jev/blob/6b9c1c1938142f57f062192bdbc53dfce705b14b/README.md",
+        "evidenceSha256": "523f0417d77d6433a5ec64cccdff3f9612b5af6626c8542adcab19c440b03faf",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-honeyychawla-emote-emoji-search",
+    "type": "github",
+    "title": "emote-emoji-search",
+    "summary": "Minimalist local emoji search with animated matches, powered by TypeSafe Jev through OpenRouter.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/honeyychawla/emote-emoji-search",
+    "sourceMeta": {
+      "repo": "honeyychawla/emote-emoji-search",
+      "author": "honeyychawla",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1458024406,
+        "nodeId": "R_kgDOVuev1g"
+      },
+      "date": "2026-11-14",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "honeyychawla/emote-emoji-search",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "applications"
+        },
+        "sha": "2ee0f7bd749c198389ef34d45d75d3fa493bf1bc",
+        "evidenceUrl": "https://github.com/honeyychawla/emote-emoji-search/blob/2ee0f7bd749c198389ef34d45d75d3fa493bf1bc/README.md",
+        "evidenceSha256": "2906a460a231d9a1687dc6dfded1f423da446245dbfc51d6a4f78cf57fb38336",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-iurycavalcante-feedlens",
+    "type": "github",
+    "title": "FeedLens",
+    "summary": "Chrome extension that shows how much of your social feed matches your interests, powered by TypeSafe's Jev.",
+    "tags": [
+      "jev",
+      "ai",
+      "chrome-extension",
+      "linkedin",
+      "llm",
+      "open-source",
+      "productivity",
+      "typesafe"
+    ],
+    "category": "applications",
+    "url": "https://github.com/IuryCavalcante/FeedLens",
+    "sourceMeta": {
+      "repo": "IuryCavalcante/FeedLens",
+      "author": "IuryCavalcante",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "githubIdentity": {
+        "databaseId": 1458698215,
+        "nodeId": "R_kgDOVvH35w"
+      },
+      "date": "2026-11-15",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "iurycavalcante/feedlens",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "applications"
+        },
+        "sha": "efad2a50e93506cf040e79359ecce57b6b2ed471",
+        "evidenceUrl": "https://github.com/iurycavalcante/feedlens/blob/efad2a50e93506cf040e79359ecce57b6b2ed471/README.md",
+        "evidenceSha256": "a08155a9b58a3f7229c9d18a122eb45b357f4b21ebe8c930c50dadad565adf0e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-jevdirectory-jevdirectory.org",
+    "type": "github",
+    "title": "jevdirectory.org",
+    "summary": "jevdirectory.org: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev"
+    ],
+    "category": "directories",
+    "url": "https://github.com/jevdirectory/jevdirectory.org",
+    "sourceMeta": {
+      "repo": "jevdirectory/jevdirectory.org",
+      "author": "jevdirectory",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "githubIdentity": {
+        "databaseId": 1458761990,
+        "nodeId": "R_kgDOVvLxBg"
+      },
+      "date": "2026-11-15",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "jevdirectory/jevdirectory.org",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "directories"
+        },
+        "sha": "c403343685d6004062d56246dbe7323954da895a",
+        "evidenceUrl": "https://github.com/jevdirectory/jevdirectory.org/blob/c403343685d6004062d56246dbe7323954da895a/README.md",
+        "evidenceSha256": "c80ea7a5838a5f188fc013cbfa6b715cae23500f11fb1737b5be53512d22f310",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-mjvmsteixeira-jev-browser-mcp",
+    "type": "github",
+    "title": "jev-browser-mcp",
+    "summary": "Agente de browser para o Claude Code: jev-ultrafast + Jev (TypeSafe) com guardas de domínio, paragem antes de ações irreversíveis, verificação do resultado e custo por tarefa.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "browser",
+    "url": "https://github.com/mjvmsteixeira/jev-browser-mcp",
+    "sourceMeta": {
+      "repo": "mjvmsteixeira/jev-browser-mcp",
+      "author": "mjvmsteixeira",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1386175362,
+        "nodeId": "R_kgDOUp9bgg"
+      },
+      "date": "2026-09-24",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "mjvmsteixeira/jev-browser-mcp",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "browser"
+        },
+        "sha": "c7f9f910b30471c77553cc39f40e7ccfa77ca11c",
+        "evidenceUrl": "https://github.com/mjvmsteixeira/jev-browser-mcp/blob/c7f9f910b30471c77553cc39f40e7ccfa77ca11c/README.md",
+        "evidenceSha256": "4bcfc51af9c0eab3bf4a548d6be9bb88d7a8993595c8b4e40111b53532c12c7b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-7-n8peace-politiciansbyjev",
+    "type": "github",
+    "title": "politiciansbyjev",
+    "summary": "Ask a question; watch America's 100 most famous politicians float up or sink. Powered by Jev via Vercel AI Gateway.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/n8peace/politiciansbyjev",
+    "sourceMeta": {
+      "repo": "n8peace/politiciansbyjev",
+      "author": "n8peace",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1431821463,
+        "nodeId": "R_kgDOVVfclw"
+      },
+      "date": "2026-10-24",
+      "jevAbout": 0.94,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "n8peace/politiciansbyjev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.94,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "17dfb947988dc65467fec1ae62d0a0fc6c723e73",
+        "evidenceUrl": "https://github.com/n8peace/politiciansbyjev/blob/17dfb947988dc65467fec1ae62d0a0fc6c723e73/README.md",
+        "evidenceSha256": "99d133af90113df47f836d9b3782a3b81a2e321b6acd9fa439f8f6bcd79a2e3c",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-4-pmn4-decide",
+    "type": "github",
+    "title": "decide",
+    "summary": "Engine-agnostic CLI for fast, typed System One decisions (yes/no, choice, score)",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "alternatives",
+    "url": "https://github.com/pmn4/decide",
+    "sourceMeta": {
+      "repo": "pmn4/decide",
+      "author": "pmn4",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1431410291,
+        "nodeId": "R_kgDOVVGWcw"
+      },
+      "date": "2026-10-23",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "pmn4/decide",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "alternatives"
+        },
+        "sha": "e2935abb40dcefa99bdcf9c95714c444324db1b6",
+        "evidenceUrl": "https://github.com/pmn4/decide/blob/e2935abb40dcefa99bdcf9c95714c444324db1b6/README.md",
+        "evidenceSha256": "b40cb9402e3676579d674d144a2a0d61a32ca745caf210e9b4b088204808d9f6",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-13-sunilmehta-si-jev-inference-router",
+    "type": "github",
+    "title": "jev-inference-router",
+    "summary": "Observable TypeSafe Jev decision routing with local Apple Silicon LLM inference, retrieval, and reproducible evaluations",
+    "tags": [
+      "jev",
+      "apple-silicon",
+      "evaluation",
+      "llm",
+      "llm-inference",
+      "llm-routing",
+      "mlops",
+      "observability"
+    ],
+    "category": "agents",
+    "url": "https://github.com/sunilmehta-si/jev-inference-router",
+    "sourceMeta": {
+      "repo": "sunilmehta-si/jev-inference-router",
+      "author": "sunilmehta-si",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1406837518,
+        "nodeId": "R_kgDOU9qjDg"
+      },
+      "date": "2026-10-06",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "sunilmehta-si/jev-inference-router",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "agents"
+        },
+        "sha": "59ef1c1b066b6725d0f7d0c3eef0c038eb1a9595",
+        "evidenceUrl": "https://github.com/sunilmehta-si/jev-inference-router/blob/59ef1c1b066b6725d0f7d0c3eef0c038eb1a9595/README.md",
+        "evidenceSha256": "3695cff229b4a190cd72366835b225340b0baa47dbbb38df93ae3abfea8059c8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-12-superlowburn-hermes-jev-cron-gate",
+    "type": "github",
+    "title": "hermes-jev-cron-gate",
+    "summary": "Hermes plugin: skip agent cron runs that would do nothing, using TypeSafe Jev",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/superlowburn/hermes-jev-cron-gate",
+    "sourceMeta": {
+      "repo": "superlowburn/hermes-jev-cron-gate",
+      "author": "superlowburn",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1387882003,
+        "nodeId": "R_kgDOUrlmEw"
+      },
+      "date": "2026-09-25",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "superlowburn/hermes-jev-cron-gate",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "agents"
+        },
+        "sha": "3b2ca30d263be1233e7639108e54e91a74380f8e",
+        "evidenceUrl": "https://github.com/superlowburn/hermes-jev-cron-gate/blob/3b2ca30d263be1233e7639108e54e91a74380f8e/README.md",
+        "evidenceSha256": "b5544e3f48fc722a6601200414e570f68a364543b8420db0ca4b5391cedf365b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-zju-real-cua-jev",
+    "type": "github",
+    "title": "CUA-JEV",
+    "summary": "Jev for Computer Use",
+    "tags": [
+      "jev",
+      "computer-use-agent",
+      "decision-model",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/ZJU-REAL/CUA-JEV",
+    "sourceMeta": {
+      "repo": "ZJU-REAL/CUA-JEV",
+      "author": "ZJU-REAL",
+      "stars": 28,
+      "forks": 3,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1382395191,
+        "nodeId": "R_kgDOUmWtNw"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.94,
+      "jevEvidence": {
+        "repo": "zju-real/cua-jev",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.94,
+          "category": "agents"
+        },
+        "sha": "eb7ce36e541d92b44c4cf0573334294fd40569d5",
+        "evidenceUrl": "https://github.com/zju-real/cua-jev/blob/eb7ce36e541d92b44c4cf0573334294fd40569d5/README.md",
+        "evidenceSha256": "9579aed934b365416f0dca741444fc7d310e1f14031126e6cdf32235819040ba",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-dreamblooms-jev-autoyolo",
+    "type": "github",
+    "title": "Jev-AutoYOLO",
+    "summary": "Images or videos in → YOLO model out / 图片视频扔进去 → YOLO 模型训出来 | A one-key integrated pipeline for the automated labelling and training of YOLO, based on the capabilities of Jev bBox.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "applications",
+    "url": "https://github.com/DreamBlooms/Jev-AutoYOLO",
+    "sourceMeta": {
+      "repo": "DreamBlooms/Jev-AutoYOLO",
+      "author": "DreamBlooms",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1448064520,
+        "nodeId": "R_kgDOVk-2CA"
+      },
+      "date": "2026-11-06",
+      "jevAbout": 0.96,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "dreamblooms/jev-autoyolo",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.96,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "92a42155704126e56778fa390ecc22ccfe2d92bf",
+        "evidenceUrl": "https://github.com/dreamblooms/jev-autoyolo/blob/92a42155704126e56778fa390ecc22ccfe2d92bf/README.md",
+        "evidenceSha256": "333d4adb27075337593f0e7d829a5006a7a77b77f9d74a1049b6c477661876e4",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-11-oliverrhyme-jev-pilot",
+    "type": "github",
+    "title": "jev-pilot",
+    "summary": "jev-pilot: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "rust"
+    ],
+    "category": "agents",
+    "url": "https://github.com/OliverRhyme/jev-pilot",
+    "sourceMeta": {
+      "repo": "OliverRhyme/jev-pilot",
+      "author": "OliverRhyme",
+      "stars": 2,
+      "forks": 0,
+      "language": "Rust",
+      "githubIdentity": {
+        "databaseId": 1378285570,
+        "nodeId": "R_kgDOUib4Ag"
+      },
+      "date": "2026-09-20",
+      "jevAbout": 0.95,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "oliverrhyme/jev-pilot",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.95,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "agents"
+        },
+        "sha": "29f74ede59a5409a055fa2ca65056723fae6c615",
+        "evidenceUrl": "https://github.com/oliverrhyme/jev-pilot/blob/29f74ede59a5409a055fa2ca65056723fae6c615/README.md",
+        "evidenceSha256": "556769f769db7a8713a7d0874dc0b8a58d638dec80c68ca063be92a57d94a8f0",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-14-himanshu231204-jev_model",
+    "type": "github",
+    "title": "jev_model",
+    "summary": "jev_model: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "jupyter notebook"
+    ],
+    "category": "resources",
+    "url": "https://github.com/himanshu231204/jev_model",
+    "sourceMeta": {
+      "repo": "himanshu231204/jev_model",
+      "author": "himanshu231204",
+      "stars": 1,
+      "forks": 0,
+      "language": "Jupyter Notebook",
+      "githubIdentity": {
+        "databaseId": 1381623080,
+        "nodeId": "R_kgDOUlnlKA"
+      },
+      "date": "2026-09-22",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.97,
+      "jevEvidence": {
+        "repo": "himanshu231204/jev_model",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.97,
+          "category": "resources"
+        },
+        "sha": "343d8e478f6ca5b2c4ac7286f67bbbead9e7f2a6",
+        "evidenceUrl": "https://github.com/himanshu231204/jev_model/blob/343d8e478f6ca5b2c4ac7286f67bbbead9e7f2a6/README.md",
+        "evidenceSha256": "2a3258dff701a90b776e60e4bf357e809589a2530cd665c58de3a434ebc573c8",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-5-0xjgv-s1r",
+    "type": "github",
+    "title": "s1r",
+    "summary": "s1r: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "python"
+    ],
+    "category": "agents",
+    "url": "https://github.com/0xjgv/s1r",
+    "sourceMeta": {
+      "repo": "0xjgv/s1r",
+      "author": "0xjgv",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "githubIdentity": {
+        "databaseId": 1410034602,
+        "nodeId": "R_kgDOVAtrqg"
+      },
+      "date": "2026-10-08",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.96,
+      "jevEvidence": {
+        "repo": "0xjgv/s1r",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.96,
+          "category": "agents"
+        },
+        "sha": "781ffaf3e25b185f77feeded290f607932576540",
+        "evidenceUrl": "https://github.com/0xjgv/s1r/blob/781ffaf3e25b185f77feeded290f607932576540/README.md",
+        "evidenceSha256": "b02b4fc17b05e2abe1169b5a6055ed66a8b1098dc3ebc5db4fb6cec51a87a77b",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-9-xm-coding-jev-pr-classifier",
+    "type": "github",
+    "title": "jev-pr-classifier",
+    "summary": "Classifying code PR into certain types by JEV model",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "developer",
+    "url": "https://github.com/Xm-Coding/jev-pr-classifier",
+    "sourceMeta": {
+      "repo": "Xm-Coding/jev-pr-classifier",
+      "author": "Xm-Coding",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1420080671,
+        "nodeId": "R_kgDOVKS2Hw"
+      },
+      "date": "2026-10-15",
+      "jevAbout": 0.98,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.91,
+      "jevEvidence": {
+        "repo": "xm-coding/jev-pr-classifier",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.98,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.91,
+          "category": "developer"
+        },
+        "sha": "658d543c34954dd3a6457534c8fefcd7494b1552",
+        "evidenceUrl": "https://github.com/xm-coding/jev-pr-classifier/blob/658d543c34954dd3a6457534c8fefcd7494b1552/README.md",
+        "evidenceSha256": "ecde911d26590166102e3155892c58b8e1d2414f4047d59a365f8d7db8c4970e",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
+  },
+  {
+    "id": "gh-8-matiasne-mismo-evaluator",
+    "type": "github",
+    "title": "mismo-evaluator",
+    "summary": "mismo-evaluator: TypeSafe Jev ecosystem repository.",
+    "tags": [
+      "jev",
+      "typescript"
+    ],
+    "category": "applications",
+    "url": "https://github.com/matiasne/mismo-evaluator",
+    "sourceMeta": {
+      "repo": "matiasne/mismo-evaluator",
+      "author": "matiasne",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "githubIdentity": {
+        "databaseId": 1457207803,
+        "nodeId": "R_kgDOVts5-w"
+      },
+      "date": "2026-11-13",
+      "jevAbout": 0.97,
+      "jevKeep": "keep",
+      "jevKeepConfidence": 0.92,
+      "jevEvidence": {
+        "repo": "matiasne/mismo-evaluator",
+        "status": "keep",
+        "score": {
+          "jevAbout": 0.97,
+          "jevKeep": "keep",
+          "jevKeepConfidence": 0.92,
+          "category": "applications"
+        },
+        "sha": "2d9b61c3fc1454b1373c0eee5ebca8bf60ef73fc",
+        "evidenceUrl": "https://github.com/matiasne/mismo-evaluator/blob/2d9b61c3fc1454b1373c0eee5ebca8bf60ef73fc/README.md",
+        "evidenceSha256": "04f095f3667c988f0160e6b9d7cf3661a9903482fc14e4ddb461926973cfc161",
+        "evidenceLinks": [],
+        "model": "jev-latest",
+        "checkedAt": "2026-11-26T08:24:57.691Z"
+      }
+    }
   }
 ]
