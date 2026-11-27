@@ -1,12 +1,12 @@
 {
   "version": 2,
   "pages": {
-    "topic:jev fork:false": 5,
-    "\"typesafe.ai\" in:readme fork:false": 9,
-    "\"Jev\" \"System One\" in:readme fork:false": 9,
-    "topic:typesafe-ai fork:false": 5,
-    "\"@typesafe-ai/sdk\" in:readme fork:false": 5,
-    "\"TypeSafe\" \"Jev\" fork:false": 5,
+    "topic:jev fork:false": 7,
+    "\"typesafe.ai\" in:readme fork:false": 1,
+    "\"Jev\" \"System One\" in:readme fork:false": 1,
+    "topic:typesafe-ai fork:false": 7,
+    "\"@typesafe-ai/sdk\" in:readme fork:false": 7,
+    "\"TypeSafe\" \"Jev\" fork:false": 7,
     "code:\"api.typesafe.ai\" in:file": 5,
     "code:\"@typesafe-ai/sdk\" in:file": 3,
     "code:\"TYPESAFE_API_KEY\" in:file": 1,
@@ -9016,7 +9016,7 @@
         "checkedAt": "2026-11-21T07:13:41.471Z"
       },
       "retryAt": "2026-11-28T07:13:41.471Z",
-      "stars": 0
+      "stars": 1
     },
     "gbesse/wordpress-jev-rules": {
       "status": "review",
@@ -24750,7 +24750,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 75
+      "stars": 79
     },
     "lph12168x/free-llm-daily": {
       "status": "error",
@@ -26579,7 +26579,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 459
+      "stars": 639
     },
     "sac-y/jev-cu": {
       "status": "review",
@@ -30654,7 +30654,7 @@
         "checkedAt": "2026-11-09T22:24:37.538Z"
       },
       "retryAt": "2026-11-16T22:24:37.538Z",
-      "stars": 166
+      "stars": 167
     },
     "benevalterjr/branch.dev": {
       "status": "review",
@@ -40285,7 +40285,7 @@
       "status": "review",
       "discoveredAt": "2026-09-27T12:02:23.218Z",
       "attempts": 6,
-      "stars": 3265,
+      "stars": 3272,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "dzhng/jevgrep",
@@ -47198,7 +47198,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T15:36:19.602Z",
       "attempts": 5,
-      "stars": 336,
+      "stars": 339,
       "checkedAt": "2026-11-20T20:24:55.280Z",
       "lastReview": {
         "repo": "zilliztech/vector-graph-rag",
@@ -56246,7 +56246,8 @@
       },
       "retryAt": "2026-11-24T20:58:28.739Z",
       "reviewFingerprint": "955962116786f13631c62f70e25d06adcccce46288633ff18fa01e27b0764fa5",
-      "modelReviewedAt": "2026-11-17T20:58:28.739Z"
+      "modelReviewedAt": "2026-11-17T20:58:28.739Z",
+      "stars": 0
     },
     "ritvik-bansal/halfway": {
       "status": "review",
@@ -59681,7 +59682,8 @@
       },
       "retryAt": "2026-11-24T20:58:28.739Z",
       "reviewFingerprint": "078f0b8434555c8f5557b20cf2bc1baf040d3b737c8f6ec2335085eb17f3f352",
-      "modelReviewedAt": "2026-11-17T20:58:28.739Z"
+      "modelReviewedAt": "2026-11-17T20:58:28.739Z",
+      "stars": 0
     },
     "imosquera/speckit-squads-ios": {
       "status": "review",
@@ -69001,7 +69003,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
       "attempts": 4,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-11-09T22:24:37.538Z",
       "lastReview": {
         "repo": "llnull/pi-durable-host",
@@ -70484,7 +70486,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
       "attempts": 5,
-      "stars": 619,
+      "stars": 621,
       "checkedAt": "2026-11-20T20:24:55.280Z",
       "lastReview": {
         "repo": "qybaihe/mu",
@@ -70591,7 +70593,7 @@
       "status": "review",
       "discoveredAt": "2026-10-15T21:26:03.915Z",
       "attempts": 5,
-      "stars": 8,
+      "stars": 9,
       "checkedAt": "2026-11-20T20:24:55.280Z",
       "lastReview": {
         "repo": "scale-venture-partners/riff",
@@ -71756,7 +71758,7 @@
       "status": "review",
       "discoveredAt": "2026-10-16T04:35:40.639Z",
       "attempts": 4,
-      "stars": 384,
+      "stars": 386,
       "checkedAt": "2026-11-09T22:24:37.538Z",
       "lastReview": {
         "repo": "qbeka/jev-job-search",
@@ -83925,7 +83927,7 @@
       "status": "review",
       "discoveredAt": "2026-10-17T20:39:02.895Z",
       "attempts": 4,
-      "stars": 4,
+      "stars": 5,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "acekorneya/pok-agent",
@@ -91370,7 +91372,7 @@
       "status": "review",
       "discoveredAt": "2026-10-19T22:23:08.720Z",
       "attempts": 4,
-      "stars": 11,
+      "stars": 12,
       "checkedAt": "2026-11-10T07:23:12.148Z",
       "lastReview": {
         "repo": "hfgolino/llmclassificr",
@@ -103520,7 +103522,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 3,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "amelie-pierce/agent-kit",
@@ -105207,7 +105209,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 0,
+      "stars": 1,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "eencinasq/asdd-harness-kit",
@@ -106568,7 +106570,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 104,
+      "stars": 105,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "stabgan/openrouter-mcp-multimodal",
@@ -106587,7 +106589,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 272,
+      "stars": 277,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "hasso5703/alzeo",
@@ -106929,7 +106931,7 @@
       "status": "review",
       "discoveredAt": "2026-11-13T19:46:04.048Z",
       "attempts": 1,
-      "stars": 7,
+      "stars": 8,
       "checkedAt": "2026-11-17T20:58:28.739Z",
       "lastReview": {
         "repo": "nomanjack/wisp",
@@ -110619,7 +110621,7 @@
       "status": "error",
       "discoveredAt": "2026-11-14T06:28:29.913Z",
       "attempts": 1,
-      "stars": 5,
+      "stars": 6,
       "checkedAt": "2026-11-19T20:40:42.538Z",
       "retryAt": "2026-11-20T20:40:42.538Z"
     },
@@ -120156,7 +120158,7 @@
       "status": "review",
       "discoveredAt": "2026-11-14T22:28:00.367Z",
       "attempts": 1,
-      "stars": 28,
+      "stars": 29,
       "checkedAt": "2026-11-21T07:13:41.471Z",
       "lastReview": {
         "repo": "alexgreensh/eval-genius",
@@ -126498,7 +126500,7 @@
       "status": "review",
       "discoveredAt": "2026-11-15T06:37:47.704Z",
       "attempts": 1,
-      "stars": 10,
+      "stars": 11,
       "checkedAt": "2026-11-26T08:24:57.691Z",
       "lastReview": {
         "repo": "whitebeardit/whitebeard-os",
@@ -128626,7 +128628,7 @@
       "status": "review",
       "discoveredAt": "2026-11-15T18:53:42.597Z",
       "attempts": 1,
-      "stars": 1,
+      "stars": 2,
       "checkedAt": "2026-11-26T08:24:57.691Z",
       "lastReview": {
         "repo": "scholarly360/microsoft-decision-1-on-microsoft-foundry",
@@ -130341,7 +130343,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T07:58:16.007Z",
       "attempts": 0,
-      "stars": 0
+      "stars": 1
     },
     "gsharabok/a2restaurant": {
       "status": "pending",
@@ -130803,7 +130805,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T07:58:16.007Z",
       "attempts": 0,
-      "stars": 286
+      "stars": 288
     },
     "jaimejunr/polyagent-mcp": {
       "status": "pending",
@@ -131623,7 +131625,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-17T20:58:28.739Z",
       "attempts": 0,
-      "stars": 8
+      "stars": 13
     },
     "celtiberi/bowthruster": {
       "status": "pending",
@@ -131875,7 +131877,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-18T07:33:18.890Z",
       "attempts": 0,
-      "stars": 338
+      "stars": 340
     },
     "lolotam/postora_browser_agent": {
       "status": "pending",
@@ -132955,7 +132957,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-19T07:29:39.071Z",
       "attempts": 0,
-      "stars": 6
+      "stars": 7
     },
     "quequegerones/n8n-enterprise-demand-digest": {
       "status": "pending",
@@ -136446,7 +136448,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-21T19:19:28.774Z",
       "attempts": 0,
-      "stars": 555
+      "stars": 556
     },
     "gpsnmeajp/shazai-receiver-simulator": {
       "status": "pending",
@@ -136464,7 +136466,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-21T19:19:28.774Z",
       "attempts": 0,
-      "stars": 71
+      "stars": 72
     },
     "smartmobilehouse/fraud-decision-lab": {
       "status": "pending",
@@ -137132,7 +137134,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-22T06:53:46.676Z",
       "attempts": 0,
-      "stars": 62
+      "stars": 63
     },
     "michaeldinzinger/skills": {
       "status": "pending",
@@ -138754,7 +138756,7 @@
       "status": "pending",
       "discoveredAt": "2026-11-23T23:56:33.555Z",
       "attempts": 0,
-      "stars": 171
+      "stars": 170
     },
     "gruckion/awesome-stars": {
       "status": "pending",
@@ -142276,6 +142278,492 @@
     "redooz/role-playing": {
       "status": "pending",
       "discoveredAt": "2026-11-26T21:37:08.834Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "shinyanakashima/30daymapchallenge-2026day27-jev-geoparquet": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "hesaaam/hesaaam": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "kimwoct/skills": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sakura-zsh/ai-translator": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "seeton/seeton": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tahseenmorshed/job-searcher": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "patwater/pothole-portolan-blyg": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "zvonimirsun/sub2api": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "huyinuo53-byte/ai-course-notes": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dpble/kalble": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "mintahandrews/low-code-no-code-platforms": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 39
+    },
+    "bouncypitch/hospital-delivery-robot": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "au6000/prompt-lab": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "unn-known1/clickyx": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 40
+    },
+    "d4j3y2k/b-rex": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "lizliz404/agent-skills": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "lucaogarcia/msr-satd-aidev": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "boom-caoq/coinpred": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "sorzio/sorzio-mcp": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "au6000/llm_kit": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "k-kinzal/decisions-lint": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "wtah21/deepagent-harness": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "lawrencegranda/info-5940-project": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "goodnasubi/sigil-anima-llm": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "romanornr/telegrapher": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "olubodemichael/ai-eval": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "aymanebouhsain-lgtm/team17": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sayzard/orca-coordinator": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "fischjer4/spawner": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "shahviransh/voicevault": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "mbergo/jev-cvs": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "arize-ai/arize-ax-cli": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 7
+    },
+    "flujo-app/seagulled-sprites": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sgobiorodolfo170-ai/apikey-test-tool": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "naviocac/uja-bulletin-filter": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "linkedinlearning/build-with-decision-models-in-30-minutes-jev-kev-and-the-openai-decisions-api-29277003": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "gnutar/jev_demo": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "mahmedasim/axeom-challenge": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "tavareshenrique/pick-one": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "jhangmez/codigo_para_evaluar_sipangpt_benchmark": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "eulogep/manga-wave-bienvenue-fusion": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "absterrg0/meeting-whiteboard": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "skjack/-lip-": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 373
+    },
+    "aohuidai/sub2api-expiry-scheduler": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "danielmaciejpytel/jev-lanepilot": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "manas-ml/system-one-agents": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "drapnard/cognitive-fabric": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "masterphum07-web/rtpixel_game": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "geocine/skills": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "cred-f/mentora": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "landpai/cwick": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "liso7150/fennec-environment-setup": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "partysun/klava": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 3
+    },
+    "payattentionecnu/jevtraffic": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "spartaxneo/mave1.0": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "davidabram/sistem-jedan": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "charetterat/awesome-laya": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "mode-io/vllm-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 973
+    },
+    "jordanscarrott/atlassian-chrome-extension": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "unplugged-kk/video-factory": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "nirdiamant/genai_agents": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 25144
+    },
+    "rsluna7/opencodex-workbuddy": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "jstvn/mail-digest": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "zghstart/magpie-zenmux": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "simon-oz/ai-news": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "marycache/marycache": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "hydrogennnn/jev_calibration": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "angel291592/intent-router": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 113
+    },
+    "kaiwu5/awesome-ai4ai": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 227
+    },
+    "syntheme/beyond-answer-confidence": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 4
+    },
+    "pg2342-hub/ticket-routing-eval": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "andrewm-f/local-inference": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "novye7/earthdots": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "abk3528/jev-inspector": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sunixliu/decision-datagen": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 1
+    },
+    "michelleamesquita/ai-security-labs": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "sivamatic/keel": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "dimaggi-ai/tool-guard-core": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 4
+    },
+    "frederico-kluser/ai-fantasy": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "remylovelogicai/aggressive-skill-router": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
+      "attempts": 0,
+      "stars": 0
+    },
+    "aaaldo/opencode-jev": {
+      "status": "pending",
+      "discoveredAt": "2026-11-27T08:39:22.387Z",
       "attempts": 0,
       "stars": 0
     }
