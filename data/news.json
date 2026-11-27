@@ -7558,5 +7558,35 @@
     "reason": null,
     "originalUrl": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
     "aihotUrl": "https://aihot.news/items/ip7e965fboqux3zez2qrpbo6c"
+  },
+  {
+    "id": "lcikvvphtr30g6g6jj1qwrcs8",
+    "title": "开发者用三个 MiniCPM 模型搭建可自查纠错的本地收据记账 Agent",
+    "originalTitle": "You snap a photo of a receipt and ask AI to update your ledger. But what if it misreads an item, misses a digit, or gets the total wrong? 🧾",
+    "summary": "社区开发者 @DogukanUrker 基于三个 MiniCPM 模型搭建本地记账 Agent，由 MiniCPM-V 4.7 决定查看区域、MiniCPM-OCR 1.0 读取收据内容、MiniCPM-OCR Jev 对读取结果打分。",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-27T13:19:47.000Z",
+    "discoveredAt": "2026-11-27T13:20:42.629Z",
+    "category": "tip",
+    "score": 56,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2126304982093947118",
+    "aihotUrl": "https://aihot.news/items/lcikvvphtr30g6g6jj1qwrcs8"
+  },
+  {
+    "id": "pjd2cz329qdqaixomrdo3wtfx",
+    "title": "MiniCPM-OCR双模型协同解析文档",
+    "originalTitle": "One model reads, another verifies. 🔍",
+    "summary": "一个模型读取，另一个验证。🔍\n\nMiniCPM-OCR 1.0 和 MiniCPM-OCR Jev 将高效的文档解析与可靠性评估结合在一起。\n\n这是专用模型如何协同工作以处理复杂任务的一个绝佳示例。感谢对其进行测试！💙",
+    "sourceName": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "publishedAt": "2026-11-27T07:21:45.000Z",
+    "discoveredAt": "2026-11-27T07:41:36.029Z",
+    "category": "ai-models",
+    "score": 50,
+    "selected": false,
+    "reason": null,
+    "originalUrl": "https://x.com/OpenBMB/status/2126214881015890077",
+    "aihotUrl": "https://aihot.news/items/pjd2cz329qdqaixomrdo3wtfx"
   }
 ]
