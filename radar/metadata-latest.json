@@ -1,18 +1,18 @@
 {
   "status": "partial",
-  "baselineSha": "f4e397482eda1b37466dbad6f4e12245ae7c5d14",
-  "at": "2026-11-26T22:16:50.144Z",
+  "baselineSha": "4c1b49bb1a323631b1d7b75747b8e30c80ba0c9e",
+  "at": "2026-11-27T21:55:38.373Z",
   "totalProjects": 3422,
   "metadata": {
-    "ok": 3276,
-    "failed": 146,
+    "ok": 3274,
+    "failed": 148,
     "batches": 70,
     "cost": 70,
     "other": 3322,
-    "remaining": 146,
+    "remaining": 148,
     "attempted": 3422,
-    "fresh": 3276,
-    "unavailable": 146,
+    "fresh": 3274,
+    "unavailable": 148,
     "deferredRemaining": 0,
     "top100": {
       "ok": 99,
@@ -22,7 +22,18 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": []
+    "resolved": [
+      {
+        "from": "jiaweixie/jev-enhanced-plugin",
+        "to": "jiaweixie/decision-enhanced-plugin",
+        "databaseId": 1379072619
+      },
+      {
+        "from": "1475505/jev-api-adapter",
+        "to": "duduk233/jev-api-adapter",
+        "databaseId": 1380033025
+      }
+    ]
   },
   "receipts": [
     {
@@ -38,6 +49,11 @@
     {
       "id": "gh-ndolinschi-mcpmatch",
       "repo": "ndolinschi/mcpmatch",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-quentindanblon-pi-fast-jev-compaction",
+      "repo": "quentindanblon/pi-fast-jev-compaction",
       "reason": "github-unavailable-repository"
     },
     {
@@ -213,6 +229,11 @@
     {
       "id": "gh-12-jly-engineer-claude-jev",
       "repo": "jly-engineer/claude-jev",
+      "reason": "github-unavailable-repository"
+    },
+    {
+      "id": "gh-7-mathixu-jev-dotnet-sdk",
+      "repo": "mathixu/jev-dotnet-sdk",
       "reason": "github-unavailable-repository"
     },
     {
@@ -757,9 +778,9 @@
     }
   ],
   "lifecycle": {
-    "migrated": 0,
+    "migrated": 2,
     "review": 0,
-    "unavailable": 5,
+    "unavailable": 0,
     "restored": 0,
     "checked": 50
   }

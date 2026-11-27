@@ -193,12 +193,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/13rac1/ufa-2026-09-spaceinvaders" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/1475505/jev-api-adapter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/1475505/jev-api-adapter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/projects/1816586742-stack/jev-craft</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1816586742-stack/jev-craft" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1816586742-stack/jev-craft" />
@@ -5047,6 +5041,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dtunai/cu-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/projects/duduk233/jev-api-adapter</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/duduk233/jev-api-adapter" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/projects/dujaydis/jevsysuno</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dujaydis/jevsysuno" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dujaydis/jevsysuno" />
@@ -9103,10 +9103,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiawei686/jev-ultrafast-mcp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/projects/jiaweixie/jev-enhanced-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/jev-enhanced-plugin" />
+    <loc>https://awesomejev.cc/projects/jiaweixie/decision-enhanced-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/decision-enhanced-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/projects/jibalmi/tez</loc>
@@ -25099,12 +25099,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/13rac1/ufa-2026-09-spaceinvaders" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/1475505/jev-api-adapter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/1475505/jev-api-adapter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/zh/projects/1816586742-stack/jev-craft</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1816586742-stack/jev-craft" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1816586742-stack/jev-craft" />
@@ -29953,6 +29947,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dtunai/cu-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/zh/projects/duduk233/jev-api-adapter</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/duduk233/jev-api-adapter" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/zh/projects/dujaydis/jevsysuno</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dujaydis/jevsysuno" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dujaydis/jevsysuno" />
@@ -34009,10 +34009,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiawei686/jev-ultrafast-mcp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/zh/projects/jiaweixie/jev-enhanced-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/jev-enhanced-plugin" />
+    <loc>https://awesomejev.cc/zh/projects/jiaweixie/decision-enhanced-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/decision-enhanced-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/zh/projects/jibalmi/tez</loc>
@@ -50005,12 +50005,6 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/13rac1/ufa-2026-09-spaceinvaders" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/1475505/jev-api-adapter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1475505/jev-api-adapter" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/1475505/jev-api-adapter" />
-  </url>
-  <url>
     <loc>https://awesomejev.cc/ja/projects/1816586742-stack/jev-craft</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/1816586742-stack/jev-craft" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/1816586742-stack/jev-craft" />
@@ -54859,6 +54853,12 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/dtunai/cu-jev" />
   </url>
   <url>
+    <loc>https://awesomejev.cc/ja/projects/duduk233/jev-api-adapter</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/duduk233/jev-api-adapter" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/duduk233/jev-api-adapter" />
+  </url>
+  <url>
     <loc>https://awesomejev.cc/ja/projects/dujaydis/jevsysuno</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/dujaydis/jevsysuno" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/dujaydis/jevsysuno" />
@@ -58915,10 +58915,10 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiawei686/jev-ultrafast-mcp" />
   </url>
   <url>
-    <loc>https://awesomejev.cc/ja/projects/jiaweixie/jev-enhanced-plugin</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/jev-enhanced-plugin" />
-    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/jev-enhanced-plugin" />
+    <loc>https://awesomejev.cc/ja/projects/jiaweixie/decision-enhanced-plugin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://awesomejev.cc/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://awesomejev.cc/zh/projects/jiaweixie/decision-enhanced-plugin" />
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://awesomejev.cc/ja/projects/jiaweixie/decision-enhanced-plugin" />
   </url>
   <url>
     <loc>https://awesomejev.cc/ja/projects/jibalmi/tez</loc>
