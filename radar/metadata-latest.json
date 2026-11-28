@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "baselineSha": "4c1b49bb1a323631b1d7b75747b8e30c80ba0c9e",
-  "at": "2026-11-27T21:55:38.373Z",
+  "baselineSha": "ff8bdfd05e8ba7ed7d8634575441b0b6d774228b",
+  "at": "2026-11-28T08:52:53.716Z",
   "totalProjects": 3422,
   "metadata": {
     "ok": 3274,
@@ -22,18 +22,7 @@
         "alex314618-create/jevrev"
       ]
     },
-    "resolved": [
-      {
-        "from": "jiaweixie/jev-enhanced-plugin",
-        "to": "jiaweixie/decision-enhanced-plugin",
-        "databaseId": 1379072619
-      },
-      {
-        "from": "1475505/jev-api-adapter",
-        "to": "duduk233/jev-api-adapter",
-        "databaseId": 1380033025
-      }
-    ]
+    "resolved": []
   },
   "receipts": [
     {
@@ -778,7 +767,7 @@
     }
   ],
   "lifecycle": {
-    "migrated": 2,
+    "migrated": 0,
     "review": 0,
     "unavailable": 0,
     "restored": 0,
